@@ -1,0 +1,336 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "saner-bed-group",
+  "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-bed-group",
+  "version": "0.1.0",
+  "name": "BedGroup",
+  "title": "Bed Group Profile",
+  "status": "active",
+  "description": "Defines constraints on the Group Resource for data communicating about Bed availability.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Group",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Group",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Group.type",
+        "path": "Group.type",
+        "fixedCode": "device"
+      },
+      {
+        "id": "Group.actual",
+        "path": "Group.actual",
+        "fixedBoolean": true
+      },
+      {
+        "id": "Group.code",
+        "path": "Group.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "bd",
+              "system": "http://terminology.hl7.org/CodeSystem/location-physical-type"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Group.name",
+        "path": "Group.name",
+        "min": 1
+      },
+      {
+        "id": "Group.quantity",
+        "path": "Group.quantity",
+        "min": 1
+      },
+      {
+        "id": "Group.managingEntity",
+        "path": "Group.managingEntity",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Group.managingEntity.identifier",
+        "path": "Group.managingEntity.identifier",
+        "min": 1
+      },
+      {
+        "id": "Group.managingEntity.identifier.system",
+        "path": "Group.managingEntity.identifier.system",
+        "fixedUri": "http://hl7.org/fhir/sid/us-npi"
+      },
+      {
+        "id": "Group.characteristic",
+        "path": "Group.characteristic",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice based on the characteristic.code pattern"
+        },
+        "min": 5
+      },
+      {
+        "id": "Group.characteristic.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
+      },
+      {
+        "id": "Group.characteristic:Status",
+        "path": "Group.characteristic",
+        "sliceName": "Status",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Group.characteristic:Status.code",
+        "path": "Group.characteristic.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Location.status",
+              "system": "http://hl7.org/fhir/location-definitions.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Group.characteristic:Status.value[x]",
+        "path": "Group.characteristic.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Group.characteristic:Status.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
+        "min": 0,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/location-status"
+        }
+      },
+      {
+        "id": "Group.characteristic:OperationalStatus",
+        "path": "Group.characteristic",
+        "sliceName": "OperationalStatus",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Group.characteristic:OperationalStatus.code",
+        "path": "Group.characteristic.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Location.operationalStatus",
+              "system": "http://hl7.org/fhir/location-definitions.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Group.characteristic:OperationalStatus.value[x]",
+        "path": "Group.characteristic.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Group.characteristic:OperationalStatus.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
+        "min": 0,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"
+        }
+      },
+      {
+        "id": "Group.characteristic:Type",
+        "path": "Group.characteristic",
+        "sliceName": "Type",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Group.characteristic:Type.code",
+        "path": "Group.characteristic.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Location.type",
+              "system": "http://hl7.org/fhir/location-definitions.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Group.characteristic:Type.value[x]",
+        "path": "Group.characteristic.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Group.characteristic:Type.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
+        "min": 0,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+        }
+      },
+      {
+        "id": "Group.characteristic:Feature",
+        "path": "Group.characteristic",
+        "sliceName": "Feature",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Group.characteristic:Feature.code",
+        "path": "Group.characteristic.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Location.Feature",
+              "system": "http://hl7.org/fhir/location-definitions.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Group.characteristic:Feature.value[x]",
+        "path": "Group.characteristic.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Group.characteristic:Feature.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
+        "min": 0,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedFeature"
+        }
+      },
+      {
+        "id": "Group.characteristic:Location",
+        "path": "Group.characteristic",
+        "sliceName": "Location",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Group.characteristic:Location.code",
+        "path": "Group.characteristic.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "Location.partOf",
+              "system": "http://hl7.org/fhir/location-definitions.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Group.characteristic:Location.value[x]",
+        "path": "Group.characteristic.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Group.member",
+        "path": "Group.member",
+        "max": "0"
+      }
+    ]
+  }
+}

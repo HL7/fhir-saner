@@ -1,0 +1,42 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "SanerBedType",
+  "id": "SanerBedType",
+  "title": "Bed Type Coding System",
+  "version": "0.1.0",
+  "url": "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+  "concept": [
+    {
+      "code": "OR",
+      "display": "Operating Room",
+      "definition": "Operating Rooms"
+    },
+    {
+      "code": "NURSERY",
+      "display": "Nursery",
+      "definition": "Neonatal or newborn (non-ICU) care beds"
+    },
+    {
+      "code": "BURNU",
+      "display": "Burn Unit",
+      "definition": "Burn ICU beds"
+    },
+    {
+      "code": "NEGISO",
+      "display": "Negative Pressure Isolation Unit",
+      "definition": "Beds in a negative pressure isolation environment"
+    },
+    {
+      "code": "OTHISO",
+      "display": "Other Isolation Unit",
+      "definition": "Beds in an other (non-negative pressure) isolation environment"
+    },
+    {
+      "code": "NONISO",
+      "display": "Non-isolating unit",
+      "definition": "Bed in a unit that does not support isolation"
+    }
+  ]
+}

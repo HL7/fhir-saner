@@ -1,0 +1,190 @@
+.glyphicon:after {
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased
+}
+
+.glyphicon-cloud:before {
+	content: "\2601"
+}
+
+.stars0:before {
+	content: "\e007\e007\e007\e007\e007";
+	color: black;
+}
+
+.stars0-1:before {
+	content: "\e006";
+	color: gold;
+}
+
+.stars0-2:before {
+	content: "\e007\e007";
+	color: gold;
+}
+
+.stars0-3:before {
+	content: "\e007\e007\e007";
+	color: gold;
+}
+
+.stars0-4:before {
+	content: "e007\e007\e007\e007";
+	color: gold;
+}
+
+.stars0-5:before {
+	content: "\e007\e007\e007\e007\e007";
+	color: gold;
+}
+
+.stars1:before {
+	content: "\e006";
+	color: gold;
+}
+
+.stars1-2:before {
+	content: "\e006\e007";
+	color: gold;
+}
+
+.stars1-3:before {
+	content: "\e006\e007\e006";
+	color: gold;
+}
+
+.stars1-4:before {
+	content: "\e006\e007\e007\e007";
+	color: gold;
+}
+
+.stars1-5:before {
+	content: "\e006\e007\e007\e007\e007";
+	color: gold;
+}
+
+.stars1:after, .stars0-1:after {
+	content: "\e007\e007\e007\e007";
+	color: black;
+}
+
+.stars2:before {
+	content: "\e006\e006";
+	color: gold;
+}
+
+.stars2-3:before {
+	content: "\e006\e006\e007";
+	color: gold;
+}
+
+.stars2-4:before {
+	content: "\e006\e006\e007\e007";
+	color: gold;
+}
+
+.stars2-5:before {
+	content: "\e006\e006\e007\e007\e007";
+	color: gold;
+}
+
+.stars2:after, .stars0-2:after, .stars1-2:after {
+	content: "\e007\e007\e007";
+	color: black;
+}
+
+.stars3:before {
+	content: "\e006\e006\e006";
+	color: gold;
+}
+
+.stars3-4:before {
+	content: "\e006\e006\e006\e007";
+	color: gold;
+}
+
+.stars3-5:before {
+	content: "\e006\e006\e006\e007\e007";
+	color: gold;
+}
+
+.stars3:after, .stars0-3:after, .stars1-3:after, .stars2-3:after {
+	content: "\e007\e007";
+	color: black;
+}
+
+.stars4:before {
+	content: "\e006\e006\e006\e006";
+	color: gold;
+}
+
+.stars4-5:before {
+	content: "\e006\e006\e006\e006\e007";
+	color: gold;
+}
+
+.stars4:after, .stars0-4:after, .stars1-4:after, .stars2-4:after,
+	.stars3-4:after {
+	content: "\e007";
+	color: black;
+}
+
+.stars5:before {
+	content: "\e006\e006\e006\e006\e006";
+	color: gold;
+}
+
+dd {
+	display: block;
+	margin-inline-start: 15px;
+}
+
+td.invert dl {
+	margin-bottom: 0px;
+}
+
+.invert {
+	color: #ffffff;
+	background-color: #080808;
+	padding: 1px;
+}
+
+table.grid td.invert {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 1px;
+}
+
+.default {
+	color: #333333;
+	background-color: #ffffff;
+}
+
+blockquote.report {
+	margin: 1px 1px;
+	padding: 1px 10px;
+}
+
+td.invert {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.default {
+	color: #333333;
+	background-color: #ffffff;
+}
+
+#segment-footer > .container {
+  background-color: #2670b8; // #7b1fad;
+  color: #ffffff;
+}
+
+.navbar-inverse {
+  background-color: #2670b8; // #7b1fad;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #4680e8; // #9b2fdd;
+}

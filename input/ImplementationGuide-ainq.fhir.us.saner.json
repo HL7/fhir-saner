@@ -1,0 +1,156 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ainq.fhir.us.saner",
+  "url": "http://ainq.com/fhir/us/saner/ImplementationGuide/ainq.fhir.us.saner",
+  "version": "0.1.0",
+  "name": "SituationalAwarenessforNovelEpidemicResponse",
+  "title": "Situational Awareness for Novel Epidemic Response",
+  "status": "active",
+  "publisher": "Audacious Inquiry",
+  "contact": [
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "asdf",
+  "packageId": "ainq.fhir.us.saner",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/saner-bed-group"
+        },
+        "name": "Bed Group Profile",
+        "description": "Defines constraints on the Group Resource for data communicating about Bed availability.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/saner-bed-location"
+        },
+        "name": "Bed Location Profile",
+        "description": "Defines constraints on the Location Resource for data communicating about Beds.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/saner-device-group"
+        },
+        "name": "Device Group Profile",
+        "description": "Defines constraints on the Group Resource for data communicating about device availability.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/saner-supporting-device"
+        },
+        "name": "Supporting Device Profile",
+        "description": "Defines constraints on the Device Resource for data communicating about supporting devices.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BedFeature"
+        },
+        "name": "BedFeature",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BedLocationOperationalStatus"
+        },
+        "name": "BedLocationOperationalStatus",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BedType"
+        },
+        "name": "BedType",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/SanerBedType"
+        },
+        "name": "Bed Type Coding System",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "actors_and_transactions.html",
+          "title": "Actors and Transactions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "using_group_resources.html",
+          "title": "Using Group Resources",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "transaction-1.html",
+          "title": "Transaction 1",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "transaction-2.html",
+          "title": "Transaction 2",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "transaction-3.html",
+          "title": "Transaction 3",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

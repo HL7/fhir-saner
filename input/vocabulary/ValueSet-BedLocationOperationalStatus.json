@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BedLocationOperationalStatus",
+  "id": "BedLocationOperationalStatus",
+  "version": "0.1.0",
+  "url": "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/v2-0116"
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0116",
+        "concept": [
+          {
+            "code": "I"
+          }
+        ]
+      }
+    ]
+  }
+}

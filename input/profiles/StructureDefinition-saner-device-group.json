@@ -1,0 +1,36 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "saner-device-group",
+  "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-group",
+  "version": "0.1.0",
+  "name": "DeviceGroup",
+  "title": "Device Group Profile",
+  "status": "active",
+  "description": "Defines constraints on the Group Resource for data communicating about device availability.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Group",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Group",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Group",
+        "path": "Group"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BedFeature",
+  "id": "BedFeature",
+  "version": "0.1.0",
+  "url": "http://ainq.com/fhir/us/saner/ValueSet/BedFeature",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+        "concept": [
+          {
+            "code": "NEGISO"
+          },
+          {
+            "code": "OTHISO"
+          },
+          {
+            "code": "NONISO"
+          }
+        ]
+      }
+    ]
+  }
+}

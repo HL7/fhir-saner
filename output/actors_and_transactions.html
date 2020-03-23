@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>AINQ.FHIR.US.SANER\Actors and Transactions - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+     
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+  
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css"/>
+<link rel="stylesheet" href="assets/css/assess.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+  
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+                <div style="float:left;" id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="http://ainq.org">
+            <img src="assets/images/Ai-Logo-without-Tagline@2x.png" alt="Visit the Ai website" height="64px"/>
+          </a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
+	  <li><a name="a18ddca4-4755-4220-b44a-19c8a7605a20">​</a><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a name="053d461a-ba5f-4d6e-bfaa-fa0e5c2f0977">​</a><a href="transactions.html">Transactions Overview</a></li>
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="50f70343-09b1-4c73-9e09-e5370136fb5c">​</a><a href="contentprofiles.html">Content Profiles Overview</a></li>
+      <li>
+        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Actors and Transactions</b></li>
+        </ul>  
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Actors and Transactions</h2>
+  
+  
+  
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+  <li><a href="#actor-options" id="markdown-toc-actor-options">Actor Options</a></li>
+  <li><a href="#transaction-descriptions" id="markdown-toc-transaction-descriptions">Transaction Descriptions</a></li>
+</ul>
+
+</div>
+
+<p>This section defines the actors and transactions in this implementation guide.</p>
+
+<p>Figure 1.1-1 below shows the actors directly
+involved in the SANER
+Profile and the relevant transactions between them.</p>
+
+<p><img src="ActorsAndTransactions.svg" alt="Figure 3-1: SANER Actor Diagram" title="Figure 3-1: SANER Actor Diagram"/></p>
+
+<div style="clear: left"></div>
+
+<p><strong>Figure 3-1: SANER Actor Diagram</strong></p>
+
+<p>Table 3-1 lists the transactions for each actor directly involved in the SANER Implementation Guide. To claim compliance with this guide, an actor shall
+support all required transactions (labeled “R”) and may support the
+optional transactions (labeled “O”).</p>
+
+<table border="1" borderspacing="0" style="border: 1px solid black; border-collapse: collapse">
+<caption>
+<b>
+Table 3-1: SANER Implementation Guide - Actors and Transactions
+</b>
+</caption>
+<thead>
+<tr style="background: gray;" class="odd">
+<th>Actors</th>
+<th>Transactions</th>
+<th>Optionality</th>
+</tr>
+</thead>
+<tbody>
+                
+<tr class="even">
+                        
+<td rowspan="2">
+<a href="actors_and_transactions.html#availability-source">Availability Source</a>
+</td>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Availability [PULL-TX]
+</a>
+</td>
+<td align="center">
+                        C
+
+                                        <sup>1</sup>
+                            
+</td>
+</tr>
+                    
+<tr class="odd">
+                        
+<td>
+<a href="transaction-2.html">
+                        Update Availability [PUSH-TX]
+</a>
+</td>
+<td align="center">
+                        C
+
+                                        <sup>2</sup>
+                            
+</td>
+</tr>
+                    
+<tr class="even">
+                        
+<td rowspan="2">
+<a href="actors_and_transactions.html#availability-collector">Availability Collector</a>
+</td>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Availability [PULL-TX]
+</a>
+</td>
+<td align="center">
+                        R
+</td>
+</tr>
+                    
+<tr class="odd">
+                        
+<td>
+<a href="transaction-2.html">
+                        Update Availability [PUSH-TX]
+</a>
+</td>
+<td align="center">
+                        R
+</td>
+</tr>
+                    
+<tr class="even">
+                        
+<td rowspan="1">
+<a href="actors_and_transactions.html#availability-reporter">Availability Reporter</a>
+</td>
+                        
+<td>
+<a href="transaction-3.html">
+                        Report Results [REPORT-TX]
+</a>
+</td>
+<td align="center">
+                        R
+</td>
+</tr>
+                    
+</tbody>
+</table>
+
+<p>Note 1: 
+                When the Availability Source supports the Pull Option</p>
+
+<p>Note 2: 
+                When the Availability Source supports the Push Option</p>
+
+<h3 id="actors">Actors</h3>
+<p>The actors in this profile are described in more detail in the sections below.</p>
+
+<h4 id="availability-source">Availability Source</h4>
+
+<p>The Availability Source Actor reports results for a single facility, collection of facilities
+        or aggragated data for a region</p>
+
+<p>TBD</p>
+
+<h5 id="availability-source-requirements">Availability Source Requirements</h5>
+<ol>
+  <li>An Availability Source <strong>shall</strong> implement at least one of the following options:
+    <ul>
+      <li>Push Option</li>
+      <li>Pull Option
+       <br/></li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="availability-collector">Availability Collector</h4>
+
+<p>The Availability Collector gathers data on resource availablity from other systems</p>
+
+<h4 id="availability-reporter">Availability Reporter</h4>
+
+<p>The Availability Reporter allows users to view reports on aggregated and fine-grained
+data gathered from multiple Availability Sources.</p>
+
+<h3 id="actor-options">Actor Options</h3>
+
+<p>Options that may be selected for each actor in this guide, are listed in Table 3.2-1 below. Dependencies 
+between options when applicable are specified in notes.</p>
+
+<table border="1" style="border: 1px solid black; border-collapse: collapse">
+    <caption><b>Table 3.2-1 Actor Options</b></caption>
+    <thead>
+        <tr style="background: gray;" class="odd">
+            <td>Actor</td>
+            <td>Option Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+                <tr>
+                
+                    <td rowspan="3">Availability Source</td>
+                
+                <td><a href="#push-option">Push Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#pull-option">Pull Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#resource-option">Resource Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                    <td rowspan="1">Availability Collector</td>
+                
+                <td><a href="#resource-option">Resource Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                    <td rowspan="1">Availability Reporter</td>
+                
+                <td><a href="#resource-option">Resource Option</a></td>
+                </tr>
+            
+    </tbody>
+</table>
+
+<p>The options in this guide are describe in more detail the sections below.</p>
+
+<h4 id="push-option">Push Option</h4>
+
+<p>An actor implementing the Push Option supports the periodic push of a Bundle of records
+describing the current status of health delivery resources to a centralized collection point.</p>
+
+<p>This option applies to the actors as described below.</p>
+<h5 id="availability-source-1">Availability Source</h5>
+
+<p>An Availability Source implementing the Push Option periodically sends updates to the
+Availability Collector using the <a href="transaction-2.html">Update Availability</a> transaction.</p>
+
+<h4 id="pull-option">Pull Option</h4>
+
+<p>An actor implementing the Pull Option supports use of the [Query Availability] transaction made from
+an Availability Collector to enable reporting of the current status of selected health delivery resources .</p>
+
+<p>This option applies to the actors as described below.</p>
+<h5 id="availability-source-2">Availability Source</h5>
+
+<p>An Availability Source implementing the Pull Option periodically is periodically queried by an
+Availability Collector using the <a href="transaction-1.html">Query Availability</a> transaction to enable collection of the current status.</p>
+
+<h4 id="resource-option">Resource Option</h4>
+
+<p>An actor supporting the Resource Option can describe the status of non-bed treatment
+resources, such as ventilators, respirators, infusion pumps, monitoring equipment, et cetera</p>
+
+<p>This option applies to the actors as described below.</p>
+<h5 id="availability-source-3">Availability Source</h5>
+
+<p>An Availability Source implementing the Resource Option can send updates on other Resources
+(e.g., ventilators, respirators, other medical equipment).</p>
+
+<h5 id="availability-collector-1">Availability Collector</h5>
+
+<p>An Availability Collector implementing the Resource Option can request updates on other Resources
+(e.g., ventilators, respirators, other medical equipment), or aggregate data updates provided about these
+resources.</p>
+
+<h5 id="availability-reporter-1">Availability Reporter</h5>
+
+<p>An Availability Reporter implementing the Resource Option can reports data about other Resources
+(e.g., ventilators, respirators, other medical equipment).</p>
+
+<h3 id="transaction-descriptions">Transaction Descriptions</h3>
+<p>The transactions in this profile are summarized in the sections below.</p>
+
+<h4 id="query-availability">Query Availability</h4>
+
+<p>The Query Availability transaction allows an Availability Collector to
+periodically query about the availability of a resource from an Availability Source.</p>
+
+<p>For more details see the detailed <a href="transaction-1.html">transaction description</a></p>
+
+<h4 id="update-availability">Update Availability</h4>
+
+<p>The Update Availability transaction allows an Availability Source to
+periodically update the availability of resources to an Availability Collector.</p>
+
+<p>For more details see the detailed <a href="transaction-2.html">transaction description</a></p>
+
+<h4 id="report-results">Report Results</h4>
+
+<p>The Report Results transaction allows users (e.g., Public Health Officials) to view current resource availability.</p>
+
+<p>For more details see the detailed <a href="transaction-3.html">transaction description</a></p>
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 23, 2020 15:28-0400">2020-03-23</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
