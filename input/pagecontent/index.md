@@ -2,7 +2,7 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-    
+
 
 
 
@@ -51,7 +51,7 @@ You can also download:
 * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
 
 The source code for this Implementation Guide can be found on
-[https://github.com/AudaciousInquiry/saner-ig](https://github.com/https://github.com/AudaciousInquiry/saner-ig).
+[https://github.com/AudaciousInquiry/saner-ig](https://github.com/AudaciousInquiry/saner-ig).
 
 ### About Audacious Inquiry ###
 [Audacious Inquiry](https://ainq.com) (Ai) is an industry-shaping health information technology and
@@ -62,4 +62,3 @@ a service platform that is the catalyst for secure and smart health information 
 physicians, hospitals, health plans, ACOs, MCOs, and public health agencies across 12 US states.
 Ai is raising the bar for how health data is shared, managed, and protected.
 
-        
