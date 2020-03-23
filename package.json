@@ -1,0 +1,34 @@
+{
+  "name": "ainq.fhir.us.saner",
+  "version": "0.1.0",
+  "canonical": "http://ainq.com/fhir/us/saner",
+  "url": "http://ainq.com/fhir/us/saner",
+  "title": "Situational Awareness for Novel Epidemic Response",
+  "description": "asdf",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "keywords": [
+    "COVID",
+    "Coronovirus",
+    "ILI",
+    "Influenza",
+    "COVID-19",
+    "SARS-Cov-2",
+    "Bed",
+    "Availability"
+  ],
+  "language": "en",
+  "author": "Audacious Inquiry",
+  "maintainers": [
+    {
+      "name": "Audacious Inquiry",
+      "url": "http://ainq.com"
+    },
+    {
+      "name": "Keith W. Boone",
+      "email": "kboone@ainq.com"
+    }
+  ],
+  "license": "CC-BY-NC-SA-4.0"
+}
