@@ -1,8 +1,8 @@
 # Situation Awareness for Novel Epidemic Response: A FHIR Implementation Guide
 
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
-of high level situational awareness information from inpatient facilities to centralized data repositories
-to support the treatment of novel influenza-like illness.
+of high level situational awareness information from inpatient facilities to centralized
+data repositories to support the treatment of novel influenza-like illness.
 
 ## About This Guide
 This is a draft implementation guide to promote discussion with leaders in the Health
