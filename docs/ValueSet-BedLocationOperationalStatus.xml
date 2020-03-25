@@ -3,13 +3,15 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="BedLocationOperationalStatus"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>BedLocationOperationalStatus</h2><ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/v2/0116/index.html">http://terminology.hl7.org/ValueSet/v2-0116</a></li><li>Exclude these codes as defined in <a href="http://hl7.org/fhir/R4/v2/0116/index.html"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-I">I</a></td><td>Isolated</td><td/></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Bed Location Operational Status</h2><div><p>This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.</p>
+</div><ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/v2/0116/index.html">http://terminology.hl7.org/ValueSet/v2-0116</a></li><li>Exclude these codes as defined in <a href="http://hl7.org/fhir/R4/v2/0116/index.html"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-I">I</a></td><td>Isolated</td><td/></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>
   </text>
   <url value="http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
   <version value="0.1.0"/>
   <name value="BedLocationOperationalStatus"/>
+  <title value="Bed Location Operational Status"/>
   <status value="active"/>
-  <date value="2020-03-23T15:28:25-04:00"/>
+  <date value="2020-03-25T07:13:34-04:00"/>
   <publisher value="Audacious Inquiry"/>
   <contact>
     <name value="Audacious Inquiry"/>
@@ -25,6 +27,7 @@
       <value value="kboone@ainq.com"/>
     </telecom>
   </contact>
+  <description value="This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."/>
   <compose>
     <include>
       <valueSet value="http://terminology.hl7.org/ValueSet/v2-0116"/>

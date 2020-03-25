@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+participant "Availability Collector" as AvailabilityCollector
+participant "Availability Source" as AvailabilitySource
+"AvailabilityCollector" -> "AvailabilitySource" : 1. Availability Collector Initiates Search
+activate "AvailabilityCollector"
+activate "AvailabilitySource"
+"AvailabilitySource" --> "AvailabilityCollector" : 2. Availability Source Reports Aggregate Data
+deactivate "AvailabilityCollector"
+deactivate "AvailabilitySource"
+@enduml

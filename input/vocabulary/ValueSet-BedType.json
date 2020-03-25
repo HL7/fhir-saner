@@ -3,6 +3,8 @@
   "status": "active",
   "name": "BedType",
   "id": "BedType",
+  "title": "Bed Type",
+  "description": "This Value Set describes the types of care services that a bed can support.",
   "version": "0.1.0",
   "url": "http://ainq.com/fhir/us/saner/ValueSet/BedType",
   "compose": {

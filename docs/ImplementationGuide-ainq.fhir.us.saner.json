@@ -10,7 +10,7 @@
   "name": "SituationalAwarenessforNovelEpidemicResponse",
   "title": "Situational Awareness for Novel Epidemic Response",
   "status": "active",
-  "date": "2020-03-23T15:28:25-04:00",
+  "date": "2020-03-25T07:13:34-04:00",
   "publisher": "Audacious Inquiry",
   "contact": [
     {
@@ -34,7 +34,7 @@
   ],
   "description": "asdf",
   "packageId": "ainq.fhir.us.saner",
-  "license": "CC0-1.0",
+  "license": "CC-BY-4.0",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -325,6 +325,24 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-saner-resource-location.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/saner-resource-location"
+        },
+        "name": "Resource Location Profile",
+        "description": "Defines constraints on the Location Resource describing the location of resources (Beds and Devices).",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "valueUri": "StructureDefinition-saner-supporting-device.html"
           }
         ],
@@ -343,13 +361,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ValueSet-BedFeature.html"
+            "valueUri": "ValueSet-BedLocationOperationalStatus.html"
           }
         ],
         "reference": {
-          "reference": "ValueSet/BedFeature"
+          "reference": "ValueSet/BedLocationOperationalStatus"
         },
-        "name": "BedFeature",
+        "name": "Bed Location Operational Status",
+        "description": "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
         "exampleBoolean": false
       },
       {
@@ -360,13 +379,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ValueSet-BedLocationOperationalStatus.html"
+            "valueUri": "ValueSet-BedProperty.html"
           }
         ],
         "reference": {
-          "reference": "ValueSet/BedLocationOperationalStatus"
+          "reference": "ValueSet/BedProperty"
         },
-        "name": "BedLocationOperationalStatus",
+        "name": "Bed Property",
+        "description": "This value set describes other properties of a bed, such as the ability to support isolation.",
         "exampleBoolean": false
       },
       {
@@ -383,7 +403,8 @@
         "reference": {
           "reference": "ValueSet/BedType"
         },
-        "name": "BedType",
+        "name": "Bed Type",
+        "description": "This Value Set describes the types of care services that a bed can support.",
         "exampleBoolean": false
       },
       {
@@ -401,7 +422,26 @@
           "reference": "CodeSystem/SanerBedType"
         },
         "name": "Bed Type Coding System",
+        "description": "This Coding System fills gaps describing types of care services that a bed can support.",
         "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ConceptMap"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ConceptMap-HAvBED2toFHIR.html"
+          }
+        ],
+        "reference": {
+          "reference": "ConceptMap/HAvBED2toFHIR"
+        },
+        "name": "HAvBED2 to FHIR Concept Map",
+        "description": "This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR",
+        "exampleBoolean": true
       }
     ],
     "page": {

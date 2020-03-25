@@ -5,6 +5,7 @@
   "name": "SanerBedType",
   "id": "SanerBedType",
   "title": "Bed Type Coding System",
+  "description": "This Coding System fills gaps describing types of care services that a bed can support.",
   "version": "0.1.0",
   "url": "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
   "concept": [

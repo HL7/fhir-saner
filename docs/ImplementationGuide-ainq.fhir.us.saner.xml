@@ -11,7 +11,7 @@
   <name value="SituationalAwarenessforNovelEpidemicResponse"/>
   <title value="Situational Awareness for Novel Epidemic Response"/>
   <status value="active"/>
-  <date value="2020-03-23T15:28:25-04:00"/>
+  <date value="2020-03-25T07:13:34-04:00"/>
   <publisher value="Audacious Inquiry"/>
   <contact>
     <name value="Audacious Inquiry"/>
@@ -29,7 +29,7 @@
   </contact>
   <description value="asdf"/>
   <packageId value="ainq.fhir.us.saner"/>
-  <license value="CC0-1.0"/>
+  <license value="CC-BY-4.0"/>
   <fhirVersion value="4.0.1"/>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -215,6 +215,20 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-resource-location.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-resource-location"/>
+      </reference>
+      <name value="Resource Location Profile"/>
+      <description value="Defines constraints on the Location Resource describing the location of resources (Beds and Devices)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-saner-supporting-device.html"/>
       </extension>
       <reference>
@@ -229,12 +243,13 @@
         <valueString value="ValueSet"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-BedFeature.html"/>
+        <valueUri value="ValueSet-BedLocationOperationalStatus.html"/>
       </extension>
       <reference>
-        <reference value="ValueSet/BedFeature"/>
+        <reference value="ValueSet/BedLocationOperationalStatus"/>
       </reference>
-      <name value="BedFeature"/>
+      <name value="Bed Location Operational Status"/>
+      <description value="This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -242,12 +257,13 @@
         <valueString value="ValueSet"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-BedLocationOperationalStatus.html"/>
+        <valueUri value="ValueSet-BedProperty.html"/>
       </extension>
       <reference>
-        <reference value="ValueSet/BedLocationOperationalStatus"/>
+        <reference value="ValueSet/BedProperty"/>
       </reference>
-      <name value="BedLocationOperationalStatus"/>
+      <name value="Bed Property"/>
+      <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -260,7 +276,8 @@
       <reference>
         <reference value="ValueSet/BedType"/>
       </reference>
-      <name value="BedType"/>
+      <name value="Bed Type"/>
+      <description value="This Value Set describes the types of care services that a bed can support."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -274,7 +291,22 @@
         <reference value="CodeSystem/SanerBedType"/>
       </reference>
       <name value="Bed Type Coding System"/>
+      <description value="This Coding System fills gaps describing types of care services that a bed can support."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ConceptMap-HAvBED2toFHIR.html"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/HAvBED2toFHIR"/>
+      </reference>
+      <name value="HAvBED2 to FHIR Concept Map"/>
+      <description value="This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR"/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

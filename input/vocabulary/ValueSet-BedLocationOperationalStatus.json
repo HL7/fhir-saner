@@ -3,6 +3,8 @@
   "status": "active",
   "name": "BedLocationOperationalStatus",
   "id": "BedLocationOperationalStatus",
+  "title": "Bed Location Operational Status",
+  "description": "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
   "version": "0.1.0",
   "url": "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
   "compose": {

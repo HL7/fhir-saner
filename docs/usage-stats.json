@@ -12,6 +12,12 @@
     ],
     "Location": [
       {
+        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location",
+        "title": "Resource Location Profile"
+      }
+    ],
+    "Device": [
+      {
         "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-supporting-device",
         "title": "Supporting Device Profile"
       }

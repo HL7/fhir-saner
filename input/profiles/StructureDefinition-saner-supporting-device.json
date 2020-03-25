@@ -18,18 +18,23 @@
       "identity": "w5",
       "uri": "http://hl7.org/fhir/fivews",
       "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "udi",
+      "uri": "http://fda.gov/UDI",
+      "name": "UDI Mapping"
     }
   ],
   "kind": "resource",
   "abstract": false,
-  "type": "Location",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Location",
-        "path": "Location"
+        "id": "Device",
+        "path": "Device"
       }
     ]
   }

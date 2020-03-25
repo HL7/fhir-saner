@@ -1,0 +1,205 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "HAvBED2toFHIR",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HAvBED2toFHIR (http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR)</h2><p>Mapping from https://archive.ahrq.gov/prep/havbed2/ to (not specified)</p><p>DRAFT (not intended for production usage). Published on Mar 24, 2020, 12:00:00 AM by Audacious Inquiry (Audacious Inquiry: <a href=\"http://ainq.com\">http://ainq.com</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). </p><div><p>This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>AdultICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ICU (Intensive care unit)</td><td>These can support critically ill or injured patients, including ventilator support This category includes all major subtypes of ICU beds, including neurological, cardiac, trauma, or medical, with the exception that this category does not include burn ICU beds</td></tr><tr><td>PediatricICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDICU (Pediatric intensive care unit)</td><td>This is similar to adult ICU beds, but for patients 17-years-old and younger.</td></tr><tr><td>NeonatalICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDNICU (Pediatric neonatal intensive care unit)</td><td>Neonatal ICU beds</td></tr><tr><td>ED</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ER (Emergency room)</td><td>Emergency Department beds used for acute care</td></tr><tr><td>MedicalSurgical</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HU (Hospital unit)</td><td>These are also thought of as ward beds. These beds may or may not include cardiac telemetry capability</td></tr><tr><td>RehabLongTermCare</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RHU (Rehabilitation hospital unit)</td><td>Beds designated as long term care rehabilitation. These do not include floor beds</td></tr><tr><td>Pediatrics</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDU (Pediatric unit)</td><td>These are ward medical/surgical beds for patients 17-years-old and younger</td></tr><tr><td>Psychiatric</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PHU (Psychiatric hospital unit)</td><td>Ward beds on a closed/locked psychiatric unit or ward beds where a patient will be staffed by an attendant.</td></tr></table><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>Burn</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BURNU (Burn Unit)</td><td>These are thought of as burn ICU beds, either approved by the American Burn Association or self-designated. These beds are NOT to be included in other ICU bed counts.</td></tr><tr><td>NurseryBeds</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NURSERY</td><td>Neonatal or newborn care beds including all bed types other than Neonatal ICU</td></tr><tr><td>OperatingRooms</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OR (Operating Room)</td><td>Operating rooms which are equipped, staffed and could be made available for patient care in a short period of time</td></tr><tr><td>NegativeFlowIsolation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NEGISO (Negative Pressure Isolation Unit)</td><td>These provide respiratory isolation. NOTE: This value may represent available beds included in the counts of other types</td></tr><tr><td>OtherIsolation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OTHISO (Other Isolation Unit)</td><td>These provide isolation where airflow is not a concern. NOTE: This value may represent available beds included in the counts of other types</td></tr></table><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr></table></div>"
+  },
+  "url": "http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR",
+  "version": "0.1.0",
+  "name": "HAvBED2toFHIR",
+  "status": "draft",
+  "experimental": true,
+  "date": "2020-03-24T00:00:00-04:00",
+  "publisher": "Audacious Inquiry",
+  "contact": [
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR",
+  "sourceUri": "https://archive.ahrq.gov/prep/havbed2/",
+  "group": [
+    {
+      "target": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "element": [
+        {
+          "code": "AdultICU",
+          "display": "Adult ICU bed type",
+          "target": [
+            {
+              "code": "ICU",
+              "equivalence": "equivalent",
+              "comment": "These can support critically ill or injured patients, including ventilator support This category includes all major subtypes of ICU beds, including neurological, cardiac, trauma, or medical, with the exception that this category does not include burn ICU beds"
+            }
+          ]
+        },
+        {
+          "code": "PediatricICU",
+          "display": "Pediatric ICU beds.",
+          "target": [
+            {
+              "code": "PEDICU",
+              "equivalence": "equivalent",
+              "comment": "This is similar to adult ICU beds, but for patients 17-years-old and younger."
+            }
+          ]
+        },
+        {
+          "code": "NeonatalICU",
+          "display": "Neonatal ICU beds",
+          "target": [
+            {
+              "code": "PEDNICU",
+              "equivalence": "equivalent",
+              "comment": "Neonatal ICU beds"
+            }
+          ]
+        },
+        {
+          "code": "ED",
+          "display": "Emergency Department beds used for acute care",
+          "target": [
+            {
+              "code": "ER",
+              "equivalence": "equivalent",
+              "comment": "Emergency Department beds used for acute care"
+            }
+          ]
+        },
+        {
+          "code": "MedicalSurgical",
+          "display": "Medical-surgical beds",
+          "target": [
+            {
+              "code": "HU",
+              "equivalence": "equivalent",
+              "comment": "These are also thought of as ward beds. These beds may or may not include cardiac telemetry capability"
+            }
+          ]
+        },
+        {
+          "code": "RehabLongTermCare",
+          "display": "Rehabilitation/Long term care beds",
+          "target": [
+            {
+              "code": "RHU",
+              "equivalence": "equivalent",
+              "comment": "Beds designated as long term care rehabilitation. These do not include floor beds"
+            }
+          ]
+        },
+        {
+          "code": "Pediatrics",
+          "display": "Pediatrics beds.",
+          "target": [
+            {
+              "code": "PEDU",
+              "equivalence": "equivalent",
+              "comment": "These are ward medical/surgical beds for patients 17-years-old and younger"
+            }
+          ]
+        },
+        {
+          "code": "Psychiatric",
+          "display": "Ward beds on a closed/locked psychiatric unit or ward beds where a patient will be staffed by an attendant.",
+          "target": [
+            {
+              "code": "PHU",
+              "equivalence": "equivalent",
+              "comment": "Ward beds on a closed/locked psychiatric unit or ward beds where a patient will be staffed by an attendant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+      "element": [
+        {
+          "code": "Burn",
+          "display": "Burn beds",
+          "target": [
+            {
+              "code": "BURNU",
+              "equivalence": "equivalent",
+              "comment": "These are thought of as burn ICU beds, either approved by the American Burn Association or self-designated. These beds are NOT to be included in other ICU bed counts."
+            }
+          ]
+        },
+        {
+          "code": "NurseryBeds",
+          "display": "Neonatal or newborn care beds including all bed types other than Neonatal ICU",
+          "target": [
+            {
+              "code": "NURSERY",
+              "equivalence": "equivalent",
+              "comment": "Neonatal or newborn care beds including all bed types other than Neonatal ICU"
+            }
+          ]
+        },
+        {
+          "code": "OperatingRooms",
+          "display": "Operating rooms which are equipped, staffed and could be made available for patient care in a short period of time",
+          "target": [
+            {
+              "code": "OR",
+              "equivalence": "equivalent",
+              "comment": "Operating rooms which are equipped, staffed and could be made available for patient care in a short period of time"
+            }
+          ]
+        },
+        {
+          "code": "NegativeFlowIsolation",
+          "display": "Negative airflow isolation beds.",
+          "target": [
+            {
+              "code": "NEGISO",
+              "equivalence": "equivalent",
+              "comment": "These provide respiratory isolation. NOTE: This value may represent available beds included in the counts of other types"
+            }
+          ]
+        },
+        {
+          "code": "OtherIsolation",
+          "display": "Isolation beds.",
+          "target": [
+            {
+              "code": "OTHISO",
+              "equivalence": "equivalent",
+              "comment": "These provide isolation where airflow is not a concern. NOTE: This value may represent available beds included in the counts of other types"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": [
+        {
+          "code": "N/A",
+          "display": "Non-Isolation beds.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

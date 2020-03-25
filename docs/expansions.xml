@@ -1,116 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="bcb514f2-ca9f-422c-b8da-d0e6db45ae7b"/>
+  <id value="1ff83d3c-9715-49e1-826b-f7f796780ac0"/>
   <meta>
-    <lastUpdated value="2020-03-23T15:28:25.105-04:00"/>
+    <lastUpdated value="2020-03-25T07:13:34.121-04:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://ainq.com/fhir/us/saner/ValueSet/BedFeature"/>
-    <resource>
-      <ValueSet>
-        <id value="BedFeature"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 3 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p>
-            <p>All codes from system 
-              <a href="CodeSystem-SanerBedType.html">
-                <code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NEGISO"> </a>
-                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NEGISO">NEGISO</a>
-                </td>
-                <td>Negative Pressure Isolation Unit</td>
-                <td>Beds in a negative pressure isolation environment</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OTHISO"> </a>
-                  <a href="CodeSystem-SanerBedType.html#SanerBedType-OTHISO">OTHISO</a>
-                </td>
-                <td>Other Isolation Unit</td>
-                <td>Beds in an other (non-negative pressure) isolation environment</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NONISO"> </a>
-                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NONISO">NONISO</a>
-                </td>
-                <td>Non-isolating unit</td>
-                <td>Bed in a unit that does not support isolation</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://ainq.com/fhir/us/saner/ValueSet/BedFeature"/>
-        <version value="0.1.0"/>
-        <name value="BedFeature"/>
-        <status value="active"/>
-        <date value="2020-03-23T15:28:25-04:00"/>
-        <publisher value="Audacious Inquiry"/>
-        <contact>
-          <name value="Audacious Inquiry"/>
-          <telecom>
-            <system value="url"/>
-            <value value="http://ainq.com"/>
-          </telecom>
-        </contact>
-        <contact>
-          <name value="Keith W. Boone"/>
-          <telecom>
-            <system value="email"/>
-            <value value="kboone@ainq.com"/>
-          </telecom>
-        </contact>
-        <expansion>
-          <identifier value="urn:uuid:9bdb3922-3dd6-4374-9fa0-129041dcef1f"/>
-          <timestamp value="2020-03-23T15:28:30-04:00"/>
-          <total value="3"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"/>
-          </parameter>
-          <contains>
-            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
-            <code value="NEGISO"/>
-            <display value="Negative Pressure Isolation Unit"/>
-          </contains>
-          <contains>
-            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
-            <code value="OTHISO"/>
-            <display value="Other Isolation Unit"/>
-          </contains>
-          <contains>
-            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
-            <code value="NONISO"/>
-            <display value="Non-isolating unit"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
   <entry>
     <fullUrl value="http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
     <resource>
@@ -184,8 +79,9 @@
         <url value="http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
         <version value="0.1.0"/>
         <name value="BedLocationOperationalStatus"/>
+        <title value="Bed Location Operational Status"/>
         <status value="active"/>
-        <date value="2020-03-23T15:28:25-04:00"/>
+        <date value="2020-03-25T07:13:34-04:00"/>
         <publisher value="Audacious Inquiry"/>
         <contact>
           <name value="Audacious Inquiry"/>
@@ -201,9 +97,10 @@
             <value value="kboone@ainq.com"/>
           </telecom>
         </contact>
+        <description value="This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."/>
         <expansion>
-          <identifier value="urn:uuid:23c91f61-f355-4aaf-8581-9b881146b73d"/>
-          <timestamp value="2020-03-23T15:28:30-04:00"/>
+          <identifier value="urn:uuid:54855502-64e0-46fb-8f2d-66d56a7d4173"/>
+          <timestamp value="2020-03-25T07:13:52-04:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -241,6 +138,113 @@
             <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
             <code value="U"/>
             <display value="Unoccupied"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://ainq.com/fhir/us/saner/ValueSet/BedProperty"/>
+    <resource>
+      <ValueSet>
+        <id value="BedProperty"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p>
+            <p>All codes from system 
+              <a href="CodeSystem-SanerBedType.html">
+                <code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NEGISO"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NEGISO">NEGISO</a>
+                </td>
+                <td>Negative Pressure Isolation Unit</td>
+                <td>Beds in a negative pressure isolation environment</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OTHISO"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-OTHISO">OTHISO</a>
+                </td>
+                <td>Other Isolation Unit</td>
+                <td>Beds in an other (non-negative pressure) isolation environment</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NONISO"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NONISO">NONISO</a>
+                </td>
+                <td>Non-isolating unit</td>
+                <td>Bed in a unit that does not support isolation</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://ainq.com/fhir/us/saner/ValueSet/BedProperty"/>
+        <version value="0.1.0"/>
+        <name value="BedProperty"/>
+        <title value="Bed Property"/>
+        <status value="active"/>
+        <date value="2020-03-25T07:13:34-04:00"/>
+        <publisher value="Audacious Inquiry"/>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
+        <expansion>
+          <identifier value="urn:uuid:4367d5ad-3498-4ad9-922d-c93b0bc922e4"/>
+          <timestamp value="2020-03-25T07:13:52-04:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="NEGISO"/>
+            <display value="Negative Pressure Isolation Unit"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="OTHISO"/>
+            <display value="Other Isolation Unit"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="NONISO"/>
+            <display value="Non-isolating unit"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -376,8 +380,9 @@
         <url value="http://ainq.com/fhir/us/saner/ValueSet/BedType"/>
         <version value="0.1.0"/>
         <name value="BedType"/>
+        <title value="Bed Type"/>
         <status value="active"/>
-        <date value="2020-03-23T15:28:25-04:00"/>
+        <date value="2020-03-25T07:13:34-04:00"/>
         <publisher value="Audacious Inquiry"/>
         <contact>
           <name value="Audacious Inquiry"/>
@@ -393,9 +398,10 @@
             <value value="kboone@ainq.com"/>
           </telecom>
         </contact>
+        <description value="This Value Set describes the types of care services that a bed can support."/>
         <expansion>
-          <identifier value="urn:uuid:53ac51f2-cea2-4604-9020-7ecd4ea8c66a"/>
-          <timestamp value="2020-03-23T15:28:30-04:00"/>
+          <identifier value="urn:uuid:c55ad97c-a106-4b09-a015-e29e582a6004"/>
+          <timestamp value="2020-03-25T07:13:52-04:00"/>
           <total value="11"/>
           <parameter>
             <name value="excludeNested"/>

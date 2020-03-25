@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SituationalAwarenessforNovelEpidemicResponse"];
   fhir:ImplementationGuide.title [ fhir:value "Situational Awareness for Novel Epidemic Response"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-23T15:28:25-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-25T07:13:34-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Audacious Inquiry"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -38,7 +38,7 @@
   ];
   fhir:ImplementationGuide.description [ fhir:value "asdf"];
   fhir:ImplementationGuide.packageId [ fhir:value "ainq.fhir.us.saner"];
-  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
+  fhir:ImplementationGuide.license [ fhir:value "CC-BY-4.0"];
   fhir:ImplementationGuide.fhirVersion [
      fhir:value "4.0.1";
      fhir:index 0
@@ -312,6 +312,24 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-resource-location.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-resource-location" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Resource Location Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource describing the location of resources (Beds and Devices)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-supporting-device.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -320,23 +338,6 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Supporting Device Profile" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Device Resource for data communicating about supporting devices." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "ValueSet-BedFeature.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://ainq.com/fhir/us/saner/ValueSet/BedFeature>;
-         fhir:Reference.reference [ fhir:value "ValueSet/BedFeature" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BedFeature" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -353,10 +354,29 @@
          fhir:link <http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus>;
          fhir:Reference.reference [ fhir:value "ValueSet/BedLocationOperationalStatus" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BedLocationOperationalStatus" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Location Operational Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-BedProperty.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/ValueSet/BedProperty>;
+         fhir:Reference.reference [ fhir:value "ValueSet/BedProperty" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Property" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set describes other properties of a bed, such as the ability to support isolation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -370,10 +390,11 @@
          fhir:link <http://ainq.com/fhir/us/saner/ValueSet/BedType>;
          fhir:Reference.reference [ fhir:value "ValueSet/BedType" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "BedType" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set describes the types of care services that a bed can support." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -388,7 +409,26 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/SanerBedType" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Type Coding System" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System fills gaps describing types of care services that a bed can support." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-HAvBED2toFHIR.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/HAvBED2toFHIR" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HAvBED2 to FHIR Concept Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];

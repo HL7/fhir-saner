@@ -111,6 +111,8 @@
         "id": "Group.characteristic:Status",
         "path": "Group.characteristic",
         "sliceName": "Status",
+        "short": "The Status slice reports on the status of the bed (e.g., active | suspended | inactive)",
+        "comment": "An active bed is one that can be used, suspended is one that has been temporarily taken out of service, an inactive one is not available",
         "min": 1,
         "max": "1"
       },
@@ -121,34 +123,19 @@
           "coding": [
             {
               "code": "Location.status",
-              "system": "http://hl7.org/fhir/location-definitions.html"
+              "system": "http://hl7.org/fhir/R4/StructureDefinition/Location"
             }
           ]
         }
       },
       {
-        "id": "Group.characteristic:Status.value[x]",
-        "path": "Group.characteristic.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
+        "id": "Group.characteristic:Status.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Group.characteristic:Status.valueCodeableConcept",
-        "path": "Group.characteristic.valueCodeableConcept",
-        "min": 0,
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/location-status"
@@ -158,6 +145,8 @@
         "id": "Group.characteristic:OperationalStatus",
         "path": "Group.characteristic",
         "sliceName": "OperationalStatus",
+        "short": "The OperationalStatus slice reports on the operationalStatus of the bed (e.g., occupied | unoccupied | housekeeping)",
+        "comment": "OperationalStatus helps assess whether a bed is in use or could be placed into use",
         "min": 1,
         "max": "1"
       },
@@ -168,34 +157,19 @@
           "coding": [
             {
               "code": "Location.operationalStatus",
-              "system": "http://hl7.org/fhir/location-definitions.html"
+              "system": "http://hl7.org/fhir/R4/StructureDefinition/Location"
             }
           ]
         }
       },
       {
-        "id": "Group.characteristic:OperationalStatus.value[x]",
-        "path": "Group.characteristic.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
+        "id": "Group.characteristic:OperationalStatus.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Group.characteristic:OperationalStatus.valueCodeableConcept",
-        "path": "Group.characteristic.valueCodeableConcept",
-        "min": 0,
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"
@@ -205,6 +179,8 @@
         "id": "Group.characteristic:Type",
         "path": "Group.characteristic",
         "sliceName": "Type",
+        "short": "The Type slice reports on the type location for the bed (e.g., ICU | ER| Hospital Unit)",
+        "comment": "Type helps to identify the services available to patients using the bed",
         "min": 1,
         "max": "1"
       },
@@ -215,90 +191,64 @@
           "coding": [
             {
               "code": "Location.type",
-              "system": "http://hl7.org/fhir/location-definitions.html"
+              "system": "http://hl7.org/fhir/R4/StructureDefinition/Location"
             }
           ]
         }
       },
       {
-        "id": "Group.characteristic:Type.value[x]",
-        "path": "Group.characteristic.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
+        "id": "Group.characteristic:Type.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Group.characteristic:Type.valueCodeableConcept",
-        "path": "Group.characteristic.valueCodeableConcept",
-        "min": 0,
+        ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+          "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedType"
         }
       },
       {
-        "id": "Group.characteristic:Feature",
+        "id": "Group.characteristic:Property",
         "path": "Group.characteristic",
-        "sliceName": "Feature",
+        "sliceName": "Property",
+        "short": "The Property slice reports on isolation properties of the bed(e.g., NEGISO | OTHISO | NONISO)",
+        "comment": "Property identifies important properties of the bed (e.g., isolation)",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Group.characteristic:Feature.code",
+        "id": "Group.characteristic:Property.code",
         "path": "Group.characteristic.code",
         "patternCodeableConcept": {
           "coding": [
             {
               "code": "Location.Feature",
-              "system": "http://hl7.org/fhir/location-definitions.html"
+              "system": "http://hl7.org/fhir/R4/StructureDefinition/Location"
             }
           ]
         }
       },
       {
-        "id": "Group.characteristic:Feature.value[x]",
-        "path": "Group.characteristic.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
+        "id": "Group.characteristic:Property.valueCodeableConcept",
+        "path": "Group.characteristic.valueCodeableConcept",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Group.characteristic:Feature.valueCodeableConcept",
-        "path": "Group.characteristic.valueCodeableConcept",
-        "min": 0,
+        ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedFeature"
+          "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedProperty"
         }
       },
       {
         "id": "Group.characteristic:Location",
         "path": "Group.characteristic",
         "sliceName": "Location",
+        "short": "The Location slice reports the physical location of the bed (e.g., address, GPS coordinates)",
+        "comment": "Location aids in mapping, navigation and communications to or about the bed.",
         "min": 1,
         "max": "1"
       },
@@ -309,27 +259,22 @@
           "coding": [
             {
               "code": "Location.partOf",
-              "system": "http://hl7.org/fhir/location-definitions.html"
+              "system": "http://hl7.org/fhir/R4/StructureDefinition/Location"
             }
           ]
         }
       },
       {
-        "id": "Group.characteristic:Location.value[x]",
-        "path": "Group.characteristic.value[x]",
+        "id": "Group.characteristic:Location.valueReference",
+        "path": "Group.characteristic.valueReference",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Location"
+              "http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location"
             ]
           }
         ]
-      },
-      {
-        "id": "Group.member",
-        "path": "Group.member",
-        "max": "0"
       }
     ]
   }

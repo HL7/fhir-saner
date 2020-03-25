@@ -3,9 +3,9 @@
   "name": "SituationalAwarenessforNovelEpidemicResponse",
   "package-id": "ainq.fhir.us.saner",
   "ig-ver": "0.1.0",
-  "date": "Mon, 23 Mar, 2020 15:28:25 -0400",
-  "errs": 40,
-  "warnings": 8,
+  "date": "Wed, 25 Mar, 2020 07:13:34 -0400",
+  "errs": 72,
+  "warnings": 10,
   "hints": 0,
   "version": "4.0.1",
   "tool": "4.2.0 (3)"

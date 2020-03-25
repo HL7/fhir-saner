@@ -1,70 +1,11 @@
 {
   "resourceType" : "Bundle",
-  "id" : "bcb514f2-ca9f-422c-b8da-d0e6db45ae7b",
+  "id" : "1ff83d3c-9715-49e1-826b-f7f796780ac0",
   "meta" : {
-    "lastUpdated" : "2020-03-23T15:28:25.105-04:00"
+    "lastUpdated" : "2020-03-25T07:13:34.121-04:00"
   },
   "type" : "collection",
   "entry" : [{
-    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedFeature",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "BedFeature",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p><p>All codes from system <a href=\"CodeSystem-SanerBedType.html\"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NEGISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NEGISO\">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OTHISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OTHISO\">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NONISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NONISO\">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>"
-      },
-      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedFeature",
-      "version" : "0.1.0",
-      "name" : "BedFeature",
-      "status" : "active",
-      "date" : "2020-03-23T15:28:25-04:00",
-      "publisher" : "Audacious Inquiry",
-      "contact" : [{
-        "name" : "Audacious Inquiry",
-        "telecom" : [{
-          "system" : "url",
-          "value" : "http://ainq.com"
-        }]
-      },
-      {
-        "name" : "Keith W. Boone",
-        "telecom" : [{
-          "system" : "email",
-          "value" : "kboone@ainq.com"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:9bdb3922-3dd6-4374-9fa0-129041dcef1f",
-        "timestamp" : "2020-03-23T15:28:30-04:00",
-        "total" : 3,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"
-        }],
-        "contains" : [{
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
-          "code" : "NEGISO",
-          "display" : "Negative Pressure Isolation Unit"
-        },
-        {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
-          "code" : "OTHISO",
-          "display" : "Other Isolation Unit"
-        },
-        {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
-          "code" : "NONISO",
-          "display" : "Non-isolating unit"
-        }]
-      }
-    }
-  },
-  {
     "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -76,8 +17,9 @@
       "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
       "version" : "0.1.0",
       "name" : "BedLocationOperationalStatus",
+      "title" : "Bed Location Operational Status",
       "status" : "active",
-      "date" : "2020-03-23T15:28:25-04:00",
+      "date" : "2020-03-25T07:13:34-04:00",
       "publisher" : "Audacious Inquiry",
       "contact" : [{
         "name" : "Audacious Inquiry",
@@ -93,9 +35,10 @@
           "value" : "kboone@ainq.com"
         }]
       }],
+      "description" : "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
       "expansion" : {
-        "identifier" : "urn:uuid:23c91f61-f355-4aaf-8581-9b881146b73d",
-        "timestamp" : "2020-03-23T15:28:30-04:00",
+        "identifier" : "urn:uuid:54855502-64e0-46fb-8f2d-66d56a7d4173",
+        "timestamp" : "2020-03-25T07:13:52-04:00",
         "total" : 5,
         "parameter" : [{
           "name" : "excludeNested",
@@ -138,19 +81,20 @@
     }
   },
   {
-    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedProperty",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "BedType",
+      "id" : "BedProperty",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 11 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://terminology.hl7.org/CodeSystem/v3-RoleCode version 2018-08-12, http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-ICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU\">PEDICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric intensive care unit</td><td>Pediatric intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDNICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU\">PEDNICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric neonatal intensive care unit</td><td>Pediatric neonatal intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-ER\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-HU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU\">HU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Hospital unit</td><td>Hospital unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-RHU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU\">RHU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Rehabilitation hospital unit</td><td>Rehabilitation hospital unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU\">PEDU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric unit</td><td>Pediatric unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PHU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU\">PHU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Psychiatric hospital unit</td><td>(X12N 273R00000N)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OR\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OR\">OR</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NURSERY\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NURSERY\">NURSERY</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-BURNU\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-BURNU\">BURNU</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Burn Unit</td><td>Burn ICU beds</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p><p>All codes from system <a href=\"CodeSystem-SanerBedType.html\"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NEGISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NEGISO\">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OTHISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OTHISO\">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NONISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NONISO\">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>"
       },
-      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedProperty",
       "version" : "0.1.0",
-      "name" : "BedType",
+      "name" : "BedProperty",
+      "title" : "Bed Property",
       "status" : "active",
-      "date" : "2020-03-23T15:28:25-04:00",
+      "date" : "2020-03-25T07:13:34-04:00",
       "publisher" : "Audacious Inquiry",
       "contact" : [{
         "name" : "Audacious Inquiry",
@@ -166,9 +110,71 @@
           "value" : "kboone@ainq.com"
         }]
       }],
+      "description" : "This value set describes other properties of a bed, such as the ability to support isolation.",
       "expansion" : {
-        "identifier" : "urn:uuid:53ac51f2-cea2-4604-9020-7ecd4ea8c66a",
-        "timestamp" : "2020-03-23T15:28:30-04:00",
+        "identifier" : "urn:uuid:4367d5ad-3498-4ad9-922d-c93b0bc922e4",
+        "timestamp" : "2020-03-25T07:13:52-04:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+          "code" : "NEGISO",
+          "display" : "Negative Pressure Isolation Unit"
+        },
+        {
+          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+          "code" : "OTHISO",
+          "display" : "Other Isolation Unit"
+        },
+        {
+          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+          "code" : "NONISO",
+          "display" : "Non-isolating unit"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedType",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 11 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://terminology.hl7.org/CodeSystem/v3-RoleCode version 2018-08-12, http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-ICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU\">PEDICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric intensive care unit</td><td>Pediatric intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDNICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU\">PEDNICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric neonatal intensive care unit</td><td>Pediatric neonatal intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-ER\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-HU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU\">HU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Hospital unit</td><td>Hospital unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-RHU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU\">RHU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Rehabilitation hospital unit</td><td>Rehabilitation hospital unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU\">PEDU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric unit</td><td>Pediatric unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PHU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU\">PHU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Psychiatric hospital unit</td><td>(X12N 273R00000N)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OR\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OR\">OR</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NURSERY\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NURSERY\">NURSERY</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-BURNU\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-BURNU\">BURNU</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Burn Unit</td><td>Burn ICU beds</td></tr></table></div>"
+      },
+      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+      "version" : "0.1.0",
+      "name" : "BedType",
+      "title" : "Bed Type",
+      "status" : "active",
+      "date" : "2020-03-25T07:13:34-04:00",
+      "publisher" : "Audacious Inquiry",
+      "contact" : [{
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "kboone@ainq.com"
+        }]
+      }],
+      "description" : "This Value Set describes the types of care services that a bed can support.",
+      "expansion" : {
+        "identifier" : "urn:uuid:c55ad97c-a106-4b09-a015-e29e582a6004",
+        "timestamp" : "2020-03-25T07:13:52-04:00",
         "total" : 11,
         "parameter" : [{
           "name" : "excludeNested",

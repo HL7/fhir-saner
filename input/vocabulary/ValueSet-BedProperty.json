@@ -1,10 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "BedFeature",
-  "id": "BedFeature",
+  "name": "BedProperty",
+  "id": "BedProperty",
+  "title": "Bed Property",
+  "description": "This value set describes other properties of a bed, such as the ability to support isolation.",
   "version": "0.1.0",
-  "url": "http://ainq.com/fhir/us/saner/ValueSet/BedFeature",
+  "url": "http://ainq.com/fhir/us/saner/ValueSet/BedProperty",
   "compose": {
     "include": [
       {

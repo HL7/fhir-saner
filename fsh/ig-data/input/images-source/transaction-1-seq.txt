@@ -1,0 +1,11 @@
+@startuml
+hide footbox
+participant "Availability Collector" as AvailabilityCollector
+participant "Availability Source" as AvailabilitySource
+activate "AvailabilityCollector"
+activate "AvailabilitySource"
+"AvailabilityCollector" -> "AvailabilitySource" : 1. Search Group Request
+"AvailabilitySource" --> "AvailabilityCollector" : 2. Search Group Response
+deactivate "AvailabilityCollector"
+deactivate "AvailabilitySource"
+@enduml

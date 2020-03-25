@@ -1,0 +1,6 @@
+@startuml
+
+agent "Availability Reporter" as AvailabilityReporter
+usecase (Report Results) as (REPORT-TX)
+AvailabilityReporter --> (REPORT-TX)
+@enduml

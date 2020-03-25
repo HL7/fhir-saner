@@ -3,14 +3,15 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="SanerBedType"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Bed Type Coding System</h2><p>This code system http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">OR<a name="SanerBedType-OR"> </a></td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td style="white-space:nowrap">NURSERY<a name="SanerBedType-NURSERY"> </a></td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td style="white-space:nowrap">BURNU<a name="SanerBedType-BURNU"> </a></td><td>Burn Unit</td><td>Burn ICU beds</td></tr><tr><td style="white-space:nowrap">NEGISO<a name="SanerBedType-NEGISO"> </a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style="white-space:nowrap">OTHISO<a name="SanerBedType-OTHISO"> </a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style="white-space:nowrap">NONISO<a name="SanerBedType-NONISO"> </a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Bed Type Coding System</h2><div><p>This Coding System fills gaps describing types of care services that a bed can support.</p>
+</div><p>This code system http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">OR<a name="SanerBedType-OR"> </a></td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td style="white-space:nowrap">NURSERY<a name="SanerBedType-NURSERY"> </a></td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td style="white-space:nowrap">BURNU<a name="SanerBedType-BURNU"> </a></td><td>Burn Unit</td><td>Burn ICU beds</td></tr><tr><td style="white-space:nowrap">NEGISO<a name="SanerBedType-NEGISO"> </a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style="white-space:nowrap">OTHISO<a name="SanerBedType-OTHISO"> </a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style="white-space:nowrap">NONISO<a name="SanerBedType-NONISO"> </a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>
   </text>
   <url value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
   <version value="0.1.0"/>
   <name value="SanerBedType"/>
   <title value="Bed Type Coding System"/>
   <status value="active"/>
-  <date value="2020-03-23T15:28:25-04:00"/>
+  <date value="2020-03-25T07:13:34-04:00"/>
   <publisher value="Audacious Inquiry"/>
   <contact>
     <name value="Audacious Inquiry"/>
@@ -26,6 +27,7 @@
       <value value="kboone@ainq.com"/>
     </telecom>
   </contact>
+  <description value="This Coding System fills gaps describing types of care services that a bed can support."/>
   <content value="complete"/>
   <concept>
     <code value="OR"/>

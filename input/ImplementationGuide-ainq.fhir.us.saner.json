@@ -29,7 +29,7 @@
   ],
   "description": "asdf",
   "packageId": "ainq.fhir.us.saner",
-  "license": "CC0-1.0",
+  "license": "CC-BY-4.0",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -61,6 +61,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/saner-resource-location"
+        },
+        "name": "Resource Location Profile",
+        "description": "Defines constraints on the Location Resource describing the location of resources (Beds and Devices).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/saner-supporting-device"
         },
         "name": "Supporting Device Profile",
@@ -69,23 +77,26 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BedFeature"
+          "reference": "ValueSet/BedLocationOperationalStatus"
         },
-        "name": "BedFeature",
+        "name": "Bed Location Operational Status",
+        "description": "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/BedLocationOperationalStatus"
+          "reference": "ValueSet/BedProperty"
         },
-        "name": "BedLocationOperationalStatus",
+        "name": "Bed Property",
+        "description": "This value set describes other properties of a bed, such as the ability to support isolation.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/BedType"
         },
-        "name": "BedType",
+        "name": "Bed Type",
+        "description": "This Value Set describes the types of care services that a bed can support.",
         "exampleBoolean": false
       },
       {
@@ -93,7 +104,15 @@
           "reference": "CodeSystem/SanerBedType"
         },
         "name": "Bed Type Coding System",
+        "description": "This Coding System fills gaps describing types of care services that a bed can support.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/HAvBED2toFHIR"
+        },
+        "name": "HAvBED2 to FHIR Concept Map",
+        "exampleBoolean": true
       }
     ],
     "page": {

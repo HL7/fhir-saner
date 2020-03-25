@@ -1,0 +1,9 @@
+@startuml
+
+agent "Availability Source" as AvailabilitySource
+
+agent "Availability Collector" as AvailabilityCollector
+usecase (Update Availability) as (PUSH-TX)
+AvailabilitySource --> (PUSH-TX)
+AvailabilityCollector --> (PUSH-TX)
+@enduml

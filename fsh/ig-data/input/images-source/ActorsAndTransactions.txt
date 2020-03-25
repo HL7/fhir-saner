@@ -1,0 +1,7 @@
+@startuml
+agent "Availability Source" as AvailabilitySource
+agent "Availability Collector" as AvailabilityCollector
+agent "Availability Reporter" as AvailabilityReporter
+AvailabilitySource -- AvailabilityCollector : "Query Availability [PULL-TX] ↕\nUpdate Availability [PUSH-TX] ↓"
+AvailabilityReporter -- AvailabilityReporter : "Report Results [REPORT-TX] ↕"
+@enduml

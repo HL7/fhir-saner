@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+actor "Public Health User"
+participant "Availability Reporter" as AvailabilityReporter
+participant "Availability Collector" as AvailabilityCollector
+"Public Health User" -> "AvailabilityReporter" : 1. User Initiates Search
+activate "Public Health User"
+activate "AvailabilityReporter"
+"AvailabilityReporter" -> "AvailabilityCollector" : 2. Availability Reporter gathers data from Availability Collectors
+activate "AvailabilityCollector"
+return
+deactivate "AvailabilityCollector"
+"AvailabilityReporter" --> "Public Health User" : 3. Display Results
+deactivate "Public Health User"
+deactivate "AvailabilityReporter"
+"Public Health User" -> "AvailabilityReporter" : 4. User refines Focus or Form of Display
+activate "Public Health User"
+activate "AvailabilityReporter"
+"AvailabilityReporter" --> "Public Health User" : 5. Display Refined Results
+deactivate "Public Health User"
+deactivate "AvailabilityReporter"
+@enduml

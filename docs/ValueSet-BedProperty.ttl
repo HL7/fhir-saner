@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ainq.com/fhir/us/saner/ValueSet/BedProperty> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "BedProperty"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Property</h2><div><p>This value set describes other properties of a bed, such as the ability to support isolation.</p>\n</div><ul><li>Include these codes as defined in <a href=\"CodeSystem-SanerBedType.html\"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NEGISO\">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OTHISO\">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NONISO\">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://ainq.com/fhir/us/saner/ValueSet/BedProperty"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "BedProperty"];
+  fhir:ValueSet.title [ fhir:value "Bed Property"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2020-03-25T07:13:34-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "Audacious Inquiry"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This value set describes other properties of a bed, such as the ability to support isolation."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NEGISO" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OTHISO" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NONISO" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ainq.com/fhir/us/saner/ValueSet/BedProperty.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

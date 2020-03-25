@@ -1,0 +1,8 @@
+@startuml
+hide footbox
+participant "Availability Reporter" as AvailabilityReporter
+activate "AvailabilityReporter"
+"AvailabilityReporter" -> "AvailabilityReporter" : 1. Report Availability
+return
+deactivate "AvailabilityReporter"
+@enduml
