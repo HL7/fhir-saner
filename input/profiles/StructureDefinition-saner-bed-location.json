@@ -6,7 +6,7 @@
   "name": "BedLocation",
   "title": "Bed Location Profile",
   "status": "active",
-  "description": "Defines constraints on the Location Resource for data communicating about Beds.",
+  "description": "Defines constraints on the Location Resource for data communicating about a location for a bed.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

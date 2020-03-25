@@ -10,7 +10,7 @@
   "name": "BedLocation",
   "title": "Bed Location Profile",
   "status": "active",
-  "date": "2020-03-25T07:23:03-04:00",
+  "date": "2020-03-25T15:22:24-04:00",
   "publisher": "Audacious Inquiry",
   "contact": [
     {
@@ -32,7 +32,7 @@
       ]
     }
   ],
-  "description": "Defines constraints on the Location Resource for data communicating about Beds.",
+  "description": "Defines constraints on the Location Resource for data communicating about a location for a bed.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

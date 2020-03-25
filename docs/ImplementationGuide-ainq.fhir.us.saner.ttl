@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SituationalAwarenessforNovelEpidemicResponse"];
   fhir:ImplementationGuide.title [ fhir:value "Situational Awareness for Novel Epidemic Response"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-25T07:23:03-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-25T15:22:24-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Audacious Inquiry"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -283,7 +283,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/saner-bed-location" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Location Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource for data communicating about Beds." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource for data communicating about a location for a bed." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2;
@@ -456,16 +456,21 @@
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "security_considerations.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Security Considerations" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transaction-1.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transaction 1" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 5;
+         fhir:index 6;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transaction-2.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transaction 2" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 6;
+         fhir:index 7;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transaction-3.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transaction 3" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]

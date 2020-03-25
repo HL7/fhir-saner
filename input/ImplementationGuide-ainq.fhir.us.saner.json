@@ -48,7 +48,7 @@
           "reference": "StructureDefinition/saner-bed-location"
         },
         "name": "Bed Location Profile",
-        "description": "Defines constraints on the Location Resource for data communicating about Beds.",
+        "description": "Defines constraints on the Location Resource for data communicating about a location for a bed.",
         "exampleBoolean": false
       },
       {
@@ -138,6 +138,11 @@
         {
           "nameUrl": "using_group_resources.html",
           "title": "Using Group Resources",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "security_considerations.html",
+          "title": "Security Considerations",
           "generation": "markdown"
         },
         {

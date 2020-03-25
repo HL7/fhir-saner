@@ -11,7 +11,7 @@
   <name value="SituationalAwarenessforNovelEpidemicResponse"/>
   <title value="Situational Awareness for Novel Epidemic Response"/>
   <status value="active"/>
-  <date value="2020-03-25T07:23:03-04:00"/>
+  <date value="2020-03-25T15:22:24-04:00"/>
   <publisher value="Audacious Inquiry"/>
   <contact>
     <name value="Audacious Inquiry"/>
@@ -193,7 +193,7 @@
         <reference value="StructureDefinition/saner-bed-location"/>
       </reference>
       <name value="Bed Location Profile"/>
-      <description value="Defines constraints on the Location Resource for data communicating about Beds."/>
+      <description value="Defines constraints on the Location Resource for data communicating about a location for a bed."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -330,6 +330,11 @@
       <page>
         <nameUrl value="using_group_resources.html"/>
         <title value="Using Group Resources"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="security_considerations.html"/>
+        <title value="Security Considerations"/>
         <generation value="markdown"/>
       </page>
       <page>

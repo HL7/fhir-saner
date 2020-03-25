@@ -27,6 +27,7 @@ This guide is organized into four main sections:
 1. Volume I: [Overview](overview.html)
    1. [Actors and Transactions](actors_and_transactions.html)
    2. [Using Group Resources](using_group_resources.html)
+   3. [Security Considerations](security_considerations.html)
 
 2. Volume II: Transaction Detail
    1. [Query Availability [PULL-TX]](transaction-1.html)

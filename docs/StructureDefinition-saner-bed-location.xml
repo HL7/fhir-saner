@@ -11,7 +11,7 @@
   <name value="BedLocation"/>
   <title value="Bed Location Profile"/>
   <status value="active"/>
-  <date value="2020-03-25T07:23:03-04:00"/>
+  <date value="2020-03-25T15:22:24-04:00"/>
   <publisher value="Audacious Inquiry"/>
   <contact>
     <name value="Audacious Inquiry"/>
@@ -27,7 +27,7 @@
       <value value="kboone@ainq.com"/>
     </telecom>
   </contact>
-  <description value="Defines constraints on the Location Resource for data communicating about Beds."/>
+  <description value="Defines constraints on the Location Resource for data communicating about a location for a bed."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="rim"/>

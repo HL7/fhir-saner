@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "BedLocation"];
   fhir:StructureDefinition.title [ fhir:value "Bed Location Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-03-25T07:23:03-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-25T15:22:24-04:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Audacious Inquiry"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -36,7 +36,7 @@
        fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "Defines constraints on the Location Resource for data communicating about Beds."];
+  fhir:StructureDefinition.description [ fhir:value "Defines constraints on the Location Resource for data communicating about a location for a bed."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

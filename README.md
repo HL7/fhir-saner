@@ -21,4 +21,5 @@ We expect the licensing to be adjusted once community development commences.
 This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.
 
-The content of this guide can be viewed at [https://audaciousinquiry.github.io/saner-ig/](https://audaciousinquiry.github.io/saner-ig/)
+The content of this guide can be viewed at [https://audaciousinquiry.github.io/saner-ig/](https://audaciousinquiry.github.io/saner-ig/).
+The [Continuous Integration Build](View the Guide on [GitHub Pages](https://audaciousinquiry.github.io/saner-ig/) or [the CI Build](http://build.fhir.org/ig/AudaciousInquiry/saner-ig/) is also available

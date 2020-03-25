@@ -10,7 +10,7 @@
   "name": "SituationalAwarenessforNovelEpidemicResponse",
   "title": "Situational Awareness for Novel Epidemic Response",
   "status": "active",
-  "date": "2020-03-25T07:23:03-04:00",
+  "date": "2020-03-25T15:22:24-04:00",
   "publisher": "Audacious Inquiry",
   "contact": [
     {
@@ -296,7 +296,7 @@
           "reference": "StructureDefinition/saner-bed-location"
         },
         "name": "Bed Location Profile",
-        "description": "Defines constraints on the Location Resource for data communicating about Beds.",
+        "description": "Defines constraints on the Location Resource for data communicating about a location for a bed.",
         "exampleBoolean": false
       },
       {
@@ -467,6 +467,11 @@
         {
           "nameUrl": "using_group_resources.html",
           "title": "Using Group Resources",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "security_considerations.html",
+          "title": "Security Considerations",
           "generation": "markdown"
         },
         {
