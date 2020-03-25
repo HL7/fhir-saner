@@ -3,7 +3,7 @@
 
 err = 72, warn = 10, info = 0
 IG Publisher Version: v1.0.72-SNAPSHOT
-Generated Wed Mar 25 07:14:17 EDT 2020. FHIR version 4.0.1 for ainq.fhir.us.saner#0.1.0 (canonical = http://ainq.com/fhir/us/saner)
+Generated Wed Mar 25 07:23:46 EDT 2020. FHIR version 4.0.1 for ainq.fhir.us.saner#0.1.0 (canonical = http://ainq.com/fhir/us/saner)
 
  Build Errors : 0 / 0
  C:\Users\kboone\git\saner-ig\input\ImplementationGuide-ainq.fhir.us.saner : 0 / 0

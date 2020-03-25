@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "1ff83d3c-9715-49e1-826b-f7f796780ac0",
+  "id" : "2859c1f9-177b-4ea7-b9ec-8b68e900c6e0",
   "meta" : {
-    "lastUpdated" : "2020-03-25T07:13:34.121-04:00"
+    "lastUpdated" : "2020-03-25T07:23:03.274-04:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "BedLocationOperationalStatus",
       "title" : "Bed Location Operational Status",
       "status" : "active",
-      "date" : "2020-03-25T07:13:34-04:00",
+      "date" : "2020-03-25T07:23:03-04:00",
       "publisher" : "Audacious Inquiry",
       "contact" : [{
         "name" : "Audacious Inquiry",
@@ -37,8 +37,8 @@
       }],
       "description" : "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
       "expansion" : {
-        "identifier" : "urn:uuid:54855502-64e0-46fb-8f2d-66d56a7d4173",
-        "timestamp" : "2020-03-25T07:13:52-04:00",
+        "identifier" : "urn:uuid:0c717bc9-4db4-4211-9054-4ea603baa2e1",
+        "timestamp" : "2020-03-25T07:23:21-04:00",
         "total" : 5,
         "parameter" : [{
           "name" : "excludeNested",
@@ -94,7 +94,7 @@
       "name" : "BedProperty",
       "title" : "Bed Property",
       "status" : "active",
-      "date" : "2020-03-25T07:13:34-04:00",
+      "date" : "2020-03-25T07:23:03-04:00",
       "publisher" : "Audacious Inquiry",
       "contact" : [{
         "name" : "Audacious Inquiry",
@@ -112,8 +112,8 @@
       }],
       "description" : "This value set describes other properties of a bed, such as the ability to support isolation.",
       "expansion" : {
-        "identifier" : "urn:uuid:4367d5ad-3498-4ad9-922d-c93b0bc922e4",
-        "timestamp" : "2020-03-25T07:13:52-04:00",
+        "identifier" : "urn:uuid:84e42ee6-4770-4ce6-9205-fde80aec18e0",
+        "timestamp" : "2020-03-25T07:23:21-04:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -155,7 +155,7 @@
       "name" : "BedType",
       "title" : "Bed Type",
       "status" : "active",
-      "date" : "2020-03-25T07:13:34-04:00",
+      "date" : "2020-03-25T07:23:03-04:00",
       "publisher" : "Audacious Inquiry",
       "contact" : [{
         "name" : "Audacious Inquiry",
@@ -173,8 +173,8 @@
       }],
       "description" : "This Value Set describes the types of care services that a bed can support.",
       "expansion" : {
-        "identifier" : "urn:uuid:c55ad97c-a106-4b09-a015-e29e582a6004",
-        "timestamp" : "2020-03-25T07:13:52-04:00",
+        "identifier" : "urn:uuid:9fc469f0-6af4-41d5-8e5e-e86d6e73a168",
+        "timestamp" : "2020-03-25T07:23:21-04:00",
         "total" : 11,
         "parameter" : [{
           "name" : "excludeNested",

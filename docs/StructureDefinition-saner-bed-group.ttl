@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "BedGroup"];
   fhir:StructureDefinition.title [ fhir:value "Bed Group Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-03-25T07:13:34-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-25T07:23:03-04:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Audacious Inquiry"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

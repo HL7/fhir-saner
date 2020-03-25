@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SituationalAwarenessforNovelEpidemicResponse"];
   fhir:ImplementationGuide.title [ fhir:value "Situational Awareness for Novel Epidemic Response"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-25T07:13:34-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-25T07:23:03-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Audacious Inquiry"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
