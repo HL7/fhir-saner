@@ -20,9 +20,6 @@ Description:    "Defines constraints on the Group Resource for data communicatin
 * characteristic ^slicing.rules = #open
 * characteristic ^slicing.description = "Slice based on the characteristic.code pattern"
 
-* characteristic.exclude = false
-* characteristic.period 0..0
-
 * characteristic contains
     Status 1..1 and
     Type 1..1 and
@@ -34,20 +31,28 @@ Description:    "Defines constraints on the Group Resource for data communicatin
  * characteristic[Status].code = http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status
  * characteristic[Status].value[x] only CodeableConcept
  * characteristic[Status].valueCodeableConcept from http://hl7.org/fhir/ValueSet/device-status (required)
+ * characteristic[Status].exclude = false
+ * characteristic[Status].period 0..0
 
  * characteristic[Type] ^short = "The Type slice reports on the type of the device using SNOMED CT codes descending from Device"
  * characteristic[Type] ^comment = "Type allows specific kinds of devices to be queried or reported on.  The value set should be limited to a short list of critical devices."
  * characteristic[Type].code = http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type
  * characteristic[Type].value[x] only CodeableConcept
  * characteristic[Type].valueCodeableConcept from http://hl7.org/fhir/ValueSet/device-type (extensible)
+ * characteristic[Type].exclude = false
+ * characteristic[Type].period 0..0
 
  * characteristic[Property] ^short = "The Property slice reports on critical properties of the device TBD"
  * characteristic[Property] ^comment = "Some devices may be limited, others have more capabilities. Property allows this to be further clarified (e.g., Neonatal Ventilator vs. General Use Ventilator)"
  * characteristic[Property].code = http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property
  * characteristic[Property].value[x] only CodeableConcept
  * characteristic[Property].valueCodeableConcept from http://hl7.org/fhir/ValueSet/device-component-property (preferred)
+ * characteristic[Property].exclude = false
+ * characteristic[Property].period 0..0
 
  * characteristic[Location] ^short = "The Location slice reports on the physical ocation of the device (e.g., address, GPS)"
  * characteristic[Location] ^comment = "Location aids in mapping, navigation and communications to or about the device."
  * characteristic[Location].code = http://hl7.org/fhir/R4/StructureDefinition/Location#Location.partOf
  * characteristic[Location].value[x] only Reference(ResourceLocation)
+ * characteristic[Location].exclude = false
+ * characteristic[Location].period 0..0
