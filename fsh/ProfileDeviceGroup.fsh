@@ -4,7 +4,7 @@ Id:             saner-device-group
 Title:          "Device Group Profile"
 Description:    "Defines constraints on the Group Resource for data communicating about device availability."
 
-* id obeys must-be-uuid
+//id obeys must-be-uuid
 * type = #device
 * actual = true
 * code = http://snomed.info/sct#49062001

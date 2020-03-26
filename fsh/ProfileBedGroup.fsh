@@ -46,7 +46,7 @@ Id:             saner-bed-group
 Title:          "Bed Group Profile"
 Description:    "Defines constraints on the Group Resource for data communicating about Bed availability."
 
-* id obeys must-be-uuid
+// id obeys must-be-uuid
 * type = #device
 * actual = true
 * code = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
