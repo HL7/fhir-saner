@@ -98,16 +98,6 @@
         "min": 4
       },
       {
-        "id": "Group.characteristic.exclude",
-        "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
-      },
-      {
-        "id": "Group.characteristic.period",
-        "path": "Group.characteristic.period",
-        "max": "0"
-      },
-      {
         "id": "Group.characteristic:Status",
         "path": "Group.characteristic",
         "sliceName": "Status",
@@ -155,6 +145,16 @@
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/device-status"
         }
+      },
+      {
+        "id": "Group.characteristic:Status.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Status.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
       },
       {
         "id": "Group.characteristic:Type",
@@ -206,6 +206,16 @@
         }
       },
       {
+        "id": "Group.characteristic:Type.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Type.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
+      },
+      {
         "id": "Group.characteristic:Property",
         "path": "Group.characteristic",
         "sliceName": "Property",
@@ -255,6 +265,16 @@
         }
       },
       {
+        "id": "Group.characteristic:Property.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Property.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
+      },
+      {
         "id": "Group.characteristic:Location",
         "path": "Group.characteristic",
         "sliceName": "Location",
@@ -286,6 +306,16 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Group.characteristic:Location.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Location.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
       }
     ]
   }

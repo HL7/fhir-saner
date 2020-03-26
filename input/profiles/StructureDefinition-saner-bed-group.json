@@ -98,16 +98,6 @@
         "min": 5
       },
       {
-        "id": "Group.characteristic.exclude",
-        "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
-      },
-      {
-        "id": "Group.characteristic.period",
-        "path": "Group.characteristic.period",
-        "max": "0"
-      },
-      {
         "id": "Group.characteristic:Status",
         "path": "Group.characteristic",
         "sliceName": "Status",
@@ -140,6 +130,16 @@
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/location-status"
         }
+      },
+      {
+        "id": "Group.characteristic:Status.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Status.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
       },
       {
         "id": "Group.characteristic:OperationalStatus",
@@ -176,6 +176,16 @@
         }
       },
       {
+        "id": "Group.characteristic:OperationalStatus.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:OperationalStatus.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
+      },
+      {
         "id": "Group.characteristic:Type",
         "path": "Group.characteristic",
         "sliceName": "Type",
@@ -208,6 +218,16 @@
           "strength": "extensible",
           "valueSet": "http://ainq.com/fhir/us/saner/ValueSet/BedType"
         }
+      },
+      {
+        "id": "Group.characteristic:Type.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Type.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
       },
       {
         "id": "Group.characteristic:Property",
@@ -244,6 +264,16 @@
         }
       },
       {
+        "id": "Group.characteristic:Property.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Property.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
+      },
+      {
         "id": "Group.characteristic:Location",
         "path": "Group.characteristic",
         "sliceName": "Location",
@@ -275,6 +305,16 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Group.characteristic:Location.exclude",
+        "path": "Group.characteristic.exclude",
+        "fixedBoolean": false
+      },
+      {
+        "id": "Group.characteristic:Location.period",
+        "path": "Group.characteristic.period",
+        "max": "0"
       }
     ]
   }
