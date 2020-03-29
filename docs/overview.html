@@ -45,7 +45,7 @@
       <div class="container">  <!-- container -->
                 <div id="hl7-nav" style='float:left;'>
           <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img height="50" alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
           </a>
         </div>
 
@@ -173,7 +173,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#about-this-guide" id="markdown-toc-about-this-guide">About This Guide</a></li>
   <li><a href="#situational-awareness-for-novel-epidemic-response" id="markdown-toc-situational-awareness-for-novel-epidemic-response">Situational Awareness for Novel Epidemic Response</a></li>
   <li><a href="#bed-availability" id="markdown-toc-bed-availability">Bed Availability</a></li>
-  <li><a href="#use-cases" id="markdown-toc-use-cases">Use Cases</a></li>
 </ul>
 
 </div>
@@ -189,8 +188,12 @@ to discussion and change.</p>
 
 <p>The goal of publishing this guide is to encourage the creation of a community interested
 in extremely rapid development of an interface that can support Public Health in this time of
-crisis.</p>
-
+crisis.  Audacious Inquiry is publishing this material as follows:</p>
+<div>
+  <p><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" style="float:clear" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a></p>
+</div>
 <h3 id="situational-awareness-for-novel-epidemic-response">Situational Awareness for Novel Epidemic Response</h3>
 <p>Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially pandemic flu strains during the early formation of the Office of the National Coordinator in 2005.</p>
 
@@ -236,12 +239,10 @@ Key situational data needed by public health has remained relatively consistent 
 <h4 id="quick-assessment">Quick Assessment</h4>
 <ol>
   <li>Existing work by <a href="https://coronavirus.jhu.edu/map.html">Johns Hopkins University</a> in aggregating case data sets and visualizing them addresses national and even regional (at the county level) trends.</li>
-  <li>Bed availability is an area where there is a great deal of existing work on standards
-<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup><sup>,</sup><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup><sup>,</sup><sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, and use case requirements<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>, but not much
-prior success, although there are existing Health IT solutions that have this data (not just in the EHR).
-If the solution can be interfaced rather than integrated, an implementation can be piloted much faster.</li>
-  <li>Other resource utilization (e.g., Ventilators, Infusion Pumps, etc.)is available in central monitoring
-or inventory control solutions, but are not necessarily readily available in the EHR.  This would be a natural
+  <li>Bed availability is an area where there is a great deal of existing work <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup><sup>,</sup><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup><sup>,</sup><sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, but not much prior success, although there are existing Health IT solutions that have this data (not just in the EHR).  If the solution can be interfaced rather than integrated, an
+implementation can be piloted much faster.</li>
+  <li>Other resource utilization is available in inventory control or central monitoring
+solutions, but are not necessarily readily available in the EHR.  This would be a natural
 evolution from Bed Availability.</li>
 </ol>
 
@@ -253,7 +254,7 @@ current inpatient EHR Systems, and in departmental ICU and Central Monitoring sy
 Such solutions support management of bed assignment for admissions and provide direction to
 housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems
 which provide ICU and Nursing central monitoring capabilities.  They are often separate components
-or modules , Standalone solutions, or third party solutions which integrate with an
+or modules, Standalone solutions, or third party solutions which integrate with an
 EHR System (e.g. Forward Advantage with MEDITECH).</p>
 
 <h4 id="prior-solutions-and-existing-standards">Prior Solutions and Existing Standards</h4>
@@ -286,26 +287,32 @@ and general observations profiled by ANSI/HITSP to support organizational report
 <p>In HL7 FHIR the <a href="https://hl7.org/fhir/R4/location.html">Location</a> resource can describe information about
 any bed within a facility.  The <a href="https://hl7.org/fhir/R4/group.html">Group</a> resource
 can report on specific quantities of groups of resources available that match a specific
-set of characteristics.</p>
+set of characteristics.  The <a href="https://hl7.org/fhir/R4/measurereport.html">MeasureReport</a>
+resource can report on measures using counts and other metrics over a variety of resources.</p>
+
+<h6 id="device-resource">Device Resource</h6>
+<p>The Device Resource can report on medical devices, including ventilators, repirators,
+personal protective equipment such as masks, and viral test kits.  Device is not widely
+used by systems reporting on device quantities or status.</p>
 
 <h6 id="location-resource">Location Resource</h6>
 <p>While the Location resource can report on beds, it can also be used to describe buildings, wards,
 geographic area, or any other sort of place, including “mobile” places such as a mobile clinic or
-ambulance.  Given its broad application, it needs to be profiled to support use for bed availability.</p>
+ambulance.  Given its broad application, would need to be profiled to support use for bed availability.</p>
 
 <p>While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there’s
 little use of the Location resource to report data about beds.  It is more commonly used to report
 Location data associated with the
 <a href="https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf">Common Clinical Data Set</a> (now known as the US Core Data for
-Interoperability or <a href="https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi">USCDI</a>) required by the ONC 2015 Certification regulations.  These uses of
-Location are found in the Encounter, Procedure and Practitioner resources.  Those uses of Location
+Interoperability or <a href="https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi">USCDI</a>) required by the ONC 2015 Certification
+regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
 describe the facility where an encounter occurs, the location where a procedure is performed, or
 the location of a practitioner.</p>
 
 <h6 id="group-resource">Group Resource</h6>
-<p>The Group resource can also be used to support aggregate reporting on beds, as it allows reporting
-of quantities of a type of item without requiring a FHIR resource to reference the actual item, just
-its characteristics.  This resource can also be used to report on other types of resources, such as
+<p>While the Group resource can be used to support aggregate reporting on beds, as it allows reporting
+of quantities of an item without referencing an individual item, it has not been deployed in this way by
+any knwon system.  This resource can also be used to report on other types of resources, such as
 ventilators, respirators, and N95 masks.</p>
 
 <p>NOTE: While Group doesn’t specifically support groups of Location resources, it can be used to
@@ -313,7 +320,26 @@ report on any group of things that can be defined by characteristics, it simply 
 enumerate those resources.  That is not essential for the use cases in this implementation
 guide.</p>
 
-<p>The Group resource is even more lightly deployed in existing EHR products.</p>
+<p>The Group resource is more lightly deployed in existing EHR products. It is not
+a requirement of the 2015 Certification program.</p>
+
+<h6 id="measure-resource">Measure Resource</h6>
+<p>The MeasureReport resource can be used to support reporting of a variety of measures,
+including simple counts, with measures over different strata.  It is not readily searchable at
+the stratum level.  MeasureReport is beginning to gain traction because of efforts using
+it in the <a href="https://www.hl7.org/about/davinci/">DaVinci Project</a>.</p>
+
+<p>The table below shows the <a href="https://www.hl7.org/fhir/R4/versions.html#maturity">FHIR Maturity Model</a> Level for each of the resources described
+above.</p>
+
+<table class="grid"><thead><tr><th>Resource</th><th>Maturity Level</th></tr></thead>
+<tbody>
+<tr><td><a href="https://hl7.org/fhir/device.html">Device</a></td><td>2</td></tr>
+<tr><td><a href="https://hl7.org/fhir/group.html">Group</a></td><td>1</td></tr>
+<tr><td><a href="https://hl7.org/fhir/location.html">Location</a></td><td>3</td></tr>
+<tr><td><a href="https://hl7.org/fhir/measurereport.html">MeasureReport</a></td><td>2</td></tr>
+</tbody>
+</table>
 
 <h4 id="terminology">Terminology</h4>
 <p>Terminology plays an important role in this implementation guide.
@@ -326,185 +352,14 @@ NICU, Isolation)</li>
 </ul>
 
 <h5 id="location-type">Location Type</h5>
+<p>The HL7 Version 3 <a href="https://www.hl7.org/fhir/v3/ServiceDeliveryLocationRoleType/vs.html">Service Delivery Location Role Type</a>
+Value Set has been adopted as the <a href="https://www.hl7.org/fhir/terminologies.html#preferred">Preferred</a> classification system for <code class="highlighter-rouge">Location.type</code> in the Location resource in FHIR
+R4.</p>
 
 <h5 id="bed-status">Bed Status</h5>
-<p>HL7 Version 2 Table 0116 Bed Status Provides Vocabulary that can describe the status
-of a bed.</p>
-
-<h3 id="use-cases">Use Cases</h3>
-
-<p>The sections below describe the use cases supported by the
-Audaciuo
-	     s Inquiry SANER Implementation Guide.</p>
-
-<h4 id="use-case-1-collecting-bed-availability">Use Case 1: Collecting Bed Availability</h4>
-
-<p>This use case addresses the exchange of data from Facilities to a Centralized
-reporting system for Public Health</p>
-
-<p>This use case is supported by the following</p>
-
-<ul>
-  <li>
-    <p>Actors</p>
-
-    <ul>
-      <li>
-        <p><a href="actors_and_transactions.html#availability-source">Availability Source</a></p>
-      </li>
-      <li>
-        <p><a href="actors_and_transactions.html#availability-collector">Availability Collector</a></p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Transactions</p>
-
-    <ul>
-      <li>
-        <p><a href="transaction-1.html">Query Availability</a></p>
-      </li>
-      <li>
-        <p><a href="transaction-2.html">Update Availability</a></p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Content</p>
-
-    <ul>
-      <li>
-        <p><a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a></p>
-      </li>
-      <li>
-        <p><a href="StructureDefinition-saner-bed-location.html">Single Bed Location</a></p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h5 id="use-case-1-collecting-bed-availability-process-flow">Use Case 1: Collecting Bed Availability Process Flow</h5>
-
-<p>Overview TBD</p>
-
-<p><img src="usecase1-processflow.svg" alt="Figure 2.3.1.1-1: Use Case 1: Collecting Bed Availability Process Flow" title="Figure 2.3.1.1-1: Use Case 1: Collecting Bed Availability Process Flow" /></p>
-
-<div style="clear: left"></div>
-
-<p><strong>Figure 2.3.1.1-1: Use Case 1: Collecting Bed Availability Process Flow</strong></p>
-
-<ol>
-  <li>
-    <p>Availability Collector Initiates Search</p>
-
-    <p>The Availability Collector identifies features associated with a group of
-bed resources that it wishes to collect data about.  For example, the Availability Collector can
-request information about ICU, med/surg, or ED beds available or in use.</p>
-
-    <p>TBD</p>
-  </li>
-  <li>
-    <p>Availability Source Reports Aggregate Data</p>
-
-    <p>The Availability Source reports aggregate data about a group of beds based
-                 on specified bed characteristics</p>
-
-    <p>TBD</p>
-  </li>
-</ol>
-
-<h4 id="use-case-2-reporting-on-bed-availability">Use Case 2: Reporting on Bed Availability</h4>
-
-<p>TBD</p>
-
-<p>This use case is supported by the following</p>
-
-<ul>
-  <li>
-    <p>Actors</p>
-
-    <ul>
-      <li>
-        <p><a href="actors_and_transactions.html#availability-collector">Availability Collector</a></p>
-      </li>
-      <li>
-        <p><a href="actors_and_transactions.html#availability-reporter">Availability Reporter</a></p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Transactions</p>
-
-    <ul>
-      <li><a href="transaction-1.html">Report Results</a></li>
-    </ul>
-  </li>
-  <li>
-    <p>Content</p>
-
-    <ul>
-      <li>
-        <p><a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a></p>
-      </li>
-      <li>
-        <p><a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a></p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h5 id="use-case-2-reporting-on-bed-availability-process-flow">Use Case 2: Reporting on Bed Availability Process Flow</h5>
-
-<p>TBD</p>
-
-<p><img src="usecase2-processflow.svg" alt="Figure 2.3.1.2-1: Use Case 2: Reporting on Bed Availability Process Flow" title="Figure 2.3.1.2-1: Use Case 2: Reporting on Bed Availability Process Flow" /></p>
-
-<div style="clear: left"></div>
-
-<p><strong>Figure 2.3.1.2-1: Use Case 2: Reporting on Bed Availability Process Flow</strong></p>
-
-<ol>
-  <li>
-    <p>User Initiates Search</p>
-
-    <p>The Public Health User navigates to a web page where collected data is reported.</p>
-
-    <p>TBD</p>
-  </li>
-  <li>
-    <p>Availability Reporter gathers data from Availability Collectors</p>
-
-    <p>The Availability Reporter gathers and aggregates data from one or more Availability Collectors.</p>
-
-    <p>The means by which gathering and aggregation is performed is not further specified
-by this implementation guide. However, the Availability Reporter can obtain data from an Availability Collector by using other transactions
-within this profile if desired.</p>
-  </li>
-  <li>
-    <p>Display Results</p>
-
-    <p>The Availability Reporter displays an overview of aggregated regional results to the
-user, and additional links which enable navigation to finer grained or alternative displays.</p>
-
-    <p>Data can be displayed as aggregated or fine-grained status information based
-on the current focus of the public health user.  It may be shown as a map, a table, or a graph.</p>
-  </li>
-  <li>
-    <p>User refines Focus or Form of Display</p>
-
-    <p>The Public Health User selects a new form of display (e.g., Map, table or graph) or refines their
-focus (e.g., wider or smaller region).</p>
-
-    <p>TBD</p>
-  </li>
-  <li>
-    <p>Display Refined Results</p>
-
-    <p>The Availability Collector modifies the users focus and reporting format</p>
-
-    <p>TBD</p>
-  </li>
-</ol>
+<p>HL7 Version 2 Table 0116 <a href="https://www.hl7.org/fhir/v2/0116/index.html">Bed Status Provides Vocabulary</a> that can describe the status
+of a bed, and has been adopted as the <a href="https://www.hl7.org/fhir/terminologies.html#extensible">Extensible</a> vocabulary
+for <code class="highlighter-rouge">Location.operationalStatus</code> in the Location resource in FHIR R4.</p>
 
 <p><strong>Footnotes</strong></p>
 
@@ -522,9 +377,6 @@ focus (e.g., wider or smaller region).</p>
     <li id="fn:4">
       <p><a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489">HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
-    <li id="fn:5">
-      <p><a href="AHIC_UseCase_2006_-_Biosurveillance_Utilization.pdf">Harmonized Use Case for Biosurveillance (Visit, Utilization and Lab Result Data)</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
-    </li>
   </ol>
 </div>
 
@@ -539,7 +391,7 @@ focus (e.g., wider or smaller region).</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2020 15:22-0400">2020-03-25</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -2,7 +2,7 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-
+    
 
 
 
@@ -13,10 +13,12 @@ to discussion and change.
 
 The goal of publishing this guide is to encourage the creation of a community interested
 in extremely rapid development of interfaces that can support communication Bed and other
-resources to Public Health in this time of crisis.  [Audacious Inquiry](https://ainq.com) is publishing this
+resourcees to Public Health in this time of crisis.  [Audacious Inquiry](https://ainq.com) is publishing this
 material as follows:
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) ![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/) ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png)
+
+We expect the licensing to be adjusted once community development commences.
 
 This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.
@@ -24,30 +26,35 @@ the SANER project.
 ### Organization of This Guide
 This guide is organized into four main sections:
 
-1. Volume I: [Overview](overview.html)
-   1. [Actors and Transactions](actors_and_transactions.html)
-   2. [Using Group Resources](using_group_resources.html)
-   3. [Security Considerations](security_considerations.html)
+1. Volume I: [Overview](overview.html) - Provides an overview of the challenges this effort is trying to address.
+   1. [Technology Environment](technology_environment.html) - Describes the technology environment for uninitiated.
+   2. [Architecture](architecture.html) - Illustrates the Microservice Architecture
+   3. [Security Considerations](security_considerations.html) - Documents security concerns and mitigations
+   4. [Use Cases](use_cases.html) - Illustrates key use cases
+   5. [Actors and Transactions](actors_and_transactions.html) - Provides an overview of technical components
+   6. [Using Group Resources (deprecated)](using_group_resources.html) - Explains the use of group in this guide
 
-2. Volume II: Transaction Detail
-   1. [Query Availability [PULL-TX]](transaction-1.html)
-   2. [Update Availability [PUSH-TX]](transaction-2.html)
-   3. [Report Results [REPORT-TX]](transaction-3.html)
+2. Volume II: Transactions
+   1. [Query Measure [PULL-TX]](transaction-1.html)
+   2. [Produce Measure [PUSH-TX]](transaction-2.html)
+   3. [Communicate Results [REPORT-TX]](transaction-3.html)
 
-3. Volume III: Profiles
-   1. [Bed Availability Group](StructureDefinition-saner-bed-group.html)
-   2. [Device Availability Group](StructureDefinition-saner-device-group.html)
-   3. [Single Bed Availability Status](StructureDefinition-saner-bed-location.html)
-   4. [Single Device Availability Status](StructureDefinition-saner-supporting-device.html)
-   5. [Resource Location](StructureDefinition-saner-resource-location.html)
+3. Volume III: Content Profiles
+   1. [Bed Measure Report](StructureDefinition-saner-bed-measure-report.html)
+   2. [Device Measure Report](StructureDefinition-saner-device-measure-report.html)
+   3. [Bed Group](StructureDefinition-saner-bed-group.html)
+   4. [Device Group](StructureDefinition-saner-device-group.html)
+   5. [bed-location](StructureDefinition-saner-bed-location.html)
+   6. [Supporting Device](StructureDefinition-saner-supporting-device.html)
+   7. [Resource Location](StructureDefinition-saner-resource-location.html)
+   8. [Audit Event Write](StructureDefinition-saner-audit-event-write.html)
+   9. [Audit Event Read](StructureDefinition-saner-audit-event-read.html)
 
 4. Volume IV: Terminology
    1. [SanerBedType Coding System](CodeSystem-SanerBedType.html)
-   2. [BedLocationOperationalStatus Value Set](ValueSet-BedLocationOperationalStatus.html)
-   3. [BedProperty Value Set](ValueSet-BedProperty.html)
-   4. [BedType Value Set](ValueSet-BedType.html)
-   5. [HAvBED2 to FHIR Concept Map](ConceptMap-HAvBED2toFHIR.html)
-
+   4. [BedLocationOperationalStatus Value Set](ValueSet-BedLocationOperationalStatus.html)
+   5. [BedProperty Value Set](ValueSet-BedProperty.html)
+   6. [BedType Value Set](ValueSet-BedType.html)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
@@ -70,3 +77,4 @@ a service platform that is the catalyst for secure and smart health information 
 physicians, hospitals, health plans, ACOs, MCOs, and public health agencies across 12 US states.
 Ai is raising the bar for how health data is shared, managed, and protected.
 
+        

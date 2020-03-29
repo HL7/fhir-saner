@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "BedType"];
   fhir:ValueSet.title [ fhir:value "Bed Type"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2020-03-25T15:22:24-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2020-03-29T12:02:42-04:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "Audacious Inquiry"];
   fhir:ValueSet.contact [
      fhir:index 0;

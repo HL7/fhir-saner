@@ -2,44 +2,6 @@ Invariant: must-be-uuid
 Description: "Group.id SHALL be a UUID"
 Severity: #error
 
-ValueSet: BedLocationOperationalStatus
-Title: "Bed Location Operational Status"
-Description: "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."
-* codes from valueset http://terminology.hl7.org/ValueSet/v2-0116
-* exclude http://terminology.hl7.org/CodeSystem/v2-0116#I
-
-CodeSystem: SanerBedType
-Title: "Bed Type Coding System"
-Description: "This Coding System fills gaps describing types of care services that a bed can support."
-* #OR "Operating Room" "Operating Rooms"
-* #NURSERY "Nursery" "Neonatal or newborn (non-ICU) care beds"
-* #BURNU "Burn Unit" "Burn ICU beds"
-* #NEGISO "Negative Pressure Isolation Unit" "Beds in a negative pressure isolation environment"
-* #OTHISO "Other Isolation Unit" "Beds in an other (non-negative pressure) isolation environment"
-* #NONISO "Non-isolating unit" "Bed in a unit that does not support isolation"
-
-ValueSet: BedType
-Title: "Bed Type"
-Description: "This Value Set describes the types of care services that a bed can support."
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#ICU
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#PEDICU
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#PEDNICU
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#HU
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#RHU
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#PEDU
-* http://terminology.hl7.org/CodeSystem/v3-RoleCode#PHU
-* SanerBedType#OR
-* SanerBedType#NURSERY
-* SanerBedType#BURNU
-
-ValueSet: BedProperty
-Title: "Bed Property"
-Description: "This value set describes other properties of a bed, such as the ability to support isolation."
-* SanerBedType#NEGISO
-* SanerBedType#OTHISO
-* SanerBedType#NONISO
-
 Profile:        BedGroup
 Parent:         Group
 Id:             saner-bed-group

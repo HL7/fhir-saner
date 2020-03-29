@@ -1,8 +1,8 @@
 @startuml
 hide footbox
-participant "Availability Reporter" as AvailabilityReporter
-activate "AvailabilityReporter"
-"AvailabilityReporter" -> "AvailabilityReporter" : 1. Report Availability
+participant "Measure Consumer" as MeasureConsumer
+activate "MeasureConsumer"
+"MeasureConsumer" -> "MeasureConsumer" : 1. Communicate Measure
 return
-deactivate "AvailabilityReporter"
+deactivate "MeasureConsumer"
 @enduml

@@ -1,11 +1,11 @@
 @startuml
 hide footbox
-participant "Availability Collector" as AvailabilityCollector
-participant "Availability Source" as AvailabilitySource
-"AvailabilityCollector" -> "AvailabilitySource" : 1. Availability Collector Initiates Search
-activate "AvailabilityCollector"
-activate "AvailabilitySource"
-"AvailabilitySource" --> "AvailabilityCollector" : 2. Availability Source Reports Aggregate Data
-deactivate "AvailabilityCollector"
-deactivate "AvailabilitySource"
+participant "Measure Consumer" as MeasureConsumer
+participant "Measure Source" as MeasureSource
+"MeasureConsumer" -> "MeasureSource" : 1. Measure Repository Initiates Search
+activate "MeasureConsumer"
+activate "MeasureSource"
+"MeasureSource" --> "MeasureConsumer" : 2. Measure Source Reports Aggregate Data
+deactivate "MeasureConsumer"
+deactivate "MeasureSource"
 @enduml

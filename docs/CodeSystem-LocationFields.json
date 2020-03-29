@@ -1,0 +1,156 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "LocationFields",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Location Resource Field Names</h2><div><p>This Coding System identifies legal field names in a FHIR R4 Location Resource.</p>\n</div><p>This code system http://hl7.org/fhir/R4/StructureDefinition/Location defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Location<a name=\"LocationFields-Location\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.id<a name=\"LocationFields-Location.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.meta<a name=\"LocationFields-Location.46meta\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.implicitRules<a name=\"LocationFields-Location.46implicitRules\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.language<a name=\"LocationFields-Location.46language\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.text<a name=\"LocationFields-Location.46text\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.contained<a name=\"LocationFields-Location.46contained\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.extension<a name=\"LocationFields-Location.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.modifierExtension<a name=\"LocationFields-Location.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.identifier<a name=\"LocationFields-Location.46identifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.status<a name=\"LocationFields-Location.46status\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.operationalStatus<a name=\"LocationFields-Location.46operationalStatus\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.name<a name=\"LocationFields-Location.46name\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.alias<a name=\"LocationFields-Location.46alias\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.description<a name=\"LocationFields-Location.46description\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.mode<a name=\"LocationFields-Location.46mode\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.type<a name=\"LocationFields-Location.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.telecom<a name=\"LocationFields-Location.46telecom\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.address<a name=\"LocationFields-Location.46address\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.physicalType<a name=\"LocationFields-Location.46physicalType\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position<a name=\"LocationFields-Location.46position\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position.id<a name=\"LocationFields-Location.46position.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position.extension<a name=\"LocationFields-Location.46position.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position.modifierExtension<a name=\"LocationFields-Location.46position.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position.longitude<a name=\"LocationFields-Location.46position.46longitude\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position.latitude<a name=\"LocationFields-Location.46position.46latitude\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.position.altitude<a name=\"LocationFields-Location.46position.46altitude\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.managingOrganization<a name=\"LocationFields-Location.46managingOrganization\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.partOf<a name=\"LocationFields-Location.46partOf\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation<a name=\"LocationFields-Location.46hoursOfOperation\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.id<a name=\"LocationFields-Location.46hoursOfOperation.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.extension<a name=\"LocationFields-Location.46hoursOfOperation.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.modifierExtension<a name=\"LocationFields-Location.46hoursOfOperation.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.daysOfWeek<a name=\"LocationFields-Location.46hoursOfOperation.46daysOfWeek\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.allDay<a name=\"LocationFields-Location.46hoursOfOperation.46allDay\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.openingTime<a name=\"LocationFields-Location.46hoursOfOperation.46openingTime\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.hoursOfOperation.closingTime<a name=\"LocationFields-Location.46hoursOfOperation.46closingTime\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.availabilityExceptions<a name=\"LocationFields-Location.46availabilityExceptions\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Location.endpoint<a name=\"LocationFields-Location.46endpoint\"> </a></td><td/></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/R4/StructureDefinition/Location",
+  "version": "0.1.0",
+  "name": "LocationFields",
+  "title": "Location Resource Field Names",
+  "status": "active",
+  "date": "2020-03-29T12:02:42-04:00",
+  "publisher": "Audacious Inquiry",
+  "contact": [
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This Coding System identifies legal field names in a FHIR R4 Location Resource.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Location"
+    },
+    {
+      "code": "Location.id"
+    },
+    {
+      "code": "Location.meta"
+    },
+    {
+      "code": "Location.implicitRules"
+    },
+    {
+      "code": "Location.language"
+    },
+    {
+      "code": "Location.text"
+    },
+    {
+      "code": "Location.contained"
+    },
+    {
+      "code": "Location.extension"
+    },
+    {
+      "code": "Location.modifierExtension"
+    },
+    {
+      "code": "Location.identifier"
+    },
+    {
+      "code": "Location.status"
+    },
+    {
+      "code": "Location.operationalStatus"
+    },
+    {
+      "code": "Location.name"
+    },
+    {
+      "code": "Location.alias"
+    },
+    {
+      "code": "Location.description"
+    },
+    {
+      "code": "Location.mode"
+    },
+    {
+      "code": "Location.type"
+    },
+    {
+      "code": "Location.telecom"
+    },
+    {
+      "code": "Location.address"
+    },
+    {
+      "code": "Location.physicalType"
+    },
+    {
+      "code": "Location.position"
+    },
+    {
+      "code": "Location.position.id"
+    },
+    {
+      "code": "Location.position.extension"
+    },
+    {
+      "code": "Location.position.modifierExtension"
+    },
+    {
+      "code": "Location.position.longitude"
+    },
+    {
+      "code": "Location.position.latitude"
+    },
+    {
+      "code": "Location.position.altitude"
+    },
+    {
+      "code": "Location.managingOrganization"
+    },
+    {
+      "code": "Location.partOf"
+    },
+    {
+      "code": "Location.hoursOfOperation"
+    },
+    {
+      "code": "Location.hoursOfOperation.id"
+    },
+    {
+      "code": "Location.hoursOfOperation.extension"
+    },
+    {
+      "code": "Location.hoursOfOperation.modifierExtension"
+    },
+    {
+      "code": "Location.hoursOfOperation.daysOfWeek"
+    },
+    {
+      "code": "Location.hoursOfOperation.allDay"
+    },
+    {
+      "code": "Location.hoursOfOperation.openingTime"
+    },
+    {
+      "code": "Location.hoursOfOperation.closingTime"
+    },
+    {
+      "code": "Location.availabilityExceptions"
+    },
+    {
+      "code": "Location.endpoint"
+    }
+  ]
+}

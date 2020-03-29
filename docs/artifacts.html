@@ -39,13 +39,13 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"9"}
-    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
                 <div id="hl7-nav" style='float:left;'>
           <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img height="50" alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
           </a>
         </div>
 
@@ -199,6 +199,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-saner-audit-event-write.html"
+                     title="StructureDefinition/saner-audit-event-write">Audit Event Write Profile</a>
+               </td>
+               <td>Defines constraints on the AuditEvent Resource to record when a resource has been written.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-saner-bed-group.html"
                      title="StructureDefinition/saner-bed-group">Bed Group Profile</a>
                </td>
@@ -213,10 +220,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-saner-bed-measure-report.html"
+                     title="StructureDefinition/saner-bed-measure-report">Bed MeasureReport Profile</a>
+               </td>
+               <td>Defines constraints on the MeasureReport Resource for data communicating about Bed availability.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-saner-device-group.html"
                      title="StructureDefinition/saner-device-group">Device Group Profile</a>
                </td>
                <td>Defines constraints on the Group Resource for data communicating about device availability.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-saner-audit-event-read.html"
+                     title="StructureDefinition/saner-audit-event-read">Audit Event Read</a>
+               </td>
+               <td>Defines constraints on the AuditEvent Resource to record when a record has been accessed.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-saner-device-measure-report.html"
+                     title="StructureDefinition/saner-device-measure-report">Device MeasureReport Profile</a>
+               </td>
+               <td>Defines constraints on the MeasureReport Resource for data communicating about device availability.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -273,6 +301,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="CodeSystem-DeviceFields.html" title="CodeSystem/DeviceFields">Device Resource Field Names</a>
+               </td>
+               <td>This Coding System identifies legal field names in a FHIR R4 Device Resource.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CodeSystem-LocationFields.html" title="CodeSystem/LocationFields">Location Resource Field Names</a>
+               </td>
+               <td>This Coding System identifies legal field names in a FHIR R4 Location Resource.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="CodeSystem-SanerBedType.html" title="CodeSystem/SanerBedType">Bed Type Coding System</a>
                </td>
                <td>This Coding System fills gaps describing types of care services that a bed can support.</td>
@@ -309,7 +349,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2020 15:22-0400">2020-03-25</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

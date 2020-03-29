@@ -1,11 +1,11 @@
 @startuml
 hide footbox
-participant "Availability Source" as AvailabilitySource
-participant "Availability Collector" as AvailabilityCollector
-activate "AvailabilitySource"
-activate "AvailabilityCollector"
-"AvailabilitySource" -> "AvailabilityCollector" : 1. Push Availability Bundle
+participant "Measure Source" as MeasureSource
+participant "Measure Consumer" as MeasureConsumer
+activate "MeasureSource"
+activate "MeasureConsumer"
+"MeasureSource" -> "MeasureConsumer" : 1. Push Measure
 return
-deactivate "AvailabilitySource"
-deactivate "AvailabilityCollector"
+deactivate "MeasureSource"
+deactivate "MeasureConsumer"
 @enduml

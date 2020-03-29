@@ -2,7 +2,7 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-
+    
 
 
 ### About This Guide
@@ -12,8 +12,12 @@ to discussion and change.
 
 The goal of publishing this guide is to encourage the creation of a community interested
 in extremely rapid development of an interface that can support Public Health in this time of
-crisis.
-
+crisis.  Audacious Inquiry is publishing this material as follows:
+<div>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" style="float:clear"/></a>
+</div>
 ### Situational Awareness for Novel Epidemic Response
 Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially pandemic flu strains during the early formation of the Office of the National Coordinator in 2005.
 
@@ -53,12 +57,10 @@ In evaluating solutions for the above challenges, we have established the follow
 
 #### Quick Assessment
 1.  Existing work by [Johns Hopkins University](https://coronavirus.jhu.edu/map.html) in aggregating case data sets and visualizing them addresses national and even regional (at the county level) trends.
-2.  Bed availability is an area where there is a great deal of existing work on standards
-[^1]<sup>,</sup>[^2]<sup>,</sup>[^3]<sup>,</sup>[^4], and use case requirements[^5], but not much
-prior success, although there are existing Health IT solutions that have this data (not just in the EHR).
-If the solution can be interfaced rather than integrated, an implementation can be piloted much faster.
-3.  Other resource utilization (e.g., Ventilators, Infusion Pumps, etc.)is available in central monitoring
-or inventory control solutions, but are not necessarily readily available in the EHR.  This would be a natural
+2.  Bed availability is an area where there is a great deal of existing work [^1]<sup>,</sup>[^2]<sup>,</sup>[^3]<sup>,</sup>[^4], but not much prior success, although there are existing Health IT solutions that have this data (not just in the EHR).  If the solution can be interfaced rather than integrated, an
+implementation can be piloted much faster.
+3.  Other resource utilization is available in inventory control or central monitoring
+solutions, but are not necessarily readily available in the EHR.  This would be a natural
 evolution from Bed Availability.
 
 [^1]: [HITSP C47: Resource Utilization Message](http://www.hitsp.org/ConstructSet_Details.aspx?&PrefixAlpha=4&PrefixNumeric=47)
@@ -69,8 +71,6 @@ evolution from Bed Availability.
 
 [^4]: [HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
 
-[^5]: [Harmonized Use Case for Biosurveillance (Visit, Utilization and Lab Result Data)](AHIC_UseCase_2006_-_Biosurveillance_Utilization.pdf)
-
 This rapid assessment leads this guide to a focus on bed availability.
 
 ### Bed Availability
@@ -79,7 +79,7 @@ current inpatient EHR Systems, and in departmental ICU and Central Monitoring sy
 Such solutions support management of bed assignment for admissions and provide direction to
 housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems
 which provide ICU and Nursing central monitoring capabilities.  They are often separate components
-or modules , Standalone solutions, or third party solutions which integrate with an
+or modules, Standalone solutions, or third party solutions which integrate with an
 EHR System (e.g. Forward Advantage with MEDITECH).
 
 #### Prior Solutions and Existing Standards
@@ -110,26 +110,32 @@ No HL7 Version 3 standards were developed to support Bed management or availabil
 In HL7 FHIR the [Location](https://hl7.org/fhir/R4/location.html) resource can describe information about
 any bed within a facility.  The [Group](https://hl7.org/fhir/R4/group.html) resource
 can report on specific quantities of groups of resources available that match a specific
-set of characteristics.
+set of characteristics.  The [MeasureReport](https://hl7.org/fhir/R4/measurereport.html)
+resource can report on measures using counts and other metrics over a variety of resources.
+
+###### Device Resource
+The Device Resource can report on medical devices, including ventilators, repirators,
+personal protective equipment such as masks, and viral test kits.  Device is not widely
+used by systems reporting on device quantities or status.
 
 ###### Location Resource
 While the Location resource can report on beds, it can also be used to describe buildings, wards,
 geographic area, or any other sort of place, including "mobile" places such as a mobile clinic or
-ambulance.  Given its broad application, it needs to be profiled to support use for bed availability.
+ambulance.  Given its broad application, would need to be profiled to support use for bed availability.
 
 While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's
 little use of the Location resource to report data about beds.  It is more commonly used to report
 Location data associated with the
 [Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (now known as the US Core Data for
-Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification regulations.  These uses of
-Location are found in the Encounter, Procedure and Practitioner resources.  Those uses of Location
+Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification
+regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
 describe the facility where an encounter occurs, the location where a procedure is performed, or
 the location of a practitioner.
 
 ###### Group Resource
-The Group resource can also be used to support aggregate reporting on beds, as it allows reporting
-of quantities of a type of item without requiring a FHIR resource to reference the actual item, just
-its characteristics.  This resource can also be used to report on other types of resources, such as
+While the Group resource can be used to support aggregate reporting on beds, as it allows reporting
+of quantities of an item without referencing an individual item, it has not been deployed in this way by
+any knwon system.  This resource can also be used to report on other types of resources, such as
 ventilators, respirators, and N95 masks.
 
 NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
@@ -137,7 +143,26 @@ report on any group of things that can be defined by characteristics, it simply 
 enumerate those resources.  That is not essential for the use cases in this implementation
 guide.
 
-The Group resource is even more lightly deployed in existing EHR products.
+The Group resource is more lightly deployed in existing EHR products. It is not
+a requirement of the 2015 Certification program.
+
+###### Measure Resource
+The MeasureReport resource can be used to support reporting of a variety of measures,
+including simple counts, with measures over different strata.  It is not readily searchable at
+the stratum level.  MeasureReport is beginning to gain traction because of efforts using
+it in the [DaVinci Project](https://www.hl7.org/about/davinci/).
+
+The table below shows the [FHIR Maturity Model](https://www.hl7.org/fhir/R4/versions.html#maturity) Level for each of the resources described
+above.
+
+<table class='grid'><thead><tr><th>Resource</th><th>Maturity Level</th></tr></thead>
+<tbody>
+<tr><td><a href="https://hl7.org/fhir/device.html">Device</a></td><td>2</td></tr>
+<tr><td><a href="https://hl7.org/fhir/group.html">Group</a></td><td>1</td></tr>
+<tr><td><a href="https://hl7.org/fhir/location.html">Location</a></td><td>3</td></tr>
+<tr><td><a href="https://hl7.org/fhir/measurereport.html">MeasureReport</a></td><td>2</td></tr>
+</tbody>
+</table>
 
 #### Terminology
 Terminology plays an important role in this implementation guide.
@@ -148,158 +173,17 @@ NICU, Isolation)
 * Other types of resources (e.g., ventilators, respirators, masks, et cetera)
 
 ##### Location Type
+The HL7 Version 3 [Service Delivery Location Role Type](https://www.hl7.org/fhir/v3/ServiceDeliveryLocationRoleType/vs.html)
+Value Set has been adopted as the [Preferred](https://www.hl7.org/fhir/terminologies.html#preferred) classification system for `Location.type` in the Location resource in FHIR
+R4.
 
 ##### Bed Status
-HL7 Version 2 Table 0116 Bed Status Provides Vocabulary that can describe the status
-of a bed.
+HL7 Version 2 Table 0116 [Bed Status Provides Vocabulary](https://www.hl7.org/fhir/v2/0116/index.html) that can describe the status
+of a bed, and has been adopted as the [Extensible](https://www.hl7.org/fhir/terminologies.html#extensible) vocabulary
+for `Location.operationalStatus` in the Location resource in FHIR R4.
 
-
-
-
-
-### Use Cases
-
-The sections below describe the use cases supported by the
-Audaciuo
-	     s Inquiry SANER Implementation Guide.
-
-
-#### Use Case 1: Collecting Bed Availability
-
-This use case addresses the exchange of data from Facilities to a Centralized
-reporting system for Public Health
-
-
-This use case is supported by the following
-
-* Actors
-
-  - [Availability Source](actors_and_transactions.html#availability-source)
-
-  - [Availability Collector](actors_and_transactions.html#availability-collector)
-
-* Transactions
-
-  - [Query Availability](transaction-1.html)
-
-  - [Update Availability](transaction-2.html)
-
-* Content
-
-  - [Bed Availability Group](StructureDefinition-saner-bed-group.html)
-
-  - [Single Bed Location](StructureDefinition-saner-bed-location.html)
-
-##### Use Case 1: Collecting Bed Availability Process Flow
-
-Overview TBD
-
-
-![Figure 2.3.1.1-1: Use Case 1: Collecting Bed Availability Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Use Case 1: Collecting Bed Availability Process Flow")
-
-<div style="clear: left"/>
-
-**Figure 2.3.1.1-1: Use Case 1: Collecting Bed Availability Process Flow**
-
-
-1. Availability Collector Initiates Search
-
-   The Availability Collector identifies features associated with a group of
-bed resources that it wishes to collect data about.  For example, the Availability Collector can
-request information about ICU, med/surg, or ED beds available or in use.
-
-
-   TBD
-
-
-1. Availability Source Reports Aggregate Data
-
-   The Availability Source reports aggregate data about a group of beds based
-	                on specified bed characteristics
-
-
-   TBD
-
-
-#### Use Case 2: Reporting on Bed Availability
-
-TBD
-
-
-This use case is supported by the following
-
-* Actors
-
-  - [Availability Collector](actors_and_transactions.html#availability-collector)
-
-  - [Availability Reporter](actors_and_transactions.html#availability-reporter)
-
-* Transactions
-
-  - [Report Results](transaction-1.html)
-
-* Content
-
-  - [Bed Availability Group](StructureDefinition-saner-bed-group.html)
-
-  - [Single Bed Availability Status](StructureDefinition-saner-bed-location.html)
-
-##### Use Case 2: Reporting on Bed Availability Process Flow
-
-TBD
-
-
-![Figure 2.3.1.2-1: Use Case 2: Reporting on Bed Availability Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Use Case 2: Reporting on Bed Availability Process Flow")
-
-<div style="clear: left"/>
-
-**Figure 2.3.1.2-1: Use Case 2: Reporting on Bed Availability Process Flow**
-
-
-1. User Initiates Search
-
-   The Public Health User navigates to a web page where collected data is reported.
-
-
-   TBD
-
-
-1. Availability Reporter gathers data from Availability Collectors
-
-   The Availability Reporter gathers and aggregates data from one or more Availability Collectors.
-
-
-   The means by which gathering and aggregation is performed is not further specified
-by this implementation guide. However, the Availability Reporter can obtain data from an Availability Collector by using other transactions
-within this profile if desired.
-
-
-1. Display Results
-
-   The Availability Reporter displays an overview of aggregated regional results to the
-user, and additional links which enable navigation to finer grained or alternative displays.
-
-
-   Data can be displayed as aggregated or fine-grained status information based
-on the current focus of the public health user.  It may be shown as a map, a table, or a graph.
-
-
-1. User refines Focus or Form of Display
-
-   The Public Health User selects a new form of display (e.g., Map, table or graph) or refines their
-focus (e.g., wider or smaller region).
-
-
-   TBD
-
-
-1. Display Refined Results
-
-   The Availability Collector modifies the users focus and reporting format
-
-
-   TBD
 
 
 
 **Footnotes**
+        

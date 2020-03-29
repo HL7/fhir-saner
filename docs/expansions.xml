@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="ed143ecb-1853-40fb-af17-ecc8d27a5af4"/>
+  <id value="f6689430-e976-4d3f-856d-8515d801a426"/>
   <meta>
-    <lastUpdated value="2020-03-25T15:22:24.408-04:00"/>
+    <lastUpdated value="2020-03-29T12:02:42.060-04:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -81,7 +81,7 @@
         <name value="BedLocationOperationalStatus"/>
         <title value="Bed Location Operational Status"/>
         <status value="active"/>
-        <date value="2020-03-25T15:22:24-04:00"/>
+        <date value="2020-03-29T12:02:42-04:00"/>
         <publisher value="Audacious Inquiry"/>
         <contact>
           <name value="Audacious Inquiry"/>
@@ -99,8 +99,8 @@
         </contact>
         <description value="This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."/>
         <expansion>
-          <identifier value="urn:uuid:11f3cd16-08fe-43db-8a16-369300292d45"/>
-          <timestamp value="2020-03-25T15:22:42-04:00"/>
+          <identifier value="urn:uuid:99233808-7d4b-4092-a0b4-26744e4db81d"/>
+          <timestamp value="2020-03-29T12:03:12-04:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -202,7 +202,7 @@
         <name value="BedProperty"/>
         <title value="Bed Property"/>
         <status value="active"/>
-        <date value="2020-03-25T15:22:24-04:00"/>
+        <date value="2020-03-29T12:02:42-04:00"/>
         <publisher value="Audacious Inquiry"/>
         <contact>
           <name value="Audacious Inquiry"/>
@@ -220,8 +220,8 @@
         </contact>
         <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
         <expansion>
-          <identifier value="urn:uuid:1225578c-8609-4b70-b17c-af07dbb1e4e5"/>
-          <timestamp value="2020-03-25T15:22:42-04:00"/>
+          <identifier value="urn:uuid:7181d909-8471-456b-9900-1ada46da8252"/>
+          <timestamp value="2020-03-29T12:03:12-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -382,7 +382,7 @@
         <name value="BedType"/>
         <title value="Bed Type"/>
         <status value="active"/>
-        <date value="2020-03-25T15:22:24-04:00"/>
+        <date value="2020-03-29T12:02:42-04:00"/>
         <publisher value="Audacious Inquiry"/>
         <contact>
           <name value="Audacious Inquiry"/>
@@ -400,8 +400,8 @@
         </contact>
         <description value="This Value Set describes the types of care services that a bed can support."/>
         <expansion>
-          <identifier value="urn:uuid:50d64937-3bbc-4c6e-9fcc-b8e939a31c63"/>
-          <timestamp value="2020-03-25T15:22:42-04:00"/>
+          <identifier value="urn:uuid:7f52b10b-f543-43ff-b8d8-8936e5c0eed1"/>
+          <timestamp value="2020-03-29T12:03:12-04:00"/>
           <total value="11"/>
           <parameter>
             <name value="excludeNested"/>

@@ -1,0 +1,413 @@
+<profile xmlns="http://ainq.com/ig-definition" id="SANER" chapter='1' codingsystems="SanerBedType" valuesets="BedLocationOperationalStatus BedProperty BedType">
+	<domain id="AI">
+	    <org>Audacious Inquiry</org>
+	    <name>Situational Awareness for Novel Epidemic Response</name>
+	    <description></description>
+	    <overview file="SANER-overview.md"/>
+	</domain>
+    <name>Situational Awareness for Novel Epidemic Response</name>
+    <description>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
+of high level situational awareness information from inpatient facilities to centralized data repositories
+to support the treatment of novel influenza-like illness.
+    </description>
+    <!-- overview is optional -->
+    <overview file="SANER-overview.md"/>
+    <!-- option is optional and repeatable -->
+    <option id="Dump">
+        <name>Storage Option</name>
+        <description>An actor implementing the Storage Option supports the ability to exchange FHIR Resources through
+various means of simple data transfer, rather than directly through a FHIR API call. This include mechanisms such
+as SFTP, S3 Blob Storage, Azure Blob Storage, a Message Queue, https: File Download, File System dumps, or Direct Messages with a
+data payload. Supported formats include JSON, XML and NDJSON.
+        </description>
+        <participant actor='MeasureSource'>
+            <description>A <ref actor='MeasureSource'/> actor implementing the Storage Option uses external storage to communicate data.</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>A <ref actor='MeasureConsumer'/> actor implementing the Storage Option uses external storage to communicate data.</description>
+        </participant>
+    </option>
+    <option id="API">
+        <name>API Option</name>
+        <description>An actor implementing the API Option supports the
+ability to exchange FHIR Resources using [FHIR RESTful APIs](http://hl7.org/fhir/R4/http.html).</description>
+        <participant actor='MeasureSource'>
+            <description>An <ref actor='MeasureSource'/> actor implementing the API option uses FHIR RESTful APIs to communicate data.</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>An <ref actor='MeasureConsumer'/> actor implementing the API option uses FHIR RESTful APIs to communicate data.</description>
+        </participant>
+    </option>
+    <option id="Push">
+	    <name>Push Option</name>
+	    <description>An actor implementing the Push Option supports the periodic push of resources
+describing the current status of health delivery resources to a centralized collection point.
+	    </description>
+	    <overview/>
+	    <participant actor='MeasureSource'>
+	        <description>A Measure Source implementing the Push Option periodically sends updates to a
+<ref actor='MeasureConsumer'/> using the <ref tx='PUSH-TX'/> transaction.</description>
+	    </participant>
+        <participant actor='MeasureConsumer'>
+            <description>An Measure Consumer implementing the Push Option periodically recieves updates from the
+<ref actor='MeasureSource'/> using the <ref tx='PUSH-TX'/> transaction.</description>
+        </participant>
+    </option>
+    <option id="Pull">
+        <name>Pull Option</name>
+        <description>An actor implementing the Pull Option supports the periodic pull resources
+describing the current status of selected health delivery resources.</description>
+        <overview/>
+        <participant actor='MeasureSource'>
+           <description>A Measure Source implementing the Pull Option is periodically queried by an
+<ref actor='MeasureConsumer'/> using the <ref tx='PULL-TX'/> transaction to enable collection of the current status.
+</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>An Measure Consumer implementing the Pull Option periodically queries a
+<ref actor='MeasureSource'/> using the <ref tx='PULL-TX'/> transaction to enable collection of the current status.
+            </description>
+        </participant>
+    </option>
+    <option id="Bed">
+        <name>Bed Option</name>
+        <description>An actor supporting the Bed Option can describe the status of beds.</description>
+        <overview/>
+        <participant actor='MeasureSource'>
+            <description>An Measure Source implementing the Bed Option generates data on beds.</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>An Measure Consumer implementing the Bed Option consumes data about beds.</description>
+        </participant>
+    </option>
+    <option id="Asset">
+        <name>Asset Option</name>
+        <description>An actor supporting the Asset Option can describe the status of non-bed treatment
+resources, such as ventilators, respirators, infusion pumps, monitoring equipment, et cetera</description>
+        <overview/>
+        <participant actor='MeasureSource'>
+            <description>An Measure Source implementing the Asset Option generates data on other Assets
+(e.g., ventilators, respirators, PPE, and other equipment or supplies).</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>An Measure Consumer implementing the Asset Option consumes data about other Assets
+(e.g., ventilators, respirators, PPE, and other equipment or supplies).</description>
+        </participant>
+    </option>
+    <option id="Group">
+        <name>Group Option</name>
+        <description>An actor supporting the Group Option can work with Group resources representing individual strata
+values extracted from a Measure Report</description>
+        <participant actor='MeasureSource'>
+            <description>An Measure Source implementing the Group Option can produce reports using the Group Resource.</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>An Measure Source implementing the Group Option can consume reports using the Group Resource.</description>
+        </participant>
+    </option>
+    <!-- standard is repeatable -->
+    <standard id="FHIR-R4">
+        <name>HL7 FHIR Release 4.0</name>
+        <url>http://www.hl7.org/FHIR/R4</url>
+    </standard>
+    <standard id="RFC-7230">
+        <url>https://ietf.org/rfc/rfc7230.html</url>
+        <name>Hypertext Transfer Protocol - HTTP/1.1</name>
+    </standard>
+    <standard id="RFC-7540">
+        <url>https://ietf.org/rfc/rfc7540.html</url>
+        <name>Hypertext Transfer Protocol - HTTP/2</name>
+    </standard>
+    <standard id="RFC-3986">
+        <url>https://ietf.org/rfc/rfc3986.html</url>
+        <name>Uniform Resource Identifier (URI): Generic Syntax</name>
+    </standard>
+    <standard id="RFC-4627">
+        <url>https://ietf.org/rfc/rfc4627.html</url>
+        <name>The application/json Media Type for JavaScript Object Notation (JSON)</name>
+    </standard>
+    <standard id="RFC-6585">
+        <url>https://ietf.org/rfc/rfc6585.html</url>
+        <name>Additional HTTP Status Codes</name>
+    </standard>
+    <standard id="NDJSON">
+        <url>http://ndjson.org/</url>
+        <name>Newline Delimited JSON</name>
+    </standard>
+
+    <!-- usecase is optional and repeatable -->
+    <usecase id="GETBEDS" actors="MeasureSource MeasureConsumer" transactions="PULL-TX PUSH-TX" content="bed-measure-report bed-device-report bed-group supporting-device bed-location">
+	    <name>Collecting Bed Measures</name>
+        <description>This use case addresses the exchange of data from Facilities to a Centralized
+reporting system for Public Health</description>
+	    <!-- overview is optional -->
+	    <overview>Overview TBD</overview>
+	    <step id="BED-STEP1" from="MeasureConsumer" to="MeasureSource" returns="now">
+            <name>Measure Repository Initiates Search</name>
+            <description>The Measure Repository identifies features associated with a group of
+bed or device resources that it wishes to collect data about.  For example, the Measure Repository can
+request information about ICU, med/surg, or ED beds available or in use.</description>
+            <overview>TBD</overview>
+	        <return id="BED-STEP2" from="MeasureSource" to="MeasureConsumer" returns="now">
+	            <name>Measure Source Reports Aggregate Data</name>
+	            <description>The Measure Source reports aggregate data about a group of beds or devices based
+	                on specified bed or device characteristics</description>
+	            <overview>TBD</overview>
+	        </return>
+	    </step>
+    </usecase>
+    <usecase id="VIEWREPORTS" actors="MeasureConsumer" transactions="REPORT-TX" content="bed-measure-report device-measure-report bed-group supporting-device bed-location">
+        <name>Reporting on A Measure</name>
+        <description>TBD</description>
+        <!-- overview is optional -->
+        <overview>TBD</overview>
+        <step id="Reporting-STEP1" from="Public Health User" to="MeasureConsumer" returns="now">
+            <name>User Initiates Search</name>
+            <description>The Public Health User navigates to a web page where collected data is reported.</description>
+            <overview>TBD</overview>
+            <step id="Aggregating-STEP2" from="MeasureConsumer" to="MeasureSource" returns="now">
+                <name>Measure Consumer gathers data from one or Measure Sources</name>
+                <description>The Measure Consumer gathers and aggregates data from one or more Measure Sources.</description>
+                <overview>The specific ordering in which gathering and aggregation is performed is not further specified
+by this implementation guide. It is shown as occuring after the user initiates the query here, but could have occured
+prior.</overview>
+            </step>
+            <return>
+                <name>Display Results</name>
+                <description>The Measure Consumer displays an overview of aggregated regional results to the
+user, and additional links which enable navigation to finer grained or alternative displays.</description>
+                <overview>Data can be displayed as aggregated or fine-grained status information based
+on the current focus of the public health user.  It may be shown as a map, a table, or a graph.</overview>
+            </return>
+        </step>
+        <step id="Reporting-STEP2" from="Public Health User" to="MeasureConsumer" returns="now">
+            <name>User refines Focus or Form of Display</name>
+            <description>The Public Health User selects a new form of display (e.g., Map, table or graph) or refines their
+focus (e.g., wider or smaller region).</description>
+            <overview>TBD</overview>
+            <return>
+                <name>Display Refined Results</name>
+                <description>The Measure Repository modifies the users focus and reporting format</description>
+                <overview>TBD</overview>
+            </return>
+        </step>
+    </usecase>
+    <!--  Other Use Cases can describe options -->
+    <actor id="MeasureSource">
+        <name>Measure Source</name>
+        <description>The Measure Source Actor reports results for a single facility, collection of facilities
+        or aggragated data for a region</description>
+        <!-- overview is optional -->
+        <overview>TBD</overview>
+        <supports-tx transaction="PULL-TX" as="server" required-with-options="Pull">
+            <role>Reports on selected data in response to a query.</role>
+        </supports-tx>
+        <supports-tx transaction="PUSH-TX" as="client" required-with-options="Push">
+            <role>Periodically generates data for a Measure Consumer.</role>
+        </supports-tx>
+        <!-- requirement is optional and can repeat -->
+        <requires id="COLLECT-R1" at-least-one="Pull Push"/>
+        <!-- requirement is optional and can repeat -->
+        <requires id="COLLECT-R2" at-least-one="API Dump"/>
+    </actor>
+
+    <actor id="MeasureConsumer">
+        <name>Measure Consumer</name>
+        <description>The Measure Consumer provides access to aggregated or fine-grained
+data gathered from one or more Measure Sources.
+        </description>
+        <!-- requirement is optional and can repeat -->
+        <requires id="REPORT-R1" at-least-one="Pull Push"/>
+        <!-- requirement is optional and can repeat -->
+        <requires id="REPORT-R1" at-least-one="API Dump"/>
+
+        <requires-tx transaction="REPORT-TX" as="self">
+            <role>Display or transmits reports using availability data</role>
+        </requires-tx>
+        <supports-tx transaction="PULL-TX" as="client" required-with-options="Pull">
+            <role>Collects data for reporting</role>
+        </supports-tx>
+        <supports-tx transaction="PUSH-TX" as="server" required-with-options="Push">
+            <role>Collects data for reporting</role>
+        </supports-tx>
+    </actor>
+
+    <actor id="MeasureIntermediary" groups="MeasureSource MeasureConsumer">
+        <name>Measure Intermediary</name>
+        <description>The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.</description>
+        <overview>This actor represents the composition of a <ref actor='MeasureSource'/> with a <ref actor='MeasureSource'/>.
+
+#### Bridging between Incompatible Options
+A Measure Consumer that implements the Dump and Pull Options that is grouped with a Measure Source implementing the Push and API
+Options can be used as a bridge to adapt a Meaure Source implementing the Dump and Push options to communicate with a Measure
+Consumer implementing the API and Push options.
+
+![Bridge](Bridge.svg)
+
+#### Measure Repository
+A Measure Consumer that implements the API Option and Push Option that is grouped with a Measure Source implementing the Pull and API
+Options is essentially the definition of a FHIR Server.
+
+![FHIR Server](FHIRServer.svg)
+
+#### Measure to Group Slicer
+A Measure Consumer that implements the API and Pull Option can be grouped with a Measure Source implementing the Push, API and
+Fine-Grained option to "slice and dice" Measure Reports into Groups, populating a Measure Consumer with fine-grained data from
+a Measure Source.  This adapter can be used to add the Fine Grained Option to a Measure Repository.
+
+![Slicer](Slicer.svg)
+
+        </overview>
+    </actor>
+    <transaction id="PULL-TX" standards="FHIR-R4 RFC-7230 NDJSON">
+        <name>Query Measure</name>
+        <description>The Query Measure transaction allows a Measure Consumer to
+periodically query about the availability of a resource from an Measure Source.</description>
+        <!-- like steps, messages can nest to support activation lines -->
+        <message from="MeasureConsumer" to="MeasureSource">
+            <name>Search Request</name>
+            <description></description>
+            <trigger id="TRIGGER1">
+                <name>Periodic Reporting Interval Elapsed, or a Query is Initiated by User/System</name>
+            </trigger>
+            <semantics>
+                <description>If the API Option is supported, the Measure Consumer sends a query
+using an HTTP GET or POST transaction to the Measure Source requesting information on
+available resources.
+
+If the Storage Option is supported, the Measure Consumer will read resources from external storage
+using appropriate operations for the storage in use (e.g., SFTP/S3/Blob/File).</description>
+                <overview></overview>
+            </semantics>
+            <action by="MeasureConsumer">
+                <name>Measure Consumer requests data from a Measure Source.</name>
+                <description>When the API Option is implemented, the Measure Consumer performs a FHIR Search operation
+to retrieve the selected resources.  When the Storage Option is implemented, the Measure Consumer reads resources from external
+storage specified by the Measure Source.
+                </description>
+                <overview></overview>
+            </action>
+            <result>
+                <name>Search Response</name>
+                <description>The Measure Source returns the results.</description>
+                <trigger id="TRIGGER-1a">
+                   <name>Resources have been requested by a Measure Consumer.</name>
+                </trigger>
+                <semantics>
+                    <description>The Measure Source responds with requested resources.</description>
+                    <overview>The resources will conform to the profiles for the
+Bed Measure Report or Device Measure Report described eslewhere in this Implementation Guide</overview>
+                </semantics>
+                <action by="MeasureSource">
+                    <name>Measure Source returns Resources</name>
+                    <description>The Measure Source returns the requested resource.</description>
+                    <overview>When the API Option is used, the Measure Source will return the selected resources and
+an appropriate success response in a Bundle resource following the protocol for the Search operation.  When the Dump
+option is used, the Measure Source will return all resources requested by the Measure Consumer.
+                    </overview>
+                </action>
+            </result>
+        </message>
+    </transaction>
+
+    <transaction id="PUSH-TX" standards="FHIR-R4 RFC-7230 NDJSON">
+        <name>Produce Measure</name>
+        <description>The Produce Measure transaction allows an Measure Source to
+periodically report on availability of resources to a Measure Consumer.</description>
+        <message from="MeasureSource" to="MeasureConsumer">
+            <name>Push Measure</name>
+            <description></description>
+            <trigger id="TRIGGER2">
+                <name>Periodic Reporting Interval elapsed</name>
+                <description>brief description (markdown)</description>
+                <overview>more detailed description (markdown)</overview>
+            </trigger>
+            <action by="MeasureSource">
+                <name>Measure Source reports a Resource</name>
+                <description>The Measure Source creates resources and sends them to a Measure Consumer</description>
+                <overview>When the API option is implemented, the Measure Source performs the FHIR create
+operation on the MeasureReport resource at a Measure Consumer.  When the Dump option is implemented, the Measure Source
+writes the MeasureReport data to external storage specified by the Measure Consumer.
+
+When the Group option is implemented, the Measure Source also generates Group resources.  The Measure Source may
+be configured to disable generation of MeasureReport resources (e.g., when used to add Group capabilities to an
+existing server), but must be able to demostrate creation of the MeasureReport resources matching the Group.
+</overview>
+            </action>
+            <action by="MeasureConsumer">
+                <name>The Measure Consumer Accepts Resource</name>
+                <description>When the API option is used, the Measure Consumer reports
+success using 200 OK, 201 Created, or 204 No Content to indicate a successful update.  When the Dump option is
+used, the Measure Consumer reports success using the native protocols for the external storage subsytem.
+</description>
+                <overview>When the Group option is implemented, the Measure Consumer also accepts Group resources.</overview>
+            </action>
+        </message>
+    </transaction>
+
+    <transaction id="REPORT-TX" standards="RFC-7230">
+        <name>Communicate Results</name>
+        <description>The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
+or other systems to access resource availability data.</description>
+        <message from="MeasureConsumer" to="MeasureConsumer">
+            <name>Communicate Measure</name>
+            <description>Upon completion of this transaction, resource availability data will have been communicated to a
+user or system. This can be demonstrated by generation of a report, summary, or other artifact, or by transmission of resource
+availability data or some computation over it to another system.
+            </description>
+            <overview>This requirement can be met by a Measure Consumer that consumes and displays data in a Web Browser, consumes data
+            and transmits it in another format to a public health agency (e.g., using the CDC CSV format), or as a Measure
+            Intermediary that consumes data from one system and communicates it to another, or transforms it and communicates it back
+            to the original system or to another system.
+            </overview>
+        </message>
+    </transaction>
+
+    <content id="bed-measure-report">
+        <name>Bed Measure Report</name>
+        <description>This content profile describes the structure of a MeasureReport resource describing Bed Measures</description>
+        <overview></overview>
+    </content>
+    <content id="device-measure-report">
+        <name>Device Measure Report</name>
+        <description>This content profile describes the structure of a MeasureReport resource describing Device Measures</description>
+        <overview></overview>
+    </content>
+    <content id="bed-group">
+        <name>Bed Group</name>
+        <description>This content profile describes the structure of a Group resource reporting Bed Counts</description>
+        <overview></overview>
+    </content>
+    <content id="device-group">
+        <name>Device Group</name>
+        <description>This content profile describes the structure of a Group resource reporting Device Counts</description>
+        <overview></overview>
+    </content>
+
+    <content id="bed-location">
+        <name>bed-location</name>
+        <description>This content profile describes the structure of a Location Resource describing a reported upon Bed in a Bed Measure Report</description>
+        <overview></overview>
+    </content>
+    <content id="supporting-device">
+        <name>Supporting Device</name>
+        <description>This content profile describes the structure of a Device Resource describing a reported upon Device in Device Measure Report</description>
+        <overview></overview>
+    </content>
+    <content id="resource-location">
+        <name>Resource Location</name>
+        <description>This content profile describes the structure of a Location Resource describing the physical location (e.g., building)
+where a bed or device is located</description>
+        <overview></overview>
+    </content>
+    <content id="audit-event-write">
+        <name>Audit Event Write</name>
+        <description>This content profile describes the structure of an AuditEvent Resource reporting a write on a resource.</description>
+        <overview></overview>
+    </content>
+    <content id="audit-event-read">
+        <name>Audit Event Read</name>
+        <description>This content profile describes the structure of an AuditEvent Resource reporting a read on a resource.</description>
+        <overview></overview>
+    </content>
+</profile>

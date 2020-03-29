@@ -39,13 +39,13 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"3"}
-    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
                 <div id="hl7-nav" style='float:left;'>
           <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img height="50" alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
           </a>
         </div>
 
@@ -185,8 +185,6 @@ Profile and the relevant transactions between them.</p>
 
 <p><img src="ActorsAndTransactions.svg" alt="Figure 3-1: SANER Actor Diagram" title="Figure 3-1: SANER Actor Diagram" /></p>
 
-<div style="clear: left"></div>
-
 <p><strong>Figure 3-1: SANER Actor Diagram</strong></p>
 
 <p>Table 3-1 lists the transactions for each actor directly involved in the SANER Implementation Guide. To claim compliance with this guide, an actor shall
@@ -208,126 +206,234 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 </thead>
 <tbody>
                 
-<tr class="even">
+<tr>
                         
 <td rowspan="2">
-<a href="actors_and_transactions.html#availability-source">Availability Source</a>
+<a href="#measure-source">Measure Source</a>
 </td>
                         
 <td>
 <a href="transaction-1.html">
-                        Query Availability [PULL-TX]
-</a>
+                        Query Measure [PULL-TX]</a>
 </td>
 <td align="center">
                         C
 
-                                        <sup>1</sup>
+                                <sup> 1</sup>
                             
 </td>
 </tr>
                     
-<tr class="odd">
+<tr>
                         
 <td>
 <a href="transaction-2.html">
-                        Update Availability [PUSH-TX]
-</a>
+                        Produce Measure [PUSH-TX]</a>
 </td>
 <td align="center">
                         C
 
-                                        <sup>2</sup>
+                                <sup> 2</sup>
                             
 </td>
 </tr>
                     
-<tr class="even">
+<tr>
                         
-<td rowspan="2">
-<a href="actors_and_transactions.html#availability-collector">Availability Collector</a>
-</td>
-                        
-<td>
-<a href="transaction-1.html">
-                        Query Availability [PULL-TX]
-</a>
-</td>
-<td align="center">
-                        R
-</td>
-</tr>
-                    
-<tr class="odd">
-                        
-<td>
-<a href="transaction-2.html">
-                        Update Availability [PUSH-TX]
-</a>
-</td>
-<td align="center">
-                        R
-</td>
-</tr>
-                    
-<tr class="even">
-                        
-<td rowspan="1">
-<a href="actors_and_transactions.html#availability-reporter">Availability Reporter</a>
+<td rowspan="3">
+<a href="#measure-consumer">Measure Consumer</a>
 </td>
                         
 <td>
 <a href="transaction-3.html">
-                        Report Results [REPORT-TX]
-</a>
+                        Communicate Results [REPORT-TX]</a>
 </td>
 <td align="center">
                         R
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 3</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 4</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td rowspan="5">
+<a href="#measure-intermediary">Measure Intermediary</a>
+</td>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a><br /><i>As Measure Source</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 1</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a><br /><i>As Measure Source</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 2</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-3.html">
+                        Communicate Results [REPORT-TX]</a><br /><i>As Measure Consumer</i>
+</td>
+<td align="center">
+                        R
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a><br /><i>As Measure Consumer</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 3</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a><br /><i>As Measure Consumer</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 4</sup>
+                            
 </td>
 </tr>
                     
 </tbody>
 </table>
 
-<p>Note 1: 
-                When the Availability Source supports the Pull Option</p>
+<p><strong>Notes:</strong></p>
 
-<p>Note 2: 
-                When the Availability Source supports the Push Option</p>
+<ol>
+  <li>
+    <p>This transaction is required when the Measure Source implements the <a href="#pull-option">Pull Option</a>.</p>
+  </li>
+  <li>
+    <p>This transaction is required when the Measure Source implements the <a href="#push-option">Push Option</a>.</p>
+  </li>
+  <li>
+    <p>This transaction is required when the Measure Consumer implements the <a href="#pull-option">Pull Option</a>.</p>
+  </li>
+  <li>
+    <p>This transaction is required when the Measure Consumer implements the <a href="#push-option">Push Option</a>.</p>
+  </li>
+</ol>
 
 <h3 id="actors">Actors</h3>
 <p>The actors in this profile are described in more detail in the sections below.</p>
 
-<h4 id="availability-source">Availability Source</h4>
+<h4 id="measure-source">Measure Source</h4>
 
-<p>The Availability Source Actor reports results for a single facility, collection of facilities
+<p>The Measure Source Actor reports results for a single facility, collection of facilities
         or aggragated data for a region</p>
 
 <p>TBD</p>
 
-<h5 id="availability-source-requirements">Availability Source Requirements</h5>
+<h5 id="measure-source-requirements">Measure Source Requirements</h5>
 <ol>
-  <li>An Availability Source <strong>shall</strong> implement at least one of the following options:
-    <ul>
-      <li>Push Option</li>
-      <li>Pull Option
-       <br /></li>
-    </ul>
+  <li>
+    <ol>
+      <li></li>
+    </ol>
   </li>
 </ol>
 
-<h4 id="availability-collector">Availability Collector</h4>
+<h4 id="measure-consumer">Measure Consumer</h4>
 
-<p>The Availability Collector gathers data on resource availablity from other systems</p>
+<p>The Measure Consumer provides access to aggregated or fine-grained
+data gathered from one or more Measure Sources.</p>
 
-<h4 id="availability-reporter">Availability Reporter</h4>
+<h5 id="measure-consumer-requirements">Measure Consumer Requirements</h5>
+<ol>
+  <li>
+    <ol>
+      <li></li>
+    </ol>
+  </li>
+</ol>
 
-<p>The Availability Reporter allows users to view reports on aggregated and fine-grained
-data gathered from multiple Availability Sources.</p>
+<h4 id="measure-intermediary">Measure Intermediary</h4>
+
+<p>The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.</p>
+
+<p>This actor represents the composition of a <a href="actors_and_transactions.html#measure-source">Measure Source</a> with a <a href="actors_and_transactions.html#measure-source">Measure Source</a>.</p>
+
+<h4 id="bridging-between-incompatible-options">Bridging between Incompatible Options</h4>
+<p>A Measure Consumer that implements the Dump and Pull Options that is grouped with a Measure Source implementing the Push and API
+Options can be used as a bridge to adapt a Meaure Source implementing the Dump and Push options to communicate with a Measure
+Consumer implementing the API and Push options.</p>
+
+<p><img src="Bridge.svg" alt="Bridge" /></p>
+
+<h4 id="measure-repository">Measure Repository</h4>
+<p>A Measure Consumer that implements the API Option and Push Option that is grouped with a Measure Source implementing the Pull and API
+Options is essentially the definition of a FHIR Server.</p>
+
+<p><img src="FHIRServer.svg" alt="FHIR Server" /></p>
+
+<h4 id="measure-to-group-slicer">Measure to Group Slicer</h4>
+<p>A Measure Consumer that implements the API and Pull Option can be grouped with a Measure Source implementing the Push, API and
+Fine-Grained option to “slice and dice” Measure Reports into Groups, populating a Measure Consumer with fine-grained data from
+a Measure Source.  This adapter can be used to add the Fine Grained Option to a Measure Repository.</p>
+
+<p><img src="Slicer.svg" alt="Slicer" /></p>
 
 <h3 id="actor-options">Actor Options</h3>
 
-<p>Options that may be selected for each actor in this guide, are listed in Table 3.2-1 below. Dependencies 
+<p>Options that may be selected for each actor in this guide, are listed in Table 3.2-1 below. Dependencies
 between options when applicable are specified in notes.</p>
 
 <table border="1" style="border: 1px solid black; border-collapse: collapse">
@@ -342,7 +448,17 @@ between options when applicable are specified in notes.</p>
         
                 <tr>
                 
-                    <td rowspan="3">Availability Source</td>
+                    <td rowspan="7">Measure Source</td>
+                
+                <td><a href="#storage-option">Storage Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#api-option">API Option</a></td>
+                </tr>
+            
+                <tr>
                 
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
@@ -354,92 +470,197 @@ between options when applicable are specified in notes.</p>
             
                 <tr>
                 
-                <td><a href="#resource-option">Resource Option</a></td>
+                <td><a href="#bed-option">Bed Option</a></td>
                 </tr>
             
                 <tr>
                 
-                    <td rowspan="1">Availability Collector</td>
-                
-                <td><a href="#resource-option">Resource Option</a></td>
+                <td><a href="#asset-option">Asset Option</a></td>
                 </tr>
             
                 <tr>
                 
-                    <td rowspan="1">Availability Reporter</td>
-                
-                <td><a href="#resource-option">Resource Option</a></td>
+                <td><a href="#group-option">Group Option</a></td>
                 </tr>
+            
+                <tr>
+                
+                    <td rowspan="7">Measure Consumer</td>
+                
+                <td><a href="#storage-option">Storage Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#api-option">API Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#push-option">Push Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#pull-option">Pull Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#bed-option">Bed Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#asset-option">Asset Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#group-option">Group Option</a></td>
+                </tr>
+            
+                <tr><td>Measure Intermediary</td>
+                <td><i>No Options Defined</i></td></tr>
             
     </tbody>
 </table>
 
 <p>The options in this guide are describe in more detail the sections below.</p>
 
+<h4 id="storage-option">Storage Option</h4>
+
+<p>An actor implementing the Storage Option supports the ability to exchange FHIR Resources through
+various means of simple data transfer, rather than directly through a FHIR API call. This include mechanisms such
+as SFTP, S3 Blob Storage, Azure Blob Storage, a Message Queue, https: File Download, File System dumps, or Direct Messages with a
+data payload. Supported formats include JSON, XML and NDJSON.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-1">Measure Source</h5>
+
+<p>A <a href="actors_and_transactions.html#measure-source">Measure Source</a> actor implementing the Storage Option uses external storage to communicate data.</p>
+
+<h5 id="measure-consumer-1">Measure Consumer</h5>
+
+<p>A <a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> actor implementing the Storage Option uses external storage to communicate data.</p>
+
+<h4 id="api-option">API Option</h4>
+
+<p>An actor implementing the API Option supports the
+ability to exchange FHIR Resources using <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful APIs</a>.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-2">Measure Source</h5>
+
+<p>An <a href="actors_and_transactions.html#measure-source">Measure Source</a> actor implementing the API option uses FHIR RESTful APIs to communicate data.</p>
+
+<h5 id="measure-consumer-2">Measure Consumer</h5>
+
+<p>An <a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> actor implementing the API option uses FHIR RESTful APIs to communicate data.</p>
+
 <h4 id="push-option">Push Option</h4>
 
-<p>An actor implementing the Push Option supports the periodic push of a Bundle of records
+<p>An actor implementing the Push Option supports the periodic push of resources
 describing the current status of health delivery resources to a centralized collection point.</p>
 
 <p>This option applies to the actors as described below.</p>
-<h5 id="availability-source-1">Availability Source</h5>
 
-<p>An Availability Source implementing the Push Option periodically sends updates to the
-Availability Collector using the <a href="transaction-2.html">Update Availability</a> transaction.</p>
+<h5 id="measure-source-3">Measure Source</h5>
+
+<p>A Measure Source implementing the Push Option periodically sends updates to a
+<a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> using the <a href="actors_and_transactions.html#produce-measure">Produce Measure</a> transaction.</p>
+
+<h5 id="measure-consumer-3">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Push Option periodically recieves updates from the
+<a href="actors_and_transactions.html#measure-source">Measure Source</a> using the <a href="actors_and_transactions.html#produce-measure">Produce Measure</a> transaction.</p>
 
 <h4 id="pull-option">Pull Option</h4>
 
-<p>An actor implementing the Pull Option supports use of the [Query Availability] transaction made from
-an Availability Collector to enable reporting of the current status of selected health delivery resources .</p>
+<p>An actor implementing the Pull Option supports the periodic pull resources
+describing the current status of selected health delivery resources.</p>
 
 <p>This option applies to the actors as described below.</p>
-<h5 id="availability-source-2">Availability Source</h5>
 
-<p>An Availability Source implementing the Pull Option periodically is periodically queried by an
-Availability Collector using the <a href="transaction-1.html">Query Availability</a> transaction to enable collection of the current status.</p>
+<h5 id="measure-source-4">Measure Source</h5>
 
-<h4 id="resource-option">Resource Option</h4>
+<p>A Measure Source implementing the Pull Option is periodically queried by an
+<a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> using the <a href="actors_and_transactions.html#query-measure">Query Measure</a> transaction to enable collection of the current status.</p>
 
-<p>An actor supporting the Resource Option can describe the status of non-bed treatment
+<h5 id="measure-consumer-4">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Pull Option periodically queries a
+<a href="actors_and_transactions.html#measure-source">Measure Source</a> using the <a href="actors_and_transactions.html#query-measure">Query Measure</a> transaction to enable collection of the current status.</p>
+
+<h4 id="bed-option">Bed Option</h4>
+
+<p>An actor supporting the Bed Option can describe the status of beds.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-5">Measure Source</h5>
+
+<p>An Measure Source implementing the Bed Option generates data on beds.</p>
+
+<h5 id="measure-consumer-5">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Bed Option consumes data about beds.</p>
+
+<h4 id="asset-option">Asset Option</h4>
+
+<p>An actor supporting the Asset Option can describe the status of non-bed treatment
 resources, such as ventilators, respirators, infusion pumps, monitoring equipment, et cetera</p>
 
 <p>This option applies to the actors as described below.</p>
-<h5 id="availability-source-3">Availability Source</h5>
 
-<p>An Availability Source implementing the Resource Option can send updates on other Resources
-(e.g., ventilators, respirators, other medical equipment).</p>
+<h5 id="measure-source-6">Measure Source</h5>
 
-<h5 id="availability-collector-1">Availability Collector</h5>
+<p>An Measure Source implementing the Asset Option generates data on other Assets
+(e.g., ventilators, respirators, PPE, and other equipment or supplies).</p>
 
-<p>An Availability Collector implementing the Resource Option can request updates on other Resources
-(e.g., ventilators, respirators, other medical equipment), or aggregate data updates provided about these
-resources.</p>
+<h5 id="measure-consumer-6">Measure Consumer</h5>
 
-<h5 id="availability-reporter-1">Availability Reporter</h5>
+<p>An Measure Consumer implementing the Asset Option consumes data about other Assets
+(e.g., ventilators, respirators, PPE, and other equipment or supplies).</p>
 
-<p>An Availability Reporter implementing the Resource Option can reports data about other Resources
-(e.g., ventilators, respirators, other medical equipment).</p>
+<h4 id="group-option">Group Option</h4>
+
+<p>An actor supporting the Group Option can work with Group resources representing individual strata
+values extracted from a Measure Report</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-7">Measure Source</h5>
+
+<p>An Measure Source implementing the Group Option can produce reports using the Group Resource.</p>
+
+<h5 id="measure-consumer-7">Measure Consumer</h5>
+
+<p>An Measure Source implementing the Group Option can consume reports using the Group Resource.</p>
 
 <h3 id="transaction-descriptions">Transaction Descriptions</h3>
 <p>The transactions in this profile are summarized in the sections below.</p>
 
-<h4 id="query-availability">Query Availability</h4>
+<h4 id="query-measure">Query Measure</h4>
 
-<p>The Query Availability transaction allows an Availability Collector to
-periodically query about the availability of a resource from an Availability Source.</p>
+<p>The Query Measure transaction allows a Measure Consumer to
+periodically query about the availability of a resource from an Measure Source.</p>
 
 <p>For more details see the detailed <a href="transaction-1.html">transaction description</a></p>
 
-<h4 id="update-availability">Update Availability</h4>
+<h4 id="produce-measure">Produce Measure</h4>
 
-<p>The Update Availability transaction allows an Availability Source to
-periodically update the availability of resources to an Availability Collector.</p>
+<p>The Produce Measure transaction allows an Measure Source to
+periodically report on availability of resources to a Measure Consumer.</p>
 
 <p>For more details see the detailed <a href="transaction-2.html">transaction description</a></p>
 
-<h4 id="report-results">Report Results</h4>
+<h4 id="communicate-results">Communicate Results</h4>
 
-<p>The Report Results transaction allows users (e.g., Public Health Officials) to view current resource availability.</p>
+<p>The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
+or other systems to access resource availability data.</p>
 
 <p>For more details see the detailed <a href="transaction-3.html">transaction description</a></p>
 
@@ -455,7 +676,7 @@ periodically update the availability of resources to an Availability Collector.<
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2020 15:22-0400">2020-03-25</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

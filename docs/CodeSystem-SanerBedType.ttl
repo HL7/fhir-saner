@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "SanerBedType"];
   fhir:CodeSystem.title [ fhir:value "Bed Type Coding System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2020-03-25T15:22:24-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-03-29T12:02:42-04:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Audacious Inquiry"];
   fhir:CodeSystem.contact [
      fhir:index 0;

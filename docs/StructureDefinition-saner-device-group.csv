@@ -135,9 +135,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 boolean {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Reference {[]} {[]}","Value held by characteristic","The value of the trait that holds (or does not hold - see 'exclude') for members of the group.","For Range, it means members of the group have a value that falls somewhere within the specified range.","The value of the characteristic is what determines group membership.","","","","","","","",,"example","Value of descriptive member characteristic; e.g. red, male, pneumonia, Caucasian, etc.","","",,,,"Group.characteristic.value[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./value"
 "Group.characteristic.exclude","","","",1,1,"","","","boolean {[]} {[]}
-","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""false""/>","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./valueNegationInd"
-"Group.characteristic.period","","","",0,0,"","","","Period {[]} {[]}
+"Group.characteristic.period","","","",0,1,"","","","Period {[]} {[]}
 ","Period over which characteristic is tested","The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.","","","","","","","","","",,,,,"",,,,"Group.characteristic.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Group.characteristic","Status","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -171,9 +171,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value held by characteristic","The value of the trait that holds (or does not hold - see 'exclude') for members of the group.","For Range, it means members of the group have a value that falls somewhere within the specified range.","The value of the characteristic is what determines group membership.","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/device-status","",,,,"Group.characteristic.value[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./value"
 "Group.characteristic.exclude","","","",1,1,"","","","boolean {[]} {[]}
-","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""false""/>","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./valueNegationInd"
-"Group.characteristic.period","","","",0,1,"","","","Period {[]} {[]}
+"Group.characteristic.period","","","",0,0,"","","","Period {[]} {[]}
 ","Period over which characteristic is tested","The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.","","","","","","","","","",,,,,"",,,,"Group.characteristic.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Group.characteristic","Type","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -207,9 +207,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value held by characteristic","The value of the trait that holds (or does not hold - see 'exclude') for members of the group.","For Range, it means members of the group have a value that falls somewhere within the specified range.","The value of the characteristic is what determines group membership.","","","","","","","",,"extensible","","http://hl7.org/fhir/ValueSet/device-type","",,,,"Group.characteristic.value[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./value"
 "Group.characteristic.exclude","","","",1,1,"","","","boolean {[]} {[]}
-","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""false""/>","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./valueNegationInd"
-"Group.characteristic.period","","","",0,1,"","","","Period {[]} {[]}
+"Group.characteristic.period","","","",0,0,"","","","Period {[]} {[]}
 ","Period over which characteristic is tested","The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.","","","","","","","","","",,,,,"",,,,"Group.characteristic.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Group.characteristic","Property","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -243,9 +243,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value held by characteristic","The value of the trait that holds (or does not hold - see 'exclude') for members of the group.","For Range, it means members of the group have a value that falls somewhere within the specified range.","The value of the characteristic is what determines group membership.","","","","","","","",,"preferred","","http://hl7.org/fhir/ValueSet/device-component-property","",,,,"Group.characteristic.value[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./value"
 "Group.characteristic.exclude","","","",1,1,"","","","boolean {[]} {[]}
-","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""false""/>","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./valueNegationInd"
-"Group.characteristic.period","","","",0,1,"","","","Period {[]} {[]}
+"Group.characteristic.period","","","",0,0,"","","","Period {[]} {[]}
 ","Period over which characteristic is tested","The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.","","","","","","","","","",,,,,"",,,,"Group.characteristic.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Group.characteristic","Location","","",1,1,"","","","BackboneElement {[]} {[]}
@@ -275,9 +275,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value held by characteristic","The value of the trait that holds (or does not hold - see 'exclude') for members of the group.","For Range, it means members of the group have a value that falls somewhere within the specified range.","The value of the characteristic is what determines group membership.","","","","","","","",,,,,"",,,,"Group.characteristic.value[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./value"
 "Group.characteristic.exclude","","","",1,1,"","","","boolean {[]} {[]}
-","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Group includes or excludes","If true, indicates the characteristic is one that is NOT held by members of the group.","This is labeled as ""Is Modifier"" because applications cannot wrongly include excluded members as included or vice versa.","Sometimes group membership is determined by characteristics not possessed.","","","<valueBoolean xmlns=""http://hl7.org/fhir"" value=""false""/>","","","","",,,,,"",,,,"Group.characteristic.exclude",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./valueNegationInd"
-"Group.characteristic.period","","","",0,1,"","","","Period {[]} {[]}
+"Group.characteristic.period","","","",0,0,"","","","Period {[]} {[]}
 ","Period over which characteristic is tested","The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.","","","","","","","","","",,,,,"",,,,"Group.characteristic.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Group.member","","","",0,*,"","","","BackboneElement {[]} {[]}

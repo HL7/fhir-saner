@@ -1,23 +1,22 @@
-This section describes the REPORT-TX of this guide. This transaction is used by the Availability Reporter actors.
+This section describes the REPORT-TX of this guide. This transaction is used by the Measure Consumer actors.
 
 ### Scope
 
-The Report Results transaction allows users (e.g., Public Health Officials) to view current resource availability.
+The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
+or other systems to access resource availability data.
 
 
 ### Actors Roles
 
-![Figure 2.3-1: Report Results Use Case Diagram](transaction-3-uc.svg "Figure 2.3-1: Report Results Use Case Diagram")
+![Figure 2.3-1: Communicate Results Use Case Diagram](transaction-3-uc.svg "Figure 2.3-1: Communicate Results Use Case Diagram")
 
-<div style="clear: left"/>
-
-**Figure 2.3-1: Report Results Use Case Diagram**
+**Figure 2.3-1: Communicate Results Use Case Diagram**
 
 <table border='1' borderspacing='0'>
 <caption><b>Table 2.3-1: Actor Roles</b></caption>
 <thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors_and_transactions.html#availability-reporter">Availability Reporter</a></td>
-<td>Display reports using availability data</td>
+<tbody><tr><td><a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a></td>
+<td>Display or transmits reports using availability data</td>
 </tr>
         
 </tbody>
@@ -36,17 +35,25 @@ The Report Results transaction allows users (e.g., Public Health Officials) to v
 
 ### Interactions
         
-![Figure 2.3-2: Report Results Interactions](transaction-3-seq.svg "Figure 2.3-2: Report Results Interactions")
+![Figure 2.3-2: Communicate Results Interactions](transaction-3-seq.svg "Figure 2.3-2: Communicate Results Interactions")
 
-<div style="clear: left"/>
-
-**Figure 2.3-2: Report Results Interactions**
+**Figure 2.3-2: Communicate Results Interactions**
 
 
-#### Report Availability
+#### Communicate Measure
 
 
+Upon completion of this transaction, resource availability data will have been communicated to a
+user or system. This can be demonstrated by generation of a report, summary, or other artifact, or by transmission of resource
+availability data or some computation over it to another system.
+            
 
+
+This requirement can be met by a Measure Consumer that consumes and displays data in a Web Browser, consumes data
+            and transmits it in another format to a public health agency (e.g., using the CDC CSV format), or as a Measure
+            Intermediary that consumes data from one system and communicates it to another, or transforms it and communicates it back
+            to the original system or to another system.
+            
 
 
 ##### Trigger Event - 

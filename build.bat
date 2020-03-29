@@ -1,4 +1,5 @@
 call build-vars.cmd
+call build-content.cmd
 call build-images.cmd
 call sushi fsh -o .
 copy fsh\ig-data\ig.bak ig.ini

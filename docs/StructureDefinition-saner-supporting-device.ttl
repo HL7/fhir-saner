@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "SupportingDevice"];
   fhir:StructureDefinition.title [ fhir:value "Supporting Device Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-03-25T15:22:24-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-03-29T12:02:42-04:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Audacious Inquiry"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

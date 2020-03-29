@@ -39,13 +39,13 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
                 <div id="hl7-nav" style='float:left;'>
           <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img height="50" alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
           </a>
         </div>
 
@@ -177,25 +177,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>This section describes the REPORT-TX of this guide. This transaction is used by the Availability Reporter actors.</p>
+<p>This section describes the REPORT-TX of this guide. This transaction is used by the Measure Consumer actors.</p>
 
 <h3 id="scope">Scope</h3>
 
-<p>The Report Results transaction allows users (e.g., Public Health Officials) to view current resource availability.</p>
+<p>The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
+or other systems to access resource availability data.</p>
 
 <h3 id="actors-roles">Actors Roles</h3>
 
-<p><img src="transaction-3-uc.svg" alt="Figure 2.3-1: Report Results Use Case Diagram" title="Figure 2.3-1: Report Results Use Case Diagram" /></p>
+<p><img src="transaction-3-uc.svg" alt="Figure 2.3-1: Communicate Results Use Case Diagram" title="Figure 2.3-1: Communicate Results Use Case Diagram" /></p>
 
-<div style="clear: left"></div>
-
-<p><strong>Figure 2.3-1: Report Results Use Case Diagram</strong></p>
+<p><strong>Figure 2.3-1: Communicate Results Use Case Diagram</strong></p>
 
 <table border="1" borderspacing="0">
 <caption><b>Table 2.3-1: Actor Roles</b></caption>
 <thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors_and_transactions.html#availability-reporter">Availability Reporter</a></td>
-<td>Display reports using availability data</td>
+<tbody><tr><td><a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a></td>
+<td>Display or transmits reports using availability data</td>
 </tr>
         
 </tbody>
@@ -214,13 +213,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="interactions">Interactions</h3>
 
-<p><img src="transaction-3-seq.svg" alt="Figure 2.3-2: Report Results Interactions" title="Figure 2.3-2: Report Results Interactions" /></p>
+<p><img src="transaction-3-seq.svg" alt="Figure 2.3-2: Communicate Results Interactions" title="Figure 2.3-2: Communicate Results Interactions" /></p>
 
-<div style="clear: left"></div>
+<p><strong>Figure 2.3-2: Communicate Results Interactions</strong></p>
 
-<p><strong>Figure 2.3-2: Report Results Interactions</strong></p>
+<h4 id="communicate-measure">Communicate Measure</h4>
 
-<h4 id="report-availability">Report Availability</h4>
+<p>Upon completion of this transaction, resource availability data will have been communicated to a
+user or system. This can be demonstrated by generation of a report, summary, or other artifact, or by transmission of resource
+availability data or some computation over it to another system.</p>
+
+<p>This requirement can be met by a Measure Consumer that consumes and displays data in a Web Browser, consumes data
+            and transmits it in another format to a public health agency (e.g., using the CDC CSV format), or as a Measure
+            Intermediary that consumes data from one system and communicates it to another, or transforms it and communicates it back
+            to the original system or to another system.</p>
 
 <h5 id="trigger-event--">Trigger Event -</h5>
 
@@ -240,7 +246,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2020 15:22-0400">2020-03-25</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

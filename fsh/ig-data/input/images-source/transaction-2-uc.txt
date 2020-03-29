@@ -1,9 +1,9 @@
 @startuml
 
-agent "Availability Source" as AvailabilitySource
+agent "Measure Source" as MeasureSource
 
-agent "Availability Collector" as AvailabilityCollector
-usecase (Update Availability) as (PUSH-TX)
-AvailabilitySource --> (PUSH-TX)
-AvailabilityCollector --> (PUSH-TX)
+agent "Measure Consumer" as MeasureConsumer
+usecase (Produce Measure) as (PUSH-TX)
+MeasureSource --> (PUSH-TX)
+MeasureConsumer --> (PUSH-TX)
 @enduml

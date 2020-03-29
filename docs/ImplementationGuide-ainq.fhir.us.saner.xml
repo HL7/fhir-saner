@@ -11,7 +11,7 @@
   <name value="SituationalAwarenessforNovelEpidemicResponse"/>
   <title value="Situational Awareness for Novel Epidemic Response"/>
   <status value="active"/>
-  <date value="2020-03-25T15:22:24-04:00"/>
+  <date value="2020-03-29T12:02:42-04:00"/>
   <publisher value="Audacious Inquiry"/>
   <contact>
     <name value="Audacious Inquiry"/>
@@ -173,6 +173,20 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-audit-event-write.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-audit-event-write"/>
+      </reference>
+      <name value="Audit Event Write Profile"/>
+      <description value="Defines constraints on the AuditEvent Resource to record when a resource has been written."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-saner-bed-group.html"/>
       </extension>
       <reference>
@@ -201,6 +215,20 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-bed-measure-report.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-bed-measure-report"/>
+      </reference>
+      <name value="Bed MeasureReport Profile"/>
+      <description value="Defines constraints on the MeasureReport Resource for data communicating about Bed availability."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-saner-device-group.html"/>
       </extension>
       <reference>
@@ -208,6 +236,34 @@
       </reference>
       <name value="Device Group Profile"/>
       <description value="Defines constraints on the Group Resource for data communicating about device availability."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-audit-event-read.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-audit-event-read"/>
+      </reference>
+      <name value="Audit Event Read"/>
+      <description value="Defines constraints on the AuditEvent Resource to record when a record has been accessed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-device-measure-report.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-device-measure-report"/>
+      </reference>
+      <name value="Device MeasureReport Profile"/>
+      <description value="Defines constraints on the MeasureReport Resource for data communicating about device availability."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -285,6 +341,34 @@
         <valueString value="CodeSystem"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-DeviceFields.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/DeviceFields"/>
+      </reference>
+      <name value="Device Resource Field Names"/>
+      <description value="This Coding System identifies legal field names in a FHIR R4 Device Resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-LocationFields.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/LocationFields"/>
+      </reference>
+      <name value="Location Resource Field Names"/>
+      <description value="This Coding System identifies legal field names in a FHIR R4 Location Resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="CodeSystem-SanerBedType.html"/>
       </extension>
       <reference>
@@ -323,18 +407,38 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="use_cases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="actors_and_transactions.html"/>
         <title value="Actors and Transactions"/>
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="using_group_resources.html"/>
-        <title value="Using Group Resources"/>
+        <nameUrl value="security_considerations.html"/>
+        <title value="Security Considerations"/>
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="security_considerations.html"/>
-        <title value="Security Considerations"/>
+        <nameUrl value="technology_environment.html"/>
+        <title value="Technology Environment"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="architecture.html"/>
+        <title value="Architecture"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="definitions.html"/>
+        <title value="Definitions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="using_group_resources.html"/>
+        <title value="Using Group Resources"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -384,6 +488,10 @@
     <parameter>
       <code value="path-resource"/>
       <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
     </parameter>
     <parameter>
       <code value="path-pages"/>

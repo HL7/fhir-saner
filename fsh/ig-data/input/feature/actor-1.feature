@@ -1,11 +1,4 @@
-# SANER Availability Source Availability Source Actor Requirements
-@SANER @SANER-AvailabilitySource
+# SANER Measure Source Actor Requirements
+@SANER @SANER-MeasureSource
 
-Feature: AvailabilitySource-1 A Availability Source **shall** implement at least one of the following options:
-
-* Push Option
-* Pull Option
-            
-
-
-
+Feature: MeasureSource-1 Feature: MeasureSource-2 

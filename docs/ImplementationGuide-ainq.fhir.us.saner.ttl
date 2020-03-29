@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SituationalAwarenessforNovelEpidemicResponse"];
   fhir:ImplementationGuide.title [ fhir:value "Situational Awareness for Novel Epidemic Response"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-03-25T15:22:24-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-29T12:02:42-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Audacious Inquiry"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -258,6 +258,24 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-audit-event-write.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-write>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-audit-event-write" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Audit Event Write Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the AuditEvent Resource to record when a resource has been written." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-bed-group.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -268,7 +286,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Group Resource for data communicating about Bed availability." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 1;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -286,7 +304,25 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource for data communicating about a location for a bed." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 2;
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-bed-measure-report.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/StructureDefinition/saner-bed-measure-report>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-bed-measure-report" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed MeasureReport Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the MeasureReport Resource for data communicating about Bed availability." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -304,7 +340,43 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Group Resource for data communicating about device availability." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 3;
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-audit-event-read.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-read>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-audit-event-read" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Audit Event Read" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the AuditEvent Resource to record when a record has been accessed." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-device-measure-report.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-measure-report>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-device-measure-report" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device MeasureReport Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the MeasureReport Resource for data communicating about device availability." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -322,7 +394,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource describing the location of resources (Beds and Devices)." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 4;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -340,7 +412,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Device Resource for data communicating about supporting devices." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 5;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -358,7 +430,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -376,7 +448,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set describes other properties of a bed, such as the ability to support isolation." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -394,7 +466,43 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set describes the types of care services that a bed can support." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-DeviceFields.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/CodeSystem/DeviceFields>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/DeviceFields" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device Resource Field Names" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System identifies legal field names in a FHIR R4 Device Resource." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-LocationFields.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://ainq.com/fhir/us/saner/CodeSystem/LocationFields>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/LocationFields" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location Resource Field Names" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System identifies legal field names in a FHIR R4 Location Resource." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -412,7 +520,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System fills gaps describing types of care services that a bed can support." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -446,13 +554,13 @@
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 2;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "actors_and_transactions.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Actors and Transactions" ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "use_cases.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Use Cases" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 3;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "using_group_resources.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Using Group Resources" ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "actors_and_transactions.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Actors and Transactions" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 4;
@@ -461,16 +569,36 @@
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "technology_environment.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Technology Environment" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "architecture.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Architecture" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 7;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "definitions.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Definitions" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 8;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "using_group_resources.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Using Group Resources" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 9;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transaction-1.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transaction 1" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 6;
+         fhir:index 10;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transaction-2.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transaction 2" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
-         fhir:index 7;
+         fhir:index 11;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "transaction-3.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Transaction 3" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
@@ -510,14 +638,18 @@
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
      ], [
        fhir:index 8;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
      ], [
        fhir:index 9;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
      ], [
        fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 11;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
      ]

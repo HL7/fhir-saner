@@ -1,3 +1,3 @@
-# SANER Availability Reporter Actor Requirements
-@SANER @SANER-AvailabilityReporter
+# SANER Measure Intermediary Actor Requirements
+@SANER @SANER-MeasureIntermediary
 

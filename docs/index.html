@@ -45,7 +45,7 @@
       <div class="container">  <!-- container -->
                 <div id="hl7-nav" style='float:left;'>
           <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img height="50" alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
           </a>
         </div>
 
@@ -188,10 +188,12 @@ to discussion and change.</p>
 
 <p>The goal of publishing this guide is to encourage the creation of a community interested
 in extremely rapid development of interfaces that can support communication Bed and other
-resources to Public Health in this time of crisis.  <a href="https://ainq.com">Audacious Inquiry</a> is publishing this
+resourcees to Public Health in this time of crisis.  <a href="https://ainq.com">Audacious Inquiry</a> is publishing this
 material as follows:</p>
 
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> <img src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons License" /></p>
+<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> <img src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" alt="Creative Commons License" /></p>
+
+<p>We expect the licensing to be adjusted once community development commences.</p>
 
 <p>This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.</p>
@@ -200,27 +202,34 @@ the SANER project.</p>
 <p>This guide is organized into four main sections:</p>
 
 <ol>
-  <li>Volume I: <a href="overview.html">Overview</a>
+  <li>Volume I: <a href="overview.html">Overview</a> - Provides an overview of the challenges this effort is trying to address.
     <ol>
-      <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-      <li><a href="using_group_resources.html">Using Group Resources</a></li>
-      <li><a href="security_considerations.html">Security Considerations</a></li>
+      <li><a href="technology_environment.html">Technology Environment</a> - Describes the technology environment for uninitiated.</li>
+      <li><a href="architecture.html">Architecture</a> - Illustrates the Microservice Architecture</li>
+      <li><a href="security_considerations.html">Security Considerations</a> - Documents security concerns and mitigations</li>
+      <li><a href="use_cases.html">Use Cases</a> - Illustrates key use cases</li>
+      <li><a href="actors_and_transactions.html">Actors and Transactions</a> - Provides an overview of technical components</li>
+      <li><a href="using_group_resources.html">Using Group Resources (deprecated)</a> - Explains the use of group in this guide</li>
     </ol>
   </li>
-  <li>Volume II: Transaction Detail
+  <li>Volume II: Transactions
     <ol>
-      <li><a href="transaction-1.html">Query Availability [PULL-TX]</a></li>
-      <li><a href="transaction-2.html">Update Availability [PUSH-TX]</a></li>
-      <li><a href="transaction-3.html">Report Results [REPORT-TX]</a></li>
+      <li><a href="transaction-1.html">Query Measure [PULL-TX]</a></li>
+      <li><a href="transaction-2.html">Produce Measure [PUSH-TX]</a></li>
+      <li><a href="transaction-3.html">Communicate Results [REPORT-TX]</a></li>
     </ol>
   </li>
-  <li>Volume III: Profiles
+  <li>Volume III: Content Profiles
     <ol>
-      <li><a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a></li>
-      <li><a href="StructureDefinition-saner-device-group.html">Device Availability Group</a></li>
-      <li><a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a></li>
-      <li><a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a></li>
+      <li><a href="StructureDefinition-saner-bed-measure-report.html">Bed Measure Report</a></li>
+      <li><a href="StructureDefinition-saner-device-measure-report.html">Device Measure Report</a></li>
+      <li><a href="StructureDefinition-saner-bed-group.html">Bed Group</a></li>
+      <li><a href="StructureDefinition-saner-device-group.html">Device Group</a></li>
+      <li><a href="StructureDefinition-saner-bed-location.html">bed-location</a></li>
+      <li><a href="StructureDefinition-saner-supporting-device.html">Supporting Device</a></li>
       <li><a href="StructureDefinition-saner-resource-location.html">Resource Location</a></li>
+      <li><a href="StructureDefinition-saner-audit-event-write.html">Audit Event Write</a></li>
+      <li><a href="StructureDefinition-saner-audit-event-read.html">Audit Event Read</a></li>
     </ol>
   </li>
   <li>Volume IV: Terminology
@@ -229,7 +238,6 @@ the SANER project.</p>
       <li><a href="ValueSet-BedLocationOperationalStatus.html">BedLocationOperationalStatus Value Set</a></li>
       <li><a href="ValueSet-BedProperty.html">BedProperty Value Set</a></li>
       <li><a href="ValueSet-BedType.html">BedType Value Set</a></li>
-      <li><a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a></li>
     </ol>
   </li>
 </ol>
@@ -269,7 +277,7 @@ Ai is raising the bar for how health data is shared, managed, and protected.</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2020 15:22-0400">2020-03-25</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

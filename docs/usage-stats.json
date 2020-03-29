@@ -4,6 +4,16 @@
   "fhirVersion": "4.0.1",
   "extensions": [],
   "profiles": {
+    "AuditEvent": [
+      {
+        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-read",
+        "title": "Audit Event Read"
+      },
+      {
+        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-write",
+        "title": "Audit Event Write Profile"
+      }
+    ],
     "Group": [
       {
         "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-group",
@@ -14,6 +24,12 @@
       {
         "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location",
         "title": "Resource Location Profile"
+      }
+    ],
+    "MeasureReport": [
+      {
+        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-measure-report",
+        "title": "Device MeasureReport Profile"
       }
     ],
     "Device": [
@@ -40,6 +56,9 @@
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [

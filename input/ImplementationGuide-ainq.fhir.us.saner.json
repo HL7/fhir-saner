@@ -37,6 +37,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/saner-audit-event-write"
+        },
+        "name": "Audit Event Write Profile",
+        "description": "Defines constraints on the AuditEvent Resource to record when a resource has been written.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/saner-bed-group"
         },
         "name": "Bed Group Profile",
@@ -53,10 +61,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/saner-bed-measure-report"
+        },
+        "name": "Bed MeasureReport Profile",
+        "description": "Defines constraints on the MeasureReport Resource for data communicating about Bed availability.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/saner-device-group"
         },
         "name": "Device Group Profile",
         "description": "Defines constraints on the Group Resource for data communicating about device availability.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/saner-audit-event-read"
+        },
+        "name": "Audit Event Read",
+        "description": "Defines constraints on the AuditEvent Resource to record when a record has been accessed.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/saner-device-measure-report"
+        },
+        "name": "Device MeasureReport Profile",
+        "description": "Defines constraints on the MeasureReport Resource for data communicating about device availability.",
         "exampleBoolean": false
       },
       {
@@ -101,6 +133,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/DeviceFields"
+        },
+        "name": "Device Resource Field Names",
+        "description": "This Coding System identifies legal field names in a FHIR R4 Device Resource.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/LocationFields"
+        },
+        "name": "Location Resource Field Names",
+        "description": "This Coding System identifies legal field names in a FHIR R4 Location Resource.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/SanerBedType"
         },
         "name": "Bed Type Coding System",
@@ -131,18 +179,38 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "use_cases.html",
+          "title": "Use Cases",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "actors_and_transactions.html",
           "title": "Actors and Transactions",
           "generation": "markdown"
         },
         {
-          "nameUrl": "using_group_resources.html",
-          "title": "Using Group Resources",
+          "nameUrl": "security_considerations.html",
+          "title": "Security Considerations",
           "generation": "markdown"
         },
         {
-          "nameUrl": "security_considerations.html",
-          "title": "Security Considerations",
+          "nameUrl": "technology_environment.html",
+          "title": "Technology Environment",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "architecture.html",
+          "title": "Architecture",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "definitions.html",
+          "title": "Definitions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "using_group_resources.html",
+          "title": "Using Group Resources",
           "generation": "markdown"
         },
         {
