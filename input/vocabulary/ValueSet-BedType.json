@@ -13,28 +13,13 @@
         "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
         "concept": [
           {
+            "code": "HOSP"
+          },
+          {
             "code": "ICU"
           },
           {
-            "code": "PEDICU"
-          },
-          {
-            "code": "PEDNICU"
-          },
-          {
             "code": "ER"
-          },
-          {
-            "code": "HU"
-          },
-          {
-            "code": "RHU"
-          },
-          {
-            "code": "PEDU"
-          },
-          {
-            "code": "PHU"
           }
         ]
       },

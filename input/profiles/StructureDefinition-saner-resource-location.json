@@ -46,7 +46,7 @@
         "path": "Location.mode",
         "short": "All location resources using this profile are instances",
         "min": 1,
-        "fixedCode": "instance"
+        "patternCode": "instance"
       },
       {
         "id": "Location.type",

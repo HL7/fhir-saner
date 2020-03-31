@@ -64,7 +64,7 @@
           "reference": "StructureDefinition/saner-bed-measure-report"
         },
         "name": "Bed MeasureReport Profile",
-        "description": "Defines constraints on the MeasureReport Resource for data communicating about Bed availability.",
+        "description": "Defines constraints on the MeasureReport Resource for reporting summary data about Bed availability.",
         "exampleBoolean": false
       },
       {
@@ -112,7 +112,7 @@
           "reference": "ValueSet/BedLocationOperationalStatus"
         },
         "name": "Bed Location Operational Status",
-        "description": "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
+        "description": "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.",
         "exampleBoolean": false
       },
       {
@@ -129,6 +129,21 @@
         },
         "name": "Bed Type",
         "description": "This Value Set describes the types of care services that a bed can support.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Fields"
+        },
+        "name": "Resource Fields",
+        "description": "This value set describes fields used to stratify groups in a report",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/OnlyCompleteOrPending"
+        },
+        "name": "OnlyCompleteOrPending",
         "exampleBoolean": false
       },
       {

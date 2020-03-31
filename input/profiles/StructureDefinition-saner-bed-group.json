@@ -30,12 +30,12 @@
       {
         "id": "Group.type",
         "path": "Group.type",
-        "fixedCode": "device"
+        "patternCode": "device"
       },
       {
         "id": "Group.actual",
         "path": "Group.actual",
-        "fixedBoolean": true
+        "patternBoolean": true
       },
       {
         "id": "Group.code",
@@ -80,7 +80,7 @@
       {
         "id": "Group.managingEntity.identifier.system",
         "path": "Group.managingEntity.identifier.system",
-        "fixedUri": "http://hl7.org/fhir/sid/us-npi"
+        "patternUri": "http://hl7.org/fhir/sid/us-npi"
       },
       {
         "id": "Group.characteristic",
@@ -134,7 +134,7 @@
       {
         "id": "Group.characteristic:Status.exclude",
         "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
+        "patternBoolean": false
       },
       {
         "id": "Group.characteristic:Status.period",
@@ -178,7 +178,7 @@
       {
         "id": "Group.characteristic:OperationalStatus.exclude",
         "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
+        "patternBoolean": false
       },
       {
         "id": "Group.characteristic:OperationalStatus.period",
@@ -222,7 +222,7 @@
       {
         "id": "Group.characteristic:Type.exclude",
         "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
+        "patternBoolean": false
       },
       {
         "id": "Group.characteristic:Type.period",
@@ -266,7 +266,7 @@
       {
         "id": "Group.characteristic:Property.exclude",
         "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
+        "patternBoolean": false
       },
       {
         "id": "Group.characteristic:Property.period",
@@ -309,7 +309,7 @@
       {
         "id": "Group.characteristic:Location.exclude",
         "path": "Group.characteristic.exclude",
-        "fixedBoolean": false
+        "patternBoolean": false
       },
       {
         "id": "Group.characteristic:Location.period",
