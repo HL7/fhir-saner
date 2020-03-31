@@ -14,9 +14,8 @@ in extremely rapid development of interfaces that can support communication Bed 
 resources to Public Health in this time of crisis.  [Audacious Inquiry](https://ainq.com) is publishing this
 material as follows:
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/) ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png)
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) ![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)
 
-We expect the licensing to be adjusted once community development commences.
 
 This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.
