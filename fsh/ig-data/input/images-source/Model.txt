@@ -4,16 +4,16 @@ class MeasureReport <<(R,Red)>>
 class Measure <<(R,Red)>>
 class Group <<(R,Red)>>
 class Characteristic <<(E,Yellow)>>
-class BedLocationOrSupportingDevice <<(P,Cyan)>>
+class CountableEntity <<(P,Cyan)>>
 class Field <<(E,Yellow)>>
 
-MeasureReport o--> "measure" Measure : Is Defined By
-Measure  o--> "subject" Group : Has Subject
-Group "1" *-- "*" Characteristic : "Classified By             "
-Group "1" o--> " * member" BedLocationOrSupportingDevice : Has Members
+MeasureReport o-> "measure" Measure : Is Defined By
+Measure  o-> "subject" Group : Has Subject
+Group "1" *- "*" Characteristic : "Classified By             "
+Group "1" o-> " * member" CountableEntity : Describes Member Criteria
 
-(Group, BedLocationOrSupportingDevice) .. Characteristic : Identifies Field Of
+(Group, CountableEntity) . Characteristic : Identifies Field Of
 
-BedLocationOrSupportingDevice "1" *-- "*" Field : Composed of
-Characteristic --> Field : Names
+CountableEntity "1" *- "*" Field : Composed of
+Characteristic -> Field : Names
 @enduml

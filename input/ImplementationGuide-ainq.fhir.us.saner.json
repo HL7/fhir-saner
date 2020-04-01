@@ -179,9 +179,156 @@
       },
       {
         "reference": {
+          "reference": "Measure/SANERnumBedsOcc"
+        },
+        "name": "Available Staffed Inpatient Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19Died"
+        },
+        "name": "Covid Confirmed or Suspected Deaths in any hospital or ED Location",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19HOPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients with 2-week+ Onset",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19HospPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19MechVentPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients on Ventilation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19OFMechVentPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients in ED or Overflow awaiting Inpatient Bed and Ventilation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19OverflowPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients in ED or Overflow awaiting Inpatient Bed",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumICUBeds"
+        },
+        "name": "Total Staffed ICU Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumICUBedsOcc"
+        },
+        "name": "Occupied ICU Beds ",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Measure/SANERnumTotBeds"
         },
         "name": "Total Acute Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumVent"
+        },
+        "name": "Available Ventilators",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumVentUse"
+        },
+        "name": "In Use Ventilators",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumbeds"
+        },
+        "name": "Total Inpatient Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERposNeg"
+        },
+        "name": "Cumulative Tests Performed",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositive"
+        },
+        "name": "Cumulative Positive COVID-19 Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositiveIncrease"
+        },
+        "name": "New Positive COVID-19 Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositiveIncreasePercent"
+        },
+        "name": "Percent Positive among Newly Resulted Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositivePercent"
+        },
+        "name": "Cumulative Percent Positive among Resulted Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERrejected"
+        },
+        "name": "Cumulative Specimens Rejected",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERtotalTestIncrease"
+        },
+        "name": "New Diagnostic Tests Ordered/Received",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERtotalTestResults"
+        },
+        "name": "Cumulative Diagnostic Tests Ordered/Received",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERtotalTestResultsIncrease"
+        },
+        "name": "New Tests Resulted",
         "exampleBoolean": true
       }
     ],
@@ -228,6 +375,11 @@
         {
           "nameUrl": "definitions.html",
           "title": "Definitions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "measures.html",
+          "title": "Measures",
           "generation": "markdown"
         },
         {
