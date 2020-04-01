@@ -176,6 +176,13 @@
         },
         "name": "HAvBED2 to FHIR Concept Map",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumTotBeds"
+        },
+        "name": "Total Acute Beds",
+        "exampleBoolean": true
       }
     ],
     "page": {
