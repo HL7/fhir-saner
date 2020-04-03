@@ -1,15 +1,250 @@
 According to The American Heritage® Stedman's Medical Dictionary:
 <blockquote>
 <dl>
-  <dt>measure <i>v.</i></dt>
-  <dd>To ascertain the dimensions, quantity, or capacity of.</dd>
-  <dd>To mark, lay out, or establish dimensions for by measuring.</dd>
+<dt>
+measure <i>v.</i>
+</dt>
+<dd>
+To ascertain the dimensions, quantity, or capacity of.
+</dd>
+<dd>
+To mark, lay out, or establish dimensions for by measuring.
+</dd>
 </dl>
 </blockquote>
 
-Measurement is about counting things using a particular unit of measurement in some
-way, and then performing some math with the things that you counted to compute a value.
+At its simplest, measurement is counting in units, and then doing some math with
+the resulting count or to obtain a value that lets you do something useful.
+
+The focus of this guide is to inform developers on how to create and use the essential FHIR
+Resources necessary to support national and regional reporting efforts on COVID-19 to
+public health officials in the United States.
+
+Over the last decade, HL7 and its members have been deeply involved in the evolution
+of quality measurement, from early efforts in developing the [HL7 Version 3 Health Quality Measure Format](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=97)
+specification, to more recent efforts in the publication of the [HL7 FHIR Quality Measure (QM)](http://hl7.org/fhir/us/cqfmeasures/),
+and the [DaVinci Data Exchange For Quality Measures (DEQM)](http://hl7.org/fhir/us/davinci-deqm/)
+implementation guides. These guides provide excellent reference and background materials
+for those interested in learning more about the terminology used in measurement.
 
 This implementation guide uses the [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
-resource to report
+resource to report measures to regional and federal agencies, including state departments
+of public health, the Centers for Disease Control (CDC) and the Federal Emergency Management
+Agency.  In late March of this year, the CDC [published a form](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-covid19-pimhc-blank-p.pdf)
+and [instructions](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf) for hospital reporting of
+bed and ventilator utilization, and FEMA [provided a spreadsheet](Template for Daily Hospital COVID-19 Reporting.xlsx) it expects to be
+emailed on a daily basis from in-hospital laboratory testing facilities.  Examples of
+these documents are provided below.
+
+<table><caption>Samples of requested data. Show for illustration, please use
+official sources for reporting.</caption>
+<tbody>
+<tr>
+  <td><img width='80%' src='Template-for-Daily-Hospital-COVID-19-Reporting.png'/></td>
+  <td><img width='80%' src='57.130-covid19-pimhc-blank-p.png'/></td>
+</tr>
+</tbody>
+</table>
+
+Each of the entries in these spreadsheets or forms is measure or count of groups
+of things such as available beds, ventilators, tests ordered, et cetera.  The completed
+spreadsheet or form is a Measure Report.  Accompanying instructions describe (to a human)
+what to include in a group.  A conceptual model of these artifacts appears below.
+
+![Conceptual Model](ConceptualModel.svg)
+
+The HL7 FHIR standard has similarly named resources that perform the same functions.
+A more detailed model about how these are related follows.
+[MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
+[Measure](https://hl7.org/fhir/R4/Measure)
+[Group](https://hl7.org/fhir/R4/Group)
+
+![Model](Model.svg)
+
+## Approach 1
+### CDC Measures
+The CDC defined 13 fields (Measures) to report. The fields can be reported by uploading
+a CSV file to the CDC reporting application.  These have all been defined using the
+FHIR Measure resource in this guide.
+
+#### Measure Definitions (Keith)
+
+[numTotBeds](Measure-SANERnumTotBeds.json.html)
+: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients
+
+[numICUBedsOcc](Measure-SANERnumICUBedsOcc.json.html)
+
+: Total number of staffed inpatient ICU beds that are occupied
+
+[numICUBeds](Measure-SANERnumICUBeds.json.html)
+
+: Total number of staffed inpatient intensive care unit (ICU) beds
+
+[numBedsOcc](Measure-SANERnumBedsOcc.json.html)
+
+: Total number of staffed inpatient beds that are occupied
+
+[numbeds](Measure-SANERnumbeds.json.html)
+
+: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients
+
+[numC19HospPats](Measure-SANERnumC19HospPats.json.html)
+
+: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19
+
+[numC19MechVentPats](Measure-SANERnumC19MechVentPats.json.html)
+
+: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator
+
+[numVentUse](Measure-SANERnumVentUse.json.html)
+
+: Total number of ventilators in use
+
+[numVent](Measure-SANERnumVent.json.html)
+
+: Total number of ventilators available
+
+[numC19HOPats](Measure-SANERnumC19HOPats.json.html)
+
+: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization
+
+[numC19OverflowPats](Measure-SANERnumC19OverflowPats.json.html)
+
+: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed
+
+[numC19OFMechVentPats](Measure-SANERnumC19OFMechVentPats.json.html)
+
+: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator
+
+[numC19Died](Measure-SANERnumC19Died.json.html)
+
+: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location
+
+#### Measures Definitions (Gino)
+[CDC Measure Definitions](Bundle-FHIR-348.json.html)
+
+#### Example CDC MeasureReport Bundles and Resources (Gino)
+[CDC MeasureReport Bundle](Bundle-FHIR-2.json.html)
+
+### FEMA Measures
+FEMA defined 9 fields (Measures) to report for in-hospital labs. The fields are reported by emailing
+a spreadsheet to a FEMA e-mail address.  These have also been defined using the FHIR Measure resource
+in this guide.  Unlike CDC, FEMA did not provide a CSV format with computable column names. This
+specification borrowed names from similar measures used by [The COVID Tracking Project](https://covidtracking.com/us-daily/)
+used in that projects [CSV API](https://covidtracking.com/api/) for US Historical Data,
+or *invented* names where no such name existed.
+
+#### Measure Definitions
+Measure definitions for the FEMA Measures follow.
+
+[totalTestResultsIncrease](Measure-SANERtotalTestIncrease.json.html)
+
+: New Diagnostic Tests Ordered/Received
+
+[totalTestResults](Measure-SANERtotalTestResults.json.html)
+
+: Cumulative Diagnostic Tests Ordered/Received
+
+[totalTestResultsIncrease](Measure-SANERtotalTestResultsIncrease.json.html)
+
+: New Tests Resulted
+
+[*rejected*](Measure-SANERrejected.json.html)
+
+: Cumulative Specimens Rejected
+
+[totalTestResults](Measure-SANERtotalTestResults.json.html)
+
+: Cumulative Tests Performed
+
+[positiveIncrease](Measure-SANERpositiveIncrease.json.html)
+
+: New Positive COVID-19 Tests
+
+[positive](Measure-SANERpositive.json.html)
+
+: Cumulative Positive COVID-19 Tests
+
+[*positiveIncreasePercent*](Measure-SANERpositiveIncreasePercent.json.html)
+
+: Percent Positive among Newly Resulted Tests
+
+[*positivePercent*](Measure-SANERpositivePercent.json.html)
+
+: Cumulative Percent Positive among Cumulative Resulted Tests
+
+#### Example FEMA MeasureReport Bundles and Resources (Keith)
+Measure data was sourced from [The COVID Tracking Project](https://covidtracking.com/api/), and measure reports were then
+produced from this data.  These are listed below:
+
+* [MeasureReport Bundle for Alaska](Bundle-FEMAexampleAK.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleAK-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleAK-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleAK-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleAK-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleAK-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleAK-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Alabama](Bundle-FEMAexampleAL.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleAL-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleAL-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleAL-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleAL-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleAL-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleAL-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Arkansas](Bundle-FEMAexampleAR.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleAR-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleAR-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleAR-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleAR-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleAR-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleAR-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Arizona](Bundle-FEMAexampleAZ.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleAZ-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleAZ-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleAZ-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleAZ-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleAZ-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleAZ-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for California](Bundle-FEMAexampleCA.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleCA-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleCA-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleCA-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleCA-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleCA-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleCA-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Colorado](Bundle-FEMAexampleCO.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleCO-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleCO-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleCO-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleCO-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleCO-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleCO-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Connecticut](Bundle-FEMAexampleCT.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleCT-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleCT-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleCT-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleCT-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleCT-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleCT-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for DC](Bundle-FEMAexampleDC.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleDC-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleDC-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleDC-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleDC-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleDC-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleDC-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Delaware](Bundle-FEMAexampleDE.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleDE-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleDE-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleDE-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleDE-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleDE-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleDE-totalTestResultsIncrease.json.html)
+* [MeasureReport Bundle for Florida](Bundle-FEMAexampleFL.json.html)
+  + [Cumulative Positive Tests](MeasureReport-FEMAexampleFL-positive.json.html)
+  + [Daily Positive Tests](MeasureReport-FEMAexampleFL-positiveIncrease.json.html)
+  + [Daily Percent Positive](MeasureReport-FEMAexampleFL-positiveIncreasePercent.json.html)
+  + [Cumulative Percent Positive](MeasureReport-FEMAexampleFL-positivePercent.json.html)
+  + [Cumulative Orders](MeasureReport-FEMAexampleFL-totalTestResults.json.html)
+  + [Daily Orders](MeasureReport-FEMAexampleFL-totalTestResultsIncrease.json.html)
 

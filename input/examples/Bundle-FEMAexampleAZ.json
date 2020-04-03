@@ -1,0 +1,473 @@
+{
+  "resourceType": "Bundle",
+  "id": "FEMAexampleAZ",
+  "identifier": {
+    "value": "d1e64",
+    "system": "http://example.com"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleAZ-positive",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "4"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositive",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 34.2744
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 111.6602
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-AZ",
+          "display": "State of Arizona"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/AZ-DPH",
+          "display": "Arizona Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 1289
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 19371
+              }
+            ],
+            "measureScore": {
+              "value": 1289,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positive"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleAZ-totalTestResults",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "4"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 34.2744
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 111.6602
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-AZ",
+          "display": "State of Arizona"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/AZ-DPH",
+          "display": "Arizona Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 19371
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 19371
+              }
+            ],
+            "measureScore": {
+              "value": 19371,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-totalTestResults"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleAZ-positiveIncrease",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "4"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 34.2744
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 111.6602
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-AZ",
+          "display": "State of Arizona"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/AZ-DPH",
+          "display": "Arizona Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 132
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 19371
+              }
+            ],
+            "measureScore": {
+              "value": 132,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positiveIncrease"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleAZ-totalTestResultsIncrease",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "4"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 34.2744
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 111.6602
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-AZ",
+          "display": "State of Arizona"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/AZ-DPH",
+          "display": "Arizona Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 2612
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 19371
+              }
+            ],
+            "measureScore": {
+              "value": 2612,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-totalTestResultsIncrease"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleAZ-positivePercent",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "4"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 34.2744
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 111.6602
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-AZ",
+          "display": "State of Arizona"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/AZ-DPH",
+          "display": "Arizona Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "numerator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 1289
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "denominator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 19371
+              }
+            ],
+            "measureScore": {
+              "value": 6.65,
+              "unit": "%",
+              "code": "%"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positivePercent"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleAZ-positiveIncreasePercent",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "4"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 34.2744
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 111.6602
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-AZ",
+          "display": "State of Arizona"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/AZ-DPH",
+          "display": "Arizona Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "numerator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 132
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "denominator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 2612
+              }
+            ],
+            "measureScore": {
+              "value": 5.05,
+              "unit": "%",
+              "code": "%"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positiveIncreasePercent"
+    }
+  ]
+}

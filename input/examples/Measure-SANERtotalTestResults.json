@@ -11,7 +11,7 @@
       "telecom": [
         {
           "system": "email",
-          "value": "fema-hhs-covid-diagnostics-tf@fema.dhs.gov "
+          "value": "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
         }
       ]
     }
@@ -38,9 +38,9 @@
     {
       "coding": [
         {
-          "code": "252318005",
+          "code": "15220000",
           "system": "http://snomed.info/sct",
-          "display": "Immunology laboratory test (procedure)"
+          "display": "Laboratory test (procedure)"
         }
       ]
     }
@@ -69,7 +69,8 @@
           "code": {
             "coding": [
               {
-                "code": "measure-population"
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
               }
             ]
           },
@@ -81,7 +82,8 @@
           "code": {
             "coding": [
               {
-                "code": "initial-population"
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
               }
             ]
           },

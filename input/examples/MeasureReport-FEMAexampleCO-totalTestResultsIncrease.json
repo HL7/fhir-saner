@@ -1,0 +1,74 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FEMAexampleCO-totalTestResultsIncrease",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "8"
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+        "extension": [
+          {
+            "url": "latitude",
+            "valueDecimal": 38.9972
+          },
+          {
+            "url": "longitude",
+            "valueDecimal": 105.5478
+          }
+        ]
+      }
+    ],
+    "reference": "Location/states-CO",
+    "display": "State of Colorado"
+  },
+  "date": "2020-03-31",
+  "reporter": {
+    "reference": "Organization/CO-DPH",
+    "display": "Colorado Department of Public Health"
+  },
+  "period": {
+    "start": "2020-03-31",
+    "end": "2020-03-31"
+  },
+  "group": [
+    {
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 15364
+        }
+      ],
+      "measureScore": {
+        "value": 0,
+        "unit": "Laboratory test (procedure)",
+        "code": "15220000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "resourceType": "Bundle",
+  "id": "FEMAexampleDE",
+  "identifier": {
+    "value": "d1e145",
+    "system": "http://example.com"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleDE-positive",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "10"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositive",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 38.9896
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 75.505
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-DE",
+          "display": "State of Delaware"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/DE-DPH",
+          "display": "Delaware Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 406
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 4102
+              }
+            ],
+            "measureScore": {
+              "value": 406,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positive"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleDE-totalTestResults",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "10"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 38.9896
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 75.505
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-DE",
+          "display": "State of Delaware"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/DE-DPH",
+          "display": "Delaware Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 4102
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 4102
+              }
+            ],
+            "measureScore": {
+              "value": 4102,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-totalTestResults"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleDE-positiveIncrease",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "10"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 38.9896
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 75.505
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-DE",
+          "display": "State of Delaware"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/DE-DPH",
+          "display": "Delaware Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 142
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 4102
+              }
+            ],
+            "measureScore": {
+              "value": 142,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positiveIncrease"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleDE-totalTestResultsIncrease",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "10"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 38.9896
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 75.505
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-DE",
+          "display": "State of Delaware"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/DE-DPH",
+          "display": "Delaware Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 1622
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "initial-population",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 4102
+              }
+            ],
+            "measureScore": {
+              "value": 1622,
+              "unit": "Laboratory test (procedure)",
+              "code": "15220000"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-totalTestResultsIncrease"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleDE-positivePercent",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "10"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 38.9896
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 75.505
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-DE",
+          "display": "State of Delaware"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/DE-DPH",
+          "display": "Delaware Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "numerator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 406
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "denominator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 4102
+              }
+            ],
+            "measureScore": {
+              "value": 9.9,
+              "unit": "%",
+              "code": "%"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positivePercent"
+    },
+    {
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "FEMAexampleDE-positiveIncreasePercent",
+        "identifier": [
+          {
+            "system": "https://www.census.gov/geographies",
+            "value": "10"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 38.9896
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 75.505
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-DE",
+          "display": "State of Delaware"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/DE-DPH",
+          "display": "Delaware Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "numerator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 142
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "denominator",
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+                    }
+                  ]
+                },
+                "count": 1622
+              }
+            ],
+            "measureScore": {
+              "value": 8.75,
+              "unit": "%",
+              "code": "%"
+            }
+          }
+        ]
+      },
+      "fullUrl": "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positiveIncreasePercent"
+    }
+  ]
+}

@@ -7,13 +7,15 @@ class Characteristic <<(E,Yellow)>>
 class CountableEntity <<(P,Cyan)>>
 class Field <<(E,Yellow)>>
 
-MeasureReport o-> "measure" Measure : Is Defined By
-Measure  o-> "subject" Group : Has Subject
-Group "1" *- "*" Characteristic : "Classified By             "
-Group "1" o-> " * member" CountableEntity : Describes Member Criteria
+MeasureReport o->  Measure : Is Defined By
+Measure  o->  Group : Has Subject
+Group *-- Characteristic : "Stratified By             "
+Group o-->  CountableEntity : "Has Member"
 
-(Group, CountableEntity) . Characteristic : Identifies Field Of
+(Group, CountableEntity) .. Characteristic : Identifies Field Of
 
-CountableEntity "1" *- "*" Field : Composed of
-Characteristic -> Field : Names
+CountableEntity  *-   Field : Composed of
+Characteristic --> Field : Names
+
+MeasureReport ..> CountableEntity : "Assesses        \n\n\n"
 @enduml

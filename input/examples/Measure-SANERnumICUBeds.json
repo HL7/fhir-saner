@@ -69,7 +69,8 @@
           "code": {
             "coding": [
               {
-                "code": "measure-population"
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
               }
             ]
           },
@@ -81,7 +82,8 @@
           "code": {
             "coding": [
               {
-                "code": "initial-population"
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
               }
             ]
           },

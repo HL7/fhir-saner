@@ -1,0 +1,74 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FEMAexampleAL-totalTestResultsIncrease",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "1"
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+        "extension": [
+          {
+            "url": "latitude",
+            "valueDecimal": 32.7794
+          },
+          {
+            "url": "longitude",
+            "valueDecimal": 86.8287
+          }
+        ]
+      }
+    ],
+    "reference": "Location/states-AL",
+    "display": "State of Alabama"
+  },
+  "date": "2020-03-31",
+  "reporter": {
+    "reference": "Organization/AL-DPH",
+    "display": "Alabama Department of Public Health"
+  },
+  "period": {
+    "start": "2020-03-31",
+    "end": "2020-03-31"
+  },
+  "group": [
+    {
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 726
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 7279
+        }
+      ],
+      "measureScore": {
+        "value": 726,
+        "unit": "Laboratory test (procedure)",
+        "code": "15220000"
+      }
+    }
+  ]
+}

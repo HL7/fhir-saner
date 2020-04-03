@@ -1,0 +1,473 @@
+{
+  "resourceType": "Bundle",
+  "id": "FEMA-example6",
+  "identifier": {
+    "system": "http://example.com",
+    "value": "d1e165"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://example.com/fhir/MeasureReport/d1e171a1053",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "d1e171a1053",
+        "identifier": [
+          {
+            "system": "http://example.com/CA/",
+            "value": "d1e171"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositive",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 37.1841
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 119.4696
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-CA",
+          "display": "State of California"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/CA-DPH",
+          "display": "California Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 7482
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              }
+            ],
+            "measureScore": {
+              "value": 7482,
+              "unit": "//f:topic/f:coding/f:display/@value",
+              "system": "http://snomed.info/sct",
+              "code": "252318005"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/MeasureReport/d1e184a1053",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "d1e184a1053",
+        "identifier": [
+          {
+            "system": "http://example.com/CA/",
+            "value": "d1e184"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 37.1841
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 119.4696
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-CA",
+          "display": "State of California"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/CA-DPH",
+          "display": "California Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              }
+            ],
+            "measureScore": {
+              "value": 29254,
+              "unit": "//f:topic/f:coding/f:display/@value",
+              "system": "http://snomed.info/sct",
+              "code": "252318005"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/MeasureReport/d1e195a1053",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "d1e195a1053",
+        "identifier": [
+          {
+            "system": "http://example.com/CA/",
+            "value": "d1e195"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 37.1841
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 119.4696
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-CA",
+          "display": "State of California"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/CA-DPH",
+          "display": "California Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 1035
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              }
+            ],
+            "measureScore": {
+              "value": 1035,
+              "unit": "//f:topic/f:coding/f:display/@value",
+              "system": "http://snomed.info/sct",
+              "code": "252318005"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/MeasureReport/d1e197a1053",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "d1e197a1053",
+        "identifier": [
+          {
+            "system": "http://example.com/CA/",
+            "value": "d1e197"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 37.1841
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 119.4696
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-CA",
+          "display": "State of California"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/CA-DPH",
+          "display": "California Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 2258
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              }
+            ],
+            "measureScore": {
+              "value": 2258,
+              "unit": "//f:topic/f:coding/f:display/@value",
+              "system": "http://snomed.info/sct",
+              "code": "252318005"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/MeasureReport/d1e197a1053",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "d1e197a1053",
+        "identifier": [
+          {
+            "system": "http://example.com/CA/",
+            "value": "d1e197"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 37.1841
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 119.4696
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-CA",
+          "display": "State of California"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/CA-DPH",
+          "display": "California Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 2258
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              }
+            ],
+            "measureScore": {
+              "value": 29254,
+              "unit": "%",
+              "system": "http://snomed.info/sct",
+              "code": "%"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.com/fhir/MeasureReport/d1e197a1053",
+      "resource": {
+        "resourceType": "MeasureReport",
+        "id": "d1e197a1053",
+        "identifier": [
+          {
+            "system": "http://example.com/CA/",
+            "value": "d1e197"
+          }
+        ],
+        "status": "complete",
+        "type": "summary",
+        "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+        "subject": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+              "extension": [
+                {
+                  "url": "latitude",
+                  "valueDecimal": 37.1841
+                },
+                {
+                  "url": "longitude",
+                  "valueDecimal": 119.4696
+                }
+              ]
+            }
+          ],
+          "reference": "Location/states-CA",
+          "display": "State of California"
+        },
+        "date": "2020-03-31",
+        "reporter": {
+          "reference": "Organization/CA-DPH",
+          "display": "California Department of Public Health"
+        },
+        "period": {
+          "start": "2020-03-31",
+          "end": "2020-03-31"
+        },
+        "group": [
+          {
+            "population": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "measure-population"
+                    }
+                  ]
+                },
+                "count": 2258
+              },
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                      "code": "initial-population"
+                    }
+                  ]
+                },
+                "count": 29254
+              }
+            ],
+            "measureScore": {
+              "value": 2258,
+              "unit": "%",
+              "system": "http://snomed.info/sct",
+              "code": "%"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
