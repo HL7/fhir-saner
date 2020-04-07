@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="5d1b699e-060f-49a9-a41b-b2534a59cefc"/>
+  <id value="4ff785a9-8f54-492c-9bc2-40ff76720c58"/>
   <meta>
-    <lastUpdated value="2020-04-07T03:48:44.945-04:00"/>
+    <lastUpdated value="2020-04-07T04:47:54.766-04:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -35,7 +35,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -60,8 +60,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -129,7 +129,7 @@
         <name value="BedLocationOperationalStatus"/>
         <title value="Bed Location Operational Status"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -154,8 +154,8 @@
         </contact>
         <description value="This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."/>
         <expansion>
-          <identifier value="urn:uuid:f60f7b12-7e08-4199-8902-328471409211"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:42565537-3345-4295-a964-8644a5dcd0f2"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -213,7 +213,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -238,8 +238,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -307,7 +307,7 @@
         <name value="BedProperty"/>
         <title value="Bed Property"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -332,8 +332,8 @@
         </contact>
         <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
         <expansion>
-          <identifier value="urn:uuid:6cf35e34-d8ea-4d76-8e1e-05e9a1cba3d6"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:06a82d10-70cb-47bb-926e-1790e20bd63b"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -391,7 +391,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -416,8 +416,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -455,7 +455,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -480,8 +480,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -519,7 +519,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -544,8 +544,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -583,7 +583,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -608,8 +608,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -647,7 +647,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -672,8 +672,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -711,7 +711,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -736,8 +736,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -775,7 +775,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -800,8 +800,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -860,7 +860,7 @@
         <version value="0.1.0"/>
         <name value="OnlyCompleteOrPending"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -883,9 +883,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
+        <description value="This valueset is used to limit the reported status to complete or pending for a MeasureReport"/>
         <expansion>
-          <identifier value="urn:uuid:e222b85b-1fa6-4a52-a334-c5cd531c1d10"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:6d13a183-d406-445f-ab95-c4eb98701c17"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -938,7 +939,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -963,8 +964,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1002,7 +1003,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -1027,8 +1028,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1066,7 +1067,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -1091,8 +1092,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1130,7 +1131,7 @@
         <name value="BedDeviceTypes"/>
         <title value="Bed Device Types"/>
         <status value="active"/>
-        <date value="2020-04-07T03:48:44-04:00"/>
+        <date value="2020-04-07T04:47:54-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Mobile Health Workgroup"/>
@@ -1155,8 +1156,8 @@
         </contact>
         <description value="Codes used to identify beds"/>
         <expansion>
-          <identifier value="urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d"/>
-          <timestamp value="2020-04-07T03:49:15-04:00"/>
+          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
+          <timestamp value="2020-04-07T04:48:25-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>

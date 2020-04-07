@@ -1,10 +1,14 @@
-![The SANER Project Logo](SANERLogo.png)
-
-**Fighting COVID-19 with FHIR®**
 
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
+
+![The SANER Project Logo](SANERLogo.png)
+
+**Fighting COVID-19 with FHIR®**
+    
+
+
 
 ### About This Guide
 This is a draft implementation guide to promote discussion with leaders in the Health
@@ -73,3 +77,4 @@ a service platform that is the catalyst for secure and smart health information 
 physicians, hospitals, health plans, ACOs, MCOs, and public health agencies across 12 US states.
 Ai is raising the bar for how health data is shared, managed, and protected.
 
+        

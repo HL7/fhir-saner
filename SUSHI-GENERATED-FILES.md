@@ -38,6 +38,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\images\Model.svg                                              | copied    | fsh\ig-data\input\images\Model.svg                                              |
 | input\images\PublicHealthPullFromHospital.svg                       | copied    | fsh\ig-data\input\images\PublicHealthPullFromHospital.svg                       |
 | input\images\PublicHealthPullFromHospitalStorage.svg                | copied    | fsh\ig-data\input\images\PublicHealthPullFromHospitalStorage.svg                |
+| input\images\SANERLogo.png                                          | copied    | fsh\ig-data\input\images\SANERLogo.png                                          |
 | input\images\Slicer.svg                                             | copied    | fsh\ig-data\input\images\Slicer.svg                                             |
 | input\images\Template for Daily Hospital COVID-19 Reporting.xlsx    | copied    | fsh\ig-data\input\images\Template for Daily Hospital COVID-19 Reporting.xlsx    |
 | input\images\Template-for-Daily-Hospital-COVID-19-Reporting.png     | copied    | fsh\ig-data\input\images\Template-for-Daily-Hospital-COVID-19-Reporting.png     |

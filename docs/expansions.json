@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "5d1b699e-060f-49a9-a41b-b2534a59cefc",
+  "id" : "4ff785a9-8f54-492c-9bc2-40ff76720c58",
   "meta" : {
-    "lastUpdated" : "2020-04-07T03:48:44.945-04:00"
+    "lastUpdated" : "2020-04-07T04:47:54.766-04:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -44,8 +44,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -67,7 +67,7 @@
       "name" : "BedLocationOperationalStatus",
       "title" : "Bed Location Operational Status",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -92,8 +92,8 @@
       }],
       "description" : "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.",
       "expansion" : {
-        "identifier" : "urn:uuid:f60f7b12-7e08-4199-8902-328471409211",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:42565537-3345-4295-a964-8644a5dcd0f2",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -135,7 +135,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -160,8 +160,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -183,7 +183,7 @@
       "name" : "BedProperty",
       "title" : "Bed Property",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -208,8 +208,8 @@
       }],
       "description" : "This value set describes other properties of a bed, such as the ability to support isolation.",
       "expansion" : {
-        "identifier" : "urn:uuid:6cf35e34-d8ea-4d76-8e1e-05e9a1cba3d6",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:06a82d10-70cb-47bb-926e-1790e20bd63b",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -251,7 +251,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -276,8 +276,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -299,7 +299,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -324,8 +324,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -347,7 +347,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -372,8 +372,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -395,7 +395,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -420,8 +420,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -443,7 +443,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -468,8 +468,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -491,7 +491,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -516,8 +516,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -539,7 +539,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -564,8 +564,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -586,7 +586,7 @@
       "version" : "0.1.0",
       "name" : "OnlyCompleteOrPending",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -609,9 +609,10 @@
           "value" : "mailto:kboone@ainq.com"
         }]
       }],
+      "description" : "This valueset is used to limit the reported status to complete or pending for a MeasureReport",
       "expansion" : {
-        "identifier" : "urn:uuid:e222b85b-1fa6-4a52-a334-c5cd531c1d10",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:6d13a183-d406-445f-ab95-c4eb98701c17",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -648,7 +649,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -673,8 +674,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -696,7 +697,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -721,8 +722,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -744,7 +745,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -769,8 +770,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -792,7 +793,7 @@
       "name" : "BedDeviceTypes",
       "title" : "Bed Device Types",
       "status" : "active",
-      "date" : "2020-04-07T03:48:44-04:00",
+      "date" : "2020-04-07T04:47:54-04:00",
       "publisher" : "HL7 International",
       "contact" : [{
         "name" : "HL7 Mobile Health Workgroup",
@@ -817,8 +818,8 @@
       }],
       "description" : "Codes used to identify beds",
       "expansion" : {
-        "identifier" : "urn:uuid:8df76a2d-658c-4159-b764-6345e8186c8d",
-        "timestamp" : "2020-04-07T03:49:15-04:00",
+        "identifier" : "urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed",
+        "timestamp" : "2020-04-07T04:48:25-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false

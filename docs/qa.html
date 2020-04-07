@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 37, errors = 19, warn = 29, info = 0 -->
+<!-- broken links = 30, errors = 47, warn = 29, info = 0 -->
 <head>
   <title>SituationalAwarenessforNovelEpidemicResponse : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for SituationalAwarenessforNovelEpidemicResponse</h1>
- <p>Generated Tue Apr 07 03:49:48 EDT 2020, FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = <a href="http://hl7.org/fhir/us/saner">http://hl7.org/fhir/us/saner</a> (<a href="http://hl7.org/fhir/us/saner/history.html">history</a>))</p>
+ <p>Generated Tue Apr 07 04:49:00 EDT 2020, FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = <a href="http://hl7.org/fhir/us/saner">http://hl7.org/fhir/us/saner</a> (<a href="http://hl7.org/fhir/us/saner/history.html">history</a>))</p>
 <p>IG Publisher Version: v1.0.78-SNAPSHOT</p>
 <p><a href="#suppressed">35 Suppressed Errors</a></p>
  <p>HL7 Publication check:</p> <ul>
@@ -35,7 +35,7 @@
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>35</b></td><td><b>2</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>29</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__Users_kboone_git_fhir-saner_input_ImplementationGuide-hl7.fhir.us.saner"><b>C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner</b></a></td><td><b>0</b></td><td><b>0</b></td>
@@ -56,7 +56,7 @@
      <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-audit-event-write"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-write</b></a></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-bed-group"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-group</b></a></td><td><b>2</b></td><td><b>1</b></td>
+     <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-bed-group"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-group</b></a></td><td><b>20</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-bed-location"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-location</b></a></td><td><b>0</b></td><td><b>1</b></td>
@@ -64,8 +64,8 @@
    <tr style="background-color: #ffcccc">
      <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-bed-measure-report"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-measure-report</b></a></td><td><b>12</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-device-group"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-group</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-device-group"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-group</b></a></td><td><b>10</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__Users_kboone_git_fhir-saner_input_profiles_structuredefinition-saner-device-measure-report"><b>C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-measure-report</b></a></td><td><b>0</b></td><td><b>1</b></td>
@@ -148,115 +148,94 @@
 <h2><a href="">n/a</a></h2>
  <table class="grid">
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/OnlyCompleteOrPending.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td><b>The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-group.html#017bae16-4102-4fac-bf83-dc63604fe8b4">StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1054, column 265</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Location.status' for &quot;Location.status&quot; cannot be resolved (valid targets: 55 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#43a5ce4b-f638-447e-9870-17047d01c465">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 298, column 836</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-group.html#6aa037c9-309c-4c7d-9503-82ecf0d34130">StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1056, column 276</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Location.operationalStatus' for &quot;Location.operationalStatus&quot; cannot be resolved (valid targets: 55 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#9085d4d3-79ec-430a-b165-d4f559d99cc7">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 894</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-group.html#2768f801-7a45-4229-b8af-4f7f84a1b078">StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1058, column 263</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Location.type' for &quot;Location.type&quot; cannot be resolved (valid targets: 55 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#67227ec5-85cf-4a17-9007-90e0ffb12e20">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 300, column 888</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-group.html#b102fcc7-69b5-4132-869a-e165c7c26175">StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1060, column 267</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Location.Feature' for &quot;Location.Feature&quot; cannot be resolved (valid targets: 55 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#cd311fad-3ab2-459b-a719-792e04817697">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 302, column 800</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for &quot;measureScore&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-group.html#eeddede3-d65f-4e87-9898-c4aa4bd5c064">StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1062, column 267</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for &quot;Location.partOf&quot; cannot be resolved (valid targets: 55 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#79221ef3-70c0-40cd-bda0-6340b161c125">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 303, column 853</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for &quot;stratifier&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#3622c793-7970-4c6a-946e-b4388bdc2e2c">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 298, column 836</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#b46960f4-ab4b-4105-b8eb-68105e3884f4">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 305, column 982</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#90f40952-79eb-4692-b6d9-769d1e1f2fc8">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 894</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#055d13ac-5323-4261-a8da-17d762433cfd">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 1023</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for &quot;stratum&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#722ae9f2-00db-41f3-a57f-c0f99962be23">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 300, column 888</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#25f1543b-09ab-4830-9673-9d92fbc5ff1a">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 308, column 1188</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for &quot;component&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#ad49344b-bd68-46ca-be1e-aa4344fe4a78">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 302, column 800</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for &quot;measureScore&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#a2bfd662-47c3-4892-a54b-9ea6b5324be1">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 309, column 1250</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#d1cc3893-9cef-41e8-a49a-2f095649dc4f">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 303, column 853</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for &quot;stratifier&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#6711e572-6a4c-446c-a969-0b154977fa11">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 310, column 1192</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#83d5586c-944b-4650-8a6c-81b049ed9f43">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 305, column 982</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#1ca19a93-804f-4303-8df6-96c401a7de0d">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 311, column 1239</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#f8ecf74e-de8e-4675-837f-3e4324a1cac0">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 1023</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for &quot;stratum&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#b9dccac7-69ab-4fba-bd7f-53b584512e0c">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 312, column 1233</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#ab84ebc3-c61f-46ac-933f-c76af45c0150">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 308, column 1188</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for &quot;component&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#121eb956-0e88-4acb-b525-c06250f2c8a5">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 443, column 836</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#d04d23fd-5a04-4e6f-bb8b-01b833c7caa2">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 309, column 1250</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#655518f8-3fc6-40bd-81cc-82b1d9715499">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 444, column 894</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#80322579-e912-44b2-b0b2-fca0ca7f59c1">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 310, column 1192</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#b9c199df-302b-48d4-9877-3158e6ce886e">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 445, column 888</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#9a0156a9-e36b-40ed-9758-d2b97fd631d2">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 311, column 1239</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#80521528-55e7-4780-a0fd-1bfc17ed3a11">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 447, column 800</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for &quot;measureScore&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#e86a6867-0a23-4dda-8881-6cb61f849cfc">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 312, column 1233</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#0ffa9ca7-287a-44af-b221-ec734ceaadb7">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 448, column 853</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for &quot;stratifier&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#3641df2e-5843-424e-b2a2-51b3035baf85">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 443, column 836</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#aa44875f-470c-4fc7-8e1b-ccbafe99ae56">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 450, column 982</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#4b1ea022-09c2-403d-945c-3d09c40ca320">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 444, column 894</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#7a88e7ab-38f7-4eaa-8d01-87ed0f4d6a39">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 451, column 1023</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for &quot;stratum&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#5c193042-7e41-4181-a729-39187047fd3a">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 445, column 888</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#dd9dc1cf-5c11-4ae9-8621-c1b8970cd503">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 453, column 1188</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for &quot;component&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#97ce0bce-61fb-43d8-95c8-c35d781d1e64">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 447, column 800</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for &quot;measureScore&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#2f1d96b3-425f-45ab-9cc3-f7fc81527b81">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 454, column 1250</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#146adb2a-d7da-438e-a872-f9556af976a6">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 448, column 853</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for &quot;stratifier&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#f03dcd9d-e78d-468d-b2ba-29b5190781a6">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 455, column 1192</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#7d48f110-047d-4dc9-a97d-ffeb168f8103">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 450, column 982</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#08b96477-4abf-4d7f-a4cc-389fb923e6c2">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 456, column 1239</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#19ed8373-dadc-4289-9ffc-3e6e6c263083">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 451, column 1023</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for &quot;stratum&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#e8032ed3-91ec-45f2-81fa-391b1c5c6c42">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 457, column 1233</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#cfa3283d-1aae-4149-91f8-b445517a79ef">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 453, column 1188</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for &quot;component&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-device-group.html#b0bd29d1-e1cc-4cba-ac11-40ca9b8e1d64">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1008, column 265</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Device.status' for &quot;Device.status&quot; cannot be resolved (valid targets: 55 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#02de6abf-2dad-4c2c-95b9-3d1e8e6b66ea">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 454, column 1250</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-device-group.html#45ff8164-6be9-4f76-97d7-8032589bdb33">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1011, column 263</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Device.type' for &quot;Device.type&quot; cannot be resolved (valid targets: 55 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#968cdb7c-746d-42ca-ae1a-d8495cb36ae7">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 455, column 1192</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for &quot;population&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="StructureDefinition-saner-device-group.html#fc242fae-f7a2-4a42-b578-b0b028246d49">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1014, column 267</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Device.property' for &quot;Device.property&quot; cannot be resolved (valid targets: 55 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#c4ffa658-08d3-4e03-bc5b-c023e1a51699">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 456, column 1239</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for &quot;code&quot; cannot be resolved (valid targets: 36 targets)</b></td>
+     <td><b><a href="ValueSet-BedType.html#ceec6125-317e-4855-9e49-7ad5a92f281e">ValueSet-BedType.html#/html/body/div/div/div/div/div/div/ul/li/table/tr/td/a at Line 210, column 1442</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-BedType.html#BedType-NURSERY' for &quot;NURSERY&quot; cannot be resolved (valid targets: 37 targets)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-bed-measure-report.html#8c83c731-0488-4602-a663-730bd1defc5d">StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 457, column 1233</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for &quot;count&quot; cannot be resolved (valid targets: 36 targets)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-device-group.html#bdc76968-4fe5-4676-b238-2139e5a6c72e">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1008, column 265</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.status' for &quot;Device.status&quot; cannot be resolved (valid targets: 82 targets)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-device-group.html#29ae6414-9d74-455b-bc6d-68d6b219bdac">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1011, column 263</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.type' for &quot;Device.type&quot; cannot be resolved (valid targets: 82 targets)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-device-group.html#fc795230-8e47-4c86-808e-1c87e60a3f9d">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1014, column 267</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.property' for &quot;Device.property&quot; cannot be resolved (valid targets: 82 targets)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-saner-device-group.html#0f1ea44a-11dc-4417-b227-4ef7f34c8d14">StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1017, column 267</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for &quot;Location.partOf&quot; cannot be resolved (valid targets: 55 targets)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="ValueSet-BedType.html#b2dce70c-110d-448c-a805-89eca0d32ac6">ValueSet-BedType.html#/html/body/div/div/div/div/div/div/ul/li/table/tr/td/a at Line 210, column 1442</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-BedType.html#BedType-NURSERY' for &quot;NURSERY&quot; cannot be resolved (valid targets: 37 targets)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="index.html#f8f9303b-c2e6-40ee-b8a2-02256a4d410d">index.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 249, column 12</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-SanerBedType.html' for &quot;SanerBedType Coding System&quot; cannot be resolved</b></td>
+     <td><b><a href="index.html#d94918bb-182c-4d3b-b26b-a687c1d67894">index.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 253, column 12</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-SanerBedType.html' for &quot;SanerBedType Coding System&quot; cannot be resolved</b></td>
    </tr>
 </table>
 <hr/>
@@ -384,10 +363,64 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature in http://hl7.org/fhir/R4/StructureDefinition/Location for &quot;http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature&quot;</b></td>
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature in http://hl7.org/fhir/R4/StructureDefinition/Location for &quot;http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature&quot;</b></td>
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-bed-group: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-group</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
@@ -457,6 +490,36 @@
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status in http://hl7.org/fhir/R4/StructureDefinition/Device for &quot;http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[52].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type in http://hl7.org/fhir/R4/StructureDefinition/Device for &quot;http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[61].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property in http://hl7.org/fhir/R4/StructureDefinition/Device for &quot;http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status in http://hl7.org/fhir/R4/StructureDefinition/Device for &quot;http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.differential.element[17].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type in http://hl7.org/fhir/R4/StructureDefinition/Device for &quot;http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.differential.element[23].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property in http://hl7.org/fhir/R4/StructureDefinition/Device for &quot;http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/saner-device-group: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0].system</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/R4/StructureDefinition/Location&quot; does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>

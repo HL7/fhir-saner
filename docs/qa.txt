@@ -1,21 +1,21 @@
 ﻿SituationalAwarenessforNovelEpidemicResponse : Validation Results
 =========================================
 
-err = 38, warn = 58, info = 0
+err = 94, warn = 58, info = 0
 IG Publisher Version: v1.0.78-SNAPSHOT
-Generated Tue Apr 07 03:49:48 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
+Generated Tue Apr 07 04:49:00 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
 
- Build Errors : 35 / 2
+ Build Errors : 29 / 1
  C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner : 0 / 0
  C:\Users\kboone\git\fhir-saner\input\examples\conceptmap-HAvBED2toFHIR : 0 / 0
  C:\Users\kboone\git\fhir-saner\input\examples\measure-CDCReporting : 0 / 12
  C:\Users\kboone\git\fhir-saner\input\examples\measure-FEMAReporting : 3 / 6
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-read : 0 / 1
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-write : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-group : 2 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-group : 20 / 1
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-location : 0 / 1
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-measure-report : 12 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-group : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-group : 10 / 1
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-measure-report : 0 / 1
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-resource-location : 0 / 1
  C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-supporting-device : 0 / 1
@@ -43,13 +43,7 @@ Generated Tue Apr 07 03:49:48 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner
  C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevicesWithTracheostomy : 0 / 0
 </table>
 == n/a ==
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/OnlyCompleteOrPending.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1054, column 265: The link 'CodeSystem-LocationFields.html#LocationFields-Location.status' for "Location.status" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1056, column 276: The link 'CodeSystem-LocationFields.html#LocationFields-Location.operationalStatus' for "Location.operationalStatus" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1058, column 263: The link 'CodeSystem-LocationFields.html#LocationFields-Location.type' for "Location.type" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1060, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.Feature' for "Location.Feature" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1062, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for "Location.partOf" cannot be resolved (valid targets: 55 targets)
 ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 298, column 836: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for "population" cannot be resolved (valid targets: 36 targets)
 ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 894: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for "code" cannot be resolved (valid targets: 36 targets)
 ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 300, column 888: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for "count" cannot be resolved (valid targets: 36 targets)
@@ -74,12 +68,11 @@ ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measu
 ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 455, column 1192: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for "population" cannot be resolved (valid targets: 36 targets)
 ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 456, column 1239: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for "code" cannot be resolved (valid targets: 36 targets)
 ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 457, column 1233: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for "count" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1008, column 265: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.status' for "Device.status" cannot be resolved (valid targets: 82 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1011, column 263: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.type' for "Device.type" cannot be resolved (valid targets: 82 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1014, column 267: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.property' for "Device.property" cannot be resolved (valid targets: 82 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1017, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for "Location.partOf" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1008, column 265: The link 'CodeSystem-LocationFields.html#LocationFields-Device.status' for "Device.status" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1011, column 263: The link 'CodeSystem-LocationFields.html#LocationFields-Device.type' for "Device.type" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1014, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Device.property' for "Device.property" cannot be resolved (valid targets: 55 targets)
 ERROR: C:\Users\kboone\git\fhir-saner\output\ValueSet-BedType.html#/html/body/div/div/div/div/div/div/ul/li/table/tr/td/a at Line 210, column 1442: The link 'CodeSystem-BedType.html#BedType-NURSERY' for "NURSERY" cannot be resolved (valid targets: 37 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\index.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 249, column 12: The link 'CodeSystem-SanerBedType.html' for "SanerBedType Coding System" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-saner\output\index.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 253, column 12: The link 'CodeSystem-SanerBedType.html' for "SanerBedType Coding System" cannot be resolved
 == C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner.json ==
 == C:\Users\kboone\git\fhir-saner\input\examples\ConceptMap-HAvBED2toFHIR.json ==
 == C:\Users\kboone\git\fhir-saner\input\examples\Measure-CDCReporting.json ==
@@ -110,8 +103,26 @@ WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-read
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-audit-event-write.json ==
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-write: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-group.json ==
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature in http://hl7.org/fhir/R4/StructureDefinition/Location for "http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature in http://hl7.org/fhir/R4/StructureDefinition/Location for "http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-group: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-location.json ==
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-location: The Implementation Guide contains no examples for this profile
@@ -130,6 +141,16 @@ ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report
 ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The profile http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report has 11 elements in the differential (id: MeasureReport.group.population.code, id: MeasureReport.group.population.count, id: MeasureReport.group.population.subjectResults, id: MeasureReport.group.measureScore, id: MeasureReport.group.stratifier, id: MeasureReport.group.stratifier.code, id: MeasureReport.group.stratifier.stratum, id: MeasureReport.group.stratifier.stratum.component.code, id: MeasureReport.group.stratifier.stratum.population.code, id: MeasureReport.group.stratifier.stratum.population.count, id: MeasureReport.group.stratifier.stratum.population.subjectResults) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-device-group.json ==
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[52].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[61].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[17].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[23].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
+ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-device-measure-report.json ==
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-measure-report: The Implementation Guide contains no examples for this profile
