@@ -1,0 +1,74 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FEMAexampleCT-totalTestResultsIncrease",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "9"
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+        "extension": [
+          {
+            "url": "latitude",
+            "valueDecimal": 41.6219
+          },
+          {
+            "url": "longitude",
+            "valueDecimal": 72.7273
+          }
+        ]
+      }
+    ],
+    "reference": "Location/states-CT",
+    "display": "State of Connecticut"
+  },
+  "date": "2020-03-31",
+  "reporter": {
+    "reference": "Organization/CT-DPH",
+    "display": "Connecticut Department of Public Health"
+  },
+  "period": {
+    "start": "2020-03-31",
+    "end": "2020-03-31"
+  },
+  "group": [
+    {
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 1557
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 16157
+        }
+      ],
+      "measureScore": {
+        "value": 1557,
+        "unit": "Laboratory test (procedure)",
+        "code": "15220000"
+      }
+    }
+  ]
+}

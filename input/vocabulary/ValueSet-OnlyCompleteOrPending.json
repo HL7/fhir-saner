@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "OnlyCompleteOrPending",
+  "id": "OnlyCompleteOrPending",
+  "version": "0.1.0",
+  "url": "http://ainq.com/fhir/us/saner/ValueSet/OnlyCompleteOrPending",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/measure-report-status",
+        "concept": [
+          {
+            "code": "complete"
+          },
+          {
+            "code": "pending"
+          }
+        ]
+      }
+    ]
+  }
+}

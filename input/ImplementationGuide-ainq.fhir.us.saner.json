@@ -64,7 +64,7 @@
           "reference": "StructureDefinition/saner-bed-measure-report"
         },
         "name": "Bed MeasureReport Profile",
-        "description": "Defines constraints on the MeasureReport Resource for data communicating about Bed availability.",
+        "description": "Defines constraints on the MeasureReport Resource for reporting summary data about Bed availability.",
         "exampleBoolean": false
       },
       {
@@ -112,7 +112,7 @@
           "reference": "ValueSet/BedLocationOperationalStatus"
         },
         "name": "Bed Location Operational Status",
-        "description": "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
+        "description": "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.",
         "exampleBoolean": false
       },
       {
@@ -129,6 +129,21 @@
         },
         "name": "Bed Type",
         "description": "This Value Set describes the types of care services that a bed can support.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Fields"
+        },
+        "name": "Resource Fields",
+        "description": "This value set describes fields used to stratify groups in a report",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/OnlyCompleteOrPending"
+        },
+        "name": "OnlyCompleteOrPending",
         "exampleBoolean": false
       },
       {
@@ -157,9 +172,882 @@
       },
       {
         "reference": {
+          "reference": "Organization/AK-DPH"
+        },
+        "name": "AK-DPH",
+        "description": "Example Organization for the Alaska Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/AL-DPH"
+        },
+        "name": "AL-DPH",
+        "description": "Example Organization for the Alabama Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/AR-DPH"
+        },
+        "name": "AR-DPH",
+        "description": "Example Organization for the Arkansas Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/AZ-DPH"
+        },
+        "name": "AZ-DPH",
+        "description": "Example Organization for the Arizona Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/CA-DPH"
+        },
+        "name": "CA-DPH",
+        "description": "Example Organization for the California Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/CO-DPH"
+        },
+        "name": "CO-DPH",
+        "description": "Example Organization for the Colorado Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/CT-DPH"
+        },
+        "name": "CT-DPH",
+        "description": "Example Organization for the Connecticut Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/DC-DPH"
+        },
+        "name": "DC-DPH",
+        "description": "Example Organization for the District of Columbia Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/DE-DPH"
+        },
+        "name": "DE-DPH",
+        "description": "Example Organization for the Delaware Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleAK"
+        },
+        "name": "FEMAexampleAK",
+        "description": "Example MeasureReport bundle for AK",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAK-positive"
+        },
+        "name": "FEMAexampleAK-positive",
+        "description": "Example MeasureReport of positive for AK on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAK-positiveIncrease"
+        },
+        "name": "FEMAexampleAK-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for AK on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAK-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleAK-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for AK on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAK-positivePercent"
+        },
+        "name": "FEMAexampleAK-positivePercent",
+        "description": "Example MeasureReport of positivePercent for AK on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAK-totalTestResults"
+        },
+        "name": "FEMAexampleAK-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for AK on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAK-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleAK-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for AK on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleAL"
+        },
+        "name": "FEMAexampleAL",
+        "description": "Example MeasureReport bundle for AL",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAL-positive"
+        },
+        "name": "FEMAexampleAL-positive",
+        "description": "Example MeasureReport of positive for AL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAL-positiveIncrease"
+        },
+        "name": "FEMAexampleAL-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for AL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAL-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleAL-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for AL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAL-positivePercent"
+        },
+        "name": "FEMAexampleAL-positivePercent",
+        "description": "Example MeasureReport of positivePercent for AL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAL-totalTestResults"
+        },
+        "name": "FEMAexampleAL-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for AL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAL-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleAL-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for AL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleAR"
+        },
+        "name": "FEMAexampleAR",
+        "description": "Example MeasureReport bundle for AR",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAR-positive"
+        },
+        "name": "FEMAexampleAR-positive",
+        "description": "Example MeasureReport of positive for AR on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAR-positiveIncrease"
+        },
+        "name": "FEMAexampleAR-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for AR on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAR-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleAR-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for AR on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAR-positivePercent"
+        },
+        "name": "FEMAexampleAR-positivePercent",
+        "description": "Example MeasureReport of positivePercent for AR on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAR-totalTestResults"
+        },
+        "name": "FEMAexampleAR-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for AR on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAR-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleAR-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for AR on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleAZ"
+        },
+        "name": "FEMAexampleAZ",
+        "description": "Example MeasureReport bundle for AZ",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAZ-positive"
+        },
+        "name": "FEMAexampleAZ-positive",
+        "description": "Example MeasureReport of positive for AZ on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAZ-positiveIncrease"
+        },
+        "name": "FEMAexampleAZ-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for AZ on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAZ-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleAZ-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for AZ on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAZ-positivePercent"
+        },
+        "name": "FEMAexampleAZ-positivePercent",
+        "description": "Example MeasureReport of positivePercent for AZ on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAZ-totalTestResults"
+        },
+        "name": "FEMAexampleAZ-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for AZ on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleAZ-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleAZ-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for AZ on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleCA"
+        },
+        "name": "FEMAexampleCA",
+        "description": "Example MeasureReport bundle for CA",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCA-positive"
+        },
+        "name": "FEMAexampleCA-positive",
+        "description": "Example MeasureReport of positive for CA on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCA-positiveIncrease"
+        },
+        "name": "FEMAexampleCA-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for CA on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCA-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleCA-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for CA on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCA-positivePercent"
+        },
+        "name": "FEMAexampleCA-positivePercent",
+        "description": "Example MeasureReport of positivePercent for CA on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCA-totalTestResults"
+        },
+        "name": "FEMAexampleCA-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for CA on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCA-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleCA-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for CA on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleCO"
+        },
+        "name": "FEMAexampleCO",
+        "description": "Example MeasureReport bundle for CO",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCO-positive"
+        },
+        "name": "FEMAexampleCO-positive",
+        "description": "Example MeasureReport of positive for CO on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCO-positiveIncrease"
+        },
+        "name": "FEMAexampleCO-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for CO on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCO-positivePercent"
+        },
+        "name": "FEMAexampleCO-positivePercent",
+        "description": "Example MeasureReport of positivePercent for CO on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCO-totalTestResults"
+        },
+        "name": "FEMAexampleCO-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for CO on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCO-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleCO-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for CO on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleCT"
+        },
+        "name": "FEMAexampleCT",
+        "description": "Example MeasureReport bundle for CT",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCT-positive"
+        },
+        "name": "FEMAexampleCT-positive",
+        "description": "Example MeasureReport of positive for CT on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCT-positiveIncrease"
+        },
+        "name": "FEMAexampleCT-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for CT on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCT-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleCT-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for CT on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCT-positivePercent"
+        },
+        "name": "FEMAexampleCT-positivePercent",
+        "description": "Example MeasureReport of positivePercent for CT on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCT-totalTestResults"
+        },
+        "name": "FEMAexampleCT-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for CT on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleCT-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleCT-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for CT on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleDC"
+        },
+        "name": "FEMAexampleDC",
+        "description": "Example MeasureReport bundle for DC",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDC-positive"
+        },
+        "name": "FEMAexampleDC-positive",
+        "description": "Example MeasureReport of positive for DC on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDC-positiveIncrease"
+        },
+        "name": "FEMAexampleDC-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for DC on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDC-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleDC-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for DC on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDC-positivePercent"
+        },
+        "name": "FEMAexampleDC-positivePercent",
+        "description": "Example MeasureReport of positivePercent for DC on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDC-totalTestResults"
+        },
+        "name": "FEMAexampleDC-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for DC on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDC-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleDC-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for DC on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleDE"
+        },
+        "name": "FEMAexampleDE",
+        "description": "Example MeasureReport bundle for DE",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDE-positive"
+        },
+        "name": "FEMAexampleDE-positive",
+        "description": "Example MeasureReport of positive for DE on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDE-positiveIncrease"
+        },
+        "name": "FEMAexampleDE-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for DE on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDE-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleDE-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for DE on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDE-positivePercent"
+        },
+        "name": "FEMAexampleDE-positivePercent",
+        "description": "Example MeasureReport of positivePercent for DE on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDE-totalTestResults"
+        },
+        "name": "FEMAexampleDE-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for DE on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleDE-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleDE-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for DE on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FEMAexampleFL"
+        },
+        "name": "FEMAexampleFL",
+        "description": "Example MeasureReport bundle for FL",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleFL-positive"
+        },
+        "name": "FEMAexampleFL-positive",
+        "description": "Example MeasureReport of positive for FL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleFL-positiveIncrease"
+        },
+        "name": "FEMAexampleFL-positiveIncrease",
+        "description": "Example MeasureReport of positiveIncrease for FL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleFL-positiveIncreasePercent"
+        },
+        "name": "FEMAexampleFL-positiveIncreasePercent",
+        "description": "Example MeasureReport of positiveIncreasePercent for FL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleFL-positivePercent"
+        },
+        "name": "FEMAexampleFL-positivePercent",
+        "description": "Example MeasureReport of positivePercent for FL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleFL-totalTestResults"
+        },
+        "name": "FEMAexampleFL-totalTestResults",
+        "description": "Example MeasureReport of totalTestResults for FL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MeasureReport/FEMAexampleFL-totalTestResultsIncrease"
+        },
+        "name": "FEMAexampleFL-totalTestResultsIncrease",
+        "description": "Example MeasureReport of totalTestResultsIncrease for FL on 03/31/2020",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/FL-DPH"
+        },
+        "name": "FL-DPH",
+        "description": "Example Organization for the Florida Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/HAvBED2toFHIR"
         },
         "name": "HAvBED2 to FHIR Concept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumBedsOcc"
+        },
+        "name": "Available Staffed Inpatient Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19Died"
+        },
+        "name": "Covid Confirmed or Suspected Deaths in any hospital or ED Location",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19HOPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients with 2-week+ Onset",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19HospPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19MechVentPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients on Ventilation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19OFMechVentPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients in ED or Overflow awaiting Inpatient Bed and Ventilation",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumC19OverflowPats"
+        },
+        "name": "Covid Confirmed or Suspected Patients in ED or Overflow awaiting Inpatient Bed",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumICUBeds"
+        },
+        "name": "Total Staffed ICU Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumICUBedsOcc"
+        },
+        "name": "Occupied ICU Beds ",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumTotBeds"
+        },
+        "name": "Total Acute Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumVent"
+        },
+        "name": "Available Ventilators",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumVentUse"
+        },
+        "name": "In Use Ventilators",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERnumbeds"
+        },
+        "name": "Total Inpatient Beds",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERposNeg"
+        },
+        "name": "Cumulative Tests Performed",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositive"
+        },
+        "name": "Cumulative Positive COVID-19 Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositiveIncrease"
+        },
+        "name": "New Positive COVID-19 Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositiveIncreasePercent"
+        },
+        "name": "Percent Positive among Newly Resulted Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERpositivePercent"
+        },
+        "name": "Cumulative Percent Positive among Resulted Tests",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERrejected"
+        },
+        "name": "Cumulative Specimens Rejected",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERtotalTestResults"
+        },
+        "name": "Cumulative Diagnostic Tests Ordered/Received",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERtotalTestResultsIncrease"
+        },
+        "name": "New Tests Resulted",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-AK"
+        },
+        "name": "states-AK",
+        "description": "Example Location for the State of Alaska",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-AL"
+        },
+        "name": "states-AL",
+        "description": "Example Location for the State of Alabama",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-AR"
+        },
+        "name": "states-AR",
+        "description": "Example Location for the State of Arkansas",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-AZ"
+        },
+        "name": "states-AZ",
+        "description": "Example Location for the State of Arizona",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-CA"
+        },
+        "name": "states-CA",
+        "description": "Example Location for the State of California",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-CO"
+        },
+        "name": "states-CO",
+        "description": "Example Location for the State of Colorado",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-CT"
+        },
+        "name": "states-CT",
+        "description": "Example Location for the State of Connecticut",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-DC"
+        },
+        "name": "states-DC",
+        "description": "Example Location for the State of District of Columbia",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-DE"
+        },
+        "name": "states-DE",
+        "description": "Example Location for the State of Delaware",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/states-FL"
+        },
+        "name": "states-FL",
+        "description": "Example Location for the State of Florida",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FHIR-348"
+        },
+        "name": "FHIR-348",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/FHIR-2"
+        },
+        "name": "FHIR-2",
         "exampleBoolean": true
       }
     ],
@@ -206,6 +1094,11 @@
         {
           "nameUrl": "definitions.html",
           "title": "Definitions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "measures.html",
+          "title": "Measures",
           "generation": "markdown"
         },
         {

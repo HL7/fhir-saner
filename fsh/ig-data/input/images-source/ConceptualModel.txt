@@ -1,0 +1,13 @@
+@startuml
+
+agent "Measure Report" as MeasureReport
+agent Measure
+agent Group
+agent "Countable Entity" as CountableEntity
+
+MeasureReport -> Measure : Is Defined By
+MeasureReport ..> CountableEntity : Assesses
+Measure  o-> Group : Counts
+
+Group --> CountableEntity : Has Member
+@enduml

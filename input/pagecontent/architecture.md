@@ -86,15 +86,15 @@ The following diagrams depict several different deployments with different respo
 
 ### Hospital Supported Infrastructure
 <div style='float: clear'>
-![Hospital Supported Infrastructure](HositalPushToExternalStorageAdaptedToPullAPI-0.svg)
+![Hospital Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-0.svg)
 </div>
 
 ### Middle of the Road
 <div style='float: clear'>
-![Middle of the Road](HositalPushToExternalStorageAdaptedToPullAPI-1.svg)
+![Middle of the Road](HospitalPushToExternalStorageAdaptedToPullAPI-1.svg)
 </div>
 
 ### Public Health Supported Infrastructure
 <div style='float: clear'>
-![Public Health Supported Infrastructure](HositalPushToExternalStorageAdaptedToPullAPI-2.svg)
+![Public Health Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-2.svg)
 </div>

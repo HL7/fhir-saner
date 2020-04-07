@@ -1,0 +1,74 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FEMAexampleAZ-totalTestResults",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "4"
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+        "extension": [
+          {
+            "url": "latitude",
+            "valueDecimal": 34.2744
+          },
+          {
+            "url": "longitude",
+            "valueDecimal": 111.6602
+          }
+        ]
+      }
+    ],
+    "reference": "Location/states-AZ",
+    "display": "State of Arizona"
+  },
+  "date": "2020-03-31",
+  "reporter": {
+    "reference": "Organization/AZ-DPH",
+    "display": "Arizona Department of Public Health"
+  },
+  "period": {
+    "start": "2020-03-31",
+    "end": "2020-03-31"
+  },
+  "group": [
+    {
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 19371
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "count": 19371
+        }
+      ],
+      "measureScore": {
+        "value": 19371,
+        "unit": "Laboratory test (procedure)",
+        "code": "15220000"
+      }
+    }
+  ]
+}
