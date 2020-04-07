@@ -18,10 +18,8 @@ lists those files generated from project configs or the contents in the ig-data 
 | _updatePublisher.bat                                                | generated |                                                                                 |
 | _updatePublisher.sh                                                 | generated |                                                                                 |
 | ig.ini                                                              | generated | fsh\ig-data\ig.ini, fsh\package.json                                            |
-| input\ImplementationGuide-ainq.fhir.us.saner.json                   | generated | fsh\ig-data\ig.ini, fsh\package.json, {all input resources and pages}           |
+| input\ImplementationGuide-hl7.fhir.us.saner.json                    | generated | fsh\ig-data\ig.ini, fsh\package.json, {all input resources and pages}           |
 | package-list.json                                                   | generated | fsh\package.json                                                                |
-| input\examples\Bundle-FHIR-2.json                                   | copied    | fsh\ig-data\input\examples\Measures.json                                        |
-| input\examples\Bundle-FHIR-348.json                                 | copied    | fsh\ig-data\input\examples\MeasureReport.json                                   |
 | input\ignoreWarnings.txt                                            | copied    | fsh\ig-data\input\ignoreWarnings.txt                                            |
 | input\images\57.130-covid19-pimhc-blank-p.pdf                       | copied    | fsh\ig-data\input\images\57.130-covid19-pimhc-blank-p.pdf                       |
 | input\images\57.130-covid19-pimhc-blank-p.png                       | copied    | fsh\ig-data\input\images\57.130-covid19-pimhc-blank-p.png                       |

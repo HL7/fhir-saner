@@ -13,10 +13,7 @@ to discussion and change.
 
 The goal of publishing this guide is to encourage the creation of a community interested
 in extremely rapid development of interfaces that can support communication Bed and other
-resourcees to Public Health in this time of crisis.  [Audacious Inquiry](https://ainq.com) is publishing this
-material as follows:
-
-This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) ![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)
+resourcees to Public Health in this time of crisis.
 
 This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.

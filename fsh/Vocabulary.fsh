@@ -5,8 +5,8 @@ Description: "This Value Set is used to indicate whether a bed is in use (O), av
 * http://terminology.hl7.org/CodeSystem/v2-0116#O
 * http://terminology.hl7.org/CodeSystem/v2-0116#U
 
-CodeSystem: SanerBedType
-Title: "Bed Type Coding System"
+CodeSystem: BedType
+Title: "Saner Bed Type Coding System"
 Description: "This Coding System fills gaps describing types of care services that a bed can support."
 * #ROOM "Top level category for rooms" "Rooms used for treatment of inpatient or ambulatory patients"
 *    #OR "Operating Room" "Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room."
@@ -42,21 +42,21 @@ Description: "This Value Set describes the types of care services that a bed can
 * http://terminology.hl7.org/CodeSystem/v3-RoleCode#HOSP
 *   http://terminology.hl7.org/CodeSystem/v3-RoleCode#ICU
 *   http://terminology.hl7.org/CodeSystem/v3-RoleCode#ER
-* SanerBedType#OR
-* SanerBedType#NURSERY
-* SanerBedType#BURNU
+* BedType#OR
+* BedType#NURSERY
+* BedType#BURNU
 
 ValueSet: BedProperty
 Title: "Bed Property"
 Description: "This value set describes other properties of a bed, such as the ability to support isolation."
-* SanerBedType#NEGISO
-* SanerBedType#OTHISO
-* SanerBedType#NONISO
+* BedType#NEGISO
+* BedType#OTHISO
+* BedType#NONISO
 
 CodeSystem: LocationFields
 Title: "Location Resource Field Names"
 Description: "This Coding System identifies legal field names in a FHIR R4 Location Resource."
-* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Location"
+* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
 * ^status = #active
 * ^content = #complete
 * #Location

@@ -52,7 +52,7 @@ InstanceOf: http://hl7.org/fhir/StructureDefinition/ConceptMap
  * group[0].element[7].target.code = #PHU
  * group[0].element[7].target.equivalence = #equivalent
  * group[0].element[7].target.comment = "Ward beds on a closed/locked psychiatric unit or ward beds where a patient will be staffed by an attendant."
- * group[1].target = "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"
+ * group[1].target = "http://hl7.org/fhir/us/saner/CodeSystem/BedType"
  * group[1].element[0].code = #Burn
  * group[1].element[0].display = "Burn beds"
  * group[1].element[0].target.code = #BURNU

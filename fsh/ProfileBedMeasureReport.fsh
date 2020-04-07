@@ -1,4 +1,5 @@
 ValueSet: OnlyCompleteOrPending
+Description: "This valueset is used to limit the reported status to complete or pending for a MeasureReport"
 * http://hl7.org/fhir/measure-report-status#complete
 * http://hl7.org/fhir/measure-report-status#pending
 

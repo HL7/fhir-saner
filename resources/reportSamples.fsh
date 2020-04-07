@@ -23,7 +23,7 @@ Description : "Example MeasureReport of positive for AK on 03/31/2020"
 * identifier.value = "2"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 64.0685
@@ -52,7 +52,7 @@ Description : "Example MeasureReport of totalTestResults for AK on 03/31/2020"
 * identifier.value = "2"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 64.0685
@@ -81,7 +81,7 @@ Description : "Example MeasureReport of positiveIncrease for AK on 03/31/2020"
 * identifier.value = "2"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 64.0685
@@ -110,7 +110,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for AK on 03/31
 * identifier.value = "2"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 64.0685
@@ -139,7 +139,7 @@ Description : "Example MeasureReport of positivePercent for AK on 03/31/2020"
 * identifier.value = "2"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 64.0685
@@ -168,7 +168,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for AK on 03/31/
 * identifier.value = "2"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 64.0685
@@ -197,17 +197,17 @@ Description : "Example MeasureReport bundle for AK"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleAK-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAK-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAK-positive"
 * entry[1].resource = FEMAexampleAK-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAK-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAK-totalTestResults"
 * entry[2].resource = FEMAexampleAK-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAK-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAK-positiveIncrease"
 * entry[3].resource = FEMAexampleAK-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAK-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAK-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleAK-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAK-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAK-positivePercent"
 * entry[5].resource = FEMAexampleAK-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAK-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAK-positiveIncreasePercent"
 
 Instance: states-AL
 InstanceOf: Location
@@ -233,7 +233,7 @@ Description : "Example MeasureReport of positive for AL on 03/31/2020"
 * identifier.value = "1"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 32.7794
@@ -262,7 +262,7 @@ Description : "Example MeasureReport of totalTestResults for AL on 03/31/2020"
 * identifier.value = "1"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 32.7794
@@ -291,7 +291,7 @@ Description : "Example MeasureReport of positiveIncrease for AL on 03/31/2020"
 * identifier.value = "1"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 32.7794
@@ -320,7 +320,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for AL on 03/31
 * identifier.value = "1"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 32.7794
@@ -349,7 +349,7 @@ Description : "Example MeasureReport of positivePercent for AL on 03/31/2020"
 * identifier.value = "1"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 32.7794
@@ -378,7 +378,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for AL on 03/31/
 * identifier.value = "1"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 32.7794
@@ -407,17 +407,17 @@ Description : "Example MeasureReport bundle for AL"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleAL-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAL-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAL-positive"
 * entry[1].resource = FEMAexampleAL-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAL-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAL-totalTestResults"
 * entry[2].resource = FEMAexampleAL-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAL-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAL-positiveIncrease"
 * entry[3].resource = FEMAexampleAL-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAL-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAL-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleAL-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAL-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAL-positivePercent"
 * entry[5].resource = FEMAexampleAL-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAL-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAL-positiveIncreasePercent"
 
 Instance: states-AR
 InstanceOf: Location
@@ -443,7 +443,7 @@ Description : "Example MeasureReport of positive for AR on 03/31/2020"
 * identifier.value = "5"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.8938
@@ -472,7 +472,7 @@ Description : "Example MeasureReport of totalTestResults for AR on 03/31/2020"
 * identifier.value = "5"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.8938
@@ -501,7 +501,7 @@ Description : "Example MeasureReport of positiveIncrease for AR on 03/31/2020"
 * identifier.value = "5"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.8938
@@ -530,7 +530,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for AR on 03/31
 * identifier.value = "5"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.8938
@@ -559,7 +559,7 @@ Description : "Example MeasureReport of positivePercent for AR on 03/31/2020"
 * identifier.value = "5"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.8938
@@ -588,7 +588,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for AR on 03/31/
 * identifier.value = "5"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.8938
@@ -617,17 +617,17 @@ Description : "Example MeasureReport bundle for AR"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleAR-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAR-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAR-positive"
 * entry[1].resource = FEMAexampleAR-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAR-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAR-totalTestResults"
 * entry[2].resource = FEMAexampleAR-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAR-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAR-positiveIncrease"
 * entry[3].resource = FEMAexampleAR-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAR-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAR-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleAR-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAR-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAR-positivePercent"
 * entry[5].resource = FEMAexampleAR-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAR-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAR-positiveIncreasePercent"
 
 Instance: states-AZ
 InstanceOf: Location
@@ -653,7 +653,7 @@ Description : "Example MeasureReport of positive for AZ on 03/31/2020"
 * identifier.value = "4"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.2744
@@ -682,7 +682,7 @@ Description : "Example MeasureReport of totalTestResults for AZ on 03/31/2020"
 * identifier.value = "4"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.2744
@@ -711,7 +711,7 @@ Description : "Example MeasureReport of positiveIncrease for AZ on 03/31/2020"
 * identifier.value = "4"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.2744
@@ -740,7 +740,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for AZ on 03/31
 * identifier.value = "4"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.2744
@@ -769,7 +769,7 @@ Description : "Example MeasureReport of positivePercent for AZ on 03/31/2020"
 * identifier.value = "4"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.2744
@@ -798,7 +798,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for AZ on 03/31/
 * identifier.value = "4"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 34.2744
@@ -827,17 +827,17 @@ Description : "Example MeasureReport bundle for AZ"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleAZ-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAZ-positive"
 * entry[1].resource = FEMAexampleAZ-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAZ-totalTestResults"
 * entry[2].resource = FEMAexampleAZ-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAZ-positiveIncrease"
 * entry[3].resource = FEMAexampleAZ-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAZ-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleAZ-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAZ-positivePercent"
 * entry[5].resource = FEMAexampleAZ-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleAZ-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleAZ-positiveIncreasePercent"
 
 Instance: states-CA
 InstanceOf: Location
@@ -863,7 +863,7 @@ Description : "Example MeasureReport of positive for CA on 03/31/2020"
 * identifier.value = "6"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 37.1841
@@ -892,7 +892,7 @@ Description : "Example MeasureReport of totalTestResults for CA on 03/31/2020"
 * identifier.value = "6"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 37.1841
@@ -921,7 +921,7 @@ Description : "Example MeasureReport of positiveIncrease for CA on 03/31/2020"
 * identifier.value = "6"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 37.1841
@@ -950,7 +950,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for CA on 03/31
 * identifier.value = "6"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 37.1841
@@ -979,7 +979,7 @@ Description : "Example MeasureReport of positivePercent for CA on 03/31/2020"
 * identifier.value = "6"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 37.1841
@@ -1008,7 +1008,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for CA on 03/31/
 * identifier.value = "6"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 37.1841
@@ -1037,17 +1037,17 @@ Description : "Example MeasureReport bundle for CA"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleCA-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCA-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCA-positive"
 * entry[1].resource = FEMAexampleCA-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCA-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCA-totalTestResults"
 * entry[2].resource = FEMAexampleCA-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCA-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCA-positiveIncrease"
 * entry[3].resource = FEMAexampleCA-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCA-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCA-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleCA-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCA-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCA-positivePercent"
 * entry[5].resource = FEMAexampleCA-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCA-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCA-positiveIncreasePercent"
 
 Instance: states-CO
 InstanceOf: Location
@@ -1073,7 +1073,7 @@ Description : "Example MeasureReport of positive for CO on 03/31/2020"
 * identifier.value = "8"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9972
@@ -1102,7 +1102,7 @@ Description : "Example MeasureReport of totalTestResults for CO on 03/31/2020"
 * identifier.value = "8"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9972
@@ -1131,7 +1131,7 @@ Description : "Example MeasureReport of positiveIncrease for CO on 03/31/2020"
 * identifier.value = "8"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9972
@@ -1160,7 +1160,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for CO on 03/31
 * identifier.value = "8"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9972
@@ -1189,7 +1189,7 @@ Description : "Example MeasureReport of positivePercent for CO on 03/31/2020"
 * identifier.value = "8"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9972
@@ -1218,15 +1218,15 @@ Description : "Example MeasureReport bundle for CO"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleCO-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCO-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCO-positive"
 * entry[1].resource = FEMAexampleCO-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCO-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCO-totalTestResults"
 * entry[2].resource = FEMAexampleCO-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCO-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCO-positiveIncrease"
 * entry[3].resource = FEMAexampleCO-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCO-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCO-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleCO-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCO-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCO-positivePercent"
 
 Instance: states-CT
 InstanceOf: Location
@@ -1252,7 +1252,7 @@ Description : "Example MeasureReport of positive for CT on 03/31/2020"
 * identifier.value = "9"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 41.6219
@@ -1281,7 +1281,7 @@ Description : "Example MeasureReport of totalTestResults for CT on 03/31/2020"
 * identifier.value = "9"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 41.6219
@@ -1310,7 +1310,7 @@ Description : "Example MeasureReport of positiveIncrease for CT on 03/31/2020"
 * identifier.value = "9"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 41.6219
@@ -1339,7 +1339,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for CT on 03/31
 * identifier.value = "9"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 41.6219
@@ -1368,7 +1368,7 @@ Description : "Example MeasureReport of positivePercent for CT on 03/31/2020"
 * identifier.value = "9"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 41.6219
@@ -1397,7 +1397,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for CT on 03/31/
 * identifier.value = "9"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 41.6219
@@ -1426,17 +1426,17 @@ Description : "Example MeasureReport bundle for CT"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleCT-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCT-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCT-positive"
 * entry[1].resource = FEMAexampleCT-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCT-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCT-totalTestResults"
 * entry[2].resource = FEMAexampleCT-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCT-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCT-positiveIncrease"
 * entry[3].resource = FEMAexampleCT-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCT-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCT-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleCT-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCT-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCT-positivePercent"
 * entry[5].resource = FEMAexampleCT-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleCT-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleCT-positiveIncreasePercent"
 
 Instance: states-DC
 InstanceOf: Location
@@ -1462,7 +1462,7 @@ Description : "Example MeasureReport of positive for DC on 03/31/2020"
 * identifier.value = "11"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1491,7 +1491,7 @@ Description : "Example MeasureReport of totalTestResults for DC on 03/31/2020"
 * identifier.value = "11"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1520,7 +1520,7 @@ Description : "Example MeasureReport of positiveIncrease for DC on 03/31/2020"
 * identifier.value = "11"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1549,7 +1549,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for DC on 03/31
 * identifier.value = "11"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1578,7 +1578,7 @@ Description : "Example MeasureReport of positivePercent for DC on 03/31/2020"
 * identifier.value = "11"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1607,7 +1607,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for DC on 03/31/
 * identifier.value = "11"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1636,17 +1636,17 @@ Description : "Example MeasureReport bundle for DC"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleDC-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDC-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDC-positive"
 * entry[1].resource = FEMAexampleDC-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDC-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDC-totalTestResults"
 * entry[2].resource = FEMAexampleDC-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDC-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDC-positiveIncrease"
 * entry[3].resource = FEMAexampleDC-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDC-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDC-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleDC-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDC-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDC-positivePercent"
 * entry[5].resource = FEMAexampleDC-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDC-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDC-positiveIncreasePercent"
 
 Instance: states-DE
 InstanceOf: Location
@@ -1672,7 +1672,7 @@ Description : "Example MeasureReport of positive for DE on 03/31/2020"
 * identifier.value = "10"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9896
@@ -1701,7 +1701,7 @@ Description : "Example MeasureReport of totalTestResults for DE on 03/31/2020"
 * identifier.value = "10"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9896
@@ -1730,7 +1730,7 @@ Description : "Example MeasureReport of positiveIncrease for DE on 03/31/2020"
 * identifier.value = "10"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9896
@@ -1759,7 +1759,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for DE on 03/31
 * identifier.value = "10"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9896
@@ -1788,7 +1788,7 @@ Description : "Example MeasureReport of positivePercent for DE on 03/31/2020"
 * identifier.value = "10"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9896
@@ -1817,7 +1817,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for DE on 03/31/
 * identifier.value = "10"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 38.9896
@@ -1846,17 +1846,17 @@ Description : "Example MeasureReport bundle for DE"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleDE-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDE-positive"
 * entry[1].resource = FEMAexampleDE-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDE-totalTestResults"
 * entry[2].resource = FEMAexampleDE-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDE-positiveIncrease"
 * entry[3].resource = FEMAexampleDE-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDE-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleDE-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDE-positivePercent"
 * entry[5].resource = FEMAexampleDE-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleDE-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleDE-positiveIncreasePercent"
 
 Instance: states-FL
 InstanceOf: Location
@@ -1882,7 +1882,7 @@ Description : "Example MeasureReport of positive for FL on 03/31/2020"
 * identifier.value = "12"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositive"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positive"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1911,7 +1911,7 @@ Description : "Example MeasureReport of totalTestResults for FL on 03/31/2020"
 * identifier.value = "12"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResults"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResults"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1940,7 +1940,7 @@ Description : "Example MeasureReport of positiveIncrease for FL on 03/31/2020"
 * identifier.value = "12"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1969,7 +1969,7 @@ Description : "Example MeasureReport of totalTestResultsIncrease for FL on 03/31
 * identifier.value = "12"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERtotalTestResultsIncrease"
+* measure = "http://hl7.org/fhir/us/saner/Measure/totalTestResultsIncrease"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -1998,7 +1998,7 @@ Description : "Example MeasureReport of positivePercent for FL on 03/31/2020"
 * identifier.value = "12"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositivePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positivePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -2027,7 +2027,7 @@ Description : "Example MeasureReport of positiveIncreasePercent for FL on 03/31/
 * identifier.value = "12"
 * status = #complete
 * type = #summary
-* measure = "http://ainq.com/fhir/us/saner/Measure/SANERpositiveIncreasePercent"
+* measure = "http://hl7.org/fhir/us/saner/Measure/positiveIncreasePercent"
 * subject.extension.url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * subject.extension.extension[0].url = "latitude"
 * subject.extension.extension[0].valueDecimal = 28.6305
@@ -2056,14 +2056,14 @@ Description : "Example MeasureReport bundle for FL"
 * identifier.system = "http://example.com"
 * type = #collection
 * entry[0].resource = FEMAexampleFL-positive
-* entry[0].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleFL-positive"
+* entry[0].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleFL-positive"
 * entry[1].resource = FEMAexampleFL-totalTestResults
-* entry[1].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleFL-totalTestResults"
+* entry[1].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleFL-totalTestResults"
 * entry[2].resource = FEMAexampleFL-positiveIncrease
-* entry[2].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleFL-positiveIncrease"
+* entry[2].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleFL-positiveIncrease"
 * entry[3].resource = FEMAexampleFL-totalTestResultsIncrease
-* entry[3].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleFL-totalTestResultsIncrease"
+* entry[3].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleFL-totalTestResultsIncrease"
 * entry[4].resource = FEMAexampleFL-positivePercent
-* entry[4].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleFL-positivePercent"
+* entry[4].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleFL-positivePercent"
 * entry[5].resource = FEMAexampleFL-positiveIncreasePercent
-* entry[5].fullUrl = "http://ainq.com/fhir/us/saner/MeasureReport/FEMAexampleFL-positiveIncreasePercent"
+* entry[5].fullUrl = "http://hl7.org/fhir/us/saner/MeasureReport/FEMAexampleFL-positiveIncreasePercent"

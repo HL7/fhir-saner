@@ -101,7 +101,7 @@ The [HAvBEDtoFHIR Concept Map](ConceptMap-HAvBED2toFHIR.html) maps from vocabula
 in the HAvBED2 specification to terminology defined in HL7 FHIR R4 and in this guide.
 
 Codes for NURSERY, BURNU, and OR are defined in the
-[SANER Bed Type Code System](CodeSystem-SanerBedType.html) created to fill the gaps in existing
+[SANER Bed Type Code System](CodeSystem-BedType.html) created to fill the gaps in existing
 FHIR R4 Coding Systems.
 
 Property
@@ -117,8 +117,8 @@ This value set is used to identify beds that support negative airflow
 or other isolation. Isolation capabilities are "features" that can be added
 to a "Bed" by placing it in a location that supports isolation.
 
-The values in this value set come from the [Saner Bed Type Coding System](CodeSystem-SanerBedType.html).
+The values in this value set come from the [Saner Bed Type Coding System](CodeSystem-BedType.html).
 
 The [HAvBEDtoFHIR Concept Map](ConceptMap-HAvBED2toFHIR.html) maps from vocabulary defined
-in the HAvBED2 specification to terminology defined [SANER Bed Type Code System](CodeSystem-SanerBedType.html)
+in the HAvBED2 specification to terminology defined [SANER Bed Type Code System](CodeSystem-BedType.html)
 of this guide, created to fill the gaps in existing FHIR R4 Coding Systems.

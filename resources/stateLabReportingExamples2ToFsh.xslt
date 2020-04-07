@@ -6,7 +6,7 @@
     <xsl:output indent="yes" method="text" />
     <xsl:strip-space elements="*"/>
     <xsl:variable name="geo" select="document('US-States-Geocenters.xml')"/>
-    <xsl:variable name="base" select="'http://ainq.com/fhir/us/saner/'"/>
+    <xsl:variable name="base" select="'http://hl7.org/fhir/us/saner/'"/>
     <xsl:template match="/">
         <xsl:apply-templates select="results/result[state/@value != 'AS'][position() &lt;= 10]"/>
     </xsl:template>
@@ -131,7 +131,7 @@
                         <xsl:with-param name="value" select="@value"/>
                         <xsl:with-param name="data" select="../*"/>
                         <xsl:with-param name="def"
-                            select="document('../output/Measure-SANERpositivePercent.xml', $state)"/>
+                            select="document('../output/Measure-positivePercent.xml', $state)"/>
                         <xsl:with-param name="state" select="$state"/>
                         <xsl:with-param name="date" select="$date"/>
                     </xsl:call-template>
@@ -142,7 +142,7 @@
                         <xsl:with-param name="value" select="@value"/>
                         <xsl:with-param name="data" select="../*"/>
                         <xsl:with-param name="def"
-                            select="document('../output/Measure-SANERpositiveIncreasePercent.xml', $state)"/>
+                            select="document('../output/Measure-positiveIncreasePercent.xml', $state)"/>
                         <xsl:with-param name="state" select="$state"/>
                         <xsl:with-param name="date" select="$date"/>
                     </xsl:call-template>

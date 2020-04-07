@@ -35,6 +35,6 @@ NOTE: This value may represent available beds included in the counts of other ty
 </table>
 
 NOTE: NURSURY, BURNU, OR, NEGISO, OTHISO and NONISO come from the [SANER Bed Type Code
-System](CodeSystem-SanerBedType.html) which was created to fill the gaps in existing
+System](CodeSystem-BedType.html) which was created to fill the gaps in existing
 FHIR R4 Coding Systems.
 
