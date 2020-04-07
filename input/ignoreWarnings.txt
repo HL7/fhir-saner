@@ -1,7 +1,5 @@
-// Add warning and/or information messages here after you've confirmed that they aren't really a problem
-// (And include comments like this justifying why)
-
-// We are using the as recommended approach, but this is not yet understood by the IG Builder fro vocabulary around FHIR Element names
+== Suppressed Messages ==
+# We are using the as recommended approach, but this is not yet understood by the IG Builder for vocabulary around FHIR Element names
 ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
 ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
 ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"

@@ -172,6 +172,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/SanerPopulationMeasures"
+        },
+        "name": "SANER Population Measure Groups",
+        "description": "Groups defined by The SANER Project for measure populations",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Organization/AK-DPH"
         },
         "name": "AK-DPH",
@@ -807,6 +815,62 @@
           "reference": "ConceptMap/HAvBED2toFHIR"
         },
         "name": "HAvBED2 to FHIR Concept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERBeds"
+        },
+        "name": "Bed Availability and Use Reporting",
+        "description": "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERC19CumulativeTesting"
+        },
+        "name": "Laboratory Orders and Results Cumulative Reporting",
+        "description": "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites based the Vice President Pence Letter to Hospital Administrators.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERC19Pats"
+        },
+        "name": "Suspected or Confirmed COVID-19 Patient Reporting",
+        "description": "This measure demonstrates reporting about suspected or confirmed patients at a facility location based on CDC/NHSN reporting requirements.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERC19Testing"
+        },
+        "name": "Laboratory Orders and Results Daily Increase Reporting",
+        "description": "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites based the Vice President Pence Letter to Hospital Administrators.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERCDCReporting"
+        },
+        "name": "Bed Availability and Use Reporting",
+        "description": "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERFEMAReporting"
+        },
+        "name": "Laboratory Orders and Results Daily Increase Reporting",
+        "description": "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites based the Vice President Pence Letter to Hospital Administrators.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Measure/SANERVents"
+        },
+        "name": "Mechanical Ventilators Reporting",
+        "description": "This measure demonstrates reporting on ventilator availability and use at a facility location based on CDC/NHSN reporting requirements.",
         "exampleBoolean": true
       },
       {

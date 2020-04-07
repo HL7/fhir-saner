@@ -10,7 +10,7 @@ Title: "Total Acute Beds"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#91537007 "Hospital bed, device (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -38,7 +38,7 @@ Title: "Occupied ICU Beds "
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Total number of staffed inpatient ICU beds that are occupied"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#91537007 "Hospital bed, device (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -65,7 +65,7 @@ Title: "Total Staffed ICU Beds"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Total number of staffed inpatient intensive care unit (ICU) beds"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#91537007 "Hospital bed, device (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -91,7 +91,7 @@ Title: "Available Staffed Inpatient Beds"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Total number of staffed inpatient beds that are occupied"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#91537007 "Hospital bed, device (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -116,7 +116,7 @@ Title: "Total Inpatient Beds"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#91537007 "Hospital bed, device (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -141,7 +141,7 @@ Title: "Covid Confirmed or Suspected Patients"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#116154003 "Patient (person)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -166,7 +166,7 @@ Title: "Covid Confirmed or Suspected Patients on Ventilation"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#116154003 "Patient (person)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -191,7 +191,7 @@ Title: "In Use Ventilators"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Total number of ventilators in use"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#91537007 "Hospital bed, device (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -216,7 +216,7 @@ Title: "Available Ventilators"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Total number of ventilators available"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#706172005 "Ventilator Equipment (physical object)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -241,7 +241,7 @@ Title: "Covid Confirmed or Suspected Patients with 2-week+ Onset"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#116154003 "Patient (person)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -266,7 +266,7 @@ Title: "Covid Confirmed or Suspected Patients in ED or Overflow awaiting Inpatie
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#116154003 "Patient (person)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -291,7 +291,7 @@ Title: "Covid Confirmed or Suspected Patients in ED or Overflow awaiting Inpatie
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#116154003 "Patient (person)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -316,7 +316,7 @@ Title: "Covid Confirmed or Suspected Deaths in any hospital or ED Location"
  * contact.telecom.value = "nhsn@cdc.gov"
  * description = "Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#419620001 "Death (Event)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -341,7 +341,7 @@ Title: "New Diagnostic Tests Ordered/Received"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "Midnight to midnight cutoff, tests ordered on previous date queried"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -366,7 +366,7 @@ Title: "Cumulative Diagnostic Tests Ordered/Received"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "All tests ordered to date."
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "cumulative from start date"
@@ -391,7 +391,7 @@ Title: "New Tests Resulted"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "Midnight to midnight cutoff, test results released on previous date queried"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -416,7 +416,7 @@ Title: "Cumulative Specimens Rejected"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "All specimens rejected for testing to date"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "cumulative from start date"
@@ -441,7 +441,7 @@ Title: "Cumulative Tests Performed"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "All tests with results released to date"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "cumulative from start date"
@@ -466,7 +466,7 @@ Title: "New Positive COVID-19 Tests"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "Midnight to midnight cutoff, positive test results released on previous date queried"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -491,7 +491,7 @@ Title: "Cumulative Positive COVID-19 Tests"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "All positive test results released to date"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "cumulative from start date"
@@ -516,7 +516,7 @@ Title: "Percent Positive among Newly Resulted Tests"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "# of new positive test results released / # of total new tests released for previous date queried"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "last day"
@@ -541,7 +541,7 @@ Title: "Cumulative Percent Positive among Resulted Tests"
  * contact.telecom.value = "fema-hhs-covid-diagnostics-tf@fema.dhs.gov"
  * description = "# of total positive results to released date / # of total tests results released to date"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840535000 "COVID-19"
+ * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * topic = http://snomed.info/sct#15220000 "Laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "cumulative from start date"

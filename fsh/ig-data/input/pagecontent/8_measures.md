@@ -62,6 +62,10 @@ A more detailed model about how these are related follows.
 ![Model](Model.svg)
 
 ## Approach 1
+Approach 1 describes each reported value in the spreadsheets as a separate measure.
+This provides an advantage in that individual values can be accessed, but makes
+reporting more complex, and duplicates information.
+
 ### CDC Measures
 The CDC defined 13 fields (Measures) to report. The fields can be reported by uploading
 a CSV file to the CDC reporting application.  These have all been defined using the
@@ -247,4 +251,33 @@ produced from this data.  These are listed below:
   + [Cumulative Percent Positive](MeasureReport-FEMAexampleFL-positivePercent.json.html)
   + [Cumulative Orders](MeasureReport-FEMAexampleFL-totalTestResults.json.html)
   + [Daily Orders](MeasureReport-FEMAexampleFL-totalTestResultsIncrease.json.html)
+
+## Approach 2
+Approach 2 collects related reported values in the spreadsheets into single measures.
+Items are grouped based on where they are being reported and what they are counting (Beds, Vents, Encounters, Labs).
+Individual values must now be parsed from the report, but related values are retained
+together, and there is less duplication.
+
+### CDC/NHSN Measures
+* [Bed Availability and Use Measures](Measure-SANERBeds.json.html)
+* [Ventilator Availability and Use Measures](Measure-SANERVends.json.html)
+* [COVID-19 Patient Measures](Measure-SANERC19Pats.json.html)
+### FEMA Measures
+* [Lab Orders and Results Daily Reporting](Measure-SANERC19Testing.json.html)
+* [Lab Orders and Results Cumulative Reporting](Measure-SANERC19CumulativeTesting.json.html)
+
+## Approach 3
+Approach 3 considers collecting all measures reported to a single agency into a single Measure.
+This further simplifies reporting, but causes data loss as it combines ratio, a continuous-variable
+measures, losing the ability to accurately describe the type of measure being reported.
+
+This approach might be preferred if topic, scoring, and type were either shifted from Measure to
+Measure.group, or replicated in Measure.group with the constraint that you may use one form or the
+other, but if using both they must be identical, allowing a measure to have groups with different
+topics, scorings and types.
+
+### CDC/NHSN Measures
+* [All CDC/NHSN Reporting Measures](Measure-SANERCDCReporting.json.html)
+### FEMA Measures
+* [All FEMA Reporting Measures](Measure-SANERFEMAReporting.json.html)
 

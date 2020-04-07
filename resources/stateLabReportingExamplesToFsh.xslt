@@ -6,6 +6,12 @@
     <xsl:output indent="yes" method="text" />
     <xsl:strip-space elements="*"/>
     <xsl:variable name="geo" select="document('US-States-Geocenters.xml')"/>
+    
+    <xsl:variable name="measures" select="
+        document('../output/Measure-SANERBeds.xml') | document('../output/Measure-SANERVents.xml') | document('../output/Measure-SANERC19Pats.xml') |
+        document('../output/Measure-SANERC19Testing.xml') | document('../output/Measure-SANERC19CumulativeTesting.xml') |
+        document('../output/Measure-SANERCDAReporting.xml') | document('../output/Measure-SANERFEMAReporting.xml')"/>
+    
     <xsl:variable name="base" select="'http://ainq.com/fhir/us/saner/'"/>
     <xsl:template match="/">
         <xsl:apply-templates select="results/result[state/@value != 'AS'][position() &lt;= 10]"/>
