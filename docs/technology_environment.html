@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>AINQ.FHIR.US.SANER\Technology Environment - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+<link href="assets/css/assess.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+                <div id="hl7-nav" style='float:left;'>
+          <a id="hl7-logo" no-external="true" href="http://ainq.org">
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+          </a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
+	  <li><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
+      </li>
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vocabulary<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedProperty.html">Bed Property</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedType.html">Bed Type</a>
+      </li>
+      <li>
+        <a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Technology Environment</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Technology Environment</h2>
+  
+  
+  
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#systems-having-clinical-data" id="markdown-toc-systems-having-clinical-data">Systems Having Clinical Data</a>    <ul>
+      <li><a href="#ehr-systems" id="markdown-toc-ehr-systems">EHR Systems</a></li>
+      <li><a href="#emergency-department-systems" id="markdown-toc-emergency-department-systems">Emergency Department Systems</a></li>
+      <li><a href="#labor-and-delivery-systems" id="markdown-toc-labor-and-delivery-systems">Labor and Delivery Systems</a></li>
+      <li><a href="#icucentral-monitoring-systems" id="markdown-toc-icucentral-monitoring-systems">ICU/Central Monitoring Systems</a></li>
+      <li><a href="#laboratory-information-systems-lis" id="markdown-toc-laboratory-information-systems-lis">Laboratory Information Systems (LIS)</a></li>
+      <li><a href="#clinical-data-repository-cdr" id="markdown-toc-clinical-data-repository-cdr">Clinical Data Repository (CDR)</a></li>
+    </ul>
+  </li>
+  <li><a href="#systems-not-having-clinical-data" id="markdown-toc-systems-not-having-clinical-data">Systems Not Having Clinical Data</a>    <ul>
+      <li><a href="#bed-management-aka-housekeeping-systems" id="markdown-toc-bed-management-aka-housekeeping-systems">Bed Management (a.k.a Housekeeping) systems</a></li>
+      <li><a href="#asset-management-systems" id="markdown-toc-asset-management-systems">Asset Management systems</a></li>
+      <li><a href="#surgeryoperating-room-scheduling-systems" id="markdown-toc-surgeryoperating-room-scheduling-systems">Surgery/Operating Room Scheduling systems</a></li>
+      <li><a href="#staff-scheduling-systems" id="markdown-toc-staff-scheduling-systems">Staff Scheduling systems</a></li>
+      <li><a href="#inventory-control-systems" id="markdown-toc-inventory-control-systems">Inventory Control systems</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<p>Resource utilization data can be provided from a number of sources:</p>
+
+<ul>
+  <li><strong>Systems Having Clinical Data</strong>
+    <ul>
+      <li>Electronic Health Record (EHR) systems</li>
+      <li>Emergency Department systems</li>
+      <li>Labor and Delivery systems</li>
+      <li>ICU and/or Nursing Central Monitoring systems (or stations)</li>
+      <li>Laboratory Information Systems (LIS)</li>
+      <li>Clinical Data Repository (CDR)</li>
+    </ul>
+  </li>
+  <li><strong>Systems not having Clinical Data</strong>
+    <ul>
+      <li>Bed Management (a.k.a., Housekeeping) systems</li>
+      <li>Asset Management systems</li>
+      <li>Surgery/Operating Room Scheduling systems</li>
+      <li>Staff Scheduling systems</li>
+      <li>Inventory Control systems</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="systems-having-clinical-data">Systems Having Clinical Data</h2>
+<p>Systems in this category have access to some or all of the health records for a patient,
+and so can often provide information indicating COVID-19 positive or suspected patients, as
+well as associated problems, patient demographics, and patient acuity (severity of
+illness) data.</p>
+
+<p>These systems are often used to place or discontinue orders that involve medical
+equipment (ventilators, viral tests), and so may be used to determine in use (in
+the case of ventilators) or consumed (in the case of test kits) equipment or
+supplies.  Some orders might also indicate use of special equipment (e.g., isolation
+rooms).</p>
+
+<h3 id="ehr-systems">EHR Systems</h3>
+<p>Comprehensive Hospital EHR solutions may include the capabilities of the other systems
+listed above, or may be integrated with other systems but not have direct access
+to all data available to the other systems. Even when those capabilities are available
+in the comprehensive EHR solution, other solutions may still be chosen by the facility
+for a variety of reasons (features, cost, legacy, et cetera).</p>
+
+<p>An EHR may have access to beds in use (because it has access to the active patient
+census), but may not be able to report status of beds as known by the bed management
+or housekeeping system (e.g., beds available for use, beds needing cleaning, beds
+taken out of or added into service, et cetera).</p>
+
+<p>An EHR may also be able to make an educated guess about number of ventilators in use
+based on the number of orders for ventilation on the patients it knows about, and the
+current status of the order.  But it may not ever know if the ventilator actually
+showed up.</p>
+
+<h3 id="emergency-department-systems">Emergency Department Systems</h3>
+<p>Emergency department systems are simply specialized EHR systems that facilitate patient
+care in an emergency room setting.  They may also support or be integrated with central
+monitoring solutions enabling ED staff to monitor the status of patients on monitoring
+equipment.</p>
+
+<h3 id="labor-and-delivery-systems">Labor and Delivery Systems</h3>
+<p>Labor and Delivery systems are another form of specialized EHR system that facilitate
+treatment of mothers about to give birth in the hospital.  They generally support the
+ongoing monitoring of the pregnant mother, and integrate with specialized equipment
+used to support newborn delivery (e.g., fetal heart rate monitors, infusion pumps used
+for anesthesia, et cetera), as well as routine charting while a mother is still in labor
+but not yet ready to deliver.</p>
+
+<h3 id="icucentral-monitoring-systems">ICU/Central Monitoring Systems</h3>
+<p>These systems bring real-time data from the EHR together with a variety of monitoring
+and treatment equipment, often to provide clinical decision support for patients
+needing intensive ongoing treatment and monitoring.  As a result, these systems have
+awareness of the use of medical equipment, patient acuity, disease progression, as well
+as the in-use status of ICU beds, and perhaps the total bed capacity of an ICU (but
+not necessarily the availability).</p>
+
+<h3 id="laboratory-information-systems-lis">Laboratory Information Systems (LIS)</h3>
+<p>These systems are used to track and control incoming laboratory orders, to manage
+laboratory automation equipment, and to manage outgoing reports on orders.  They have
+some access to patient clinical and demographic data, usually enough to facilitate the
+interpretation of the laboratory test, but may not have access to more data.  Some
+data available in an LIS might be used to assess patient acuity, but the EHR would
+be a better source of this assessment.</p>
+
+<p>An LIS may also be connected to external public health reporting systems to support
+biosurveillance efforts (tracking of disease in populations).  Just the placement of
+certain kinds of laboratory orders may be used as a trigger to initiate alerting to
+public health (e.g., highly contagious disease such as Ebola or Zika, or a condition
+which may indicate a high risk situation in the community such as food poisoning).</p>
+
+<p>Past biosurveillance efforts have not generally considered the impact of disease (such
+as COVID) on available beds, but the impact of COVID on hospital bed capacity has now
+made this a significant consideration.  Some organizations do use data from internal
+laboratory information systems to track the prevalence, type and locations associated
+healthcare acquired infections (HAI) (e.g., due to antibiotic resistant strains of
+bacteria), in order to provide appropriate treatment and infection mitigation precautions.</p>
+
+<h3 id="clinical-data-repository-cdr">Clinical Data Repository (CDR)</h3>
+<p>Hospitals (especially those affiliated with academic medical centers) utilized CDRs
+for long term storage of clinical data to support analysis, research, measurement and
+quality improvement efforts.</p>
+
+<p>CDRs may have information about the long term impacts of disease, treatment procedures
+and other factors on hospital operations might be used to aid research, but do not
+generally have real-time data that could support utilization reporting.  Some of the
+data in a CDR might show impacts of high utilization on hospital operations, which could
+aid in identifying and addressing long term monitoring efforts.</p>
+
+<h2 id="systems-not-having-clinical-data">Systems Not Having Clinical Data</h2>
+<p>Systems in this category do not generally have access to health records for a patient,
+but may have information about the status of hospital equipment and supplies.</p>
+
+<h3 id="bed-management-aka-housekeeping-systems">Bed Management (a.k.a Housekeeping) systems</h3>
+<p>Bed Management systems are designed specifically to keep track of the status of beds
+as it impacts the operations of the housekeeping in a facility.  After a patient is
+discharged, the bed and room in which they resided need to be cleaned, special precautions
+may be needed when rooms have been contaminated (exposed to blood, or infectious organism),
+et cetera. These systems may also have operational data about ongoing bed turnaround
+time (e.g., from unoccupied to available for use) which can also impact availability.</p>
+
+<p>In smaller hospitals, the classic method of bed management is a bed board, which can
+be as simple as a whiteboard with a table drawn on it, with room numbers, more complex
+systems might use a magnetic board with pretty colored magnets. Modern bed boards get
+really fancy, with ward layouts and color codes, and all sorts of bells and whistles
+and reports and graphs.</p>
+
+<h3 id="asset-management-systems">Asset Management systems</h3>
+<p>Asset management systems usually involve solutions that enable a facility to manage
+equipment inventory, tags that can be attached to equipment for tracking, and sensors
+that can detect nearby tags deployed in the hospital environment.  Sensors typically
+need to be connected in some way to the hospital network, and the tags need to be able
+to operate in a radio-frequency and sound and barrier rich environment.  This is combined
+with mapping software which can plot the location of a device in a facility (in 3
+dimensions).</p>
+
+<p>A typical small hospital might have 10 ICU beds.  With an average ventilator utilization
+ranging somewhere between 15-45% (see https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3840149/),
+a facility could reasonably get by with a half dozen or so ventilators for the ICU.
+Under <strong>normal</strong> circumstances, such a small number would be reasonably managed with manual
+processes, and for that reason, many facilities may not use asset management systems
+to track ventilator locations.</p>
+
+<h3 id="surgeryoperating-room-scheduling-systems">Surgery/Operating Room Scheduling systems</h3>
+<p>In certain crises, the availability of an open OR for a patient needing immediate emergency
+surgery would be a critical piece of facility resource utilization data.  Operating
+rooms use a variety of complex, expensive medical equipment and resources.  Hospitals
+that want to optimize use of these spaces and equipment will use information systems designed to
+ensure greater utilization of available capacity.  These systems will be aware of the
+availability of operating room schedules and equipment needs.</p>
+
+<h3 id="staff-scheduling-systems">Staff Scheduling systems</h3>
+<p>Staff scheduling in a hospital is an ongoing effort of looking at the current patient
+load, forecast patient load, existing staff schedules and available surge staffing resources.
+Again, in smaller facilities, much of the essential management might be done through
+human effort, and on a whiteboard. In larger facilities, software might be used to address
+optimization of schedules, improving staff utilization.</p>
+
+<h3 id="inventory-control-systems">Inventory Control systems</h3>
+<p>Inventory control systems are used to track expendable supplies, and manage replenishment
+and distribution across the facility.  These systems may have information about available
+supplies such as surgical and N95 masks and personal protective equipment (PPE) that is
+frequently replaced.  But these systems don’t always automate the counting process that is
+often needed to track current inventory levels for this kind of equipment.</p>
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,1580 @@
+Instance: FEMA_Example_AK
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for AK"
+* Bundle[1].id = FEMA-example-AK
+* Bundle[1]identifier = http://example.com#d1e3
+* Bundle[1].type = #collection
+* Bundle[1].resource = FEMA-example-AK-positive
+* Bundle[1].resource = FEMA-example-AK-totalTestResults
+* Bundle[1].resource = FEMA-example-AK-positiveIncrease
+* Bundle[1].resource = FEMA-example-AK-totalTestResultsIncrease
+* Bundle[1].resource = FEMA-example-AK-positivePercent
+* Bundle[1].resource = FEMA-example-AK-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-AK-positive
+Description: "Example MeasureReport of positive for AK on 20200331"
+* MeasureReport.id = FEMA-example-AK-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#2
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 64.0685
+* MeasureReport.subject.extension[1].extension.valueDecimal = 152.2782
+* MeasureReport.subject.reference = Location/states-AK
+* MeasureReport.subject.display = State of Alaska
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AK-DPH
+* MeasureReport.reporter.display = AlaskaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 119
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3713
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AK-totalTestResults
+Description: "Example MeasureReport of totalTestResults for AK on 20200331"
+* MeasureReport.id = FEMA-example-AK-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#2
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 64.0685
+* MeasureReport.subject.extension[1].extension.valueDecimal = 152.2782
+* MeasureReport.subject.reference = Location/states-AK
+* MeasureReport.subject.display = State of Alaska
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AK-DPH
+* MeasureReport.reporter.display = AlaskaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 3713
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3713
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AK-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for AK on 20200331"
+* MeasureReport.id = FEMA-example-AK-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#2
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 64.0685
+* MeasureReport.subject.extension[1].extension.valueDecimal = 152.2782
+* MeasureReport.subject.reference = Location/states-AK
+* MeasureReport.subject.display = State of Alaska
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AK-DPH
+* MeasureReport.reporter.display = AlaskaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 5
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3713
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AK-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for AK on 20200331"
+* MeasureReport.id = FEMA-example-AK-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#2
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 64.0685
+* MeasureReport.subject.extension[1].extension.valueDecimal = 152.2782
+* MeasureReport.subject.reference = Location/states-AK
+* MeasureReport.subject.display = State of Alaska
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AK-DPH
+* MeasureReport.reporter.display = AlaskaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 59
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3713
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AK-positivePercent
+Description: "Example MeasureReport of positivePercent for AK on 20200331"
+* MeasureReport.id = FEMA-example-AK-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#2
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 64.0685
+* MeasureReport.subject.extension[1].extension.valueDecimal = 152.2782
+* MeasureReport.subject.reference = Location/states-AK
+* MeasureReport.subject.display = State of Alaska
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AK-DPH
+* MeasureReport.reporter.display = AlaskaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 119
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 3713
+
+        
+      * group.population.measureScore = 3713
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_AL
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for AL"
+* Bundle[2].id = FEMA-example-AL
+* Bundle[2]identifier = http://example.com#d1e36
+* Bundle[2].type = #collection
+* Bundle[2].resource = FEMA-example-AL-positive
+* Bundle[2].resource = FEMA-example-AL-totalTestResults
+* Bundle[2].resource = FEMA-example-AL-positiveIncrease
+* Bundle[2].resource = FEMA-example-AL-totalTestResultsIncrease
+* Bundle[2].resource = FEMA-example-AL-positivePercent
+* Bundle[2].resource = FEMA-example-AL-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-AL-positive
+Description: "Example MeasureReport of positive for AL on 20200331"
+* MeasureReport.id = FEMA-example-AL-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#1
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 32.7794
+* MeasureReport.subject.extension[1].extension.valueDecimal = 86.8287
+* MeasureReport.subject.reference = Location/states-AL
+* MeasureReport.subject.display = State of Alabama
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AL-DPH
+* MeasureReport.reporter.display = AlabamaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 981
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 7279
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AL-totalTestResults
+Description: "Example MeasureReport of totalTestResults for AL on 20200331"
+* MeasureReport.id = FEMA-example-AL-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#1
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 32.7794
+* MeasureReport.subject.extension[1].extension.valueDecimal = 86.8287
+* MeasureReport.subject.reference = Location/states-AL
+* MeasureReport.subject.display = State of Alabama
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AL-DPH
+* MeasureReport.reporter.display = AlabamaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 7279
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 7279
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AL-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for AL on 20200331"
+* MeasureReport.id = FEMA-example-AL-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#1
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 32.7794
+* MeasureReport.subject.extension[1].extension.valueDecimal = 86.8287
+* MeasureReport.subject.reference = Location/states-AL
+* MeasureReport.subject.display = State of Alabama
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AL-DPH
+* MeasureReport.reporter.display = AlabamaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 122
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 7279
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AL-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for AL on 20200331"
+* MeasureReport.id = FEMA-example-AL-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#1
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 32.7794
+* MeasureReport.subject.extension[1].extension.valueDecimal = 86.8287
+* MeasureReport.subject.reference = Location/states-AL
+* MeasureReport.subject.display = State of Alabama
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AL-DPH
+* MeasureReport.reporter.display = AlabamaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 726
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 7279
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AL-positivePercent
+Description: "Example MeasureReport of positivePercent for AL on 20200331"
+* MeasureReport.id = FEMA-example-AL-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#1
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 32.7794
+* MeasureReport.subject.extension[1].extension.valueDecimal = 86.8287
+* MeasureReport.subject.reference = Location/states-AL
+* MeasureReport.subject.display = State of Alabama
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AL-DPH
+* MeasureReport.reporter.display = AlabamaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 981
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 7279
+
+        
+      * group.population.measureScore = 7279
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_AR
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for AR"
+* Bundle[3].id = FEMA-example-AR
+* Bundle[3]identifier = http://example.com#d1e67
+* Bundle[3].type = #collection
+* Bundle[3].resource = FEMA-example-AR-positive
+* Bundle[3].resource = FEMA-example-AR-totalTestResults
+* Bundle[3].resource = FEMA-example-AR-positiveIncrease
+* Bundle[3].resource = FEMA-example-AR-totalTestResultsIncrease
+* Bundle[3].resource = FEMA-example-AR-positivePercent
+* Bundle[3].resource = FEMA-example-AR-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-AR-positive
+Description: "Example MeasureReport of positive for AR on 20200331"
+* MeasureReport.id = FEMA-example-AR-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#5
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.8938
+* MeasureReport.subject.extension[1].extension.valueDecimal = 92.4426
+* MeasureReport.subject.reference = Location/states-AR
+* MeasureReport.subject.display = State of Arkansas
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AR-DPH
+* MeasureReport.reporter.display = ArkansasDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 523
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 6482
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AR-totalTestResults
+Description: "Example MeasureReport of totalTestResults for AR on 20200331"
+* MeasureReport.id = FEMA-example-AR-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#5
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.8938
+* MeasureReport.subject.extension[1].extension.valueDecimal = 92.4426
+* MeasureReport.subject.reference = Location/states-AR
+* MeasureReport.subject.display = State of Arkansas
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AR-DPH
+* MeasureReport.reporter.display = ArkansasDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 6482
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 6482
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AR-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for AR on 20200331"
+* MeasureReport.id = FEMA-example-AR-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#5
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.8938
+* MeasureReport.subject.extension[1].extension.valueDecimal = 92.4426
+* MeasureReport.subject.reference = Location/states-AR
+* MeasureReport.subject.display = State of Arkansas
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AR-DPH
+* MeasureReport.reporter.display = ArkansasDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 50
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 6482
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AR-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for AR on 20200331"
+* MeasureReport.id = FEMA-example-AR-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#5
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.8938
+* MeasureReport.subject.extension[1].extension.valueDecimal = 92.4426
+* MeasureReport.subject.reference = Location/states-AR
+* MeasureReport.subject.display = State of Arkansas
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AR-DPH
+* MeasureReport.reporter.display = ArkansasDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 747
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 6482
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AR-positivePercent
+Description: "Example MeasureReport of positivePercent for AR on 20200331"
+* MeasureReport.id = FEMA-example-AR-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#5
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.8938
+* MeasureReport.subject.extension[1].extension.valueDecimal = 92.4426
+* MeasureReport.subject.reference = Location/states-AR
+* MeasureReport.subject.display = State of Arkansas
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AR-DPH
+* MeasureReport.reporter.display = ArkansasDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 523
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 6482
+
+        
+      * group.population.measureScore = 6482
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_AS
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for AS"
+* Bundle[4].id = FEMA-example-AS
+* Bundle[4]identifier = http://example.com#d1e100
+* Bundle[4].type = #collection
+* Bundle[4].resource = FEMA-example-AS-totalTestResults
+* Bundle[4].resource = FEMA-example-AS-positiveIncrease
+* Bundle[4].resource = FEMA-example-AS-totalTestResultsIncrease
+* Bundle[4].resource = FEMA-example-AS-positivePercent
+* Bundle[4].resource = FEMA-example-AS-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-AS-totalTestResults
+Description: "Example MeasureReport of totalTestResults for AS on 20200331"
+* MeasureReport.id = FEMA-example-AS-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#60
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 
+* MeasureReport.subject.extension[1].extension.valueDecimal = 
+* MeasureReport.subject.reference = Location/states-AS
+* MeasureReport.subject.display = State of 
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AS-DPH
+* MeasureReport.reporter.display = Department of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 3
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AS-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for AS on 20200331"
+* MeasureReport.id = FEMA-example-AS-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#60
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 
+* MeasureReport.subject.extension[1].extension.valueDecimal = 
+* MeasureReport.subject.reference = Location/states-AS
+* MeasureReport.subject.display = State of 
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AS-DPH
+* MeasureReport.reporter.display = Department of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 0
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AS-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for AS on 20200331"
+* MeasureReport.id = FEMA-example-AS-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#60
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 
+* MeasureReport.subject.extension[1].extension.valueDecimal = 
+* MeasureReport.subject.reference = Location/states-AS
+* MeasureReport.subject.display = State of 
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AS-DPH
+* MeasureReport.reporter.display = Department of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 3
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AS-positivePercent
+Description: "Example MeasureReport of positivePercent for AS on 20200331"
+* MeasureReport.id = FEMA-example-AS-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#60
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 
+* MeasureReport.subject.extension[1].extension.valueDecimal = 
+* MeasureReport.subject.reference = Location/states-AS
+* MeasureReport.subject.display = State of 
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AS-DPH
+* MeasureReport.reporter.display = Department of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 3
+
+        
+      * group.population.measureScore = 
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_AZ
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for AZ"
+* Bundle[5].id = FEMA-example-AZ
+* Bundle[5]identifier = http://example.com#d1e131
+* Bundle[5].type = #collection
+* Bundle[5].resource = FEMA-example-AZ-positive
+* Bundle[5].resource = FEMA-example-AZ-totalTestResults
+* Bundle[5].resource = FEMA-example-AZ-positiveIncrease
+* Bundle[5].resource = FEMA-example-AZ-totalTestResultsIncrease
+* Bundle[5].resource = FEMA-example-AZ-positivePercent
+* Bundle[5].resource = FEMA-example-AZ-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-AZ-positive
+Description: "Example MeasureReport of positive for AZ on 20200331"
+* MeasureReport.id = FEMA-example-AZ-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#4
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.2744
+* MeasureReport.subject.extension[1].extension.valueDecimal = 111.6602
+* MeasureReport.subject.reference = Location/states-AZ
+* MeasureReport.subject.display = State of Arizona
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AZ-DPH
+* MeasureReport.reporter.display = ArizonaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 1289
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 19371
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AZ-totalTestResults
+Description: "Example MeasureReport of totalTestResults for AZ on 20200331"
+* MeasureReport.id = FEMA-example-AZ-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#4
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.2744
+* MeasureReport.subject.extension[1].extension.valueDecimal = 111.6602
+* MeasureReport.subject.reference = Location/states-AZ
+* MeasureReport.subject.display = State of Arizona
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AZ-DPH
+* MeasureReport.reporter.display = ArizonaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 19371
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 19371
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AZ-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for AZ on 20200331"
+* MeasureReport.id = FEMA-example-AZ-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#4
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.2744
+* MeasureReport.subject.extension[1].extension.valueDecimal = 111.6602
+* MeasureReport.subject.reference = Location/states-AZ
+* MeasureReport.subject.display = State of Arizona
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AZ-DPH
+* MeasureReport.reporter.display = ArizonaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 132
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 19371
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AZ-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for AZ on 20200331"
+* MeasureReport.id = FEMA-example-AZ-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#4
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.2744
+* MeasureReport.subject.extension[1].extension.valueDecimal = 111.6602
+* MeasureReport.subject.reference = Location/states-AZ
+* MeasureReport.subject.display = State of Arizona
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AZ-DPH
+* MeasureReport.reporter.display = ArizonaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 2612
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 19371
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-AZ-positivePercent
+Description: "Example MeasureReport of positivePercent for AZ on 20200331"
+* MeasureReport.id = FEMA-example-AZ-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#4
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 34.2744
+* MeasureReport.subject.extension[1].extension.valueDecimal = 111.6602
+* MeasureReport.subject.reference = Location/states-AZ
+* MeasureReport.subject.display = State of Arizona
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-AZ-DPH
+* MeasureReport.reporter.display = ArizonaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 1289
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 19371
+
+        
+      * group.population.measureScore = 19371
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_CA
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for CA"
+* Bundle[6].id = FEMA-example-CA
+* Bundle[6]identifier = http://example.com#d1e165
+* Bundle[6].type = #collection
+* Bundle[6].resource = FEMA-example-CA-positive
+* Bundle[6].resource = FEMA-example-CA-totalTestResults
+* Bundle[6].resource = FEMA-example-CA-positiveIncrease
+* Bundle[6].resource = FEMA-example-CA-totalTestResultsIncrease
+* Bundle[6].resource = FEMA-example-CA-positivePercent
+* Bundle[6].resource = FEMA-example-CA-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-CA-positive
+Description: "Example MeasureReport of positive for CA on 20200331"
+* MeasureReport.id = FEMA-example-CA-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#6
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 37.1841
+* MeasureReport.subject.extension[1].extension.valueDecimal = 119.4696
+* MeasureReport.subject.reference = Location/states-CA
+* MeasureReport.subject.display = State of California
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CA-DPH
+* MeasureReport.reporter.display = CaliforniaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 7482
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 29254
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CA-totalTestResults
+Description: "Example MeasureReport of totalTestResults for CA on 20200331"
+* MeasureReport.id = FEMA-example-CA-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#6
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 37.1841
+* MeasureReport.subject.extension[1].extension.valueDecimal = 119.4696
+* MeasureReport.subject.reference = Location/states-CA
+* MeasureReport.subject.display = State of California
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CA-DPH
+* MeasureReport.reporter.display = CaliforniaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 29254
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 29254
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CA-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for CA on 20200331"
+* MeasureReport.id = FEMA-example-CA-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#6
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 37.1841
+* MeasureReport.subject.extension[1].extension.valueDecimal = 119.4696
+* MeasureReport.subject.reference = Location/states-CA
+* MeasureReport.subject.display = State of California
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CA-DPH
+* MeasureReport.reporter.display = CaliforniaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 1035
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 29254
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CA-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for CA on 20200331"
+* MeasureReport.id = FEMA-example-CA-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#6
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 37.1841
+* MeasureReport.subject.extension[1].extension.valueDecimal = 119.4696
+* MeasureReport.subject.reference = Location/states-CA
+* MeasureReport.subject.display = State of California
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CA-DPH
+* MeasureReport.reporter.display = CaliforniaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 2258
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 29254
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CA-positivePercent
+Description: "Example MeasureReport of positivePercent for CA on 20200331"
+* MeasureReport.id = FEMA-example-CA-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#6
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 37.1841
+* MeasureReport.subject.extension[1].extension.valueDecimal = 119.4696
+* MeasureReport.subject.reference = Location/states-CA
+* MeasureReport.subject.display = State of California
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CA-DPH
+* MeasureReport.reporter.display = CaliforniaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 7482
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 29254
+
+        
+      * group.population.measureScore = 29254
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_CO
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for CO"
+* Bundle[7].id = FEMA-example-CO
+* Bundle[7]identifier = http://example.com#d1e200
+* Bundle[7].type = #collection
+* Bundle[7].resource = FEMA-example-CO-positive
+* Bundle[7].resource = FEMA-example-CO-totalTestResults
+* Bundle[7].resource = FEMA-example-CO-positiveIncrease
+* Bundle[7].resource = FEMA-example-CO-totalTestResultsIncrease
+* Bundle[7].resource = FEMA-example-CO-positivePercent
+* Bundle[7].resource = FEMA-example-CO-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-CO-positive
+Description: "Example MeasureReport of positive for CO on 20200331"
+* MeasureReport.id = FEMA-example-CO-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#8
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9972
+* MeasureReport.subject.extension[1].extension.valueDecimal = 105.5478
+* MeasureReport.subject.reference = Location/states-CO
+* MeasureReport.subject.display = State of Colorado
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CO-DPH
+* MeasureReport.reporter.display = ColoradoDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 2627
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 15364
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CO-totalTestResults
+Description: "Example MeasureReport of totalTestResults for CO on 20200331"
+* MeasureReport.id = FEMA-example-CO-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#8
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9972
+* MeasureReport.subject.extension[1].extension.valueDecimal = 105.5478
+* MeasureReport.subject.reference = Location/states-CO
+* MeasureReport.subject.display = State of Colorado
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CO-DPH
+* MeasureReport.reporter.display = ColoradoDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 15364
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 15364
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CO-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for CO on 20200331"
+* MeasureReport.id = FEMA-example-CO-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#8
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9972
+* MeasureReport.subject.extension[1].extension.valueDecimal = 105.5478
+* MeasureReport.subject.reference = Location/states-CO
+* MeasureReport.subject.display = State of Colorado
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CO-DPH
+* MeasureReport.reporter.display = ColoradoDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 0
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 15364
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CO-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for CO on 20200331"
+* MeasureReport.id = FEMA-example-CO-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#8
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9972
+* MeasureReport.subject.extension[1].extension.valueDecimal = 105.5478
+* MeasureReport.subject.reference = Location/states-CO
+* MeasureReport.subject.display = State of Colorado
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CO-DPH
+* MeasureReport.reporter.display = ColoradoDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 0
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 15364
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CO-positivePercent
+Description: "Example MeasureReport of positivePercent for CO on 20200331"
+* MeasureReport.id = FEMA-example-CO-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#8
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9972
+* MeasureReport.subject.extension[1].extension.valueDecimal = 105.5478
+* MeasureReport.subject.reference = Location/states-CO
+* MeasureReport.subject.display = State of Colorado
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CO-DPH
+* MeasureReport.reporter.display = ColoradoDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 2627
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 15364
+
+        
+      * group.population.measureScore = 15364
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_CT
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for CT"
+* Bundle[8].id = FEMA-example-CT
+* Bundle[8]identifier = http://example.com#d1e233
+* Bundle[8].type = #collection
+* Bundle[8].resource = FEMA-example-CT-positive
+* Bundle[8].resource = FEMA-example-CT-totalTestResults
+* Bundle[8].resource = FEMA-example-CT-positiveIncrease
+* Bundle[8].resource = FEMA-example-CT-totalTestResultsIncrease
+* Bundle[8].resource = FEMA-example-CT-positivePercent
+* Bundle[8].resource = FEMA-example-CT-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-CT-positive
+Description: "Example MeasureReport of positive for CT on 20200331"
+* MeasureReport.id = FEMA-example-CT-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#9
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 41.6219
+* MeasureReport.subject.extension[1].extension.valueDecimal = 72.7273
+* MeasureReport.subject.reference = Location/states-CT
+* MeasureReport.subject.display = State of Connecticut
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CT-DPH
+* MeasureReport.reporter.display = ConnecticutDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 3128
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 16157
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CT-totalTestResults
+Description: "Example MeasureReport of totalTestResults for CT on 20200331"
+* MeasureReport.id = FEMA-example-CT-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#9
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 41.6219
+* MeasureReport.subject.extension[1].extension.valueDecimal = 72.7273
+* MeasureReport.subject.reference = Location/states-CT
+* MeasureReport.subject.display = State of Connecticut
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CT-DPH
+* MeasureReport.reporter.display = ConnecticutDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 16157
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 16157
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CT-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for CT on 20200331"
+* MeasureReport.id = FEMA-example-CT-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#9
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 41.6219
+* MeasureReport.subject.extension[1].extension.valueDecimal = 72.7273
+* MeasureReport.subject.reference = Location/states-CT
+* MeasureReport.subject.display = State of Connecticut
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CT-DPH
+* MeasureReport.reporter.display = ConnecticutDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 557
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 16157
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CT-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for CT on 20200331"
+* MeasureReport.id = FEMA-example-CT-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#9
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 41.6219
+* MeasureReport.subject.extension[1].extension.valueDecimal = 72.7273
+* MeasureReport.subject.reference = Location/states-CT
+* MeasureReport.subject.display = State of Connecticut
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CT-DPH
+* MeasureReport.reporter.display = ConnecticutDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 1557
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 16157
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-CT-positivePercent
+Description: "Example MeasureReport of positivePercent for CT on 20200331"
+* MeasureReport.id = FEMA-example-CT-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#9
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 41.6219
+* MeasureReport.subject.extension[1].extension.valueDecimal = 72.7273
+* MeasureReport.subject.reference = Location/states-CT
+* MeasureReport.subject.display = State of Connecticut
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-CT-DPH
+* MeasureReport.reporter.display = ConnecticutDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 3128
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 16157
+
+        
+      * group.population.measureScore = 16157
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_DC
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for DC"
+* Bundle[9].id = FEMA-example-DC
+* Bundle[9]identifier = http://example.com#d1e266
+* Bundle[9].type = #collection
+* Bundle[9].resource = FEMA-example-DC-positive
+* Bundle[9].resource = FEMA-example-DC-totalTestResults
+* Bundle[9].resource = FEMA-example-DC-positiveIncrease
+* Bundle[9].resource = FEMA-example-DC-totalTestResultsIncrease
+* Bundle[9].resource = FEMA-example-DC-positivePercent
+* Bundle[9].resource = FEMA-example-DC-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-DC-positive
+Description: "Example MeasureReport of positive for DC on 20200331"
+* MeasureReport.id = FEMA-example-DC-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#11
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 28.6305
+* MeasureReport.subject.extension[1].extension.valueDecimal = 82.4497
+* MeasureReport.subject.reference = Location/states-DC
+* MeasureReport.subject.display = State of District of Columbia
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DC-DPH
+* MeasureReport.reporter.display = District of ColumbiaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 495
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3757
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DC-totalTestResults
+Description: "Example MeasureReport of totalTestResults for DC on 20200331"
+* MeasureReport.id = FEMA-example-DC-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#11
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 28.6305
+* MeasureReport.subject.extension[1].extension.valueDecimal = 82.4497
+* MeasureReport.subject.reference = Location/states-DC
+* MeasureReport.subject.display = State of District of Columbia
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DC-DPH
+* MeasureReport.reporter.display = District of ColumbiaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 3757
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3757
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DC-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for DC on 20200331"
+* MeasureReport.id = FEMA-example-DC-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#11
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 28.6305
+* MeasureReport.subject.extension[1].extension.valueDecimal = 82.4497
+* MeasureReport.subject.reference = Location/states-DC
+* MeasureReport.subject.display = State of District of Columbia
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DC-DPH
+* MeasureReport.reporter.display = District of ColumbiaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 94
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3757
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DC-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for DC on 20200331"
+* MeasureReport.id = FEMA-example-DC-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#11
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 28.6305
+* MeasureReport.subject.extension[1].extension.valueDecimal = 82.4497
+* MeasureReport.subject.reference = Location/states-DC
+* MeasureReport.subject.display = State of District of Columbia
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DC-DPH
+* MeasureReport.reporter.display = District of ColumbiaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 674
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 3757
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DC-positivePercent
+Description: "Example MeasureReport of positivePercent for DC on 20200331"
+* MeasureReport.id = FEMA-example-DC-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#11
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 28.6305
+* MeasureReport.subject.extension[1].extension.valueDecimal = 82.4497
+* MeasureReport.subject.reference = Location/states-DC
+* MeasureReport.subject.display = State of District of Columbia
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DC-DPH
+* MeasureReport.reporter.display = District of ColumbiaDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 495
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 3757
+
+        
+      * group.population.measureScore = 3757
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%
+Instance: FEMA_Example_DE
+InstanceOf: Bundle
+Description: "Example MeasureReport bundle for DE"
+* Bundle[10].id = FEMA-example-DE
+* Bundle[10]identifier = http://example.com#d1e299
+* Bundle[10].type = #collection
+* Bundle[10].resource = FEMA-example-DE-positive
+* Bundle[10].resource = FEMA-example-DE-totalTestResults
+* Bundle[10].resource = FEMA-example-DE-positiveIncrease
+* Bundle[10].resource = FEMA-example-DE-totalTestResultsIncrease
+* Bundle[10].resource = FEMA-example-DE-positivePercent
+* Bundle[10].resource = FEMA-example-DE-positivePercentIncrease
+Instance: MeasureReport
+InstanceOf: FEMA-example-DE-positive
+Description: "Example MeasureReport of positive for DE on 20200331"
+* MeasureReport.id = FEMA-example-DE-positive
+* MeasureReport.identifier = https://www.census.gov/geographies#10
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositive
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9896
+* MeasureReport.subject.extension[1].extension.valueDecimal = 75.505
+* MeasureReport.subject.reference = Location/states-DE
+* MeasureReport.subject.display = State of Delaware
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DE-DPH
+* MeasureReport.reporter.display = DelawareDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 406
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 4102
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DE-totalTestResults
+Description: "Example MeasureReport of totalTestResults for DE on 20200331"
+* MeasureReport.id = FEMA-example-DE-totalTestResults
+* MeasureReport.identifier = https://www.census.gov/geographies#10
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResults
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9896
+* MeasureReport.subject.extension[1].extension.valueDecimal = 75.505
+* MeasureReport.subject.reference = Location/states-DE
+* MeasureReport.subject.display = State of Delaware
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DE-DPH
+* MeasureReport.reporter.display = DelawareDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 4102
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 4102
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DE-positiveIncrease
+Description: "Example MeasureReport of positiveIncrease for DE on 20200331"
+* MeasureReport.id = FEMA-example-DE-positiveIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#10
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositiveIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9896
+* MeasureReport.subject.extension[1].extension.valueDecimal = 75.505
+* MeasureReport.subject.reference = Location/states-DE
+* MeasureReport.subject.display = State of Delaware
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DE-DPH
+* MeasureReport.reporter.display = DelawareDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 142
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 4102
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DE-totalTestResultsIncrease
+Description: "Example MeasureReport of totalTestResultsIncrease for DE on 20200331"
+* MeasureReport.id = FEMA-example-DE-totalTestResultsIncrease
+* MeasureReport.identifier = https://www.census.gov/geographies#10
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERtotalTestResultsIncrease
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9896
+* MeasureReport.subject.extension[1].extension.valueDecimal = 75.505
+* MeasureReport.subject.reference = Location/states-DE
+* MeasureReport.subject.display = State of Delaware
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DE-DPH
+* MeasureReport.reporter.display = DelawareDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.code = #measure-population
+* group.population.code.count = 1622
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #initial-population
+* group.population.code.count = 4102
+
+        
+      Instance: MeasureReport
+InstanceOf: FEMA-example-DE-positivePercent
+Description: "Example MeasureReport of positivePercent for DE on 20200331"
+* MeasureReport.id = FEMA-example-DE-positivePercent
+* MeasureReport.identifier = https://www.census.gov/geographies#10
+* MeasureReport.status = #complete
+* MeasureReport.type = #summary
+* MeasureReport.measure = http://hl7.org/fhir/us/saner/Measure/SANERpositivePercent
+* MeasureReport.subject.extension.url = http://hl7.org/fhir/StructureDefinition/geolocation
+* MeasureReport.subject.extension[0].extension.url = latitude
+* MeasureReport.subject.extension[0].extension.valueDecimal = latitude
+* MeasureReport.subject.extension[1].extension.url = 38.9896
+* MeasureReport.subject.extension[1].extension.valueDecimal = 75.505
+* MeasureReport.subject.reference = Location/states-DE
+* MeasureReport.subject.display = State of Delaware
+* MeasureReport.date = 2020-03-31
+* MeasureReport.reporter.reference = Organization/-DE-DPH
+* MeasureReport.reporter.display = DelawareDepartment of Public Health
+* MeasureReport.period.start = 2020-03-31
+* MeasureReport.period.end = 2020-03-31
+* group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #numerator
+* group.population.code.count = 406
+
+        
+      * group.population.code.coding.system = http://terminology.hl7.org/CodeSystem/measure-population
+* group.population.code.coding.code = #denominator
+* group.population.code.count = 4102
+
+        
+      * group.population.measureScore = 4102
+* group.population.unit = %
+* group.population.code = http://unitsofmeasure.org#%

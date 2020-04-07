@@ -1,0 +1,40 @@
+{
+  "name": "hl7.fhir.us.saner",
+  "version": "0.1.0",
+  "canonical": "http://hl7.org/fhir/us/saner",
+  "url": "http://hl7.org/fhir/us/saner",
+  "title": "Situational Awareness for Novel Epidemic Response",
+  "description": "The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of high level situational awareness information from inpatient facilities to centralized data repositories to support the treatment of novel influenza-like illness.",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "keywords": [
+    "COVID",
+    "Coronovirus",
+    "ILI",
+    "Influenza",
+    "COVID19",
+    "COVID-19",
+    "SARS-Cov-2",
+    "Bed",
+    "Ventilator",
+    "Availability"
+  ],
+  "language": "en",
+  "author": "HL7 International",
+  "maintainers": [
+    {
+      "name": "HL7 Mobile Health Workgroup",
+      "url": "http://hl7.org/Special/committees/mobile/index.cfm"
+    },
+    {
+      "name": "Audacious Inquiry",
+      "url": "http://ainq.com"
+    },
+    {
+      "name": "Keith W. Boone",
+      "email": "mailto:kboone@ainq.com"
+    }
+  ],
+  "license": "CC0-1.0"
+}

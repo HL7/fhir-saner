@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BedFeature"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>BedFeature</h2><ul><li>Include these codes as defined in <a href="CodeSystem-SanerBedType.html"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-SanerBedType.html#SanerBedType-NEGISO">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td><a href="CodeSystem-SanerBedType.html#SanerBedType-OTHISO">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td><a href="CodeSystem-SanerBedType.html#SanerBedType-NONISO">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://ainq.com/fhir/us/saner/ValueSet/BedFeature"/>
+  <version value="0.1.0"/>
+  <name value="BedFeature"/>
+  <status value="active"/>
+  <date value="2020-03-23T15:28:25-04:00"/>
+  <publisher value="Audacious Inquiry"/>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <compose>
+    <include>
+      <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+      <concept>
+        <code value="NEGISO"/>
+      </concept>
+      <concept>
+        <code value="OTHISO"/>
+      </concept>
+      <concept>
+        <code value="NONISO"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

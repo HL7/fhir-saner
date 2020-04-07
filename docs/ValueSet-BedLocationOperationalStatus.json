@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BedLocationOperationalStatus",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Location Operational Status</h2><div><p>This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.</p>\n</div><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/v2/0116/index.html\">http://terminology.hl7.org/ValueSet/v2-0116</a></li><li>Exclude these codes as defined in <a href=\"http://hl7.org/fhir/R4/v2/0116/index.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-I\">I</a></td><td>Isolated</td><td/></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>"
+  },
+  "url": "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
+  "version": "0.1.0",
+  "name": "BedLocationOperationalStatus",
+  "title": "Bed Location Operational Status",
+  "status": "active",
+  "date": "2020-03-29T12:02:42-04:00",
+  "publisher": "Audacious Inquiry",
+  "contact": [
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/v2-0116"
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0116",
+        "concept": [
+          {
+            "code": "I"
+          }
+        ]
+      }
+    ]
+  }
+}

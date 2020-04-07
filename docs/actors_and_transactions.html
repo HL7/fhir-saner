@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>AINQ.FHIR.US.SANER\Actors and Transactions - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+<link href="assets/css/assess.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+                <div id="hl7-nav" style='float:left;'>
+          <a id="hl7-logo" no-external="true" href="http://ainq.org">
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+          </a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
+	  <li><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
+      </li>
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vocabulary<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedProperty.html">Bed Property</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedType.html">Bed Type</a>
+      </li>
+      <li>
+        <a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Actors and Transactions</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Actors and Transactions</h2>
+  
+  
+  
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+  <li><a href="#actor-options" id="markdown-toc-actor-options">Actor Options</a></li>
+  <li><a href="#transaction-descriptions" id="markdown-toc-transaction-descriptions">Transaction Descriptions</a></li>
+</ul>
+
+</div>
+
+<p>This section defines the actors and transactions in this implementation guide.</p>
+
+<p>Figure 1.1-1 below shows the actors directly
+involved in the SANER
+Profile and the relevant transactions between them.</p>
+
+<p><img src="ActorsAndTransactions.svg" alt="Figure 3-1: SANER Actor Diagram" title="Figure 3-1: SANER Actor Diagram" /></p>
+
+<p><strong>Figure 3-1: SANER Actor Diagram</strong></p>
+
+<p>Table 3-1 lists the transactions for each actor directly involved in the SANER Implementation Guide. To claim compliance with this guide, an actor shall
+support all required transactions (labeled “R”) and may support the
+optional transactions (labeled “O”).</p>
+
+<table border="1" borderspacing="0" style="border: 1px solid black; border-collapse: collapse">
+<caption>
+<b>
+Table 3-1: SANER Implementation Guide - Actors and Transactions
+</b>
+</caption>
+<thead>
+<tr class="odd" style="background: gray;">
+<th>Actors</th>
+<th>Transactions</th>
+<th>Optionality</th>
+</tr>
+</thead>
+<tbody>
+                
+<tr>
+                        
+<td rowspan="2">
+<a href="#measure-source">Measure Source</a>
+</td>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 1</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 2</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td rowspan="3">
+<a href="#measure-consumer">Measure Consumer</a>
+</td>
+                        
+<td>
+<a href="transaction-3.html">
+                        Communicate Results [REPORT-TX]</a>
+</td>
+<td align="center">
+                        R
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 3</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 4</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td rowspan="5">
+<a href="#measure-intermediary">Measure Intermediary</a>
+</td>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a><br /><i>As Measure Source</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 1</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a><br /><i>As Measure Source</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 2</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-3.html">
+                        Communicate Results [REPORT-TX]</a><br /><i>As Measure Consumer</i>
+</td>
+<td align="center">
+                        R
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-1.html">
+                        Query Measure [PULL-TX]</a><br /><i>As Measure Consumer</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 3</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href="transaction-2.html">
+                        Produce Measure [PUSH-TX]</a><br /><i>As Measure Consumer</i>
+</td>
+<td align="center">
+                        C
+
+                                <sup> 4</sup>
+                            
+</td>
+</tr>
+                    
+</tbody>
+</table>
+
+<p><strong>Notes:</strong></p>
+
+<ol>
+  <li>
+    <p>This transaction is required when the Measure Source implements the <a href="#pull-option">Pull Option</a>.</p>
+  </li>
+  <li>
+    <p>This transaction is required when the Measure Source implements the <a href="#push-option">Push Option</a>.</p>
+  </li>
+  <li>
+    <p>This transaction is required when the Measure Consumer implements the <a href="#pull-option">Pull Option</a>.</p>
+  </li>
+  <li>
+    <p>This transaction is required when the Measure Consumer implements the <a href="#push-option">Push Option</a>.</p>
+  </li>
+</ol>
+
+<h3 id="actors">Actors</h3>
+<p>The actors in this profile are described in more detail in the sections below.</p>
+
+<h4 id="measure-source">Measure Source</h4>
+
+<p>The Measure Source Actor reports results for a single facility, collection of facilities
+        or aggragated data for a region</p>
+
+<p>TBD</p>
+
+<h5 id="measure-source-requirements">Measure Source Requirements</h5>
+<ol>
+  <li>
+    <ol>
+      <li></li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="measure-consumer">Measure Consumer</h4>
+
+<p>The Measure Consumer provides access to aggregated or fine-grained
+data gathered from one or more Measure Sources.</p>
+
+<h5 id="measure-consumer-requirements">Measure Consumer Requirements</h5>
+<ol>
+  <li>
+    <ol>
+      <li></li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="measure-intermediary">Measure Intermediary</h4>
+
+<p>The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.</p>
+
+<p>This actor represents the composition of a <a href="actors_and_transactions.html#measure-source">Measure Source</a> with a <a href="actors_and_transactions.html#measure-source">Measure Source</a>.</p>
+
+<h4 id="bridging-between-incompatible-options">Bridging between Incompatible Options</h4>
+<p>A Measure Consumer that implements the Dump and Pull Options that is grouped with a Measure Source implementing the Push and API
+Options can be used as a bridge to adapt a Meaure Source implementing the Dump and Push options to communicate with a Measure
+Consumer implementing the API and Push options.</p>
+
+<p><img src="Bridge.svg" alt="Bridge" /></p>
+
+<h4 id="measure-repository">Measure Repository</h4>
+<p>A Measure Consumer that implements the API Option and Push Option that is grouped with a Measure Source implementing the Pull and API
+Options is essentially the definition of a FHIR Server.</p>
+
+<p><img src="FHIRServer.svg" alt="FHIR Server" /></p>
+
+<h4 id="measure-to-group-slicer">Measure to Group Slicer</h4>
+<p>A Measure Consumer that implements the API and Pull Option can be grouped with a Measure Source implementing the Push, API and
+Fine-Grained option to “slice and dice” Measure Reports into Groups, populating a Measure Consumer with fine-grained data from
+a Measure Source.  This adapter can be used to add the Fine Grained Option to a Measure Repository.</p>
+
+<p><img src="Slicer.svg" alt="Slicer" /></p>
+
+<h3 id="actor-options">Actor Options</h3>
+
+<p>Options that may be selected for each actor in this guide, are listed in Table 3.2-1 below. Dependencies
+between options when applicable are specified in notes.</p>
+
+<table border="1" style="border: 1px solid black; border-collapse: collapse">
+    <caption><b>Table 3.2-1 Actor Options</b></caption>
+    <thead>
+        <tr style="background: gray;" class="odd">
+            <td>Actor</td>
+            <td>Option Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+                <tr>
+                
+                    <td rowspan="7">Measure Source</td>
+                
+                <td><a href="#storage-option">Storage Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#api-option">API Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#push-option">Push Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#pull-option">Pull Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#bed-option">Bed Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#asset-option">Asset Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#group-option">Group Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                    <td rowspan="7">Measure Consumer</td>
+                
+                <td><a href="#storage-option">Storage Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#api-option">API Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#push-option">Push Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#pull-option">Pull Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#bed-option">Bed Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#asset-option">Asset Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#group-option">Group Option</a></td>
+                </tr>
+            
+                <tr><td>Measure Intermediary</td>
+                <td><i>No Options Defined</i></td></tr>
+            
+    </tbody>
+</table>
+
+<p>The options in this guide are describe in more detail the sections below.</p>
+
+<h4 id="storage-option">Storage Option</h4>
+
+<p>An actor implementing the Storage Option supports the ability to exchange FHIR Resources through
+various means of simple data transfer, rather than directly through a FHIR API call. This include mechanisms such
+as SFTP, S3 Blob Storage, Azure Blob Storage, a Message Queue, https: File Download, File System dumps, or Direct Messages with a
+data payload. Supported formats include JSON, XML and NDJSON.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-1">Measure Source</h5>
+
+<p>A <a href="actors_and_transactions.html#measure-source">Measure Source</a> actor implementing the Storage Option uses external storage to communicate data.</p>
+
+<h5 id="measure-consumer-1">Measure Consumer</h5>
+
+<p>A <a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> actor implementing the Storage Option uses external storage to communicate data.</p>
+
+<h4 id="api-option">API Option</h4>
+
+<p>An actor implementing the API Option supports the
+ability to exchange FHIR Resources using <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful APIs</a>.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-2">Measure Source</h5>
+
+<p>An <a href="actors_and_transactions.html#measure-source">Measure Source</a> actor implementing the API option uses FHIR RESTful APIs to communicate data.</p>
+
+<h5 id="measure-consumer-2">Measure Consumer</h5>
+
+<p>An <a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> actor implementing the API option uses FHIR RESTful APIs to communicate data.</p>
+
+<h4 id="push-option">Push Option</h4>
+
+<p>An actor implementing the Push Option supports the periodic push of resources
+describing the current status of health delivery resources to a centralized collection point.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-3">Measure Source</h5>
+
+<p>A Measure Source implementing the Push Option periodically sends updates to a
+<a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> using the <a href="actors_and_transactions.html#produce-measure">Produce Measure</a> transaction.</p>
+
+<h5 id="measure-consumer-3">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Push Option periodically recieves updates from the
+<a href="actors_and_transactions.html#measure-source">Measure Source</a> using the <a href="actors_and_transactions.html#produce-measure">Produce Measure</a> transaction.</p>
+
+<h4 id="pull-option">Pull Option</h4>
+
+<p>An actor implementing the Pull Option supports the periodic pull resources
+describing the current status of selected health delivery resources.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-4">Measure Source</h5>
+
+<p>A Measure Source implementing the Pull Option is periodically queried by an
+<a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a> using the <a href="actors_and_transactions.html#query-measure">Query Measure</a> transaction to enable collection of the current status.</p>
+
+<h5 id="measure-consumer-4">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Pull Option periodically queries a
+<a href="actors_and_transactions.html#measure-source">Measure Source</a> using the <a href="actors_and_transactions.html#query-measure">Query Measure</a> transaction to enable collection of the current status.</p>
+
+<h4 id="bed-option">Bed Option</h4>
+
+<p>An actor supporting the Bed Option can describe the status of beds.</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-5">Measure Source</h5>
+
+<p>An Measure Source implementing the Bed Option generates data on beds.</p>
+
+<h5 id="measure-consumer-5">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Bed Option consumes data about beds.</p>
+
+<h4 id="asset-option">Asset Option</h4>
+
+<p>An actor supporting the Asset Option can describe the status of non-bed treatment
+resources, such as ventilators, respirators, infusion pumps, monitoring equipment, et cetera</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-6">Measure Source</h5>
+
+<p>An Measure Source implementing the Asset Option generates data on other Assets
+(e.g., ventilators, respirators, PPE, and other equipment or supplies).</p>
+
+<h5 id="measure-consumer-6">Measure Consumer</h5>
+
+<p>An Measure Consumer implementing the Asset Option consumes data about other Assets
+(e.g., ventilators, respirators, PPE, and other equipment or supplies).</p>
+
+<h4 id="group-option">Group Option</h4>
+
+<p>An actor supporting the Group Option can work with Group resources representing individual strata
+values extracted from a Measure Report</p>
+
+<p>This option applies to the actors as described below.</p>
+
+<h5 id="measure-source-7">Measure Source</h5>
+
+<p>An Measure Source implementing the Group Option can produce reports using the Group Resource.</p>
+
+<h5 id="measure-consumer-7">Measure Consumer</h5>
+
+<p>An Measure Source implementing the Group Option can consume reports using the Group Resource.</p>
+
+<h3 id="transaction-descriptions">Transaction Descriptions</h3>
+<p>The transactions in this profile are summarized in the sections below.</p>
+
+<h4 id="query-measure">Query Measure</h4>
+
+<p>The Query Measure transaction allows a Measure Consumer to
+periodically query about the availability of a resource from an Measure Source.</p>
+
+<p>For more details see the detailed <a href="transaction-1.html">transaction description</a></p>
+
+<h4 id="produce-measure">Produce Measure</h4>
+
+<p>The Produce Measure transaction allows an Measure Source to
+periodically report on availability of resources to a Measure Consumer.</p>
+
+<p>For more details see the detailed <a href="transaction-2.html">transaction description</a></p>
+
+<h4 id="communicate-results">Communicate Results</h4>
+
+<p>The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
+or other systems to access resource availability data.</p>
+
+<p>For more details see the detailed <a href="transaction-3.html">transaction description</a></p>
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

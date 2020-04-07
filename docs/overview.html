@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>AINQ.FHIR.US.SANER\Overview - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+<link href="assets/css/assess.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+                <div id="hl7-nav" style='float:left;'>
+          <a id="hl7-logo" no-external="true" href="http://ainq.org">
+            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+          </a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
+	  <li><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
+      </li>
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vocabulary<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedProperty.html">Bed Property</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedType.html">Bed Type</a>
+      </li>
+      <li>
+        <a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Overview</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Overview</h2>
+  
+  
+  
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#about-this-guide" id="markdown-toc-about-this-guide">About This Guide</a></li>
+  <li><a href="#situational-awareness-for-novel-epidemic-response" id="markdown-toc-situational-awareness-for-novel-epidemic-response">Situational Awareness for Novel Epidemic Response</a></li>
+  <li><a href="#bed-availability" id="markdown-toc-bed-availability">Bed Availability</a></li>
+</ul>
+
+</div>
+
+<p>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
+of high level situational awareness information from inpatient facilities to centralized data repositories
+to support the treatment of novel influenza-like illness.</p>
+
+<h3 id="about-this-guide">About This Guide</h3>
+<p>This is a draft implementation guide to promote discussion with leaders in the Health
+IT industry, and very much a work in progress.  All content in this guide is subject
+to discussion and change.</p>
+
+<p>The goal of publishing this guide is to encourage the creation of a community interested
+in extremely rapid development of an interface that can support Public Health in this time of
+crisis.  Audacious Inquiry is publishing this material as follows:</p>
+<div>
+  <p><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" style="float:clear" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a></p>
+</div>
+<h3 id="situational-awareness-for-novel-epidemic-response">Situational Awareness for Novel Epidemic Response</h3>
+<p>Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially pandemic flu strains during the early formation of the Office of the National Coordinator in 2005.</p>
+
+<dl>
+  <dt>2006</dt>
+  <dd>Bird Flu (H5N1)</dd>
+  <dt>2009</dt>
+  <dd>Swine Flu (H1N1)</dd>
+  <dt>2012</dt>
+  <dd>Middle East Respiratory Syndrome (MERS)</dd>
+  <dt>2013</dt>
+  <dd>Another form of Bird Flu (H7N9)</dd>
+  <dt>2019</dt>
+  <dd>COVID-19 (SARS-Cov-2)</dd>
+</dl>
+
+<p>Situational Data Needs of Public Health
+Key situational data needed by public health has remained relatively consistent and well established over this time, and is to support awareness of:</p>
+
+<ol>
+  <li>Local, Regional and National case rates and trends</li>
+  <li>Bed availability for treatment</li>
+  <li>Other resources availability for treatment
+    <ul>
+      <li>Staff</li>
+      <li>Medications</li>
+      <li>Immunizations</li>
+      <li>Medical Equipment (e.g., Respirators, N95 Masks)</li>
+      <li>Supplies (e.g., Cleaning Supplies, Facemasks)</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="focusing-the-solution-space">Focusing the Solution Space</h4>
+<p>In evaluating solutions for the above challenges, we have established the following principles:</p>
+<ol>
+  <li>The solution needs to be focused on providing high ROI.</li>
+  <li>The solution should not duplicate existing efforts.</li>
+  <li>The solution needs to work with existing Health IT products currently deployed.</li>
+  <li>The uplift needed to enable an existing product to support public health information requirements needs to be low enough to effectively deliver quickly.</li>
+</ol>
+
+<h4 id="quick-assessment">Quick Assessment</h4>
+<ol>
+  <li>Existing work by <a href="https://coronavirus.jhu.edu/map.html">Johns Hopkins University</a> in aggregating case data sets and visualizing them addresses national and even regional (at the county level) trends.</li>
+  <li>Bed availability is an area where there is a great deal of existing work <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup><sup>,</sup><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup><sup>,</sup><sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, but not much prior success, although there are existing Health IT solutions that have this data (not just in the EHR).  If the solution can be interfaced rather than integrated, an
+implementation can be piloted much faster.</li>
+  <li>Other resource utilization is available in inventory control or central monitoring
+solutions, but are not necessarily readily available in the EHR.  This would be a natural
+evolution from Bed Availability.</li>
+</ol>
+
+<p>This rapid assessment leads this guide to a focus on bed availability.</p>
+
+<h3 id="bed-availability">Bed Availability</h3>
+<p>The key data for bed availability is found in Bed Management solutions integrated with
+current inpatient EHR Systems, and in departmental ICU and Central Monitoring systems.
+Such solutions support management of bed assignment for admissions and provide direction to
+housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems
+which provide ICU and Nursing central monitoring capabilities.  They are often separate components
+or modules, Standalone solutions, or third party solutions which integrate with an
+EHR System (e.g. Forward Advantage with MEDITECH).</p>
+
+<h4 id="prior-solutions-and-existing-standards">Prior Solutions and Existing Standards</h4>
+<p>Prior standards developed to address these issues have been profiled through past efforts.  These are briefly
+outlined below.</p>
+
+<h5 id="havbed-and-oasis-edxlhave-standards">HAvBED and OASIS EDXL/HAVE Standards</h5>
+<p>Most notably, the OASIS Emergency Data Exchange Language (EDXL), and the OASIS Hospital Availability Exchange
+were profiled by ANSI/HITSP in response to the AHIC Emergency Responder Use Case.  This work was advanced by
+AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
+to collect and report bed availability data.  Health and Human Services suspended the HAvBED program in 2016.
+Some of the challenges with HAvBED included:</p>
+
+<ul>
+  <li>Manually entered data in many automated bed availability systems is labor-intensive, untimely, resulting in data quality issues.</li>
+  <li>Similar issues with to the manual data entry option.</li>
+  <li>Technology standards have evolved, and HAvBED requirements did not keep pace.</li>
+  <li>Facilities and states were often reluctant to share bed availability data.</li>
+</ul>
+
+<h5 id="hl7-version-2">HL7 Version 2</h5>
+<p>Other standards which contain information about bed availability include HL7 Version 2
+(e.g., the <a href="http://www.hl7.eu/refactored/msgADT_A20.html">ADT_A20 Bed Status Update</a> message),
+and general observations profiled by ANSI/HITSP to support organizational reporting of bed availability using HL7 Version 2 OBX segments.</p>
+
+<h5 id="hl7-version-3">HL7 Version 3</h5>
+<p>No HL7 Version 3 standards were developed to support Bed management or availability.</p>
+
+<h5 id="hl7-fhir">HL7 FHIR</h5>
+<p>In HL7 FHIR the <a href="https://hl7.org/fhir/R4/location.html">Location</a> resource can describe information about
+any bed within a facility.  The <a href="https://hl7.org/fhir/R4/group.html">Group</a> resource
+can report on specific quantities of groups of resources available that match a specific
+set of characteristics.  The <a href="https://hl7.org/fhir/R4/measurereport.html">MeasureReport</a>
+resource can report on measures using counts and other metrics over a variety of resources.</p>
+
+<h6 id="device-resource">Device Resource</h6>
+<p>The Device Resource can report on medical devices, including ventilators, repirators,
+personal protective equipment such as masks, and viral test kits.  Device is not widely
+used by systems reporting on device quantities or status.</p>
+
+<h6 id="location-resource">Location Resource</h6>
+<p>While the Location resource can report on beds, it can also be used to describe buildings, wards,
+geographic area, or any other sort of place, including “mobile” places such as a mobile clinic or
+ambulance.  Given its broad application, would need to be profiled to support use for bed availability.</p>
+
+<p>While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there’s
+little use of the Location resource to report data about beds.  It is more commonly used to report
+Location data associated with the
+<a href="https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf">Common Clinical Data Set</a> (now known as the US Core Data for
+Interoperability or <a href="https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi">USCDI</a>) required by the ONC 2015 Certification
+regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
+describe the facility where an encounter occurs, the location where a procedure is performed, or
+the location of a practitioner.</p>
+
+<h6 id="group-resource">Group Resource</h6>
+<p>While the Group resource can be used to support aggregate reporting on beds, as it allows reporting
+of quantities of an item without referencing an individual item, it has not been deployed in this way by
+any knwon system.  This resource can also be used to report on other types of resources, such as
+ventilators, respirators, and N95 masks.</p>
+
+<p>NOTE: While Group doesn’t specifically support groups of Location resources, it can be used to
+report on any group of things that can be defined by characteristics, it simply cannot
+enumerate those resources.  That is not essential for the use cases in this implementation
+guide.</p>
+
+<p>The Group resource is more lightly deployed in existing EHR products. It is not
+a requirement of the 2015 Certification program.</p>
+
+<h6 id="measure-resource">Measure Resource</h6>
+<p>The MeasureReport resource can be used to support reporting of a variety of measures,
+including simple counts, with measures over different strata.  It is not readily searchable at
+the stratum level.  MeasureReport is beginning to gain traction because of efforts using
+it in the <a href="https://www.hl7.org/about/davinci/">DaVinci Project</a>.</p>
+
+<p>The table below shows the <a href="https://www.hl7.org/fhir/R4/versions.html#maturity">FHIR Maturity Model</a> Level for each of the resources described
+above.</p>
+
+<table class="grid"><thead><tr><th>Resource</th><th>Maturity Level</th></tr></thead>
+<tbody>
+<tr><td><a href="https://hl7.org/fhir/device.html">Device</a></td><td>2</td></tr>
+<tr><td><a href="https://hl7.org/fhir/group.html">Group</a></td><td>1</td></tr>
+<tr><td><a href="https://hl7.org/fhir/location.html">Location</a></td><td>3</td></tr>
+<tr><td><a href="https://hl7.org/fhir/measurereport.html">MeasureReport</a></td><td>2</td></tr>
+</tbody>
+</table>
+
+<h4 id="terminology">Terminology</h4>
+<p>Terminology plays an important role in this implementation guide.
+It can be used to describe:</p>
+<ul>
+  <li>The kind of location where the bed is located (e.g., ED, med/surgery, ICU, Pediatric,
+NICU, Isolation)</li>
+  <li>The status of a bed (e.g., available, in use, isolated, contaminated, housekeeping)</li>
+  <li>Other types of resources (e.g., ventilators, respirators, masks, et cetera)</li>
+</ul>
+
+<h5 id="location-type">Location Type</h5>
+<p>The HL7 Version 3 <a href="https://www.hl7.org/fhir/v3/ServiceDeliveryLocationRoleType/vs.html">Service Delivery Location Role Type</a>
+Value Set has been adopted as the <a href="https://www.hl7.org/fhir/terminologies.html#preferred">Preferred</a> classification system for <code class="highlighter-rouge">Location.type</code> in the Location resource in FHIR
+R4.</p>
+
+<h5 id="bed-status">Bed Status</h5>
+<p>HL7 Version 2 Table 0116 <a href="https://www.hl7.org/fhir/v2/0116/index.html">Bed Status Provides Vocabulary</a> that can describe the status
+of a bed, and has been adopted as the <a href="https://www.hl7.org/fhir/terminologies.html#extensible">Extensible</a> vocabulary
+for <code class="highlighter-rouge">Location.operationalStatus</code> in the Location resource in FHIR R4.</p>
+
+<p><strong>Footnotes</strong></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="http://www.hitsp.org/ConstructSet_Details.aspx?&amp;PrefixAlpha=4&amp;PrefixNumeric=47">HITSP C47: Resource Utilization Message</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://archive.ahrq.gov/prep/havbed2/">HAvBED2: Hospital Avaialable Beds for Emergencies and Disasters</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://www.oasis-open.org/standards#edxlhave-v1.0">Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) v1.0 incorporating Approved Errata</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489">HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

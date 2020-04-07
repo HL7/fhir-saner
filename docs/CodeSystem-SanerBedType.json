@@ -1,0 +1,69 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "SanerBedType",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Type Coding System</h2><div><p>This Coding System fills gaps describing types of care services that a bed can support.</p>\n</div><p>This code system http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">OR<a name=\"SanerBedType-OR\"> </a></td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td style=\"white-space:nowrap\">NURSERY<a name=\"SanerBedType-NURSERY\"> </a></td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td style=\"white-space:nowrap\">BURNU<a name=\"SanerBedType-BURNU\"> </a></td><td>Burn Unit</td><td>Burn ICU beds</td></tr><tr><td style=\"white-space:nowrap\">NEGISO<a name=\"SanerBedType-NEGISO\"> </a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style=\"white-space:nowrap\">OTHISO<a name=\"SanerBedType-OTHISO\"> </a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style=\"white-space:nowrap\">NONISO<a name=\"SanerBedType-NONISO\"> </a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>"
+  },
+  "url": "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+  "version": "0.1.0",
+  "name": "SanerBedType",
+  "title": "Bed Type Coding System",
+  "status": "active",
+  "date": "2020-03-29T12:02:42-04:00",
+  "publisher": "Audacious Inquiry",
+  "contact": [
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This Coding System fills gaps describing types of care services that a bed can support.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "OR",
+      "display": "Operating Room",
+      "definition": "Operating Rooms"
+    },
+    {
+      "code": "NURSERY",
+      "display": "Nursery",
+      "definition": "Neonatal or newborn (non-ICU) care beds"
+    },
+    {
+      "code": "BURNU",
+      "display": "Burn Unit",
+      "definition": "Burn ICU beds"
+    },
+    {
+      "code": "NEGISO",
+      "display": "Negative Pressure Isolation Unit",
+      "definition": "Beds in a negative pressure isolation environment"
+    },
+    {
+      "code": "OTHISO",
+      "display": "Other Isolation Unit",
+      "definition": "Beds in an other (non-negative pressure) isolation environment"
+    },
+    {
+      "code": "NONISO",
+      "display": "Non-isolating unit",
+      "definition": "Bed in a unit that does not support isolation"
+    }
+  ]
+}

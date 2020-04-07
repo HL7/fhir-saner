@@ -1,0 +1,237 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "DeviceFields",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Device Resource Field Names</h2><div><p>This Coding System identifies legal field names in a FHIR R4 Device Resource.</p>\n</div><p>This code system http://hl7.org/fhir/R4/StructureDefinition/Device defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Device<a name=\"DeviceFields-Device\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.id<a name=\"DeviceFields-Device.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.meta<a name=\"DeviceFields-Device.46meta\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.implicitRules<a name=\"DeviceFields-Device.46implicitRules\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.language<a name=\"DeviceFields-Device.46language\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.text<a name=\"DeviceFields-Device.46text\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.contained<a name=\"DeviceFields-Device.46contained\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.extension<a name=\"DeviceFields-Device.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.modifierExtension<a name=\"DeviceFields-Device.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.identifier<a name=\"DeviceFields-Device.46identifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.definition<a name=\"DeviceFields-Device.46definition\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier<a name=\"DeviceFields-Device.46udiCarrier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.id<a name=\"DeviceFields-Device.46udiCarrier.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.extension<a name=\"DeviceFields-Device.46udiCarrier.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.modifierExtension<a name=\"DeviceFields-Device.46udiCarrier.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.deviceIdentifier<a name=\"DeviceFields-Device.46udiCarrier.46deviceIdentifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.issuer<a name=\"DeviceFields-Device.46udiCarrier.46issuer\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.jurisdiction<a name=\"DeviceFields-Device.46udiCarrier.46jurisdiction\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.carrierAIDC<a name=\"DeviceFields-Device.46udiCarrier.46carrierAIDC\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.carrierHRF<a name=\"DeviceFields-Device.46udiCarrier.46carrierHRF\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.entryType<a name=\"DeviceFields-Device.46udiCarrier.46entryType\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.status<a name=\"DeviceFields-Device.46status\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.statusReason<a name=\"DeviceFields-Device.46statusReason\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.distinctIdentifier<a name=\"DeviceFields-Device.46distinctIdentifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.manufacturer<a name=\"DeviceFields-Device.46manufacturer\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.manufactureDate<a name=\"DeviceFields-Device.46manufactureDate\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.expirationDate<a name=\"DeviceFields-Device.46expirationDate\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.lotNumber<a name=\"DeviceFields-Device.46lotNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.serialNumber<a name=\"DeviceFields-Device.46serialNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName<a name=\"DeviceFields-Device.46deviceName\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.id<a name=\"DeviceFields-Device.46deviceName.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.extension<a name=\"DeviceFields-Device.46deviceName.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.modifierExtension<a name=\"DeviceFields-Device.46deviceName.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.name<a name=\"DeviceFields-Device.46deviceName.46name\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.type<a name=\"DeviceFields-Device.46deviceName.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.modelNumber<a name=\"DeviceFields-Device.46modelNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.partNumber<a name=\"DeviceFields-Device.46partNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.type<a name=\"DeviceFields-Device.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization<a name=\"DeviceFields-Device.46specialization\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.id<a name=\"DeviceFields-Device.46specialization.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.extension<a name=\"DeviceFields-Device.46specialization.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.modifierExtension<a name=\"DeviceFields-Device.46specialization.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.systemType<a name=\"DeviceFields-Device.46specialization.46systemType\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.version<a name=\"DeviceFields-Device.46specialization.46version\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version<a name=\"DeviceFields-Device.46version\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.id<a name=\"DeviceFields-Device.46version.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.extension<a name=\"DeviceFields-Device.46version.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.modifierExtension<a name=\"DeviceFields-Device.46version.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.type<a name=\"DeviceFields-Device.46version.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.component<a name=\"DeviceFields-Device.46version.46component\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.value<a name=\"DeviceFields-Device.46version.46value\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property<a name=\"DeviceFields-Device.46property\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.id<a name=\"DeviceFields-Device.46property.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.extension<a name=\"DeviceFields-Device.46property.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.modifierExtension<a name=\"DeviceFields-Device.46property.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.type<a name=\"DeviceFields-Device.46property.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.valueQuantity<a name=\"DeviceFields-Device.46property.46valueQuantity\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.valueCode<a name=\"DeviceFields-Device.46property.46valueCode\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.patient<a name=\"DeviceFields-Device.46patient\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.owner<a name=\"DeviceFields-Device.46owner\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.contact<a name=\"DeviceFields-Device.46contact\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.location<a name=\"DeviceFields-Device.46location\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.url<a name=\"DeviceFields-Device.46url\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.note<a name=\"DeviceFields-Device.46note\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.safety<a name=\"DeviceFields-Device.46safety\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.parent<a name=\"DeviceFields-Device.46parent\"> </a></td><td/></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/R4/StructureDefinition/Device",
+  "version": "0.1.0",
+  "name": "DeviceFields",
+  "title": "Device Resource Field Names",
+  "status": "active",
+  "date": "2020-03-29T12:02:42-04:00",
+  "publisher": "Audacious Inquiry",
+  "contact": [
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This Coding System identifies legal field names in a FHIR R4 Device Resource.",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Device"
+    },
+    {
+      "code": "Device.id"
+    },
+    {
+      "code": "Device.meta"
+    },
+    {
+      "code": "Device.implicitRules"
+    },
+    {
+      "code": "Device.language"
+    },
+    {
+      "code": "Device.text"
+    },
+    {
+      "code": "Device.contained"
+    },
+    {
+      "code": "Device.extension"
+    },
+    {
+      "code": "Device.modifierExtension"
+    },
+    {
+      "code": "Device.identifier"
+    },
+    {
+      "code": "Device.definition"
+    },
+    {
+      "code": "Device.udiCarrier"
+    },
+    {
+      "code": "Device.udiCarrier.id"
+    },
+    {
+      "code": "Device.udiCarrier.extension"
+    },
+    {
+      "code": "Device.udiCarrier.modifierExtension"
+    },
+    {
+      "code": "Device.udiCarrier.deviceIdentifier"
+    },
+    {
+      "code": "Device.udiCarrier.issuer"
+    },
+    {
+      "code": "Device.udiCarrier.jurisdiction"
+    },
+    {
+      "code": "Device.udiCarrier.carrierAIDC"
+    },
+    {
+      "code": "Device.udiCarrier.carrierHRF"
+    },
+    {
+      "code": "Device.udiCarrier.entryType"
+    },
+    {
+      "code": "Device.status"
+    },
+    {
+      "code": "Device.statusReason"
+    },
+    {
+      "code": "Device.distinctIdentifier"
+    },
+    {
+      "code": "Device.manufacturer"
+    },
+    {
+      "code": "Device.manufactureDate"
+    },
+    {
+      "code": "Device.expirationDate"
+    },
+    {
+      "code": "Device.lotNumber"
+    },
+    {
+      "code": "Device.serialNumber"
+    },
+    {
+      "code": "Device.deviceName"
+    },
+    {
+      "code": "Device.deviceName.id"
+    },
+    {
+      "code": "Device.deviceName.extension"
+    },
+    {
+      "code": "Device.deviceName.modifierExtension"
+    },
+    {
+      "code": "Device.deviceName.name"
+    },
+    {
+      "code": "Device.deviceName.type"
+    },
+    {
+      "code": "Device.modelNumber"
+    },
+    {
+      "code": "Device.partNumber"
+    },
+    {
+      "code": "Device.type"
+    },
+    {
+      "code": "Device.specialization"
+    },
+    {
+      "code": "Device.specialization.id"
+    },
+    {
+      "code": "Device.specialization.extension"
+    },
+    {
+      "code": "Device.specialization.modifierExtension"
+    },
+    {
+      "code": "Device.specialization.systemType"
+    },
+    {
+      "code": "Device.specialization.version"
+    },
+    {
+      "code": "Device.version"
+    },
+    {
+      "code": "Device.version.id"
+    },
+    {
+      "code": "Device.version.extension"
+    },
+    {
+      "code": "Device.version.modifierExtension"
+    },
+    {
+      "code": "Device.version.type"
+    },
+    {
+      "code": "Device.version.component"
+    },
+    {
+      "code": "Device.version.value"
+    },
+    {
+      "code": "Device.property"
+    },
+    {
+      "code": "Device.property.id"
+    },
+    {
+      "code": "Device.property.extension"
+    },
+    {
+      "code": "Device.property.modifierExtension"
+    },
+    {
+      "code": "Device.property.type"
+    },
+    {
+      "code": "Device.property.valueQuantity"
+    },
+    {
+      "code": "Device.property.valueCode"
+    },
+    {
+      "code": "Device.patient"
+    },
+    {
+      "code": "Device.owner"
+    },
+    {
+      "code": "Device.contact"
+    },
+    {
+      "code": "Device.location"
+    },
+    {
+      "code": "Device.url"
+    },
+    {
+      "code": "Device.note"
+    },
+    {
+      "code": "Device.safety"
+    },
+    {
+      "code": "Device.parent"
+    }
+  ]
+}

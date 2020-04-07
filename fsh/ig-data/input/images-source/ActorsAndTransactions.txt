@@ -1,0 +1,15 @@
+@startuml
+skinparam FolderBorderColor white
+skinparam FolderFontColor white
+skinparam Shadowing false
+folder Actors {
+agent "Measure Source" as MeasureSource
+agent "Measure Consumer" as MeasureConsumer
+MeasureSource -- MeasureConsumer : "Query Measure [PULL-TX] ↑\nProduce Measure [PUSH-TX] ↓"
+MeasureConsumer -- MeasureConsumer : "Communicate Results [REPORT-TX] ↕"
+}
+rectangle "Measure Intermediary" as MeasureIntermediary { 
+agent "Measure Source" as MeasureSourced2e328
+agent "Measure Consumer" as MeasureConsumerd2e358
+}
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+hide footbox
+participant "Measure Consumer" as MeasureConsumer
+activate "MeasureConsumer"
+"MeasureConsumer" -> "MeasureConsumer" : 1. Communicate Measure
+return
+deactivate "MeasureConsumer"
+@enduml

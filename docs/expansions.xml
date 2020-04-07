@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="f6689430-e976-4d3f-856d-8515d801a426"/>
+  <meta>
+    <lastUpdated value="2020-03-29T12:02:42.060-04:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
+    <resource>
+      <ValueSet>
+        <id value="BedLocationOperationalStatus"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://terminology.hl7.org/ValueSet/v2-0116 version 2.9, http://terminology.hl7.org/CodeSystem/v2-0116 version 2.9</p>
+            <p>All codes from system 
+              <a href="http://hl7.org/fhir/R4/v2/0116/index.html">
+                <code>http://terminology.hl7.org/CodeSystem/v2-0116</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0116-C"> </a>
+                  <a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-C">C</a>
+                </td>
+                <td>Closed</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0116-H"> </a>
+                  <a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-H">H</a>
+                </td>
+                <td>Housekeeping</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0116-K"> </a>
+                  <a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-K">K</a>
+                </td>
+                <td>Contaminated</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0116-O"> </a>
+                  <a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-O">O</a>
+                </td>
+                <td>Occupied</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v2-0116-U"> </a>
+                  <a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-U">U</a>
+                </td>
+                <td>Unoccupied</td>
+                <td/>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
+        <version value="0.1.0"/>
+        <name value="BedLocationOperationalStatus"/>
+        <title value="Bed Location Operational Status"/>
+        <status value="active"/>
+        <date value="2020-03-29T12:02:42-04:00"/>
+        <publisher value="Audacious Inquiry"/>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."/>
+        <expansion>
+          <identifier value="urn:uuid:99233808-7d4b-4092-a0b4-26744e4db81d"/>
+          <timestamp value="2020-03-29T12:03:12-04:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/ValueSet/v2-0116|2.9"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v2-0116|2.9"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+            <code value="C"/>
+            <display value="Closed"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+            <code value="H"/>
+            <display value="Housekeeping"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+            <code value="K"/>
+            <display value="Contaminated"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+            <code value="O"/>
+            <display value="Occupied"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
+            <code value="U"/>
+            <display value="Unoccupied"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://ainq.com/fhir/us/saner/ValueSet/BedProperty"/>
+    <resource>
+      <ValueSet>
+        <id value="BedProperty"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p>
+            <p>All codes from system 
+              <a href="CodeSystem-SanerBedType.html">
+                <code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NEGISO"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NEGISO">NEGISO</a>
+                </td>
+                <td>Negative Pressure Isolation Unit</td>
+                <td>Beds in a negative pressure isolation environment</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OTHISO"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-OTHISO">OTHISO</a>
+                </td>
+                <td>Other Isolation Unit</td>
+                <td>Beds in an other (non-negative pressure) isolation environment</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NONISO"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NONISO">NONISO</a>
+                </td>
+                <td>Non-isolating unit</td>
+                <td>Bed in a unit that does not support isolation</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://ainq.com/fhir/us/saner/ValueSet/BedProperty"/>
+        <version value="0.1.0"/>
+        <name value="BedProperty"/>
+        <title value="Bed Property"/>
+        <status value="active"/>
+        <date value="2020-03-29T12:02:42-04:00"/>
+        <publisher value="Audacious Inquiry"/>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
+        <expansion>
+          <identifier value="urn:uuid:7181d909-8471-456b-9900-1ada46da8252"/>
+          <timestamp value="2020-03-29T12:03:12-04:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="NEGISO"/>
+            <display value="Negative Pressure Isolation Unit"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="OTHISO"/>
+            <display value="Other Isolation Unit"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="NONISO"/>
+            <display value="Non-isolating unit"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://ainq.com/fhir/us/saner/ValueSet/BedType"/>
+    <resource>
+      <ValueSet>
+        <id value="BedType"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 11 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://terminology.hl7.org/CodeSystem/v3-RoleCode version 2018-08-12, http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-ICU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU">ICU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Intensive care unit</td>
+                <td>Intensive care unit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDICU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU">PEDICU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Pediatric intensive care unit</td>
+                <td>Pediatric intensive care unit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDNICU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU">PEDNICU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Pediatric neonatal intensive care unit</td>
+                <td>Pediatric neonatal intensive care unit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-ER"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER">ER</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Emergency room</td>
+                <td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-HU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU">HU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Hospital unit</td>
+                <td>Hospital unit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-RHU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU">RHU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Rehabilitation hospital unit</td>
+                <td>Rehabilitation hospital unit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU">PEDU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Pediatric unit</td>
+                <td>Pediatric unit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-RoleCode-PHU"> </a>
+                  <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU">PHU</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td>
+                <td>Psychiatric hospital unit</td>
+                <td>(X12N 273R00000N)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OR"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-OR">OR</a>
+                </td>
+                <td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td>
+                <td>Operating Room</td>
+                <td>Operating Rooms</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NURSERY"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-NURSERY">NURSERY</a>
+                </td>
+                <td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td>
+                <td>Nursery</td>
+                <td>Neonatal or newborn (non-ICU) care beds</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-BURNU"> </a>
+                  <a href="CodeSystem-SanerBedType.html#SanerBedType-BURNU">BURNU</a>
+                </td>
+                <td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td>
+                <td>Burn Unit</td>
+                <td>Burn ICU beds</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://ainq.com/fhir/us/saner/ValueSet/BedType"/>
+        <version value="0.1.0"/>
+        <name value="BedType"/>
+        <title value="Bed Type"/>
+        <status value="active"/>
+        <date value="2020-03-29T12:02:42-04:00"/>
+        <publisher value="Audacious Inquiry"/>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="This Value Set describes the types of care services that a bed can support."/>
+        <expansion>
+          <identifier value="urn:uuid:7f52b10b-f543-43ff-b8d8-8936e5c0eed1"/>
+          <timestamp value="2020-03-29T12:03:12-04:00"/>
+          <total value="11"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-RoleCode|2018-08-12"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="ICU"/>
+            <display value="Intensive care unit"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PEDICU"/>
+            <display value="Pediatric intensive care unit"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PEDNICU"/>
+            <display value="Pediatric neonatal intensive care unit"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="ER"/>
+            <display value="Emergency room"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="HU"/>
+            <display value="Hospital unit"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="RHU"/>
+            <display value="Rehabilitation hospital unit"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PEDU"/>
+            <display value="Pediatric unit"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+            <code value="PHU"/>
+            <display value="Psychiatric hospital unit"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="OR"/>
+            <display value="Operating Room"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="NURSERY"/>
+            <display value="Nursery"/>
+          </contains>
+          <contains>
+            <system value="http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType"/>
+            <code value="BURNU"/>
+            <display value="Burn Unit"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,9 @@
+@startuml
+
+agent "Measure Source" as MeasureSource
+
+agent "Measure Consumer" as MeasureConsumer
+usecase (Produce Measure) as (PUSH-TX)
+MeasureSource --> (PUSH-TX)
+MeasureConsumer --> (PUSH-TX)
+@enduml
