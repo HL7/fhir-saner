@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://ainq.com/fhir/us/saner/CodeSystem/LocationFields> a fhir:CodeSystem;
+<http://hl7.org/fhir/us/saner/CodeSystem/LocationFields> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "LocationFields"];
   fhir:DomainResource.text [
@@ -17,10 +17,18 @@
   fhir:CodeSystem.name [ fhir:value "LocationFields"];
   fhir:CodeSystem.title [ fhir:value "Location Resource Field Names"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2020-03-29T12:02:42-04:00"^^xsd:dateTime];
-  fhir:CodeSystem.publisher [ fhir:value "Audacious Inquiry"];
+  fhir:CodeSystem.date [ fhir:value "2020-04-07T03:48:44-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "HL7 International"];
   fhir:CodeSystem.contact [
      fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Mobile Health Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/mobile/index.cfm" ]
+     ]
+  ], [
+     fhir:index 1;
      fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
@@ -28,12 +36,12 @@
        fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
      ]
   ], [
-     fhir:index 1;
+     fhir:index 2;
      fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+       fhir:ContactPoint.value [ fhir:value "mailto:kboone@ainq.com" ]
      ]
   ];
   fhir:CodeSystem.description [ fhir:value "This Coding System identifies legal field names in a FHIR R4 Location Resource."];
@@ -159,8 +167,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://ainq.com/fhir/us/saner/CodeSystem/LocationFields.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/us/saner/CodeSystem/LocationFields.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/CodeSystem/LocationFields.ttl> .
 
 # -------------------------------------------------------------------------------------
 

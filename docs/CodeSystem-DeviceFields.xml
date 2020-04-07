@@ -11,8 +11,15 @@
   <name value="DeviceFields"/>
   <title value="Device Resource Field Names"/>
   <status value="active"/>
-  <date value="2020-03-29T12:02:42-04:00"/>
-  <publisher value="Audacious Inquiry"/>
+  <date value="2020-04-07T03:48:44-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Mobile Health Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+    </telecom>
+  </contact>
   <contact>
     <name value="Audacious Inquiry"/>
     <telecom>
@@ -24,7 +31,7 @@
     <name value="Keith W. Boone"/>
     <telecom>
       <system value="email"/>
-      <value value="kboone@ainq.com"/>
+      <value value="mailto:kboone@ainq.com"/>
     </telecom>
   </contact>
   <description value="This Coding System identifies legal field names in a FHIR R4 Device Resource."/>

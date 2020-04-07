@@ -1,40 +1,40 @@
 {
-  "package": "ainq.fhir.us.saner",
+  "package": "hl7.fhir.us.saner",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [],
   "profiles": {
     "AuditEvent": [
       {
-        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-read",
+        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-read",
         "title": "Audit Event Read"
       },
       {
-        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-write",
+        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-write",
         "title": "Audit Event Write Profile"
       }
     ],
     "Group": [
       {
-        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-group",
+        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group",
         "title": "Device Group Profile"
       }
     ],
     "Location": [
       {
-        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location",
+        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location",
         "title": "Resource Location Profile"
       }
     ],
     "MeasureReport": [
       {
-        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-measure-report",
+        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-measure-report",
         "title": "Device MeasureReport Profile"
       }
     ],
     "Device": [
       {
-        "url": "http://ainq.com/fhir/us/saner/StructureDefinition/saner-supporting-device",
+        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/saner-supporting-device",
         "title": "Supporting Device Profile"
       }
     ]

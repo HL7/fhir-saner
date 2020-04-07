@@ -3,16 +3,25 @@
   "id": "BedType",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Type</h2><div><p>This Value Set describes the types of care services that a bed can support.</p>\n</div><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html\"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU\">PEDICU</a></td><td>Pediatric intensive care unit</td><td>Pediatric intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU\">PEDNICU</a></td><td>Pediatric neonatal intensive care unit</td><td>Pediatric neonatal intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU\">HU</a></td><td>Hospital unit</td><td>Hospital unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU\">RHU</a></td><td>Rehabilitation hospital unit</td><td>Rehabilitation hospital unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU\">PEDU</a></td><td>Pediatric unit</td><td>Pediatric unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU\">PHU</a></td><td>Psychiatric hospital unit</td><td>(X12N 273R00000N)</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-SanerBedType.html\"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OR\">OR</a></td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NURSERY\">NURSERY</a></td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-BURNU\">BURNU</a></td><td>Burn Unit</td><td>Burn ICU beds</td></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Type</h2><div><p>This Value Set describes the types of care services that a bed can support.</p>\n</div><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html\"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP\">HOSP</a></td><td>Hospital</td><td>An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-BedType.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-BedType.html#BedType-OR\">OR</a></td><td>Operating Room</td><td>Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.</td></tr><tr><td><a href=\"CodeSystem-BedType.html#BedType-NURSERY\">NURSERY</a></td><td/><td/></tr><tr><td><a href=\"CodeSystem-BedType.html#BedType-BURNU\">BURNU</a></td><td>Burn Unit</td><td>Beds in a Burn Unit</td></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>"
   },
-  "url": "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/BedType",
   "version": "0.1.0",
   "name": "BedType",
   "title": "Bed Type",
   "status": "active",
-  "date": "2020-03-29T12:02:42-04:00",
-  "publisher": "Audacious Inquiry",
+  "date": "2020-04-07T03:48:44-04:00",
+  "publisher": "HL7 International",
   "contact": [
+    {
+      "name": "HL7 Mobile Health Workgroup",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/mobile/index.cfm"
+        }
+      ]
+    },
     {
       "name": "Audacious Inquiry",
       "telecom": [
@@ -27,7 +36,7 @@
       "telecom": [
         {
           "system": "email",
-          "value": "kboone@ainq.com"
+          "value": "mailto:kboone@ainq.com"
         }
       ]
     }
@@ -39,33 +48,18 @@
         "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
         "concept": [
           {
+            "code": "HOSP"
+          },
+          {
             "code": "ICU"
           },
           {
-            "code": "PEDICU"
-          },
-          {
-            "code": "PEDNICU"
-          },
-          {
             "code": "ER"
-          },
-          {
-            "code": "HU"
-          },
-          {
-            "code": "RHU"
-          },
-          {
-            "code": "PEDU"
-          },
-          {
-            "code": "PHU"
           }
         ]
       },
       {
-        "system": "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+        "system": "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
         "concept": [
           {
             "code": "OR"

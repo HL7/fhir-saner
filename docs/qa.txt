@@ -1,64 +1,165 @@
 ﻿SituationalAwarenessforNovelEpidemicResponse : Validation Results
 =========================================
 
-err = 4, warn = 18, info = 0
-IG Publisher Version: v1.0.72-SNAPSHOT Out of date - current version is v1.0.75-SNAPSHOT
-Generated Sun Mar 29 12:03:43 EDT 2020. FHIR version 4.0.1 for ainq.fhir.us.saner#0.1.0 (canonical = http://ainq.com/fhir/us/saner)
+err = 38, warn = 58, info = 0
+IG Publisher Version: v1.0.78-SNAPSHOT
+Generated Tue Apr 07 03:49:48 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
 
- Build Errors : 9 / 0
- C:\Users\kboone\git\saner-ig\input\ImplementationGuide-ainq.fhir.us.saner : 0 / 0
- C:\Users\kboone\git\saner-ig\input\examples\conceptmap-HAvBED2toFHIR : 0 / 0
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-audit-event-read : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-audit-event-write : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-bed-group : 2 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-bed-location : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-bed-measure-report : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-device-group : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-device-measure-report : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-resource-location : 0 / 1
- C:\Users\kboone\git\saner-ig\input\profiles\structuredefinition-saner-supporting-device : 0 / 1
- C:\Users\kboone\git\saner-ig\input\vocabulary\codesystem-DeviceFields : 0 / 0
- C:\Users\kboone\git\saner-ig\input\vocabulary\codesystem-LocationFields : 0 / 0
- C:\Users\kboone\git\saner-ig\input\vocabulary\codesystem-SanerBedType : 0 / 0
- C:\Users\kboone\git\saner-ig\input\vocabulary\valueset-BedLocationOperationalStatus : 0 / 0
- C:\Users\kboone\git\saner-ig\input\vocabulary\valueset-BedProperty : 0 / 0
- C:\Users\kboone\git\saner-ig\input\vocabulary\valueset-BedType : 0 / 0
+ Build Errors : 35 / 2
+ C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\examples\conceptmap-HAvBED2toFHIR : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\examples\measure-CDCReporting : 0 / 12
+ C:\Users\kboone\git\fhir-saner\input\examples\measure-FEMAReporting : 3 / 6
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-read : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-write : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-group : 2 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-location : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-measure-report : 12 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-group : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-measure-report : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-resource-location : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-supporting-device : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-BedType : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-DeviceFields : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-LocationFields : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-PopulationMeasures : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedDeviceTypes : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedLocationOperationalStatus : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedLocationTypes : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedProperty : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedType : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-COVID19DiagnosticTest : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ConfirmedCOVID19Diagnosis : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ConfirmedCOVID19DiagnosisValues : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-EDorOverflowLocations : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Fields : 2 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ICULocations : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-InpatientLocations : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-OccupiedBed : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-OnlyCompleteOrPending : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-PatientDied : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-SuspectedOrDiagnosedCOVID19 : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevices : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevicesWithTracheostomy : 0 / 0
 </table>
 == n/a ==
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1038, column 265: The link 'CodeSystem-LocationFields.html#LocationFields-Location.status' for "Location.status" cannot be resolved (valid targets: 51 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1040, column 276: The link 'CodeSystem-LocationFields.html#LocationFields-Location.operationalStatus' for "Location.operationalStatus" cannot be resolved (valid targets: 51 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1042, column 263: The link 'CodeSystem-LocationFields.html#LocationFields-Location.type' for "Location.type" cannot be resolved (valid targets: 51 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1044, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.Feature' for "Location.Feature" cannot be resolved (valid targets: 51 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1046, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for "Location.partOf" cannot be resolved (valid targets: 51 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 992, column 265: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.status' for "Device.status" cannot be resolved (valid targets: 78 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 995, column 263: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.type' for "Device.type" cannot be resolved (valid targets: 78 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 998, column 267: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.property' for "Device.property" cannot be resolved (valid targets: 78 targets)
-ERROR: C:\Users\kboone\git\saner-ig\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1001, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for "Location.partOf" cannot be resolved (valid targets: 51 targets)
-== C:\Users\kboone\git\saner-ig\input\ImplementationGuide-ainq.fhir.us.saner.json ==
-== C:\Users\kboone\git\saner-ig\input\examples\ConceptMap-HAvBED2toFHIR.json ==
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-audit-event-read.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-read: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-audit-event-write.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-audit-event-write: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-bed-group.json ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/OnlyCompleteOrPending.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1054, column 265: The link 'CodeSystem-LocationFields.html#LocationFields-Location.status' for "Location.status" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1056, column 276: The link 'CodeSystem-LocationFields.html#LocationFields-Location.operationalStatus' for "Location.operationalStatus" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1058, column 263: The link 'CodeSystem-LocationFields.html#LocationFields-Location.type' for "Location.type" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1060, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.Feature' for "Location.Feature" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1062, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for "Location.partOf" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 298, column 836: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for "population" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 894: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 300, column 888: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for "count" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 302, column 800: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for "measureScore" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 303, column 853: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for "stratifier" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 305, column 982: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 1023: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for "stratum" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 308, column 1188: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for "component" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 309, column 1250: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 310, column 1192: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for "population" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 311, column 1239: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 312, column 1233: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for "count" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 443, column 836: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for "population" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 444, column 894: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 445, column 888: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for "count" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 447, column 800: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for "measureScore" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 448, column 853: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for "stratifier" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 450, column 982: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 451, column 1023: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for "stratum" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 453, column 1188: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for "component" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 454, column 1250: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 455, column 1192: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for "population" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 456, column 1239: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for "code" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 457, column 1233: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for "count" cannot be resolved (valid targets: 36 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1008, column 265: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.status' for "Device.status" cannot be resolved (valid targets: 82 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1011, column 263: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.type' for "Device.type" cannot be resolved (valid targets: 82 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1014, column 267: The link 'CodeSystem-DeviceFields.html#DeviceFields-Device.property' for "Device.property" cannot be resolved (valid targets: 82 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1017, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Location.partOf' for "Location.partOf" cannot be resolved (valid targets: 55 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\ValueSet-BedType.html#/html/body/div/div/div/div/div/div/ul/li/table/tr/td/a at Line 210, column 1442: The link 'CodeSystem-BedType.html#BedType-NURSERY' for "NURSERY" cannot be resolved (valid targets: 37 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\index.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 249, column 12: The link 'CodeSystem-SanerBedType.html' for "SanerBedType Coding System" cannot be resolved
+== C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner.json ==
+== C:\Users\kboone\git\fhir-saner\input\examples\ConceptMap-HAvBED2toFHIR.json ==
+== C:\Users\kboone\git\fhir-saner\input\examples\Measure-CDCReporting.json ==
+WARNING: Measure/CDCReporting: Measure.group[0].population[4].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numICUBedsOcc should be one of 'ICU Bed Occupancy' instead of 'Total number of staffed inpatient intensive care unit (ICU) beds'
+WARNING: Measure/CDCReporting: Measure.group[2].population[0].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19Pats should be one of 'COVID-19 Patients' instead of 'All COVID-19 Confirmed or Suspected Patients'
+WARNING: Measure/CDCReporting: Measure.group[2].population[0].criteria.expression: value should not start or finish with whitespace
+WARNING: Measure/CDCReporting: Measure.group[2].population[2].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19HospPats should be one of 'COVID-19 Hospitalized' instead of 'Hospitalized COVID-19 Patients'
+WARNING: Measure/CDCReporting: Measure.group[2].population[3].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19MechVentPats should be one of 'COVID-19 Hospitalized and Ventilated' instead of 'Hospitalized and Ventilated COVID-19 Patients'
+WARNING: Measure/CDCReporting: Measure.group[2].population[4].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19HOPats should be one of 'COVID-19 Hospital Onset' instead of 'Hospital Onset COVID-19 Patients'
+WARNING: Measure/CDCReporting: Measure.group[2].population[5].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19OverflowPats should be one of 'COVID-19 ED/Overflow' instead of 'ED/Overflow COVID-19 Patients'
+WARNING: Measure/CDCReporting: Measure.group[2].population[6].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19OFMechVentPats should be one of 'COVID-19 ED/Overflow and Ventilated' instead of 'ED/Overflow and Ventilated COVID-19 Patients'
+WARNING: Measure/CDCReporting: Measure.group[2].population[7].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#numC19Died should be one of 'COVID-19 Deaths' instead of 'COVID-19 Patient Deaths'
+WARNING: Measure/CDCReporting: Measure.group[0]: Groups should have codes when there is more than one group 
+WARNING: Measure/CDCReporting: Measure.group[1]: Groups should have codes when there is more than one group 
+WARNING: Measure/CDCReporting: Measure.group[2]: Groups should have codes when there is more than one group 
+== C:\Users\kboone\git\fhir-saner\input\examples\Measure-FEMAReporting.json ==
+WARNING: Measure/FEMAReporting: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Measure/FEMAReporting: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Measure/FEMAReporting: Measure.group[0].population[0].criteria.expression: value should not start or finish with whitespace
+WARNING: Measure/FEMAReporting: Measure.group[0].population[1].criteria.expression: value should not start or finish with whitespace
+WARNING: Measure/FEMAReporting: Measure.group[1].population[0].criteria.expression: value should not start or finish with whitespace
+WARNING: Measure/FEMAReporting: Measure.group[1].population[1].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#allReports should be one of 'All Laboratory Report for any Order' instead of 'All Reports To Date'
+ERROR: Measure/FEMAReporting: Measure.group[1].population[2].code: Unknown Code http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#latestReports in http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures
+ERROR: Measure/FEMAReporting: Measure.group[1].population[2].code.coding[0]: Unknown Code http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#latestReports in http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures for "http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures#latestReports"
+ERROR: Measure/FEMAReporting: Measure.group[1].population[2].criteria: exp-1: An expression or a reference must be provided [expression.exists() or reference.exists()]
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-audit-event-read.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-read: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-audit-event-write.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-write: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-group.json ==
 ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature in http://hl7.org/fhir/R4/StructureDefinition/Location for "http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature"
 ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature in http://hl7.org/fhir/R4/StructureDefinition/Location for "http://hl7.org/fhir/R4/StructureDefinition/Location#Location.Feature"
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-bed-group: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-bed-location.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-bed-location: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-bed-measure-report.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-device-group.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-group: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-device-measure-report.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-device-measure-report: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-resource-location.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\profiles\StructureDefinition-saner-supporting-device.json ==
-WARNING: http://ainq.com/fhir/us/saner/StructureDefinition/saner-supporting-device: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\saner-ig\input\vocabulary\CodeSystem-DeviceFields.json ==
-== C:\Users\kboone\git\saner-ig\input\vocabulary\CodeSystem-LocationFields.json ==
-== C:\Users\kboone\git\saner-ig\input\vocabulary\CodeSystem-SanerBedType.json ==
-== C:\Users\kboone\git\saner-ig\input\vocabulary\ValueSet-BedLocationOperationalStatus.json ==
-== C:\Users\kboone\git\saner-ig\input\vocabulary\ValueSet-BedProperty.json ==
-== C:\Users\kboone\git\saner-ig\input\vocabulary\ValueSet-BedType.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-group: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-location.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-location: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-measure-report.json ==
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.population.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.population.count: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.population.subjectResults: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.measureScore: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.component.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.population.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.population.count: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.population.subjectResults: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The profile http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report has 11 elements in the differential (id: MeasureReport.group.population.code, id: MeasureReport.group.population.count, id: MeasureReport.group.population.subjectResults, id: MeasureReport.group.measureScore, id: MeasureReport.group.stratifier, id: MeasureReport.group.stratifier.code, id: MeasureReport.group.stratifier.stratum, id: MeasureReport.group.stratifier.stratum.component.code, id: MeasureReport.group.stratifier.stratum.population.code, id: MeasureReport.group.stratifier.stratum.population.count, id: MeasureReport.group.stratifier.stratum.population.subjectResults) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-device-group.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-device-measure-report.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-measure-report: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-resource-location.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-supporting-device.json ==
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-supporting-device: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-BedType.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-DeviceFields.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-LocationFields.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-PopulationMeasures.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedDeviceTypes.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedLocationOperationalStatus.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedLocationTypes.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedProperty.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedType.json ==
+WARNING: BedType: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/saner/CodeSystem/BedType
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-COVID19DiagnosticTest.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-ConfirmedCOVID19Diagnosis.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-ConfirmedCOVID19DiagnosisValues.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-EDorOverflowLocations.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-Fields.json ==
+ERROR: ValueSet/Fields: ValueSet.compose.include[0].system: URL value "http://hl7.org/fhir/us/saner/CodeSystem/LocationFields" does not resolve
+ERROR: ValueSet/Fields: ValueSet.compose.include[1].system: URL value "http://hl7.org/fhir/us/saner/CodeSystem/DeviceFields" does not resolve
+WARNING: Fields: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/saner/CodeSystem/LocationFields
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-ICULocations.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-InpatientLocations.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-OccupiedBed.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-OnlyCompleteOrPending.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-PatientDied.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-SuspectedOrDiagnosedCOVID19.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-VentilatorDevices.json ==
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-VentilatorDevicesWithTracheostomy.json ==

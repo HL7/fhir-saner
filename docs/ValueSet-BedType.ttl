@@ -5,22 +5,30 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://ainq.com/fhir/us/saner/ValueSet/BedType> a fhir:ValueSet;
+<http://hl7.org/fhir/us/saner/ValueSet/BedType> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "BedType"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Type</h2><div><p>This Value Set describes the types of care services that a bed can support.</p>\n</div><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html\"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU\">PEDICU</a></td><td>Pediatric intensive care unit</td><td>Pediatric intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU\">PEDNICU</a></td><td>Pediatric neonatal intensive care unit</td><td>Pediatric neonatal intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU\">HU</a></td><td>Hospital unit</td><td>Hospital unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU\">RHU</a></td><td>Rehabilitation hospital unit</td><td>Rehabilitation hospital unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU\">PEDU</a></td><td>Pediatric unit</td><td>Pediatric unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU\">PHU</a></td><td>Psychiatric hospital unit</td><td>(X12N 273R00000N)</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-SanerBedType.html\"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OR\">OR</a></td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NURSERY\">NURSERY</a></td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td><a href=\"CodeSystem-SanerBedType.html#SanerBedType-BURNU\">BURNU</a></td><td>Burn Unit</td><td>Burn ICU beds</td></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Bed Type</h2><div><p>This Value Set describes the types of care services that a bed can support.</p>\n</div><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html\"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP\">HOSP</a></td><td>Hospital</td><td>An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-BedType.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-BedType.html#BedType-OR\">OR</a></td><td>Operating Room</td><td>Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.</td></tr><tr><td><a href=\"CodeSystem-BedType.html#BedType-NURSERY\">NURSERY</a></td><td/><td/></tr><tr><td><a href=\"CodeSystem-BedType.html#BedType-BURNU\">BURNU</a></td><td>Burn Unit</td><td>Beds in a Burn Unit</td></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://ainq.com/fhir/us/saner/ValueSet/BedType"];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/saner/ValueSet/BedType"];
   fhir:ValueSet.version [ fhir:value "0.1.0"];
   fhir:ValueSet.name [ fhir:value "BedType"];
   fhir:ValueSet.title [ fhir:value "Bed Type"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2020-03-29T12:02:42-04:00"^^xsd:dateTime];
-  fhir:ValueSet.publisher [ fhir:value "Audacious Inquiry"];
+  fhir:ValueSet.date [ fhir:value "2020-04-07T03:48:44-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International"];
   fhir:ValueSet.contact [
      fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Mobile Health Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/mobile/index.cfm" ]
+     ]
+  ], [
+     fhir:index 1;
      fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
@@ -28,12 +36,12 @@
        fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
      ]
   ], [
-     fhir:index 1;
+     fhir:index 2;
      fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+       fhir:ContactPoint.value [ fhir:value "mailto:kboone@ainq.com" ]
      ]
   ];
   fhir:ValueSet.description [ fhir:value "This Value Set describes the types of care services that a bed can support."];
@@ -43,32 +51,17 @@
        fhir:ValueSet.compose.include.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
        fhir:ValueSet.compose.include.concept [
          fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "ICU" ]
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "HOSP" ]
        ], [
          fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "PEDICU" ]
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ICU" ]
        ], [
          fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "PEDNICU" ]
-       ], [
-         fhir:index 3;
          fhir:ValueSet.compose.include.concept.code [ fhir:value "ER" ]
-       ], [
-         fhir:index 4;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "HU" ]
-       ], [
-         fhir:index 5;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "RHU" ]
-       ], [
-         fhir:index 6;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "PEDU" ]
-       ], [
-         fhir:index 7;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "PHU" ]
        ]
      ], [
        fhir:index 1;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType" ];
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/BedType" ];
        fhir:ValueSet.compose.include.concept [
          fhir:index 0;
          fhir:ValueSet.compose.include.concept.code [ fhir:value "OR" ]
@@ -84,8 +77,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://ainq.com/fhir/us/saner/ValueSet/BedType.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/us/saner/ValueSet/BedType.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/ValueSet/BedType.ttl> .
 
 # -------------------------------------------------------------------------------------
 

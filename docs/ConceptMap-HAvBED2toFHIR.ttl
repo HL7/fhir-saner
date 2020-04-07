@@ -5,22 +5,30 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR> a fhir:ConceptMap;
+<http://hl7.org/fhir/us/saner/ConceptMap/HAvBED2toFHIR> a fhir:ConceptMap;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "HAvBED2toFHIR"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HAvBED2toFHIR (http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR)</h2><p>Mapping from https://archive.ahrq.gov/prep/havbed2/ to (not specified)</p><p>DRAFT (not intended for production usage). Published on Mar 24, 2020, 12:00:00 AM by Audacious Inquiry (Audacious Inquiry: <a href=\"http://ainq.com\">http://ainq.com</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). </p><div><p>This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>AdultICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ICU (Intensive care unit)</td><td>These can support critically ill or injured patients, including ventilator support This category includes all major subtypes of ICU beds, including neurological, cardiac, trauma, or medical, with the exception that this category does not include burn ICU beds</td></tr><tr><td>PediatricICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDICU (Pediatric intensive care unit)</td><td>This is similar to adult ICU beds, but for patients 17-years-old and younger.</td></tr><tr><td>NeonatalICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDNICU (Pediatric neonatal intensive care unit)</td><td>Neonatal ICU beds</td></tr><tr><td>ED</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ER (Emergency room)</td><td>Emergency Department beds used for acute care</td></tr><tr><td>MedicalSurgical</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HU (Hospital unit)</td><td>These are also thought of as ward beds. These beds may or may not include cardiac telemetry capability</td></tr><tr><td>RehabLongTermCare</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RHU (Rehabilitation hospital unit)</td><td>Beds designated as long term care rehabilitation. These do not include floor beds</td></tr><tr><td>Pediatrics</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDU (Pediatric unit)</td><td>These are ward medical/surgical beds for patients 17-years-old and younger</td></tr><tr><td>Psychiatric</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PHU (Psychiatric hospital unit)</td><td>Ward beds on a closed/locked psychiatric unit or ward beds where a patient will be staffed by an attendant.</td></tr></table><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>Burn</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BURNU (Burn Unit)</td><td>These are thought of as burn ICU beds, either approved by the American Burn Association or self-designated. These beds are NOT to be included in other ICU bed counts.</td></tr><tr><td>NurseryBeds</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NURSERY</td><td>Neonatal or newborn care beds including all bed types other than Neonatal ICU</td></tr><tr><td>OperatingRooms</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OR (Operating Room)</td><td>Operating rooms which are equipped, staffed and could be made available for patient care in a short period of time</td></tr><tr><td>NegativeFlowIsolation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NEGISO (Negative Pressure Isolation Unit)</td><td>These provide respiratory isolation. NOTE: This value may represent available beds included in the counts of other types</td></tr><tr><td>OtherIsolation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OTHISO (Other Isolation Unit)</td><td>These provide isolation where airflow is not a concern. NOTE: This value may represent available beds included in the counts of other types</td></tr></table><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HAvBED2toFHIR (http://hl7.org/fhir/us/saner/ConceptMap/HAvBED2toFHIR)</h2><p>Mapping from https://archive.ahrq.gov/prep/havbed2/ to (not specified)</p><p>DRAFT (not intended for production usage). Published on Mar 24, 2020, 12:00:00 AM by HL7 International (HL7 Mobile Health Workgroup: <a href=\"http://hl7.org/Special/committees/mobile/index.cfm\">http://hl7.org/Special/committ...</a>, Audacious Inquiry: <a href=\"http://ainq.com\">http://ainq.com</a>, Keith W. Boone: <a href=\"mailto:mailto:kboone@ainq.com\">mailto:kboone@ainq.com</a>). </p><div><p>This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>AdultICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ICU (Intensive care unit)</td><td>These can support critically ill or injured patients, including ventilator support This category includes all major subtypes of ICU beds, including neurological, cardiac, trauma, or medical, with the exception that this category does not include burn ICU beds</td></tr><tr><td>PediatricICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDICU (Pediatric intensive care unit)</td><td>This is similar to adult ICU beds, but for patients 17-years-old and younger.</td></tr><tr><td>NeonatalICU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDNICU (Pediatric neonatal intensive care unit)</td><td>Neonatal ICU beds</td></tr><tr><td>ED</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ER (Emergency room)</td><td>Emergency Department beds used for acute care</td></tr><tr><td>MedicalSurgical</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HU (Hospital unit)</td><td>These are also thought of as ward beds. These beds may or may not include cardiac telemetry capability</td></tr><tr><td>RehabLongTermCare</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RHU (Rehabilitation hospital unit)</td><td>Beds designated as long term care rehabilitation. These do not include floor beds</td></tr><tr><td>Pediatrics</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEDU (Pediatric unit)</td><td>These are ward medical/surgical beds for patients 17-years-old and younger</td></tr><tr><td>Psychiatric</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PHU (Psychiatric hospital unit)</td><td>Ward beds on a closed/locked psychiatric unit or ward beds where a patient will be staffed by an attendant.</td></tr></table><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>Burn</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BURNU (Burn Unit)</td><td>These are thought of as burn ICU beds, either approved by the American Burn Association or self-designated. These beds are NOT to be included in other ICU bed counts.</td></tr><tr><td>NurseryBeds</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NURSERY</td><td>Neonatal or newborn care beds including all bed types other than Neonatal ICU</td></tr><tr><td>OperatingRooms</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OR (Operating Room)</td><td>Operating rooms which are equipped, staffed and could be made available for patient care in a short period of time</td></tr><tr><td>NegativeFlowIsolation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NEGISO (Negative Pressure Isolation Unit)</td><td>These provide respiratory isolation. NOTE: This value may represent available beds included in the counts of other types</td></tr><tr><td>OtherIsolation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OTHISO (Other Isolation Unit)</td><td>These provide isolation where airflow is not a concern. NOTE: This value may represent available beds included in the counts of other types</td></tr></table><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr></table></div>"
   ];
-  fhir:ConceptMap.url [ fhir:value "http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR"];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/us/saner/ConceptMap/HAvBED2toFHIR"];
   fhir:ConceptMap.version [ fhir:value "0.1.0"];
   fhir:ConceptMap.name [ fhir:value "HAvBED2toFHIR"];
   fhir:ConceptMap.status [ fhir:value "draft"];
   fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
   fhir:ConceptMap.date [ fhir:value "2020-03-24T00:00:00-04:00"^^xsd:dateTime];
-  fhir:ConceptMap.publisher [ fhir:value "Audacious Inquiry"];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
   fhir:ConceptMap.contact [
      fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Mobile Health Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/mobile/index.cfm" ]
+     ]
+  ], [
+     fhir:index 1;
      fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
@@ -28,12 +36,12 @@
        fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
      ]
   ], [
-     fhir:index 1;
+     fhir:index 2;
      fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+       fhir:ContactPoint.value [ fhir:value "mailto:kboone@ainq.com" ]
      ]
   ];
   fhir:ConceptMap.description [ fhir:value "This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR"];
@@ -124,7 +132,7 @@
      ]
   ], [
      fhir:index 1;
-     fhir:ConceptMap.group.target [ fhir:value "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType" ];
+     fhir:ConceptMap.group.target [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/BedType" ];
      fhir:ConceptMap.group.element [
        fhir:index 0;
        fhir:ConceptMap.group.element.code [ fhir:value "Burn" ];
@@ -191,8 +199,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://ainq.com/fhir/us/saner/ConceptMap/HAvBED2toFHIR.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://hl7.org/fhir/us/saner/ConceptMap/HAvBED2toFHIR.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/ConceptMap/HAvBED2toFHIR.ttl> .
 
 # -------------------------------------------------------------------------------------
 
