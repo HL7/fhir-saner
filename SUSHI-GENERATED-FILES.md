@@ -14,6 +14,10 @@ lists those files generated from project configs or the contents in the ig-data 
 | ig.ini                                                              | generated | fsh\ig-data\ig.ini, fsh\package.json                                            |
 | input\ImplementationGuide-hl7.fhir.us.saner.json                    | generated | fsh\ig-data\ig.ini, fsh\package.json, {all input resources and pages}           |
 | package-list.json                                                   | generated | fsh\package.json                                                                |
+| input\examples\Measure-sanerCDC.json                                | copied    | fsh\ig-data\input\examples\Measures-CDC.json                                    |
+| input\examples\Measure-sanerFEMA.json                               | copied    | fsh\ig-data\input\examples\Measures-FEMA.json                                   |
+| input\examples\MeasureReport-FHIR-461.json                          | copied    | fsh\ig-data\input\examples\Org-1065-measureReports-CDC.json                     |
+| input\examples\MeasureReport-FHIR-463.json                          | copied    | fsh\ig-data\input\examples\Org-1065-measureReports-FEMA.json                    |
 | input\ignoreWarnings.txt                                            | copied    | fsh\ig-data\input\ignoreWarnings.txt                                            |
 | input\images\57.130-covid19-pimhc-blank-p.pdf                       | copied    | fsh\ig-data\input\images\57.130-covid19-pimhc-blank-p.pdf                       |
 | input\images\57.130-covid19-pimhc-blank-p.png                       | copied    | fsh\ig-data\input\images\57.130-covid19-pimhc-blank-p.png                       |
