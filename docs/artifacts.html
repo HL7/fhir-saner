@@ -21,6 +21,8 @@
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -78,15 +80,7 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              
-
-
-
-
-
-
-
-
+              <!-- menu.xml  -->
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
@@ -192,13 +186,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#2">Terminology: Value Sets</a>
+         <a href="#2">Structures: Data Type Profiles</a>
       </li>
       <li>
-         <a href="#3">Terminology: Code Systems</a>
+         <a href="#3">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#4">Example: Example Instances</a>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -264,6 +264,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-PublicHealthMeasure.html"
+                     title="StructureDefinition/PublicHealthMeasure">Saner Public Health Measure</a>
+               </td>
+               <td>Profile Saner Public Health Measure
+
+The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
+of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
+and computation of it can be automated from systems that have the measure data.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-saner-resource-location.html"
                      title="StructureDefinition/saner-resource-location">Resource Location Profile</a>
                </td>
@@ -280,18 +291,60 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </table>
    </p>
    <a name="2"> </a>
-   <h3>Terminology: Value Sets </h3>
-   <p>These define sets of codes used by systems conforming with this implementation guide</p>
+   <h3>Structures: Data Type Profiles </h3>
+   <p>These define constraints on FHIR data types that need to be complied with by conformant implementations</p>
    <p>
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="ValueSet-BedDeviceTypes.html" title="ValueSet/BedDeviceTypes">Bed Device Types</a>
+                  <a href="StructureDefinition-MeasureCriteria.html"
+                     title="StructureDefinition/MeasureCriteria">MeasureCriteria</a>
                </td>
-               <td>Codes used to identify beds</td>
+               <td>Constraints on documentation for the evaluation of a Measure</td>
             </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-MeasureDescription.html"
+                     title="StructureDefinition/MeasureDescription">Saner Measure Description</a>
+               </td>
+               <td>A CodeableConcept describing a measure value</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+   <p>These define constraints on FHIR data types that need to be complied with by conformant implementations</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-MeasureGroupAttributes.html"
+                     title="StructureDefinition/MeasureGroupAttributes">Attributes describing a group of measures</a>
+               </td>
+               <td>Attributes describing the group of measures</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-MeasurePopulationAlternateCriteria.html"
+                     title="StructureDefinition/MeasurePopulationAlternateCriteria">Alternate criteria for performing a measure</a>
+               </td>
+               <td>Provides Alternate criteria for performing a measure, (e.g., CQL, Drules, et cetera)</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+   <p>These define sets of codes used by systems conforming with this implementation guide</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
             <tr>
                <td style="column-width:30%">
                   <a href="ValueSet-BedLocationOperationalStatus.html"
@@ -353,6 +406,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="ValueSet-Groups.html" title="ValueSet/Groups">Measure Groups</a>
+               </td>
+               <td>Measure Groups defined by the SANER Project</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="ValueSet-ICULocations.html" title="ValueSet/ICULocations">ICU Locations</a>
                </td>
                <td>Codes used for ICU locations</td>
@@ -363,6 +422,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="ValueSet/InpatientLocations">Inpatient Locations</a>
                </td>
                <td>Codes used for inpatient locations</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-MeasureRateAggregationValues.html"
+                     title="ValueSet/MeasureRateAggregationValues">Rate Aggregation Value Set</a>
+               </td>
+               <td>This Value Set Identifies methods of rate aggregation</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-MeasureStatus.html" title="ValueSet/MeasureStatus">Measure Status Values</a>
+               </td>
+               <td>Allowed Status Values for Saner Measures</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -382,6 +454,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   <a href="ValueSet-PatientDied.html" title="ValueSet/PatientDied">Patient Died</a>
                </td>
                <td>Codes used to identify that a patient has died</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-Populations.html" title="ValueSet/Populations">Measure Populations</a>
+               </td>
+               <td>Measure Populations defined by The SANER Project</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -407,7 +485,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="3"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>These define new code systems used by systems conforming with this implementation guide</p>
    <p>
@@ -428,21 +506,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="CodeSystem-GroupSystem.html" title="CodeSystem/GroupSystem">Group System</a>
+               </td>
+               <td>A Code System for Groups defined by The SANER Project</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="CodeSystem-LocationFields.html" title="CodeSystem/LocationFields">Location Resource Field Names</a>
                </td>
                <td>This Coding System identifies legal field names in a FHIR R4 Location Resource.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="CodeSystem-PopulationMeasures.html"
-                     title="CodeSystem/PopulationMeasures">Population Measure Groups</a>
+                  <a href="CodeSystem-MeasureRateAggregation.html"
+                     title="CodeSystem/MeasureRateAggregation">Rate Aggregation Coding System</a>
                </td>
-               <td>Groups defined by The SANER Project for measure populations</td>
+               <td>This Coding System Identifies methods of rate aggregation</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CodeSystem-PopulationSystem.html"
+                     title="CodeSystem/PopulationSystem">Population System</a>
+               </td>
+               <td>A Code System for Populations defined by The SANER Project</td>
             </tr>
          </tbody>
       </table>
    </p>
-   <a name="4"> </a>
+   <a name="6"> </a>
    <h3>Example: Example Instances </h3>
    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
    <p>
@@ -451,21 +542,46 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="Measure-CDCReporting.html" title="Measure/CDCReporting">Bed Availability and Use Reporting</a>
+                  <a href="Measure-CDCPatientImpactAndHospitalCapacity.html"
+                     title="Measure/CDCPatientImpactAndHospitalCapacity">CDC Patient Impact and Hospital Capacity</a>
                </td>
                <td>This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Measure-FEMAReporting.html" title="Measure/FEMAReporting">Laboratory Orders and Results Daily Increase Reporting</a>
+                  <a href="Measure-FEMAReporting.html" title="Measure/FEMAReporting">FEMA Laboratory Orders and Results Daily Increase Reporting</a>
                </td>
-               <td>This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites based the Vice President Pence Letter to Hospital Administrators.</td>
+               <td>This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="ConceptMap-HAvBED2toFHIR.html" title="ConceptMap/HAvBED2toFHIR">HAvBED2 to FHIR Concept Map</a>
                </td>
                <td>This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Measure-sanerCDC.html" title="Measure/sanerCDC">sanerCDC</a>
+               </td>
+               <td>CDC Measurement Group</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Measure-sanerFEMA.html" title="Measure/sanerFEMA">sanerFEMA</a>
+               </td>
+               <td>FEMA Measurement Group</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-FHIR-461.html" title="MeasureReport/FHIR-461">FHIR-461</a>
+               </td>
+               <td/>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-FHIR-463.html" title="MeasureReport/FHIR-463">FHIR-463</a>
+               </td>
+               <td/>
             </tr>
          </tbody>
       </table>
@@ -483,7 +599,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/mobile/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 7, 2020 04:47-0400">2020-04-07</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

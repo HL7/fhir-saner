@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19DiagnosisValues> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ConfirmedCOVID19DiagnosisValues"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Confirmed COVID-19 Diagnosis Values</h2><div><p>Codes for result values confirming COVID-19 Diagnostic Test Result</p>\n</div><ul/><p>This value set includes codes based on the following rules:</p></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19DiagnosisValues"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "ConfirmedCOVID19DiagnosisValues"];
+  fhir:ValueSet.title [ fhir:value "Confirmed COVID-19 Diagnosis Values"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2020-04-13T11:49:10-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Patient Administration Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/pafm/index.cfm" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Codes for result values confirming COVID-19 Diagnostic Test Result"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19DiagnosisValues.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/ValueSet/ConfirmedCOVID19DiagnosisValues.ttl> .
+
+# -------------------------------------------------------------------------------------
+

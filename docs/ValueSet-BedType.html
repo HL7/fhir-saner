@@ -21,6 +21,8 @@
       <!-- Placeholder for child template CSS declarations -->
     <link rel="stylesheet" href="assets/css/hl7.css"/>
     <link rel="stylesheet" href="assets/css/fhir.css"/>
+<link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css"/>
+
 
     <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
@@ -39,8 +41,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"14.14"}
-    h3,h4,h5,h6{--heading-prefix:"14.14"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.18"}
+    h3,h4,h5,h6{--heading-prefix:"14.18"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
         
@@ -78,15 +80,7 @@
             </button>
             <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              
-
-
-
-
-
-
-
-
+                <!-- menu.xml -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
@@ -207,7 +201,7 @@
   <h3 id="definition">Content Logical Definition</h3>
 
   <h3>Definition</h3>
-<div><ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP">HOSP</a></td><td>Hospital</td><td>An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU">ICU</a></td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td><a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER">ER</a></td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-BedType.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-BedType.html#BedType-OR">OR</a></td><td>Operating Room</td><td>Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.</td></tr><tr><td><a name="ceec6125-317e-4855-9e49-7ad5a92f281e">​</a><a href="CodeSystem-BedType.html#BedType-NURSERY">NURSERY</a></td><td></td><td></td></tr><tr><td><a href="CodeSystem-BedType.html#BedType-BURNU">BURNU</a></td><td>Burn Unit</td><td>Beds in a Burn Unit</td></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>
+<div><ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP">HOSP</a></td><td>Hospital</td><td>An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU">ICU</a></td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td><a href="http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER">ER</a></td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-BedType.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-BedType.html#BedType-OR">OR</a></td><td>Operating Room</td><td>Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.</td></tr><tr><td><a name="f553c0df-5123-450f-bec6-e75705784ee6">​</a><a href="CodeSystem-BedType.html#BedType-NURSERY">NURSERY</a></td><td></td><td></td></tr><tr><td><a href="CodeSystem-BedType.html#BedType-BURNU">BURNU</a></td><td>Burn Unit</td><td>Beds in a Burn Unit</td></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>
   
   <p>&nbsp;</p>
   <a name="expansion"> </a>
@@ -261,7 +255,7 @@
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/mobile/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 7, 2020 04:47-0400">2020-04-07</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

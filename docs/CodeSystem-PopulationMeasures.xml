@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PopulationMeasures"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Population Measure Groups</h2><div><p>Groups defined by The SANER Project for measure populations</p>
+</div><p>This code system http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">numTotBeds<a name="PopulationMeasures-numTotBeds"> </a></td><td>All Hospital Beds</td><td>Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients</td></tr><tr><td style="white-space:nowrap">numBeds<a name="PopulationMeasures-numBeds"> </a></td><td>Hospital Inpatient Beds</td><td>Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients</td></tr><tr><td style="white-space:nowrap">numBedsOcc<a name="PopulationMeasures-numBedsOcc"> </a></td><td>Hospital Inpatient Bed Occupancy</td><td>Total number of staffed inpatient beds that are occupied</td></tr><tr><td style="white-space:nowrap">numICUBeds<a name="PopulationMeasures-numICUBeds"> </a></td><td>ICU Beds</td><td>Total number of staffed inpatient intensive care unit (ICU) beds</td></tr><tr><td style="white-space:nowrap">numICUBedsOcc<a name="PopulationMeasures-numICUBedsOcc"> </a></td><td>ICU Bed Occupancy</td><td>Total number of staffed inpatient ICU beds that are occupied</td></tr><tr><td style="white-space:nowrap">numVent<a name="PopulationMeasures-numVent"> </a></td><td>Mechanical Ventilators</td><td>Total number of ventilators available</td></tr><tr><td style="white-space:nowrap">numVentUse<a name="PopulationMeasures-numVentUse"> </a></td><td>Mechanical Ventilators in Use</td><td>Total number of ventilators in use</td></tr><tr><td style="white-space:nowrap">numC19Pats<a name="PopulationMeasures-numC19Pats"> </a></td><td>COVID-19 Patients</td><td>Patients with suspected or confirmed COVID-19 in any location.</td></tr><tr><td style="white-space:nowrap">numC19HospPats<a name="PopulationMeasures-numC19HospPats"> </a></td><td>COVID-19 Hospitalized</td><td>Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19</td></tr><tr><td style="white-space:nowrap">numC19OverflowPats<a name="PopulationMeasures-numC19OverflowPats"> </a></td><td>COVID-19 ED/Overflow</td><td>Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed</td></tr><tr><td style="white-space:nowrap">numC19HOPats<a name="PopulationMeasures-numC19HOPats"> </a></td><td>COVID-19 Hospital Onset</td><td>Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization</td></tr><tr><td style="white-space:nowrap">numC19VentPats<a name="PopulationMeasures-numC19VentPats"> </a></td><td>COVID-19 Patients on a Ventilator</td><td>Patients in any location who have suspected or confirmed COVID-19 and are on a mechanical ventilator</td></tr><tr><td style="white-space:nowrap">numC19MechVentPats<a name="PopulationMeasures-numC19MechVentPats"> </a></td><td>COVID-19 Hospitalized and Ventilated</td><td>Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator</td></tr><tr><td style="white-space:nowrap">numC19OFMechVentPats<a name="PopulationMeasures-numC19OFMechVentPats"> </a></td><td>COVID-19 ED/Overflow and Ventilated</td><td>Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator</td></tr><tr><td style="white-space:nowrap">numC19Died<a name="PopulationMeasures-numC19Died"> </a></td><td>COVID-19 Deaths</td><td>Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location</td></tr><tr><td style="white-space:nowrap">totalOrdersIncrease<a name="PopulationMeasures-totalOrdersIncrease"> </a></td><td>New Diagnostic Tests Ordered/Received</td><td/></tr><tr><td style="white-space:nowrap">totalOrders<a name="PopulationMeasures-totalOrders"> </a></td><td>Cumulative Diagnostic Tests Ordered/Recieved</td><td/></tr><tr><td style="white-space:nowrap">totalTestResultsIncrease<a name="PopulationMeasures-totalTestResultsIncrease"> </a></td><td>New Tests Resulted</td><td/></tr><tr><td style="white-space:nowrap">rejected<a name="PopulationMeasures-rejected"> </a></td><td>Cumulative Specimens Rejected*</td><td/></tr><tr><td style="white-space:nowrap">totalTestResults<a name="PopulationMeasures-totalTestResults"> </a></td><td>Cumulative Tests Performed</td><td/></tr><tr><td style="white-space:nowrap">positiveIncrease<a name="PopulationMeasures-positiveIncrease"> </a></td><td>New Positive COVID-19 Tests</td><td/></tr><tr><td style="white-space:nowrap">positive<a name="PopulationMeasures-positive"> </a></td><td>Cumulative Positive COVID-19 Tests</td><td/></tr><tr><td style="white-space:nowrap">positiveIncreasePercent<a name="PopulationMeasures-positiveIncreasePercent"> </a></td><td>Percent Positive among Newly Resulted Tests</td><td/></tr><tr><td style="white-space:nowrap">positivePercent<a name="PopulationMeasures-positivePercent"> </a></td><td>Cumulative Percent Positive among Resulted Tests</td><td/></tr><tr><td style="white-space:nowrap">allReports<a name="PopulationMeasures-allReports"> </a></td><td>All Laboratory Report for any Order</td><td/></tr><tr><td style="white-space:nowrap">latestReport<a name="PopulationMeasures-latestReport"> </a></td><td>Most Recent Laboratory Reports for any Order</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures"/>
+  <version value="0.1.0"/>
+  <name value="PopulationMeasures"/>
+  <title value="Population Measure Groups"/>
+  <status value="active"/>
+  <date value="2020-04-07T04:47:54-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Mobile Health Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="Groups defined by The SANER Project for measure populations"/>
+  <content value="complete"/>
+  <concept>
+    <code value="numTotBeds"/>
+    <display value="All Hospital Beds"/>
+    <definition value="Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"/>
+  </concept>
+  <concept>
+    <code value="numBeds"/>
+    <display value="Hospital Inpatient Beds"/>
+    <definition value="Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"/>
+  </concept>
+  <concept>
+    <code value="numBedsOcc"/>
+    <display value="Hospital Inpatient Bed Occupancy"/>
+    <definition value="Total number of staffed inpatient beds that are occupied"/>
+  </concept>
+  <concept>
+    <code value="numICUBeds"/>
+    <display value="ICU Beds"/>
+    <definition value="Total number of staffed inpatient intensive care unit (ICU) beds"/>
+  </concept>
+  <concept>
+    <code value="numICUBedsOcc"/>
+    <display value="ICU Bed Occupancy"/>
+    <definition value="Total number of staffed inpatient ICU beds that are occupied"/>
+  </concept>
+  <concept>
+    <code value="numVent"/>
+    <display value="Mechanical Ventilators"/>
+    <definition value="Total number of ventilators available"/>
+  </concept>
+  <concept>
+    <code value="numVentUse"/>
+    <display value="Mechanical Ventilators in Use"/>
+    <definition value="Total number of ventilators in use"/>
+  </concept>
+  <concept>
+    <code value="numC19Pats"/>
+    <display value="COVID-19 Patients"/>
+    <definition value="Patients with suspected or confirmed COVID-19 in any location."/>
+  </concept>
+  <concept>
+    <code value="numC19HospPats"/>
+    <display value="COVID-19 Hospitalized"/>
+    <definition value="Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"/>
+  </concept>
+  <concept>
+    <code value="numC19OverflowPats"/>
+    <display value="COVID-19 ED/Overflow"/>
+    <definition value="Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed"/>
+  </concept>
+  <concept>
+    <code value="numC19HOPats"/>
+    <display value="COVID-19 Hospital Onset"/>
+    <definition value="Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization"/>
+  </concept>
+  <concept>
+    <code value="numC19VentPats"/>
+    <display value="COVID-19 Patients on a Ventilator"/>
+    <definition value="Patients in any location who have suspected or confirmed COVID-19 and are on a mechanical ventilator"/>
+  </concept>
+  <concept>
+    <code value="numC19MechVentPats"/>
+    <display value="COVID-19 Hospitalized and Ventilated"/>
+    <definition value="Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator"/>
+  </concept>
+  <concept>
+    <code value="numC19OFMechVentPats"/>
+    <display value="COVID-19 ED/Overflow and Ventilated"/>
+    <definition value="Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"/>
+  </concept>
+  <concept>
+    <code value="numC19Died"/>
+    <display value="COVID-19 Deaths"/>
+    <definition value="Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location"/>
+  </concept>
+  <concept>
+    <code value="totalOrdersIncrease"/>
+    <display value="New Diagnostic Tests Ordered/Received"/>
+  </concept>
+  <concept>
+    <code value="totalOrders"/>
+    <display value="Cumulative Diagnostic Tests Ordered/Recieved"/>
+  </concept>
+  <concept>
+    <code value="totalTestResultsIncrease"/>
+    <display value="New Tests Resulted"/>
+  </concept>
+  <concept>
+    <code value="rejected"/>
+    <display value="Cumulative Specimens Rejected*"/>
+  </concept>
+  <concept>
+    <code value="totalTestResults"/>
+    <display value="Cumulative Tests Performed"/>
+  </concept>
+  <concept>
+    <code value="positiveIncrease"/>
+    <display value="New Positive COVID-19 Tests"/>
+  </concept>
+  <concept>
+    <code value="positive"/>
+    <display value="Cumulative Positive COVID-19 Tests"/>
+  </concept>
+  <concept>
+    <code value="positiveIncreasePercent"/>
+    <display value="Percent Positive among Newly Resulted Tests"/>
+  </concept>
+  <concept>
+    <code value="positivePercent"/>
+    <display value="Cumulative Percent Positive among Resulted Tests"/>
+  </concept>
+  <concept>
+    <code value="allReports"/>
+    <display value="All Laboratory Report for any Order"/>
+  </concept>
+  <concept>
+    <code value="latestReport"/>
+    <display value="Most Recent Laboratory Reports for any Order"/>
+  </concept>
+</CodeSystem>

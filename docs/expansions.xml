@@ -1,75 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="4ff785a9-8f54-492c-9bc2-40ff76720c58"/>
+  <id value="f6eb90fc-30c8-4bb6-b4bb-7287ed2794ea"/>
   <meta>
-    <lastUpdated value="2020-04-07T04:47:54.766-04:00"/>
+    <lastUpdated value="2020-04-13T11:49:10.083-04:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
-    <resource>
-      <ValueSet>
-        <id value="BedDeviceTypes"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 0 concepts</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
-        <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
-        <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
-        <publisher value="HL7 International"/>
-        <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
-          <telecom>
-            <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
-          </telecom>
-        </contact>
-        <contact>
-          <name value="Audacious Inquiry"/>
-          <telecom>
-            <system value="url"/>
-            <value value="http://ainq.com"/>
-          </telecom>
-        </contact>
-        <contact>
-          <name value="Keith W. Boone"/>
-          <telecom>
-            <system value="email"/>
-            <value value="mailto:kboone@ainq.com"/>
-          </telecom>
-        </contact>
-        <description value="Codes used to identify beds"/>
-        <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
   <entry>
     <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
     <resource>
@@ -129,13 +65,13 @@
         <name value="BedLocationOperationalStatus"/>
         <title value="Bed Location Operational Status"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -154,8 +90,8 @@
         </contact>
         <description value="This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."/>
         <expansion>
-          <identifier value="urn:uuid:42565537-3345-4295-a964-8644a5dcd0f2"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:f4f1fd26-3754-4bff-8f41-cdcb15358cb6"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -185,10 +121,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -208,18 +144,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -236,10 +172,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -307,13 +243,13 @@
         <name value="BedProperty"/>
         <title value="Bed Property"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -332,8 +268,8 @@
         </contact>
         <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
         <expansion>
-          <identifier value="urn:uuid:06a82d10-70cb-47bb-926e-1790e20bd63b"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:872bf04c-be00-48b6-8646-c93d8e3c3de4"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -363,10 +299,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -386,18 +322,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -414,10 +350,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -427,10 +363,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -450,18 +386,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -478,10 +414,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -491,10 +427,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -514,18 +450,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -542,10 +478,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -555,10 +491,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -578,18 +514,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -606,10 +542,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -619,10 +555,124 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/Groups"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="Groups"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem version 0.1.0
+            <p>All codes from system 
+              <a href="CodeSystem-GroupSystem.html">
+                <code>http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-GroupSystem-Beds"> </a>
+                  <a href="CodeSystem-GroupSystem.html#GroupSystem-Beds">Beds</a>
+                </td>
+                <td>Beds</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-GroupSystem-Ventilators"> </a>
+                  <a href="CodeSystem-GroupSystem.html#GroupSystem-Ventilators">Ventilators</a>
+                </td>
+                <td>Ventilators</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-GroupSystem-Encounters"> </a>
+                  <a href="CodeSystem-GroupSystem.html#GroupSystem-Encounters">Encounters</a>
+                </td>
+                <td>Encounters</td>
+                <td/>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/Groups"/>
+        <version value="0.1.0"/>
+        <name value="Groups"/>
+        <title value="Measure Groups"/>
+        <status value="active"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
+        <publisher value="HL7 International"/>
+        <contact>
+          <name value="HL7 Patient Administration Workgroup"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="mailto:kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="Measure Groups defined by the SANER Project"/>
+        <expansion>
+          <identifier value="urn:uuid:08a6c828-15dc-4cae-85a1-432404854c1d"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+            <code value="Beds"/>
+            <display value="Beds"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+            <code value="Ventilators"/>
+            <display value="Ventilators"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+            <code value="Encounters"/>
+            <display value="Encounters"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
+    <resource>
+      <ValueSet>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -642,18 +692,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -670,10 +720,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -683,10 +733,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -706,18 +756,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -734,10 +784,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -747,10 +797,238 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/MeasureRateAggregationValues"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="MeasureRateAggregationValues"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation version 0.1.0
+            <p>All codes from system 
+              <a href="CodeSystem-MeasureRateAggregation.html">
+                <code>http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-MeasureRateAggregation-aggregable-by-period"> </a>
+                  <a href="CodeSystem-MeasureRateAggregation.html#MeasureRateAggregation-aggregable-by-period">aggregable-by-period</a>
+                </td>
+                <td>Aggregable</td>
+                <td>Rates can be accumulated over consecutive periods</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-MeasureRateAggregation-point-in-time"> </a>
+                  <a href="CodeSystem-MeasureRateAggregation.html#MeasureRateAggregation-point-in-time">point-in-time</a>
+                </td>
+                <td>Point in Time</td>
+                <td>Rates are point in time measures during the reporting period</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-MeasureRateAggregation-cumulative"> </a>
+                  <a href="CodeSystem-MeasureRateAggregation.html#MeasureRateAggregation-cumulative">cumulative</a>
+                </td>
+                <td>Cumulative</td>
+                <td>Rates are point in time measures showing cumulative values over all reporting periods</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/MeasureRateAggregationValues"/>
+        <version value="0.1.0"/>
+        <name value="MeasureRateAggregationValues"/>
+        <title value="Rate Aggregation Value Set"/>
+        <status value="active"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
+        <publisher value="HL7 International"/>
+        <contact>
+          <name value="HL7 Patient Administration Workgroup"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="mailto:kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="This Value Set Identifies methods of rate aggregation"/>
+        <expansion>
+          <identifier value="urn:uuid:1e4b129a-50ca-43aa-9cbd-f1cb699c89ee"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation"/>
+            <code value="aggregable-by-period"/>
+            <display value="Aggregable"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation"/>
+            <code value="point-in-time"/>
+            <display value="Point in Time"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation"/>
+            <code value="cumulative"/>
+            <display value="Cumulative"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus"/>
+    <resource>
+      <ValueSet>
+        <id value="MeasureStatus"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px"/>Expansion based on http://hl7.org/fhir/publication-status version 4.0.1
+            <p>All codes from system 
+              <a href="http://hl7.org/fhir/R4/codesystem-publication-status.html">
+                <code>http://hl7.org/fhir/publication-status</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-publication-status-active"> </a>
+                  <a href="http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-active">active</a>
+                </td>
+                <td>Active</td>
+                <td>This resource is ready for normal use.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-publication-status-draft"> </a>
+                  <a href="http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-draft">draft</a>
+                </td>
+                <td>Draft</td>
+                <td>This resource is still under development and is not yet considered to be ready for normal use.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-publication-status-retired"> </a>
+                  <a href="http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-retired">retired</a>
+                </td>
+                <td>Retired</td>
+                <td>This resource has been withdrawn or superseded and should no longer be used.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus"/>
+        <version value="0.1.0"/>
+        <name value="MeasureStatus"/>
+        <title value="Measure Status Values"/>
+        <status value="active"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
+        <publisher value="HL7 International"/>
+        <contact>
+          <name value="HL7 Patient Administration Workgroup"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="mailto:kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="Allowed Status Values for Saner Measures"/>
+        <expansion>
+          <identifier value="urn:uuid:0307c640-61b9-4912-ab66-9be2616c7a36"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/publication-status|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/publication-status"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/publication-status"/>
+            <code value="draft"/>
+            <display value="Draft"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/publication-status"/>
+            <code value="retired"/>
+            <display value="Retired"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
+    <resource>
+      <ValueSet>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -770,18 +1048,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -798,10 +1076,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -860,13 +1138,13 @@
         <version value="0.1.0"/>
         <name value="OnlyCompleteOrPending"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -885,8 +1163,8 @@
         </contact>
         <description value="This valueset is used to limit the reported status to complete or pending for a MeasureReport"/>
         <expansion>
-          <identifier value="urn:uuid:6d13a183-d406-445f-ab95-c4eb98701c17"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:cea96575-7714-451a-82ae-5064d5af7941"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -911,10 +1189,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -934,18 +1212,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -962,10 +1240,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -975,10 +1253,423 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/Populations"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="Populations"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 26 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem version 0.1.0
+            <p>All codes from system 
+              <a href="CodeSystem-PopulationSystem.html">
+                <code>http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numTotBeds"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numTotBeds">numTotBeds</a>
+                </td>
+                <td>All Hospital Beds</td>
+                <td>Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numBeds"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numBeds">numBeds</a>
+                </td>
+                <td>Hospital Inpatient Beds</td>
+                <td>Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numBedsOcc"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numBedsOcc">numBedsOcc</a>
+                </td>
+                <td>Hospital Inpatient Bed Occupancy</td>
+                <td>Total number of staffed inpatient beds that are occupied</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numICUBeds"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numICUBeds">numICUBeds</a>
+                </td>
+                <td>ICU Beds</td>
+                <td>Total number of staffed inpatient intensive care unit (ICU) beds</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numICUBedsOcc"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numICUBedsOcc">numICUBedsOcc</a>
+                </td>
+                <td>ICU Bed Occupancy</td>
+                <td>Total number of staffed inpatient ICU beds that are occupied</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numVent"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numVent">numVent</a>
+                </td>
+                <td>Mechanical Ventilators</td>
+                <td>Total number of ventilators available</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numVentUse"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numVentUse">numVentUse</a>
+                </td>
+                <td>Mechanical Ventilators in Use</td>
+                <td>Total number of ventilators in use</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19Pats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19Pats">numC19Pats</a>
+                </td>
+                <td>All COVID-19 Confirmed or Suspected Patients</td>
+                <td>Patients with suspected or confirmed COVID-19 in any location.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19HospPats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19HospPats">numC19HospPats</a>
+                </td>
+                <td>Hospitalized COVID-19 Patients</td>
+                <td>Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19OverflowPats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19OverflowPats">numC19OverflowPats</a>
+                </td>
+                <td>ED/Overflow COVID-19 Patients</td>
+                <td>Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19HOPats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19HOPats">numC19HOPats</a>
+                </td>
+                <td>Hospital Onset COVID-19 Patients</td>
+                <td>Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19VentPats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19VentPats">numC19VentPats</a>
+                </td>
+                <td>Ventilated COVID-19 Patients</td>
+                <td>Patients in any location who have suspected or confirmed COVID-19 and are on a mechanical ventilator</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19MechVentPats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19MechVentPats">numC19MechVentPats</a>
+                </td>
+                <td>Hospitalized and Ventilated COVID-19 Patients</td>
+                <td>Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19OFMechVentPats"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19OFMechVentPats">numC19OFMechVentPats</a>
+                </td>
+                <td>ED/Overflow and Ventilated COVID-19 Patients</td>
+                <td>Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19Died"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-numC19Died">numC19Died</a>
+                </td>
+                <td>COVID-19 Patient Deaths</td>
+                <td>Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalOrdersIncrease"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-totalOrdersIncrease">totalOrdersIncrease</a>
+                </td>
+                <td>New Diagnostic Tests Ordered/Received</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalOrders"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-totalOrders">totalOrders</a>
+                </td>
+                <td>Cumulative Diagnostic Tests Ordered/Recieved</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalTestResultsIncrease"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-totalTestResultsIncrease">totalTestResultsIncrease</a>
+                </td>
+                <td>New Tests Resulted</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-rejected"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-rejected">rejected</a>
+                </td>
+                <td>Cumulative Specimens Rejected*</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalTestResults"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-totalTestResults">totalTestResults</a>
+                </td>
+                <td>Cumulative Tests Performed</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positiveIncrease"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-positiveIncrease">positiveIncrease</a>
+                </td>
+                <td>New Positive COVID-19 Tests</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positive"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-positive">positive</a>
+                </td>
+                <td>Cumulative Positive COVID-19 Tests</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positiveIncreasePercent"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-positiveIncreasePercent">positiveIncreasePercent</a>
+                </td>
+                <td>Percent Positive among Newly Resulted Tests</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positivePercent"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-positivePercent">positivePercent</a>
+                </td>
+                <td>Cumulative Percent Positive among Resulted Tests</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-allReports"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-allReports">allReports</a>
+                </td>
+                <td>All Laboratory Reports for any Order</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-latestReports"> </a>
+                  <a href="CodeSystem-PopulationSystem.html#PopulationSystem-latestReports">latestReports</a>
+                </td>
+                <td>Most Recent Laboratory Reports for any Order</td>
+                <td/>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/Populations"/>
+        <version value="0.1.0"/>
+        <name value="Populations"/>
+        <title value="Measure Populations"/>
+        <status value="active"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
+        <publisher value="HL7 International"/>
+        <contact>
+          <name value="HL7 Patient Administration Workgroup"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Audacious Inquiry"/>
+          <telecom>
+            <system value="url"/>
+            <value value="http://ainq.com"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Keith W. Boone"/>
+          <telecom>
+            <system value="email"/>
+            <value value="mailto:kboone@ainq.com"/>
+          </telecom>
+        </contact>
+        <description value="Measure Populations defined by The SANER Project"/>
+        <expansion>
+          <identifier value="urn:uuid:e28c835a-24c8-427f-919f-e0b2ea9a0f1b"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
+          <total value="26"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numTotBeds"/>
+            <display value="All Hospital Beds"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numBeds"/>
+            <display value="Hospital Inpatient Beds"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numBedsOcc"/>
+            <display value="Hospital Inpatient Bed Occupancy"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numICUBeds"/>
+            <display value="ICU Beds"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numICUBedsOcc"/>
+            <display value="ICU Bed Occupancy"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numVent"/>
+            <display value="Mechanical Ventilators"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numVentUse"/>
+            <display value="Mechanical Ventilators in Use"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19Pats"/>
+            <display value="All COVID-19 Confirmed or Suspected Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19HospPats"/>
+            <display value="Hospitalized COVID-19 Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19OverflowPats"/>
+            <display value="ED/Overflow COVID-19 Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19HOPats"/>
+            <display value="Hospital Onset COVID-19 Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19VentPats"/>
+            <display value="Ventilated COVID-19 Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19MechVentPats"/>
+            <display value="Hospitalized and Ventilated COVID-19 Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19OFMechVentPats"/>
+            <display value="ED/Overflow and Ventilated COVID-19 Patients"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="numC19Died"/>
+            <display value="COVID-19 Patient Deaths"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="totalOrdersIncrease"/>
+            <display value="New Diagnostic Tests Ordered/Received"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="totalOrders"/>
+            <display value="Cumulative Diagnostic Tests Ordered/Recieved"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="totalTestResultsIncrease"/>
+            <display value="New Tests Resulted"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="rejected"/>
+            <display value="Cumulative Specimens Rejected*"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="totalTestResults"/>
+            <display value="Cumulative Tests Performed"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="positiveIncrease"/>
+            <display value="New Positive COVID-19 Tests"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="positive"/>
+            <display value="Cumulative Positive COVID-19 Tests"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="positiveIncreasePercent"/>
+            <display value="Percent Positive among Newly Resulted Tests"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="positivePercent"/>
+            <display value="Cumulative Percent Positive among Resulted Tests"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="allReports"/>
+            <display value="All Laboratory Reports for any Order"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+            <code value="latestReports"/>
+            <display value="Most Recent Laboratory Reports for any Order"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
+    <resource>
+      <ValueSet>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -998,18 +1689,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -1026,10 +1717,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1039,10 +1730,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -1062,18 +1753,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -1090,10 +1781,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1103,10 +1794,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+    <fullUrl value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
     <resource>
       <ValueSet>
-        <id value="BedDeviceTypes"/>
+        <id value="BedLocationTypes"/>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -1126,18 +1817,18 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+        <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"/>
         <version value="0.1.0"/>
-        <name value="BedDeviceTypes"/>
-        <title value="Bed Device Types"/>
+        <name value="BedLocationTypes"/>
+        <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-07T04:47:54-04:00"/>
+        <date value="2020-04-13T11:49:10-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
-          <name value="HL7 Mobile Health Workgroup"/>
+          <name value="HL7 Patient Administration Workgroup"/>
           <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+            <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
           </telecom>
         </contact>
         <contact>
@@ -1154,10 +1845,10 @@
             <value value="mailto:kboone@ainq.com"/>
           </telecom>
         </contact>
-        <description value="Codes used to identify beds"/>
+        <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:05c16d98-8df0-4eb4-959c-17dd337546ed"/>
-          <timestamp value="2020-04-07T04:48:25-04:00"/>
+          <identifier value="urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191"/>
+          <timestamp value="2020-04-13T11:49:54-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>

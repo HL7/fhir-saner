@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7.FHIR.US.SANER\CDC Patient Impact and Hospital Capacity - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"14.42"}
+    h3,h4,h5,h6{--heading-prefix:"14.42"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
+	  <li><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
+      </li>
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vocabulary<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedProperty.html">Bed Property</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedType.html">Bed Type</a>
+      </li>
+      <li>
+        <a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>CDC Patient Impact and Hospital Capacity</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <a name="root"> </a>
+  <h2 id="root">CDC Patient Impact and Hospital Capacity</h2>
+  <p>
+    Format(s):
+  </p>
+  <ul>
+
+    <li>
+      <a href="Measure-CDCPatientImpactAndHospitalCapacity.xml.html">XML</a>
+    </li>
+
+
+    <li>
+      <a href="Measure-CDCPatientImpactAndHospitalCapacity.json.html">JSON</a> 
+    </li>
+
+
+    <li>
+      <a href="Measure-CDCPatientImpactAndHospitalCapacity.ttl.html">Turtle</a>
+    </li>
+
+  </ul>
+
+  
+  
+
+  <p>
+    <b>Narrative view</b>
+  </p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>meta</b>: </p><p><b>url</b>: <a href="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity">http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>title</b>: Patient Impact and Hospital Capacity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: Apr 13, 2020, 11:49:10 AM</p><p><b>publisher</b>: HL7 International</p><p><b>contact</b>: , , </p><p><b>useContext</b>: </p><p><b>jurisdiction</b>: United States of America <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>author</b>: </p><p><b>relatedArtifact</b>: , , , </p><p><b>definition</b>: Ventilator
+: Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive
+pressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.
+Note: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and
+PEEP) via non-invasive means (for example: nasal prongs, nasal mask, full face mask, total mask, etc.) are not considered ventilators
+unless positive pressure is delivered via an artificial airway (oral/nasal endotracheal or tracheostomy tube).
+
+Beds
+: Baby beds in mom's room count as 1 bed, even if there are multiple baby beds
+Follow-up in progress if staffed is less than licensed.
+Total includes all beds, even if with surge beds it exceeds licensed beds.
+
+ICU beds
+: Include NICU (from CDC Webinar 31-Mar-2020) (outstanding question on burn unit)</p><blockquote><p><b>group</b></p><p><b>code</b>: Hospital Bed Reporting <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Beds' = 'Beds', given as 'Hospital Beds'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numTotBeds' = 'All Hospital Beds', given as 'All Hospital Beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,
+and overflow and surge/expansion beds used for inpatients or outpatients. This includes ICU beds.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numBeds' = 'Hospital Inpatient Beds', given as 'Hospital Inpatient Beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of staffed inpatient beds that are occupied <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numBedsOcc' = 'Hospital Inpatient Bed Occupancy', given as 'Hospital Inpatient Bed Occupancy'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.
+
+CDC Webinar 31-Mar-2020:
+Baby beds in mom's room count as 1 bed, even if there are multiple baby beds
+Follow-up in progress if staffed is less than licensed.
+Total includes all beds, even if with surge beds it exceeds licensed beds.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of staffed inpatient intensive care unit (ICU) beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numICUBeds' = 'ICU Beds', given as 'ICU Beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of staffed Intensive Care Unit (ICU) beds.
+
+CDC Webinar 31-Mar-2020:
+ICU beds include NICU</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of staffed inpatient intensive care unit (ICU) beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numICUBedsOcc' = 'ICU Bed Occupancy', given as 'Total number of staffed inpatient intensive care unit (ICU) beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of staffed ICU beds occupied by patients at the time the data is collected.
+
+CDC Webinar 31-Mar-2020:
+ICU beds include NICU</p><p><b>criteria</b>: </p></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Hospital Ventilators Reporting <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Ventilators' = 'Ventilators', given as 'Hospital Ventilators'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Total number of ventilators available <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numVent' = 'Mechanical Ventilators', given as 'Mechanical Ventilators'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the total number of mechanical ventilators, including anesthesia machines and
+portable/transport ventilators available in the facility.
+Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of ventilators in use <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numVentUse' = 'Mechanical Ventilators in Use', given as 'Mechanical Ventilators in Use'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia
+machines and portable/transport ventilators. Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways.</p><p><b>criteria</b>: </p></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Hospital COVID-19 Encounters Reporting <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Encounters' = 'Encounters', given as 'Encounters'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 in any location. <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19Pats' = 'All COVID-19 Confirmed or Suspected Patients', given as 'All COVID-19 Confirmed or Suspected Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the number of patients in any location at the time the data is collected who have suspected or confirmed
+COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.
+Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis
+Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance
+for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed
+COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator. <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19VentPats' = 'Ventilated COVID-19 Patients', given as 'COVID-19 Patients on a Ventilator'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients in any location who have suspected or confirmed COVID-19 and are
+currently on a mechanical ventilator* at the time the data is collected. This includes the patients with laboratory-confirmed or clinically
+diagnosed COVID-19.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19 <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19HospPats' = 'Hospitalized COVID-19 Patients', given as 'Hospitalized COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients hospitalized in an inpatient bed at the time the data is collected
+ who have suspected or confirmed COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.
+Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis
+Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance
+for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed
+COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19MechVentPats' = 'Hospitalized and Ventilated COVID-19 Patients', given as 'Hospitalized and Ventilated COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients hospitalized in an inpatient bed who have
+suspected or confirmed COVID-19 and are currently on a mechanical ventilator* at the time the data is collected . This includes the
+patients with laboratory-confirmed or clinically diagnosed COVID-19.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient bed with onset of suspected or
+confirmed COVID-19 fourteen or more days after hospital admission due to a condition other than COVID-19 <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19HOPats' = 'Hospital Onset COVID-19 Patients', given as 'Hospital Onset COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients hospitalized in an inpatient bed at the time the data is
+collected with onset of suspected or confirmed COVID-19 fourteen or more days after hospitalization (admission date = hospital
+day 1). This includes laboratory-confirmed or clinically diagnosed COVID-19 cases.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19OverflowPats' = 'ED/Overflow COVID-19 Patients', given as 'ED/Overflow COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients with suspected or confirmed COVID-19 who are in the
+Emergency Department(ED) or any overflow/expansion location awaiting placement in an inpatient bed at the time the data
+is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Overflow locations include any physical
+locations created to accommodate patients include but not limited to 24-hour observation units, hallways, parking lots, or tents.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19OFMechVentPats' = 'ED/Overflow and Ventilated COVID-19 Patients', given as 'ED/Overflow and Ventilated COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients with suspected or confirmed COVID-19 who are in the ED or any overflow/expansion location on a
+mechanical ventilator* at the time the data is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting. <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19Died' = 'COVID-19 Patient Deaths', given as 'COVID-19 Patient Deaths'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. This
+includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Please enter the count of deaths newly occurred, at the time
+the data is collected instead of the cumulated number of deaths.</p><p><b>criteria</b>: </p></blockquote></blockquote></div>
+
+  
+  
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

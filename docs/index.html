@@ -4,16 +4,16 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>HL7.FHIR.US.SANER\Home - FHIR v4.0.1</title>
-
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
     <link rel="stylesheet" href="fhir.css"/>
-
+     
       <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
-
+  
       <!-- Project extras -->
     <link rel="stylesheet" href="assets/css/project.css"/>
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
@@ -21,6 +21,8 @@
       <!-- Placeholder for child template CSS declarations -->
     <link rel="stylesheet" href="assets/css/hl7.css"/>
     <link rel="stylesheet" href="assets/css/fhir.css"/>
+<link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css"/>
+
 
     <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
@@ -29,7 +31,7 @@
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif] -->
-
+  
       <!-- Favicons -->
     <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
     <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
@@ -43,7 +45,7 @@
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
-
+        
         <div id="hl7-nav">
           <a no-external="true" id="hl7-logo" href="http://hl7.org">
             <img src="assets/images/hl7-logo-header.png" alt="Visit the HL7 website" height="50"/>
@@ -62,12 +64,12 @@
         </div>
       </div>   <!-- /container -->
     </div>    <!-- /segment-header -->
-
+    
     <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
       <div class="container">    <!-- container -->
           <!-- HEADER CONTENT -->
-
+    
         <nav class="navbar navbar-inverse">
             <!-- status-bar -->
           <div class="container">
@@ -78,15 +80,7 @@
             </button>
             <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-
-
-
-
-
-
-
-
-
+                <!-- menu.xml -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
@@ -160,13 +154,13 @@
     </div>    <!-- /segment-navbar -->
       <!-- status-bar -->
     <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
-      <div class="container">    <!-- container -->
+      <div class="container">    <!-- container -->  
         <ul class="breadcrumb">
           <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Home</b></li>
-        </ul>
+        </ul>  
       </div>    <!-- /container -->
     </div>    <!-- /segment-breadcrumb -->
-
+    
     <div id="segment-content" class="segment">    <!-- segment-content -->
       <div class="container">    <!-- container -->
         <div class="row">
@@ -181,9 +175,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="col-12">
     <!-- ReleaseHeader --><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Home</h2>
-
-
-
+  
+  
+  
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#about-this-guide" id="markdown-toc-about-this-guide">About This Guide</a></li>
@@ -192,13 +186,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+  <!-- index.md -->
 
 <p>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.</p>
 
 <p><img src="SANERLogo.png" alt="The SANER Project Logo"/></p>
-<div style='float: clear'/>
+<div style="float: clear"></div>
 <p><strong>Fighting COVID-19 with FHIR&reg;</strong></p>
 
 <h3 id="about-this-guide">About This Guide</h3>
@@ -250,7 +245,7 @@ the SANER project.</p>
   </li>
   <li>Volume IV: Terminology
     <ol>
-      <li><a name="d94918bb-182c-4d3b-b26b-a687c1d67894">​</a><a href="CodeSystem-SanerBedType.html">SanerBedType Coding System</a></li>
+      <li><a name="54457ea3-45e9-4e66-b5a1-dd1a30dd1794">​</a><a href="CodeSystem-SanerBedType.html">SanerBedType Coding System</a></li>
       <li><a href="ValueSet-BedLocationOperationalStatus.html">BedLocationOperationalStatus Value Set</a></li>
       <li><a href="ValueSet-BedProperty.html">BedProperty Value Set</a></li>
       <li><a href="ValueSet-BedType.html">BedType Value Set</a></li>
@@ -293,14 +288,14 @@ Ai is raising the bar for how health data is shared, managed, and protected.</p>
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/mobile/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 7, 2020 04:47-0400">2020-04-07</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
                  | <a style="color: #81BEF7" href="http://hl7.org/fhir/us/saner/history.html" target="_blank">Version History <img src="external.png" alt="external" style="vertical-align: baseline"/></a> |
                  <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> |
-                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | -->
+                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
                  <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change <img src="external.png" alt="external" style="vertical-align: baseline"/></a>
 
           </span>
@@ -308,12 +303,12 @@ Ai is raising the bar for how health data is shared, managed, and protected.</p>
       </div>    <!-- /inner-wrapper -->
     </div>    <!-- /container -->
   </div>    <!-- /segment-footer -->
-
+  
   <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
     <div class="container">    <!-- container -->
     </div>    <!-- /container -->
   </div>    <!-- /segment-post-footer -->
-
+  
     <!-- JS and analytics only. -->
     <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -324,7 +319,7 @@ Ai is raising the bar for how health data is shared, managed, and protected.</p>
   <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
-
+  
     <!-- Analytics Below
   ================================================== -->
   </body>

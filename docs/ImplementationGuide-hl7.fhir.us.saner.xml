@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.us.saner"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SituationalAwarenessforNovelEpidemicResponse</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/saner/ImplementationGuide/hl7.fhir.us.saner</pre><div><p>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of high level situational awareness information from inpatient facilities to centralized data repositories to support the treatment of novel influenza-like illness.</p>
+</div></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/saner/ImplementationGuide/hl7.fhir.us.saner"/>
+  <version value="0.1.0"/>
+  <name value="SituationalAwarenessforNovelEpidemicResponse"/>
+  <title value="Situational Awareness for Novel Epidemic Response"/>
+  <status value="active"/>
+  <date value="2020-04-13T11:49:10-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Patient Administration Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of high level situational awareness information from inpatient facilities to centralized data repositories to support the treatment of novel influenza-like illness."/>
+  <packageId value="hl7.fhir.us.saner"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/us/saner/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-audit-event-write.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-audit-event-write"/>
+      </reference>
+      <name value="Audit Event Write Profile"/>
+      <description value="Defines constraints on the AuditEvent Resource to record when a resource has been written."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-bed-group.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-bed-group"/>
+      </reference>
+      <name value="Bed Group Profile"/>
+      <description value="Defines constraints on the Group Resource for data communicating about Bed availability."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-bed-location.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-bed-location"/>
+      </reference>
+      <name value="Bed Location Profile"/>
+      <description value="Defines constraints on the Location Resource for data communicating about a location for a bed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-bed-measure-report.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-bed-measure-report"/>
+      </reference>
+      <name value="Bed MeasureReport Profile"/>
+      <description value="Defines constraints on the MeasureReport Resource for reporting summary data about Bed availability."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-device-group.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-device-group"/>
+      </reference>
+      <name value="Device Group Profile"/>
+      <description value="Defines constraints on the Group Resource for data communicating about device availability."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-MeasureCriteria.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MeasureCriteria"/>
+      </reference>
+      <name value="MeasureCriteria"/>
+      <description value="Constraints on documentation for the evaluation of a Measure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-MeasureDescription.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MeasureDescription"/>
+      </reference>
+      <name value="Saner Measure Description"/>
+      <description value="A CodeableConcept describing a measure value"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-audit-event-read.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-audit-event-read"/>
+      </reference>
+      <name value="Audit Event Read"/>
+      <description value="Defines constraints on the AuditEvent Resource to record when a record has been accessed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-device-measure-report.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-device-measure-report"/>
+      </reference>
+      <name value="Device MeasureReport Profile"/>
+      <description value="Defines constraints on the MeasureReport Resource for data communicating about device availability."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-PublicHealthMeasure.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PublicHealthMeasure"/>
+      </reference>
+      <name value="Saner Public Health Measure"/>
+      <description value="Profile Saner Public Health Measure&#xA;&#xA;The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation&#xA;of measures.  These are developed by The Saner Project team to ensure that the measure is well understood&#xA;and computation of it can be automated from systems that have the measure data."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-resource-location.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-resource-location"/>
+      </reference>
+      <name value="Resource Location Profile"/>
+      <description value="Defines constraints on the Location Resource describing the location of resources (Beds and Devices)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-saner-supporting-device.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/saner-supporting-device"/>
+      </reference>
+      <name value="Supporting Device Profile"/>
+      <description value="Defines constraints on the Device Resource for data communicating about supporting devices."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-MeasureGroupAttributes.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MeasureGroupAttributes"/>
+      </reference>
+      <name value="Attributes describing a group of measures"/>
+      <description value="Attributes describing the group of measures"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-MeasurePopulationAlternateCriteria.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MeasurePopulationAlternateCriteria"/>
+      </reference>
+      <name value="Alternate criteria for performing a measure"/>
+      <description value="Provides Alternate criteria for performing a measure, (e.g., CQL, Drules, et cetera)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-BedLocationOperationalStatus.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BedLocationOperationalStatus"/>
+      </reference>
+      <name value="Bed Location Operational Status"/>
+      <description value="This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-BedLocationTypes.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BedLocationTypes"/>
+      </reference>
+      <name value="Location Types"/>
+      <description value="Codes used to locations"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-BedProperty.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BedProperty"/>
+      </reference>
+      <name value="Bed Property"/>
+      <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-BedType.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/BedType"/>
+      </reference>
+      <name value="Bed Type"/>
+      <description value="This Value Set describes the types of care services that a bed can support."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-COVID19DiagnosticTest.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/COVID19DiagnosticTest"/>
+      </reference>
+      <name value="COVID-19 Diagnostic Test"/>
+      <description value="Codes for COVID-19 Diagnostic Tests"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-ConfirmedCOVID19Diagnosis.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ConfirmedCOVID19Diagnosis"/>
+      </reference>
+      <name value="Confirmed COVID-19 Diagnosis"/>
+      <description value="Codes confirming COVID-19 Diagnostic Test Result"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-ConfirmedCOVID19DiagnosisValues.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ConfirmedCOVID19DiagnosisValues"/>
+      </reference>
+      <name value="Confirmed COVID-19 Diagnosis Values"/>
+      <description value="Codes for result values confirming COVID-19 Diagnostic Test Result"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-EDorOverflowLocations.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/EDorOverflowLocations"/>
+      </reference>
+      <name value="ED or Overflow Locations"/>
+      <description value="Codes used for ED or Overflow locations"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-Fields.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/Fields"/>
+      </reference>
+      <name value="Resource Fields"/>
+      <description value="This value set describes fields used to stratify groups in a report"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-Groups.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/Groups"/>
+      </reference>
+      <name value="Measure Groups"/>
+      <description value="Measure Groups defined by the SANER Project"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-ICULocations.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ICULocations"/>
+      </reference>
+      <name value="ICU Locations"/>
+      <description value="Codes used for ICU locations"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-InpatientLocations.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/InpatientLocations"/>
+      </reference>
+      <name value="Inpatient Locations"/>
+      <description value="Codes used for inpatient locations"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-MeasureRateAggregationValues.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MeasureRateAggregationValues"/>
+      </reference>
+      <name value="Rate Aggregation Value Set"/>
+      <description value="This Value Set Identifies methods of rate aggregation"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-MeasureStatus.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MeasureStatus"/>
+      </reference>
+      <name value="Measure Status Values"/>
+      <description value="Allowed Status Values for Saner Measures"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-OccupiedBed.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/OccupiedBed"/>
+      </reference>
+      <name value="Occupied Bed"/>
+      <description value="Codes used Occupied Beds"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-OnlyCompleteOrPending.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/OnlyCompleteOrPending"/>
+      </reference>
+      <name value="OnlyCompleteOrPending"/>
+      <description value="This valueset is used to limit the reported status to complete or pending for a MeasureReport"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-PatientDied.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/PatientDied"/>
+      </reference>
+      <name value="Patient Died"/>
+      <description value="Codes used to identify that a patient has died"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-Populations.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/Populations"/>
+      </reference>
+      <name value="Measure Populations"/>
+      <description value="Measure Populations defined by The SANER Project"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-SuspectedOrDiagnosedCOVID19.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/SuspectedOrDiagnosedCOVID19"/>
+      </reference>
+      <name value="Suspected Or Diagnosed COVID-19"/>
+      <description value="Coded identifying suspected or confirmed COVID-19"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-VentilatorDevices.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/VentilatorDevices"/>
+      </reference>
+      <name value="Ventilator Devices"/>
+      <description value="Codes used for Ventilator Devices"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-VentilatorDevicesWithTracheostomy.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/VentilatorDevicesWithTracheostomy"/>
+      </reference>
+      <name value="Devices used for Ventilation with Tracheostomy"/>
+      <description value="Codes used for Devices that support Ventilation with a Tracheostomy"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-BedType.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/BedType"/>
+      </reference>
+      <name value="Saner Bed Type Coding System"/>
+      <description value="This Coding System fills gaps describing types of care services that a bed can support."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-DeviceFields.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/DeviceFields"/>
+      </reference>
+      <name value="Device Resource Field Names"/>
+      <description value="This Coding System identifies legal field names in a FHIR R4 Device Resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-GroupSystem.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/GroupSystem"/>
+      </reference>
+      <name value="Group System"/>
+      <description value="A Code System for Groups defined by The SANER Project"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-LocationFields.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/LocationFields"/>
+      </reference>
+      <name value="Location Resource Field Names"/>
+      <description value="This Coding System identifies legal field names in a FHIR R4 Location Resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-MeasureRateAggregation.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/MeasureRateAggregation"/>
+      </reference>
+      <name value="Rate Aggregation Coding System"/>
+      <description value="This Coding System Identifies methods of rate aggregation"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-PopulationSystem.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/PopulationSystem"/>
+      </reference>
+      <name value="Population System"/>
+      <description value="A Code System for Populations defined by The SANER Project"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Measure-CDCPatientImpactAndHospitalCapacity.html"/>
+      </extension>
+      <reference>
+        <reference value="Measure/CDCPatientImpactAndHospitalCapacity"/>
+      </reference>
+      <name value="CDC Patient Impact and Hospital Capacity"/>
+      <description value="This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Measure-FEMAReporting.html"/>
+      </extension>
+      <reference>
+        <reference value="Measure/FEMAReporting"/>
+      </reference>
+      <name value="FEMA Laboratory Orders and Results Daily Increase Reporting"/>
+      <description value="This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ConceptMap-HAvBED2toFHIR.html"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/HAvBED2toFHIR"/>
+      </reference>
+      <name value="HAvBED2 to FHIR Concept Map"/>
+      <description value="This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Measure-sanerCDC.html"/>
+      </extension>
+      <reference>
+        <reference value="Measure/sanerCDC"/>
+      </reference>
+      <name value="sanerCDC"/>
+      <description value="CDC Measurement Group"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Measure-sanerFEMA.html"/>
+      </extension>
+      <reference>
+        <reference value="Measure/sanerFEMA"/>
+      </reference>
+      <name value="sanerFEMA"/>
+      <description value="FEMA Measurement Group"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MeasureReport"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MeasureReport-FHIR-461.html"/>
+      </extension>
+      <reference>
+        <reference value="MeasureReport/FHIR-461"/>
+      </reference>
+      <name value="FHIR-461"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MeasureReport"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MeasureReport-FHIR-463.html"/>
+      </extension>
+      <reference>
+        <reference value="MeasureReport/FHIR-463"/>
+      </reference>
+      <name value="FHIR-463"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="overview.html"/>
+        <title value="Overview"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="use_cases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="actors_and_transactions.html"/>
+        <title value="Actors and Transactions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="security_considerations.html"/>
+        <title value="Security Considerations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="technology_environment.html"/>
+        <title value="Technology Environment"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="architecture.html"/>
+        <title value="Architecture"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="definitions.html"/>
+        <title value="Definitions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="measures.html"/>
+        <title value="Measures"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="using_group_resources.html"/>
+        <title value="Using Group Resources"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="transaction-1.html"/>
+        <title value="Transaction 1"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="transaction-2.html"/>
+        <title value="Transaction 2"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="transaction-3.html"/>
+        <title value="Transaction 3"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

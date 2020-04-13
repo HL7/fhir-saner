@@ -17,15 +17,15 @@
   fhir:StructureDefinition.name [ fhir:value "BedLocation"];
   fhir:StructureDefinition.title [ fhir:value "Bed Location Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-04-07T04:47:54-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-04-13T11:49:10-04:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 International"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "HL7 Mobile Health Workgroup" ];
+     fhir:ContactDetail.name [ fhir:value "HL7 Patient Administration Workgroup" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/mobile/index.cfm" ]
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/pafm/index.cfm" ]
      ]
   ], [
      fhir:index 1;

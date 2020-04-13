@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="FHIR-463"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: FHIR-463</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerFEMA">http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerFEMA</a></p><p><b>subject</b>: <a href="Location/Loc-Org-1065">HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON</a></p><p><b>date</b>: Apr 8, 2020, 11:44:04 AM</p><p><b>reporter</b>: <a href="Organization/Org-1065">HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON</a></p><p><b>period</b>: Apr 5, 2020, 12:00:00 AM --&gt; Apr 5, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Midnight to midnight cutoff, tests ordered on previous date queried. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'newDiagnosticTests' = 'newDiagnosticTests)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>20</td></tr></table><p><b>measureScore</b>: 20</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: All tests ordered to date. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'cumulativeDiagnosticTests' = 'cumulativeDiagnosticTests)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>20</td></tr></table><p><b>measureScore</b>: 20</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Midnight to midnight cutoff, test results released on previous date queried. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'newTestsResulted' = 'newTestsResulted)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>16</td></tr></table><p><b>measureScore</b>: 16</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: All specimens rejected for testing to date. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'cumulativeSpecimensRejected' = 'cumulativeSpecimensRejected)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: All tests with results released to date. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'cumulativeTestsPerformed' = 'cumulativeTestsPerformed)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>16</td></tr></table><p><b>measureScore</b>: 16</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Midnight to midnight cutoff, positive test results released on the previous date queried. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'newPositiveC19Tests' = 'newPositiveC19Tests)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>3</td></tr></table><p><b>measureScore</b>: 3</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: All positivetest results released to date. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'cumulativePositiveC19Tests' = 'cumulativePositiveC19Tests)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>3</td></tr></table><p><b>measureScore</b>: 3</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: # of new positive test results / # of total new tests released for previous date queried. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'percentPositiveAmongNewlyResultedTests' = 'percentPositiveAmongNewlyResultedTests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Numerator <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'numerator' = 'Numerator', given as 'Numerator'})</span></p><p><b>count</b>: 3</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Denominator <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'denominator' = 'Denominator', given as 'Denominator'})</span></p><p><b>count</b>: 6</p></blockquote><p><b>measureScore</b>: 0.5</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: # of total positive results to released date / # of total test results released to date. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'cumulativePercentPositiveAmongResultedTests' = 'cumulativePercentPositiveAmongResultedTests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Numerator <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'numerator' = 'Numerator', given as 'Numerator'})</span></p><p><b>count</b>: 3</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Denominator <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'denominator' = 'Denominator', given as 'Denominator'})</span></p><p><b>count</b>: 6</p></blockquote><p><b>measureScore</b>: 0.5</p></blockquote></div>
+  </text>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerFEMA"/>
+  <subject>
+    <reference value="Location/Loc-Org-1065"/>
+    <display value="HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON"/>
+  </subject>
+  <date value="2020-04-08T10:44:04.3915209-05:00"/>
+  <reporter>
+    <reference value="Organization/Org-1065"/>
+    <display value="HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON"/>
+  </reporter>
+  <period>
+    <start value="2020-04-05"/>
+    <end value="2020-04-05"/>
+  </period>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="newDiagnosticTests"/>
+      </coding>
+      <text value="Midnight to midnight cutoff, tests ordered on previous date queried."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="20"/>
+    </population>
+    <measureScore>
+      <value value="20"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="cumulativeDiagnosticTests"/>
+      </coding>
+      <text value="All tests ordered to date."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="20"/>
+    </population>
+    <measureScore>
+      <value value="20"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="newTestsResulted"/>
+      </coding>
+      <text value="Midnight to midnight cutoff, test results released on previous date queried."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="16"/>
+    </population>
+    <measureScore>
+      <value value="16"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="cumulativeSpecimensRejected"/>
+      </coding>
+      <text value="All specimens rejected for testing to date."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="cumulativeTestsPerformed"/>
+      </coding>
+      <text value="All tests with results released to date."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="16"/>
+    </population>
+    <measureScore>
+      <value value="16"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="newPositiveC19Tests"/>
+      </coding>
+      <text value="Midnight to midnight cutoff, positive test results released on the previous date queried."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="3"/>
+    </population>
+    <measureScore>
+      <value value="3"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="cumulativePositiveC19Tests"/>
+      </coding>
+      <text value="All positivetest results released to date."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="3"/>
+    </population>
+    <measureScore>
+      <value value="3"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="percentPositiveAmongNewlyResultedTests"/>
+      </coding>
+      <text value="# of new positive test results / # of total new tests released for previous date queried."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+          <display value="Numerator"/>
+        </coding>
+      </code>
+      <count value="3"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator"/>
+          <display value="Denominator"/>
+        </coding>
+      </code>
+      <count value="6"/>
+    </population>
+    <measureScore>
+      <value value="0.5"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="cumulativePercentPositiveAmongResultedTests"/>
+      </coding>
+      <text value="# of total positive results to released date / # of total test results released to date."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+          <display value="Numerator"/>
+        </coding>
+      </code>
+      <count value="3"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator"/>
+          <display value="Denominator"/>
+        </coding>
+      </code>
+      <count value="6"/>
+    </population>
+    <measureScore>
+      <value value="0.5"/>
+    </measureScore>
+  </group>
+</MeasureReport>

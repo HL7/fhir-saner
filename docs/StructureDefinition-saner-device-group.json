@@ -10,15 +10,15 @@
   "name": "DeviceGroup",
   "title": "Device Group Profile",
   "status": "active",
-  "date": "2020-04-07T04:47:54-04:00",
+  "date": "2020-04-13T11:49:10-04:00",
   "publisher": "HL7 International",
   "contact": [
     {
-      "name": "HL7 Mobile Health Workgroup",
+      "name": "HL7 Patient Administration Workgroup",
       "telecom": [
         {
           "system": "url",
-          "value": "http://hl7.org/Special/committees/mobile/index.cfm"
+          "value": "http://hl7.org/Special/committees/pafm/index.cfm"
         }
       ]
     },
