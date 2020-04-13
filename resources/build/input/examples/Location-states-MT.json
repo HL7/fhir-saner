@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-MT",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Montana",
+  "position": {
+    "latitude": 47.0527,
+    "longitude": 109.6333
+  }
+}

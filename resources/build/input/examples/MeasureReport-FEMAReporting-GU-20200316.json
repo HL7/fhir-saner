@@ -1,0 +1,25 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FEMAReporting-GU-20200316",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "66"
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/us/saner/Measure/FEMAReporting",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+        "extension": [
+          {
+            "url": "latitude"
+          }
+        ]
+      }
+    ]
+  }
+}

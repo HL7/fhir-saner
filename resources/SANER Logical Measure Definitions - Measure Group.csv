@@ -1,0 +1,53 @@
+Attributes / ,Measures>>,,
+name,,sanerCDC,sanerFEMA
+url,,http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC,
+title,,CDC Measurement Group,FEMA Measurement Group
+version,,20200406.01,20200406.01
+status,,draft,draft
+date,,20200406,20200406
+subject,,Location,ServiceRequest
+jurisdiction,,US,US
+author,,CDC/NHSN,FEMA
+publisher,,HL7 SANER-IG,HL7 SANER-IG
+useContext,,COVID-19,COVID-19
+description,,CDC Measurement Group,FEMA Measurement Group
+type,,composite,composite
+relatedArtifact[1].type,,documentation,documentation
+relatedArtifact[1].label,,COVID-19 Patient Impact & Hospital Capacity Module,Template for daily Hospital COVID-19 Reporting
+relatedArtifact[1].display,,The Module enables hospitals to report daily counts of patients with suspected and confirmed COVID-19 diagnoses and current use and availability of hospital beds and mechanical ventilators.,
+relatedArtifact[1].extension-status,,active,active
+relatedArtifact[1].document.url,,https://www.cdc.gov/nhsn/acute-care-hospital/covid19/,https://github.com/AudaciousInquiry/saner-ig/blob/master/resources/Template%20for%20Daily%20Hospital%20COVID-19%20Reporting.xlsx
+relatedArtifact[1].document.creation,,27-Mar-2020,29-Mar-2020
+relatedArtifact[2].type,,documentation,documentation
+relatedArtifact[2].label,,"Importing COVID-19 Patient Module Denominator data for
+Patient Safety Component",
+relatedArtifact[2].display,,,
+relatedArtifact[2].extension-status,,active,active
+relatedArtifact[2].document.url,,https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf,
+relatedArtifact[2].document.creation,,27-Mar-2020,
+relatedArtifact[3].type,,documentation,documentation
+relatedArtifact[3].label,,"Instructions for Completion of the COVID-19 Patient Impact and
+Hospital Capacity Module Form (CDC 57.130)",
+relatedArtifact[3].display,,,
+relatedArtifact[3].extension-status,,active,active
+relatedArtifact[3].dcument.url,,https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf,
+relatedArtifact[3].document.creation,,27-Mar-2020,
+relatedArtifact[4].type,,documentation,documentation
+relatedArtifact[4].label,,covi19-test-csv-import,
+relatedArtifact[4].display,,,
+relatedArtifact[4].extension-status,,active,
+relatedArtifact[4].document.url,,https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv,
+relatedArtifact[4].document.creation,,27-Mar-2020,
+,,,
+,,,
+,,,
+QUESTIONS,,,
+,question,,
+,name,,
+,answer,,
+,contact,,
+,,,
+,question,,
+,name,,
+,answer,,
+,contact,,

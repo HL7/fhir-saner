@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-CT",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Connecticut",
+  "position": {
+    "latitude": 41.6219,
+    "longitude": 72.7273
+  }
+}

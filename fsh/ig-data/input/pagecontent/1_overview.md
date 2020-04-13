@@ -4,7 +4,7 @@ of high level situational awareness information from inpatient facilities to cen
 to support the treatment of novel influenza-like illness.
 
 ![The SANER Project Logo](SANERLogo.png)
-
+<div style='float: clear'/>
 **Fighting COVID-19 with FHIR®**
     
 

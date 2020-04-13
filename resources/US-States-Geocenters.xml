@@ -21,14 +21,14 @@
     <state PostalCode="KS" Name="Kansas" Lat="38.4937" Long="98.3804"/>
     <state PostalCode="KY" Name="Kentucky" Lat="37.5347" Long="85.3021"/>
     <state PostalCode="LA" Name="Louisiana" Lat="31.0689" Long="91.9968"/>
-    <state PostalCode="MN" Name="Maine" Lat="45.3695" Long="69.2428"/>
+    <state PostalCode="ME" Name="Maine" Lat="45.3695" Long="69.2428"/>
     <state PostalCode="MD" Name="Maryland" Lat="39.055" Long="76.7909"/>
     <state PostalCode="MA" Name="Massachusetts" Lat="42.2596" Long="71.8083"/>
     <state PostalCode="MI" Name="Michigan" Lat="44.3467" Long="85.4102"/>
     <state PostalCode="MN" Name="Minnesota" Lat="46.2807" Long="94.3053"/>
     <state PostalCode="MS" Name="Mississippi" Lat="32.7364" Long="89.6678"/>
     <state PostalCode="MO" Name="Missouri" Lat="38.3566" Long="92.458"/>
-    <state PostalCode="MN" Name="Montana" Lat="47.0527" Long="109.6333"/>
+    <state PostalCode="MT" Name="Montana" Lat="47.0527" Long="109.6333"/>
     <state PostalCode="NE" Name="Nebraska" Lat="41.5378" Long="99.7951"/>
     <state PostalCode="NV" Name="Nevada" Lat="39.3289" Long="116.6312"/>
     <state PostalCode="NH" Name="New Hampshire" Lat="43.6805" Long="71.5811"/>

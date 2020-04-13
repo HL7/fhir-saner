@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-CA",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "California",
+  "position": {
+    "latitude": 37.1841,
+    "longitude": 119.4696
+  }
+}

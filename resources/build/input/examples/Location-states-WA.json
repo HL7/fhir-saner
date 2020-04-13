@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-WA",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Washington",
+  "position": {
+    "latitude": 47.3826,
+    "longitude": 120.4472
+  }
+}

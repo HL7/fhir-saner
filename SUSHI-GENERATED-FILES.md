@@ -11,12 +11,6 @@ lists those files generated from project configs or the contents in the ig-data 
 
 | SUSHI-GENERATED FILE                                                | ACTION    | INPUT FILE(S)                                                                   |
 | ------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------- |
-| _gencontinuous.bat                                                  | generated |                                                                                 |
-| _gencontinuous.sh                                                   | generated |                                                                                 |
-| _genonce.bat                                                        | generated |                                                                                 |
-| _genonce.sh                                                         | generated |                                                                                 |
-| _updatePublisher.bat                                                | generated |                                                                                 |
-| _updatePublisher.sh                                                 | generated |                                                                                 |
 | ig.ini                                                              | generated | fsh\ig-data\ig.ini, fsh\package.json                                            |
 | input\ImplementationGuide-hl7.fhir.us.saner.json                    | generated | fsh\ig-data\ig.ini, fsh\package.json, {all input resources and pages}           |
 | package-list.json                                                   | generated | fsh\package.json                                                                |

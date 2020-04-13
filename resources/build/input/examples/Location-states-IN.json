@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-IN",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Indiana",
+  "position": {
+    "latitude": 39.8942,
+    "longitude": 86.2816
+  }
+}

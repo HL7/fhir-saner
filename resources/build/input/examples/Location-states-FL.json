@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-FL",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Florida",
+  "position": {
+    "latitude": 28.6305,
+    "longitude": 82.4497
+  }
+}

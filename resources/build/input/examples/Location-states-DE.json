@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-DE",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Delaware",
+  "position": {
+    "latitude": 38.9896,
+    "longitude": 75.505
+  }
+}
