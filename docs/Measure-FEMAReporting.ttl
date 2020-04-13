@@ -1,0 +1,480 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/Measure/FEMAReporting> a fhir:Measure;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "FEMAReporting"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: FEMAReporting</p><p><b>meta</b>: </p><p><b>url</b>: <a href=\"http://hl7.org/fhir/us/saner/Measure/FEMAReporting\">http://hl7.org/fhir/us/saner/Measure/FEMAReporting</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: FEMAReporting</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: Apr 13, 2020, 11:49:10 AM</p><p><b>publisher</b>: HL7 International</p><p><b>contact</b>: , , </p><p><b>useContext</b>: </p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>topic</b>: Immunology laboratory test (procedure) <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '252318005' = 'Immunology laboratory test', given as 'Immunology laboratory test (procedure)'})</span></p><p><b>author</b>: </p><p><b>relatedArtifact</b>: , , , </p><p><b>scoring</b>: ratio <span style=\"background: LightGoldenRodYellow\">(Details : {[not stated] code 'ratio' = 'ratio)</span></p><p><b>type</b>: outcome <span style=\"background: LightGoldenRodYellow\">(Details : {[not stated] code 'outcome' = 'outcome)</span></p><p><b>rateAggregation</b>: aggregable-by-period</p><blockquote><p><b>group</b></p><p><b>code</b>: # of new positive test results released / # of total new tests released for previous date queried <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests', given as 'Percent Positive among Newly Resulted Tests'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Midnight to midnight cutoff, tests ordered on previous date queried <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received', given as 'New Diagnostic Tests Ordered/Received'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the number of new Diagnostic Tests Ordered/Received during the reporting period.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Midnight to midnight cutoff, test results released on previous date queried <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'totalTestResultsIncrease' = 'New Tests Resulted', given as 'New Tests Resulted'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'denominator' = 'Denominator)</span></p><p><b>description</b>: nter the number of results recieved/generated during the reporting period.\nDo not include results where the test could not be completed because the specimen\nwas rejected or a positive/negative result could not be established</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Midnight to midnight cutoff, positive test results released on previous date queried <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'positiveIncrease' = 'New Positive COVID-19 Tests', given as 'New Positive COVID-19 Tests'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'numerator' = 'Numerator)</span></p><p><b>description</b>: Enter the number of positive test results released during the reporting period.</p><p><b>criteria</b>: </p></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: # of total positive results to released date / # of total tests results released to date <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'positivePercent' = 'Cumulative Percent Positive among Resulted Tests', given as 'Cumulative Percent Positive among Resulted Tests'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: All tests ordered to date. <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'totalOrders' = 'Cumulative Diagnostic Tests Ordered/Recieved', given as 'Cumulative Diagnostic Tests Ordered/Recieved'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the cumulative number of tests ordered to date.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Reports to date including corrected, amended and canceled reports <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'allReports' = 'All Laboratory Reports for any Order', given as 'All Reports To Date'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: This is in intermediate population used to simplify calculations</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Latest Reports to date for each order <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'latestReports' = 'Most Recent Laboratory Reports for any Order', given as 'Most Recent Laboratory Reports for any Order'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: This is in intermediate population used to simplify calculations</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: All specimens rejected for testing to date <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'rejected' = 'Cumulative Specimens Rejected*', given as 'Cumulative Specimens Rejected*'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'denominator-exclusion' = 'Denominator Exclusion)</span></p><p><b>description</b>: Enter the cumulative number of specimens rejected for testing to date.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: All tests with results released to date <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'totalTestResults' = 'Cumulative Tests Performed', given as 'Cumulative Tests Performed'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'denominator' = 'Denominator)</span></p><p><b>description</b>: nter the total number tests with results released to date. Do not include tests where a\npositive/negative result could not be determined (e.g., because the specimen was inadequate).</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: All positive test results released to date <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'positive' = 'Cumulative Positive COVID-19 Tests', given as 'Cumulative Positive COVID-19 Tests'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'numerator' = 'Numerator)</span></p><p><b>description</b>: Enter the total number of positive test results release to date.</p><p><b>criteria</b>: </p></blockquote></blockquote></div>"
+  ];
+  fhir:Measure.url [ fhir:value "http://hl7.org/fhir/us/saner/Measure/FEMAReporting"];
+  fhir:Measure.version [ fhir:value "0.1.0"];
+  fhir:Measure.name [ fhir:value "FEMAReporting"];
+  fhir:Measure.status [ fhir:value "draft"];
+  fhir:Measure.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:Measure.date [ fhir:value "2020-04-13T11:49:10-04:00"^^xsd:dateTime];
+  fhir:Measure.publisher [ fhir:value "HL7 International"];
+  fhir:Measure.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Patient Administration Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/pafm/index.cfm" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:kboone@ainq.com" ]
+     ]
+  ];
+  fhir:Measure.useContext [
+     fhir:index 0;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "focus" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:840539006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "840539006" ];
+         fhir:Coding.display [ fhir:value "COVID-19" ]
+       ]
+     ]
+  ];
+  fhir:Measure.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:Measure.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:252318005;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "252318005" ];
+       fhir:Coding.display [ fhir:value "Immunology laboratory test (procedure)" ]
+     ]
+  ];
+  fhir:Measure.author [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "FEMA" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:fema-hhs-covid-diagnostics-tf@fema.dhs.gov " ]
+     ]
+  ];
+  fhir:Measure.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "documentation" ];
+     fhir:RelatedArtifact.label [ fhir:value "CMS Press Release" ];
+     fhir:RelatedArtifact.display [ fhir:value "Trump Administration Engages America’s Hospitals in Unprecedented Data Sharing" ];
+     fhir:RelatedArtifact.url [ fhir:value "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing" ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "documentation" ];
+     fhir:RelatedArtifact.label [ fhir:value "Vice President Pence Letter to Hospital Administrators" ];
+     fhir:RelatedArtifact.display [ fhir:value "Text of a Letter from the Vice President to Hospital Administrators" ];
+     fhir:RelatedArtifact.url [ fhir:value "https://www.whitehouse.gov/briefings-statements/text-letter-vice-president-hospital-administrators/" ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "documentation" ];
+     fhir:RelatedArtifact.label [ fhir:value "AHA Advisory on COVID-19 Reporting" ];
+     fhir:RelatedArtifact.display [ fhir:value "Administration Requests Hospitals Report Daily on COVID-19 Testing Results, Bed and Ventilator" ];
+     fhir:RelatedArtifact.url [ fhir:value "https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19" ]
+  ], [
+     fhir:index 3;
+     fhir:RelatedArtifact.type [ fhir:value "documentation" ];
+     fhir:RelatedArtifact.label [ fhir:value "Excel Spreadsheet template for reporting to FEMA" ];
+     fhir:RelatedArtifact.display [ fhir:value "Template for Daily Hospital COVID-19 Reporting.xlsx" ];
+     fhir:RelatedArtifact.url [ fhir:value "https://images.magnetmail.net/images/clients/AHA_MCHF/attach/2020/March/0330/Template_for_Daily_Hospital_COVID19_Reporting.xlsx" ]
+  ];
+  fhir:Measure.scoring [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "ratio" ]
+     ]
+  ];
+  fhir:Measure.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "outcome" ]
+     ]
+  ];
+  fhir:Measure.rateAggregation [ fhir:value "aggregable-by-period"];
+  fhir:Measure.group [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "scoring" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-scoring" ];
+             fhir:Coding.code [ fhir:value "continuous-variable" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "subject" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+             fhir:Coding.code [ fhir:value "ServiceRequest" ]
+           ], [
+             fhir:index 1;
+             a sct:252318005;
+             fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+             fhir:Coding.code [ fhir:value "252318005" ];
+             fhir:Coding.display [ fhir:value "Immunology laboratory test (procedure)" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "COVID-19 Diagnostic Testing" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Extension.url [ fhir:value "type" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-type" ];
+             fhir:Coding.code [ fhir:value "outcome" ]
+           ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Extension.url [ fhir:value "improvementNotation" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-improvement-notation" ];
+             fhir:Coding.code [ fhir:value "decrease" ]
+           ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Extension.url [ fhir:value "rateAggregation" ];
+         fhir:Extension.valueString [ fhir:value "aggregable-by-period" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes" ]
+     ];
+     fhir:Measure.group.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+         fhir:Coding.code [ fhir:value "positiveIncreasePercent" ];
+         fhir:Coding.display [ fhir:value "Percent Positive among Newly Resulted Tests" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "# of new positive test results released / # of total new tests released for previous date queried" ]
+     ];
+     fhir:Measure.group.population [
+       fhir:index 0;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalOrdersIncrease" ];
+           fhir:Coding.display [ fhir:value "New Diagnostic Tests Ordered/Received" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Midnight to midnight cutoff, tests ordered on previous date queried" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Enter the number of new Diagnostic Tests Ordered/Received during the reporting period." ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Orders initiated during %reportingPeriod" ];
+         fhir:Expression.name [ fhir:value "totalOrdersIncrease" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "ServiceRequest.where(\n    authoredOn.toDate() = %reportingPeriod /* May need to change logic to support ranges for reportingPeriod */\n    and status in ('active', 'completed')\n    and intent in ('order', 'orginal-order', 'reflex-order', 'filler-order', 'instance-order')\n)" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalTestResultsIncrease" ];
+           fhir:Coding.display [ fhir:value "New Tests Resulted" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Midnight to midnight cutoff, test results released on previous date queried" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "nter the number of results recieved/generated during the reporting period.\nDo not include results where the test could not be completed because the specimen\nwas rejected or a positive/negative result could not be established" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Results recieved during reporting period" ];
+         fhir:Expression.name [ fhir:value "totalTestResultsIncrease" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "DiagnosticReport.where(\n    issued.toDate() = %reportingPeriod /* May need to change logic to support ranges for reportingPeriod */\n    and status in ('final, 'amended', 'corrected', 'appended')\n)" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "positiveIncrease" ];
+           fhir:Coding.display [ fhir:value "New Positive COVID-19 Tests" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Midnight to midnight cutoff, positive test results released on previous date queried" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Enter the number of positive test results released during the reporting period." ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Result is positive with respect to COVID-19" ];
+         fhir:Expression.name [ fhir:value "positiveIncrease" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "DiagnosticReport.where($this in %totalTestResultsIncrease and conclusionCode in %ValueSet-ConfirmedCOVID19Diagnosis)" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "scoring" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-scoring" ];
+             fhir:Coding.code [ fhir:value "continuous-variable" ]
+           ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "subject" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/resource-types" ];
+             fhir:Coding.code [ fhir:value "ServiceRequest" ]
+           ], [
+             fhir:index 1;
+             a sct:252318005;
+             fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+             fhir:Coding.code [ fhir:value "252318005" ];
+             fhir:Coding.display [ fhir:value "Immunology laboratory test (procedure)" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "COVID-19 Cumulative Diagnostic Testing" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Extension.url [ fhir:value "type" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-type" ];
+             fhir:Coding.code [ fhir:value "outcome" ]
+           ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Extension.url [ fhir:value "improvementNotation" ];
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-improvement-notation" ];
+             fhir:Coding.code [ fhir:value "decrease" ]
+           ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Extension.url [ fhir:value "rateAggregation" ];
+         fhir:Extension.valueString [ fhir:value "cumulative" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes" ]
+     ];
+     fhir:Measure.group.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+         fhir:Coding.code [ fhir:value "positivePercent" ];
+         fhir:Coding.display [ fhir:value "Cumulative Percent Positive among Resulted Tests" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "# of total positive results to released date / # of total tests results released to date" ]
+     ];
+     fhir:Measure.group.population [
+       fhir:index 0;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalOrders" ];
+           fhir:Coding.display [ fhir:value "Cumulative Diagnostic Tests Ordered/Recieved" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "All tests ordered to date." ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Enter the cumulative number of tests ordered to date." ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Report all active or completed test orders for a COVID-19 test authored during the reporting period" ];
+         fhir:Expression.name [ fhir:value "totalOrders" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "ServiceRequest.where(\n    authoredOn.toDate() <= %reportingPeriod /* May need to change logic to support ranges for reportingPeriod */\n    and status in ('active', 'completed')\n    and code in %ValueSet-COVID19DiagnosticTest\n    and intent in ('order', 'orginal-order', 'reflex-order', 'filler-order', 'instance-order')\n)" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "allReports" ];
+           fhir:Coding.display [ fhir:value "All Reports To Date" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "measure-population" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Reports to date including corrected, amended and canceled reports" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "This is in intermediate population used to simplify calculations" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Diagnostic Reports provided in response to totalOrders" ];
+         fhir:Expression.name [ fhir:value "allReports" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "DiagnosticReport.where(basedOn in %totalOrders)" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "latestReports" ];
+           fhir:Coding.display [ fhir:value "Most Recent Laboratory Reports for any Order" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "measure-population" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Latest Reports to date for each order" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "This is in intermediate population used to simplify calculations" ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Most recent diagnostic reports provided in response to totalOrders" ];
+         fhir:Expression.name [ fhir:value "latestReports" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "TBD" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "rejected" ];
+           fhir:Coding.display [ fhir:value "Cumulative Specimens Rejected*" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator-exclusion" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "All specimens rejected for testing to date" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Enter the cumulative number of specimens rejected for testing to date." ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "DiagnosticReport for COVID-19 where the report is unavailable because the measurement was not started or not completed." ];
+         fhir:Expression.name [ fhir:value "rejected" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "DiagnosticReport.where(status = 'cancelled' and code in %ValueSet-COVID19DiagnosticTest)" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalTestResults" ];
+           fhir:Coding.display [ fhir:value "Cumulative Tests Performed" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "All tests with results released to date" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "nter the total number tests with results released to date. Do not include tests where a\npositive/negative result could not be determined (e.g., because the specimen was inadequate)." ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "Report all active or completed test orders for a COVID-19 test authored during or prior to the end of the reporting period that have had results released." ];
+         fhir:Expression.name [ fhir:value "totalTestResults" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "ServiceRequest.where(\n    status in ('active', 'completed')\n    and intent in ('order', 'orginal-order', 'reflex-order', 'filler-order', 'instance-order')\n)" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Measure.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "positive" ];
+           fhir:Coding.display [ fhir:value "Cumulative Positive COVID-19 Tests" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "All positive test results released to date" ]
+       ];
+       fhir:Measure.group.population.description [ fhir:value "Enter the total number of positive test results release to date." ];
+       fhir:Measure.group.population.criteria [
+         fhir:Expression.description [ fhir:value "The result is positive for COVID-19" ];
+         fhir:Expression.name [ fhir:value "positive" ];
+         fhir:Expression.language [ fhir:value "text/fhirpath" ];
+         fhir:Expression.expression [ fhir:value "DiagnosticReport.where($this in %totalTestResults and conclusionCode in %ValueSet-ConfirmedCOVID19Diagnosis)" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/Measure/FEMAReporting.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/Measure/FEMAReporting.ttl> .
+
+# -------------------------------------------------------------------------------------
+

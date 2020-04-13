@@ -1,0 +1,211 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DeviceFields",
+  "id": "DeviceFields",
+  "title": "Device Resource Field Names",
+  "description": "This Coding System identifies legal field names in a FHIR R4 Device Resource.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/R4/StructureDefinition/Device",
+  "concept": [
+    {
+      "code": "Device"
+    },
+    {
+      "code": "Device.id"
+    },
+    {
+      "code": "Device.meta"
+    },
+    {
+      "code": "Device.implicitRules"
+    },
+    {
+      "code": "Device.language"
+    },
+    {
+      "code": "Device.text"
+    },
+    {
+      "code": "Device.contained"
+    },
+    {
+      "code": "Device.extension"
+    },
+    {
+      "code": "Device.modifierExtension"
+    },
+    {
+      "code": "Device.identifier"
+    },
+    {
+      "code": "Device.definition"
+    },
+    {
+      "code": "Device.udiCarrier"
+    },
+    {
+      "code": "Device.udiCarrier.id"
+    },
+    {
+      "code": "Device.udiCarrier.extension"
+    },
+    {
+      "code": "Device.udiCarrier.modifierExtension"
+    },
+    {
+      "code": "Device.udiCarrier.deviceIdentifier"
+    },
+    {
+      "code": "Device.udiCarrier.issuer"
+    },
+    {
+      "code": "Device.udiCarrier.jurisdiction"
+    },
+    {
+      "code": "Device.udiCarrier.carrierAIDC"
+    },
+    {
+      "code": "Device.udiCarrier.carrierHRF"
+    },
+    {
+      "code": "Device.udiCarrier.entryType"
+    },
+    {
+      "code": "Device.status"
+    },
+    {
+      "code": "Device.statusReason"
+    },
+    {
+      "code": "Device.distinctIdentifier"
+    },
+    {
+      "code": "Device.manufacturer"
+    },
+    {
+      "code": "Device.manufactureDate"
+    },
+    {
+      "code": "Device.expirationDate"
+    },
+    {
+      "code": "Device.lotNumber"
+    },
+    {
+      "code": "Device.serialNumber"
+    },
+    {
+      "code": "Device.deviceName"
+    },
+    {
+      "code": "Device.deviceName.id"
+    },
+    {
+      "code": "Device.deviceName.extension"
+    },
+    {
+      "code": "Device.deviceName.modifierExtension"
+    },
+    {
+      "code": "Device.deviceName.name"
+    },
+    {
+      "code": "Device.deviceName.type"
+    },
+    {
+      "code": "Device.modelNumber"
+    },
+    {
+      "code": "Device.partNumber"
+    },
+    {
+      "code": "Device.type"
+    },
+    {
+      "code": "Device.specialization"
+    },
+    {
+      "code": "Device.specialization.id"
+    },
+    {
+      "code": "Device.specialization.extension"
+    },
+    {
+      "code": "Device.specialization.modifierExtension"
+    },
+    {
+      "code": "Device.specialization.systemType"
+    },
+    {
+      "code": "Device.specialization.version"
+    },
+    {
+      "code": "Device.version"
+    },
+    {
+      "code": "Device.version.id"
+    },
+    {
+      "code": "Device.version.extension"
+    },
+    {
+      "code": "Device.version.modifierExtension"
+    },
+    {
+      "code": "Device.version.type"
+    },
+    {
+      "code": "Device.version.component"
+    },
+    {
+      "code": "Device.version.value"
+    },
+    {
+      "code": "Device.property"
+    },
+    {
+      "code": "Device.property.id"
+    },
+    {
+      "code": "Device.property.extension"
+    },
+    {
+      "code": "Device.property.modifierExtension"
+    },
+    {
+      "code": "Device.property.type"
+    },
+    {
+      "code": "Device.property.valueQuantity"
+    },
+    {
+      "code": "Device.property.valueCode"
+    },
+    {
+      "code": "Device.patient"
+    },
+    {
+      "code": "Device.owner"
+    },
+    {
+      "code": "Device.contact"
+    },
+    {
+      "code": "Device.location"
+    },
+    {
+      "code": "Device.url"
+    },
+    {
+      "code": "Device.note"
+    },
+    {
+      "code": "Device.safety"
+    },
+    {
+      "code": "Device.parent"
+    }
+  ]
+}

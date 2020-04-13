@@ -74,6 +74,6 @@ not strictly needed.  A tracker will be created (#TODO: Create Tracker) to sugge
 these classifiers to group.
 
 ### Measures
-* [All CDC/NHSN Reporting Measures](Measure-CDCReporting.json.html)
-* [All FEMA Reporting Measures](Measure-FEMAReporting.json.html)
+* [CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-CDCPatientImpactAndHospitalCapacity.json.html)
+* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMAReporting.json.html)
 

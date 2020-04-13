@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="FHIR-461"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: FHIR-461</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC">http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC</a></p><p><b>subject</b>: <a href="Location/Loc-Org-1065">HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON</a></p><p><b>date</b>: Apr 8, 2020, 11:44:04 AM</p><p><b>reporter</b>: <a href="Organization/Org-1065">HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON</a></p><p><b>period</b>: Apr 5, 2020, 12:00:00 AM --&gt; Apr 5, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Total number of all Inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow(surge) beds used for inpatients or outpatients. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numTotBeds' = 'numTotBeds)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>10</td></tr></table><p><b>measureScore</b>: 10</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Inpatient beds, including all staffed, licensed, and overflow(surge) beds used for inpatients. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numbeds' = 'numbeds)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>9</td></tr></table><p><b>measureScore</b>: 9</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of staffed inpatient beds that are occupied. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numBedsOcc' = 'numBedsOcc)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>2</td></tr></table><p><b>measureScore</b>: 2</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of staffed inpatient intensive care unit (ICU) beds. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numICUBeds' = 'numICUBeds)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>1</td></tr></table><p><b>measureScore</b>: 1</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of staffed inpatient ICU beds that are occupied. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numICUBedsOcc' = 'numICUBedsOcc)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of ventilators available. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numVent' = 'numVent)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>1</td></tr></table><p><b>measureScore</b>: 1</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of ventilators in use. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numVentUse' = 'numVentUse)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19HospPats' = 'numC19HospPats)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>1</td></tr></table><p><b>measureScore</b>: 1</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID - 19 and are on a mechanical ventilator. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19MechVentPats' = 'numC19MechVentPats)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID - 19 14 or more days after hospitalization. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19HOPats' = 'numC19HOPats)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19OverflowPats' = 'numC19OverflowPats)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients with suspected or confirmed COVID - 19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19OFMechVentPats' = 'numC19OFMechVentPats)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. <span style="background: LightGoldenRodYellow">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19Died' = 'numC19Died)</span></p><h3>Populations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Count</b></td></tr><tr><td>*</td><td>Initial Population <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td>0</td></tr></table><p><b>measureScore</b>: 0</p></blockquote></div>
+  </text>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC"/>
+  <subject>
+    <reference value="Location/Loc-Org-1065"/>
+    <display value="HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON"/>
+  </subject>
+  <date value="2020-04-08T10:44:04.3855935-05:00"/>
+  <reporter>
+    <reference value="Organization/Org-1065"/>
+    <display value="HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON"/>
+  </reporter>
+  <period>
+    <start value="2020-04-05"/>
+    <end value="2020-04-05"/>
+  </period>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numTotBeds"/>
+      </coding>
+      <text value="Total number of all Inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow(surge) beds used for inpatients or outpatients."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="10"/>
+    </population>
+    <measureScore>
+      <value value="10"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numbeds"/>
+      </coding>
+      <text value="Inpatient beds, including all staffed, licensed, and overflow(surge) beds used for inpatients."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="9"/>
+    </population>
+    <measureScore>
+      <value value="9"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numBedsOcc"/>
+      </coding>
+      <text value="Total number of staffed inpatient beds that are occupied."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="2"/>
+    </population>
+    <measureScore>
+      <value value="2"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numICUBeds"/>
+      </coding>
+      <text value="Total number of staffed inpatient intensive care unit (ICU) beds."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="1"/>
+    </population>
+    <measureScore>
+      <value value="1"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numICUBedsOcc"/>
+      </coding>
+      <text value="Total number of staffed inpatient ICU beds that are occupied."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numVent"/>
+      </coding>
+      <text value="Total number of ventilators available."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="1"/>
+    </population>
+    <measureScore>
+      <value value="1"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numVentUse"/>
+      </coding>
+      <text value="Total number of ventilators in use."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numC19HospPats"/>
+      </coding>
+      <text value="Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="1"/>
+    </population>
+    <measureScore>
+      <value value="1"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numC19MechVentPats"/>
+      </coding>
+      <text value="Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID - 19 and are on a mechanical ventilator."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numC19HOPats"/>
+      </coding>
+      <text value="Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID - 19 14 or more days after hospitalization."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numC19OverflowPats"/>
+      </coding>
+      <text value="Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numC19OFMechVentPats"/>
+      </coding>
+      <text value="Patients with suspected or confirmed COVID - 19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://build.fhir.org/ig/AudaciousInquiry/saner-ig"/>
+        <code value="numC19Died"/>
+      </coding>
+      <text value="Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location."/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+          <display value="Initial Population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <measureScore>
+      <value value="0"/>
+    </measureScore>
+  </group>
+</MeasureReport>

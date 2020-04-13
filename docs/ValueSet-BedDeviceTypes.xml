@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BedDeviceTypes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Bed Device Types</h2><div><p>Codes used to identify beds</p>
+</div><ul/><p>This value set includes codes based on the following rules:</p></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/saner/ValueSet/BedDeviceTypes"/>
+  <version value="0.1.0"/>
+  <name value="BedDeviceTypes"/>
+  <title value="Bed Device Types"/>
+  <status value="active"/>
+  <date value="2020-04-07T04:47:54-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Mobile Health Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/mobile/index.cfm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="Codes used to identify beds"/>
+</ValueSet>

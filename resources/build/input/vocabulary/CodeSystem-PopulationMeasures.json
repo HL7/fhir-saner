@@ -1,0 +1,132 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PopulationMeasures",
+  "id": "PopulationMeasures",
+  "title": "Population Measure Groups",
+  "description": "Groups defined by The SANER Project for measure populations",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationMeasures",
+  "concept": [
+    {
+      "code": "numTotBeds",
+      "display": "All Hospital Beds",
+      "definition": "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
+    },
+    {
+      "code": "numBeds",
+      "display": "Hospital Inpatient Beds",
+      "definition": "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
+    },
+    {
+      "code": "numBedsOcc",
+      "display": "Hospital Inpatient Bed Occupancy",
+      "definition": "Total number of staffed inpatient beds that are occupied"
+    },
+    {
+      "code": "numICUBeds",
+      "display": "ICU Beds",
+      "definition": "Total number of staffed inpatient intensive care unit (ICU) beds"
+    },
+    {
+      "code": "numICUBedsOcc",
+      "display": "ICU Bed Occupancy",
+      "definition": "Total number of staffed inpatient ICU beds that are occupied"
+    },
+    {
+      "code": "numVent",
+      "display": "Mechanical Ventilators",
+      "definition": "Total number of ventilators available"
+    },
+    {
+      "code": "numVentUse",
+      "display": "Mechanical Ventilators in Use",
+      "definition": "Total number of ventilators in use"
+    },
+    {
+      "code": "numC19Pats",
+      "display": "COVID-19 Patients",
+      "definition": "Patients with suspected or confirmed COVID-19 in any location."
+    },
+    {
+      "code": "numC19HospPats",
+      "display": "COVID-19 Hospitalized",
+      "definition": "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
+    },
+    {
+      "code": "numC19OverflowPats",
+      "display": "COVID-19 ED/Overflow",
+      "definition": "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed"
+    },
+    {
+      "code": "numC19HOPats",
+      "display": "COVID-19 Hospital Onset",
+      "definition": "Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization"
+    },
+    {
+      "code": "numC19VentPats",
+      "display": "COVID-19 Patients on a Ventilator",
+      "definition": "Patients in any location who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
+    },
+    {
+      "code": "numC19MechVentPats",
+      "display": "COVID-19 Hospitalized and Ventilated",
+      "definition": "Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
+    },
+    {
+      "code": "numC19OFMechVentPats",
+      "display": "COVID-19 ED/Overflow and Ventilated",
+      "definition": "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"
+    },
+    {
+      "code": "numC19Died",
+      "display": "COVID-19 Deaths",
+      "definition": "Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location"
+    },
+    {
+      "code": "totalOrdersIncrease",
+      "display": "New Diagnostic Tests Ordered/Received"
+    },
+    {
+      "code": "totalOrders",
+      "display": "Cumulative Diagnostic Tests Ordered/Recieved"
+    },
+    {
+      "code": "totalTestResultsIncrease",
+      "display": "New Tests Resulted"
+    },
+    {
+      "code": "rejected",
+      "display": "Cumulative Specimens Rejected*"
+    },
+    {
+      "code": "totalTestResults",
+      "display": "Cumulative Tests Performed"
+    },
+    {
+      "code": "positiveIncrease",
+      "display": "New Positive COVID-19 Tests"
+    },
+    {
+      "code": "positive",
+      "display": "Cumulative Positive COVID-19 Tests"
+    },
+    {
+      "code": "positiveIncreasePercent",
+      "display": "Percent Positive among Newly Resulted Tests"
+    },
+    {
+      "code": "positivePercent",
+      "display": "Cumulative Percent Positive among Resulted Tests"
+    },
+    {
+      "code": "allReports",
+      "display": "All Laboratory Report for any Order"
+    },
+    {
+      "code": "latestReport",
+      "display": "Most Recent Laboratory Reports for any Order"
+    }
+  ]
+}

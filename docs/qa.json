@@ -1,12 +1,12 @@
 {
-  "url": "http://ainq.com/fhir/us/saner/ImplementationGuide/ainq.fhir.us.saner",
+  "url": "http://hl7.org/fhir/us/saner/ImplementationGuide/hl7.fhir.us.saner",
   "name": "SituationalAwarenessforNovelEpidemicResponse",
-  "package-id": "ainq.fhir.us.saner",
+  "package-id": "hl7.fhir.us.saner",
   "ig-ver": "0.1.0",
-  "date": "Sun, 29 Mar, 2020 12:02:42 -0400",
-  "errs": 4,
-  "warnings": 18,
-  "hints": 0,
+  "date": "Mon, 13 Apr, 2020 11:49:10 -0400",
+  "errs": 100,
+  "warnings": 92,
+  "hints": 96,
   "version": "4.0.1",
   "tool": "4.2.0 (3)"
 }

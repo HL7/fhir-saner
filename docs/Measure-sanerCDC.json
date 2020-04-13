@@ -1,0 +1,510 @@
+{
+  "resourceType": "Measure",
+  "id": "sanerCDC",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: sanerCDC</p><p><b>url</b>: <a href=\"http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC\">http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: sanerCDC</p><p><b>title</b>: CDC Measurement Group</p><p><b>status</b>: draft</p><p><b>subject</b>: Location <span style=\"background: LightGoldenRodYellow\">(Details : {Location code 'Location' = 'Location)</span></p><p><b>date</b>: Apr 7, 2020, 8:00:00 PM</p><p><b>publisher</b>: HL7 International</p><p><b>contact</b>: , , </p><p><b>description</b>: CDC Measurement Group</p><p><b>useContext</b>: </p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America'})</span></p><p><b>relatedArtifact</b>: , , , </p><p><b>type</b>: Composite <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-type code 'composite' = 'Composite', given as 'Composite'})</span></p><blockquote><p><b>group</b></p><p><b>code</b>: Total number of all Inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow(surge) beds used for inpatients or outpatients. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numTotBeds' = 'numTotBeds)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Inpatient beds, including all staffed, licensed, and overflow(surge) beds used for inpatients. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numbeds' = 'numbeds)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of staffed inpatient beds that are occupied. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numBedsOcc' = 'numBedsOcc)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of staffed inpatient intensive care unit (ICU) beds. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numICUBeds' = 'numICUBeds)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of staffed inpatient ICU beds that are occupied. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numICUBedsOcc' = 'numICUBedsOcc)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of ventilators available. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numVent' = 'numVent)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Total number of ventilators in use. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numVentUse' = 'numVentUse)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19HospPats' = 'numC19HospPats)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID - 19 and are on a mechanical ventilator. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19MechVentPats' = 'numC19MechVentPats)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID - 19 14 or more days after hospitalization. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19HOPats' = 'numC19HOPats)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19OverflowPats' = 'numC19OverflowPats)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients with suspected or confirmed COVID - 19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19OFMechVentPats' = 'numC19OFMechVentPats)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. <span style=\"background: LightGoldenRodYellow\">(Details : {http://build.fhir.org/ig/AudaciousInquiry/saner-ig code 'numC19Died' = 'numC19Died)</span></p><h3>Populations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Criteria</b></td></tr><tr><td>*</td><td>Initial Population <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population', given as 'Initial Population'})</span></td><td/></tr></table></blockquote></div>"
+  },
+  "url": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig/sanerCDC",
+  "version": "0.1.0",
+  "name": "sanerCDC",
+  "title": "CDC Measurement Group",
+  "status": "draft",
+  "subjectCodeableConcept": {
+    "coding": [
+      {
+        "system": "Location",
+        "code": "Location"
+      }
+    ]
+  },
+  "date": "2020-04-07T20:00:00-04:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Patient Administration Workgroup",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/pafm/index.cfm"
+        }
+      ]
+    },
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "CDC Measurement Group",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "840539006",
+            "display": "COVID-19"
+          }
+        ]
+      }
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "documentation",
+      "label": "COVID-19 Patient Impact & Hospital Capacity Module",
+      "display": "The Module enables hospitals to report daily counts of patients with suspected and confirmed COVID-19 diagnoses and current use and availability of hospital beds and mechanical ventilators.",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "document": {
+        "url": "https://www.cdc.gov/nhsn/acute-care-hospital/covid19/",
+        "creation": "2020-03-27T00:00:00-04:00"
+      }
+    },
+    {
+      "type": "documentation",
+      "label": "Importing COVID-19 Patient Module Denominator data for Patient Safety Component",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "document": {
+        "url": "https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf",
+        "creation": "2020-03-27T00:00:00-04:00"
+      }
+    },
+    {
+      "type": "documentation",
+      "label": "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "document": {
+        "url": "https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf",
+        "creation": "2020-03-27T00:00:00-04:00"
+      }
+    },
+    {
+      "type": "documentation",
+      "label": "covi19-test-csv-import",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "document": {
+        "url": "https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv",
+        "creation": "2020-03-27T00:00:00-04:00"
+      }
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+          "code": "composite",
+          "display": "Composite"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numTotBeds"
+          }
+        ],
+        "text": "Total number of all Inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow(surge) beds used for inpatients or outpatients."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numTotBeds",
+            "language": "text/plain",
+            "expression": "Total number of all Inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow(surge) beds used for inpatients or outpatients."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numbeds"
+          }
+        ],
+        "text": "Inpatient beds, including all staffed, licensed, and overflow(surge) beds used for inpatients."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numbeds",
+            "language": "text/plain",
+            "expression": "Inpatient beds, including all staffed, licensed, and overflow(surge) beds used for inpatients."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numBedsOcc"
+          }
+        ],
+        "text": "Total number of staffed inpatient beds that are occupied."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numBedsOcc",
+            "language": "text/plain",
+            "expression": "Total number of staffed inpatient beds that are occupied."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numICUBeds"
+          }
+        ],
+        "text": "Total number of staffed inpatient intensive care unit (ICU) beds."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numICUBeds",
+            "language": "text/plain",
+            "expression": "Total number of staffed inpatient intensive care unit (ICU) beds."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numICUBedsOcc"
+          }
+        ],
+        "text": "Total number of staffed inpatient ICU beds that are occupied."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numICUBedsOcc",
+            "language": "text/plain",
+            "expression": "Total number of staffed inpatient ICU beds that are occupied."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numVent"
+          }
+        ],
+        "text": "Total number of ventilators available."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numVent",
+            "language": "text/plain",
+            "expression": "Total number of ventilators available."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numVentUse"
+          }
+        ],
+        "text": "Total number of ventilators in use."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numVentUse",
+            "language": "text/plain",
+            "expression": "Total number of ventilators in use."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numC19HospPats"
+          }
+        ],
+        "text": "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numC19HospPats",
+            "language": "text/plain",
+            "expression": "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numC19MechVentPats"
+          }
+        ],
+        "text": "Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID - 19 and are on a mechanical ventilator."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numC19MechVentPats",
+            "language": "text/plain",
+            "expression": "Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID - 19 and are on a mechanical ventilator."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numC19HOPats"
+          }
+        ],
+        "text": "Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID - 19 14 or more days after hospitalization."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numC19HOPats",
+            "language": "text/plain",
+            "expression": "Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID - 19 14 or more days after hospitalization."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numC19OverflowPats"
+          }
+        ],
+        "text": "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numC19OverflowPats",
+            "language": "text/plain",
+            "expression": "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numC19OFMechVentPats"
+          }
+        ],
+        "text": "Patients with suspected or confirmed COVID - 19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numC19OFMechVentPats",
+            "language": "text/plain",
+            "expression": "Patients with suspected or confirmed COVID - 19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator."
+          }
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig",
+            "code": "numC19Died"
+          }
+        ],
+        "text": "Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location."
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "criteria": {
+            "description": "CDC defined field: numC19Died",
+            "language": "text/plain",
+            "expression": "Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location."
+          }
+        }
+      ]
+    }
+  ]
+}

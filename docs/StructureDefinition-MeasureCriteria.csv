@@ -1,0 +1,26 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"Expression","","","",0,*,"","","","","An expression that can be used to generate a value","A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.","","","","","","","","","",,,,,"",,,,"Expression",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+exp-1:An expression or a reference must be provided {expression.exists() or reference.exists()}","n/a"
+"Expression.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Expression.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Expression.description","","","",1,1,"","","Y","string {[]} {[]}
+","Describe what the criterion does to a human (non-engineer)","A brief, natural language description of the condition that effectively communicates the intended semantics.","","","","","","","","","",,,,,"",,,,"Expression.description",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Expression.name","","","",1,1,"","","Y","id {[]} {[]}
+","name should align with code.","A short name assigned to the expression to allow for multiple reuse of the expression in the context where it is defined.","","","","","","","","","",,,,,"",,,,"Expression.name",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Expression.language","","","",1,1,"","","Y","code {[]} {[]}
+","Provide the language for the criterion","The media type of the language for the expression.","","","","","","","","","",,"extensible","The media type of the expression language.","http://hl7.org/fhir/ValueSet/expression-language","",,,,"Expression.language",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Expression.expression","","","",1,1,"","","Y","string {[]} {[]}
+","A measure must describe how to automate the computation in an expression that can be evaluated in the specified language","An expression in the specified language that returns a value.","","","","","","","","","",,,,,"",,,,"Expression.expression",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Expression.reference","","","",0,1,"","","Y","uri {[]} {[]}
+","Where the expression is found","A URI that defines where the expression is found.","If both a reference and an expression is found, the reference SHALL point to the same expression.","","","","","","","","",,,,,"",,,,"Expression.reference",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"

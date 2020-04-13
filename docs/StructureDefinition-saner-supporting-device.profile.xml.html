@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>AINQ.FHIR.US.SANER\Supporting Device Profile - Profile XML - FHIR v4.0.1</title>
+    <title>HL7.FHIR.US.SANER\Supporting Device Profile - Profile XML - FHIR v4.0.1</title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -19,8 +19,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
 <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
-<link href="assets/css/assess.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,14 +41,21 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"13.9"}
-    h3,h4,h5,h6{--heading-prefix:"13.9"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.10"}
+    h3,h4,h5,h6{--heading-prefix:"14.10"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
-                <div id="hl7-nav" style='float:left;'>
-          <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
           </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
         </div>
 
 
@@ -71,7 +80,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
     <li class="dropdown">
@@ -116,7 +126,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
       </li>
       <li>
         <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
@@ -159,7 +169,7 @@
 
 
 <div style="counter-reset: section 7" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li>
       <a href="StructureDefinition-saner-supporting-device.html">Content</a>
@@ -205,17 +215,24 @@
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;saner-supporting-device&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;tr style=&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;The logical name of the element&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Information about the use of the element&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Minimum and Maximum # of times the the element can appear in the instance&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;width: 100px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Reference to the type of the element&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Additional information about the element&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=&quot;float: right&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;http://hl7.org/fhir/R4/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_resource.png&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Resource&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-saner-supporting-device-definitions.html#Device&quot;&gt;Device&lt;/a&gt;&lt;a name=&quot;Device&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/device.html&quot;&gt;Device&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;tr style=&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;The logical name of the element&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Information about the use of the element&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Minimum and Maximum # of times the the element can appear in the instance&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;width: 100px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Reference to the type of the element&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Additional information about the element&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=&quot;float: right&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;http://hl7.org/fhir/R4/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_resource.png&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Resource&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-saner-supporting-device-definitions.html#Device&quot;&gt;Device&lt;/a&gt;&lt;a name=&quot;Device&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/device.html&quot;&gt;Device&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;Item used in healthcare&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;hierarchy&quot;&gt;&lt;br/&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;http://hl7.org/fhir/R4/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a>
-       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://ainq.com/fhir/us/saner/StructureDefinition/saner-supporting-device&quot;/&gt;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/saner/StructureDefinition/saner-supporting-device&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SupportingDevice&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Supporting Device Profile&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-03-29T12:02:42-04:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Audacious Inquiry&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-04-13T11:49:10-04:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 Patient Administration Workgroup&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://hl7.org/Special/committees/pafm/index.cfm&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Audacious Inquiry&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -227,7 +244,7 @@
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Keith W. Boone&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;kboone@ainq.com&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;mailto:kboone@ainq.com&quot;/&gt;
     &lt;/telecom&gt;
   &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>
@@ -2682,11 +2699,16 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BedLocationTypes",
+  "id": "BedLocationTypes",
+  "title": "Location Types",
+  "description": "Codes used to locations",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"
+}

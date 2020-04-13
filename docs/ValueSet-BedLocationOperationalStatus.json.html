@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>AINQ.FHIR.US.SANER\Bed Location Operational Status - JSON Representation - FHIR v4.0.1</title>
+    <title>HL7.FHIR.US.SANER\Bed Location Operational Status - JSON Representation - FHIR v4.0.1</title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -19,8 +19,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
 <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
-<link href="assets/css/assess.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,14 +41,21 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"13.10"}
-    h3,h4,h5,h6{--heading-prefix:"13.10"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.15"}
+    h3,h4,h5,h6{--heading-prefix:"14.15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
-                <div id="hl7-nav" style='float:left;'>
-          <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
           </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
         </div>
 
 
@@ -71,7 +80,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
     <li class="dropdown">
@@ -116,7 +126,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
       </li>
       <li>
         <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
@@ -156,7 +166,7 @@
         <div class="row">
           <div class="inner-wrapper">
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <a name="root"> </a>
   <h2 id="root">Bed Location Operational Status - JSON Representation</h2>
   <p>
@@ -178,16 +188,25 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "BedLocationOperationalStatus",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Bed Location Operational Status&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.&lt;/p&gt;\n&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html\&quot;&gt;http://terminology.hl7.org/ValueSet/v2-0116&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Exclude these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v2-0116&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-I\&quot;&gt;I&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Isolated&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Bed Location Operational Status&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.&lt;/p&gt;\n&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v2-0116&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-C\&quot;&gt;C&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Closed&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-O\&quot;&gt;O&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Occupied&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-U\&quot;&gt;U&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unoccupied&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "BedLocationOperationalStatus",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "Bed Location Operational Status",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2020-03-29T12:02:42-04:00",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "Audacious Inquiry",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2020-04-13T11:49:10-04:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "HL7 International",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 Patient Administration Workgroup",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }
+      ]
+    },
     {
       "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Audacious Inquiry",
       "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
@@ -202,26 +221,25 @@
       "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
         {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "kboone@ainq.com"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "mailto:kboone@ainq.com"
         }
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
-      {
-        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.valueSet">valueSet</a>" : [
-          "http://terminology.hl7.org/ValueSet/v2-0116"
-        ]
-      }
-    ],
-    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.exclude">exclude</a>" : [
       {
         "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0116",
         "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I"
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "C"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "O"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "U"
           }
         ]
       }
@@ -243,11 +261,16 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

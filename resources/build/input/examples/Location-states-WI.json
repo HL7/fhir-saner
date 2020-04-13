@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-WI",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Wisconsin",
+  "position": {
+    "latitude": 44.6243,
+    "longitude": 89.9941
+  }
+}

@@ -3,16 +3,23 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="BedLocationOperationalStatus"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Bed Location Operational Status</h2><div><p>This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.</p>
-</div><ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/v2/0116/index.html">http://terminology.hl7.org/ValueSet/v2-0116</a></li><li>Exclude these codes as defined in <a href="http://hl7.org/fhir/R4/v2/0116/index.html"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-I">I</a></td><td>Isolated</td><td/></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Bed Location Operational Status</h2><div><p>This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.</p>
+</div><ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/v2/0116/index.html"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-C">C</a></td><td>Closed</td><td/></tr><tr><td><a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-O">O</a></td><td>Occupied</td><td/></tr><tr><td><a href="http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-U">U</a></td><td>Unoccupied</td><td/></tr></table></li></ul></div>
   </text>
-  <url value="http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
+  <url value="http://hl7.org/fhir/us/saner/ValueSet/BedLocationOperationalStatus"/>
   <version value="0.1.0"/>
   <name value="BedLocationOperationalStatus"/>
   <title value="Bed Location Operational Status"/>
   <status value="active"/>
-  <date value="2020-03-29T12:02:42-04:00"/>
-  <publisher value="Audacious Inquiry"/>
+  <date value="2020-04-13T11:49:10-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Patient Administration Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+    </telecom>
+  </contact>
   <contact>
     <name value="Audacious Inquiry"/>
     <telecom>
@@ -24,19 +31,22 @@
     <name value="Keith W. Boone"/>
     <telecom>
       <system value="email"/>
-      <value value="kboone@ainq.com"/>
+      <value value="mailto:kboone@ainq.com"/>
     </telecom>
   </contact>
-  <description value="This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use."/>
+  <description value="This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."/>
   <compose>
     <include>
-      <valueSet value="http://terminology.hl7.org/ValueSet/v2-0116"/>
-    </include>
-    <exclude>
       <system value="http://terminology.hl7.org/CodeSystem/v2-0116"/>
       <concept>
-        <code value="I"/>
+        <code value="C"/>
       </concept>
-    </exclude>
+      <concept>
+        <code value="O"/>
+      </concept>
+      <concept>
+        <code value="U"/>
+      </concept>
+    </include>
   </compose>
 </ValueSet>

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>AINQ.FHIR.US.SANER\Device Group Profile - Definitions - FHIR v4.0.1</title>
+    <title>HL7.FHIR.US.SANER\Device Group Profile - Definitions - FHIR v4.0.1</title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -19,8 +19,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
 <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
-<link href="assets/css/assess.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,14 +41,21 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"13.5"}
-    h3,h4,h5,h6{--heading-prefix:"13.5"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.5"}
+    h3,h4,h5,h6{--heading-prefix:"14.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
-                <div id="hl7-nav" style='float:left;'>
-          <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
           </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
         </div>
 
 
@@ -71,7 +80,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
     <li class="dropdown">
@@ -116,7 +126,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
       </li>
       <li>
         <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
@@ -160,7 +170,7 @@
 
 
 <div style="counter-reset: section 4" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li>
       <a href="StructureDefinition-saner-device-group.html">Content</a>
@@ -313,7 +323,7 @@
 </td></tr>
   <tr><td>Comments</td><td><p>Group members SHALL be of the appropriate resource type (Patient for person or animal; or Practitioner, Device, Medication or Substance for the other types.).</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>device</td></tr>
+  <tr><td>Pattern Value</td><td>device</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Group.actual"> </a><span style="color: grey">13.</span> <b>Group.actual</b><a href="#Group.actual" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -323,7 +333,7 @@
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td></tr>
   <tr><td>Requirements</td><td><p>There are use-cases for groups that define specific collections of individuals, and other groups that define &quot;types&quot; of intended individuals.  The requirements for both kinds of groups are similar, so we use a single resource, distinguished by this flag.</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>true</td></tr>
+  <tr><td>Pattern Value</td><td>true</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Group.code"> </a><span style="color: grey">14.</span> <b>Group.code</b><a href="#Group.code" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -465,7 +475,7 @@
 </td></tr>
   <tr><td>Comments</td><td><p>Identifier.system is always case sensitive.</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>http://hl7.org/fhir/sid/us-npi</td></tr>
+  <tr><td>Pattern Value</td><td>http://hl7.org/fhir/sid/us-npi</td></tr>
   <tr><td>Example</td><td><br/><b>General</b>:http://www.acme.com/identifiers/patient
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
@@ -677,7 +687,7 @@
 </td></tr>
   <tr><td>Comments</td><td><p>This is labeled as &quot;Is Modifier&quot; because applications cannot wrongly include excluded members as included or vice versa.</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>false</td></tr>
+  <tr><td>Pattern Value</td><td>false</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Group.characteristic:Status.period"> </a><span style="color: grey">48.</span> <b>Group.characteristic:Status.period</b><a href="#Group.characteristic:Status.period" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -776,7 +786,7 @@
 </td></tr>
   <tr><td>Comments</td><td><p>This is labeled as &quot;Is Modifier&quot; because applications cannot wrongly include excluded members as included or vice versa.</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>false</td></tr>
+  <tr><td>Pattern Value</td><td>false</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Group.characteristic:Type.period"> </a><span style="color: grey">57.</span> <b>Group.characteristic:Type.period</b><a href="#Group.characteristic:Type.period" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -875,7 +885,7 @@
 </td></tr>
   <tr><td>Comments</td><td><p>This is labeled as &quot;Is Modifier&quot; because applications cannot wrongly include excluded members as included or vice versa.</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>false</td></tr>
+  <tr><td>Pattern Value</td><td>false</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Group.characteristic:Property.period"> </a><span style="color: grey">66.</span> <b>Group.characteristic:Property.period</b><a href="#Group.characteristic:Property.period" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -941,7 +951,7 @@
   <tr><td>Definition</td><td><p>The value of the trait that holds (or does not hold - see 'exclude') for members of the group.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="StructureDefinition-saner-resource-location.html" title="http://ainq.com/fhir/us/saner/StructureDefinition/saner-resource-location">ResourceLocation</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="StructureDefinition-saner-resource-location.html" title="http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location">ResourceLocation</a>)</td></tr>
   <tr><td>[x] Note</td><td>See <a href="http://hl7.org/fhir/R4/formats.html#choice">Choice of Data Types</a> for further information about how to use [x]</td></tr>
   <tr><td>Requirements</td><td><p>The value of the characteristic is what determines group membership.</p>
 </td></tr>
@@ -958,7 +968,7 @@
 </td></tr>
   <tr><td>Comments</td><td><p>This is labeled as &quot;Is Modifier&quot; because applications cannot wrongly include excluded members as included or vice versa.</p>
 </td></tr>
-  <tr><td>Fixed Value</td><td>false</td></tr>
+  <tr><td>Pattern Value</td><td>false</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Group.characteristic:Location.period"> </a><span style="color: grey">74.</span> <b>Group.characteristic:Location.period</b><a href="#Group.characteristic:Location.period" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -1075,11 +1085,16 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

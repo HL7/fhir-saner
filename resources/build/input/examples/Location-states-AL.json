@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-AL",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Alabama",
+  "position": {
+    "latitude": 32.7794,
+    "longitude": 86.8287
+  }
+}

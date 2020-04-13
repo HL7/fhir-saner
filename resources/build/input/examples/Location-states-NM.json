@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-NM",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "New Mexico",
+  "position": {
+    "latitude": 34.4071,
+    "longitude": 106.1126
+  }
+}

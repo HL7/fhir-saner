@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>AINQ.FHIR.US.SANER\Bed Type - XML Representation - FHIR v4.0.1</title>
+    <title>HL7.FHIR.US.SANER\Bed Type - XML Representation - FHIR v4.0.1</title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -19,8 +19,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
 <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
-<link href="assets/css/assess.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,14 +41,21 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"13.12"}
-    h3,h4,h5,h6{--heading-prefix:"13.12"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.18"}
+    h3,h4,h5,h6{--heading-prefix:"14.18"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
-                <div id="hl7-nav" style='float:left;'>
-          <a id="hl7-logo" no-external="true" href="http://ainq.org">
-            <img alt="Visit the Ai website" src="assets/images/Ai-Logo-without-Tagline@2x.png" height='64px'/>
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
           </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
         </div>
 
 
@@ -71,7 +80,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
     <li class="dropdown">
@@ -116,7 +126,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="CodeSystem-SanerBedType.html">SANER Bed Type Coding System</a>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
       </li>
       <li>
         <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
@@ -156,7 +166,7 @@
         <div class="row">
           <div class="inner-wrapper">
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://ainq.com/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <a name="root"> </a>
   <h2 id="root">Bed Type - XML Representation</h2>
   <p>
@@ -179,15 +189,22 @@
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Bed Type&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Value Set describes the types of care services that a bed can support.&lt;/p&gt;
-&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v3-RoleCode&lt;/code&gt;&lt;/a&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU&quot;&gt;ICU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU&quot;&gt;PEDICU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pediatric intensive care unit&lt;/td&gt;&lt;td&gt;Pediatric intensive care unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU&quot;&gt;PEDNICU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pediatric neonatal intensive care unit&lt;/td&gt;&lt;td&gt;Pediatric neonatal intensive care unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER&quot;&gt;ER&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room&lt;/td&gt;&lt;td&gt;The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU&quot;&gt;HU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital unit&lt;/td&gt;&lt;td&gt;Hospital unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU&quot;&gt;RHU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rehabilitation hospital unit&lt;/td&gt;&lt;td&gt;Rehabilitation hospital unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU&quot;&gt;PEDU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pediatric unit&lt;/td&gt;&lt;td&gt;Pediatric unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU&quot;&gt;PHU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Psychiatric hospital unit&lt;/td&gt;&lt;td&gt;(X12N 273R00000N)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include these codes as defined in &lt;a href=&quot;CodeSystem-SanerBedType.html&quot;&gt;&lt;code&gt;http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType&lt;/code&gt;&lt;/a&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-SanerBedType.html#SanerBedType-OR&quot;&gt;OR&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Operating Room&lt;/td&gt;&lt;td&gt;Operating Rooms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-SanerBedType.html#SanerBedType-NURSERY&quot;&gt;NURSERY&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursery&lt;/td&gt;&lt;td&gt;Neonatal or newborn (non-ICU) care beds&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-SanerBedType.html#SanerBedType-BURNU&quot;&gt;BURNU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burn Unit&lt;/td&gt;&lt;td&gt;Burn ICU beds&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v3-RoleCode&lt;/code&gt;&lt;/a&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP&quot;&gt;HOSP&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital&lt;/td&gt;&lt;td&gt;An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU&quot;&gt;ICU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER&quot;&gt;ER&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room&lt;/td&gt;&lt;td&gt;The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include these codes as defined in &lt;a href=&quot;CodeSystem-BedType.html&quot;&gt;&lt;code&gt;http://hl7.org/fhir/us/saner/CodeSystem/BedType&lt;/code&gt;&lt;/a&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-BedType.html#BedType-OR&quot;&gt;OR&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Operating Room&lt;/td&gt;&lt;td&gt;Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-BedType.html#BedType-NURSERY&quot;&gt;NURSERY&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-BedType.html#BedType-BURNU&quot;&gt;BURNU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burn Unit&lt;/td&gt;&lt;td&gt;Beds in a Burn Unit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://ainq.com/fhir/us/saner/ValueSet/BedType&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/saner/ValueSet/BedType&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BedType&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Bed Type&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-03-29T12:02:42-04:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Audacious Inquiry&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-04-13T11:49:10-04:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 Patient Administration Workgroup&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://hl7.org/Special/committees/pafm/index.cfm&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Audacious Inquiry&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -199,7 +216,7 @@
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Keith W. Boone&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;kboone@ainq.com&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;mailto:kboone@ainq.com&quot;/&gt;
     &lt;/telecom&gt;
   &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>
@@ -208,32 +225,17 @@
     &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HOSP&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ICU&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PEDICU&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PEDNICU&quot;/&gt;
       &lt;/concept&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ER&quot;/&gt;
       &lt;/concept&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HU&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;RHU&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PEDU&quot;/&gt;
-      &lt;/concept&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PHU&quot;/&gt;
-      &lt;/concept&gt;
     &lt;/include&gt;
     &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/saner/CodeSystem/BedType&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;OR&quot;/&gt;
       &lt;/concept&gt;
@@ -261,11 +263,16 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://ainq.com">Audacious Inquiry</a>.  Package ainq.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 29, 2020 12:02-0400">2020-03-29</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

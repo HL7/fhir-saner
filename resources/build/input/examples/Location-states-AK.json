@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-AK",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": "Alaska",
+  "position": {
+    "latitude": 64.0685,
+    "longitude": 152.2782
+  }
+}

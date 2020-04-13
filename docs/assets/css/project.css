@@ -61,15 +61,14 @@ body {
   background-color: #707070;
 }
 #segment-footer > .container {
-  background-color: #2670b8; // #7b1fad;
+  background-color: #7b1fad;
   color: #ffffff;
 }
-
 .navbar-inverse {
-  background-color: #2670b8; // #7b1fad;
+  background-color: #7b1fad;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
-  background-color: #4680e8; // #9b2fdd;
+  background-color: #9b2fdd;
 }
 #segment-footer > .container .inner-wrapper {
   padding: 4px 20px;

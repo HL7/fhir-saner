@@ -1,27 +1,34 @@
 {
   "resourceType" : "Bundle",
-  "id" : "f6689430-e976-4d3f-856d-8515d801a426",
+  "id" : "f6eb90fc-30c8-4bb6-b4bb-7287ed2794ea",
   "meta" : {
-    "lastUpdated" : "2020-03-29T12:02:42.060-04:00"
+    "lastUpdated" : "2020-04-13T11:49:10.083-04:00"
   },
   "type" : "collection",
   "entry" : [{
-    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
     "resource" : {
       "resourceType" : "ValueSet",
       "id" : "BedLocationOperationalStatus",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://terminology.hl7.org/ValueSet/v2-0116 version 2.9, http://terminology.hl7.org/CodeSystem/v2-0116 version 2.9</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/v2/0116/index.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-C\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-C\">C</a></td><td>Closed</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-H\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-H\">H</a></td><td>Housekeeping</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-K\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-K\">K</a></td><td>Contaminated</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-O\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-O\">O</a></td><td>Occupied</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-U\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-U\">U</a></td><td>Unoccupied</td><td/></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://terminology.hl7.org/CodeSystem/v2-0116 version 2.9<p>All codes from system <a href=\"http://hl7.org/fhir/R4/v2/0116/index.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0116</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-C\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-C\">C</a></td><td>Closed</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-O\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-O\">O</a></td><td>Occupied</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v2-0116-U\"> </a><a href=\"http://hl7.org/fhir/R4/v2/0116/index.html#v2-0116-U\">U</a></td><td>Unoccupied</td><td/></tr></table></div>"
       },
-      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
       "version" : "0.1.0",
       "name" : "BedLocationOperationalStatus",
       "title" : "Bed Location Operational Status",
       "status" : "active",
-      "date" : "2020-03-29T12:02:42-04:00",
-      "publisher" : "Audacious Inquiry",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
       "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
         "name" : "Audacious Inquiry",
         "telecom" : [{
           "system" : "url",
@@ -32,21 +39,17 @@
         "name" : "Keith W. Boone",
         "telecom" : [{
           "system" : "email",
-          "value" : "kboone@ainq.com"
+          "value" : "mailto:kboone@ainq.com"
         }]
       }],
-      "description" : "This Value Set is used to indicate whether a bed is in use, being readied for use, or not available for use.",
+      "description" : "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use.",
       "expansion" : {
-        "identifier" : "urn:uuid:99233808-7d4b-4092-a0b4-26744e4db81d",
-        "timestamp" : "2020-03-29T12:03:12-04:00",
-        "total" : 5,
+        "identifier" : "urn:uuid:f4f1fd26-3754-4bff-8f41-cdcb15358cb6",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://terminology.hl7.org/ValueSet/v2-0116|2.9"
         },
         {
           "name" : "version",
@@ -56,16 +59,6 @@
           "system" : "http://terminology.hl7.org/CodeSystem/v2-0116",
           "code" : "C",
           "display" : "Closed"
-        },
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v2-0116",
-          "code" : "H",
-          "display" : "Housekeeping"
-        },
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/v2-0116",
-          "code" : "K",
-          "display" : "Contaminated"
         },
         {
           "system" : "http://terminology.hl7.org/CodeSystem/v2-0116",
@@ -81,22 +74,29 @@
     }
   },
   {
-    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedProperty",
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "BedProperty",
+      "id" : "BedLocationTypes",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p><p>All codes from system <a href=\"CodeSystem-SanerBedType.html\"><code>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NEGISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NEGISO\">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OTHISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OTHISO\">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NONISO\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NONISO\">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
       },
-      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedProperty",
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
       "version" : "0.1.0",
-      "name" : "BedProperty",
-      "title" : "Bed Property",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
       "status" : "active",
-      "date" : "2020-03-29T12:02:42-04:00",
-      "publisher" : "Audacious Inquiry",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
       "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
         "name" : "Audacious Inquiry",
         "telecom" : [{
           "system" : "url",
@@ -107,13 +107,61 @@
         "name" : "Keith W. Boone",
         "telecom" : [{
           "system" : "email",
-          "value" : "kboone@ainq.com"
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedProperty",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedProperty",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/BedType version 0.1.0<p>All codes from system <a href=\"CodeSystem-BedType.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-BedType-NEGISO\"> </a><a href=\"CodeSystem-BedType.html#BedType-NEGISO\">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-BedType-OTHISO\"> </a><a href=\"CodeSystem-BedType.html#BedType-OTHISO\">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-BedType-NONISO\"> </a><a href=\"CodeSystem-BedType.html#BedType-NONISO\">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedProperty",
+      "version" : "0.1.0",
+      "name" : "BedProperty",
+      "title" : "Bed Property",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
         }]
       }],
       "description" : "This value set describes other properties of a bed, such as the ability to support isolation.",
       "expansion" : {
-        "identifier" : "urn:uuid:7181d909-8471-456b-9900-1ada46da8252",
-        "timestamp" : "2020-03-29T12:03:12-04:00",
+        "identifier" : "urn:uuid:872bf04c-be00-48b6-8646-c93d8e3c3de4",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -121,20 +169,20 @@
         },
         {
           "name" : "version",
-          "valueUri" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"
+          "valueUri" : "http://hl7.org/fhir/us/saner/CodeSystem/BedType|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
           "code" : "NEGISO",
           "display" : "Negative Pressure Isolation Unit"
         },
         {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
           "code" : "OTHISO",
           "display" : "Other Isolation Unit"
         },
         {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
           "code" : "NONISO",
           "display" : "Non-isolating unit"
         }]
@@ -142,22 +190,29 @@
     }
   },
   {
-    "fullUrl" : "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "BedType",
+      "id" : "BedLocationTypes",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 11 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://terminology.hl7.org/CodeSystem/v3-RoleCode version 2018-08-12, http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType version 0.1.0</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-ICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\">ICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Intensive care unit</td><td>Intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDICU\">PEDICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric intensive care unit</td><td>Pediatric intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDNICU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDNICU\">PEDNICU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric neonatal intensive care unit</td><td>Pediatric neonatal intensive care unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-ER\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\">ER</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Emergency room</td><td>The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-HU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HU\">HU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Hospital unit</td><td>Hospital unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-RHU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-RHU\">RHU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Rehabilitation hospital unit</td><td>Rehabilitation hospital unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PEDU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PEDU\">PEDU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Pediatric unit</td><td>Pediatric unit</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---terminology.hl7.org-CodeSystem-v3-RoleCode-PHU\"> </a><a href=\"http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-PHU\">PHU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-RoleCode</td><td>Psychiatric hospital unit</td><td>(X12N 273R00000N)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-OR\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-OR\">OR</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Operating Room</td><td>Operating Rooms</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-NURSERY\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-NURSERY\">NURSERY</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Nursery</td><td>Neonatal or newborn (non-ICU) care beds</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---ainq.com-fhir-us-saner-CodeSystem-SanerBedType-BURNU\"> </a><a href=\"CodeSystem-SanerBedType.html#SanerBedType-BURNU\">BURNU</a></td><td>http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType</td><td>Burn Unit</td><td>Burn ICU beds</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
       },
-      "url" : "http://ainq.com/fhir/us/saner/ValueSet/BedType",
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
       "version" : "0.1.0",
-      "name" : "BedType",
-      "title" : "Bed Type",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
       "status" : "active",
-      "date" : "2020-03-29T12:02:42-04:00",
-      "publisher" : "Audacious Inquiry",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
       "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
         "name" : "Audacious Inquiry",
         "telecom" : [{
           "system" : "url",
@@ -168,80 +223,945 @@
         "name" : "Keith W. Boone",
         "telecom" : [{
           "system" : "email",
-          "value" : "kboone@ainq.com"
+          "value" : "mailto:kboone@ainq.com"
         }]
       }],
-      "description" : "This Value Set describes the types of care services that a bed can support.",
+      "description" : "Codes used to locations",
       "expansion" : {
-        "identifier" : "urn:uuid:7f52b10b-f543-43ff-b8d8-8936e5c0eed1",
-        "timestamp" : "2020-03-29T12:03:12-04:00",
-        "total" : 11,
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/Groups",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "Groups",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem version 0.1.0<p>All codes from system <a href=\"CodeSystem-GroupSystem.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-GroupSystem-Beds\"> </a><a href=\"CodeSystem-GroupSystem.html#GroupSystem-Beds\">Beds</a></td><td>Beds</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-GroupSystem-Ventilators\"> </a><a href=\"CodeSystem-GroupSystem.html#GroupSystem-Ventilators\">Ventilators</a></td><td>Ventilators</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-GroupSystem-Encounters\"> </a><a href=\"CodeSystem-GroupSystem.html#GroupSystem-Encounters\">Encounters</a></td><td>Encounters</td><td/></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/Groups",
+      "version" : "0.1.0",
+      "name" : "Groups",
+      "title" : "Measure Groups",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Measure Groups defined by the SANER Project",
+      "expansion" : {
+        "identifier" : "urn:uuid:08a6c828-15dc-4cae-85a1-432404854c1d",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
         },
         {
           "name" : "version",
-          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode|2018-08-12"
+          "valueUri" : "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem",
+          "code" : "Beds",
+          "display" : "Beds"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem",
+          "code" : "Ventilators",
+          "display" : "Ventilators"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem",
+          "code" : "Encounters",
+          "display" : "Encounters"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/MeasureRateAggregationValues",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "MeasureRateAggregationValues",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation version 0.1.0<p>All codes from system <a href=\"CodeSystem-MeasureRateAggregation.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-MeasureRateAggregation-aggregable-by-period\"> </a><a href=\"CodeSystem-MeasureRateAggregation.html#MeasureRateAggregation-aggregable-by-period\">aggregable-by-period</a></td><td>Aggregable</td><td>Rates can be accumulated over consecutive periods</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-MeasureRateAggregation-point-in-time\"> </a><a href=\"CodeSystem-MeasureRateAggregation.html#MeasureRateAggregation-point-in-time\">point-in-time</a></td><td>Point in Time</td><td>Rates are point in time measures during the reporting period</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-MeasureRateAggregation-cumulative\"> </a><a href=\"CodeSystem-MeasureRateAggregation.html#MeasureRateAggregation-cumulative\">cumulative</a></td><td>Cumulative</td><td>Rates are point in time measures showing cumulative values over all reporting periods</td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/MeasureRateAggregationValues",
+      "version" : "0.1.0",
+      "name" : "MeasureRateAggregationValues",
+      "title" : "Rate Aggregation Value Set",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "This Value Set Identifies methods of rate aggregation",
+      "expansion" : {
+        "identifier" : "urn:uuid:1e4b129a-50ca-43aa-9cbd-f1cb699c89ee",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
         },
         {
           "name" : "version",
-          "valueUri" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType|0.1.0"
+          "valueUri" : "http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "ICU",
-          "display" : "Intensive care unit"
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation",
+          "code" : "aggregable-by-period",
+          "display" : "Aggregable"
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "PEDICU",
-          "display" : "Pediatric intensive care unit"
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation",
+          "code" : "point-in-time",
+          "display" : "Point in Time"
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "PEDNICU",
-          "display" : "Pediatric neonatal intensive care unit"
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation",
+          "code" : "cumulative",
+          "display" : "Cumulative"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "MeasureStatus",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://hl7.org/fhir/publication-status version 4.0.1<p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html\"><code>http://hl7.org/fhir/publication-status</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-publication-status-active\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-active\">active</a></td><td>Active</td><td>This resource is ready for normal use.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-publication-status-draft\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-draft\">draft</a></td><td>Draft</td><td>This resource is still under development and is not yet considered to be ready for normal use.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-publication-status-retired\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-retired\">retired</a></td><td>Retired</td><td>This resource has been withdrawn or superseded and should no longer be used.</td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus",
+      "version" : "0.1.0",
+      "name" : "MeasureStatus",
+      "title" : "Measure Status Values",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Allowed Status Values for Saner Measures",
+      "expansion" : {
+        "identifier" : "urn:uuid:0307c640-61b9-4912-ab66-9be2616c7a36",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "ER",
-          "display" : "Emergency room"
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/publication-status|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/publication-status",
+          "code" : "active",
+          "display" : "Active"
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "HU",
-          "display" : "Hospital unit"
+          "system" : "http://hl7.org/fhir/publication-status",
+          "code" : "draft",
+          "display" : "Draft"
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "RHU",
-          "display" : "Rehabilitation hospital unit"
+          "system" : "http://hl7.org/fhir/publication-status",
+          "code" : "retired",
+          "display" : "Retired"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/OnlyCompleteOrPending",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "OnlyCompleteOrPending",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://hl7.org/fhir/measure-report-status version 4.0.1<p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-measure-report-status.html\"><code>http://hl7.org/fhir/measure-report-status</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-measure-report-status-complete\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-measure-report-status.html#measure-report-status-complete\">complete</a></td><td>Complete</td><td>The report is complete and ready for use.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-measure-report-status-pending\"> </a><a href=\"http://hl7.org/fhir/R4/codesystem-measure-report-status.html#measure-report-status-pending\">pending</a></td><td>Pending</td><td>The report is currently being generated.</td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/OnlyCompleteOrPending",
+      "version" : "0.1.0",
+      "name" : "OnlyCompleteOrPending",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "This valueset is used to limit the reported status to complete or pending for a MeasureReport",
+      "expansion" : {
+        "identifier" : "urn:uuid:cea96575-7714-451a-82ae-5064d5af7941",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "PEDU",
-          "display" : "Pediatric unit"
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/measure-report-status|4.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/measure-report-status",
+          "code" : "complete",
+          "display" : "Complete"
         },
         {
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code" : "PHU",
-          "display" : "Psychiatric hospital unit"
+          "system" : "http://hl7.org/fhir/measure-report-status",
+          "code" : "pending",
+          "display" : "Pending"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/Populations",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "Populations",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 26 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem version 0.1.0<p>All codes from system <a href=\"CodeSystem-PopulationSystem.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numTotBeds\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numTotBeds\">numTotBeds</a></td><td>All Hospital Beds</td><td>Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numBeds\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numBeds\">numBeds</a></td><td>Hospital Inpatient Beds</td><td>Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numBedsOcc\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numBedsOcc\">numBedsOcc</a></td><td>Hospital Inpatient Bed Occupancy</td><td>Total number of staffed inpatient beds that are occupied</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numICUBeds\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numICUBeds\">numICUBeds</a></td><td>ICU Beds</td><td>Total number of staffed inpatient intensive care unit (ICU) beds</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numICUBedsOcc\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numICUBedsOcc\">numICUBedsOcc</a></td><td>ICU Bed Occupancy</td><td>Total number of staffed inpatient ICU beds that are occupied</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numVent\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numVent\">numVent</a></td><td>Mechanical Ventilators</td><td>Total number of ventilators available</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numVentUse\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numVentUse\">numVentUse</a></td><td>Mechanical Ventilators in Use</td><td>Total number of ventilators in use</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19Pats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19Pats\">numC19Pats</a></td><td>All COVID-19 Confirmed or Suspected Patients</td><td>Patients with suspected or confirmed COVID-19 in any location.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19HospPats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19HospPats\">numC19HospPats</a></td><td>Hospitalized COVID-19 Patients</td><td>Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19OverflowPats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19OverflowPats\">numC19OverflowPats</a></td><td>ED/Overflow COVID-19 Patients</td><td>Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19HOPats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19HOPats\">numC19HOPats</a></td><td>Hospital Onset COVID-19 Patients</td><td>Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19VentPats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19VentPats\">numC19VentPats</a></td><td>Ventilated COVID-19 Patients</td><td>Patients in any location who have suspected or confirmed COVID-19 and are on a mechanical ventilator</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19MechVentPats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19MechVentPats\">numC19MechVentPats</a></td><td>Hospitalized and Ventilated COVID-19 Patients</td><td>Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19OFMechVentPats\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19OFMechVentPats\">numC19OFMechVentPats</a></td><td>ED/Overflow and Ventilated COVID-19 Patients</td><td>Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-numC19Died\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-numC19Died\">numC19Died</a></td><td>COVID-19 Patient Deaths</td><td>Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalOrdersIncrease\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-totalOrdersIncrease\">totalOrdersIncrease</a></td><td>New Diagnostic Tests Ordered/Received</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalOrders\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-totalOrders\">totalOrders</a></td><td>Cumulative Diagnostic Tests Ordered/Recieved</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalTestResultsIncrease\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-totalTestResultsIncrease\">totalTestResultsIncrease</a></td><td>New Tests Resulted</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-rejected\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-rejected\">rejected</a></td><td>Cumulative Specimens Rejected*</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-totalTestResults\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-totalTestResults\">totalTestResults</a></td><td>Cumulative Tests Performed</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positiveIncrease\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-positiveIncrease\">positiveIncrease</a></td><td>New Positive COVID-19 Tests</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positive\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-positive\">positive</a></td><td>Cumulative Positive COVID-19 Tests</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positiveIncreasePercent\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-positiveIncreasePercent\">positiveIncreasePercent</a></td><td>Percent Positive among Newly Resulted Tests</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-positivePercent\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-positivePercent\">positivePercent</a></td><td>Cumulative Percent Positive among Resulted Tests</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-allReports\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-allReports\">allReports</a></td><td>All Laboratory Reports for any Order</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-saner-CodeSystem-PopulationSystem-latestReports\"> </a><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-latestReports\">latestReports</a></td><td>Most Recent Laboratory Reports for any Order</td><td/></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/Populations",
+      "version" : "0.1.0",
+      "name" : "Populations",
+      "title" : "Measure Populations",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Measure Populations defined by The SANER Project",
+      "expansion" : {
+        "identifier" : "urn:uuid:e28c835a-24c8-427f-919f-e0b2ea9a0f1b",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "total" : 26,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
         },
         {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
-          "code" : "OR",
-          "display" : "Operating Room"
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numTotBeds",
+          "display" : "All Hospital Beds"
         },
         {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
-          "code" : "NURSERY",
-          "display" : "Nursery"
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numBeds",
+          "display" : "Hospital Inpatient Beds"
         },
         {
-          "system" : "http://ainq.com/fhir/us/saner/CodeSystem/SanerBedType",
-          "code" : "BURNU",
-          "display" : "Burn Unit"
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numBedsOcc",
+          "display" : "Hospital Inpatient Bed Occupancy"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numICUBeds",
+          "display" : "ICU Beds"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numICUBedsOcc",
+          "display" : "ICU Bed Occupancy"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numVent",
+          "display" : "Mechanical Ventilators"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numVentUse",
+          "display" : "Mechanical Ventilators in Use"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19Pats",
+          "display" : "All COVID-19 Confirmed or Suspected Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19HospPats",
+          "display" : "Hospitalized COVID-19 Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19OverflowPats",
+          "display" : "ED/Overflow COVID-19 Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19HOPats",
+          "display" : "Hospital Onset COVID-19 Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19VentPats",
+          "display" : "Ventilated COVID-19 Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19MechVentPats",
+          "display" : "Hospitalized and Ventilated COVID-19 Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19OFMechVentPats",
+          "display" : "ED/Overflow and Ventilated COVID-19 Patients"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "numC19Died",
+          "display" : "COVID-19 Patient Deaths"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "totalOrdersIncrease",
+          "display" : "New Diagnostic Tests Ordered/Received"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "totalOrders",
+          "display" : "Cumulative Diagnostic Tests Ordered/Recieved"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "totalTestResultsIncrease",
+          "display" : "New Tests Resulted"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "rejected",
+          "display" : "Cumulative Specimens Rejected*"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "totalTestResults",
+          "display" : "Cumulative Tests Performed"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "positiveIncrease",
+          "display" : "New Positive COVID-19 Tests"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "positive",
+          "display" : "Cumulative Positive COVID-19 Tests"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "positiveIncreasePercent",
+          "display" : "Percent Positive among Newly Resulted Tests"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "positivePercent",
+          "display" : "Cumulative Percent Positive among Resulted Tests"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "allReports",
+          "display" : "All Laboratory Reports for any Order"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+          "code" : "latestReports",
+          "display" : "Most Recent Laboratory Reports for any Order"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "BedLocationTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes",
+      "version" : "0.1.0",
+      "name" : "BedLocationTypes",
+      "title" : "Location Types",
+      "status" : "active",
+      "date" : "2020-04-13T11:49:10-04:00",
+      "publisher" : "HL7 International",
+      "contact" : [{
+        "name" : "HL7 Patient Administration Workgroup",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://hl7.org/Special/committees/pafm/index.cfm"
+        }]
+      },
+      {
+        "name" : "Audacious Inquiry",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://ainq.com"
+        }]
+      },
+      {
+        "name" : "Keith W. Boone",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:kboone@ainq.com"
+        }]
+      }],
+      "description" : "Codes used to locations",
+      "expansion" : {
+        "identifier" : "urn:uuid:df612473-efbb-4dcf-9ffd-bb7c89078191",
+        "timestamp" : "2020-04-13T11:49:54-04:00",
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
         }]
       }
     }

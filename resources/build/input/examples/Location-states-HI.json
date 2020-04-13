@@ -1,0 +1,11 @@
+{
+  "resourceType": "Location",
+  "id": "states-HI",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": ""
+    }
+  ],
+  "name": ""
+}

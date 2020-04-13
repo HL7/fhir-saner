@@ -11,15 +11,13 @@ lists those files generated from project configs or the contents in the ig-data 
 
 | SUSHI-GENERATED FILE                                                | ACTION    | INPUT FILE(S)                                                                   |
 | ------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------- |
-| _gencontinuous.bat                                                  | generated |                                                                                 |
-| _gencontinuous.sh                                                   | generated |                                                                                 |
-| _genonce.bat                                                        | generated |                                                                                 |
-| _genonce.sh                                                         | generated |                                                                                 |
-| _updatePublisher.bat                                                | generated |                                                                                 |
-| _updatePublisher.sh                                                 | generated |                                                                                 |
 | ig.ini                                                              | generated | fsh\ig-data\ig.ini, fsh\package.json                                            |
 | input\ImplementationGuide-hl7.fhir.us.saner.json                    | generated | fsh\ig-data\ig.ini, fsh\package.json, {all input resources and pages}           |
 | package-list.json                                                   | generated | fsh\package.json                                                                |
+| input\examples\Measure-sanerCDC.json                                | copied    | fsh\ig-data\input\examples\Measures-CDC.json                                    |
+| input\examples\Measure-sanerFEMA.json                               | copied    | fsh\ig-data\input\examples\Measures-FEMA.json                                   |
+| input\examples\MeasureReport-FHIR-461.json                          | copied    | fsh\ig-data\input\examples\Org-1065-measureReports-CDC.json                     |
+| input\examples\MeasureReport-FHIR-463.json                          | copied    | fsh\ig-data\input\examples\Org-1065-measureReports-FEMA.json                    |
 | input\ignoreWarnings.txt                                            | copied    | fsh\ig-data\input\ignoreWarnings.txt                                            |
 | input\images\57.130-covid19-pimhc-blank-p.pdf                       | copied    | fsh\ig-data\input\images\57.130-covid19-pimhc-blank-p.pdf                       |
 | input\images\57.130-covid19-pimhc-blank-p.png                       | copied    | fsh\ig-data\input\images\57.130-covid19-pimhc-blank-p.png                       |
@@ -38,6 +36,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\images\Model.svg                                              | copied    | fsh\ig-data\input\images\Model.svg                                              |
 | input\images\PublicHealthPullFromHospital.svg                       | copied    | fsh\ig-data\input\images\PublicHealthPullFromHospital.svg                       |
 | input\images\PublicHealthPullFromHospitalStorage.svg                | copied    | fsh\ig-data\input\images\PublicHealthPullFromHospitalStorage.svg                |
+| input\images\SANERLogo.png                                          | copied    | fsh\ig-data\input\images\SANERLogo.png                                          |
 | input\images\Slicer.svg                                             | copied    | fsh\ig-data\input\images\Slicer.svg                                             |
 | input\images\Template for Daily Hospital COVID-19 Reporting.xlsx    | copied    | fsh\ig-data\input\images\Template for Daily Hospital COVID-19 Reporting.xlsx    |
 | input\images\Template-for-Daily-Hospital-COVID-19-Reporting.png     | copied    | fsh\ig-data\input\images\Template-for-Daily-Hospital-COVID-19-Reporting.png     |
