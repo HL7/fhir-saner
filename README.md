@@ -20,4 +20,4 @@ resources to Public Health in this time of crisis.
 This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.
 
-The [Continuous Integration Build](http://build.fhir.org/ig/HL7/saner-ig/) is available,
+The [Continuous Integration Build](http://build.fhir.org/ig/HL7/fhir-saner/) is available,
