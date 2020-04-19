@@ -20,5 +20,4 @@ resources to Public Health in this time of crisis.
 This implementation guide provides the FHIR Implementation materials associated with
 the SANER project.
 
-The [Continuous Integration Build](http://build.fhir.org/ig/AudaciousInquiry/saner-ig/) is available,
-or you can View the Guide on [GitHub Pages](https://audaciousinquiry.github.io/saner-ig/).
+The [Continuous Integration Build](http://build.fhir.org/ig/HL7/fhir-saner/) is available,
