@@ -1,0 +1,47 @@
+﻿column,item,source,group,pop,data,Comment,short,description,instructions
+date,date,All,,,,,,,
+state,state,All,,,,,,,
+fips,NULL,All,,,,,,,
+,Beds,CDC,0,0,,,Hospital Beds,Hospital Bed Reporting,
+numTotBeds,numTotBeds,CDC,0,1,initial-population,Estimated from public data,All Hospital Beds,"Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients","Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,
+and overflow and surge/expansion beds used for inpatients or outpatients. This includes ICU beds."
+numAcuteBeds,numBeds,CDC,0,2,measure-population,Estimated from public data,Hospital Inpatient Beds,"Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients","Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."
+,numBedsOcc,CDC,0,3,measure-population,Estimated from public data regarding utilization,Hospital Inpatient Bed Occupancy,Total number of staffed inpatient beds that are occupied,"Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.
+
+CDC Webinar 31-Mar-2020:
+Baby beds in mom's room count as 1 bed, even if there are multiple baby beds
+Follow-up in progress if staffed is less than licensed.
+Total includes all beds, even if with surge beds it exceeds licensed beds."
+numICUBeds,numICUBeds,CDC,0,4,measure-population,Estimated from public data regarding utilization,,,"Enter the total number of staffed Intensive Care Unit (ICU) beds.
+
+CDC Webinar 31-Mar-2020:
+ICU beds include NICU"
+,Ventilators,CDC,1,0,,,,,
+numVent,numVent,CDC,1,1,initial-population,Estimated from number of ICU Beds,,,
+numVentUse,numVentUse,CDC,1,2,measure-population,Estimated from public data regarding utilization,,,
+,Encounters,CDC,2,0,,,,,
+hospitalizedIncrease,numC19Pats,CDC,2,1,initial-population,,,,
+inIcuCurrently,numC19VentPats,CDC,2,2,measure-population,,,,
+hospitalizedCurrently,numC19HospPats,CDC,2,3,measure-population,,,,
+onVentilatorCurrently,numC19MechVentPats,CDC,2,4,measure-population,,,,
+,numC19HOPats,CDC,2,5,measure-population,,,,
+,numC19OverflowPats,CDC,2,6,measure-population,,,,
+,numC19OFMechVentPats,CDC,2,7,measure-population,,,,
+deathIncrease,numC19died,CDC,2,8,measure-population,,,,
+,positiveIncreasePercent,FEMA,0,0,,,,,
+,totalOrdersIncrease,FEMA,0,1,initial-population,,,,
+totalTestResultsIncrease,totalTestResultsIncrease,FEMA,0,2,denominator,,,,
+positiveIncrease,positiveIncrease,FEMA,0,3,numerator,,,,
+,positivePercent,FEMA,1,0,,,,,
+,totalOrdersIncrease,FEMA,1,1,initial-population,,,,
+,allReports,FEMA,1,2,measure-population,,,,
+,latestReports,FEMA,1,3,measure-population,,,,
+,rejected,FEMA,1,4,denominator-exclusion,,,,
+totalTestResults,totalTestResults,FEMA,1,5,denominator,,,,
+positive,positive,FEMA,1,6,numerator,,,,
+negative,NULL,,,,,,,,
+death,NULL,,,,,,,,
+total,NULL,,,,,,,,
+numEOBeds,NULL,,,,,,,,
+posNeg,NULL,,,,,,,,
+negativeIncrease,NULL,,,,,,,,

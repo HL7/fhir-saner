@@ -9,7 +9,7 @@
         * Enabled renaming of wrapper elements
         -->
     <xsl:output indent="yes" encoding="US-ASCII"/>
-    <xsl:template name="main" match="/">
+    <!--xsl:template name="main" match="/">
         <xsl:call-template name="getSheetAsXML">
             <xsl:with-param name="names" select="('results', 'result')"/>
             <xsl:with-param name="attribute">value</xsl:with-param>
@@ -17,7 +17,7 @@
             <xsl:with-param name="pathToCSV"
                 >TheCovidTrackingProjectDataTo2020-04-07.csv</xsl:with-param>
         </xsl:call-template>
-    </xsl:template>
+    </xsl:template -->
     <xsl:function name="fn:getTokens" as="xs:string+">
         <xsl:param name="str" as="xs:string"/>
         <xsl:analyze-string select="concat(translate($str, '&#xD;', ''), ',')"
@@ -106,4 +106,20 @@
         </xsl:call-template>
     </xsl:function>
 
+    <xsl:function name="fn:getSheet">
+        <xsl:param name="sheet"/>
+        <xsl:param name="cv"/>
+        <xsl:copy-of select="if ( ends-with($sheet, '.csv')) then (fn:loadCSV($sheet,$cv)) else document($sheet,$cv)"/>
+    </xsl:function>
+    
+    <xsl:function name="fn:loadCSV">
+        <xsl:param name="sheet"/>
+        <xsl:param name="cv"/>
+        <xsl:call-template name="getSheetAsXML">
+            <xsl:with-param name="names" select="('results', 'result')"/>
+            <xsl:with-param name="attribute">value</xsl:with-param>
+            <xsl:with-param name="useFieldNames" select="true()"/>
+            <xsl:with-param name="pathToCSV" select="$sheet" />
+        </xsl:call-template>
+    </xsl:function>
 </xsl:stylesheet>

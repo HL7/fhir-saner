@@ -53,7 +53,7 @@ Description: "This value set describes other properties of a bed, such as the ab
 * BedType#OTHISO
 * BedType#NONISO
 
-CodeSystem: LocationFields
+CodeSystem: LocationFieldNames
 Title: "Location Resource Field Names"
 Description: "This Coding System identifies legal field names in a FHIR R4 Location Resource."
 * ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
@@ -99,7 +99,12 @@ Description: "This Coding System identifies legal field names in a FHIR R4 Locat
 * #Location.availabilityExceptions
 * #Location.endpoint
 
-CodeSystem: DeviceFields
+ValueSet: LocationFields
+Title: "Location Resource Field Names"
+Description: "Field names in the Location Resource"
+* codes from system LocationFieldNames
+
+CodeSystem: DeviceFieldNames
 Title: "Device Resource Field Names"
 Description: "This Coding System identifies legal field names in a FHIR R4 Device Resource."
 * ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
@@ -172,9 +177,14 @@ Description: "This Coding System identifies legal field names in a FHIR R4 Devic
 * #Device.safety
 * #Device.parent
 
+ValueSet: LocationFields
+Title: "Location Resource Field Names"
+Description: "Field names in the Location Resource"
+* codes from system LocationFieldNames
+
 ValueSet: Fields
 Title: "Resource Fields"
 Description: "This value set describes fields used to stratify groups in a report"
-* codes from system LocationFields
-* codes from system DeviceFields
+* codes from system LocationFieldNames
+* codes from system DeviceFieldNames
 

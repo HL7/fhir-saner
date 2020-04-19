@@ -23,18 +23,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">

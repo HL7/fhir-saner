@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Measure xmlns="http://hl7.org/fhir">
+  <id value="CDCPatientImpactAndHospitalCapacity"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>meta</b>: </p><p><b>url</b>: <a href="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity">http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>title</b>: Patient Impact and Hospital Capacity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: Apr 14, 2020, 4:45:41 AM</p><p><b>publisher</b>: HL7 International</p><p><b>contact</b>: , , </p><p><b>useContext</b>: </p><p><b>jurisdiction</b>: United States of America <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>author</b>: </p><p><b>relatedArtifact</b>: , , , </p><p><b>definition</b>: Ventilator
+: Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive
+pressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.
+Note: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and
+PEEP) via non-invasive means (for example: nasal prongs, nasal mask, full face mask, total mask, etc.) are not considered ventilators
+unless positive pressure is delivered via an artificial airway (oral/nasal endotracheal or tracheostomy tube).
+
+Beds
+: Baby beds in mom's room count as 1 bed, even if there are multiple baby beds
+Follow-up in progress if staffed is less than licensed.
+Total includes all beds, even if with surge beds it exceeds licensed beds.
+
+ICU beds
+: Include NICU (from CDC Webinar 31-Mar-2020) (outstanding question on burn unit)</p><blockquote><p><b>group</b></p><p><b>code</b>: Hospital Bed Reporting <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Beds' = 'Beds', given as 'Hospital Beds'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numTotBeds' = 'All Hospital Beds', given as 'All Hospital Beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,
+and overflow and surge/expansion beds used for inpatients or outpatients. This includes ICU beds.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numBeds' = 'Hospital Inpatient Beds', given as 'Hospital Inpatient Beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of staffed inpatient beds that are occupied <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numBedsOcc' = 'Hospital Inpatient Bed Occupancy', given as 'Hospital Inpatient Bed Occupancy'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.
+
+CDC Webinar 31-Mar-2020:
+Baby beds in mom's room count as 1 bed, even if there are multiple baby beds
+Follow-up in progress if staffed is less than licensed.
+Total includes all beds, even if with surge beds it exceeds licensed beds.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of staffed inpatient intensive care unit (ICU) beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numICUBeds' = 'ICU Beds', given as 'ICU Beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of staffed Intensive Care Unit (ICU) beds.
+
+CDC Webinar 31-Mar-2020:
+ICU beds include NICU</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of staffed inpatient intensive care unit (ICU) beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numICUBedsOcc' = 'ICU Bed Occupancy', given as 'Total number of staffed inpatient intensive care unit (ICU) beds'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of staffed ICU beds occupied by patients at the time the data is collected.
+
+CDC Webinar 31-Mar-2020:
+ICU beds include NICU</p><p><b>criteria</b>: </p></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Hospital Ventilators Reporting <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Ventilators' = 'Ventilators', given as 'Hospital Ventilators'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Total number of ventilators available <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numVent' = 'Mechanical Ventilators', given as 'Mechanical Ventilators'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the total number of mechanical ventilators, including anesthesia machines and
+portable/transport ventilators available in the facility.
+Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Total number of ventilators in use <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numVentUse' = 'Mechanical Ventilators in Use', given as 'Mechanical Ventilators in Use'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia
+machines and portable/transport ventilators. Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways.</p><p><b>criteria</b>: </p></blockquote></blockquote><blockquote><p><b>group</b></p><p><b>code</b>: Hospital COVID-19 Encounters Reporting <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Encounters' = 'Encounters', given as 'Encounters'})</span></p><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 in any location. <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19Pats' = 'All COVID-19 Confirmed or Suspected Patients', given as 'All COVID-19 Confirmed or Suspected Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>description</b>: Enter the number of patients in any location at the time the data is collected who have suspected or confirmed
+COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.
+Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis
+Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance
+for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed
+COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator. <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19VentPats' = 'Ventilated COVID-19 Patients', given as 'COVID-19 Patients on a Ventilator'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients in any location who have suspected or confirmed COVID-19 and are
+currently on a mechanical ventilator* at the time the data is collected. This includes the patients with laboratory-confirmed or clinically
+diagnosed COVID-19.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19 <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19HospPats' = 'Hospitalized COVID-19 Patients', given as 'Hospitalized COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients hospitalized in an inpatient bed at the time the data is collected
+ who have suspected or confirmed COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.
+Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis
+Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance
+for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed
+COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19MechVentPats' = 'Hospitalized and Ventilated COVID-19 Patients', given as 'Hospitalized and Ventilated COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients hospitalized in an inpatient bed who have
+suspected or confirmed COVID-19 and are currently on a mechanical ventilator* at the time the data is collected . This includes the
+patients with laboratory-confirmed or clinically diagnosed COVID-19.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients currently hospitalized in an inpatient bed with onset of suspected or
+confirmed COVID-19 fourteen or more days after hospital admission due to a condition other than COVID-19 <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19HOPats' = 'Hospital Onset COVID-19 Patients', given as 'Hospital Onset COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients hospitalized in an inpatient bed at the time the data is
+collected with onset of suspected or confirmed COVID-19 fourteen or more days after hospitalization (admission date = hospital
+day 1). This includes laboratory-confirmed or clinically diagnosed COVID-19 cases.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19OverflowPats' = 'ED/Overflow COVID-19 Patients', given as 'ED/Overflow COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients with suspected or confirmed COVID-19 who are in the
+Emergency Department(ED) or any overflow/expansion location awaiting placement in an inpatient bed at the time the data
+is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Overflow locations include any physical
+locations created to accommodate patients include but not limited to 24-hour observation units, hallways, parking lots, or tents.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19OFMechVentPats' = 'ED/Overflow and Ventilated COVID-19 Patients', given as 'ED/Overflow and Ventilated COVID-19 Patients'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients with suspected or confirmed COVID-19 who are in the ED or any overflow/expansion location on a
+mechanical ventilator* at the time the data is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19.</p><p><b>criteria</b>: </p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting. <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numC19Died' = 'COVID-19 Patient Deaths', given as 'COVID-19 Patient Deaths'}; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>description</b>: Enter the number of patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. This
+includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Please enter the count of deaths newly occurred, at the time
+the data is collected instead of the cumulated number of deaths.</p><p><b>criteria</b>: </p></blockquote></blockquote></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity"/>
+  <version value="0.1.0"/>
+  <name value="CDCPatientImpactAndHospitalCapacity"/>
+  <title value="Patient Impact and Hospital Capacity"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2020-04-14T04:45:41-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Patient Administration Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="840539006"/>
+        <display value="COVID-19"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <author>
+    <name value="Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:nhsn@cdc.gov"/>
+    </telecom>
+  </author>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <label value="NHSN COVID-19 Reporting"/>
+    <display value="CDC/NHSN COVID-19 Patient Impact &amp; Hospital Capacity Module Home Page"/>
+    <url value="https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <label value="How to import COVID-19 Summary Data"/>
+    <display value="Importing COVID-19 Patient Module Denominator data for Patient Safety Component"/>
+    <url value="https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <label value="Table of Instructions"/>
+    <display value="Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)"/>
+    <url value="https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <label value="CSV File Template"/>
+    <display value="CDC/NHSN COVID-19 Reporting CSV File Template"/>
+    <url value="https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"/>
+  </relatedArtifact>
+  <definition value="Ventilator&#xA;: Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive&#xA;pressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.&#xA;Note: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and&#xA;PEEP) via non-invasive means (for example: nasal prongs, nasal mask, full face mask, total mask, etc.) are not considered ventilators&#xA;unless positive pressure is delivered via an artificial airway (oral/nasal endotracheal or tracheostomy tube).&#xA;&#xA;Beds&#xA;: Baby beds in mom&#39;s room count as 1 bed, even if there are multiple baby beds&#xA;Follow-up in progress if staffed is less than licensed.&#xA;Total includes all beds, even if with surge beds it exceeds licensed beds.&#xA;&#xA;ICU beds&#xA;: Include NICU (from CDC Webinar 31-Mar-2020) (outstanding question on burn unit)"/>
+  <group>
+    <extension url="http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes">
+      <extension url="scoring">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+            <code value="continuous-variable"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="subject">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/resource-types"/>
+            <code value="Location"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="91537007"/>
+            <display value="Hospital bed, device (physical object)"/>
+          </coding>
+          <text value="Hospital Beds"/>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-type"/>
+            <code value="structure"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="improvementNotation">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="increase"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="rateAggregation">
+        <valueString value="aggregable-by-period"/>
+      </extension>
+    </extension>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+        <code value="Beds"/>
+        <display value="Hospital Beds"/>
+      </coding>
+      <text value="Hospital Bed Reporting"/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numTotBeds"/>
+          <display value="All Hospital Beds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+        <text value="Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"/>
+      </code>
+      <description value="Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,&#xA;and overflow and surge/expansion beds used for inpatients or outpatients. This includes ICU beds."/>
+      <criteria>
+        <description value="A bed in any location"/>
+        <name value="numTotBeds"/>
+        <language value="text/fhirpath"/>
+        <expression value="Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numBeds"/>
+          <display value="Hospital Inpatient Beds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"/>
+      </code>
+      <description value="Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."/>
+      <criteria>
+        <description value="A Bed where the location is an inpatient location."/>
+        <name value="numBeds"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numTotBeds.where(location.type in %ValueSet-InpatientLocations)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numBedsOcc"/>
+          <display value="Hospital Inpatient Bed Occupancy"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Total number of staffed inpatient beds that are occupied"/>
+      </code>
+      <description value="Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.&#xA;&#xA;CDC Webinar 31-Mar-2020:&#xA;Baby beds in mom&#39;s room count as 1 bed, even if there are multiple baby beds&#xA;Follow-up in progress if staffed is less than licensed.&#xA;Total includes all beds, even if with surge beds it exceeds licensed beds."/>
+      <criteria>
+        <description value="An Inpatient Bed where the Bed is occupied."/>
+        <name value="numBedsOcc"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numICUBeds"/>
+          <display value="ICU Beds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Total number of staffed inpatient intensive care unit (ICU) beds"/>
+      </code>
+      <description value="Enter the total number of staffed Intensive Care Unit (ICU) beds.&#xA;&#xA;CDC Webinar 31-Mar-2020:&#xA;ICU beds include NICU"/>
+      <criteria>
+        <description value="A Bed where the location is an inpatient ICU location."/>
+        <name value="numICUBeds"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numBeds.where(location.type in %ValueSet-ICULocations)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numICUBedsOcc"/>
+          <display value="Total number of staffed inpatient intensive care unit (ICU) beds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Total number of staffed inpatient intensive care unit (ICU) beds"/>
+      </code>
+      <description value="Enter the total number of staffed ICU beds occupied by patients at the time the data is collected.&#xA;&#xA;CDC Webinar 31-Mar-2020:&#xA;ICU beds include NICU"/>
+      <criteria>
+        <description value="An ICU Bed that is occupied."/>
+        <name value="numICUBedsOcc"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numICUBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"/>
+      </criteria>
+    </population>
+  </group>
+  <group>
+    <extension url="http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes">
+      <extension url="scoring">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+            <code value="continuous-variable"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="subject">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/resource-types"/>
+            <code value="Device"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="706172005"/>
+            <display value="Ventilator (physical object)"/>
+          </coding>
+          <text value="Ventilator"/>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-type"/>
+            <code value="structure"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="improvementNotation">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="decrease"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="rateAggregation">
+        <valueString value="aggregable-by-period"/>
+      </extension>
+    </extension>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+        <code value="Ventilators"/>
+        <display value="Hospital Ventilators"/>
+      </coding>
+      <text value="Hospital Ventilators Reporting"/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numVent"/>
+          <display value="Mechanical Ventilators"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+        <text value="Total number of ventilators available"/>
+      </code>
+      <description value="Enter the total number of mechanical ventilators, including anesthesia machines and&#xA;portable/transport ventilators available in the facility.&#xA;Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways."/>
+      <criteria>
+        <description value="A Device that is used for ventilation and could be used (e.g., not broken, transferred, etc)"/>
+        <name value="numVent"/>
+        <language value="text/fhirpath"/>
+        <expression value="Device.where(type in %ValueSet-VentilatorDevices and status = active)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numVentUse"/>
+          <display value="Mechanical Ventilators in Use"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Total number of ventilators in use"/>
+      </code>
+      <description value="Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia&#xA;machines and portable/transport ventilators. Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways."/>
+      <criteria>
+        <description value="A ventilator that is attached to a patient."/>
+        <name value="numVentUse"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numVent.where(patient!={})"/>
+      </criteria>
+    </population>
+  </group>
+  <group>
+    <extension url="http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes">
+      <extension url="scoring">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"/>
+            <code value="continuous-variable"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="subject">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/resource-types"/>
+            <code value="Encounter"/>
+          </coding>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="308335008"/>
+            <display value="Patient encounter procedure (procedure)"/>
+          </coding>
+          <text value="Encounter"/>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="type">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-type"/>
+            <code value="structure"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="improvementNotation">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="decrease"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="rateAggregation">
+        <valueString value="aggregable-by-period"/>
+      </extension>
+    </extension>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+        <code value="Encounters"/>
+        <display value="Encounters"/>
+      </coding>
+      <text value="Hospital COVID-19 Encounters Reporting"/>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19Pats"/>
+          <display value="All COVID-19 Confirmed or Suspected Patients"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+        <text value="Patients with suspected or confirmed COVID-19 in any location."/>
+      </code>
+      <description value="Enter the number of patients in any location at the time the data is collected who have suspected or confirmed&#xA;COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.&#xA;Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis&#xA;Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC&#x2019;s Interim Public Health Guidance&#xA;for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed&#xA;COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue)."/>
+      <criteria>
+        <description value="ctive encounters where the encounter diagnosis is suspected or confirmed COVID-19,&#xA;or a Condition of suspected or confirmed COVID-19 was created during that encounter."/>
+        <name value="numC19Pats"/>
+        <language value="text/fhirpath"/>
+        <expression value="ncounter.where(clinicalStatus = &#39;active&#39; and diagnosis.condition.ofType(Condition).code in %ValueSet-SuspectedOrDiagnosedCOVID19)&#xA;| Encounter.where(clinicalStatus = &quot;active&quot; and Condition.where(code in %ValueSet-SuspectedOrDiagnosedCOVID19).encounter = $this)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19VentPats"/>
+          <display value="COVID-19 Patients on a Ventilator"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator."/>
+      </code>
+      <description value="Enter the number of patients in any location who have suspected or confirmed COVID-19 and are&#xA;currently on a mechanical ventilator* at the time the data is collected. This includes the patients with laboratory-confirmed or clinically&#xA;diagnosed COVID-19."/>
+      <criteria>
+        <description value="A COVID-19 encounter where the patient is ventilated"/>
+        <name value="numC19VentPats"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numC19Pats.where(Device.where(type in %ValueSet-VentilatorDevices and status = active).patient = $this.patient)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19HospPats"/>
+          <display value="Hospitalized COVID-19 Patients"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"/>
+      </code>
+      <description value="Enter the number of patients hospitalized in an inpatient bed at the time the data is collected&#xA; who have suspected or confirmed COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.&#xA;Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis&#xA;Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC&#x2019;s Interim Public Health Guidance&#xA;for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed&#xA;COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue)."/>
+      <criteria>
+        <description value="An COVID-19 encounter where the active location is an inpatient location"/>
+        <name value="numC19HospPats"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numC19Pats.where(location.where(status=&#39;active&#39; and type in %ValueSet-InpatientLocations))"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19MechVentPats"/>
+          <display value="Hospitalized and Ventilated COVID-19 Patients"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator"/>
+      </code>
+      <description value="Enter the number of patients hospitalized in an inpatient bed who have&#xA;suspected or confirmed COVID-19 and are currently on a mechanical ventilator* at the time the data is collected . This includes the&#xA;patients with laboratory-confirmed or clinically diagnosed COVID-19."/>
+      <criteria>
+        <description value="An COVID-19 encounter in an inpatient setting on a ventilator"/>
+        <name value="numC19OFMechVentPats"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numC19HospPats.intersect(%numC19VentPats)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19HOPats"/>
+          <display value="Hospital Onset COVID-19 Patients"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients currently hospitalized in an inpatient bed with onset of suspected or&#xA;confirmed COVID-19 fourteen or more days after hospital admission due to a condition other than COVID-19"/>
+      </code>
+      <description value="Enter the number of patients hospitalized in an inpatient bed at the time the data is&#xA;collected with onset of suspected or confirmed COVID-19 fourteen or more days after hospitalization (admission date = hospital&#xA;day 1). This includes laboratory-confirmed or clinically diagnosed COVID-19 cases."/>
+      <criteria>
+        <description value="Encounters associated with suspected or confirmed COVID-19 with onset &gt; 14 days after start"/>
+        <name value="numC19HOPats"/>
+        <language value="text/fhirpath"/>
+        <expression value="dition.where(&#xA;code in %ValueSet-SuspectedOrDiagnosedCOVID19&#xA;and encounter in %numC19HospPats&#xA;and onset + 14 days &gt; encounter.period.start).encounter"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19OverflowPats"/>
+          <display value="ED/Overflow COVID-19 Patients"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed"/>
+      </code>
+      <description value="Enter the number of patients with suspected or confirmed COVID-19 who are in the&#xA;Emergency Department(ED) or any overflow/expansion location awaiting placement in an inpatient bed at the time the data&#xA;is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Overflow locations include any physical&#xA;locations created to accommodate patients include but not limited to 24-hour observation units, hallways, parking lots, or tents."/>
+      <criteria>
+        <description value="An COVID-19 encounter where the active location is an ED or Overflow location"/>
+        <name value="numC19OverflowPats"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numC19Pats.where(location.where(status=&#39;active&#39; and type in %ValueSet-EDorOverflowLocations))"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19OFMechVentPats"/>
+          <display value="ED/Overflow and Ventilated COVID-19 Patients"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"/>
+      </code>
+      <description value="Enter the number of patients with suspected or confirmed COVID-19 who are in the ED or any overflow/expansion location on a&#xA;mechanical ventilator* at the time the data is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19."/>
+      <criteria>
+        <description value="An COVID-19 encounter where the active location is an ED or Overflow location"/>
+        <name value="numC19OFMechVentPats"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numC19OverflowPats.intersect(%numC19VentPats)"/>
+      </criteria>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19Died"/>
+          <display value="COVID-19 Patient Deaths"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+        <text value="Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting."/>
+      </code>
+      <description value="Enter the number of patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. This&#xA;includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Please enter the count of deaths newly occurred, at the time&#xA;the data is collected instead of the cumulated number of deaths."/>
+      <criteria>
+        <description value="All C19 Patients who have died in an encounter during the reporting period."/>
+        <name value="numC19Died"/>
+        <language value="text/fhirpath"/>
+        <expression value="%numC19Pats.hospitalization.dispostion in %ValueSet-PatientDied"/>
+      </criteria>
+    </population>
+  </group>
+</Measure>

@@ -4,8 +4,12 @@
   "identifier": [
     {
       "system": "https://www.census.gov/geographies",
-      "value": ""
+      "value": "19"
     }
   ],
-  "name": ""
+  "name": "Iowa",
+  "position": {
+    "latitude": 42.0751,
+    "longitude": 93.496
+  }
 }

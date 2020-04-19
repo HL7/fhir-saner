@@ -75,5 +75,5 @@ these classifiers to group.
 
 ### Measures
 * [CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-CDCPatientImpactAndHospitalCapacity.json.html)
-* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMAReporting.json.html)
+* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMADailyHospitalCOVID19Reporting.json.html)
 
