@@ -63,6 +63,12 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\includes\Measure-CDCPatientImpactAndHospitalCapacity_notes.md | copied    | fsh\ig-data\input\includes\Measure-CDCPatientImpactAndHospitalCapacity_notes.md |
 | input\includes\Measure-FEMADailyHospitalCOVID19Reporting_intro.md   | copied    | fsh\ig-data\input\includes\Measure-FEMADailyHospitalCOVID19Reporting_intro.md   |
 | input\includes\Measure-FEMADailyHospitalCOVID19Reporting_notes.md   | copied    | fsh\ig-data\input\includes\Measure-FEMADailyHospitalCOVID19Reporting_notes.md   |
+| input\includes\StructureDefinition-MeasureCriteria_intro.md         | copied    | fsh\ig-data\input\includes\StructureDefinition-MeasureCriteria_intro.md         |
+| input\includes\StructureDefinition-MeasureCriteria_notes.md         | copied    | fsh\ig-data\input\includes\StructureDefinition-MeasureCriteria_notes.md         |
+| input\includes\StructureDefinition-MeasureDescription_intro.md      | copied    | fsh\ig-data\input\includes\StructureDefinition-MeasureDescription_intro.md      |
+| input\includes\StructureDefinition-MeasureDescription_notes.md      | copied    | fsh\ig-data\input\includes\StructureDefinition-MeasureDescription_notes.md      |
+| input\includes\StructureDefinition-PublicHealthMeasure_intro.md     | copied    | fsh\ig-data\input\includes\StructureDefinition-PublicHealthMeasure_intro.md     |
+| input\includes\StructureDefinition-PublicHealthMeasure_nodes.md     | copied    | fsh\ig-data\input\includes\StructureDefinition-PublicHealthMeasure_nodes.md     |
 | input\includes\ValueSet-BedLocationOperationalStatus_intro.md       | copied    | fsh\ig-data\input\includes\ValueSet-BedLocationOperationalStatus_intro.md       |
 | input\includes\ValueSet-BedLocationOperationalStatus_notes.md       | copied    | fsh\ig-data\input\includes\ValueSet-BedLocationOperationalStatus_notes.md       |
 | input\includes\ValueSet-BedLocationTypes_intro.md                   | copied    | fsh\ig-data\input\includes\ValueSet-BedLocationTypes_intro.md                   |
@@ -105,7 +111,6 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\includes\ValueSet-VentilatorDevicesWithTracheostomy_notes.md  | copied    | fsh\ig-data\input\includes\ValueSet-VentilatorDevicesWithTracheostomy_notes.md  |
 | input\includes\ValueSet-VentilatorDevices_intro.md                  | copied    | fsh\ig-data\input\includes\ValueSet-VentilatorDevices_intro.md                  |
 | input\includes\ValueSet-VentilatorDevices_notes.md                  | copied    | fsh\ig-data\input\includes\ValueSet-VentilatorDevices_notes.md                  |
-| input\includes\empty                                                | copied    | fsh\ig-data\input\includes\empty                                                |
 | input\includes\menu.xml                                             | copied    | fsh\ig-data\input\includes\menu.xml                                             |
 | input\pagecontent\actors_and_transactions.md                        | copied    | fsh\ig-data\input\pagecontent\3_actors_and_transactions.md                      |
 | input\pagecontent\architecture.md                                   | copied    | fsh\ig-data\input\pagecontent\6_architecture.md                                 |
@@ -119,5 +124,9 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\pagecontent\transaction-2.md                                  | copied    | fsh\ig-data\input\pagecontent\transaction-2.md                                  |
 | input\pagecontent\transaction-3.md                                  | copied    | fsh\ig-data\input\pagecontent\transaction-3.md                                  |
 | input\pagecontent\use_cases.md                                      | copied    | fsh\ig-data\input\pagecontent\2_use_cases.md                                    |
-| input\pagecontent\using_group_resources.md                          | copied    | fsh\ig-data\input\pagecontent\9_using_group_resources.md                        |
+| input\pagecontent\vocabulary.md                                     | copied    | fsh\ig-data\input\pagecontent\9_vocabulary.md                                   |
+| input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.116.json       | copied    | fsh\ig-data\input\vocabulary\C19HCC_Suspected_COVID19_Infection.json            |
+| input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.117.json       | copied    | fsh\ig-data\input\vocabulary\C19HCC_Confirmed_COVID19_Infection.json            |
+| input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.120.json       | copied    | fsh\ig-data\input\vocabulary\C19HCC_SARSCoV2_Exposure.json                      |
+| input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.127.json       | copied    | fsh\ig-data\input\vocabulary\C19HCC_Hydroxychloroquine.json                     |
 | package.json                                                        | copied    | fsh\package.json                                                                |

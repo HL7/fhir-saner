@@ -19,7 +19,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * contact[1].telecom.value = "mailto:kboone@ainq.com"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
  * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * type = #outcome
+ * type = http://terminology.hl7.org/CodeSystem/measure-type#outcome
  * topic = http://snomed.info/sct#252318005 "Immunology laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "aggregable-by-period"
@@ -130,7 +130,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
 
  * group[1].population[1].code.coding = PopulationSystem#allReports
  * group[1].population[1].code.coding.display = "All Reports To Date"
- * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
+// * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[1].population[1].code.text = "Reports to date including corrected, amended and canceled reports"
  * group[1].population[1].criteria.name = "allReports"
  * group[1].population[1].criteria.description = "Diagnostic Reports provided in response to totalOrders"
@@ -140,7 +140,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
 
  * group[1].population[2].code.coding = PopulationSystem#latestReports
  * group[1].population[2].code.coding.display = "Most Recent Laboratory Reports for any Order"
- * group[1].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
+// * group[1].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[1].population[2].code.text = "Latest Reports to date for each order"
  * group[1].population[2].criteria.name = "latestReports"
  * group[1].population[2].criteria.description = "Most recent diagnostic reports provided in response to totalOrders"

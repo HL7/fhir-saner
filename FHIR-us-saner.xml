@@ -26,12 +26,18 @@
    <artifact name="Saner Public Health Measure"
              key="StructureDefinition-PublicHealthMeasure"
              id="StructureDefinition/PublicHealthMeasure"/>
+   <artifact name="Saner Public Health Measure Stratifier"
+             key="StructureDefinition-PublicHealthMeasureStratifier"
+             id="StructureDefinition/PublicHealthMeasureStratifier"/>
    <artifact name="Resource Location Profile"
              key="StructureDefinition-saner-resource-location"
              id="StructureDefinition/saner-resource-location"/>
    <artifact name="Supporting Device Profile"
              key="StructureDefinition-saner-supporting-device"
              id="StructureDefinition/saner-supporting-device"/>
+   <artifact name="Extension Attributes to associate with a Location Reference to simplify Geographic search"
+             key="StructureDefinition-GeoLocation"
+             id="StructureDefinition/GeoLocation"/>
    <artifact name="Attributes describing a group of measures"
              key="StructureDefinition-MeasureGroupAttributes"
              id="StructureDefinition/MeasureGroupAttributes"/>
@@ -57,6 +63,9 @@
    <artifact name="Confirmed COVID-19 Diagnosis Values"
              key="ValueSet-ConfirmedCOVID19DiagnosisValues"
              id="ValueSet/ConfirmedCOVID19DiagnosisValues"/>
+   <artifact name="Device Resource Field Names"
+             key="ValueSet-DeviceFields"
+             id="ValueSet/DeviceFields"/>
    <artifact name="ED or Overflow Locations"
              key="ValueSet-EDorOverflowLocations"
              id="ValueSet/EDorOverflowLocations"/>
@@ -184,6 +193,18 @@
              id="ConceptMap/HAvBED2toFHIR"/>
    <artifact name="NJ-DPH" key="Organization-NJ-DPH" id="Organization/NJ-DPH"/>
    <artifact name="states-NJ" key="Location-states-NJ" id="Location/states-NJ"/>
+   <artifact name="C19HCC Confirmed COVID19 Infection"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.117"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.117"/>
+   <artifact name="C19HCC Hydroxychloroquine"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.127"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.127"/>
+   <artifact name="C19HCC SARSCoV2 Exposure"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.120"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.120"/>
+   <artifact name="C19HCC Suspected COVID19 Infection"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.116"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.116"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>
@@ -196,7 +217,7 @@
    <page name="Architecture" key="architecture"/>
    <page name="Definitions" key="definitions"/>
    <page name="Measures" key="measures"/>
-   <page name="Using Group Resources" key="using_group_resources"/>
+   <page name="Vocabulary" key="vocabulary"/>
    <page name="Transaction 1" key="transaction-1"/>
    <page name="Transaction 2" key="transaction-2"/>
    <page name="Transaction 3" key="transaction-3"/>
