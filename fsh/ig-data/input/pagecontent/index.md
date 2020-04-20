@@ -6,7 +6,7 @@ to support the treatment of novel influenza-like illness.
 ![The SANER Project Logo](SANERLogo.png)
 <div style='float: clear'/>
 **Fighting COVID-19 with FHIR®**
-    
+
 
 
 
@@ -40,21 +40,51 @@ This guide is organized into four main sections:
    3. [Communicate Results [REPORT-TX]](transaction-3.html)
 
 3. Volume III: Content Profiles
-   1. [Bed Measure Report](StructureDefinition-saner-bed-measure-report.html)
-   2. [Device Measure Report](StructureDefinition-saner-device-measure-report.html)
-   3. [Bed Group](StructureDefinition-saner-bed-group.html)
-   4. [Device Group](StructureDefinition-saner-device-group.html)
-   5. [bed-location](StructureDefinition-saner-bed-location.html)
-   6. [Supporting Device](StructureDefinition-saner-supporting-device.html)
-   7. [Resource Location](StructureDefinition-saner-resource-location.html)
-   8. [Audit Event Write](StructureDefinition-saner-audit-event-write.html)
-   9. [Audit Event Read](StructureDefinition-saner-audit-event-read.html)
+   1. [Public Health Measure](StructureDefinition-PublicHealthMeasure.html)
+   2. [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html)
+   3. [Measure Criteria](StructureDefinition-MeasureCriteria.html)
+   4. [Measure Population Alternate Criteria(StructureDefinition-MeasurePopulationAlternateCriteria.html)
+   5. [Measure Description](StructureDefinition-MeasureDescription.html)
+   6. [Audit Event Write](StructureDefinition-audit-event-write.html)
+   7. [Audit Event Read](StructureDefinition-audit-event-read.html)
 
 4. Volume IV: Terminology
-   1. [SanerBedType Coding System](CodeSystem-SanerBedType.html)
-   4. [BedLocationOperationalStatus Value Set](ValueSet-BedLocationOperationalStatus.html)
-   5. [BedProperty Value Set](ValueSet-BedProperty.html)
-   6. [BedType Value Set](ValueSet-BedType.html)
+   1. Code Systems
+      1. [Bed Type](CodeSystem-BedType.json)
+      1. [Device Field Names](CodeSystem-DeviceFieldNames.json)
+      1. [Group System](CodeSystem-GroupSystem.json)
+      1. [Location Field Names](CodeSystem-LocationFieldNames.json)
+      1. [Measure Rate Aggregation](CodeSystem-MeasureRateAggregation.json)
+      1. [Population System](CodeSystem-PopulationSystem.json)
+   2. Value Sets
+      1. [Bed Location Operational Status](ValueSet-BedLocationOperationalStatus.json)
+      1. [Bed Location Types](ValueSet-BedLocationTypes.json)
+      1. [Bed Property](ValueSet-BedProperty.json)
+      1. [Bed Type](ValueSet-BedType.json)
+      1. [Confirmed COVID19 Diagnosis](ValueSet-ConfirmedCOVID19Diagnosis.json)
+      1. [Confirmed COVID19 Diagnosis Values](ValueSet-ConfirmedCOVID19DiagnosisValues.json)
+      1. [COVID19 Diagnostic Test](ValueSet-COVID19DiagnosticTest.json)
+      1. [ED or Overflow Locations](ValueSet-EDorOverflowLocations.json)
+      1. [Fields](ValueSet-Fields.json)
+      1. [Groups](ValueSet-Groups.json)
+      1. [ICU Locations](ValueSet-ICULocations.json)
+      1. [Inpatient Locations](ValueSet-InpatientLocations.json)
+      1. [Location Fields](ValueSet-LocationFields.json)
+      1. [Measure Rate Aggregation Values](ValueSet-MeasureRateAggregationValues.json)
+      1. [Measure Status](ValueSet-MeasureStatus.json)
+      1. [Occupied Bed](ValueSet-OccupiedBed.json)
+      1. [Patient Died](ValueSet-PatientDied.json)
+      1. [Populations](ValueSet-Populations.json)
+      1. [Suspected Or Diagnosed COVID19](ValueSet-SuspectedOrDiagnosedCOVID19.json)
+      1. [Ventilator Devices](ValueSet-VentilatorDevices.json)
+      1. [Ventilator Devices With Tracheostomy](ValueSet-VentilatorDevicesWithTracheostomy.json)
+
+
+5. Volume V: Examples
+   1. [Measure: CDC Patient Impact and Hospital Capacity](Measure-CDCPatientImpactandHospitalCapacity.json.html)
+   2. [Measure: FEMA Daily Hospital COVID19 Reporting](Measure-FEMADailyHospitalCOVID19Reporting.json.html)
+   3. [Location: New Jersey](Location-states-NH.json.html)
+   4. [Organization: NJ Department of Health](Organization-NJ-DPH.json.html)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
@@ -77,4 +107,3 @@ a service platform that is the catalyst for secure and smart health information 
 physicians, hospitals, health plans, ACOs, MCOs, and public health agencies across 12 US states.
 Ai is raising the bar for how health data is shared, managed, and protected.
 
-        

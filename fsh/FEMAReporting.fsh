@@ -1,13 +1,13 @@
 
 
-Instance: FEMAReporting
+Instance: FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasure
 Title: "FEMA Laboratory Orders and Results Daily Increase Reporting"
 Description: "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts."
- * name = "FEMAReporting"
+ * name = "FEMADailyHospitalCOVID19Reporting"
  * version = "0.1.0"
  * status = #draft
- * url = "http://hl7.org/fhir/us/saner/Measure/FEMAReporting"
+ * url = "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting"
  * experimental = true
  * author.name = "FEMA"
  * author.telecom.system = #email
@@ -22,7 +22,6 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * type = #outcome
  * topic = http://snomed.info/sct#252318005 "Immunology laboratory test (procedure)"
  * jurisdiction = urn:iso:std:iso:3166#US
- * scoring = #ratio
  * rateAggregation = "aggregable-by-period"
  * relatedArtifact[0].type = #documentation
  * relatedArtifact[0].url = "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing"

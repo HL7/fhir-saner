@@ -10,11 +10,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>CSVtoXML.xslt</String>
+                                    <String>stateLabReportingExamples2ToFsh.xslt</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>CSVtoXML</String>
+                                        <String>stateLabReportingExamples</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -25,11 +25,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>stateLabReportingExamples2ToFsh.xslt</String>
+                                    <String>CSVtoXML.xslt</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>stateLabReportingExamples</String>
+                                        <String>CSVtoXML</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
