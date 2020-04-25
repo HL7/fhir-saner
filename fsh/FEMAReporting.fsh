@@ -129,7 +129,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * group[1].population.description = "Enter the cumulative number of tests ordered to date."
 
  * group[1].population[1].code.coding = PopulationSystem#allReports
- * group[1].population[1].code.coding.display = "All Reports To Date"
+ * group[1].population[1].code.coding.display = "All Laboratory Reports for any Order"
 // * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[1].population[1].code.text = "Reports to date including corrected, amended and canceled reports"
  * group[1].population[1].criteria.name = "allReports"

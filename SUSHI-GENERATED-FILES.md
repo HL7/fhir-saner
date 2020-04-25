@@ -37,6 +37,8 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\images\Template for Daily Hospital COVID-19 Reporting.xlsx    | copied    | fsh\ig-data\input\images\Template for Daily Hospital COVID-19 Reporting.xlsx    |
 | input\images\Template-for-Daily-Hospital-COVID-19-Reporting.png     | copied    | fsh\ig-data\input\images\Template-for-Daily-Hospital-COVID-19-Reporting.png     |
 | input\images\architecture.svg                                       | copied    | fsh\ig-data\input\images\architecture.svg                                       |
+| input\images\technology-enviroment.svg                              | copied    | fsh\ig-data\input\images\technology-enviroment.svg                              |
+| input\images\technology-environment.svg                             | copied    | fsh\ig-data\input\images\technology-environment.svg                             |
 | input\images\transaction-1-seq.svg                                  | copied    | fsh\ig-data\input\images\transaction-1-seq.svg                                  |
 | input\images\transaction-1-uc.svg                                   | copied    | fsh\ig-data\input\images\transaction-1-uc.svg                                   |
 | input\images\transaction-2-seq.svg                                  | copied    | fsh\ig-data\input\images\transaction-2-seq.svg                                  |
