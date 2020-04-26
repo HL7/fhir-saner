@@ -54,6 +54,18 @@
              key="ValueSet-BedProperty"
              id="ValueSet/BedProperty"/>
    <artifact name="Bed Type" key="ValueSet-BedType" id="ValueSet/BedType"/>
+   <artifact name="C19HCC Confirmed COVID19 Infection"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.117"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.117"/>
+   <artifact name="C19HCC Hydroxychloroquine"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.127"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.127"/>
+   <artifact name="C19HCC SARSCoV2 Exposure"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.120"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.120"/>
+   <artifact name="C19HCC Suspected COVID19 Infection"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.116"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.116"/>
    <artifact name="COVID-19 Diagnostic Test"
              key="ValueSet-COVID19DiagnosticTest"
              id="ValueSet/COVID19DiagnosticTest"/>
@@ -193,18 +205,6 @@
              id="ConceptMap/HAvBED2toFHIR"/>
    <artifact name="NJ-DPH" key="Organization-NJ-DPH" id="Organization/NJ-DPH"/>
    <artifact name="states-NJ" key="Location-states-NJ" id="Location/states-NJ"/>
-   <artifact name="C19HCC Confirmed COVID19 Infection"
-             key="ValueSet-2.16.840.1.113762.1.4.1032.117"
-             id="ValueSet/2.16.840.1.113762.1.4.1032.117"/>
-   <artifact name="C19HCC Hydroxychloroquine"
-             key="ValueSet-2.16.840.1.113762.1.4.1032.127"
-             id="ValueSet/2.16.840.1.113762.1.4.1032.127"/>
-   <artifact name="C19HCC SARSCoV2 Exposure"
-             key="ValueSet-2.16.840.1.113762.1.4.1032.120"
-             id="ValueSet/2.16.840.1.113762.1.4.1032.120"/>
-   <artifact name="C19HCC Suspected COVID19 Infection"
-             key="ValueSet-2.16.840.1.113762.1.4.1032.116"
-             id="ValueSet/2.16.840.1.113762.1.4.1032.116"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>

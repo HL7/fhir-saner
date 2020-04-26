@@ -4,6 +4,7 @@ Description: """This is essentially a database denormalization that facilitates 
 It enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.
 The extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)
 in the hope that it could eventually be absorbed by that extension."""
+* ^jurisdiction = urn:iso:std:iso:3166:-2#US
 * extension contains latitude 1..1 and longitude 1..1
 * extension[latitude] ^short = "Like [geolocation:latitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:latitude)"
 * extension[latitude].value[x] only decimal
@@ -13,6 +14,7 @@ in the hope that it could eventually be absorbed by that extension."""
 Extension: MeasureGroupAttributes
 Title: "Attributes describing a group of measures"
 Description: "Attributes describing the group of measures"
+* ^jurisdiction = urn:iso:std:iso:3166:-2#US
 * extension contains
     scoring 0..1 and
     compositeScoring 0..1 and
@@ -50,6 +52,7 @@ Description: "Attributes describing the group of measures"
 Profile: MeasureCriteria
 Parent: Expression
 Description: "Constraints on documentation for the evaluation of a Measure"
+* ^jurisdiction = urn:iso:std:iso:3166:-2#US
 
 * name 1..1
 * name ^short = "name should align with code."
@@ -67,6 +70,7 @@ Description: "Constraints on documentation for the evaluation of a Measure"
 Extension: MeasurePopulationAlternateCriteria
 Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drules, et cetera)"
+* ^jurisdiction = urn:iso:std:iso:3166:-2#US
 * value[x] only Expression
 * valueExpression only MeasureCriteria
 * valueExpression 1..1
@@ -76,6 +80,7 @@ Profile:        MeasureDescription
 Parent:         CodeableConcept
 Title:          "Saner Measure Description"
 Description:    "A CodeableConcept describing a measure value"
+* ^jurisdiction = urn:iso:std:iso:3166:-2#US
 
 * coding ^slicing.discriminator.type = #pattern
 * coding ^slicing.discriminator.path = "system"
@@ -101,7 +106,7 @@ The Public Health Measure Profile ensures that Measures are very well defined as
 of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
 and computation of it can be automated from systems that have the measure data.
 """
-
+* ^jurisdiction = urn:iso:std:iso:3166:-2#US
 * name 1..1
 * name ^short = "Each measure must have a name."
 * name ^comment = "The name should be in PascalCase, and should represent the Author's title of the Measure.  Identify the Author to clarify"
@@ -248,6 +253,7 @@ Description:    """Profile Saner Public Health Measure Stratifier
 A stratifier is effecitively a mixin that can be used with an existing measure
 to add stratification detail to that measure.
 """
+ * ^jurisdiction = urn:iso:std:iso:3166:-2#US
  * group.stratifier 0..*
  * group.stratifier ^short = "A group may have none, some or many strata"
  * group.stratifier.code 1..1

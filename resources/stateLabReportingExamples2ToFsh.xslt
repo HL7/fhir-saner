@@ -91,7 +91,7 @@
         </xsl:variable>
         <!-- One could also load data from an XML file in a regular format -->
         <!-- xsl:variable name="res" select="document('stateLabReportingData.xml')" /-->
-            
+        
         <!-- iterator over rows -->
         <xsl:for-each select="distinct-values($res/results/result[$count = 0 or position() &lt; $count]/state/@value)">
             <xsl:variable name="state" select="."/>
