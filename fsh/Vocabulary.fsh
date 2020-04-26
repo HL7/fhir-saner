@@ -14,6 +14,7 @@ Description: "This Coding System fills gaps describing types of care services th
 *    #RR "Recovery Room" "Recovery Rooms"
 *    #EX "Examination Room" "Rooms used for principally for patient examination and minor procedures"
 *    #DIALR "Dialysis Treatment Room" "Room used for dialysis treatment"
+*    #NURSERY "Nursery" "Room used for Nursery"
 
 * #BURNU "Burn Unit" "Beds in a Burn Unit"
 
