@@ -43,14 +43,14 @@
         xml  To generate xml output
         json Will also generate XML output, sorry, we aren't there yet.
     -->
-    <xsl:param name="format" select="'xml'"/>
+    <xsl:param name="format" select="'fsh'"/>
     
     <!-- Set to the name of the measure to generate from the CSV input data file
         This must be the name of a file from which the Measure resource can be 
         read so relevant material can be copied from it.
     -->
-    <!--xsl:param name='measureResource' select='"Measure-CDCPatientImpactAndHospitalCapacity.xml"' /-->
-    <xsl:param name='measureResource' select='"Measure-FEMADailyHospitalCOVID19Reporting.xml"'/>
+    <xsl:param name='measureResource' select='"Measure-CDCPatientImpactAndHospitalCapacity.xml"' />
+    <!--xsl:param name='measureResource' select='"Measure-FEMADailyHospitalCOVID19Reporting.xml"'/-->
     
     <!-- Load up some geodata for states (for generating example output) -->
     <xsl:variable name="geo" select="document('US-States-Geocenters.xml')"/>
@@ -328,7 +328,7 @@
                     <xsl:choose>
                         <xsl:when test="$format='fsh'">
                             <xsl:copy-of
-                                select="s:string(('subject.extension.url'), ('http://hl7.org/fhir/StructureDefinition/geolocation'))"/>
+                                select="s:string(('subject.extension.url'), ('http://hl7.org/fhir/us/saner/StructureDefinition/geolocation'))"/>
                             <xsl:copy-of select="s:string(('subject.extension.extension[0].url'), ('latitude'))"/>
                             <xsl:copy-of
                                 select="s:name(('subject.extension.extension[0].valueDecimal'), ($geoData/@Lat))"/>

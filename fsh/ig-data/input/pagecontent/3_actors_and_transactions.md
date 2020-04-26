@@ -30,13 +30,13 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 </tr>
 </thead>
 <tbody>
-                
+
 <tr>
-                        
+
 <td rowspan="2">
 <a href="#measure-source">Measure Source</a>
 </td>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a>
@@ -45,12 +45,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a>
@@ -59,16 +59,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="3">
 <a href="#measure-consumer">Measure Consumer</a>
 </td>
-                        
+
 <td>
 <a href='transaction-3.html'>
                         Communicate Results [REPORT-TX]</a>
@@ -77,9 +77,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a>
@@ -88,12 +88,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a>
@@ -102,16 +102,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 4</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="5">
 <a href="#measure-intermediary">Measure Intermediary</a>
 </td>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Source</i>
@@ -120,12 +120,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i>
@@ -134,12 +134,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-3.html'>
                         Communicate Results [REPORT-TX]</a><br/><i>As Measure Consumer</i>
@@ -148,9 +148,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Consumer</i>
@@ -159,12 +159,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Consumer</i>
@@ -173,14 +173,14 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 4</sup>
-                            
+
 </td>
 </tr>
-                    
+
 </tbody>
 </table>
-        
-        
+
+
 **Notes:**
 
 1. This transaction is required when the Measure Source implements the [Pull Option](#pull-option).
@@ -204,17 +204,17 @@ TBD
 
 
 ##### Measure Source Requirements
-1. 1. 
+1. 1.
 
 #### Measure Consumer
 
 The Measure Consumer provides access to aggregated or fine-grained
 data gathered from one or more Measure Sources.
-        
+
 
 
 ##### Measure Consumer Requirements
-1. 1. 
+1. 1.
 
 #### Measure Intermediary
 
@@ -243,7 +243,7 @@ a Measure Source.  This adapter can be used to add the Fine Grained Option to a 
 
 ![Slicer](Slicer.svg)
 
-        
+
 
 
 
@@ -261,88 +261,88 @@ between options when applicable are specified in notes.
         </tr>
     </thead>
     <tbody>
-        
+
                 <tr>
-                
+
                     <td rowspan='7'>Measure Source</td>
-                
+
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#api-option">API Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#bed-option">Bed Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#asset-option">Asset Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#group-option">Group Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                     <td rowspan='7'>Measure Consumer</td>
-                
+
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#api-option">API Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#bed-option">Bed Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#asset-option">Asset Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#group-option">Group Option</a></td>
                 </tr>
-            
+
                 <tr><td>Measure Intermediary</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
     </tbody>
 </table>
 
-        
+
 The options in this guide are describe in more detail the sections below.
 
 #### Storage Option
@@ -351,7 +351,7 @@ An actor implementing the Storage Option supports the ability to exchange FHIR R
 various means of simple data transfer, rather than directly through a FHIR API call. This include mechanisms such
 as SFTP, S3 Blob Storage, Azure Blob Storage, a Message Queue, https: File Download, File System dumps, or Direct Messages with a
 data payload. Supported formats include JSON, XML and NDJSON.
-        
+
 
 This option applies to the actors as described below.
 
@@ -386,7 +386,7 @@ An [Measure Consumer](actors_and_transactions.html#measure-consumer) actor imple
 
 An actor implementing the Push Option supports the periodic push of resources
 describing the current status of health delivery resources to a centralized collection point.
-	    
+
 
 
 
@@ -426,7 +426,7 @@ A Measure Source implementing the Pull Option is periodically queried by an
 
 An Measure Consumer implementing the Pull Option periodically queries a
 [Measure Source](actors_and_transactions.html#measure-source) using the [Query Measure](actors_and_transactions.html#query-measure) transaction to enable collection of the current status.
-            
+
 
 
 #### Bed Option

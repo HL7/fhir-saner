@@ -253,7 +253,7 @@ Profile and the relevant transactions between them.&#xA;
         <xsl:text>&#xA;</xsl:text>
 
         <xsl:apply-templates select="ig:messsage|ig:result" mode="interaction-diagram"/>
-        <xsl:if test="not(ig:result and not(string(@from) = string(@to)))">return&#xA;</xsl:if>
+        <xsl:if test="not(ig:result) and not(string(@from) = string(@to))">return&#xA;</xsl:if>
         <xsl:if test="not(../self::ig:message)">deactivate "<xsl:value-of select="@from"/>"&#xA;</xsl:if>
         <xsl:if test="not(string(@from) = string(@to))">
             <xsl:text>deactivate "</xsl:text><xsl:value-of select="@to"/><xsl:text>"&#xA;</xsl:text>
