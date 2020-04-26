@@ -25,15 +25,9 @@ This use case is supported by the following
 
 * Content
 
-  - [Bed Measure Report](StructureDefinition-saner-bed-measure-report.html)
+  - TBD
 
-  - [Bed Group](StructureDefinition-saner-bed-group.html)
-
-  - [bed-location](StructureDefinition-saner-bed-location.html)
-
-  - [Supporting Device](StructureDefinition-saner-supporting-device.html)
-
-#### Use Case 1: Collecting Bed Measures Process Flow 
+#### Use Case 1: Collecting Bed Measures Process Flow
 
 Overview TBD
 
@@ -79,17 +73,9 @@ This use case is supported by the following
 
 * Content
 
-  - [Bed Measure Report](StructureDefinition-saner-bed-measure-report.html)
+  - TBD
 
-  - [Device Measure Report](StructureDefinition-saner-device-measure-report.html)
-
-  - [Bed Group](StructureDefinition-saner-bed-group.html)
-
-  - [bed-location](StructureDefinition-saner-bed-location.html)
-
-  - [Supporting Device](StructureDefinition-saner-supporting-device.html)
-
-#### Use Case 2: Reporting on A Measure Process Flow 
+#### Use Case 2: Reporting on A Measure Process Flow
 
 TBD
 

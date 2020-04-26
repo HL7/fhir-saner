@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113762.1.4.1032.120",
+  "meta": {
+    "versionId": "5",
+    "lastUpdated": "2020-04-10T01:00:18.000-04:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---hl7.org-fhir-sid-icd-10-cm-Z20.828\"> </a>Z20.828</td><td>http://hl7.org/fhir/sid/icd-10-cm</td><td>Contact with and (suspected) exposure to other viral communicable diseases</td></tr><tr><td><a name=\"http---snomed.info-sct-840546002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=840546002\">840546002</a></td><td>http://snomed.info/sct</td><td>Exposure to severe acute respiratory syndrome coronavirus 2 (event)</td></tr></table></div>"
+  },
+  "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.120",
+  "version": "20200410",
+  "name": "C19HCC SARSCoV2 Exposure",
+  "status": "active",
+  "date": "2020-04-10T01:00:18-04:00",
+  "publisher": "MITRE Steward",
+  "expansion": {
+    "identifier": "urn:uuid:98f5b3d6-8a0a-43f7-a0c9-76409d963100",
+    "timestamp": "2020-04-19T21:20:32-04:00",
+    "total": 2,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "count",
+        "valueInteger": 1000
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "version": "2020",
+        "code": "Z20.828",
+        "display": "Contact with and (suspected) exposure to other viral communicable diseases"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2020-03",
+        "code": "840546002",
+        "display": "Exposure to severe acute respiratory syndrome coronavirus 2 (event)"
+      }
+    ]
+  }
+}

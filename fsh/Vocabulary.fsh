@@ -14,6 +14,7 @@ Description: "This Coding System fills gaps describing types of care services th
 *    #RR "Recovery Room" "Recovery Rooms"
 *    #EX "Examination Room" "Rooms used for principally for patient examination and minor procedures"
 *    #DIALR "Dialysis Treatment Room" "Room used for dialysis treatment"
+*    #NURSERY "Nursery" "Room used for Nursery"
 
 * #BURNU "Burn Unit" "Beds in a Burn Unit"
 
@@ -56,7 +57,7 @@ Description: "This value set describes other properties of a bed, such as the ab
 CodeSystem: LocationFieldNames
 Title: "Location Resource Field Names"
 Description: "This Coding System identifies legal field names in a FHIR R4 Location Resource."
-* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
+//* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
 * ^status = #active
 * ^content = #complete
 * #Location
@@ -107,7 +108,7 @@ Description: "Field names in the Location Resource"
 CodeSystem: DeviceFieldNames
 Title: "Device Resource Field Names"
 Description: "This Coding System identifies legal field names in a FHIR R4 Device Resource."
-* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
+//* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
 * ^status = #active
 * ^content = #complete
 * #Device
@@ -177,10 +178,10 @@ Description: "This Coding System identifies legal field names in a FHIR R4 Devic
 * #Device.safety
 * #Device.parent
 
-ValueSet: LocationFields
-Title: "Location Resource Field Names"
-Description: "Field names in the Location Resource"
-* codes from system LocationFieldNames
+ValueSet: DeviceFields
+Title: "Device Resource Field Names"
+Description: "Field names in the Device Resource"
+* codes from system DeviceFieldNames
 
 ValueSet: Fields
 Title: "Resource Fields"

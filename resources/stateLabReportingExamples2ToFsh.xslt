@@ -91,7 +91,7 @@
         </xsl:variable>
         <!-- One could also load data from an XML file in a regular format -->
         <!-- xsl:variable name="res" select="document('stateLabReportingData.xml')" /-->
-            
+        
         <!-- iterator over rows -->
         <xsl:for-each select="distinct-values($res/results/result[$count = 0 or position() &lt; $count]/state/@value)">
             <xsl:variable name="state" select="."/>
@@ -328,7 +328,7 @@
                     <xsl:choose>
                         <xsl:when test="$format='fsh'">
                             <xsl:copy-of
-                                select="s:string(('subject.extension.url'), ('http://hl7.org/fhir/StructureDefinition/geolocation'))"/>
+                                select="s:string(('subject.extension.url'), ('http://hl7.org/fhir/us/saner/StructureDefinition/geolocation'))"/>
                             <xsl:copy-of select="s:string(('subject.extension.extension[0].url'), ('latitude'))"/>
                             <xsl:copy-of
                                 select="s:name(('subject.extension.extension[0].valueDecimal'), ($geoData/@Lat))"/>

@@ -26,12 +26,18 @@
    <artifact name="Saner Public Health Measure"
              key="StructureDefinition-PublicHealthMeasure"
              id="StructureDefinition/PublicHealthMeasure"/>
+   <artifact name="Saner Public Health Measure Stratifier"
+             key="StructureDefinition-PublicHealthMeasureStratifier"
+             id="StructureDefinition/PublicHealthMeasureStratifier"/>
    <artifact name="Resource Location Profile"
              key="StructureDefinition-saner-resource-location"
              id="StructureDefinition/saner-resource-location"/>
    <artifact name="Supporting Device Profile"
              key="StructureDefinition-saner-supporting-device"
              id="StructureDefinition/saner-supporting-device"/>
+   <artifact name="Extension Attributes to associate with a Location Reference to simplify Geographic search"
+             key="StructureDefinition-GeoLocation"
+             id="StructureDefinition/GeoLocation"/>
    <artifact name="Attributes describing a group of measures"
              key="StructureDefinition-MeasureGroupAttributes"
              id="StructureDefinition/MeasureGroupAttributes"/>
@@ -48,6 +54,18 @@
              key="ValueSet-BedProperty"
              id="ValueSet/BedProperty"/>
    <artifact name="Bed Type" key="ValueSet-BedType" id="ValueSet/BedType"/>
+   <artifact name="C19HCC Confirmed COVID19 Infection"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.117"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.117"/>
+   <artifact name="C19HCC Hydroxychloroquine"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.127"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.127"/>
+   <artifact name="C19HCC SARSCoV2 Exposure"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.120"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.120"/>
+   <artifact name="C19HCC Suspected COVID19 Infection"
+             key="ValueSet-2.16.840.1.113762.1.4.1032.116"
+             id="ValueSet/2.16.840.1.113762.1.4.1032.116"/>
    <artifact name="COVID-19 Diagnostic Test"
              key="ValueSet-COVID19DiagnosticTest"
              id="ValueSet/COVID19DiagnosticTest"/>
@@ -57,6 +75,9 @@
    <artifact name="Confirmed COVID-19 Diagnosis Values"
              key="ValueSet-ConfirmedCOVID19DiagnosisValues"
              id="ValueSet/ConfirmedCOVID19DiagnosisValues"/>
+   <artifact name="Device Resource Field Names"
+             key="ValueSet-DeviceFields"
+             id="ValueSet/DeviceFields"/>
    <artifact name="ED or Overflow Locations"
              key="ValueSet-EDorOverflowLocations"
              id="ValueSet/EDorOverflowLocations"/>
@@ -176,6 +197,78 @@
    <artifact name="ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting"
              key="MeasureReport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting"
              id="MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting"/>
+   <artifact name="ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity"
+             key="MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity"
+             id="MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting"
+             key="MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting"
+             id="MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting"/>
    <artifact name="FEMA Laboratory Orders and Results Daily Increase Reporting"
              key="Measure-FEMADailyHospitalCOVID19Reporting"
              id="Measure/FEMADailyHospitalCOVID19Reporting"/>
@@ -196,7 +289,7 @@
    <page name="Architecture" key="architecture"/>
    <page name="Definitions" key="definitions"/>
    <page name="Measures" key="measures"/>
-   <page name="Using Group Resources" key="using_group_resources"/>
+   <page name="Vocabulary" key="vocabulary"/>
    <page name="Transaction 1" key="transaction-1"/>
    <page name="Transaction 2" key="transaction-2"/>
    <page name="Transaction 3" key="transaction-3"/>

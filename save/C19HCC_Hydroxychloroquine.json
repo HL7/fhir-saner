@@ -1,0 +1,108 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113762.1.4.1032.127",
+  "meta": {
+    "versionId": "8",
+    "lastUpdated": "2020-04-17T01:00:20.000-04:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 12 concepts</p><p>All codes from system <code>http://www.nlm.nih.gov/research/umls/rxnorm</code></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-1164627\"> </a>1164627</td><td>Hydroxychloroquine Oral Product</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-1164628\"> </a>1164628</td><td>Hydroxychloroquine Pill</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-1181266\"> </a>1181266</td><td>Plaquenil Oral Product</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-1181267\"> </a>1181267</td><td>Plaquenil Pill</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-153972\"> </a>153972</td><td>Hydroxychloroquine Sulfate</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-202462\"> </a>202462</td><td>Plaquenil</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-370656\"> </a>370656</td><td>Hydroxychloroquine Oral Tablet</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-5521\"> </a>5521</td><td>Hydroxychloroquine</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-979091\"> </a>979091</td><td>Hydroxychloroquine Sulfate 200 MG</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-979092\"> </a>979092</td><td>Hydroxychloroquine Sulfate 200 MG Oral Tablet</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-979093\"> </a>979093</td><td>Hydroxychloroquine Sulfate 200 MG [Plaquenil]</td></tr><tr><td><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-979094\"> </a>979094</td><td>Hydroxychloroquine Sulfate 200 MG Oral Tablet [Plaquenil]</td></tr></table></div>"
+  },
+  "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.127",
+  "version": "20200417",
+  "name": "C19HCC Hydroxychloroquine",
+  "status": "active",
+  "date": "2020-04-17T01:00:20-04:00",
+  "publisher": "MITRE Steward",
+  "expansion": {
+    "identifier": "urn:uuid:1f575ec6-42f4-4500-a4ee-bbe218458f31",
+    "timestamp": "2020-04-19T22:06:05-04:00",
+    "total": 12,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "count",
+        "valueInteger": 1000
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "1164627",
+        "display": "Hydroxychloroquine Oral Product"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "1164628",
+        "display": "Hydroxychloroquine Pill"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "1181266",
+        "display": "Plaquenil Oral Product"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "1181267",
+        "display": "Plaquenil Pill"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "153972",
+        "display": "Hydroxychloroquine Sulfate"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "202462",
+        "display": "Plaquenil"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "370656",
+        "display": "Hydroxychloroquine Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "5521",
+        "display": "Hydroxychloroquine"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "979091",
+        "display": "Hydroxychloroquine Sulfate 200 MG"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "979092",
+        "display": "Hydroxychloroquine Sulfate 200 MG Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "979093",
+        "display": "Hydroxychloroquine Sulfate 200 MG [Plaquenil]"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-03",
+        "code": "979094",
+        "display": "Hydroxychloroquine Sulfate 200 MG Oral Tablet [Plaquenil]"
+      }
+    ]
+  }
+}

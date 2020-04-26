@@ -32,7 +32,6 @@ This guide is organized into four main sections:
    4. [Use Cases](use_cases.html) - Illustrates key use cases
    5. [Actors and Transactions](actors_and_transactions.html) - Provides an overview of technical components
    6. [Measures used for Reporting](measures.html) - Defines measures used by CDC and FEMA as FHIR Measure resources
-   7. [Using Group Resources (deprecated)](using_group_resources.html) - Explains the use of group in this guide
 
 2. Volume II: Transactions
    1. [Query Measure [PULL-TX]](transaction-1.html)
@@ -81,9 +80,9 @@ This guide is organized into four main sections:
 
 
 5. Volume V: Examples
-   1. [Measure: CDC Patient Impact and Hospital Capacity](Measure-CDCPatientImpactandHospitalCapacity.json.html)
+   1. [Measure: CDC Patient Impact and Hospital Capacity](Measure-CDCPatientImpactAndHospitalCapacity.json.html)
    2. [Measure: FEMA Daily Hospital COVID19 Reporting](Measure-FEMADailyHospitalCOVID19Reporting.json.html)
-   3. [Location: New Jersey](Location-states-NH.json.html)
+   3. [Location: New Jersey](Location-states-NJ.json.html)
    4. [Organization: NJ Department of Health](Organization-NJ-DPH.json.html)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
