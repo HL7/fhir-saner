@@ -3,14 +3,14 @@
   "id": "Groups",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Measure Groups</h2><div><p>Measure Groups defined by the SANER Project</p>\n</div><ul><li>Include all codes defined in <a href=\"CodeSystem-GroupSystem.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Measure Groups</h2><div><p>Measure Groups defined by the SANER Project</p>\n</div><ul><li>Include all codes defined in <a href=\"CodeSystem-GroupSystem.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem</code></a></li><li>Include these codes as defined in <a href=\"CodeSystem-PopulationSystem.html\"><code>http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-positiveIncreasePercent\">positiveIncreasePercent</a></td><td>Percent Positive among Newly Resulted Tests</td><td/></tr><tr><td><a href=\"CodeSystem-PopulationSystem.html#PopulationSystem-positivePercent\">positivePercent</a></td><td>Cumulative Percent Positive among Resulted Tests</td><td/></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>"
   },
   "url": "http://hl7.org/fhir/us/saner/ValueSet/Groups",
   "version": "0.1.0",
   "name": "Groups",
   "title": "Measure Groups",
   "status": "active",
-  "date": "2020-04-13T11:49:10-04:00",
+  "date": "2020-04-27T06:17:07-04:00",
   "publisher": "HL7 International",
   "contact": [
     {
@@ -46,6 +46,17 @@
     "include": [
       {
         "system": "http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"
+      },
+      {
+        "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem",
+        "concept": [
+          {
+            "code": "positiveIncreasePercent"
+          },
+          {
+            "code": "positivePercent"
+          }
+        ]
       }
     ]
   }

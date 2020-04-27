@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -182,18 +170,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#systems-having-clinical-data" id="markdown-toc-systems-having-clinical-data">Systems Having Clinical Data</a>    <ul>
       <li><a href="#ehr-systems" id="markdown-toc-ehr-systems">EHR Systems</a></li>
-      <li><a href="#emergency-department-systems" id="markdown-toc-emergency-department-systems">Emergency Department Systems</a></li>
-      <li><a href="#labor-and-delivery-systems" id="markdown-toc-labor-and-delivery-systems">Labor and Delivery Systems</a></li>
-      <li><a href="#icucentral-monitoring-systems" id="markdown-toc-icucentral-monitoring-systems">ICU/Central Monitoring Systems</a></li>
-      <li><a href="#laboratory-information-systems-lis" id="markdown-toc-laboratory-information-systems-lis">Laboratory Information Systems (LIS)</a></li>
+      <li><a href="#departmental-systems" id="markdown-toc-departmental-systems">Departmental Systems</a></li>
+      <li><a href="#command-and-control-systems" id="markdown-toc-command-and-control-systems">Command and Control Systems</a></li>
       <li><a href="#clinical-data-repository-cdr" id="markdown-toc-clinical-data-repository-cdr">Clinical Data Repository (CDR)</a></li>
+      <li><a href="#revenue-cycle-managementbilling-systems" id="markdown-toc-revenue-cycle-managementbilling-systems">Revenue Cycle Management/Billing Systems</a></li>
     </ul>
   </li>
   <li><a href="#systems-not-having-clinical-data" id="markdown-toc-systems-not-having-clinical-data">Systems Not Having Clinical Data</a>    <ul>
+      <li><a href="#security-infrastructure" id="markdown-toc-security-infrastructure">Security Infrastructure</a></li>
+      <li><a href="#master-patient-index" id="markdown-toc-master-patient-index">Master Patient Index</a></li>
       <li><a href="#bed-management-aka-housekeeping-systems" id="markdown-toc-bed-management-aka-housekeeping-systems">Bed Management (a.k.a Housekeeping) systems</a></li>
       <li><a href="#asset-management-systems" id="markdown-toc-asset-management-systems">Asset Management systems</a></li>
       <li><a href="#surgeryoperating-room-scheduling-systems" id="markdown-toc-surgeryoperating-room-scheduling-systems">Surgery/Operating Room Scheduling systems</a></li>
-      <li><a href="#staff-scheduling-systems" id="markdown-toc-staff-scheduling-systems">Staff Scheduling systems</a></li>
+      <li><a href="#workforce-managementstaff-scheduling-systems" id="markdown-toc-workforce-managementstaff-scheduling-systems">Workforce Management/Staff Scheduling systems</a></li>
       <li><a href="#inventory-control-systems" id="markdown-toc-inventory-control-systems">Inventory Control systems</a></li>
     </ul>
   </li>
@@ -207,11 +196,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Systems Having Clinical Data</strong>
     <ul>
       <li>Electronic Health Record (EHR) systems</li>
-      <li>Emergency Department systems</li>
-      <li>Labor and Delivery systems</li>
-      <li>ICU and/or Nursing Central Monitoring systems (or stations)</li>
-      <li>Laboratory Information Systems (LIS)</li>
+      <li>Departmental Systems
+        <ul>
+          <li>Emergency Department (ED) systems</li>
+          <li>ICU and/or Nursing Central Monitoring systems (or stations)</li>
+          <li>Labor and Delivery systems</li>
+          <li>Laboratory Information Systems (LIS)</li>
+          <li>Picture Archival and Communication Systems (PACS)</li>
+          <li>Radiology Information Systems (RIS)</li>
+        </ul>
+      </li>
       <li>Clinical Data Repository (CDR)</li>
+      <li>Care Management Systems</li>
+      <li>Command and Control Systems</li>
+      <li>Master Patient Index</li>
+      <li>Security Infrastructure</li>
+      <li>Revenue Cycle Management/Billing Systems</li>
     </ul>
   </li>
   <li><strong>Systems not having Clinical Data</strong>
@@ -219,20 +219,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Bed Management (a.k.a., Housekeeping) systems</li>
       <li>Asset Management systems</li>
       <li>Surgery/Operating Room Scheduling systems</li>
-      <li>Staff Scheduling systems</li>
+      <li>Workforce Management/Staff Scheduling systems</li>
       <li>Inventory Control systems</li>
     </ul>
+
+    <object type="image/svg+xml" data="technology-environment.svg"></object>
   </li>
 </ul>
 
 <h2 id="systems-having-clinical-data">Systems Having Clinical Data</h2>
-<p>Systems in this category have access to some or all of the health records for a patient,
-and so can often provide information indicating COVID-19 positive or suspected patients, as
-well as associated problems, patient demographics, and patient acuity (severity of
-illness) data.</p>
+<p>Systems in this category have access to some or all of the health records (problems,
+medications, lab results, procedures, etc) for a patient, and so can often provide information
+indicating COVID-19 positive or suspected patients, as well as associated problems, patient
+demographics, and patient acuity (severity of illness) data.</p>
 
 <p>These systems are often used to place or discontinue orders that involve medical
-equipment (ventilators, viral tests), and so may be used to determine in use (in
+equipment or diagnostics (ventilators, viral tests), and so may be used to determine in use (in
 the case of ventilators) or consumed (in the case of test kits) equipment or
 supplies.  Some orders might also indicate use of special equipment (e.g., isolation
 rooms).</p>
@@ -254,13 +256,18 @@ based on the number of orders for ventilation on the patients it knows about, an
 current status of the order.  But it may not ever know if the ventilator actually
 showed up.</p>
 
-<h3 id="emergency-department-systems">Emergency Department Systems</h3>
+<h3 id="departmental-systems">Departmental Systems</h3>
+<p>Departmental systems are specialized “EHR” systems facilitating the operations of a
+departmental setting. Several departmental systems are described in more detail in subsections
+below.</p>
+
+<h4 id="emergency-department-systems">Emergency Department Systems</h4>
 <p>Emergency department systems are simply specialized EHR systems that facilitate patient
 care in an emergency room setting.  They may also support or be integrated with central
 monitoring solutions enabling ED staff to monitor the status of patients on monitoring
 equipment.</p>
 
-<h3 id="labor-and-delivery-systems">Labor and Delivery Systems</h3>
+<h4 id="labor-and-delivery-systems">Labor and Delivery Systems</h4>
 <p>Labor and Delivery systems are another form of specialized EHR system that facilitate
 treatment of mothers about to give birth in the hospital.  They generally support the
 ongoing monitoring of the pregnant mother, and integrate with specialized equipment
@@ -268,15 +275,15 @@ used to support newborn delivery (e.g., fetal heart rate monitors, infusion pump
 for anesthesia, et cetera), as well as routine charting while a mother is still in labor
 but not yet ready to deliver.</p>
 
-<h3 id="icucentral-monitoring-systems">ICU/Central Monitoring Systems</h3>
+<h4 id="icucentral-monitoring-systems">ICU/Central Monitoring Systems</h4>
 <p>These systems bring real-time data from the EHR together with a variety of monitoring
 and treatment equipment, often to provide clinical decision support for patients
 needing intensive ongoing treatment and monitoring.  As a result, these systems have
-awareness of the use of medical equipment, patient acuity, disease progression, as well
-as the in-use status of ICU beds, and perhaps the total bed capacity of an ICU (but
-not necessarily the availability).</p>
+awareness of the use of medical equipment (e.g., ventilators), patient acuity,
+disease progression, as well as the in-use status of ICU beds, and perhaps the total
+bed capacity of an ICU (but not necessarily the availability).</p>
 
-<h3 id="laboratory-information-systems-lis">Laboratory Information Systems (LIS)</h3>
+<h4 id="laboratory-information-systems-lis">Laboratory Information Systems (LIS)</h4>
 <p>These systems are used to track and control incoming laboratory orders, to manage
 laboratory automation equipment, and to manage outgoing reports on orders.  They have
 some access to patient clinical and demographic data, usually enough to facilitate the
@@ -287,7 +294,7 @@ be a better source of this assessment.</p>
 <p>An LIS may also be connected to external public health reporting systems to support
 biosurveillance efforts (tracking of disease in populations).  Just the placement of
 certain kinds of laboratory orders may be used as a trigger to initiate alerting to
-public health (e.g., highly contagious disease such as Ebola or Zika, or a condition
+public health (e.g., highly contagious disease such as COVID-19, Ebola or Zika, or a condition
 which may indicate a high risk situation in the community such as food poisoning).</p>
 
 <p>Past biosurveillance efforts have not generally considered the impact of disease (such
@@ -296,6 +303,41 @@ made this a significant consideration.  Some organizations do use data from inte
 laboratory information systems to track the prevalence, type and locations associated
 healthcare acquired infections (HAI) (e.g., due to antibiotic resistant strains of
 bacteria), in order to provide appropriate treatment and infection mitigation precautions.</p>
+
+<h4 id="picture-archival-and-communication-systems-pacs">Picture Archival and Communication Systems (PACS)</h4>
+<p>Within an imaging center or department, the PACS provides storage for images generated
+from various imaging procedures (CT, MRI, Ultrasound, X-Ray, et cetera) and in some
+solutions, the diagnostic reports (structured or unstructured) that are generated
+based on those images.</p>
+
+<p>These systems will generally be aware of the types of imaging studies performed, the
+patients on whose behalf these studies were performed, the dates and times of the
+procedure, and possibly the results (in structured reports) of the study.</p>
+
+<h4 id="radiology-information-systems-ris">Radiology Information Systems (RIS)</h4>
+<p>These RIS is a departmental systems used in imaging centers or departments to manage
+the imaging workflow in the department.  The RIS provide a means by which imaging procedures
+are scheduled and coordinated across the necessary equipment, personell (e.g., imaging
+technicians, reading radiologists), and patients, and through which orders are received, and
+results transmitted back to ordering providers.</p>
+
+<p>These systems will generally be aware of the procedures being requested, the results
+of those procedures, the dates and times of those procedures, and the number and types
+of procedures performed on behalf of different parties (e.g., ordering physicians
+and organizations).</p>
+<h4 id="care-management-systems">Care Management Systems</h4>
+<p>Care Management Systems support referral and transition between the hospital and follow-up
+care environments (e.g., post-acute care, rehabilitation referrals), or referrals to other types of care
+(tertiary care from ED, referral to behavioral health, etc).  These are often used to
+support discharge/transfer planning, and may also involve coordination with payers to
+ensure treatment will be covered at the referred to facility.</p>
+
+<h3 id="command-and-control-systems">Command and Control Systems</h3>
+<p>Command and Control Systems are used to provide a view throughout a facility of the
+overall operations, including patient flow, transfers, ED, et cetera, allowing a facility
+to understand its current load, forcast capacity demand, and manage logistics.  See
+<a href="https://klasresearch.com/resources/blogs/2019/01/10/operational-command-centers">Operational Command Centers</a>
+for more details.</p>
 
 <h3 id="clinical-data-repository-cdr">Clinical Data Repository (CDR)</h3>
 <p>Hospitals (especially those affiliated with academic medical centers) utilized CDRs
@@ -308,9 +350,31 @@ generally have real-time data that could support utilization reporting.  Some of
 data in a CDR might show impacts of high utilization on hospital operations, which could
 aid in identifying and addressing long term monitoring efforts.</p>
 
+<h3 id="revenue-cycle-managementbilling-systems">Revenue Cycle Management/Billing Systems</h3>
+<p>These systems maintain data used for billing, often gathered after treatment has been
+completed.  This includes diagnoses, procedures, and other aspects of treatment for
+which some form of payment or compensation or reporting is performed.</p>
+
 <h2 id="systems-not-having-clinical-data">Systems Not Having Clinical Data</h2>
-<p>Systems in this category do not generally have access to health records for a patient,
-but may have information about the status of hospital equipment and supplies.</p>
+<p>Systems in this category do not generally have access to detailed health records for a patient,
+but may have information about the status of hospital equipment and supplies, or generalized
+information about a patient or group of patients.</p>
+
+<h3 id="security-infrastructure">Security Infrastructure</h3>
+<p>Security infrastructure systems are relied upon by many software components within a
+hospital, and are potentially able to deliver information about who is actively using
+hospital resources (e.g., logged into the EHR or other information system), or which
+patient records are currently being accessed.</p>
+
+<h3 id="master-patient-index">Master Patient Index</h3>
+<p>The Master Patient Index (MPI) is used by health systems to coordinate patient identities
+across multiple information systems. It generally has information
+Since many systems within a hospital rely on an MPI, it is often the first system to
+become aware of activity for any given patient.</p>
+
+<p>The MPI will generally have information about a patient including demographics, place
+of residence, place of employment, insurers, and potentially other providers and/or
+sources of information available that are associated with a given individual.</p>
 
 <h3 id="bed-management-aka-housekeeping-systems">Bed Management (a.k.a Housekeeping) systems</h3>
 <p>Bed Management systems are designed specifically to keep track of the status of beds
@@ -350,9 +414,9 @@ that want to optimize use of these spaces and equipment will use information sys
 ensure greater utilization of available capacity.  These systems will be aware of the
 availability of operating room schedules and equipment needs.</p>
 
-<h3 id="staff-scheduling-systems">Staff Scheduling systems</h3>
-<p>Staff scheduling in a hospital is an ongoing effort of looking at the current patient
-load, forecast patient load, existing staff schedules and available surge staffing resources.
+<h3 id="workforce-managementstaff-scheduling-systems">Workforce Management/Staff Scheduling systems</h3>
+<p>Workforce Management (a.k.a., Staff scheduling) in a hospital is an ongoing effort of looking at
+current patient load, forecast load, existing staff schedules and available surge staffing resources.
 Again, in smaller facilities, much of the essential management might be done through
 human effort, and on a whiteboard. In larger facilities, software might be used to address
 optimization of schedules, improving staff utilization.</p>
@@ -376,7 +440,7 @@ often needed to track current inventory levels for this kind of equipment.</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -10,7 +10,7 @@
   "name": "SituationalAwarenessforNovelEpidemicResponse",
   "title": "Situational Awareness for Novel Epidemic Response",
   "status": "active",
-  "date": "2020-04-13T11:49:10-04:00",
+  "date": "2020-04-27T06:17:07-04:00",
   "publisher": "HL7 International",
   "contact": [
     {
@@ -46,6 +46,13 @@
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "packageId": "hl7.fhir.us.core",
+      "version": "3.1.0"
+    }
   ],
   "definition": {
     "extension": [
@@ -319,86 +326,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-audit-event-write.html"
+            "valueUri": "StructureDefinition-audit-event-write.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/saner-audit-event-write"
+          "reference": "StructureDefinition/audit-event-write"
         },
         "name": "Audit Event Write Profile",
         "description": "Defines constraints on the AuditEvent Resource to record when a resource has been written.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-bed-group.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/saner-bed-group"
-        },
-        "name": "Bed Group Profile",
-        "description": "Defines constraints on the Group Resource for data communicating about Bed availability.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-bed-location.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/saner-bed-location"
-        },
-        "name": "Bed Location Profile",
-        "description": "Defines constraints on the Location Resource for data communicating about a location for a bed.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-bed-measure-report.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/saner-bed-measure-report"
-        },
-        "name": "Bed MeasureReport Profile",
-        "description": "Defines constraints on the MeasureReport Resource for reporting summary data about Bed availability.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-device-group.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/saner-device-group"
-        },
-        "name": "Device Group Profile",
-        "description": "Defines constraints on the Group Resource for data communicating about device availability.",
         "exampleBoolean": false
       },
       {
@@ -427,14 +362,32 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-MeasureDescription.html"
+            "valueUri": "StructureDefinition-MeasuredItemDescription.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/MeasureDescription"
+          "reference": "StructureDefinition/MeasuredItemDescription"
         },
-        "name": "Saner Measure Description",
-        "description": "A CodeableConcept describing a measure value",
+        "name": "Saner Measured Item Description",
+        "description": "A CodeableConcept describing the item to be counted in terms of the type of FHIR Resource to count, and subtype of item identified by that resource",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:primitive-type"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PreciseDateTime.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PreciseDateTime"
+        },
+        "name": "Precise Date Time",
+        "description": "A dateTime value that contains seconds and a timezone",
         "exampleBoolean": false
       },
       {
@@ -445,32 +398,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-audit-event-read.html"
+            "valueUri": "StructureDefinition-audit-event-read.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/saner-audit-event-read"
+          "reference": "StructureDefinition/audit-event-read"
         },
         "name": "Audit Event Read",
         "description": "Defines constraints on the AuditEvent Resource to record when a record has been accessed.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-saner-device-measure-report.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/saner-device-measure-report"
-        },
-        "name": "Device MeasureReport Profile",
-        "description": "Defines constraints on the MeasureReport Resource for data communicating about device availability.",
         "exampleBoolean": false
       },
       {
@@ -489,6 +424,42 @@
         },
         "name": "Saner Public Health Measure",
         "description": "Profile Saner Public Health Measure\n\nThe Public Health Measure Profile ensures that Measures are very well defined as an aid to automation\nof measures.  These are developed by The Saner Project team to ensure that the measure is well understood\nand computation of it can be automated from systems that have the measure data.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PublicHealthMeasureReport.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PublicHealthMeasureReport"
+        },
+        "name": "Saner Public Health Measure Report",
+        "description": "Profile Saner Public Health Measure Report\n\nThe Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret\na report of a Public Health Measure.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-PublicHealthMeasureStratifier.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/PublicHealthMeasureStratifier"
+        },
+        "name": "Saner Public Health Measure Stratifier",
+        "description": "Profile Saner Public Health Measure Stratifier\n\nA stratifier is effecitively a mixin that can be used with an existing measure\nto add stratification detail to that measure.",
         "exampleBoolean": false
       },
       {
@@ -525,6 +496,24 @@
         },
         "name": "Supporting Device Profile",
         "description": "Defines constraints on the Device Resource for data communicating about supporting devices.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-GeoLocation.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/GeoLocation"
+        },
+        "name": "Extension Attributes to associate with a Location Reference to simplify Geographic search",
+        "description": "This is essentially a database denormalization that facilitates search by Geographics coordinates on a location.\nIt enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.\nThe extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)\nin the hope that it could eventually be absorbed by that extension.",
         "exampleBoolean": false
       },
       {
@@ -643,6 +632,78 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-2.16.840.1.113762.1.4.1032.117.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.117"
+        },
+        "name": "C19HCC Confirmed COVID19 Infection",
+        "description": "**Purpose:**\n\nClinical Focus:\n\nThis value set contains conditions associated with a confirmed diagnosis of COVID-19.\n\nData Element Scope:\n\nUsed to identify patients with a confirmed COVID-19 infection.\n\nInclusion Criteria:\n\nConditions associated with confirmed COVID-19 infection, including laboratory-confirmed COVID (symptomic or asymptomatic).\n\nExclusion Criteria:\n\nSuspected, possible or probable COVID-19, or possible exposure to COVID-19 without a definitive COVID-19 diagnosis.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-2.16.840.1.113762.1.4.1032.127.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.127"
+        },
+        "name": "C19HCC Hydroxychloroquine",
+        "description": "**Purpose:**\n\nClinical Focus:\n\nThis value set contains branded and non-branded hydroxychloroquine medications.\n\nData Element Scope:\n\nUsed to identify patients who had hydroxychloroquine as an active medication on their medication list or who were administered hydroxychloroquine during a hospitalization.\n\nInclusion Criteria:\n\nBranded and non-branded medications with hydroxychloroquine as an ingredient. RxNorm term types: SCD\\/GPCK, SBD\\/BPCK, SCDG, BCDG, SCDC, BCDC, IN, PIN, BN.\n\nExclusion Criteria:\n\nnone",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-2.16.840.1.113762.1.4.1032.120.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.120"
+        },
+        "name": "C19HCC SARSCoV2 Exposure",
+        "description": "**Purpose:**\n\nClinical Focus:\n\nThis value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.\n\nData Element Scope:\n\nTo identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.\n\nInclusion Criteria:\n\nConditions indicative of possible exposure to SARS-CoV-2.\n\nExclusion Criteria:\n\n: Conditions representing suspicion or confirmation of COVID-19.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-2.16.840.1.113762.1.4.1032.116.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.116"
+        },
+        "name": "C19HCC Suspected COVID19 Infection",
+        "description": "**Purpose:**\n\nClinical Focus:\n\nConditions indicative of a possible COVID-19 infection but no definitive COVID-19 diagnosis.\n\nData Element Scope:\n\nUsed to identify patients suspected to have COVID-19.\n\nInclusion Criteria:\n\nIncludes conditions indicative of a possible COVID-19 diagnosis.\n\nExclusion Criteria:\n\nConditions associated with a confirmed COVID-19 infection.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "valueUri": "ValueSet-COVID19DiagnosticTest.html"
           }
         ],
@@ -687,6 +748,24 @@
         },
         "name": "Confirmed COVID-19 Diagnosis Values",
         "description": "Codes for result values confirming COVID-19 Diagnostic Test Result",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-DeviceFields.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/DeviceFields"
+        },
+        "name": "Device Resource Field Names",
+        "description": "Field names in the Device Resource",
         "exampleBoolean": false
       },
       {
@@ -787,6 +866,24 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-LocationFields.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/LocationFields"
+        },
+        "name": "Location Resource Field Names",
+        "description": "Field names in the Location Resource",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "valueUri": "ValueSet-MeasureRateAggregationValues.html"
           }
         ],
@@ -831,24 +928,6 @@
         },
         "name": "Occupied Bed",
         "description": "Codes used Occupied Beds",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ValueSet-OnlyCompleteOrPending.html"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/OnlyCompleteOrPending"
-        },
-        "name": "OnlyCompleteOrPending",
-        "description": "This valueset is used to limit the reported status to complete or pending for a MeasureReport",
         "exampleBoolean": false
       },
       {
@@ -967,11 +1046,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-DeviceFields.html"
+            "valueUri": "CodeSystem-DeviceFieldNames.html"
           }
         ],
         "reference": {
-          "reference": "CodeSystem/DeviceFields"
+          "reference": "CodeSystem/DeviceFieldNames"
         },
         "name": "Device Resource Field Names",
         "description": "This Coding System identifies legal field names in a FHIR R4 Device Resource.",
@@ -1003,11 +1082,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-LocationFields.html"
+            "valueUri": "CodeSystem-LocationFieldNames.html"
           }
         ],
         "reference": {
-          "reference": "CodeSystem/LocationFields"
+          "reference": "CodeSystem/LocationFieldNames"
         },
         "name": "Location Resource Field Names",
         "description": "This Coding System identifies legal field names in a FHIR R4 Location Resource.",
@@ -1071,15 +1150,807 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/04/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/04/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/05/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/05/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/06/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/06/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/07/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/07/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/08/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/08/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/09/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/09/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/10/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/10/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/11/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/11/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/12/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/12/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/13/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/13/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/14/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/14/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/15/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/15/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/16/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/16/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/17/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/17/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/18/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/18/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/19/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/19/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/20/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/20/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/21/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/21/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/22/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/22/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/23/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/23/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/24/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/24/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity",
+        "description": "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/25/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MeasureReport"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.html"
+          }
+        ],
+        "reference": {
+          "reference": "MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting"
+        },
+        "name": "ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting",
+        "description": "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/25/2020",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Measure"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "Measure-FEMAReporting.html"
+            "valueUri": "Measure-FEMADailyHospitalCOVID19Reporting.html"
           }
         ],
         "reference": {
-          "reference": "Measure/FEMAReporting"
+          "reference": "Measure/FEMADailyHospitalCOVID19Reporting"
         },
         "name": "FEMA Laboratory Orders and Results Daily Increase Reporting",
         "description": "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts.",
@@ -1107,70 +1978,36 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
+            "valueString": "Organization"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "Measure-sanerCDC.html"
+            "valueUri": "Organization-NJ-DPH.html"
           }
         ],
         "reference": {
-          "reference": "Measure/sanerCDC"
+          "reference": "Organization/NJ-DPH"
         },
-        "name": "sanerCDC",
-        "description": "CDC Measurement Group",
+        "name": "NJ-DPH",
+        "description": "Example Organization for the New Jersey Department of Public Health",
         "exampleBoolean": true
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Measure"
+            "valueString": "Location"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "Measure-sanerFEMA.html"
+            "valueUri": "Location-states-NJ.html"
           }
         ],
         "reference": {
-          "reference": "Measure/sanerFEMA"
+          "reference": "Location/states-NJ"
         },
-        "name": "sanerFEMA",
-        "description": "FEMA Measurement Group",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "MeasureReport"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "MeasureReport-FHIR-461.html"
-          }
-        ],
-        "reference": {
-          "reference": "MeasureReport/FHIR-461"
-        },
-        "name": "FHIR-461",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "MeasureReport"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "MeasureReport-FHIR-463.html"
-          }
-        ],
-        "reference": {
-          "reference": "MeasureReport/FHIR-463"
-        },
-        "name": "FHIR-463",
+        "name": "states-NJ",
+        "description": "Example Location for the State of New Jersey",
         "exampleBoolean": true
       }
     ],
@@ -1225,8 +2062,8 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "using_group_resources.html",
-          "title": "Using Group Resources",
+          "nameUrl": "vocabulary.html",
+          "title": "Vocabulary",
           "generation": "markdown"
         },
         {
@@ -1282,6 +2119,10 @@
       {
         "code": "path-resource",
         "value": "input/maps"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/testing"
       },
       {
         "code": "path-pages",

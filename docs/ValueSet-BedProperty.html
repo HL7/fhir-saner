@@ -41,8 +41,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"14.17"}
-    h3,h4,h5,h6{--heading-prefix:"14.17"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.16"}
+    h3,h4,h5,h6{--heading-prefix:"14.16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         
@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -189,12 +177,15 @@
     <b>References</b>
   </p>
   
-<ul>
- <li><a href="StructureDefinition-saner-bed-group.html">Bed Group Profile</a></li>
-</ul>
+<p>This value set is not used</p>
 
 
   
+  
+  <div style="display:inline-block">
+  <!-- ValueSet-BedProperty-intro.md  -->
+
+  </div>
   
 
   <a name="definition"> </a>
@@ -207,7 +198,7 @@
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 3 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px"/>Expansion based on http://hl7.org/fhir/us/saner/CodeSystem/BedType version 0.1.0<p>All codes from system <a href="CodeSystem-BedType.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-BedType-NEGISO"> </a><a href="CodeSystem-BedType.html#BedType-NEGISO">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-BedType-OTHISO"> </a><a href="CodeSystem-BedType.html#BedType-OTHISO">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-BedType-NONISO"> </a><a href="CodeSystem-BedType.html#BedType-NONISO">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 3 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-BedType.html">Saner Bed Type Coding System v0.1.0 (CodeSystem)</a></p><p>All codes from system <a href="CodeSystem-BedType.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/BedType</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-BedType-NEGISO"> </a><a href="CodeSystem-BedType.html#BedType-NEGISO">NEGISO</a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-BedType-OTHISO"> </a><a href="CodeSystem-BedType.html#BedType-OTHISO">OTHISO</a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-BedType-NONISO"> </a><a href="CodeSystem-BedType.html#BedType-NONISO">NONISO</a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr></table></div>
 
   <hr/>
   <p>
@@ -243,6 +234,11 @@
 
   
   
+  <div style="display:inline-block">
+  <!-- ValueSet-BedProperty-notes.md  -->
+
+  </div>
+  
 </div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
@@ -254,7 +250,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

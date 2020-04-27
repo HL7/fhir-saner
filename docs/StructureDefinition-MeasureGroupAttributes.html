@@ -41,8 +41,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"14.13"}
-    h3,h4,h5,h6{--heading-prefix:"14.13"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.12"}
+    h3,h4,h5,h6{--heading-prefix:"14.12"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         
@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -278,7 +266,7 @@ Summary
 <p>Mandatory: 2 elements<br/> Fixed Value: 8 elements<br/> Prohibited: 8 elements</p><p><b>Structures</b></p>
 <p>This structure refers to these other structures:</p>
 <ul>
-<li><a href="StructureDefinition-MeasureDescription.html">http://hl7.org/fhir/us/saner/StructureDefinition/MeasureDescription</a></li>
+<li><a href="StructureDefinition-MeasuredItemDescription.html">http://hl7.org/fhir/us/saner/StructureDefinition/MeasuredItemDescription</a></li>
 
 </ul>
 
@@ -438,7 +426,7 @@ Summary
       },
       { // <span style="color: navy; opacity: 0.8"> <span style="color: brown" title=""><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: brown" title="This element is an array in the base standard, but the profile only allows on element"><b>Only One!</b></span> Like Measure.subject, but applies to group</span>
         "url": "null",
-        "<a href="StructureDefinition-MeasureGroupAttributes.html#Extension.extension.valueCodeableConcept" title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text" class="dict"><span style="text-decoration: underline">valueCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-MeasureDescription.html#CodeableConcept">MeasureDescription</a></span>)} <span style="color: Gray">//</span> <span style="color: brown" title=""><b>C?</b></span> <span style="color: navy; opacity: 0.8">Concept - reference to a terminology or just  text</span>
+        "<a href="StructureDefinition-MeasureGroupAttributes.html#Extension.extension.valueCodeableConcept" title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text" class="dict"><span style="text-decoration: underline">valueCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-MeasuredItemDescription.html#CodeableConcept">MeasuredItemDescription</a></span>)} <span style="color: Gray">//</span> <span style="color: brown" title=""><b>C?</b></span> <span style="color: navy; opacity: 0.8">Concept - reference to a terminology or just  text</span>
       }
     ],
     "<a href="StructureDefinition-MeasureGroupAttributes.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
@@ -472,7 +460,7 @@ Summary
 <p>Mandatory: 2 elements<br/> Fixed Value: 8 elements<br/> Prohibited: 8 elements</p><p><b>Structures</b></p>
 <p>This structure refers to these other structures:</p>
 <ul>
-<li><a href="StructureDefinition-MeasureDescription.html">http://hl7.org/fhir/us/saner/StructureDefinition/MeasureDescription</a></li>
+<li><a href="StructureDefinition-MeasuredItemDescription.html">http://hl7.org/fhir/us/saner/StructureDefinition/MeasuredItemDescription</a></li>
 
 </ul>
 
@@ -632,7 +620,7 @@ Summary
       },
       { // <span style="color: navy; opacity: 0.8"> <span style="color: brown" title=""><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: brown" title="This element is an array in the base standard, but the profile only allows on element"><b>Only One!</b></span> Like Measure.subject, but applies to group</span>
         "url": "null",
-        "<a href="StructureDefinition-MeasureGroupAttributes.html#Extension.extension.valueCodeableConcept" title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text" class="dict"><span style="text-decoration: underline">valueCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-MeasureDescription.html#CodeableConcept">MeasureDescription</a></span>)} <span style="color: Gray">//</span> <span style="color: brown" title=""><b>C?</b></span> <span style="color: navy; opacity: 0.8">Concept - reference to a terminology or just  text</span>
+        "<a href="StructureDefinition-MeasureGroupAttributes.html#Extension.extension.valueCodeableConcept" title="A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text" class="dict"><span style="text-decoration: underline">valueCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-MeasuredItemDescription.html#CodeableConcept">MeasuredItemDescription</a></span>)} <span style="color: Gray">//</span> <span style="color: brown" title=""><b>C?</b></span> <span style="color: navy; opacity: 0.8">Concept - reference to a terminology or just  text</span>
       }
     ],
     "<a href="StructureDefinition-MeasureGroupAttributes.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
@@ -717,7 +705,7 @@ Summary
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

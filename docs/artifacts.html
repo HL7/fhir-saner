@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -215,52 +203,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-audit-event-write.html"
-                     title="StructureDefinition/saner-audit-event-write">Audit Event Write Profile</a>
+                  <a href="StructureDefinition-audit-event-write.html"
+                     title="StructureDefinition/audit-event-write">Audit Event Write Profile</a>
                </td>
                <td>Defines constraints on the AuditEvent Resource to record when a resource has been written.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-bed-group.html"
-                     title="StructureDefinition/saner-bed-group">Bed Group Profile</a>
-               </td>
-               <td>Defines constraints on the Group Resource for data communicating about Bed availability.</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-bed-location.html"
-                     title="StructureDefinition/saner-bed-location">Bed Location Profile</a>
-               </td>
-               <td>Defines constraints on the Location Resource for data communicating about a location for a bed.</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-bed-measure-report.html"
-                     title="StructureDefinition/saner-bed-measure-report">Bed MeasureReport Profile</a>
-               </td>
-               <td>Defines constraints on the MeasureReport Resource for reporting summary data about Bed availability.</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-device-group.html"
-                     title="StructureDefinition/saner-device-group">Device Group Profile</a>
-               </td>
-               <td>Defines constraints on the Group Resource for data communicating about device availability.</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-audit-event-read.html"
-                     title="StructureDefinition/saner-audit-event-read">Audit Event Read</a>
+                  <a href="StructureDefinition-audit-event-read.html"
+                     title="StructureDefinition/audit-event-read">Audit Event Read</a>
                </td>
                <td>Defines constraints on the AuditEvent Resource to record when a record has been accessed.</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-saner-device-measure-report.html"
-                     title="StructureDefinition/saner-device-measure-report">Device MeasureReport Profile</a>
-               </td>
-               <td>Defines constraints on the MeasureReport Resource for data communicating about device availability.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -272,6 +225,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
 of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
 and computation of it can be automated from systems that have the measure data.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PublicHealthMeasureReport.html"
+                     title="StructureDefinition/PublicHealthMeasureReport">Saner Public Health Measure Report</a>
+               </td>
+               <td>Profile Saner Public Health Measure Report
+
+The Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret
+a report of a Public Health Measure.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PublicHealthMeasureStratifier.html"
+                     title="StructureDefinition/PublicHealthMeasureStratifier">Saner Public Health Measure Stratifier</a>
+               </td>
+               <td>Profile Saner Public Health Measure Stratifier
+
+A stratifier is effecitively a mixin that can be used with an existing measure
+to add stratification detail to that measure.</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -306,10 +279,17 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-MeasureDescription.html"
-                     title="StructureDefinition/MeasureDescription">Saner Measure Description</a>
+                  <a href="StructureDefinition-MeasuredItemDescription.html"
+                     title="StructureDefinition/MeasuredItemDescription">Saner Measured Item Description</a>
                </td>
-               <td>A CodeableConcept describing a measure value</td>
+               <td>A CodeableConcept describing the item to be counted in terms of the type of FHIR Resource to count, and subtype of item identified by that resource</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-PreciseDateTime.html"
+                     title="StructureDefinition/PreciseDateTime">Precise Date Time</a>
+               </td>
+               <td>A dateTime value that contains seconds and a timezone</td>
             </tr>
          </tbody>
       </table>
@@ -321,6 +301,16 @@ and computation of it can be automated from systems that have the measure data.<
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-GeoLocation.html"
+                     title="StructureDefinition/GeoLocation">Extension Attributes to associate with a Location Reference to simplify Geographic search</a>
+               </td>
+               <td>This is essentially a database denormalization that facilitates search by Geographics coordinates on a location.
+It enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.
+The extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)
+in the hope that it could eventually be absorbed by that extension.</td>
+            </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-MeasureGroupAttributes.html"
@@ -372,6 +362,98 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="ValueSet-2.16.840.1.113762.1.4.1032.117.html"
+                     title="ValueSet/2.16.840.1.113762.1.4.1032.117">C19HCC Confirmed COVID19 Infection</a>
+               </td>
+               <td>**Purpose:**
+
+Clinical Focus:
+
+This value set contains conditions associated with a confirmed diagnosis of COVID-19.
+
+Data Element Scope:
+
+Used to identify patients with a confirmed COVID-19 infection.
+
+Inclusion Criteria:
+
+Conditions associated with confirmed COVID-19 infection, including laboratory-confirmed COVID (symptomic or asymptomatic).
+
+Exclusion Criteria:
+
+Suspected, possible or probable COVID-19, or possible exposure to COVID-19 without a definitive COVID-19 diagnosis.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-2.16.840.1.113762.1.4.1032.127.html"
+                     title="ValueSet/2.16.840.1.113762.1.4.1032.127">C19HCC Hydroxychloroquine</a>
+               </td>
+               <td>**Purpose:**
+
+Clinical Focus:
+
+This value set contains branded and non-branded hydroxychloroquine medications.
+
+Data Element Scope:
+
+Used to identify patients who had hydroxychloroquine as an active medication on their medication list or who were administered hydroxychloroquine during a hospitalization.
+
+Inclusion Criteria:
+
+Branded and non-branded medications with hydroxychloroquine as an ingredient. RxNorm term types: SCD\/GPCK, SBD\/BPCK, SCDG, BCDG, SCDC, BCDC, IN, PIN, BN.
+
+Exclusion Criteria:
+
+none</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-2.16.840.1.113762.1.4.1032.120.html"
+                     title="ValueSet/2.16.840.1.113762.1.4.1032.120">C19HCC SARSCoV2 Exposure</a>
+               </td>
+               <td>**Purpose:**
+
+Clinical Focus:
+
+This value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.
+
+Data Element Scope:
+
+To identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.
+
+Inclusion Criteria:
+
+Conditions indicative of possible exposure to SARS-CoV-2.
+
+Exclusion Criteria:
+
+: Conditions representing suspicion or confirmation of COVID-19.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-2.16.840.1.113762.1.4.1032.116.html"
+                     title="ValueSet/2.16.840.1.113762.1.4.1032.116">C19HCC Suspected COVID19 Infection</a>
+               </td>
+               <td>**Purpose:**
+
+Clinical Focus:
+
+Conditions indicative of a possible COVID-19 infection but no definitive COVID-19 diagnosis.
+
+Data Element Scope:
+
+Used to identify patients suspected to have COVID-19.
+
+Inclusion Criteria:
+
+Includes conditions indicative of a possible COVID-19 diagnosis.
+
+Exclusion Criteria:
+
+Conditions associated with a confirmed COVID-19 infection.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="ValueSet-COVID19DiagnosticTest.html"
                      title="ValueSet/COVID19DiagnosticTest">COVID-19 Diagnostic Test</a>
                </td>
@@ -390,6 +472,12 @@ and computation of it can be automated from systems that have the measure data.<
                      title="ValueSet/ConfirmedCOVID19DiagnosisValues">Confirmed COVID-19 Diagnosis Values</a>
                </td>
                <td>Codes for result values confirming COVID-19 Diagnostic Test Result</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-DeviceFields.html" title="ValueSet/DeviceFields">Device Resource Field Names</a>
+               </td>
+               <td>Field names in the Device Resource</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -425,6 +513,12 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="ValueSet-LocationFields.html" title="ValueSet/LocationFields">Location Resource Field Names</a>
+               </td>
+               <td>Field names in the Location Resource</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="ValueSet-MeasureRateAggregationValues.html"
                      title="ValueSet/MeasureRateAggregationValues">Rate Aggregation Value Set</a>
                </td>
@@ -441,13 +535,6 @@ and computation of it can be automated from systems that have the measure data.<
                   <a href="ValueSet-OccupiedBed.html" title="ValueSet/OccupiedBed">Occupied Bed</a>
                </td>
                <td>Codes used Occupied Beds</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-OnlyCompleteOrPending.html"
-                     title="ValueSet/OnlyCompleteOrPending">OnlyCompleteOrPending</a>
-               </td>
-               <td>This valueset is used to limit the reported status to complete or pending for a MeasureReport</td>
             </tr>
             <tr>
                <td style="column-width:30%">
@@ -500,7 +587,8 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="CodeSystem-DeviceFields.html" title="CodeSystem/DeviceFields">Device Resource Field Names</a>
+                  <a href="CodeSystem-DeviceFieldNames.html"
+                     title="CodeSystem/DeviceFieldNames">Device Resource Field Names</a>
                </td>
                <td>This Coding System identifies legal field names in a FHIR R4 Device Resource.</td>
             </tr>
@@ -512,7 +600,8 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="CodeSystem-LocationFields.html" title="CodeSystem/LocationFields">Location Resource Field Names</a>
+                  <a href="CodeSystem-LocationFieldNames.html"
+                     title="CodeSystem/LocationFieldNames">Location Resource Field Names</a>
                </td>
                <td>This Coding System identifies legal field names in a FHIR R4 Location Resource.</td>
             </tr>
@@ -549,7 +638,316 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Measure-FEMAReporting.html" title="Measure/FEMAReporting">FEMA Laboratory Orders and Results Daily Increase Reporting</a>
+                  <a href="MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/04/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/04/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/05/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/05/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/06/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/06/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/07/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/07/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/08/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/08/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/09/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/09/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/10/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/10/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/11/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/11/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/12/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/12/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/13/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/13/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/14/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/14/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/15/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/15/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/16/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/16/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/17/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/17/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/18/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/18/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/19/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/19/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/20/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/20/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/21/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/21/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/22/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/22/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/23/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/23/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/24/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/24/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.html"
+                     title="MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity">ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity</a>
+               </td>
+               <td>Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/25/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.html"
+                     title="MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting">ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting</a>
+               </td>
+               <td>Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/25/2020</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Measure-FEMADailyHospitalCOVID19Reporting.html"
+                     title="Measure/FEMADailyHospitalCOVID19Reporting">FEMA Laboratory Orders and Results Daily Increase Reporting</a>
                </td>
                <td>This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts.</td>
             </tr>
@@ -561,27 +959,15 @@ and computation of it can be automated from systems that have the measure data.<
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Measure-sanerCDC.html" title="Measure/sanerCDC">sanerCDC</a>
+                  <a href="Organization-NJ-DPH.html" title="Organization/NJ-DPH">NJ-DPH</a>
                </td>
-               <td>CDC Measurement Group</td>
+               <td>Example Organization for the New Jersey Department of Public Health</td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Measure-sanerFEMA.html" title="Measure/sanerFEMA">sanerFEMA</a>
+                  <a href="Location-states-NJ.html" title="Location/states-NJ">states-NJ</a>
                </td>
-               <td>FEMA Measurement Group</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="MeasureReport-FHIR-461.html" title="MeasureReport/FHIR-461">FHIR-461</a>
-               </td>
-               <td/>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="MeasureReport-FHIR-463.html" title="MeasureReport/FHIR-463">FHIR-463</a>
-               </td>
-               <td/>
+               <td>Example Location for the State of New Jersey</td>
             </tr>
          </tbody>
       </table>
@@ -599,7 +985,7 @@ and computation of it can be automated from systems that have the measure data.<
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

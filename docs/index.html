@@ -1,41 +1,41 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
     <title>HL7.FHIR.US.SANER\Home - FHIR v4.0.1</title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link rel="stylesheet" href="fhir.css"/>
+    <link href="fhir.css" rel="stylesheet"/>
      
-      <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
   
-      <!-- Project extras -->
-    <link rel="stylesheet" href="assets/css/project.css"/>
-    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
-    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
-      <!-- Placeholder for child template CSS declarations -->
-    <link rel="stylesheet" href="assets/css/hl7.css"/>
-    <link rel="stylesheet" href="assets/css/fhir.css"/>
-<link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css"/>
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
 
 
-    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- [if lt IE 9]>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif] -->
+    <![endif]-->
   
-      <!-- Favicons -->
-    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
@@ -43,45 +43,45 @@
 
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
-    <div id="segment-header" class="segment">    <!-- segment-header -->
-      <div class="container">    <!-- container -->
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
         
         <div id="hl7-nav">
-          <a no-external="true" id="hl7-logo" href="http://hl7.org">
-            <img src="assets/images/hl7-logo-header.png" alt="Visit the HL7 website" height="50"/>
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
           </a>
         </div>
         <div id="family-nav">
-          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
         </div>
         <div id="hl7-search">
-          <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir/search.cfm"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
         </div>
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
         </div>
-      </div>   <!-- /container -->
-    </div>    <!-- /segment-header -->
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
     
-    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">    <!-- container -->
-          <!-- HEADER CONTENT -->
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
     
         <nav class="navbar navbar-inverse">
-            <!-- status-bar -->
+          <!--status-bar-->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-                <!-- menu.xml -->
-<ul class="nav navbar-nav">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
     <li class="dropdown">
@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -146,23 +134,23 @@
   <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>
 
-            </div>    <!-- /.nav-collapse -->
-          </div>    <!-- /.container -->
-        </nav>    <!-- /.navbar -->
-        <!-- /HEADER CONTENT -->
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-navbar -->
-      <!-- status-bar -->
-    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
-      <div class="container">    <!-- container -->  
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Home</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
         </ul>  
-      </div>    <!-- /container -->
-    </div>    <!-- /segment-breadcrumb -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
     
-    <div id="segment-content" class="segment">    <!-- segment-content -->
-      <div class="container">    <!-- container -->
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 <style type="text/css">
@@ -173,7 +161,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
   
@@ -186,15 +174,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-  <!-- index.md -->
+<!-- index.md  -->
 
 <p>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.</p>
 
-<p><img src="SANERLogo.png" alt="The SANER Project Logo"/></p>
+<p><img src="SANERLogo.png" alt="The SANER Project Logo" /></p>
 <div style="float: clear"></div>
-<p><strong>Fighting COVID-19 with FHIR&reg;</strong></p>
+<p><strong>Fighting COVID-19 with FHIR®</strong></p>
 
 <h3 id="about-this-guide">About This Guide</h3>
 <p>This is a draft implementation guide to promote discussion with leaders in the Health
@@ -220,7 +208,6 @@ the SANER project.</p>
       <li><a href="use_cases.html">Use Cases</a> - Illustrates key use cases</li>
       <li><a href="actors_and_transactions.html">Actors and Transactions</a> - Provides an overview of technical components</li>
       <li><a href="measures.html">Measures used for Reporting</a> - Defines measures used by CDC and FEMA as FHIR Measure resources</li>
-      <li><a href="using_group_resources.html">Using Group Resources (deprecated)</a> - Explains the use of group in this guide</li>
     </ol>
   </li>
   <li>Volume II: Transactions
@@ -232,23 +219,60 @@ the SANER project.</p>
   </li>
   <li>Volume III: Content Profiles
     <ol>
-      <li><a href="StructureDefinition-saner-bed-measure-report.html">Bed Measure Report</a></li>
-      <li><a href="StructureDefinition-saner-device-measure-report.html">Device Measure Report</a></li>
-      <li><a href="StructureDefinition-saner-bed-group.html">Bed Group</a></li>
-      <li><a href="StructureDefinition-saner-device-group.html">Device Group</a></li>
-      <li><a href="StructureDefinition-saner-bed-location.html">bed-location</a></li>
-      <li><a href="StructureDefinition-saner-supporting-device.html">Supporting Device</a></li>
-      <li><a href="StructureDefinition-saner-resource-location.html">Resource Location</a></li>
-      <li><a href="StructureDefinition-saner-audit-event-write.html">Audit Event Write</a></li>
-      <li><a href="StructureDefinition-saner-audit-event-read.html">Audit Event Read</a></li>
+      <li><a href="StructureDefinition-PublicHealthMeasure.html">Public Health Measure</a></li>
+      <li><a href="StructureDefinition-MeasureGroupAttributes.html">Measure Group Attributes</a></li>
+      <li><a href="StructureDefinition-MeasureCriteria.html">Measure Criteria</a></li>
+      <li>[Measure Population Alternate Criteria(StructureDefinition-MeasurePopulationAlternateCriteria.html)</li>
+      <li><a href="StructureDefinition-MeasuredItemDescription.html">Measured Item Description</a></li>
+      <li><a href="StructureDefinition-audit-event-write.html">Audit Event Write</a></li>
+      <li><a href="StructureDefinition-audit-event-read.html">Audit Event Read</a></li>
     </ol>
   </li>
   <li>Volume IV: Terminology
     <ol>
-      <li><a name="54457ea3-45e9-4e66-b5a1-dd1a30dd1794">​</a><a href="CodeSystem-SanerBedType.html">SanerBedType Coding System</a></li>
-      <li><a href="ValueSet-BedLocationOperationalStatus.html">BedLocationOperationalStatus Value Set</a></li>
-      <li><a href="ValueSet-BedProperty.html">BedProperty Value Set</a></li>
-      <li><a href="ValueSet-BedType.html">BedType Value Set</a></li>
+      <li>Code Systems
+        <ol>
+          <li><a href="CodeSystem-BedType.json">Bed Type</a></li>
+          <li><a href="CodeSystem-DeviceFieldNames.json">Device Field Names</a></li>
+          <li><a href="CodeSystem-GroupSystem.json">Group System</a></li>
+          <li><a href="CodeSystem-LocationFieldNames.json">Location Field Names</a></li>
+          <li><a href="CodeSystem-MeasureRateAggregation.json">Measure Rate Aggregation</a></li>
+          <li><a href="CodeSystem-PopulationSystem.json">Population System</a></li>
+        </ol>
+      </li>
+      <li>Value Sets
+        <ol>
+          <li><a href="ValueSet-BedLocationOperationalStatus.json">Bed Location Operational Status</a></li>
+          <li><a href="ValueSet-BedLocationTypes.json">Bed Location Types</a></li>
+          <li><a href="ValueSet-BedProperty.json">Bed Property</a></li>
+          <li><a href="ValueSet-BedType.json">Bed Type</a></li>
+          <li><a href="ValueSet-ConfirmedCOVID19Diagnosis.json">Confirmed COVID19 Diagnosis</a></li>
+          <li><a href="ValueSet-ConfirmedCOVID19DiagnosisValues.json">Confirmed COVID19 Diagnosis Values</a></li>
+          <li><a href="ValueSet-COVID19DiagnosticTest.json">COVID19 Diagnostic Test</a></li>
+          <li><a href="ValueSet-EDorOverflowLocations.json">ED or Overflow Locations</a></li>
+          <li><a href="ValueSet-Fields.json">Fields</a></li>
+          <li><a href="ValueSet-Groups.json">Groups</a></li>
+          <li><a href="ValueSet-ICULocations.json">ICU Locations</a></li>
+          <li><a href="ValueSet-InpatientLocations.json">Inpatient Locations</a></li>
+          <li><a href="ValueSet-LocationFields.json">Location Fields</a></li>
+          <li><a href="ValueSet-MeasureRateAggregationValues.json">Measure Rate Aggregation Values</a></li>
+          <li><a href="ValueSet-MeasureStatus.json">Measure Status</a></li>
+          <li><a href="ValueSet-OccupiedBed.json">Occupied Bed</a></li>
+          <li><a href="ValueSet-PatientDied.json">Patient Died</a></li>
+          <li><a href="ValueSet-Populations.json">Populations</a></li>
+          <li><a href="ValueSet-SuspectedOrDiagnosedCOVID19.json">Suspected Or Diagnosed COVID19</a></li>
+          <li><a href="ValueSet-VentilatorDevices.json">Ventilator Devices</a></li>
+          <li><a href="ValueSet-VentilatorDevicesWithTracheostomy.json">Ventilator Devices With Tracheostomy</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Volume V: Examples
+    <ol>
+      <li><a href="Measure-CDCPatientImpactAndHospitalCapacity.json.html">Measure: CDC Patient Impact and Hospital Capacity</a></li>
+      <li><a href="Measure-FEMADailyHospitalCOVID19Reporting.json.html">Measure: FEMA Daily Hospital COVID19 Reporting</a></li>
+      <li><a href="Location-states-NJ.json.html">Location: New Jersey</a></li>
+      <li><a href="Organization-NJ-DPH.json.html">Organization: NJ Department of Health</a></li>
     </ol>
   </li>
 </ol>
@@ -278,49 +302,49 @@ Ai is raising the bar for how health data is shared, managed, and protected.</p>
 
 
 </div>
-        </div>    <!-- /inner-wrapper -->
-      </div>    <!-- /row -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-content -->
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
 
-  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
-    <div class="container">    <!-- container -->
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
                  <a style="color: #81BEF7" href="qa.html">QA Report</a>
-                 | <a style="color: #81BEF7" href="http://hl7.org/fhir/us/saner/history.html" target="_blank">Version History <img src="external.png" alt="external" style="vertical-align: baseline"/></a> |
-                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> |
-                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
-                 <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change <img src="external.png" alt="external" style="vertical-align: baseline"/></a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
 
           </span>
         </p>
-      </div>    <!-- /inner-wrapper -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-footer -->
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
-    <div class="container">    <!-- container -->
-    </div>    <!-- /container -->
-  </div>    <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
   
-    <!-- JS and analytics only. -->
-    <!-- Bootstrap core JavaScript
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
   ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
-  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
-  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script>anchors.options.visible = 'hover'
 anchors.add()</script>
   
-    <!-- Analytics Below
+  <!-- Analytics Below
   ================================================== -->
   </body>
 </html>

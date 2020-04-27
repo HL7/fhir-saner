@@ -41,8 +41,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"14.18"}
-    h3,h4,h5,h6{--heading-prefix:"14.18"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.17"}
+    h3,h4,h5,h6{--heading-prefix:"14.17"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         
@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -188,14 +176,14 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "BedType",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Bed Type&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Value Set describes the types of care services that a bed can support.&lt;/p&gt;\n&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v3-RoleCode&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP\&quot;&gt;HOSP&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital&lt;/td&gt;&lt;td&gt;An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\&quot;&gt;ICU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\&quot;&gt;ER&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room&lt;/td&gt;&lt;td&gt;The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-BedType.html\&quot;&gt;&lt;code&gt;http://hl7.org/fhir/us/saner/CodeSystem/BedType&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-BedType.html#BedType-OR\&quot;&gt;OR&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Operating Room&lt;/td&gt;&lt;td&gt;Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-BedType.html#BedType-NURSERY\&quot;&gt;NURSERY&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-BedType.html#BedType-BURNU\&quot;&gt;BURNU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burn Unit&lt;/td&gt;&lt;td&gt;Beds in a Burn Unit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Bed Type&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Value Set describes the types of care services that a bed can support.&lt;/p&gt;\n&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v3-RoleCode&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-HOSP\&quot;&gt;HOSP&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital&lt;/td&gt;&lt;td&gt;An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ICU\&quot;&gt;ICU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;td&gt;Intensive care unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-ER\&quot;&gt;ER&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room&lt;/td&gt;&lt;td&gt;The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-BedType.html\&quot;&gt;&lt;code&gt;http://hl7.org/fhir/us/saner/CodeSystem/BedType&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-BedType.html#BedType-OR\&quot;&gt;OR&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Operating Room&lt;/td&gt;&lt;td&gt;Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-BedType.html#BedType-NURSERY\&quot;&gt;NURSERY&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursery&lt;/td&gt;&lt;td&gt;Room used for Nursery&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-BedType.html#BedType-BURNU\&quot;&gt;BURNU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burn Unit&lt;/td&gt;&lt;td&gt;Beds in a Burn Unit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/us/saner/ValueSet/BedType",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "BedType",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "Bed Type",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2020-04-13T11:49:10-04:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2020-04-27T06:17:07-04:00",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "HL7 International",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
     {
@@ -275,7 +263,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -1,288 +1,305 @@
 ﻿SituationalAwarenessforNovelEpidemicResponse : Validation Results
 =========================================
 
-err = 100, warn = 92, info = 96
-IG Publisher Version: v1.0.78-SNAPSHOT Out of date - current version is v1.0.80-SNAPSHOT
-Generated Mon Apr 13 11:50:34 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
+err = 13, warn = 47, info = 44
+IG Publisher Version: v1.0.82-SNAPSHOT
+Generated Mon Apr 27 06:18:34 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
 
- Build Errors : 33 / 3
- C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\examples\conceptmap-HAvBED2toFHIR : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\examples\measure-CDCPatientImpactAndHospitalCapacity : 0 / 4
- C:\Users\kboone\git\fhir-saner\input\examples\measure-FEMAReporting : 0 / 3
- C:\Users\kboone\git\fhir-saner\input\examples\measure-sanerCDC : 1 / 28
- C:\Users\kboone\git\fhir-saner\input\examples\measure-sanerFEMA : 1 / 22
- C:\Users\kboone\git\fhir-saner\input\examples\measurereport-FHIR-461 : 2 / 14
- C:\Users\kboone\git\fhir-saner\input\examples\measurereport-FHIR-463 : 2 / 10
- C:\Users\kboone\git\fhir-saner\input\extensions\structuredefinition-MeasureGroupAttributes : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\extensions\structuredefinition-MeasurePopulationAlternateCriteria : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-MeasureCriteria : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-MeasureDescription : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-PublicHealthMeasure : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-read : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-audit-event-write : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-group : 20 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-location : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-bed-measure-report : 12 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-group : 10 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-device-measure-report : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-resource-location : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-supporting-device : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-BedType : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-DeviceFields : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-GroupSystem : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-LocationFields : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-MeasureRateAggregation : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-PopulationSystem : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedLocationOperationalStatus : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedLocationTypes : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedProperty : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedType : 0 / 1
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-COVID19DiagnosticTest : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ConfirmedCOVID19Diagnosis : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ConfirmedCOVID19DiagnosisValues : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-EDorOverflowLocations : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Fields : 2 / 1
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Groups : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ICULocations : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-InpatientLocations : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-MeasureRateAggregationValues : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-MeasureStatus : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-OccupiedBed : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-OnlyCompleteOrPending : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-PatientDied : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Populations : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-SuspectedOrDiagnosedCOVID19 : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevices : 0 / 0
- C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevicesWithTracheostomy : 0 / 0
+ Build Errors : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\conceptmap-HAvBED2toFHIR : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\location-states-NJ : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\examples\measure-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measure-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\measurereport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\examples\organization-NJ-DPH : 0 / 0
+ C:\Users\kboone\git\fhir-saner\input\extensions\structuredefinition-GeoLocation : 1 / 0
+ C:\Users\kboone\git\fhir-saner\input\extensions\structuredefinition-MeasureGroupAttributes : 1 / 0
+ C:\Users\kboone\git\fhir-saner\input\extensions\structuredefinition-MeasurePopulationAlternateCriteria : 1 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-MeasureCriteria : 1 / 0
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-MeasuredItemDescription : 1 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-PreciseDateTime : 1 / 0
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-PublicHealthMeasure : 1 / 0
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-PublicHealthMeasureReport : 1 / 0
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-PublicHealthMeasureStratifier : 1 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-audit-event-read : 1 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-audit-event-write : 1 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-resource-location : 1 / 1
+ C:\Users\kboone\git\fhir-saner\input\profiles\structuredefinition-saner-supporting-device : 1 / 2
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-BedType : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-DeviceFieldNames : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-GroupSystem : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-LocationFieldNames : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-MeasureRateAggregation : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\codesystem-PopulationSystem : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-2.16.840.1.113762.1.4.1032.116 : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-2.16.840.1.113762.1.4.1032.117 : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-2.16.840.1.113762.1.4.1032.120 : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-2.16.840.1.113762.1.4.1032.127 : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedLocationOperationalStatus : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedLocationTypes : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedProperty : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-BedType : 0 / 2
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-COVID19DiagnosticTest : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ConfirmedCOVID19Diagnosis : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ConfirmedCOVID19DiagnosisValues : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-DeviceFields : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-EDorOverflowLocations : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Fields : 0 / 2
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Groups : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-ICULocations : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-InpatientLocations : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-LocationFields : 0 / 2
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-MeasureRateAggregationValues : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-MeasureStatus : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-OccupiedBed : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-PatientDied : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-Populations : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-SuspectedOrDiagnosedCOVID19 : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevices : 0 / 1
+ C:\Users\kboone\git\fhir-saner\input\vocabulary\valueset-VentilatorDevicesWithTracheostomy : 0 / 1
 </table>
 == n/a ==
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource MeasureReport/FHIR-461.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource MeasureReport/FHIR-463.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.
-ERROR: C:\Users\kboone\git\fhir-saner\output\MeasureReport-FHIR-461.html#/html/body/div/div/div/div/div/div/p/a at Line 202, column 350: The link 'Location/Loc-Org-1065' for "HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-saner\output\MeasureReport-FHIR-461.html#/html/body/div/div/div/div/div/div/p/a at Line 202, column 502: The link 'Organization/Org-1065' for "HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-saner\output\MeasureReport-FHIR-463.html#/html/body/div/div/div/div/div/div/p/a at Line 202, column 352: The link 'Location/Loc-Org-1065' for "HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-saner\output\MeasureReport-FHIR-463.html#/html/body/div/div/div/div/div/div/p/a at Line 202, column 504: The link 'Organization/Org-1065' for "HEALTHSOUTH REHABILITATION HOSPITAL OF LITTLETON" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 292, column 836: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for "population" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 293, column 894: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 294, column 888: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for "count" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 296, column 800: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for "measureScore" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 853: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for "stratifier" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 982: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 300, column 1023: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for "stratum" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 302, column 1188: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for "component" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 303, column 1250: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 304, column 1192: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for "population" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 305, column 1239: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 1233: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for "count" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 437, column 836: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population' for "population" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 438, column 894: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 439, column 888: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.population.count' for "count" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 441, column 800: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.measureScore' for "measureScore" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 442, column 853: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier' for "stratifier" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 444, column 982: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 445, column 1023: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum' for "stratum" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 447, column 1188: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component' for "component" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 448, column 1250: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.component.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 449, column 1192: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population' for "population" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 450, column 1239: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.code' for "code" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-bed-measure-report.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 451, column 1233: The link 'StructureDefinition-saner-bed-measure-report-definitions.html#MeasureReport.group.stratifier.stratum.population.count' for "count" cannot be resolved (valid targets: 36 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1002, column 265: The link 'CodeSystem-LocationFields.html#LocationFields-Device.status' for "Device.status" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1005, column 263: The link 'CodeSystem-LocationFields.html#LocationFields-Device.type' for "Device.type" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\StructureDefinition-saner-device-group.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1008, column 267: The link 'CodeSystem-LocationFields.html#LocationFields-Device.property' for "Device.property" cannot be resolved (valid targets: 55 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\ValueSet-BedType.html#/html/body/div/div/div/div/div/div/ul/li/table/tr/td/a at Line 204, column 1442: The link 'CodeSystem-BedType.html#BedType-NURSERY' for "NURSERY" cannot be resolved (valid targets: 37 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\index.html#/html/body/div/div/div/div/div/ol/li/ol/li/a at Line 248, column 12: The link 'CodeSystem-SanerBedType.html' for "SanerBedType Coding System" cannot be resolved
 == C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner.json ==
+WARNING: ImplementationGuide.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\examples\ConceptMap-HAvBED2toFHIR.json ==
+WARNING: ConceptMap.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\examples\Location-states-NJ.json ==
 == C:\Users\kboone\git\fhir-saner\input\examples\Measure-CDCPatientImpactAndHospitalCapacity.json ==
-WARNING: Measure/CDCPatientImpactAndHospitalCapacity: Measure.group[0].code.coding[0]: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem#Beds should be one of 'Beds' instead of 'Hospital Beds'
-WARNING: Measure/CDCPatientImpactAndHospitalCapacity: Measure.group[0].population[4].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem#numICUBedsOcc should be one of 'ICU Bed Occupancy' instead of 'Total number of staffed inpatient intensive care unit (ICU) beds'
-WARNING: Measure/CDCPatientImpactAndHospitalCapacity: Measure.group[1].code.coding[0]: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem#Ventilators should be one of 'Ventilators' instead of 'Hospital Ventilators'
-WARNING: Measure/CDCPatientImpactAndHospitalCapacity: Measure.group[2].population[1].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem#numC19VentPats should be one of 'Ventilated COVID-19 Patients' instead of 'COVID-19 Patients on a Ventilator'
-== C:\Users\kboone\git\fhir-saner\input\examples\Measure-FEMAReporting.json ==
-WARNING: Measure/FEMAReporting: Measure.scoring.coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/FEMAReporting: Measure.type[0].coding[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Measure/FEMAReporting: Measure.group[1].population[1].code: Display Name for http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem#allReports should be one of 'All Laboratory Reports for any Order' instead of 'All Reports To Date'
-== C:\Users\kboone\git\fhir-saner\input\examples\Measure-sanerCDC.json ==
-WARNING: Measure/sanerCDC: Measure: mea-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-ERROR: Measure/sanerCDC: Measure.subject.ofType(CodeableConcept).coding[0]: Coding.system must be an absolute reference, not a local reference
-INFORMATION: Measure/sanerCDC: Measure.subject.ofType(CodeableConcept).coding[0]: Code System URI "Location" is unknown so the code cannot be validated
-INFORMATION: Measure/sanerCDC: Measure.group[0].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[1].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[1].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[2].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[2].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[3].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[3].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[4].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[4].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[5].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[5].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[6].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[6].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[7].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[7].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[8].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[8].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[9].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[9].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[10].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[10].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[11].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[11].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerCDC: Measure.group[12].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerCDC: Measure.group[12].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-== C:\Users\kboone\git\fhir-saner\input\examples\Measure-sanerFEMA.json ==
-WARNING: Measure/sanerFEMA: Measure: mea-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-ERROR: Measure/sanerFEMA: Measure.subject.ofType(CodeableConcept).coding[0]: Coding.system must be an absolute reference, not a local reference
-INFORMATION: Measure/sanerFEMA: Measure.subject.ofType(CodeableConcept).coding[0]: Code System URI "Location" is unknown so the code cannot be validated
-INFORMATION: Measure/sanerFEMA: Measure.group[0].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[1].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[1].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[2].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[2].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[3].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[3].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[4].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[4].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[5].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[5].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[6].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[6].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[7].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[7].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/sanerFEMA: Measure.group[7].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-INFORMATION: Measure/sanerFEMA: Measure.group[8].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-WARNING: Measure/sanerFEMA: Measure.group[8].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/sanerFEMA: Measure.group[8].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-FHIR-461.json ==
-ERROR: MeasureReport/FHIR-461: MeasureReport.subject: Unable to resolve resource "Location/Loc-Org-1065"
-ERROR: MeasureReport/FHIR-461: MeasureReport.reporter: Unable to resolve resource "Organization/Org-1065"
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[0].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[1].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[2].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[3].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[4].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[5].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[6].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[7].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[8].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[9].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[10].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[11].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.group[12].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-461: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
-== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-FHIR-463.json ==
-ERROR: MeasureReport/FHIR-463: MeasureReport.subject: Unable to resolve resource "Location/Loc-Org-1065"
-ERROR: MeasureReport/FHIR-463: MeasureReport.reporter: Unable to resolve resource "Organization/Org-1065"
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[0].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[1].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[2].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[3].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[4].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[5].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[6].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[7].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.group[8].code.coding[0]: Code System URI "http://build.fhir.org/ig/AudaciousInquiry/saner-ig" is unknown so the code cannot be validated
-INFORMATION: MeasureReport/FHIR-463: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+WARNING: Measure.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\examples\Measure-FEMADailyHospitalCOVID19Reporting.json ==
+WARNING: Measure.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.json ==
+INFORMATION: MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+== C:\Users\kboone\git\fhir-saner\input\examples\Organization-NJ-DPH.json ==
+== C:\Users\kboone\git\fhir-saner\input\extensions\StructureDefinition-GeoLocation.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\extensions\StructureDefinition-MeasureGroupAttributes.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\extensions\StructureDefinition-MeasurePopulationAlternateCriteria.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/MeasurePopulationAlternateCriteria: The Implementation Guide contains no examples for this extension
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-MeasureCriteria.json ==
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-MeasureDescription.json ==
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/MeasureDescription: The Implementation Guide contains no examples for this data type profile
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-MeasuredItemDescription.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/MeasuredItemDescription: The Implementation Guide contains no examples for this data type profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-PreciseDateTime.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-PublicHealthMeasure.json ==
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-audit-event-read.json ==
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-read: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-audit-event-write.json ==
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-write: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-group.json ==
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[51].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[67].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-bed-group: StructureDefinition.differential.element[31].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-group: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-location.json ==
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-location: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-bed-measure-report.json ==
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.population.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.population.count: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.population.subjectResults: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.measureScore: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.component.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.population.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.population.count: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report#MeasureReport.group.stratifier.stratum.population.subjectResults: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
-ERROR: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The profile http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report has 11 elements in the differential (id: MeasureReport.group.population.code, id: MeasureReport.group.population.count, id: MeasureReport.group.population.subjectResults, id: MeasureReport.group.measureScore, id: MeasureReport.group.stratifier, id: MeasureReport.group.stratifier.code, id: MeasureReport.group.stratifier.stratum, id: MeasureReport.group.stratifier.stratum.component.code, id: MeasureReport.group.stratifier.stratum.population.code, id: MeasureReport.group.stratifier.stratum.population.count, id: MeasureReport.group.stratifier.stratum.population.subjectResults) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-device-group.json ==
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[43].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[52].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[61].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.status"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[17].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.type"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[23].pattern.ofType(CodeableConcept).coding[0]: Unknown Code http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property in http://hl7.org/fhir/R4/StructureDefinition/Device for "http://hl7.org/fhir/R4/StructureDefinition/Device#Device.property"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0]: Unknown Code System "http://hl7.org/fhir/R4/StructureDefinition/Location"
-ERROR: StructureDefinition/saner-device-group: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept).coding[0].system: URL value "http://hl7.org/fhir/R4/StructureDefinition/Location" does not resolve
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group: The Implementation Guide contains no examples for this profile
-== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-device-measure-report.json ==
-WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-measure-report: The Implementation Guide contains no examples for this profile
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-PublicHealthMeasureReport.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-PublicHealthMeasureStratifier.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureStratifier: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-audit-event-read.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/audit-event-read: The Implementation Guide contains no examples for this profile
+== C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-audit-event-write.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/audit-event-write: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-resource-location.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\profiles\StructureDefinition-saner-supporting-device.json ==
+ERROR: StructureDefinition.jurisdiction: The resource must declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: StructureDefinition.baseDefinition: US FHIR Usage rules require that all profiles on Device derive from the core US profile
 WARNING: http://hl7.org/fhir/us/saner/StructureDefinition/saner-supporting-device: The Implementation Guide contains no examples for this profile
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-BedType.json ==
-== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-DeviceFields.json ==
+WARNING: CodeSystem.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-DeviceFieldNames.json ==
+WARNING: CodeSystem.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-GroupSystem.json ==
-== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-LocationFields.json ==
+WARNING: CodeSystem.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-LocationFieldNames.json ==
+WARNING: CodeSystem.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-MeasureRateAggregation.json ==
+WARNING: CodeSystem.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\CodeSystem-PopulationSystem.json ==
+WARNING: CodeSystem.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.116.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.117.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.120.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-2.16.840.1.113762.1.4.1032.127.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedLocationOperationalStatus.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedLocationTypes.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedProperty.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-BedType.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 WARNING: BedType: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/saner/CodeSystem/BedType
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-COVID19DiagnosticTest.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-ConfirmedCOVID19Diagnosis.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-ConfirmedCOVID19DiagnosisValues.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-DeviceFields.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-EDorOverflowLocations.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-Fields.json ==
-ERROR: ValueSet/Fields: ValueSet.compose.include[0].system: URL value "http://hl7.org/fhir/us/saner/CodeSystem/LocationFields" does not resolve
-ERROR: ValueSet/Fields: ValueSet.compose.include[1].system: URL value "http://hl7.org/fhir/us/saner/CodeSystem/DeviceFields" does not resolve
-WARNING: Fields: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/saner/CodeSystem/LocationFields
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: Fields: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-Groups.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-ICULocations.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-InpatientLocations.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-LocationFields.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
+WARNING: LocationFields: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-MeasureRateAggregationValues.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-MeasureStatus.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-OccupiedBed.json ==
-== C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-OnlyCompleteOrPending.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-PatientDied.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-Populations.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-SuspectedOrDiagnosedCOVID19.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-VentilatorDevices.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
 == C:\Users\kboone\git\fhir-saner\input\vocabulary\ValueSet-VentilatorDevicesWithTracheostomy.json ==
+WARNING: ValueSet.jurisdiction: The resource should declare it's jurisdiction to match the package id (hl7.fhir.us.saner, jurisdiction = urn:iso:std:iso:3166:-2#US)
