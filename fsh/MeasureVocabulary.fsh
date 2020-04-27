@@ -26,10 +26,10 @@ Description: "A Code System for Populations defined by The SANER Project"
 * #totalTestResults             "Cumulative Tests Performed"
 * #positiveIncrease             "New Positive COVID-19 Tests"
 * #positive                     "Cumulative Positive COVID-19 Tests"
-* #positiveIncreasePercent      "Percent Positive among Newly Resulted Tests"
-* #positivePercent              "Cumulative Percent Positive among Resulted Tests"
 * #allReports                   "All Laboratory Reports for any Order"
 * #latestReports                "Most Recent Laboratory Reports for any Order"
+* #positiveIncreasePercent "Percent Positive among Newly Resulted Tests"
+* #positivePercent         "Cumulative Percent Positive among Resulted Tests"
 
 CodeSystem: GroupSystem
 Title: "Group System"
@@ -38,10 +38,13 @@ Description: "A Code System for Groups defined by The SANER Project"
 * #Ventilators      "Ventilators" ""
 * #Encounters       "Encounters" ""
 
+
 ValueSet: Groups
 Title: "Measure Groups"
 Description: "Measure Groups defined by the SANER Project"
 * codes from system GroupSystem
+* PopulationSystem#positiveIncreasePercent
+* PopulationSystem#positivePercent
 
 
 ValueSet: Populations

@@ -73,42 +73,6 @@ describing the current status of selected health delivery resources.</descriptio
             </description>
         </participant>
     </option>
-    <option id="Bed">
-        <name>Bed Option</name>
-        <description>An actor supporting the Bed Option can describe the status of beds.</description>
-        <overview/>
-        <participant actor='MeasureSource'>
-            <description>An Measure Source implementing the Bed Option generates data on beds.</description>
-        </participant>
-        <participant actor='MeasureConsumer'>
-            <description>An Measure Consumer implementing the Bed Option consumes data about beds.</description>
-        </participant>
-    </option>
-    <option id="Asset">
-        <name>Asset Option</name>
-        <description>An actor supporting the Asset Option can describe the status of non-bed treatment
-resources, such as ventilators, respirators, infusion pumps, monitoring equipment, et cetera</description>
-        <overview/>
-        <participant actor='MeasureSource'>
-            <description>An Measure Source implementing the Asset Option generates data on other Assets
-(e.g., ventilators, respirators, PPE, and other equipment or supplies).</description>
-        </participant>
-        <participant actor='MeasureConsumer'>
-            <description>An Measure Consumer implementing the Asset Option consumes data about other Assets
-(e.g., ventilators, respirators, PPE, and other equipment or supplies).</description>
-        </participant>
-    </option>
-    <option id="Group">
-        <name>Group Option</name>
-        <description>An actor supporting the Group Option can work with Group resources representing individual strata
-values extracted from a Measure Report</description>
-        <participant actor='MeasureSource'>
-            <description>An Measure Source implementing the Group Option can produce reports using the Group Resource.</description>
-        </participant>
-        <participant actor='MeasureConsumer'>
-            <description>An Measure Source implementing the Group Option can consume reports using the Group Resource.</description>
-        </participant>
-    </option>
     <!-- standard is repeatable -->
     <standard id="FHIR-R4">
         <name>HL7 FHIR Release 4.0</name>
@@ -140,7 +104,7 @@ values extracted from a Measure Report</description>
     </standard>
 
     <!-- usecase is optional and repeatable -->
-    <usecase id="GETBEDS" actors="MeasureSource MeasureConsumer" transactions="PULL-TX PUSH-TX" content="bed-measure-report bed-device-report bed-group supporting-device bed-location">
+    <usecase id="GETBEDS" actors="MeasureSource MeasureConsumer" transactions="PULL-TX PUSH-TX" content="">
 	    <name>Collecting Bed Measures</name>
         <description>This use case addresses the exchange of data from Facilities to a Centralized
 reporting system for Public Health</description>
@@ -160,7 +124,7 @@ request information about ICU, med/surg, or ED beds available or in use.</descri
 	        </return>
 	    </step>
     </usecase>
-    <usecase id="VIEWREPORTS" actors="MeasureConsumer" transactions="REPORT-TX" content="bed-measure-report device-measure-report bed-group supporting-device bed-location">
+    <usecase id="VIEWREPORTS" actors="MeasureConsumer" transactions="REPORT-TX" content="">
         <name>Reporting on A Measure</name>
         <description>TBD</description>
         <!-- overview is optional -->
@@ -332,10 +296,6 @@ periodically report on availability of resources to a Measure Consumer.</descrip
                 <overview>When the API option is implemented, the Measure Source performs the FHIR create
 operation on the MeasureReport resource at a Measure Consumer.  When the Dump option is implemented, the Measure Source
 writes the MeasureReport data to external storage specified by the Measure Consumer.
-
-When the Group option is implemented, the Measure Source also generates Group resources.  The Measure Source may
-be configured to disable generation of MeasureReport resources (e.g., when used to add Group capabilities to an
-existing server), but must be able to demostrate creation of the MeasureReport resources matching the Group.
 </overview>
             </action>
             <action by="MeasureConsumer">
@@ -344,7 +304,7 @@ existing server), but must be able to demostrate creation of the MeasureReport r
 success using 200 OK, 201 Created, or 204 No Content to indicate a successful update.  When the Dump option is
 used, the Measure Consumer reports success using the native protocols for the external storage subsytem.
 </description>
-                <overview>When the Group option is implemented, the Measure Consumer also accepts Group resources.</overview>
+                <overview/>
             </action>
         </message>
     </transaction>
@@ -366,27 +326,6 @@ availability data or some computation over it to another system.
             </overview>
         </message>
     </transaction>
-
-    <content id="bed-measure-report">
-        <name>Bed Measure Report</name>
-        <description>This content profile describes the structure of a MeasureReport resource describing Bed Measures</description>
-        <overview></overview>
-    </content>
-    <content id="device-measure-report">
-        <name>Device Measure Report</name>
-        <description>This content profile describes the structure of a MeasureReport resource describing Device Measures</description>
-        <overview></overview>
-    </content>
-    <content id="bed-group">
-        <name>Bed Group</name>
-        <description>This content profile describes the structure of a Group resource reporting Bed Counts</description>
-        <overview></overview>
-    </content>
-    <content id="device-group">
-        <name>Device Group</name>
-        <description>This content profile describes the structure of a Group resource reporting Device Counts</description>
-        <overview></overview>
-    </content>
 
     <content id="bed-location">
         <name>bed-location</name>

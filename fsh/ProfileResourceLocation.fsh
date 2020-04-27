@@ -1,5 +1,5 @@
 Profile:        ResourceLocation
-Parent:         Location
+Parent:         http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 Id:             saner-resource-location
 Title:          "Resource Location Profile"
 Description:    "Defines constraints on the Location Resource describing the location of resources (Beds and Devices)."
