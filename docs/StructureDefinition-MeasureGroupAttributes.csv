@@ -119,7 +119,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""subject""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"Extension.extension.value[x]","","","",0,1,"","","","CodeableConcept {[CanonicalType[http://hl7.org/fhir/us/saner/StructureDefinition/MeasureDescription]]} {[]}
+"Extension.extension.value[x]","","","",0,1,"","","","CodeableConcept {[CanonicalType[http://hl7.org/fhir/us/saner/StructureDefinition/MeasuredItemDescription]]} {[]}
 ","Concept - reference to a terminology or just  text","A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,,,,"","type:$this}
 ","",,"closed","Extension.value[x]",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

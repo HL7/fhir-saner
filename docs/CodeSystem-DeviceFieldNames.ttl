@@ -1,0 +1,256 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DeviceFieldNames"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Device Resource Field Names</h2><div><p>This Coding System identifies legal field names in a FHIR R4 Device Resource.</p>\n</div><p>This code system http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Device<a name=\"DeviceFieldNames-Device\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.id<a name=\"DeviceFieldNames-Device.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.meta<a name=\"DeviceFieldNames-Device.46meta\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.implicitRules<a name=\"DeviceFieldNames-Device.46implicitRules\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.language<a name=\"DeviceFieldNames-Device.46language\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.text<a name=\"DeviceFieldNames-Device.46text\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.contained<a name=\"DeviceFieldNames-Device.46contained\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.extension<a name=\"DeviceFieldNames-Device.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.modifierExtension<a name=\"DeviceFieldNames-Device.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.identifier<a name=\"DeviceFieldNames-Device.46identifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.definition<a name=\"DeviceFieldNames-Device.46definition\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier<a name=\"DeviceFieldNames-Device.46udiCarrier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.id<a name=\"DeviceFieldNames-Device.46udiCarrier.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.extension<a name=\"DeviceFieldNames-Device.46udiCarrier.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.modifierExtension<a name=\"DeviceFieldNames-Device.46udiCarrier.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.deviceIdentifier<a name=\"DeviceFieldNames-Device.46udiCarrier.46deviceIdentifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.issuer<a name=\"DeviceFieldNames-Device.46udiCarrier.46issuer\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.jurisdiction<a name=\"DeviceFieldNames-Device.46udiCarrier.46jurisdiction\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.carrierAIDC<a name=\"DeviceFieldNames-Device.46udiCarrier.46carrierAIDC\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.carrierHRF<a name=\"DeviceFieldNames-Device.46udiCarrier.46carrierHRF\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.udiCarrier.entryType<a name=\"DeviceFieldNames-Device.46udiCarrier.46entryType\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.status<a name=\"DeviceFieldNames-Device.46status\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.statusReason<a name=\"DeviceFieldNames-Device.46statusReason\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.distinctIdentifier<a name=\"DeviceFieldNames-Device.46distinctIdentifier\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.manufacturer<a name=\"DeviceFieldNames-Device.46manufacturer\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.manufactureDate<a name=\"DeviceFieldNames-Device.46manufactureDate\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.expirationDate<a name=\"DeviceFieldNames-Device.46expirationDate\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.lotNumber<a name=\"DeviceFieldNames-Device.46lotNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.serialNumber<a name=\"DeviceFieldNames-Device.46serialNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName<a name=\"DeviceFieldNames-Device.46deviceName\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.id<a name=\"DeviceFieldNames-Device.46deviceName.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.extension<a name=\"DeviceFieldNames-Device.46deviceName.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.modifierExtension<a name=\"DeviceFieldNames-Device.46deviceName.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.name<a name=\"DeviceFieldNames-Device.46deviceName.46name\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.deviceName.type<a name=\"DeviceFieldNames-Device.46deviceName.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.modelNumber<a name=\"DeviceFieldNames-Device.46modelNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.partNumber<a name=\"DeviceFieldNames-Device.46partNumber\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.type<a name=\"DeviceFieldNames-Device.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization<a name=\"DeviceFieldNames-Device.46specialization\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.id<a name=\"DeviceFieldNames-Device.46specialization.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.extension<a name=\"DeviceFieldNames-Device.46specialization.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.modifierExtension<a name=\"DeviceFieldNames-Device.46specialization.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.systemType<a name=\"DeviceFieldNames-Device.46specialization.46systemType\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.specialization.version<a name=\"DeviceFieldNames-Device.46specialization.46version\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version<a name=\"DeviceFieldNames-Device.46version\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.id<a name=\"DeviceFieldNames-Device.46version.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.extension<a name=\"DeviceFieldNames-Device.46version.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.modifierExtension<a name=\"DeviceFieldNames-Device.46version.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.type<a name=\"DeviceFieldNames-Device.46version.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.component<a name=\"DeviceFieldNames-Device.46version.46component\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.version.value<a name=\"DeviceFieldNames-Device.46version.46value\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property<a name=\"DeviceFieldNames-Device.46property\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.id<a name=\"DeviceFieldNames-Device.46property.46id\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.extension<a name=\"DeviceFieldNames-Device.46property.46extension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.modifierExtension<a name=\"DeviceFieldNames-Device.46property.46modifierExtension\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.type<a name=\"DeviceFieldNames-Device.46property.46type\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.valueQuantity<a name=\"DeviceFieldNames-Device.46property.46valueQuantity\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.property.valueCode<a name=\"DeviceFieldNames-Device.46property.46valueCode\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.patient<a name=\"DeviceFieldNames-Device.46patient\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.owner<a name=\"DeviceFieldNames-Device.46owner\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.contact<a name=\"DeviceFieldNames-Device.46contact\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.location<a name=\"DeviceFieldNames-Device.46location\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.url<a name=\"DeviceFieldNames-Device.46url\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.note<a name=\"DeviceFieldNames-Device.46note\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.safety<a name=\"DeviceFieldNames-Device.46safety\"> </a></td><td/></tr><tr><td style=\"white-space:nowrap\">Device.parent<a name=\"DeviceFieldNames-Device.46parent\"> </a></td><td/></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "DeviceFieldNames"];
+  fhir:CodeSystem.title [ fhir:value "Device Resource Field Names"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2020-04-27T07:08:50-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "HL7 International"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Patient Administration Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7.org/Special/committees/pafm/index.cfm" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Audacious Inquiry" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://ainq.com" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:kboone@ainq.com" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "This Coding System identifies legal field names in a FHIR R4 Device Resource."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Device" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.id" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.meta" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.implicitRules" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.language" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.text" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.contained" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.extension" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.modifierExtension" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.identifier" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.definition" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.id" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.extension" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.modifierExtension" ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.deviceIdentifier" ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.issuer" ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.jurisdiction" ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.carrierAIDC" ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.carrierHRF" ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.udiCarrier.entryType" ]
+  ], [
+     fhir:index 21;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.status" ]
+  ], [
+     fhir:index 22;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.statusReason" ]
+  ], [
+     fhir:index 23;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.distinctIdentifier" ]
+  ], [
+     fhir:index 24;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.manufacturer" ]
+  ], [
+     fhir:index 25;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.manufactureDate" ]
+  ], [
+     fhir:index 26;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.expirationDate" ]
+  ], [
+     fhir:index 27;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.lotNumber" ]
+  ], [
+     fhir:index 28;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.serialNumber" ]
+  ], [
+     fhir:index 29;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.deviceName" ]
+  ], [
+     fhir:index 30;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.deviceName.id" ]
+  ], [
+     fhir:index 31;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.deviceName.extension" ]
+  ], [
+     fhir:index 32;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.deviceName.modifierExtension" ]
+  ], [
+     fhir:index 33;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.deviceName.name" ]
+  ], [
+     fhir:index 34;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.deviceName.type" ]
+  ], [
+     fhir:index 35;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.modelNumber" ]
+  ], [
+     fhir:index 36;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.partNumber" ]
+  ], [
+     fhir:index 37;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.type" ]
+  ], [
+     fhir:index 38;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.specialization" ]
+  ], [
+     fhir:index 39;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.specialization.id" ]
+  ], [
+     fhir:index 40;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.specialization.extension" ]
+  ], [
+     fhir:index 41;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.specialization.modifierExtension" ]
+  ], [
+     fhir:index 42;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.specialization.systemType" ]
+  ], [
+     fhir:index 43;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.specialization.version" ]
+  ], [
+     fhir:index 44;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version" ]
+  ], [
+     fhir:index 45;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version.id" ]
+  ], [
+     fhir:index 46;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version.extension" ]
+  ], [
+     fhir:index 47;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version.modifierExtension" ]
+  ], [
+     fhir:index 48;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version.type" ]
+  ], [
+     fhir:index 49;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version.component" ]
+  ], [
+     fhir:index 50;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.version.value" ]
+  ], [
+     fhir:index 51;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property" ]
+  ], [
+     fhir:index 52;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property.id" ]
+  ], [
+     fhir:index 53;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property.extension" ]
+  ], [
+     fhir:index 54;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property.modifierExtension" ]
+  ], [
+     fhir:index 55;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property.type" ]
+  ], [
+     fhir:index 56;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property.valueQuantity" ]
+  ], [
+     fhir:index 57;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.property.valueCode" ]
+  ], [
+     fhir:index 58;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.patient" ]
+  ], [
+     fhir:index 59;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.owner" ]
+  ], [
+     fhir:index 60;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.contact" ]
+  ], [
+     fhir:index 61;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.location" ]
+  ], [
+     fhir:index 62;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.url" ]
+  ], [
+     fhir:index 63;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.note" ]
+  ], [
+     fhir:index 64;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.safety" ]
+  ], [
+     fhir:index 65;
+     fhir:CodeSystem.concept.code [ fhir:value "Device.parent" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/CodeSystem/DeviceFieldNames.ttl> .
+
+# -------------------------------------------------------------------------------------
+

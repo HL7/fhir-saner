@@ -41,8 +41,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"14.36"}
-    h3,h4,h5,h6{--heading-prefix:"14.36"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.40"}
+    h3,h4,h5,h6{--heading-prefix:"14.40"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         
@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -195,14 +183,14 @@
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BedType&quot;];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Saner Bed Type Coding System&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Coding System fills gaps describing types of care services that a bed can support.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This code system http://hl7.org/fhir/us/saner/CodeSystem/BedType defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ROOM&lt;a name=\&quot;BedType-ROOM\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Top level category for rooms&lt;/td&gt;&lt;td&gt;Rooms used for treatment of inpatient or ambulatory patients&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OR&lt;a name=\&quot;BedType-OR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Operating Room&lt;/td&gt;&lt;td&gt;Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PR&lt;a name=\&quot;BedType-PR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Procedure Room&lt;/td&gt;&lt;td&gt;Procedure Rooms are those rooms used for non-surgical procedures&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;RR&lt;a name=\&quot;BedType-RR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Recovery Room&lt;/td&gt;&lt;td&gt;Recovery Rooms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;EX&lt;a name=\&quot;BedType-EX\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Examination Room&lt;/td&gt;&lt;td&gt;Rooms used for principally for patient examination and minor procedures&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;DIALR&lt;a name=\&quot;BedType-DIALR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dialysis Treatment Room&lt;/td&gt;&lt;td&gt;Room used for dialysis treatment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;BURNU&lt;a name=\&quot;BedType-BURNU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burn Unit&lt;/td&gt;&lt;td&gt;Beds in a Burn Unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NEGISO&lt;a name=\&quot;BedType-NEGISO\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Negative Pressure Isolation Unit&lt;/td&gt;&lt;td&gt;Beds in a negative pressure isolation environment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OTHISO&lt;a name=\&quot;BedType-OTHISO\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other Isolation Unit&lt;/td&gt;&lt;td&gt;Beds in an other (non-negative pressure) isolation environment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NONISO&lt;a name=\&quot;BedType-NONISO\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Non-isolating unit&lt;/td&gt;&lt;td&gt;Bed in a unit that does not support isolation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NEONATAL&lt;a name=\&quot;BedType-NEONATAL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Neonatal Patient use&lt;/td&gt;&lt;td&gt;Resources designated for neonatal use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ADULT&lt;a name=\&quot;BedType-ADULT\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Adult Patient use&lt;/td&gt;&lt;td&gt;Resources designated for adult patient use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PEDIATRIC&lt;a name=\&quot;BedType-PEDIATRIC\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pediatric Patient use&lt;/td&gt;&lt;td&gt;Resources designated for pediatric patient use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PHYSICAL&lt;a name=\&quot;BedType-PHYSICAL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Total Physical Resources&lt;/td&gt;&lt;td&gt;Total physical resources, whether licensed, staffed, or otherwise&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;LICENSED&lt;a name=\&quot;BedType-LICENSED\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Licensed Resources&lt;/td&gt;&lt;td&gt;Maximum licensed resources&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OVERFLOW&lt;a name=\&quot;BedType-OVERFLOW\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Overflow Resources&lt;/td&gt;&lt;td&gt;Overflow / Surge resources that can be or have been added to add capacity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;STAFFED&lt;a name=\&quot;BedType-STAFFED\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Staffed Resources&lt;/td&gt;&lt;td&gt;Resources for which staff is available to provide support&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;UNSTAFFED&lt;a name=\&quot;BedType-UNSTAFFED\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unstaffed Resources&lt;/td&gt;&lt;td&gt;Resources that can be used but which are not staffed&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;INUSE&lt;a name=\&quot;BedType-INUSE\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;This resource is in use&lt;/td&gt;&lt;td&gt;Resources that are currently in use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;AVAILABLE&lt;a name=\&quot;BedType-AVAILABLE\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;This resource is available for use&lt;/td&gt;&lt;td&gt;Resources that are available for use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NOTAVAIL&lt;a name=\&quot;BedType-NOTAVAIL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;This resource is not available for use&lt;/td&gt;&lt;td&gt;Resources that are not available and are not in use&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Saner Bed Type Coding System&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This Coding System fills gaps describing types of care services that a bed can support.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This code system http://hl7.org/fhir/us/saner/CodeSystem/BedType defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ROOM&lt;a name=\&quot;BedType-ROOM\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Top level category for rooms&lt;/td&gt;&lt;td&gt;Rooms used for treatment of inpatient or ambulatory patients&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OR&lt;a name=\&quot;BedType-OR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Operating Room&lt;/td&gt;&lt;td&gt;Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PR&lt;a name=\&quot;BedType-PR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Procedure Room&lt;/td&gt;&lt;td&gt;Procedure Rooms are those rooms used for non-surgical procedures&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;RR&lt;a name=\&quot;BedType-RR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Recovery Room&lt;/td&gt;&lt;td&gt;Recovery Rooms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;EX&lt;a name=\&quot;BedType-EX\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Examination Room&lt;/td&gt;&lt;td&gt;Rooms used for principally for patient examination and minor procedures&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;DIALR&lt;a name=\&quot;BedType-DIALR\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dialysis Treatment Room&lt;/td&gt;&lt;td&gt;Room used for dialysis treatment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NURSERY&lt;a name=\&quot;BedType-NURSERY\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursery&lt;/td&gt;&lt;td&gt;Room used for Nursery&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;BURNU&lt;a name=\&quot;BedType-BURNU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burn Unit&lt;/td&gt;&lt;td&gt;Beds in a Burn Unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NEGISO&lt;a name=\&quot;BedType-NEGISO\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Negative Pressure Isolation Unit&lt;/td&gt;&lt;td&gt;Beds in a negative pressure isolation environment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OTHISO&lt;a name=\&quot;BedType-OTHISO\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other Isolation Unit&lt;/td&gt;&lt;td&gt;Beds in an other (non-negative pressure) isolation environment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NONISO&lt;a name=\&quot;BedType-NONISO\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Non-isolating unit&lt;/td&gt;&lt;td&gt;Bed in a unit that does not support isolation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NEONATAL&lt;a name=\&quot;BedType-NEONATAL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Neonatal Patient use&lt;/td&gt;&lt;td&gt;Resources designated for neonatal use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ADULT&lt;a name=\&quot;BedType-ADULT\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Adult Patient use&lt;/td&gt;&lt;td&gt;Resources designated for adult patient use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PEDIATRIC&lt;a name=\&quot;BedType-PEDIATRIC\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pediatric Patient use&lt;/td&gt;&lt;td&gt;Resources designated for pediatric patient use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PHYSICAL&lt;a name=\&quot;BedType-PHYSICAL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Total Physical Resources&lt;/td&gt;&lt;td&gt;Total physical resources, whether licensed, staffed, or otherwise&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;LICENSED&lt;a name=\&quot;BedType-LICENSED\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Licensed Resources&lt;/td&gt;&lt;td&gt;Maximum licensed resources&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OVERFLOW&lt;a name=\&quot;BedType-OVERFLOW\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Overflow Resources&lt;/td&gt;&lt;td&gt;Overflow / Surge resources that can be or have been added to add capacity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;STAFFED&lt;a name=\&quot;BedType-STAFFED\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Staffed Resources&lt;/td&gt;&lt;td&gt;Resources for which staff is available to provide support&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;UNSTAFFED&lt;a name=\&quot;BedType-UNSTAFFED\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unstaffed Resources&lt;/td&gt;&lt;td&gt;Resources that can be used but which are not staffed&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;INUSE&lt;a name=\&quot;BedType-INUSE\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;This resource is in use&lt;/td&gt;&lt;td&gt;Resources that are currently in use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;AVAILABLE&lt;a name=\&quot;BedType-AVAILABLE\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;This resource is available for use&lt;/td&gt;&lt;td&gt;Resources that are available for use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;NOTAVAIL&lt;a name=\&quot;BedType-NOTAVAIL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;This resource is not available for use&lt;/td&gt;&lt;td&gt;Resources that are not available and are not in use&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">fhir:CodeSystem.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/saner/CodeSystem/BedType&quot;];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">fhir:CodeSystem.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BedType&quot;];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">fhir:CodeSystem.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Saner Bed Type Coding System&quot;];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">fhir:CodeSystem.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
-  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">fhir:CodeSystem.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-04-13T11:49:10-04:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">fhir:CodeSystem.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-04-27T07:08:50-04:00&quot;^^xsd:dateTime];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">fhir:CodeSystem.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 International&quot;];
   <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">fhir:CodeSystem.contact</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
@@ -260,76 +248,81 @@
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Room used for dialysis treatment&quot; ]
   ], [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;NURSERY&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Nursery&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Room used for Nursery&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;BURNU&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Burn Unit&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Beds in a Burn Unit&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;NEGISO&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Negative Pressure Isolation Unit&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Beds in a negative pressure isolation environment&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OTHISO&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Other Isolation Unit&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Beds in an other (non-negative pressure) isolation environment&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;NONISO&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Non-isolating unit&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bed in a unit that does not support isolation&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;NEONATAL&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Neonatal Patient use&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources designated for neonatal use&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 12;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ADULT&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Adult Patient use&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources designated for adult patient use&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 12;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 13;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;PEDIATRIC&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Pediatric Patient use&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources designated for pediatric patient use&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 13;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 14;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;PHYSICAL&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Total Physical Resources&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Total physical resources, whether licensed, staffed, or otherwise&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 14;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 15;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;LICENSED&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Licensed Resources&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Maximum licensed resources&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 15;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 16;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OVERFLOW&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Overflow Resources&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Overflow / Surge resources that can be or have been added to add capacity&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 16;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 17;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;STAFFED&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Staffed Resources&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources for which staff is available to provide support&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 17;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 18;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;UNSTAFFED&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Unstaffed Resources&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources that can be used but which are not staffed&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 18;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 19;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;INUSE&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This resource is in use&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources that are currently in use&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 19;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 20;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;AVAILABLE&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This resource is available for use&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources that are available for use&quot; ]
   ], [
-     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 20;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 21;
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;NOTAVAIL&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This resource is not available for use&quot; ];
      <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Resources that are not available and are not in use&quot; ]
@@ -357,7 +350,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 07:08-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

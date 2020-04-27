@@ -4,14 +4,14 @@
   <id value="Fields"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Resource Fields</h2><div><p>This value set describes fields used to stratify groups in a report</p>
-</div><ul><li>Include all codes defined in <code>http://hl7.org/fhir/us/saner/CodeSystem/LocationFields</code></li><li>Include all codes defined in <code>http://hl7.org/fhir/us/saner/CodeSystem/DeviceFields</code></li></ul><p>This value set includes codes based on the following rules:</p></div>
+</div><ul><li>Include all codes defined in <a href="CodeSystem-LocationFieldNames.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames</code></a></li><li>Include all codes defined in <a href="CodeSystem-DeviceFieldNames.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames</code></a></li></ul><p>This value set includes codes based on the following rules:</p></div>
   </text>
   <url value="http://hl7.org/fhir/us/saner/ValueSet/Fields"/>
   <version value="0.1.0"/>
   <name value="Fields"/>
   <title value="Resource Fields"/>
   <status value="active"/>
-  <date value="2020-04-13T11:49:10-04:00"/>
+  <date value="2020-04-27T07:08:50-04:00"/>
   <publisher value="HL7 International"/>
   <contact>
     <name value="HL7 Patient Administration Workgroup"/>
@@ -37,10 +37,10 @@
   <description value="This value set describes fields used to stratify groups in a report"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/saner/CodeSystem/LocationFields"/>
+      <system value="http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames"/>
     </include>
     <include>
-      <system value="http://hl7.org/fhir/us/saner/CodeSystem/DeviceFields"/>
+      <system value="http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames"/>
     </include>
   </compose>
 </ValueSet>

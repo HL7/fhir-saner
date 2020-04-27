@@ -1,0 +1,18 @@
+{
+  "resourceType": "Location",
+  "id": "states-NJ",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: states-NJ</p><p><b>identifier</b>: 34</p><h3>Positions</h3><table class=\"grid\"><tr><td>-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td>*</td><td>74.6728</td><td>40.1907</td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "34"
+    }
+  ],
+  "position": {
+    "longitude": 74.6728,
+    "latitude": 40.1907
+  }
+}

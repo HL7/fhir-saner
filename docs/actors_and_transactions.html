@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -216,13 +204,13 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 </tr>
 </thead>
 <tbody>
-                
+
 <tr>
-                        
+
 <td rowspan="2">
 <a href="#measure-source">Measure Source</a>
 </td>
-                        
+
 <td>
 <a href="transaction-1.html">
                         Query Measure [PULL-TX]</a>
@@ -231,12 +219,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-2.html">
                         Produce Measure [PUSH-TX]</a>
@@ -245,16 +233,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="3">
 <a href="#measure-consumer">Measure Consumer</a>
 </td>
-                        
+
 <td>
 <a href="transaction-3.html">
                         Communicate Results [REPORT-TX]</a>
@@ -263,9 +251,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-1.html">
                         Query Measure [PULL-TX]</a>
@@ -274,12 +262,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-2.html">
                         Produce Measure [PUSH-TX]</a>
@@ -288,16 +276,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 4</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="5">
 <a href="#measure-intermediary">Measure Intermediary</a>
 </td>
-                        
+
 <td>
 <a href="transaction-1.html">
                         Query Measure [PULL-TX]</a><br /><i>As Measure Source</i>
@@ -306,12 +294,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-2.html">
                         Produce Measure [PUSH-TX]</a><br /><i>As Measure Source</i>
@@ -320,12 +308,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-3.html">
                         Communicate Results [REPORT-TX]</a><br /><i>As Measure Consumer</i>
@@ -334,9 +322,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-1.html">
                         Query Measure [PULL-TX]</a><br /><i>As Measure Consumer</i>
@@ -345,12 +333,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href="transaction-2.html">
                         Produce Measure [PUSH-TX]</a><br /><i>As Measure Consumer</i>
@@ -359,10 +347,10 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 4</sup>
-                            
+
 </td>
 </tr>
-                    
+
 </tbody>
 </table>
 
@@ -395,11 +383,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 
 <h5 id="measure-source-requirements">Measure Source Requirements</h5>
 <ol>
-  <li>
-    <ol>
-      <li></li>
-    </ol>
-  </li>
+  <li>1.</li>
 </ol>
 
 <h4 id="measure-consumer">Measure Consumer</h4>
@@ -409,11 +393,7 @@ data gathered from one or more Measure Sources.</p>
 
 <h5 id="measure-consumer-requirements">Measure Consumer Requirements</h5>
 <ol>
-  <li>
-    <ol>
-      <li></li>
-    </ol>
-  </li>
+  <li>1.</li>
 </ol>
 
 <h4 id="measure-intermediary">Measure Intermediary</h4>
@@ -456,84 +436,84 @@ between options when applicable are specified in notes.</p>
         </tr>
     </thead>
     <tbody>
-        
+
                 <tr>
-                
+
                     <td rowspan="7">Measure Source</td>
-                
+
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#api-option">API Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#bed-option">Bed Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#asset-option">Asset Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#group-option">Group Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                     <td rowspan="7">Measure Consumer</td>
-                
+
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#api-option">API Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#bed-option">Bed Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#asset-option">Asset Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#group-option">Group Option</a></td>
                 </tr>
-            
+
                 <tr><td>Measure Intermediary</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
     </tbody>
 </table>
 
@@ -687,7 +667,7 @@ or other systems to access resource availability data.</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 07:08-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

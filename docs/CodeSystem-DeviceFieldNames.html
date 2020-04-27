@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7.FHIR.US.SANER\Device Resource Field Names - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"14.41"}
+    h3,h4,h5,h6{--heading-prefix:"14.41"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+        <li>TBD</li>
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vocabulary<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedProperty.html">Bed Property</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedType.html">Bed Type</a>
+      </li>
+      <li>
+        <a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Device Resource Field Names</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <a name="root"> </a>
+  <h2 id="root">Device Resource Field Names</h2>
+  
+  
+  <div style="display:inline-block">
+  <!-- CodeSystem-DeviceFieldNames-intro.md  -->
+
+  </div>
+  
+  <p>
+    <b>Summary</b>
+  </p>
+
+  <table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames</td></tr>
+ <tr><td>Version:</td><td>0.1.0</td></tr>
+ <tr><td>Name:</td><td>DeviceFieldNames</td></tr>
+ <tr><td>Title:</td><td>Device Resource Field Names</td></tr>
+ <tr><td>Status:</td><td>Active</td></tr>
+ <tr><td>Content:</td><td>All the concepts defined by the code system are included in the code system resource</td></tr>
+ <tr><td>Definition:</td><td><p>This Coding System identifies legal field names in a FHIR R4 Device Resource.</p>
+</td></tr>
+ <tr><td>Publisher:</td><td>HL7 International</td></tr>
+ <tr><td>Content Mode:</td><td>Complete</td></tr>
+ <tr><td>Source Resource:</td><td><a href="CodeSystem-DeviceFieldNames.xml.html">XML</a> / <a href="CodeSystem-DeviceFieldNames.json.html">JSON</a> / <a href="CodeSystem-DeviceFieldNames.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+  <p>
+  This Code system is referenced in the content logical definition of the following value sets:
+  </p>
+  
+  
+<ul>
+ <li><a href="ValueSet-DeviceFields.html">DeviceFields</a></li>
+ <li><a href="ValueSet-Fields.html">Fields</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Device Resource Field Names</h2><div><p>This Coding System identifies legal field names in a FHIR R4 Device Resource.</p>
+</div><p>This code system http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Device<a name="DeviceFieldNames-Device"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.id<a name="DeviceFieldNames-Device.46id"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.meta<a name="DeviceFieldNames-Device.46meta"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.implicitRules<a name="DeviceFieldNames-Device.46implicitRules"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.language<a name="DeviceFieldNames-Device.46language"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.text<a name="DeviceFieldNames-Device.46text"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.contained<a name="DeviceFieldNames-Device.46contained"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.extension<a name="DeviceFieldNames-Device.46extension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.modifierExtension<a name="DeviceFieldNames-Device.46modifierExtension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.identifier<a name="DeviceFieldNames-Device.46identifier"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.definition<a name="DeviceFieldNames-Device.46definition"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier<a name="DeviceFieldNames-Device.46udiCarrier"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.id<a name="DeviceFieldNames-Device.46udiCarrier.46id"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.extension<a name="DeviceFieldNames-Device.46udiCarrier.46extension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.modifierExtension<a name="DeviceFieldNames-Device.46udiCarrier.46modifierExtension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.deviceIdentifier<a name="DeviceFieldNames-Device.46udiCarrier.46deviceIdentifier"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.issuer<a name="DeviceFieldNames-Device.46udiCarrier.46issuer"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.jurisdiction<a name="DeviceFieldNames-Device.46udiCarrier.46jurisdiction"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.carrierAIDC<a name="DeviceFieldNames-Device.46udiCarrier.46carrierAIDC"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.carrierHRF<a name="DeviceFieldNames-Device.46udiCarrier.46carrierHRF"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.udiCarrier.entryType<a name="DeviceFieldNames-Device.46udiCarrier.46entryType"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.status<a name="DeviceFieldNames-Device.46status"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.statusReason<a name="DeviceFieldNames-Device.46statusReason"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.distinctIdentifier<a name="DeviceFieldNames-Device.46distinctIdentifier"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.manufacturer<a name="DeviceFieldNames-Device.46manufacturer"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.manufactureDate<a name="DeviceFieldNames-Device.46manufactureDate"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.expirationDate<a name="DeviceFieldNames-Device.46expirationDate"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.lotNumber<a name="DeviceFieldNames-Device.46lotNumber"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.serialNumber<a name="DeviceFieldNames-Device.46serialNumber"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.deviceName<a name="DeviceFieldNames-Device.46deviceName"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.deviceName.id<a name="DeviceFieldNames-Device.46deviceName.46id"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.deviceName.extension<a name="DeviceFieldNames-Device.46deviceName.46extension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.deviceName.modifierExtension<a name="DeviceFieldNames-Device.46deviceName.46modifierExtension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.deviceName.name<a name="DeviceFieldNames-Device.46deviceName.46name"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.deviceName.type<a name="DeviceFieldNames-Device.46deviceName.46type"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.modelNumber<a name="DeviceFieldNames-Device.46modelNumber"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.partNumber<a name="DeviceFieldNames-Device.46partNumber"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.type<a name="DeviceFieldNames-Device.46type"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.specialization<a name="DeviceFieldNames-Device.46specialization"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.specialization.id<a name="DeviceFieldNames-Device.46specialization.46id"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.specialization.extension<a name="DeviceFieldNames-Device.46specialization.46extension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.specialization.modifierExtension<a name="DeviceFieldNames-Device.46specialization.46modifierExtension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.specialization.systemType<a name="DeviceFieldNames-Device.46specialization.46systemType"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.specialization.version<a name="DeviceFieldNames-Device.46specialization.46version"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version<a name="DeviceFieldNames-Device.46version"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version.id<a name="DeviceFieldNames-Device.46version.46id"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version.extension<a name="DeviceFieldNames-Device.46version.46extension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version.modifierExtension<a name="DeviceFieldNames-Device.46version.46modifierExtension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version.type<a name="DeviceFieldNames-Device.46version.46type"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version.component<a name="DeviceFieldNames-Device.46version.46component"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.version.value<a name="DeviceFieldNames-Device.46version.46value"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property<a name="DeviceFieldNames-Device.46property"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property.id<a name="DeviceFieldNames-Device.46property.46id"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property.extension<a name="DeviceFieldNames-Device.46property.46extension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property.modifierExtension<a name="DeviceFieldNames-Device.46property.46modifierExtension"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property.type<a name="DeviceFieldNames-Device.46property.46type"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property.valueQuantity<a name="DeviceFieldNames-Device.46property.46valueQuantity"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.property.valueCode<a name="DeviceFieldNames-Device.46property.46valueCode"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.patient<a name="DeviceFieldNames-Device.46patient"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.owner<a name="DeviceFieldNames-Device.46owner"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.contact<a name="DeviceFieldNames-Device.46contact"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.location<a name="DeviceFieldNames-Device.46location"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.url<a name="DeviceFieldNames-Device.46url"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.note<a name="DeviceFieldNames-Device.46note"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.safety<a name="DeviceFieldNames-Device.46safety"> </a></td><td></td></tr><tr><td style="white-space:nowrap">Device.parent<a name="DeviceFieldNames-Device.46parent"> </a></td><td></td></tr></table></div>
+
+  
+  
+  <div style="display:inline-block">
+  <!-- CodeSystem-DeviceFieldNames-notes.md  -->
+
+  </div>
+  
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 07:08-0400">2020-04-27</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

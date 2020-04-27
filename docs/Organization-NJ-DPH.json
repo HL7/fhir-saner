@@ -1,0 +1,9 @@
+{
+  "resourceType": "Organization",
+  "id": "NJ-DPH",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: NJ-DPH</p><p><b>name</b>: New Jersey Department of Public Health</p></div>"
+  },
+  "name": "New Jersey Department of Public Health"
+}

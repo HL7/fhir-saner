@@ -150,206 +150,205 @@ acute and ICU beds and ICU utilization statistics to enable creation of a realis
 Some data is simply not publicly available. Thus, these examples also demonstrate how missing
 or unavailable data can be reported using the above profiles.
 
-<tablecols='2'><thead><tr><th>CDC Patient Impact and Hospital Capacity</th><th>FEMA Daily Hospital COVID19 Reporting
+<table cols='2'><thead><tr><th>CDC Patient Impact and Hospital Capacity</th><th>FEMA Daily Hospital COVID19 Reporting
 </th></tr></thead>
 <tbody>
 <tr><td>
 
-[2020-04-04](ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.html'>2020-04-04</a>
 
 </td><td>
 
-[2020-04-04](ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.html'>2020-04-04</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-05](ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.html'>2020-04-05</a>
 
 </td><td>
 
-[2020-04-05](ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.html'>2020-04-05</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-06](ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.html'>2020-04-06</a>
 
 </td><td>
 
-[2020-04-06](ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.html'>2020-04-06</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-07](ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.html'>2020-04-07</a>
 
 </td><td>
 
-[2020-04-07](ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.html'>2020-04-07</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-08](ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.html'>2020-04-08</a>
 
 </td><td>
 
-[2020-04-08](ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.html'>2020-04-08</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-09](ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.html'>2020-04-09</a>
 
 </td><td>
 
-[2020-04-09](ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.html'>2020-04-09</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-10](ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.html'>2020-04-10</a>
 
 </td><td>
 
-[2020-04-10](ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.html'>2020-04-10</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-11](ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.html'>2020-04-11</a>
 
 </td><td>
 
-[2020-04-11](ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.html'>2020-04-11</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-12](ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.html'>2020-04-12</a>
 
 </td><td>
 
-[2020-04-12](ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.html'>2020-04-12</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-13](ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.html'>2020-04-13</a>
 
 </td><td>
 
-[2020-04-13](ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.html'>2020-04-13</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-14](ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.html'>2020-04-14</a>
 
 </td><td>
 
-[2020-04-14](ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.html'>2020-04-14</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-15](ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.html'>2020-04-15</a>
 
 </td><td>
 
-[2020-04-15](ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.html'>2020-04-15</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-16](ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.html'>2020-04-16</a>
 
 </td><td>
 
-[2020-04-16](ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.html'>2020-04-16</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-17](ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.html'>2020-04-17</a>
 
 </td><td>
 
-[2020-04-17](ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.html'>2020-04-17</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-18](ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.html'>2020-04-18</a>
 
 </td><td>
 
-[2020-04-18](ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.html'>2020-04-18</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-19](ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.html'>2020-04-19</a>
 
 </td><td>
 
-[2020-04-19](ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.html'>2020-04-19</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-20](ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.html'>2020-04-20</a>
 
 </td><td>
 
-[2020-04-20](ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.html'>2020-04-20</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-21](ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.html'>2020-04-21</a>
 
 </td><td>
 
-[2020-04-21](ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.html'>2020-04-21</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-22](ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.html'>2020-04-22</a>
 
 </td><td>
 
-[2020-04-22](ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.html'>2020-04-22</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-23](ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.html'>2020-04-23</a>
 
 </td><td>
 
-[2020-04-23](ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.html'>2020-04-23</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-24](ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.html'>2020-04-24</a>
 
 </td><td>
 
-[2020-04-24](ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.html'>2020-04-24</a>
 
 </td></tr>
 <tr><td>
 
-[2020-04-25](ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.html)
+<a href='MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.html'>2020-04-25</a>
 
 </td><td>
 
-[2020-04-25](ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.html)
+<a href='MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.html'>2020-04-25</a>
 
 </td></tr>
-</tbody>
-</table>
+</tbody></table>

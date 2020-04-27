@@ -41,8 +41,8 @@
   </head>
   <body>
 
-    <style type="text/css">h2{--heading-prefix:"14.36"}
-    h3,h4,h5,h6{--heading-prefix:"14.36"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.40"}
+    h3,h4,h5,h6{--heading-prefix:"14.40"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         
@@ -89,7 +89,6 @@
     <ul class="dropdown-menu">
 	  <li><a href="overview.html">Overview</a></li>
 	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
-	  <li><a href="using_group_resources.html">Using Group Resources</a></li>
 	  <li><a href="security_considerations.html">Security Considerations</a></li>
     </ul>
   </li>
@@ -106,18 +105,7 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="StructureDefinition-saner-bed-group.html">Bed Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-device-group.html">Device Availability Group</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-bed-location.html">Single Bed Availability Status</a>
-      </li>
-      <li>
-        <a href="StructureDefinition-saner-supporting-device.html">Single Device Availability Status</a>
-      </li>
+        <li>TBD</li>
     </ul>
   </li>
     <li class="dropdown">
@@ -185,6 +173,7 @@
  <tr><td>Definition:</td><td><p>This Coding System fills gaps describing types of care services that a bed can support.</p>
 </td></tr>
  <tr><td>Publisher:</td><td>HL7 International</td></tr>
+ <tr><td>Content Mode:</td><td>Complete</td></tr>
  <tr><td>Source Resource:</td><td><a href="CodeSystem-BedType.xml.html">XML</a> / <a href="CodeSystem-BedType.json.html">JSON</a> / <a href="CodeSystem-BedType.ttl.html">Turtle</a></td></tr>
 </tbody></table>
 
@@ -201,9 +190,14 @@
 
 
   <div xmlns="http://www.w3.org/1999/xhtml"><h2>Saner Bed Type Coding System</h2><div><p>This Coding System fills gaps describing types of care services that a bed can support.</p>
-</div><p>This code system http://hl7.org/fhir/us/saner/CodeSystem/BedType defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">ROOM<a name="BedType-ROOM"> </a></td><td>Top level category for rooms</td><td>Rooms used for treatment of inpatient or ambulatory patients</td></tr><tr><td style="white-space:nowrap">OR<a name="BedType-OR"> </a></td><td>Operating Room</td><td>Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.</td></tr><tr><td style="white-space:nowrap">PR<a name="BedType-PR"> </a></td><td>Procedure Room</td><td>Procedure Rooms are those rooms used for non-surgical procedures</td></tr><tr><td style="white-space:nowrap">RR<a name="BedType-RR"> </a></td><td>Recovery Room</td><td>Recovery Rooms</td></tr><tr><td style="white-space:nowrap">EX<a name="BedType-EX"> </a></td><td>Examination Room</td><td>Rooms used for principally for patient examination and minor procedures</td></tr><tr><td style="white-space:nowrap">DIALR<a name="BedType-DIALR"> </a></td><td>Dialysis Treatment Room</td><td>Room used for dialysis treatment</td></tr><tr><td style="white-space:nowrap">BURNU<a name="BedType-BURNU"> </a></td><td>Burn Unit</td><td>Beds in a Burn Unit</td></tr><tr><td style="white-space:nowrap">NEGISO<a name="BedType-NEGISO"> </a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style="white-space:nowrap">OTHISO<a name="BedType-OTHISO"> </a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style="white-space:nowrap">NONISO<a name="BedType-NONISO"> </a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr><tr><td style="white-space:nowrap">NEONATAL<a name="BedType-NEONATAL"> </a></td><td>Neonatal Patient use</td><td>Resources designated for neonatal use</td></tr><tr><td style="white-space:nowrap">ADULT<a name="BedType-ADULT"> </a></td><td>Adult Patient use</td><td>Resources designated for adult patient use</td></tr><tr><td style="white-space:nowrap">PEDIATRIC<a name="BedType-PEDIATRIC"> </a></td><td>Pediatric Patient use</td><td>Resources designated for pediatric patient use</td></tr><tr><td style="white-space:nowrap">PHYSICAL<a name="BedType-PHYSICAL"> </a></td><td>Total Physical Resources</td><td>Total physical resources, whether licensed, staffed, or otherwise</td></tr><tr><td style="white-space:nowrap">LICENSED<a name="BedType-LICENSED"> </a></td><td>Licensed Resources</td><td>Maximum licensed resources</td></tr><tr><td style="white-space:nowrap">OVERFLOW<a name="BedType-OVERFLOW"> </a></td><td>Overflow Resources</td><td>Overflow / Surge resources that can be or have been added to add capacity</td></tr><tr><td style="white-space:nowrap">STAFFED<a name="BedType-STAFFED"> </a></td><td>Staffed Resources</td><td>Resources for which staff is available to provide support</td></tr><tr><td style="white-space:nowrap">UNSTAFFED<a name="BedType-UNSTAFFED"> </a></td><td>Unstaffed Resources</td><td>Resources that can be used but which are not staffed</td></tr><tr><td style="white-space:nowrap">INUSE<a name="BedType-INUSE"> </a></td><td>This resource is in use</td><td>Resources that are currently in use</td></tr><tr><td style="white-space:nowrap">AVAILABLE<a name="BedType-AVAILABLE"> </a></td><td>This resource is available for use</td><td>Resources that are available for use</td></tr><tr><td style="white-space:nowrap">NOTAVAIL<a name="BedType-NOTAVAIL"> </a></td><td>This resource is not available for use</td><td>Resources that are not available and are not in use</td></tr></table></div>
+</div><p>This code system http://hl7.org/fhir/us/saner/CodeSystem/BedType defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">ROOM<a name="BedType-ROOM"> </a></td><td>Top level category for rooms</td><td>Rooms used for treatment of inpatient or ambulatory patients</td></tr><tr><td style="white-space:nowrap">OR<a name="BedType-OR"> </a></td><td>Operating Room</td><td>Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room.</td></tr><tr><td style="white-space:nowrap">PR<a name="BedType-PR"> </a></td><td>Procedure Room</td><td>Procedure Rooms are those rooms used for non-surgical procedures</td></tr><tr><td style="white-space:nowrap">RR<a name="BedType-RR"> </a></td><td>Recovery Room</td><td>Recovery Rooms</td></tr><tr><td style="white-space:nowrap">EX<a name="BedType-EX"> </a></td><td>Examination Room</td><td>Rooms used for principally for patient examination and minor procedures</td></tr><tr><td style="white-space:nowrap">DIALR<a name="BedType-DIALR"> </a></td><td>Dialysis Treatment Room</td><td>Room used for dialysis treatment</td></tr><tr><td style="white-space:nowrap">NURSERY<a name="BedType-NURSERY"> </a></td><td>Nursery</td><td>Room used for Nursery</td></tr><tr><td style="white-space:nowrap">BURNU<a name="BedType-BURNU"> </a></td><td>Burn Unit</td><td>Beds in a Burn Unit</td></tr><tr><td style="white-space:nowrap">NEGISO<a name="BedType-NEGISO"> </a></td><td>Negative Pressure Isolation Unit</td><td>Beds in a negative pressure isolation environment</td></tr><tr><td style="white-space:nowrap">OTHISO<a name="BedType-OTHISO"> </a></td><td>Other Isolation Unit</td><td>Beds in an other (non-negative pressure) isolation environment</td></tr><tr><td style="white-space:nowrap">NONISO<a name="BedType-NONISO"> </a></td><td>Non-isolating unit</td><td>Bed in a unit that does not support isolation</td></tr><tr><td style="white-space:nowrap">NEONATAL<a name="BedType-NEONATAL"> </a></td><td>Neonatal Patient use</td><td>Resources designated for neonatal use</td></tr><tr><td style="white-space:nowrap">ADULT<a name="BedType-ADULT"> </a></td><td>Adult Patient use</td><td>Resources designated for adult patient use</td></tr><tr><td style="white-space:nowrap">PEDIATRIC<a name="BedType-PEDIATRIC"> </a></td><td>Pediatric Patient use</td><td>Resources designated for pediatric patient use</td></tr><tr><td style="white-space:nowrap">PHYSICAL<a name="BedType-PHYSICAL"> </a></td><td>Total Physical Resources</td><td>Total physical resources, whether licensed, staffed, or otherwise</td></tr><tr><td style="white-space:nowrap">LICENSED<a name="BedType-LICENSED"> </a></td><td>Licensed Resources</td><td>Maximum licensed resources</td></tr><tr><td style="white-space:nowrap">OVERFLOW<a name="BedType-OVERFLOW"> </a></td><td>Overflow Resources</td><td>Overflow / Surge resources that can be or have been added to add capacity</td></tr><tr><td style="white-space:nowrap">STAFFED<a name="BedType-STAFFED"> </a></td><td>Staffed Resources</td><td>Resources for which staff is available to provide support</td></tr><tr><td style="white-space:nowrap">UNSTAFFED<a name="BedType-UNSTAFFED"> </a></td><td>Unstaffed Resources</td><td>Resources that can be used but which are not staffed</td></tr><tr><td style="white-space:nowrap">INUSE<a name="BedType-INUSE"> </a></td><td>This resource is in use</td><td>Resources that are currently in use</td></tr><tr><td style="white-space:nowrap">AVAILABLE<a name="BedType-AVAILABLE"> </a></td><td>This resource is available for use</td><td>Resources that are available for use</td></tr><tr><td style="white-space:nowrap">NOTAVAIL<a name="BedType-NOTAVAIL"> </a></td><td>This resource is not available for use</td><td>Resources that are not available and are not in use</td></tr></table></div>
 
   
+  
+  <div style="display:inline-block">
+  <!-- CodeSystem-BedType-notes.md  -->
+
+  </div>
   
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -216,7 +210,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 13, 2020 11:49-0400">2020-04-13</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 07:08-0400">2020-04-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

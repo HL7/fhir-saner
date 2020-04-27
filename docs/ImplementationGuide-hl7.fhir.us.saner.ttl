@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SituationalAwarenessforNovelEpidemicResponse"];
   fhir:ImplementationGuide.title [ fhir:value "Situational Awareness for Novel Epidemic Response"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-04-13T11:49:10-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-04-27T07:08:50-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -50,6 +50,15 @@
   fhir:ImplementationGuide.fhirVersion [
      fhir:value "4.0.1";
      fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core";
+       fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.0" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -302,89 +311,17 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-audit-event-write.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-audit-event-write.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-write>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-audit-event-write" ]
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/audit-event-write>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/audit-event-write" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Audit Event Write Profile" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the AuditEvent Resource to record when a resource has been written." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-bed-group.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-group>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-bed-group" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Group Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Group Resource for data communicating about Bed availability." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-bed-location.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-location>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-bed-location" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed Location Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource for data communicating about a location for a bed." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-bed-measure-report.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-bed-measure-report" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Bed MeasureReport Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the MeasureReport Resource for reporting summary data about Bed availability." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-device-group.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-device-group" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device Group Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Group Resource for data communicating about device availability." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -402,7 +339,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Constraints on documentation for the evaluation of a Measure" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -410,17 +347,35 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-MeasureDescription.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-MeasuredItemDescription.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/MeasureDescription>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/MeasureDescription" ]
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/MeasuredItemDescription>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MeasuredItemDescription" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Saner Measure Description" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A CodeableConcept describing a measure value" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Saner Measured Item Description" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A CodeableConcept describing the item to be counted in terms of the type of FHIR Resource to count, and subtype of item identified by that resource" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:primitive-type" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PreciseDateTime.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PreciseDateTime>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PreciseDateTime" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Precise Date Time" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A dateTime value that contains seconds and a timezone" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -428,35 +383,17 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-audit-event-read.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-audit-event-read.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-read>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-audit-event-read" ]
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/audit-event-read>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/audit-event-read" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Audit Event Read" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the AuditEvent Resource to record when a record has been accessed." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-saner-device-measure-report.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-measure-report>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/saner-device-measure-report" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device MeasureReport Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the MeasureReport Resource for data communicating about device availability." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 9;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -474,7 +411,43 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile Saner Public Health Measure\n\nThe Public Health Measure Profile ensures that Measures are very well defined as an aid to automation\nof measures.  These are developed by The Saner Project team to ensure that the measure is well understood\nand computation of it can be automated from systems that have the measure data." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PublicHealthMeasureReport.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PublicHealthMeasureReport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Saner Public Health Measure Report" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile Saner Public Health Measure Report\n\nThe Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret\na report of a Public Health Measure." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-PublicHealthMeasureStratifier.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureStratifier>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/PublicHealthMeasureStratifier" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Saner Public Health Measure Stratifier" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile Saner Public Health Measure Stratifier\n\nA stratifier is effecitively a mixin that can be used with an existing measure\nto add stratification detail to that measure." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -492,7 +465,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Location Resource describing the location of resources (Beds and Devices)." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -510,7 +483,25 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Device Resource for data communicating about supporting devices." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-GeoLocation.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/GeoLocation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/GeoLocation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Extension Attributes to associate with a Location Reference to simplify Geographic search" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is essentially a database denormalization that facilitates search by Geographics coordinates on a location.\nIt enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.\nThe extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)\nin the hope that it could eventually be absorbed by that extension." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -528,7 +519,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Attributes describing the group of measures" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -546,7 +537,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Provides Alternate criteria for performing a measure, (e.g., CQL, Drules, et cetera)" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -564,7 +555,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -582,7 +573,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used to locations" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -600,7 +591,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set describes other properties of a bed, such as the ability to support isolation." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -618,7 +609,79 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set describes the types of care services that a bed can support." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-2.16.840.1.113762.1.4.1032.117.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.117>;
+         fhir:Reference.reference [ fhir:value "ValueSet/2.16.840.1.113762.1.4.1032.117" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C19HCC Confirmed COVID19 Infection" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Purpose:**\n\nClinical Focus:\n\nThis value set contains conditions associated with a confirmed diagnosis of COVID-19.\n\nData Element Scope:\n\nUsed to identify patients with a confirmed COVID-19 infection.\n\nInclusion Criteria:\n\nConditions associated with confirmed COVID-19 infection, including laboratory-confirmed COVID (symptomic or asymptomatic).\n\nExclusion Criteria:\n\nSuspected, possible or probable COVID-19, or possible exposure to COVID-19 without a definitive COVID-19 diagnosis." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
        fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-2.16.840.1.113762.1.4.1032.127.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.127>;
+         fhir:Reference.reference [ fhir:value "ValueSet/2.16.840.1.113762.1.4.1032.127" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C19HCC Hydroxychloroquine" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Purpose:**\n\nClinical Focus:\n\nThis value set contains branded and non-branded hydroxychloroquine medications.\n\nData Element Scope:\n\nUsed to identify patients who had hydroxychloroquine as an active medication on their medication list or who were administered hydroxychloroquine during a hospitalization.\n\nInclusion Criteria:\n\nBranded and non-branded medications with hydroxychloroquine as an ingredient. RxNorm term types: SCD\\/GPCK, SBD\\/BPCK, SCDG, BCDG, SCDC, BCDC, IN, PIN, BN.\n\nExclusion Criteria:\n\nnone" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-2.16.840.1.113762.1.4.1032.120.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.120>;
+         fhir:Reference.reference [ fhir:value "ValueSet/2.16.840.1.113762.1.4.1032.120" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C19HCC SARSCoV2 Exposure" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Purpose:**\n\nClinical Focus:\n\nThis value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.\n\nData Element Scope:\n\nTo identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.\n\nInclusion Criteria:\n\nConditions indicative of possible exposure to SARS-CoV-2.\n\nExclusion Criteria:\n\n: Conditions representing suspicion or confirmation of COVID-19." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-2.16.840.1.113762.1.4.1032.116.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.116>;
+         fhir:Reference.reference [ fhir:value "ValueSet/2.16.840.1.113762.1.4.1032.116" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "C19HCC Suspected COVID19 Infection" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "**Purpose:**\n\nClinical Focus:\n\nConditions indicative of a possible COVID-19 infection but no definitive COVID-19 diagnosis.\n\nData Element Scope:\n\nUsed to identify patients suspected to have COVID-19.\n\nInclusion Criteria:\n\nIncludes conditions indicative of a possible COVID-19 diagnosis.\n\nExclusion Criteria:\n\nConditions associated with a confirmed COVID-19 infection." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -636,7 +699,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes for COVID-19 Diagnostic Tests" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -654,7 +717,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes confirming COVID-19 Diagnostic Test Result" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -672,7 +735,25 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes for result values confirming COVID-19 Diagnostic Test Result" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-DeviceFields.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/DeviceFields>;
+         fhir:Reference.reference [ fhir:value "ValueSet/DeviceFields" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device Resource Field Names" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Field names in the Device Resource" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -690,7 +771,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used for ED or Overflow locations" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 22;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -708,7 +789,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set describes fields used to stratify groups in a report" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 23;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -726,7 +807,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Measure Groups defined by the SANER Project" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 24;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -744,7 +825,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used for ICU locations" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 25;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -762,7 +843,25 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used for inpatient locations" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 26;
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-LocationFields.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/LocationFields>;
+         fhir:Reference.reference [ fhir:value "ValueSet/LocationFields" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location Resource Field Names" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Field names in the Location Resource" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -780,7 +879,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Value Set Identifies methods of rate aggregation" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 27;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -798,7 +897,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Allowed Status Values for Saner Measures" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 28;
+       fhir:index 33;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -816,25 +915,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used Occupied Beds" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 29;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "ValueSet-OnlyCompleteOrPending.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/ValueSet/OnlyCompleteOrPending>;
-         fhir:Reference.reference [ fhir:value "ValueSet/OnlyCompleteOrPending" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OnlyCompleteOrPending" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This valueset is used to limit the reported status to complete or pending for a MeasureReport" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 30;
+       fhir:index 34;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -852,7 +933,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used to identify that a patient has died" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 31;
+       fhir:index 35;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -870,7 +951,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Measure Populations defined by The SANER Project" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 32;
+       fhir:index 36;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -888,7 +969,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Coded identifying suspected or confirmed COVID-19" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 33;
+       fhir:index 37;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -906,7 +987,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used for Ventilator Devices" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 34;
+       fhir:index 38;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -924,7 +1005,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes used for Devices that support Ventilation with a Tracheostomy" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 35;
+       fhir:index 39;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -942,7 +1023,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System fills gaps describing types of care services that a bed can support." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 36;
+       fhir:index 40;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -950,17 +1031,17 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "CodeSystem-DeviceFields.html" ]
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-DeviceFieldNames.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/CodeSystem/DeviceFields>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/DeviceFields" ]
+         fhir:link <http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/DeviceFieldNames" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Device Resource Field Names" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System identifies legal field names in a FHIR R4 Device Resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 37;
+       fhir:index 41;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -978,7 +1059,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Code System for Groups defined by The SANER Project" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 38;
+       fhir:index 42;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -986,17 +1067,17 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "CodeSystem-LocationFields.html" ]
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-LocationFieldNames.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/CodeSystem/LocationFields>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/LocationFields" ]
+         fhir:link <http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/LocationFieldNames" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Location Resource Field Names" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System identifies legal field names in a FHIR R4 Location Resource." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 39;
+       fhir:index 43;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -1014,7 +1095,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Coding System Identifies methods of rate aggregation" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 40;
+       fhir:index 44;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -1032,7 +1113,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Code System for Populations defined by The SANER Project" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 41;
+       fhir:index 45;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -1053,7 +1134,931 @@
          fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure>
        ]
      ], [
-       fhir:index 42;
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/04/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/04/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/05/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/05/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/06/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/06/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/07/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/07/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/08/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/08/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/09/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/09/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/10/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/10/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/11/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/11/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/12/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/12/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/13/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/13/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/14/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/14/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/15/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/15/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/16/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 71;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/16/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/17/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 73;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/17/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/18/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 75;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/18/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/19/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/19/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 78;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/20/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 79;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/20/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/21/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/21/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 82;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/22/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/22/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 84;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/23/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 85;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/23/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 86;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/24/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 87;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/24/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 88;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/25/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 89;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/25/2020" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+         fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+       ]
+     ], [
+       fhir:index 90;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -1061,11 +2066,11 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "Measure-FEMAReporting.html" ]
+         fhir:Extension.valueUri [ fhir:value "Measure-FEMADailyHospitalCOVID19Reporting.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/Measure/FEMAReporting>;
-         fhir:Reference.reference [ fhir:value "Measure/FEMAReporting" ]
+         fhir:link <http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting>;
+         fhir:Reference.reference [ fhir:value "Measure/FEMADailyHospitalCOVID19Reporting" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "FEMA Laboratory Orders and Results Daily Increase Reporting" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts." ];
@@ -1074,7 +2079,7 @@
          fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure>
        ]
      ], [
-       fhir:index 43;
+       fhir:index 91;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -1092,74 +2097,40 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Concept Map provides mappings from terms used in the HAvBED2 specification to HL7 FHIR" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 44;
+       fhir:index 92;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
+         fhir:Extension.valueString [ fhir:value "Organization" ]
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "Measure-sanerCDC.html" ]
+         fhir:Extension.valueUri [ fhir:value "Organization-NJ-DPH.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/Measure/sanerCDC>;
-         fhir:Reference.reference [ fhir:value "Measure/sanerCDC" ]
+         fhir:link <http://hl7.org/fhir/us/saner/Organization/NJ-DPH>;
+         fhir:Reference.reference [ fhir:value "Organization/NJ-DPH" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "sanerCDC" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CDC Measurement Group" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "NJ-DPH" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Organization for the New Jersey Department of Public Health" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 45;
+       fhir:index 93;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Measure" ]
+         fhir:Extension.valueString [ fhir:value "Location" ]
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "Measure-sanerFEMA.html" ]
+         fhir:Extension.valueUri [ fhir:value "Location-states-NJ.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/Measure/sanerFEMA>;
-         fhir:Reference.reference [ fhir:value "Measure/sanerFEMA" ]
+         fhir:link <http://hl7.org/fhir/us/saner/Location/states-NJ>;
+         fhir:Reference.reference [ fhir:value "Location/states-NJ" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "sanerFEMA" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "FEMA Measurement Group" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 46;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "MeasureReport-FHIR-461.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/FHIR-461>;
-         fhir:Reference.reference [ fhir:value "MeasureReport/FHIR-461" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIR-461" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 47;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "MeasureReport" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "MeasureReport-FHIR-463.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/saner/MeasureReport/FHIR-463>;
-         fhir:Reference.reference [ fhir:value "MeasureReport/FHIR-463" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIR-463" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "states-NJ" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example Location for the State of New Jersey" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
@@ -1213,8 +2184,8 @@
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 9;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "using_group_resources.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Using Group Resources" ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "vocabulary.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Vocabulary" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 10;
@@ -1271,42 +2242,44 @@
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
      ], [
        fhir:index 9;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
      ], [
        fhir:index 10;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
      ], [
        fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 12;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
      ]
   ] .
 
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-write> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-group> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-location> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-bed-measure-report> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-group> a fhir:us .
+<http://hl7.org/fhir/us/saner/StructureDefinition/audit-event-write> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/StructureDefinition/MeasureCriteria> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/StructureDefinition/MeasureDescription> a fhir:us .
+<http://hl7.org/fhir/us/saner/StructureDefinition/MeasuredItemDescription> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-audit-event-read> a fhir:us .
+<http://hl7.org/fhir/us/saner/StructureDefinition/PreciseDateTime> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/StructureDefinition/saner-device-measure-report> a fhir:us .
+<http://hl7.org/fhir/us/saner/StructureDefinition/audit-event-read> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureStratifier> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/StructureDefinition/saner-supporting-device> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/StructureDefinition/GeoLocation> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes> a fhir:us .
 
@@ -1320,11 +2293,21 @@
 
 <http://hl7.org/fhir/us/saner/ValueSet/BedType> a fhir:us .
 
+<http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.117> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.127> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.120> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/ValueSet/2.16.840.1.113762.1.4.1032.116> a fhir:us .
+
 <http://hl7.org/fhir/us/saner/ValueSet/COVID19DiagnosticTest> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19Diagnosis> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19DiagnosisValues> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/ValueSet/DeviceFields> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ValueSet/EDorOverflowLocations> a fhir:us .
 
@@ -1336,13 +2319,13 @@
 
 <http://hl7.org/fhir/us/saner/ValueSet/InpatientLocations> a fhir:us .
 
+<http://hl7.org/fhir/us/saner/ValueSet/LocationFields> a fhir:us .
+
 <http://hl7.org/fhir/us/saner/ValueSet/MeasureRateAggregationValues> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ValueSet/OccupiedBed> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/ValueSet/OnlyCompleteOrPending> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ValueSet/PatientDied> a fhir:us .
 
@@ -1356,11 +2339,11 @@
 
 <http://hl7.org/fhir/us/saner/CodeSystem/BedType> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/CodeSystem/DeviceFields> a fhir:us .
+<http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/CodeSystem/LocationFields> a fhir:us .
+<http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/CodeSystem/MeasureRateAggregation> a fhir:us .
 
@@ -1368,17 +2351,101 @@
 
 <http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/Measure/FEMAReporting> a fhir:us .
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting> a fhir:us .
 
 <http://hl7.org/fhir/us/saner/ConceptMap/HAvBED2toFHIR> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/Measure/sanerCDC> a fhir:us .
+<http://hl7.org/fhir/us/saner/Organization/NJ-DPH> a fhir:us .
 
-<http://hl7.org/fhir/us/saner/Measure/sanerFEMA> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/MeasureReport/FHIR-461> a fhir:us .
-
-<http://hl7.org/fhir/us/saner/MeasureReport/FHIR-463> a fhir:us .
+<http://hl7.org/fhir/us/saner/Location/states-NJ> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 
