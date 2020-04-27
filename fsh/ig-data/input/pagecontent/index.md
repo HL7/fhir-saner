@@ -43,7 +43,7 @@ This guide is organized into four main sections:
    2. [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html)
    3. [Measure Criteria](StructureDefinition-MeasureCriteria.html)
    4. [Measure Population Alternate Criteria(StructureDefinition-MeasurePopulationAlternateCriteria.html)
-   5. [Measure Description](StructureDefinition-MeasureDescription.html)
+   5. [Measured Item Description](StructureDefinition-MeasuredItemDescription.html)
    6. [Audit Event Write](StructureDefinition-audit-event-write.html)
    7. [Audit Event Read](StructureDefinition-audit-event-read.html)
 

@@ -63,17 +63,293 @@ A more detailed model about how these are related follows.
 
 ## Measurement Reporting Approach
 The approach of The SANER IG to measure collection is to capture all measures reported to a single
-agency in a single Measure, with multiple groups in the measure. This simplifies reporting, but
-can cause data loss as a single report might combine a ratio, continuous-variable and
-other measures, losing the ability to accurately describe the type of measure being reported.
+agency in a single Measure, with multiple groups in the measure.  This is very much
+treating MeasureReport as if it were a report card (as one might receive from a school)
+reporting how a location is doing on all measured criteria, with each group within the
+MeasureReport reflecting one of the "subject areas" being measured, much like a report
+card reports on a student's progress in different subjects.
 
-That issue is addressed by creating an extension to allow topic, scoring and type to
-be shifted from Measure to Measure.group. To simplify interpretation of Measure by consumers
-the Measure will always include these extensions on Measure.group, even if they are
-not strictly needed.  A tracker will be created (#TODO: Create Tracker) to suggest moving
-these classifiers to group.
+Unlike a report card, a Measure Report is not necessarily an evaluation of how a location
+is performing its function. The number of patients in the hospital due to pandemic is
+not related to how well the hospital performs, and much more due to other factors, such
+as the density of the local population, or the implementation of appropriate measures to
+contain the pandemic that are outside the control of the location that is being measured.
+These MeasureReport resources should be viewed not as a critique of a given facility,
+rather, an evaluation of the impact the pandemic is having upon a facility.
 
-### Measures
+Combining reporting into a single MeasureReport would result in data loss on the Measure
+Resource without the ability to express attributes of each Measured item at the group
+level.  That issue is addressed by this Implementation Guide by creating an extension (see Measure
+Group Attributes below) to allow topic, scoring and type to be shifted from Measure to
+Measure.group. To simplify interpretation of Measure by consumers, Measures created
+in this guide always include these extensions on Measure.group, even if they are not strictly
+needed.  A tracker will be created (#TODO: Create Tracker) to suggest moving these classifiers
+to group.
+
+### Profiles
+* [Public Health Measure](StructureDefinition-PublicHealthMeasure.html) profiles the
+  Measure resource to support Public Health and Emergency Response surveillance requirements.
+
+* [Public Health Measure Report](StructureDefinition-PublicHealthMeasureReport.html)
+  profiles the MeasureReport Resource to align it with resources adopting the Public
+  Health Measure profile.
+
+### Supporting Profiles
+* [Measure Criteria](StructureDefinition-MeasureCriteria.html) profiles the
+  [Expression](https://www.hl7.org/fhir/R4/metadatatypes.html#Expression) data type
+  to enforce requirements essential for the creation of measures supporting automatic
+  evaluation and reporting.
+
+* [Measured Item Description](StructureDefinition-MeasuredItemDescription.html) provides
+  how to code what is to be counted to identify:
+
+  1. The FHIR Resource to be used for counting.
+  2. A code or ValueSet describing the subtypes of that resource to include in the count.
+
+### Supporting Extensions
+* [GeoLocation](StructureDefinition-GeoLocation.html) defines an extension that can
+  be used on a Location Resource to include its geolocation data within a Reference
+  to the Location. This localizes (denormalizes) the data in the MeasureReport, enabling
+  more efficient geographic searching capabilities.
+
+* [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html)
+  defines an extension that allows alternate criteria for evaluation to be defined for
+  a Measure.  In this way, multiple implementations for counting can be supported based
+  on the capabilities of the system available.
+
+* [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) defines
+  an extension that enables interpretation the structure of a group as a collection
+  of populations that evaluate to a single measured item.
+
+
+### Predefined Measures
+This implementation guide includes two predefined measures describing the measurements
+that are required to be reported to CDC/NHSN and FEMA.
+
 * [CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-CDCPatientImpactAndHospitalCapacity.json.html)
-* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMADailyHospitalCOVID19Reporting.json.html)
+  defines a measure that is aligned with the reporting required by the
+  [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
+  Hospital Capacity module, and
 
+* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMADailyHospitalCOVID19Reporting.json.html)
+  defines a measure that is aligned with the reporting required by the [Federal Emergency Management Agency (FEMA)](https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19)
+  for reporting COVID-19 test results from Hospital in-house laboratories.
+
+Additional reporting requirements have already been established by these Federal agencies.
+This implementation guide will be updated as feasible to include measures for those reports
+as time allows.
+
+### Example Data
+Example data has been created for both of the measures above by using publicly available
+data from [The Covid Tracking Project](https://covidtracking.com/).  Data was downloaded
+in CSV format using the [States Historical Data APIs](https://covidtracking.com/api) from
+that project.  The data was augmented with other information regarding number of available
+acute and ICU beds and ICU utilization statistics to enable creation of a realistic examples.
+**These samples are intended to be realistic, but are NOT real examples**.
+
+Some data is simply not publicly available. Thus, these examples also demonstrate how missing
+or unavailable data can be reported using the above profiles.
+
+<tablecols='2'><thead><tr><th>CDC Patient Impact and Hospital Capacity</th><th>FEMA Daily Hospital COVID19 Reporting
+</th></tr></thead>
+<tbody>
+<tr><td>
+
+[2020-04-04](ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-04](ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-05](ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-05](ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-06](ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-06](ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-07](ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-07](ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-08](ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-08](ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-09](ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-09](ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-10](ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-10](ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-11](ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-11](ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-12](ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-12](ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-13](ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-13](ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-14](ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-14](ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-15](ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-15](ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-16](ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-16](ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-17](ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-17](ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-18](ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-18](ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-19](ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-19](ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-20](ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-20](ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-21](ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-21](ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-22](ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-22](ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-23](ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-23](ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-24](ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-24](ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+<tr><td>
+
+[2020-04-25](ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity.html)
+
+</td><td>
+
+[2020-04-25](ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting.html)
+
+</td></tr>
+</tbody>
+</table>

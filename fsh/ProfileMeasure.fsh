@@ -46,7 +46,7 @@ Description: "Attributes describing the group of measures"
 * extension[improvementNotation].valueCodeableConcept from http://hl7.org/fhir/ValueSet/measure-improvement-notation (extensible)
 
 * extension[subject] ^short = "Like Measure.subject, but applies to group"
-* extension[subject].value[x] only MeasureDescription
+* extension[subject].value[x] only MeasuredItemDescription
 * extension[subject].valueCodeableConcept from http://hl7.org/fhir/ValueSet/resource-types (extensible)
 
 Profile: MeasureCriteria
@@ -76,10 +76,10 @@ Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, 
 * valueExpression 1..1
 * valueExpression ^short = "Instructions for how to automatically count this population"
 
-Profile:        MeasureDescription
+Profile:        MeasuredItemDescription
 Parent:         CodeableConcept
-Title:          "Saner Measure Description"
-Description:    "A CodeableConcept describing a measure value"
+Title:          "Saner Measured Item Description"
+Description:    "A CodeableConcept describing the item to be counted in terms of the type of FHIR Resource to count, and subtype of item identified by that resource"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 
 * coding ^slicing.discriminator.type = #pattern

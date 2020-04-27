@@ -15,7 +15,7 @@ Description : "Example Organization for the New Jersey Department of Public Heal
 * name = "New Jersey Department of Public Health"
 
 Instance: ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/04/2020"
 * id = "ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -28,6 +28,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-04"
@@ -71,7 +73,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 34124
 
 Instance: ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/05/2020"
 * id = "ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -84,6 +86,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-05"
@@ -127,7 +131,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 37505
 
 Instance: ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/06/2020"
 * id = "ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -140,6 +144,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-06"
@@ -183,7 +189,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 41090
 
 Instance: ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/07/2020"
 * id = "ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -196,6 +202,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-07"
@@ -239,7 +247,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 44416
 
 Instance: ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/08/2020"
 * id = "ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -252,6 +260,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-08"
@@ -295,7 +305,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 47437
 
 Instance: ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/09/2020"
 * id = "ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -308,6 +318,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-09"
@@ -351,7 +363,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 51027
 
 Instance: ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/10/2020"
 * id = "ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -364,6 +376,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-10"
@@ -407,7 +421,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 54588
 
 Instance: ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/11/2020"
 * id = "ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -420,6 +434,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-11"
@@ -463,7 +479,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 58151
 
 Instance: ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/12/2020"
 * id = "ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -476,6 +492,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-12"
@@ -519,7 +537,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 61850
 
 Instance: ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/13/2020"
 * id = "ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -532,6 +550,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-13"
@@ -575,7 +595,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 64584
 
 Instance: ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/14/2020"
 * id = "ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -588,6 +608,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-14"
@@ -631,7 +653,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 68824
 
 Instance: ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/15/2020"
 * id = "ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -644,6 +666,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-15"
@@ -687,7 +711,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 71030
 
 Instance: ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/16/2020"
 * id = "ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -700,6 +724,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-16"
@@ -743,7 +769,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 75317
 
 Instance: ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/17/2020"
 * id = "ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -756,6 +782,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-17"
@@ -799,7 +827,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 78467
 
 Instance: ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/18/2020"
 * id = "ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -812,6 +840,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-18"
@@ -855,7 +885,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 81420
 
 Instance: ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/19/2020"
 * id = "ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -868,6 +898,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-19"
@@ -911,7 +943,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 85301
 
 Instance: ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/20/2020"
 * id = "ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -924,6 +956,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-20"
@@ -967,7 +1001,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 88806
 
 Instance: ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/21/2020"
 * id = "ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -980,6 +1014,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-21"
@@ -1023,7 +1059,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 92387
 
 Instance: ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/22/2020"
 * id = "ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1036,6 +1072,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-22"
@@ -1079,7 +1117,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 95865
 
 Instance: ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/23/2020"
 * id = "ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1092,6 +1130,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-23"
@@ -1135,7 +1175,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 99989
 
 Instance: ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/24/2020"
 * id = "ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1148,6 +1188,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-24"
@@ -1191,7 +1233,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 102196
 
 Instance: ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/25/2020"
 * id = "ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1204,6 +1246,8 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-25"
@@ -1247,7 +1291,7 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].population[5].count = 105523
 
 Instance: ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/04/2020"
 * id = "ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1260,6 +1304,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-04"
@@ -1326,7 +1372,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/05/2020"
 * id = "ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1339,6 +1385,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-05"
@@ -1405,7 +1453,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/06/2020"
 * id = "ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1418,6 +1466,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-06"
@@ -1482,7 +1532,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/07/2020"
 * id = "ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1495,6 +1545,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-07"
@@ -1558,7 +1610,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/08/2020"
 * id = "ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1571,6 +1623,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-08"
@@ -1634,7 +1688,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/09/2020"
 * id = "ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1647,6 +1701,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-09"
@@ -1710,7 +1766,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/10/2020"
 * id = "ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1723,6 +1779,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-10"
@@ -1786,7 +1844,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/11/2020"
 * id = "ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1799,6 +1857,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-11"
@@ -1862,7 +1922,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/12/2020"
 * id = "ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1875,6 +1935,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-12"
@@ -1938,7 +2000,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/13/2020"
 * id = "ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -1951,6 +2013,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-13"
@@ -2014,7 +2078,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/14/2020"
 * id = "ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2027,6 +2091,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-14"
@@ -2090,7 +2156,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/15/2020"
 * id = "ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2103,6 +2169,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-15"
@@ -2166,7 +2234,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/16/2020"
 * id = "ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2179,6 +2247,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-16"
@@ -2242,7 +2312,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/17/2020"
 * id = "ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2255,6 +2325,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-17"
@@ -2318,7 +2390,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/18/2020"
 * id = "ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2331,6 +2403,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-18"
@@ -2394,7 +2468,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/19/2020"
 * id = "ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2407,6 +2481,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-19"
@@ -2470,7 +2546,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/20/2020"
 * id = "ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2483,6 +2559,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-20"
@@ -2546,7 +2624,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/21/2020"
 * id = "ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2559,6 +2637,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-21"
@@ -2622,7 +2702,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/22/2020"
 * id = "ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2635,6 +2715,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-22"
@@ -2698,7 +2780,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/23/2020"
 * id = "ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2711,6 +2793,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-23"
@@ -2774,7 +2858,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/24/2020"
 * id = "ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2787,6 +2871,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-24"
@@ -2850,7 +2936,7 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity
-InstanceOf: MeasureReport
+InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for NJ on 04/25/2020"
 * id = "ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -2863,6 +2949,8 @@ Description : "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for 
 * subject.extension.extension[0].valueDecimal = 40.1907
 * subject.extension.extension[1].url = "longitude"
 * subject.extension.extension[1].valueDecimal = 74.6728
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
 * subject.reference = "Location/states-NJ"
 * subject.display = "State of New Jersey"
 * date = "2020-04-25"
