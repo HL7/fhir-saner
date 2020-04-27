@@ -6,7 +6,7 @@
     <profile value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>meta</b>: </p><p><b>url</b>: <a href="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity">http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>title</b>: Patient Impact and Hospital Capacity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: Apr 27, 2020, 6:17:07 AM</p><p><b>publisher</b>: HL7 International</p><p><b>contact</b>: , , </p><p><b>useContext</b>: </p><p><b>jurisdiction</b>: United States of America <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>author</b>: </p><p><b>relatedArtifact</b>: , , , </p><p><b>definition</b>: Ventilator
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>meta</b>: </p><p><b>url</b>: <a href="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity">http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: CDCPatientImpactAndHospitalCapacity</p><p><b>title</b>: Patient Impact and Hospital Capacity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: Apr 27, 2020, 7:08:50 AM</p><p><b>publisher</b>: HL7 International</p><p><b>contact</b>: , , </p><p><b>useContext</b>: </p><p><b>jurisdiction</b>: United States of America <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>author</b>: </p><p><b>relatedArtifact</b>: , , , </p><p><b>definition</b>: Ventilator
 : Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive
 pressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.
 Note: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and
@@ -65,7 +65,7 @@ the data is collected instead of the cumulated number of deaths.</p><p><b>criter
   <title value="Patient Impact and Hospital Capacity"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2020-04-27T06:17:07-04:00"/>
+  <date value="2020-04-27T07:08:50-04:00"/>
   <publisher value="HL7 International"/>
   <contact>
     <name value="HL7 Patient Administration Workgroup"/>

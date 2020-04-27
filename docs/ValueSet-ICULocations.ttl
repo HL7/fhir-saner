@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "ICULocations"];
   fhir:ValueSet.title [ fhir:value "ICU Locations"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2020-04-27T06:17:07-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2020-04-27T07:08:50-04:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "HL7 International"];
   fhir:ValueSet.contact [
      fhir:index 0;

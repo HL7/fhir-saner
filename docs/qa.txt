@@ -3,7 +3,7 @@
 
 err = 13, warn = 47, info = 44
 IG Publisher Version: v1.0.82-SNAPSHOT
-Generated Mon Apr 27 06:18:34 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
+Generated Mon Apr 27 07:10:19 EDT 2020. FHIR version 4.0.1 for hl7.fhir.us.saner#0.1.0 (canonical = http://hl7.org/fhir/us/saner)
 
  Build Errors : 0 / 1
  C:\Users\kboone\git\fhir-saner\input\ImplementationGuide-hl7.fhir.us.saner : 0 / 1

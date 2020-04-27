@@ -3,7 +3,7 @@
   "name": "SituationalAwarenessforNovelEpidemicResponse",
   "package-id": "hl7.fhir.us.saner",
   "ig-ver": "0.1.0",
-  "date": "Mon, 27 Apr, 2020 06:17:07 -0400",
+  "date": "Mon, 27 Apr, 2020 07:08:50 -0400",
   "errs": 13,
   "warnings": 47,
   "hints": 44,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="1fff7cfc-ae7e-4eb6-800a-580f62542ff9"/>
+  <id value="20172ef8-04dc-4155-8714-b46169b7f20a"/>
   <meta>
-    <lastUpdated value="2020-04-27T06:17:07.555-04:00"/>
+    <lastUpdated value="2020-04-27T07:08:50.902-04:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -67,7 +67,7 @@
         <name value="BedLocationOperationalStatus"/>
         <title value="Bed Location Operational Status"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -92,8 +92,8 @@
         </contact>
         <description value="This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."/>
         <expansion>
-          <identifier value="urn:uuid:a5866c77-fca5-4bfe-8edd-dd4871bb12aa"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:3844e9ca-d171-43b6-acc4-0b49677af3d2"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -151,7 +151,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -176,8 +176,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -247,7 +247,7 @@
         <name value="BedProperty"/>
         <title value="Bed Property"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -272,8 +272,8 @@
         </contact>
         <description value="This value set describes other properties of a bed, such as the ability to support isolation."/>
         <expansion>
-          <identifier value="urn:uuid:d4864810-04e8-45f3-8dbc-2f1bab2266db"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:82fe4abf-5d95-4f69-aa7c-8ca132b166f9"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -370,8 +370,8 @@
         </contact>
         <description value="**Purpose:**&#xA;&#xA;Clinical Focus:&#xA;&#xA;This value set contains conditions associated with a confirmed diagnosis of COVID-19.&#xA;&#xA;Data Element Scope:&#xA;&#xA;Used to identify patients with a confirmed COVID-19 infection.&#xA;&#xA;Inclusion Criteria:&#xA;&#xA;Conditions associated with confirmed COVID-19 infection, including laboratory-confirmed COVID (symptomic or asymptomatic).&#xA;&#xA;Exclusion Criteria:&#xA;&#xA;Suspected, possible or probable COVID-19, or possible exposure to COVID-19 without a definitive COVID-19 diagnosis."/>
         <expansion>
-          <identifier value="urn:uuid:5ae86cbc-23a0-4fbd-a48a-4f3135117791"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:7bcbe5dd-4fff-49ac-9968-e53b7ddf8fd9"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>
@@ -637,8 +637,8 @@
         </contact>
         <description value="**Purpose:**&#xA;&#xA;Clinical Focus:&#xA;&#xA;This value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.&#xA;&#xA;Data Element Scope:&#xA;&#xA;To identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.&#xA;&#xA;Inclusion Criteria:&#xA;&#xA;Conditions indicative of possible exposure to SARS-CoV-2.&#xA;&#xA;Exclusion Criteria:&#xA;&#xA;: Conditions representing suspicion or confirmation of COVID-19."/>
         <expansion>
-          <identifier value="urn:uuid:b239e541-7b2b-4791-a97b-5df9072c0857"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:460ee4ad-e376-422d-b0aa-3dbf996e9bb9"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>
@@ -733,8 +733,8 @@
         </contact>
         <description value="**Purpose:**&#xA;&#xA;Clinical Focus:&#xA;&#xA;Conditions indicative of a possible COVID-19 infection but no definitive COVID-19 diagnosis.&#xA;&#xA;Data Element Scope:&#xA;&#xA;Used to identify patients suspected to have COVID-19.&#xA;&#xA;Inclusion Criteria:&#xA;&#xA;Includes conditions indicative of a possible COVID-19 diagnosis.&#xA;&#xA;Exclusion Criteria:&#xA;&#xA;Conditions associated with a confirmed COVID-19 infection."/>
         <expansion>
-          <identifier value="urn:uuid:b8eb0962-978c-40f1-ac32-2ea8233ea46a"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:9d7da2cd-757d-4e18-81b9-cdcdc342e097"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>
@@ -790,7 +790,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -815,8 +815,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -854,7 +854,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -879,8 +879,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -918,7 +918,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -943,8 +943,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1518,7 +1518,7 @@
         <name value="DeviceFields"/>
         <title value="Device Resource Field Names"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -1543,8 +1543,8 @@
         </contact>
         <description value="Field names in the Device Resource"/>
         <expansion>
-          <identifier value="urn:uuid:c3ad42f3-48e8-4b59-ab50-9067e811879b"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:1475dae4-822d-43f5-99ce-43ee3a75ff80"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="66"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1851,7 +1851,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -1876,8 +1876,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1974,7 +1974,7 @@
         <name value="Groups"/>
         <title value="Measure Groups"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -1999,8 +1999,8 @@
         </contact>
         <description value="Measure Groups defined by the SANER Project"/>
         <expansion>
-          <identifier value="urn:uuid:d831feba-568b-4d65-a446-014e83d9f3ed"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:85f3358c-97d9-4869-a4fe-79e31c43cee9"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -2072,7 +2072,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2097,8 +2097,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -2136,7 +2136,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2161,8 +2161,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -2232,7 +2232,7 @@
         <name value="MeasureRateAggregationValues"/>
         <title value="Rate Aggregation Value Set"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2257,8 +2257,8 @@
         </contact>
         <description value="This Value Set Identifies methods of rate aggregation"/>
         <expansion>
-          <identifier value="urn:uuid:441d4765-6d00-4abb-b1ae-d40678c16b0e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:834be961-c2f2-4ea0-8416-ae266783462f"/>
+          <timestamp value="2020-04-27T07:09:30-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -2348,7 +2348,7 @@
         <name value="MeasureStatus"/>
         <title value="Measure Status Values"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2373,8 +2373,8 @@
         </contact>
         <description value="Allowed Status Values for Saner Measures"/>
         <expansion>
-          <identifier value="urn:uuid:dde99784-2cbe-4b89-843d-05a80d8a7946"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:81e4e8bf-93d8-4800-81fc-944c78a33d9b"/>
+          <timestamp value="2020-04-27T07:09:30-04:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -2432,7 +2432,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2457,8 +2457,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -2496,7 +2496,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2521,8 +2521,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -2776,7 +2776,7 @@
         <name value="Populations"/>
         <title value="Measure Populations"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -2801,8 +2801,8 @@
         </contact>
         <description value="Measure Populations defined by The SANER Project"/>
         <expansion>
-          <identifier value="urn:uuid:b64e158b-ee10-4a03-bf53-4d1efb1fa71a"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:0b42de67-a13e-4ec5-8066-625fd588a3d2"/>
+          <timestamp value="2020-04-27T07:09:30-04:00"/>
           <total value="26"/>
           <parameter>
             <name value="excludeNested"/>
@@ -2975,7 +2975,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -3000,8 +3000,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -3039,7 +3039,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -3064,8 +3064,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -3103,7 +3103,7 @@
         <name value="BedLocationTypes"/>
         <title value="Location Types"/>
         <status value="active"/>
-        <date value="2020-04-27T06:17:07-04:00"/>
+        <date value="2020-04-27T07:08:50-04:00"/>
         <publisher value="HL7 International"/>
         <contact>
           <name value="HL7 Patient Administration Workgroup"/>
@@ -3128,8 +3128,8 @@
         </contact>
         <description value="Codes used to locations"/>
         <expansion>
-          <identifier value="urn:uuid:12d38934-b72c-4943-9b42-c1f1aae71f8e"/>
-          <timestamp value="2020-04-27T06:17:46-04:00"/>
+          <identifier value="urn:uuid:70b7e6bd-9f58-4c41-802e-be1baffd3c66"/>
+          <timestamp value="2020-04-27T07:09:29-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>

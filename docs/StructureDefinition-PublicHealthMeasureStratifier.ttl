@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "PublicHealthMeasureStratifier"];
   fhir:StructureDefinition.title [ fhir:value "Saner Public Health Measure Stratifier"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-04-27T06:17:07-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-04-27T07:08:50-04:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 International"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

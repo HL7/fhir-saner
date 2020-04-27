@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SituationalAwarenessforNovelEpidemicResponse"];
   fhir:ImplementationGuide.title [ fhir:value "Situational Awareness for Novel Epidemic Response"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-04-27T06:17:07-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-04-27T07:08:50-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
