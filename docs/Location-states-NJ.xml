@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="states-NJ"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: states-NJ</p><p><b>identifier</b>: 34</p><h3>Positions</h3><table class="grid"><tr><td>-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td>*</td><td>74.6728</td><td>40.1907</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://www.census.gov/geographies"/>
+    <value value="34"/>
+  </identifier>
+  <position>
+    <longitude value="74.6728"/>
+    <latitude value="40.1907"/>
+  </position>
+</Location>

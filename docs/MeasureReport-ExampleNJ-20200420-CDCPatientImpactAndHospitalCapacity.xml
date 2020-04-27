@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:f87d89f8-876e-11ea-1639-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity">http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity</a></p><p><b>subject</b>: <a href="Location-states-NJ.html">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 20, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href="Organization-NJ-DPH.html">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 20, 2020, 12:00:00 AM --&gt; Apr 20, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem code 'Beds' = 'Beds)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: All Hospital Beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numTotBeds' = 'All Hospital Beds; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: 20000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Hospital Inpatient Beds <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numBeds' = 'Hospital Inpatient Beds; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>count</b>: 15000</p></blockquote><blockquote><p><b>population</b></p><p><b>code</b>: Hospital Inpatient Bed Occupancy <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'numBedsOcc' = 'Hospital Inpatient Bed Occupancy; {http://terminology.hl7.org/CodeSystem/measure-population code 'measure-population' = 'Measure Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style="color: maroon">Exception generating Narrative: null</b></p></div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:f87d89f8-876e-11ea-1639-09173f13e4c5"/>
+  </identifier>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity"/>
+  <subject>
+    <extension url="http://hl7.org/fhir/us/saner/StructureDefinition/GeoLocation">
+      <extension url="latitude">
+        <valueDecimal value="40.1907"/>
+      </extension>
+      <extension url="longitude">
+        <valueDecimal value="74.6728"/>
+      </extension>
+    </extension>
+    <reference value="Location/states-NJ"/>
+    <identifier>
+      <system value="https://www.census.gov/geographies"/>
+      <value value="34"/>
+    </identifier>
+    <display value="State of New Jersey"/>
+  </subject>
+  <date value="2020-04-20"/>
+  <reporter>
+    <reference value="Organization/NJ-DPH"/>
+    <display value="New Jersey Department of Public Health"/>
+  </reporter>
+  <period>
+    <start value="2020-04-20"/>
+    <end value="2020-04-20"/>
+  </period>
+  <group>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+        <code value="Beds"/>
+      </coding>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numTotBeds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <count value="20000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numBeds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count value="15000"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numBedsOcc"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numICUBeds"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count value="2500"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numICUBedsOcc"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+        <code value="Ventilators"/>
+      </coding>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numVent"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <count value="2250"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numVentUse"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count value="1907"/>
+    </population>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/GroupSystem"/>
+        <code value="Encounters"/>
+      </coding>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19Pats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <count value="0"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19VentPats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count value="2018"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19HospPats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count value="6986"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19MechVentPats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count value="1594"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19HOPats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19OverflowPats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19OFMechVentPats"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="numC19Died"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+  </group>
+</MeasureReport>

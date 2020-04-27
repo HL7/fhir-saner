@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="LocationFields"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Location Resource Field Names</h2><div><p>Field names in the Location Resource</p>
+</div><ul><li>Include all codes defined in <a href="CodeSystem-LocationFieldNames.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/saner/ValueSet/LocationFields"/>
+  <version value="0.1.0"/>
+  <name value="LocationFields"/>
+  <title value="Location Resource Field Names"/>
+  <status value="active"/>
+  <date value="2020-04-27T06:17:07-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Patient Administration Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="Field names in the Location Resource"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/saner/CodeSystem/LocationFieldNames"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7.FHIR.US.SANER\Device Resource Field Names - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"14.25"}
+    h3,h4,h5,h6{--heading-prefix:"14.25"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Situational Awareness for Novel Epidemic Response</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+	  <li><a href="overview.html">Overview</a></li>
+	  <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	  <li><a href="security_considerations.html">Security Considerations</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="transaction-1.html">Query Availability</a></li>
+      <li><a href="transaction-2.html">Update Availability</a></li>
+      <li><a href="transaction-3.html">Report Availability</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Content Profiles<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+        <li>TBD</li>
+    </ul>
+  </li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vocabulary<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="CodeSystem-BedType.html">Saner Bed Type Coding System</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedLocationOperationalStatus.html">Bed Location Operational Status</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedProperty.html">Bed Property</a>
+      </li>
+      <li>
+        <a href="ValueSet-BedType.html">Bed Type</a>
+      </li>
+      <li>
+        <a href="ConceptMap-HAvBED2toFHIR.html">HAvBED2 to FHIR Concept Map</a>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Device Resource Field Names</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Situational Awareness for Novel Epidemic Response - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/saner/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <a name="root"> </a>
+  <h2 id="root">Device Resource Field Names</h2>
+  <p>
+    <b>Summary</b>
+  </p>
+  <table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>http://hl7.org/fhir/us/saner/ValueSet/DeviceFields</td></tr>
+ <tr><td>Version:</td><td>0.1.0</td></tr>
+ <tr><td>Name:</td><td>DeviceFields</td></tr>
+ <tr><td>Status:</td><td>Active</td></tr>
+ <tr><td>Title:</td><td>Device Resource Field Names</td></tr>
+ <tr><td>Definition:</td><td><p>Field names in the Device Resource</p>
+</td></tr>
+ <tr><td>Publisher:</td><td>HL7 International</td></tr>
+ <tr><td>Source Resource:</td><td><a href="ValueSet-DeviceFields.xml.html">XML</a> / <a href="ValueSet-DeviceFields.json.html">JSON</a> / <a href="ValueSet-DeviceFields.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+  
+  <p>
+    <b>References</b>
+  </p>
+  
+<p>This value set is not used</p>
+
+
+  
+  
+
+  <a name="definition"> </a>
+  <h3 id="definition">Content Logical Definition</h3>
+
+  <h3>Definition</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-DeviceFieldNames.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames</code></a></li></ul></div>
+  
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 66 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-DeviceFieldNames.html">Device Resource Field Names v0.1.0 (CodeSystem)</a></p><p>All codes from system <a href="CodeSystem-DeviceFieldNames.html"><code>http://hl7.org/fhir/us/saner/CodeSystem/DeviceFieldNames</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device">Device</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.id"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46id">Device.id</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.meta"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46meta">Device.meta</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.implicitRules"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46implicitRules">Device.implicitRules</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.language"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46language">Device.language</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.text"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46text">Device.text</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.contained"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46contained">Device.contained</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.extension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46extension">Device.extension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.modifierExtension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46modifierExtension">Device.modifierExtension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.identifier"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46identifier">Device.identifier</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.definition"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46definition">Device.definition</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier">Device.udiCarrier</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.id"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46id">Device.udiCarrier.id</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.extension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46extension">Device.udiCarrier.extension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.modifierExtension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46modifierExtension">Device.udiCarrier.modifierExtension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.deviceIdentifier"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46deviceIdentifier">Device.udiCarrier.deviceIdentifier</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.issuer"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46issuer">Device.udiCarrier.issuer</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.jurisdiction"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46jurisdiction">Device.udiCarrier.jurisdiction</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.carrierAIDC"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46carrierAIDC">Device.udiCarrier.carrierAIDC</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.carrierHRF"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46carrierHRF">Device.udiCarrier.carrierHRF</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.udiCarrier.entryType"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46udiCarrier.46entryType">Device.udiCarrier.entryType</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.status"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46status">Device.status</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.statusReason"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46statusReason">Device.statusReason</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.distinctIdentifier"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46distinctIdentifier">Device.distinctIdentifier</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.manufacturer"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46manufacturer">Device.manufacturer</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.manufactureDate"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46manufactureDate">Device.manufactureDate</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.expirationDate"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46expirationDate">Device.expirationDate</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.lotNumber"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46lotNumber">Device.lotNumber</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.serialNumber"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46serialNumber">Device.serialNumber</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.deviceName"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46deviceName">Device.deviceName</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.deviceName.id"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46deviceName.46id">Device.deviceName.id</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.deviceName.extension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46deviceName.46extension">Device.deviceName.extension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.deviceName.modifierExtension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46deviceName.46modifierExtension">Device.deviceName.modifierExtension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.deviceName.name"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46deviceName.46name">Device.deviceName.name</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.deviceName.type"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46deviceName.46type">Device.deviceName.type</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.modelNumber"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46modelNumber">Device.modelNumber</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.partNumber"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46partNumber">Device.partNumber</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.type"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46type">Device.type</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.specialization"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46specialization">Device.specialization</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.specialization.id"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46specialization.46id">Device.specialization.id</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.specialization.extension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46specialization.46extension">Device.specialization.extension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.specialization.modifierExtension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46specialization.46modifierExtension">Device.specialization.modifierExtension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.specialization.systemType"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46specialization.46systemType">Device.specialization.systemType</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.specialization.version"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46specialization.46version">Device.specialization.version</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version">Device.version</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version.id"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version.46id">Device.version.id</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version.extension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version.46extension">Device.version.extension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version.modifierExtension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version.46modifierExtension">Device.version.modifierExtension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version.type"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version.46type">Device.version.type</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version.component"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version.46component">Device.version.component</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.version.value"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46version.46value">Device.version.value</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property">Device.property</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property.id"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property.46id">Device.property.id</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property.extension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property.46extension">Device.property.extension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property.modifierExtension"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property.46modifierExtension">Device.property.modifierExtension</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property.type"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property.46type">Device.property.type</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property.valueQuantity"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property.46valueQuantity">Device.property.valueQuantity</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.property.valueCode"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46property.46valueCode">Device.property.valueCode</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.patient"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46patient">Device.patient</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.owner"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46owner">Device.owner</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.contact"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46contact">Device.contact</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.location"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46location">Device.location</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.url"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46url">Device.url</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.note"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46note">Device.note</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.safety"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46safety">Device.safety</a></td><td/><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-saner-CodeSystem-DeviceFieldNames-Device.parent"> </a><a href="CodeSystem-DeviceFieldNames.html#DeviceFieldNames-Device.46parent">Device.parent</a></td><td/><td/></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+  
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="http://hl7.org/Special/committees/pafm/index.cfm">HL7 International</a>.  Package hl7.fhir.us.saner#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 27, 2020 06:17-0400">2020-04-27</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/saner/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

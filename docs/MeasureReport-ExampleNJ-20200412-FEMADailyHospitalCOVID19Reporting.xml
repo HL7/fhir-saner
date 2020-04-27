@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:d4806d98-876e-11ea-1163-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting">http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting</a></p><p><b>subject</b>: <a href="Location-states-NJ.html">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 12, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href="Organization-NJ-DPH.html">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 12, 2020, 12:00:00 AM --&gt; Apr 12, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Percent Positive among Newly Resulted Tests <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: New Diagnostic Tests Ordered/Received <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style="color: maroon">Exception generating Narrative: null</b></p></div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:d4806d98-876e-11ea-1163-09173f13e4c5"/>
+  </identifier>
+  <status value="complete"/>
+  <type value="summary"/>
+  <measure value="http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting"/>
+  <subject>
+    <extension url="http://hl7.org/fhir/us/saner/StructureDefinition/GeoLocation">
+      <extension url="latitude">
+        <valueDecimal value="40.1907"/>
+      </extension>
+      <extension url="longitude">
+        <valueDecimal value="74.6728"/>
+      </extension>
+    </extension>
+    <reference value="Location/states-NJ"/>
+    <identifier>
+      <system value="https://www.census.gov/geographies"/>
+      <value value="34"/>
+    </identifier>
+    <display value="State of New Jersey"/>
+  </subject>
+  <date value="2020-04-12"/>
+  <reporter>
+    <reference value="Organization/NJ-DPH"/>
+    <display value="New Jersey Department of Public Health"/>
+  </reporter>
+  <period>
+    <start value="2020-04-12"/>
+    <end value="2020-04-12"/>
+  </period>
+  <group>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+        <code value="positiveIncreasePercent"/>
+      </coding>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="totalOrdersIncrease"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="totalTestResultsIncrease"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator"/>
+        </coding>
+      </code>
+      <count value="6542"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="positiveIncrease"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+        </coding>
+      </code>
+      <count value="3699"/>
+    </population>
+  </group>
+  <group>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+        <code value="positivePercent"/>
+      </coding>
+    </code>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="totalOrders"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="initial-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="allReports"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="latestReports"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="measure-population"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="rejected"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator-exclusion"/>
+        </coding>
+      </code>
+      <count>
+        <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+          <valueCode value="unsupported"/>
+        </extension>
+      </count>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="totalTestResults"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="denominator"/>
+        </coding>
+      </code>
+      <count value="126735"/>
+    </population>
+    <population>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"/>
+          <code value="positive"/>
+        </coding>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/measure-population"/>
+          <code value="numerator"/>
+        </coding>
+      </code>
+      <count value="61850"/>
+    </population>
+  </group>
+</MeasureReport>

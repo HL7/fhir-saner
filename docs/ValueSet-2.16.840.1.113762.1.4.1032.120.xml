@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="2.16.840.1.113762.1.4.1032.120"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>C19HCC SARSCoV2 Exposure</h2><div><p><strong>Purpose:</strong></p>
+<p>Clinical Focus:</p>
+<p>This value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.</p>
+<p>Data Element Scope:</p>
+<p>To identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.</p>
+<p>Inclusion Criteria:</p>
+<p>Conditions indicative of possible exposure to SARS-CoV-2.</p>
+<p>Exclusion Criteria:</p>
+<p>: Conditions representing suspicion or confirmation of COVID-19.</p>
+</div><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/sid/icd-10-cm</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>Z20.828</td><td>Contact with and (suspected) exposure to other viral communicable diseases</td><td/></tr></table></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=840546002">840546002</a></td><td>Exposure to severe acute respiratory syndrome coronavirus 2 (event)</td><td/></tr></table></li></ul><p>This value set includes codes based on the following rules:</p></div>
+  </text>
+  <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.120"/>
+  <version value="0.1.0"/>
+  <name value="C19HCC_SARSCoV2_Exposure"/>
+  <title value="C19HCC SARSCoV2 Exposure"/>
+  <status value="active"/>
+  <date value="2020-04-10T01:00:18-04:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Patient Administration Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/Special/committees/pafm/index.cfm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Audacious Inquiry"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ainq.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="**Purpose:**&#xA;&#xA;Clinical Focus:&#xA;&#xA;This value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.&#xA;&#xA;Data Element Scope:&#xA;&#xA;To identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.&#xA;&#xA;Inclusion Criteria:&#xA;&#xA;Conditions indicative of possible exposure to SARS-CoV-2.&#xA;&#xA;Exclusion Criteria:&#xA;&#xA;: Conditions representing suspicion or confirmation of COVID-19."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <concept>
+        <code value="Z20.828"/>
+        <display value="Contact with and (suspected) exposure to other viral communicable diseases"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="840546002"/>
+        <display value="Exposure to severe acute respiratory syndrome coronavirus 2 (event)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

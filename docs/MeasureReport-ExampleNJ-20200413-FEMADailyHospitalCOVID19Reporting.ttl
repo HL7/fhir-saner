@@ -1,0 +1,254 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting> a fhir:MeasureReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:d4806db2-876e-11ea-1163-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href=\"http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting\">http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting</a></p><p><b>subject</b>: <a href=\"Location-states-NJ.html\">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 13, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href=\"Organization-NJ-DPH.html\">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 13, 2020, 12:00:00 AM --&gt; Apr 13, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Percent Positive among Newly Resulted Tests <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: New Diagnostic Tests Ordered/Received <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style=\"color: maroon\">Exception generating Narrative: null</b></p></div>"
+  ];
+  fhir:MeasureReport.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:d4806db2-876e-11ea-1163-09173f13e4c5" ]
+  ];
+  fhir:MeasureReport.status [ fhir:value "complete"];
+  fhir:MeasureReport.type [ fhir:value "summary"];
+  fhir:MeasureReport.measure [
+     fhir:value "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting";
+     fhir:link <http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting>
+  ];
+  fhir:MeasureReport.subject [
+     fhir:link <http://hl7.org/fhir/us/saner/Location/states-NJ>;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "latitude" ];
+         fhir:Extension.valueDecimal [ fhir:value "40.1907"^^xsd:decimal ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "longitude" ];
+         fhir:Extension.valueDecimal [ fhir:value "74.6728"^^xsd:decimal ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/saner/StructureDefinition/GeoLocation" ]
+     ];
+     fhir:Reference.reference [ fhir:value "Location/states-NJ" ];
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.census.gov/geographies" ];
+       fhir:Identifier.value [ fhir:value "34" ]
+     ];
+     fhir:Reference.display [ fhir:value "State of New Jersey" ]
+  ];
+  fhir:MeasureReport.date [ fhir:value "2020-04-13"^^xsd:date];
+  fhir:MeasureReport.reporter [
+     fhir:link <http://hl7.org/fhir/us/saner/Organization/NJ-DPH>;
+     fhir:Reference.reference [ fhir:value "Organization/NJ-DPH" ];
+     fhir:Reference.display [ fhir:value "New Jersey Department of Public Health" ]
+  ];
+  fhir:MeasureReport.period [
+     fhir:Period.start [ fhir:value "2020-04-13"^^xsd:date ];
+     fhir:Period.end [ fhir:value "2020-04-13"^^xsd:date ]
+  ];
+  fhir:MeasureReport.group [
+     fhir:index 0;
+     fhir:MeasureReport.group.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+         fhir:Coding.code [ fhir:value "positiveIncreasePercent" ]
+       ]
+     ];
+     fhir:MeasureReport.group.population [
+       fhir:index 0;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalOrdersIncrease" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
+           fhir:Extension.valueCode [ fhir:value "unsupported" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalTestResultsIncrease" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "2734"^^xsd:integer ]
+     ], [
+       fhir:index 2;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "positiveIncrease" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "2734"^^xsd:integer ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:MeasureReport.group.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+         fhir:Coding.code [ fhir:value "positivePercent" ]
+       ]
+     ];
+     fhir:MeasureReport.group.population [
+       fhir:index 0;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalOrders" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "initial-population" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
+           fhir:Extension.valueCode [ fhir:value "unsupported" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "allReports" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "measure-population" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
+           fhir:Extension.valueCode [ fhir:value "unsupported" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "latestReports" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "measure-population" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
+           fhir:Extension.valueCode [ fhir:value "unsupported" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "rejected" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator-exclusion" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ];
+           fhir:Extension.valueCode [ fhir:value "unsupported" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "totalTestResults" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "denominator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "129469"^^xsd:integer ]
+     ], [
+       fhir:index 5;
+       fhir:MeasureReport.group.population.code [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem" ];
+           fhir:Coding.code [ fhir:value "positive" ]
+         ], [
+           fhir:index 1;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/measure-population" ];
+           fhir:Coding.code [ fhir:value "numerator" ]
+         ]
+       ];
+       fhir:MeasureReport.group.population.count [ fhir:value "64584"^^xsd:integer ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/saner/Location/states-NJ> a fhir:us .
+
+<http://hl7.org/fhir/us/saner/Organization/NJ-DPH> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/saner/MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/saner/MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting.ttl> .
+
+# -------------------------------------------------------------------------------------
+
