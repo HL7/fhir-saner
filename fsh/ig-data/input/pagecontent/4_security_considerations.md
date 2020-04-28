@@ -20,3 +20,8 @@ The setting of the PurposeOfUse to [PUBHLTH](http://build.fhir.org/v3/ActReason/
 
 ### Local Access Control
 The maintaince of the data on the client or server is not specified in this implementation guide. Security considerations must be applied in systems design to assure that the data is appropriately protected from inappropriate use and modification. For example only authorized services and individuals should be allowed to update the metrics that would be served by the API defined here.
+
+### References
+* [COVID-19 & HIPAA Bulletin Limited Waiver of HIPAA Sanctions and Penalties During a Nationwide Public Health Emergency] (https://www.hhs.gov/sites/default/files/hipaa-and-covid-19-limited-hipaa-waiver-bulletin-508.pdf
+)
+
