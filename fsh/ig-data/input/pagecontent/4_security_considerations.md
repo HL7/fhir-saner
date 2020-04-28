@@ -21,7 +21,20 @@ The setting of the PurposeOfUse to [PUBHLTH](http://build.fhir.org/v3/ActReason/
 ### Local Access Control
 The maintaince of the data on the client or server is not specified in this implementation guide. Security considerations must be applied in systems design to assure that the data is appropriately protected from inappropriate use and modification. For example only authorized services and individuals should be allowed to update the metrics that would be served by the API defined here.
 
+### Security and Privacy Risks
+This section includes an enumeration of some of the risks identified for the use-cases covered and justifying the security and privacy mitigations indicated above.
+
+- Risk to re-identification when the Location (region reporting on) is small enough to identify too few individuals (e.g. k-anonymity). For example where a region is so small that the community can re-identify a death because it is the only death in that region with the other indirect identifiers (gender, etc)
+- Risk to reputation of a healthcare facility that is serving a community with increased negative incidents
+- Risk to community reputation -- if a community is harder hit, it may be percieved negatively on that community. People in that community may be targeted by scams and bullied (cyberbullying). 
+
+In addition to the mitigations above, careful definition of regions that would be reported upon should assure that the region is large enough so as to lower the risk of re-identification. Where reporting regions are too small, aggregation into larger regions may be necessary.
+
+Combined reports within one dataset increase the risk of re-identification through the coorelation of indirect identifiers within the dataset. Independent reports can mitigate this reverse coorelation used for re-identification.
+
 ### References
 * [COVID-19 & HIPAA Bulletin Limited Waiver of HIPAA Sanctions and Penalties During a Nationwide Public Health Emergency] (https://www.hhs.gov/sites/default/files/hipaa-and-covid-19-limited-hipaa-waiver-bulletin-508.pdf
 )
-
+* [IHE Handbook on De-Identification that includes element analysis and mitigation methods]
+(https://wiki.ihe.net/index.php/Healthcare_De-Identification_Handbook)
+* [News: Coronavirus fallout: Massachusetts won’t release town-specific COVID-19 data, citing ‘stigma’ and privacy; some towns doing it on their own](https://www.masslive.com/coronavirus/2020/04/coronavirus-fallout-massachusetts-wont-release-town-specific-covid-19-data-citing-stigma-and-privacy-some-towns-doing-it-on-their-own.html) Posted Apr 07, 2020
