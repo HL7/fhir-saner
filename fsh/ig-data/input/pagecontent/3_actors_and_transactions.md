@@ -194,45 +194,63 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 ### Actors
 The actors in this profile are described in more detail in the sections below.
 
-#### Measure Source
-
-The Measure Source Actor reports results for a single facility, collection of facilities
-        or aggragated data for a region
-
-
-TBD
-
-
-##### Measure Source Requirements
-1. 1.
-
 #### Measure Consumer
+The Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources. 
 
-The Measure Consumer provides access to aggregated or fine-grained
-data gathered from one or more Measure Sources.
+The Measure Consumer provides the ability to report on data from one or more Measure Sources.
 
-
+In the case of a single facility or organization the Measure Consumer is reporting the data at aggregated 
+or varying levels of granularity using data extracted from a Measure Source.
 
 ##### Measure Consumer Requirements
 1. 1.
 
-#### Measure Intermediary
+#### Measure Intermediary 
+The Measure Intermediary role aggregates data from multiple Measure Sources.  Data from Measure Sources may 
+be pulled in by the Intermediary, pushed to the Intermediary by the Measure Source, or may be pushed from a 
+Measure Source via a dump. 
 
-The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.
+The dump options provides a Push or Pull mechanism to transfer non-FHIR data or FHIR bulk data. 
+It is the responsibility of the Measure Intermediary to convert the dump data into FHIR data that can be 
+served up to Measure Consumers in a format that is compliant with the requirements of a Measure Source.
 
+The Measure Intermediary may also provide the capabilities of a Measure Consumer to enable data to be 
+reported at an aggregated level.
 
-This actor represents the composition of a [Measure Source](actors_and_transactions.html#measure-source) with a [Measure Source](actors_and_transactions.html#measure-source).
+Th Measure Intermediary role may aggregate data from other Measure Intermediaries.  Since the Intermediary 
+is exposing a Measure Source capability this method allows data to be aggregated in a hierarchy such as:
+	- Group of Hospitals in an organization
+	- State Public Health
+	- National / Federal Agencies such as CDC or FEMA.
 
-#### Bridging between Incompatible Options
-A Measure Consumer that implements the Dump and Pull Options that is grouped with a Measure Source implementing the Push and API
-Options can be used as a bridge to adapt a Meaure Source implementing the Dump and Push options to communicate with a Measure
+This actor represents the composition of a [Measure Source](actors_and_transactions.html#measure-source) with a [Measure Consumer](actors_and_transactions.html#measure-consumer).
+
+##### Bridging between Incompatible Options
+A Measure Intermediary that implements the Dump and Pull Options that is grouped with a Measure Source implementing the Push and API
+Options can be used as a bridge to adapt a Measure Source implementing the Dump and Push options to communicate with a Measure
 Consumer implementing the API and Push options.
 
 ![Bridge](Bridge.svg)
 
+#### Measure Source
+The Measure Source Actor reports results for a single facility, collection of facilities or aggregated 
+data for a region.
+
+In a single facility, or organization, the Measure Source Actor will compile data directly from the facility 
+or organization source systems.
+
+A Measure Source may also exist in an Aggregator, Intermediary or Bridging role.  In this guide we will use 
+the term Intermediary to describe this role.
+
+A Measure Source provides the FHIR data that is used by a Measure Consumer.
+
+##### Measure Source Requirements
+1. 1.
+
+
 #### Measure Repository
-A Measure Consumer that implements the API Option and Push Option that is grouped with a Measure Source implementing the Pull and API
-Options is essentially the definition of a FHIR Server.
+A Measure Intermediary or Measure Consumer that implements the API Option and Push Option that is grouped with a 
+Measure Source implementing the Pull and API options is essentially the definition of a FHIR Server.
 
 ![FHIR Server](FHIRServer.svg)
 
