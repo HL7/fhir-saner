@@ -4,7 +4,7 @@
     xmlns:ig="http://ainq.com/ig-definition"
     xmlns="http://ainq.com/ig-definition"
     xmlns:html="http://www.w3.org/1999/xhtml"
-    exclude-result-prefixes="xs"
+    exclude-result-prefixes="xs ig"
     version="2.0">
 
     <xsl:include href="utility.xslt"/>
@@ -73,7 +73,7 @@ The sections below describe the use cases supported by the
 
         <xsl:for-each select=".//(ig:step|ig:return)">
             <xsl:text>&#xA;1. </xsl:text>
-            <span id='{@id}'><xsl:value-of select="ig:name"/></span>
+            <html:span id='{@id}'><xsl:value-of select="ig:name"/></html:span>
             <xsl:text>&#xA;</xsl:text>
             <xsl:apply-templates select="ig:description|ig:overview">
                 <xsl:with-param name="indent"><xsl:text>   </xsl:text></xsl:with-param>
@@ -146,7 +146,7 @@ The sections below describe the use cases supported by the
         <xsl:text>" -> "</xsl:text>
         <xsl:value-of select="@to"/>
         <xsl:text>" : </xsl:text>
-        <xsl:value-of select="concat($number,'. ',ig:name)"/>
+        <xsl:value-of select="concat($number,'. ', string-join(tokenize(ig:name,'&#xA;'),'\n'))"/>
         <xsl:text>&#xA;</xsl:text>
 
         <xsl:if test="not(../self::ig:step)">activate "<xsl:value-of select="@from"/>"&#xA;</xsl:if>
@@ -154,7 +154,7 @@ The sections below describe the use cases supported by the
         <xsl:value-of select="@to"/>
         <xsl:text>"&#xA;</xsl:text>
         <xsl:apply-templates select="ig:step|ig:return" mode="process-flow-diagram"/>
-            <xsl:if test="not(ig:return)">return&#xA;</xsl:if>
+            <xsl:if test="not(ig:return) and (string(@from) != string(@to))">return&#xA;</xsl:if>
             <xsl:if test="not(../self::ig:step)">deactivate "<xsl:value-of select="@from"/>"&#xA;</xsl:if>
             <xsl:text>deactivate "</xsl:text>
             <xsl:value-of select="@to"/>
