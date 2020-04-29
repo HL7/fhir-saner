@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:ig="http://ainq.com/ig-definition"
-    exclude-result-prefixes="xs"
+    exclude-result-prefixes="xs ig"
     version="2.0">
 
     <!-- Arrows -->
@@ -23,7 +23,7 @@
         <xsl:value-of select="$indent"/>
         <xsl:choose>
             <xsl:when test="@file">
-                <xsl:value-of select="unparsed-text(resolve-uri(@file, base-uri()))"/>
+                <xsl:value-of select="translate(unparsed-text(resolve-uri(@file, base-uri())),'&#xD;','')"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates select="node()" mode='desc'/>

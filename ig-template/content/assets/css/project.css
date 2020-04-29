@@ -248,6 +248,9 @@ body {
   color: #da0c23;
   border-color: #955159 #955159 transparent;
 }
+summary > p {
+	display: inline-block;
+}
 /*
 @media (max-width: 979px) {
     // make tabs act like nav-stacked

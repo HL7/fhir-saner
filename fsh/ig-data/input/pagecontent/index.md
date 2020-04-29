@@ -23,31 +23,50 @@ This implementation guide provides the FHIR Implementation materials associated 
 the SANER project.
 
 ### Organization of This Guide
-This guide is organized into four main sections:
+This guide is organized into five main sections:
 
-1. Volume I: [Overview](overview.html) - Provides an overview of the challenges this effort is trying to address.
+<details><summary>
+
+Volume I: [Overview](overview.html) - Provides an overview of the challenges this effort is trying to address.
+</summary>
    1. [Technology Environment](technology_environment.html) - Describes the technology environment for uninitiated.
    2. [Architecture](architecture.html) - Illustrates the Microservice Architecture
    3. [Security Considerations](security_considerations.html) - Documents security concerns and mitigations
    4. [Use Cases](use_cases.html) - Illustrates key use cases
    5. [Actors and Transactions](actors_and_transactions.html) - Provides an overview of technical components
    6. [Measures used for Reporting](measures.html) - Defines measures used by CDC and FEMA as FHIR Measure resources
+</details>
 
-2. Volume II: Transactions
+<details><summary>
+
+Volume II: Transactions
+</summary>
    1. [Query Measure [PULL-TX]](transaction-1.html)
    2. [Produce Measure [PUSH-TX]](transaction-2.html)
    3. [Communicate Results [REPORT-TX]](transaction-3.html)
 
-3. Volume III: Content Profiles
-   1. [Public Health Measure](StructureDefinition-PublicHealthMeasure.html)
-   2. [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html)
-   3. [Measure Criteria](StructureDefinition-MeasureCriteria.html)
-   4. [Measure Population Alternate Criteria(StructureDefinition-MeasurePopulationAlternateCriteria.html)
-   5. [Measured Item Description](StructureDefinition-MeasuredItemDescription.html)
-   6. [Audit Event Write](StructureDefinition-audit-event-write.html)
-   7. [Audit Event Read](StructureDefinition-audit-event-read.html)
+</details>
+<details><summary>
 
-4. Volume IV: Terminology
+Volume III: Content Profiles
+</summary>
+
+   1. [Public Health Measure Report](StructureDefinition-PublicHealthMeasureReport.html)
+   2. [Public Health Measure](StructureDefinition-PublicHealthMeasure.html)
+   3. [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html)
+   4. [Measure Criteria](StructureDefinition-MeasureCriteria.html)
+   5. [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html)
+   6. [Measured Item Description](StructureDefinition-MeasuredItemDescription.html)
+   7. [Audit Event Write](StructureDefinition-audit-event-write.html)
+   8. [Audit Event Read](StructureDefinition-audit-event-read.html)
+
+</details>
+
+<details><summary>
+
+Volume IV: Terminology
+</summary>
+
    1. Code Systems
       1. [Bed Type](CodeSystem-BedType.json)
       1. [Device Field Names](CodeSystem-DeviceFieldNames.json)
@@ -78,12 +97,17 @@ This guide is organized into four main sections:
       1. [Ventilator Devices](ValueSet-VentilatorDevices.json)
       1. [Ventilator Devices With Tracheostomy](ValueSet-VentilatorDevicesWithTracheostomy.json)
 
+</details>
+<details><summary>
 
-5. Volume V: Examples
+Volume V: Examples
+</summary>
    1. [Measure: CDC Patient Impact and Hospital Capacity](Measure-CDCPatientImpactAndHospitalCapacity.json.html)
    2. [Measure: FEMA Daily Hospital COVID19 Reporting](Measure-FEMADailyHospitalCOVID19Reporting.json.html)
    3. [Location: New Jersey](Location-states-NJ.json.html)
    4. [Organization: NJ Department of Health](Organization-NJ-DPH.json.html)
+
+</details>
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).

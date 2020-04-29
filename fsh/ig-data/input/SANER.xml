@@ -105,41 +105,105 @@ describing the current status of selected health delivery resources.</descriptio
 
     <!-- usecase is optional and repeatable -->
     <usecase id="GETBEDS" actors="MeasureSource MeasureConsumer" transactions="PULL-TX PUSH-TX" content="">
-	    <name>Collecting Bed Measures</name>
-        <description>This use case addresses the exchange of data from Facilities to a Centralized
-reporting system for Public Health</description>
-	    <!-- overview is optional -->
-	    <overview>Overview TBD</overview>
-	    <step id="BED-STEP1" from="MeasureConsumer" to="MeasureSource" returns="now">
-            <name>Measure Repository Initiates Search</name>
-            <description>The Measure Repository identifies features associated with a group of
-bed or device resources that it wishes to collect data about.  For example, the Measure Repository can
-request information about ICU, med/surg, or ED beds available or in use.</description>
-            <overview>TBD</overview>
-	        <return id="BED-STEP2" from="MeasureSource" to="MeasureConsumer" returns="now">
-	            <name>Measure Source Reports Aggregate Data</name>
-	            <description>The Measure Source reports aggregate data about a group of beds or devices based
-	                on specified bed or device characteristics</description>
-	            <overview>TBD</overview>
-	        </return>
+	    <name>Collecting Hospital and Ventilator Measures</name>
+        <description>This use case addresses the collection and exchange of data from several information systems in a Facility
+to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
+for multiple data elements by examining messages recieved and data in its database, and then reports these to a Measure Collector
+within the hospital.</description>
+	    <overview file='SANER-getbeds.md'/>
+	    <step id="GETVALUES" from="ICU/Central Monitoring System" to="ICU/Central Monitoring System" returns="now">
+	        <name>ICU/Central Monitoring System collects data</name>
+	        <description>The ICU/Central Monitoring System is triggered (by request or schedule) to generate
+a report on ICU beds and equipment, including ventilated patients in ED/Overflow w/ COVID-19,
+Total ICU Beds, Occupied ICU Beds, Total Ventilators, Ventilators in Use.</description>
+            <overview>
+   1. The system collects information about ventilators outside the ICU for which the associated patient
+was admitted for suspected or confirmed COVID-19. It can makes the determination of suspected/confirmed COVID-19 from
+the DG1 segment of the ADT message it recieved regarding the patient.
+   2. The system counts the number of ICU beds that it has been configured to recognize and which are operational
+   3. The system counts the number of ICU beds that are transmitting telemetry (patient monitoring) information.
+   4. The system counts the number of ventilators that it has been configured to recognize and which are operational
+   5. The system counts the number of ventilators that are transmitting telemetry data to it in the ICU.
+            </overview>
+	        <step id="REPORTVALUES-1.5-2.4-7" from="ICU/Central Monitoring System" to="Measure Collector" returns="now">
+                <name>ICU/Central Monitoring System Reports&#xA;on multiple data elements&#xA;(measure populations)</name>
+                <description>Multiple collected values are aggregated into a report which is then transmitted to the Measure Collector.</description>
+	        </step>
 	    </step>
+
+	    <step id="GETHOSPITALBEDS" from="Bed Management System" to="Measure Collector" returns="now">
+	       <name>Bed Management System Reports&#xA;on multiple data elements&#xA;(measure populations)</name>
+	       <description>The Hospitals Bed Management System collects data for multiple data elements by
+examining messages recieved and data in its database, and then reports these to a Measure Collector
+within the hospital.</description>
+            <overview>
+   1. The Bed Management System examines master file data to count the total number of beds in the hospital,
+as well as those beds specifically identified as being for acute (inpatient) care. The Bed Management solution can be a component
+of the EHR, or as occurs in some hospital settings, a third party solution that integrates with the EHR (usually through ADT and master file
+messages).
+   2. The bed management system counts the occupied beds (based on current state of each bed) as tracked through
+state changes communicated through ADT messages.  The Bed Management solution might be used to support housekeeping, or to support an [electronic
+bedboard](https://it.johnshopkins.edu/services/applications/administrative/ebb.html) that might used by a hospital
+"[Bed Czar](http://www.ihi.org/resources/Pages/Changes/RealTimeDemandCapacityManagement.aspx)."</overview>
+	    </step>
+
+	    <step id="GETCOVID19DATA" from="EHR" to="Measure Collector" returns="now">
+           <name>EHR System reports&#xA;on multiple data elements&#xA;(measure populations)</name>
+           <description>The Hospital's EHR collects data for multiple data elements.</description>
+            <overview>
+   1. The EHR collects data on hospitalized patients w/ COVID-19.
+   2. The EHR collects data on hospitalized patients diagnosed with COVID-19 14 days after admission.
+   3. The EHR collects data on patient deaths due to COVID-19.</overview>
+        </step>
+
+        <step id="GETEDDATA" from="ED System" to="Measure Collector" returns="now">
+           <name>The ED System reports&#xA;on patients in the ED and/or overflow area.</name>
+        </step>
+
+	    <step id="BED-STEP1" from="Measure Collector" to="Measure Collector" returns="now">
+            <name>Measure Collector aggregates reports for&#xA;transmission to a Public Health Agency</name>
+            <description>Either periodically on some schedule configured for the hospital, or upon recieving a
+full set of data, the Measure Collector gathers a set of results from different systems
+that have communicated them, putting together a complete MeasureReport for later reporting to the Public Health Agency.</description>
+	    </step>
+        <step id="BED-STEP3" from="Measure Collector" to="Public Health Agency" returns="now">
+            <name>Transmit Aggregated MeasureReport Data</name>
+            <description>In a "push" model, the Measure Collector sends the aggregated MeasureReport to a MeasureConsumer (e.g., a Public
+            Health endpoint used for measure transmission).</description>
+        </step>
+	    <step id="BED-STEP4" to="Measure Collector" from="Public Health Agency" returns="now">
+            <name>A Public Health Agency queries the&#xA;hospitals Measure Collector&#xA;for the most recent reports.</name>
+            <description>As an alternative to push, the Public Health Agency can also "pull" data by querying the Hospitals
+"Measure Collector" endpoint (in fact, a FHIR Server with some additional features supporting aggregation).</description>
+            <return id="BED-STEP5" returns="now">
+                <name>Transmit Aggregated MeasureReport Data</name>
+                <description>The Measure Collector sends the aggregated MeasureReports to the requesting Public Health Agency.</description>
+            </return>
+        </step>
     </usecase>
-    <usecase id="VIEWREPORTS" actors="MeasureConsumer" transactions="REPORT-TX" content="">
+    <usecase id="VIEWREPORTS" actors="MeasureConsumer MeasureIntermediary" transactions="REPORT-TX" content="">
         <name>Reporting on A Measure</name>
-        <description>TBD</description>
+        <description>A public health user queries a reporting system to report on a measure for a region.</description>
         <!-- overview is optional -->
-        <overview>TBD</overview>
+        <overview>In this use case, we see the classic "dashboard" panel, where a public health user
+selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
+to them in an easy to view format.</overview>
+        <step id="Aggregating-STEP2" from="MeasureIntermediary" to="MeasureSource" returns="now">
+                <name>Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</name>
+                <description>The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a function with other associated data) from one or more Measure Sources,
+and makes them available through a Measure Source interface it provides.</description>
+                <overview>The specific ordering in which gathering and aggregation is performed is not further specified
+by this implementation guide. It is shown as occuring before the user initiates the query here, but could also occur
+after. However, for many cases, geospatial systems can likely do a better job if the aggregation is done ahead of time.
+The application of a function to the data can enable a measure such as # of cases to be combined with other data such as
+population for the area to report # of cases per 10K population, or similar functions to better present data
+in a way that allows it to be reported using comparable scales.</overview>
+        </step>
         <step id="Reporting-STEP1" from="Public Health User" to="MeasureConsumer" returns="now">
             <name>User Initiates Search</name>
             <description>The Public Health User navigates to a web page where collected data is reported.</description>
-            <overview>TBD</overview>
-            <step id="Aggregating-STEP2" from="MeasureConsumer" to="MeasureSource" returns="now">
-                <name>Measure Consumer gathers data from one or Measure Sources</name>
-                <description>The Measure Consumer gathers and aggregates data from one or more Measure Sources.</description>
-                <overview>The specific ordering in which gathering and aggregation is performed is not further specified
-by this implementation guide. It is shown as occuring after the user initiates the query here, but could have occured
-prior.</overview>
-            </step>
+            <overview>The user selects a geographic region and an issue of concern (e.g., beds, ventilators, PPE).  The Measure Consumer collects the appropriate reports
+and displays the results.</overview>
             <return>
                 <name>Display Results</name>
                 <description>The Measure Consumer displays an overview of aggregated regional results to the
@@ -152,11 +216,9 @@ on the current focus of the public health user.  It may be shown as a map, a tab
             <name>User refines Focus or Form of Display</name>
             <description>The Public Health User selects a new form of display (e.g., Map, table or graph) or refines their
 focus (e.g., wider or smaller region).</description>
-            <overview>TBD</overview>
             <return>
                 <name>Display Refined Results</name>
                 <description>The Measure Repository modifies the users focus and reporting format</description>
-                <overview>TBD</overview>
             </return>
         </step>
     </usecase>
