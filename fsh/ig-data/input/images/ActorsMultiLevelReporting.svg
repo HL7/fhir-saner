@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="523px" preserveAspectRatio="none" style="width:1289px;height:523px;" version="1.1" viewBox="0 0 1289 523" width="1289px" zoomAndPan="magnify"><defs><filter height="300%" id="fe5bqhaynu7ca" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="413" x="449.5" y="16.708">Intermediaries enable multi-level reporting</text><!--MD5=[79002a6ff3cca9444e8a50cd11c91ecd]
+cluster Hospital1--><rect fill="#FFFFFF" filter="url(#fe5bqhaynu7ca)" height="223" style="stroke: #000000; stroke-width: 1.5;" width="203" x="22" y="44.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="187" x="30" y="59.9482">Hospital EHR System A</text><!--MD5=[0a0fc25ddf2485ffc0f3b924f3242b23]
+cluster Hospital2--><rect fill="#FFFFFF" filter="url(#fe5bqhaynu7ca)" height="223" style="stroke: #000000; stroke-width: 1.5;" width="203" x="1075" y="44.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="187" x="1083" y="59.9482">Hospital EHR System B</text><!--MD5=[d35daa23dee8b99a1c1beacddfc48236]
+cluster MiscData--><rect fill="#FFFFFF" filter="url(#fe5bqhaynu7ca)" height="87" style="stroke: #000000; stroke-width: 1.5;" width="366" x="333" y="44.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="195" x="418.5" y="59.9482">Alternate Data Sources</text><!--MD5=[42355dab9f9bd93361c43b574c666ae8]
+cluster HospitalGroup1--><rect fill="#FFFFFF" filter="url(#fe5bqhaynu7ca)" height="332" style="stroke: #000000; stroke-width: 1.5;" width="184" x="249" y="180.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="106" x="288" y="195.9482">Intermediary</text><!--MD5=[bd3924c693f76a320ffa293272bc368b]
+cluster PublicHealth1--><rect fill="#FFFFFF" filter="url(#fe5bqhaynu7ca)" height="332" style="stroke: #000000; stroke-width: 1.5;" width="286" x="457" y="180.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="270" x="465" y="195.9482">Regional Public Health Authority</text><!--MD5=[d8aae1246ac2fd9442efbf1dcee1be84]
+cluster NationalAgency1--><rect fill="#FFFFFF" filter="url(#fe5bqhaynu7ca)" height="332" style="stroke: #000000; stroke-width: 1.5;" width="284" x="767" y="180.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="268" x="775" y="195.9482">National Public Health Authority</text><!--MD5=[eb09db7a2bc398d652d0abd5b2f98e0b]
+entity MeasureSource1--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="74" y="79.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="84" y="102.9482">Measure Source</text><!--MD5=[dae512edb31abd69d93c5298e3aed141]
+entity MeasureConsumer1--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="57" y="215.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="67" y="238.9482">Measure Consumer</text><!--MD5=[85185097e0273605375dce17833c095c]
+entity MeasureSource2--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="1096" y="79.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="1106" y="102.9482">Measure Source</text><!--MD5=[ffde4a5b603ebb15613d6804755ac4c1]
+entity MeasureConsumer2--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="1091" y="215.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="1101" y="238.9482">Measure Consumer</text><!--MD5=[a981c803f68f5743f2bba7efd17a8345]
+entity MiscData1--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="349.5" y="79.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="29" x="359.5" y="102.9482">CSV</text><!--MD5=[5180a99df0c4e159af79d356d2a3e6b9]
+entity MiscData2--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="434" y="79.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="444" y="102.9482">XML</text><!--MD5=[c7bd1108330ff5da8e4dab8003fed84f]
+entity MiscData3--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="517.5" y="79.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="527.5" y="102.9482">JSON</text><!--MD5=[03005ccc763833b2c610c4891645756a]
+entity MiscData4--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="77" x="605.5" y="79.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="615.5" y="102.9482">BulkFHIR</text><!--MD5=[c47f4f63d196868f94c8d3b4305363e0]
+entity TransformProcess1--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="267" y="215.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="277" y="238.9482">Transform Process</text><!--MD5=[ce53448cac94a6d838eaacc09ac11226]
+entity MeasureIntermediary1--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="277" y="330.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="287" y="353.9482">Measure Source</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="287" y="370.2451">(FHIR Server)</text><!--MD5=[694999062e762e743f6656dd6e0769b9]
+entity MeasureIntermediaryConsumer1--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="265" y="460.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="275" y="483.9482">Measure Consumer</text><!--MD5=[3ae57898b72ea5a540534a98de8fa517]
+entity TransformProcess2--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="473" y="215.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="483" y="238.9482">Transform Process</text><!--MD5=[02ac1d7eb59dc204426c69f04b7662ea]
+entity MeasureIntermediary2--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="484" y="330.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="494" y="353.9482">Measure Source</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="494" y="370.2451">(FHIR Server)</text><!--MD5=[cd7af89bcf9d278540b8bbd87c579781]
+entity MeasureIntermediaryConsumer2--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="473" y="460.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="483" y="483.9482">Measure Consumer</text><!--MD5=[e7c16c2dfff05a39e1aef655fa9b3b97]
+entity TransformProcess3--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="783" y="215.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="793" y="238.9482">Transform Process</text><!--MD5=[cde131dd2da055d5eecc87674dc93b02]
+entity MeasureIntermediary3--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="52.5938" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="793" y="330.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="803" y="353.9482">Measure Source</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="803" y="370.2451">(FHIR Server)</text><!--MD5=[5548d0d609a6ea2e48db44ec0800abd4]
+entity MeasureIntermediaryConsumer3--><rect fill="#FEFECE" filter="url(#fe5bqhaynu7ca)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="783" y="460.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="793" y="483.9482">Measure Consumer</text><!--MD5=[0c56224ea0676d1e92a54a83fd04a357]
+reverse link MeasureSource1 to MeasureConsumer1--><path d="M138.001,121.2731 C136.81,147.8581 134.848,191.6901 133.769,215.7751 " fill="none" id="MeasureSource1&lt;-MeasureConsumer1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="138.228,116.1971,133.8308,125.0099,138.0051,121.1922,141.8228,125.3665,138.228,116.1971" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="138" y="161.02">Pull</text><!--MD5=[c7179c18f83bb017fa679eb13f92108f]
+reverse link MeasureSource2 to MeasureConsumer2--><path d="M1162,121.2731 C1163.19,147.8581 1165.15,191.6901 1166.23,215.7751 " fill="none" id="MeasureSource2&lt;-MeasureConsumer2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1161.77,116.1971,1158.1759,125.3668,1161.9933,121.1921,1166.1679,125.0095,1161.77,116.1971" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="1164" y="161.02">Pull</text><!--MD5=[aacc8eb22e360643deae74eafba82aa5]
+link MiscData1 to TransformProcess1--><path d="M369.882,116.1971 C364.122,140.3181 353.654,184.1521 347.313,210.7061 " fill="none" id="MiscData1-&gt;TransformProcess1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="346.102,215.7751,352.0828,207.9501,347.2632,210.9118,344.3015,206.0922,346.102,215.7751" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="363" y="161.02">Push</text><!--MD5=[8e4fab661df3de60853190ef91cb1dca]
+reverse link MiscData2 to TransformProcess1--><path d="M440.707,120.1011 C429.97,133.1321 415.82,150.1271 403,164.9531 C387.855,182.4681 370.144,202.1221 357.72,215.7791 " fill="none" id="MiscData2&lt;-TransformProcess1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="443.925,116.1901,435.1188,120.6005,440.749,120.0519,441.2976,125.6821,443.925,116.1901" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="418" y="161.02">Pull</text><!--MD5=[2b37272a679eae26fde51b7c256615c5]
+reverse link MiscData3 to TransformProcess2--><path d="M544.666,121.2731 C545.46,147.8581 546.768,191.6901 547.487,215.7751 " fill="none" id="MiscData3&lt;-TransformProcess2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="544.515,116.1971,540.7868,125.3131,544.665,121.1949,548.7832,125.0731,544.515,116.1971" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="547" y="161.02">Pull</text><!--MD5=[180e1dfce65e1623fb7e438cdcf25754]
+link MiscData4 to TransformProcess3--><path d="M671.539,116.1971 C711.185,141.0221 784.174,186.7261 826.11,212.9841 " fill="none" id="MiscData4-&gt;TransformProcess3" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="830.567,215.7751,825.0614,207.6088,826.3291,213.1218,820.8161,214.3894,830.567,215.7751" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="746" y="161.02">Push</text><!--MD5=[b65c9d01b800c5311d1b9dccfef720ec]
+link MeasureSource1 to TransformProcess1--><path d="M165.123,116.1971 C202.731,141.0221 271.969,186.7261 311.749,212.9841 " fill="none" id="MeasureSource1-&gt;TransformProcess1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="315.977,215.7751,310.6692,207.4789,311.804,213.0208,306.2622,214.1557,315.977,215.7751" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="105" x="236" y="161.02">Push with Dump</text><!--MD5=[9d3c434f02ba5000f995c64999a0946d]
+reverse link MeasureSource2 to TransformProcess1--><path d="M1090.38,114.6451 C1015.33,130.5551 892.956,154.3011 786,164.9531 C749.614,168.5771 492.406,163.8141 457,172.9531 C423.639,181.5641 389.077,201.3141 366.667,215.8121 " fill="none" id="MeasureSource2&lt;-TransformProcess1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1095.7,113.5141,1086.0638,111.4787,1090.8099,114.5567,1087.7319,119.3028,1095.7,113.5141" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="912" y="161.02">Pull with Dump</text><!--MD5=[8f7a6b159f8302b1f6a316ce1194c76b]
+link TransformProcess1 to MeasureIntermediary1--><path d="M342,252.1031 C342,271.1991 342,302.4421 342,325.7721 " fill="none" id="TransformProcess1-&gt;MeasureIntermediary1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="342,330.9211,346,321.9211,342,325.9211,338,321.9211,342,330.9211" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="343" y="297.02">Push</text><!--MD5=[e433f6a5928756ae762bae464ac1397b]
+reverse link MeasureIntermediary1 to MeasureIntermediaryConsumer1--><path d="M341.743,389.1231 C341.553,411.9111 341.3,442.1626 341.143,460.8307 " fill="none" id="MeasureIntermediary1&lt;-MeasureIntermediaryConsumer1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.785,384.0891,337.7105,393.0557,341.7436,389.089,345.7103,393.122,341.785,384.0891" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="343" y="427.02">Pull</text><!--MD5=[eb191e32bf2dc4128ce9b453e34415d3]
+link TransformProcess2 to MeasureIntermediary1--><path d="M518.922,252.1031 C485.458,271.8411 429.991,304.5561 390.076,328.0971 " fill="none" id="TransformProcess2-&gt;MeasureIntermediary1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="385.288,330.9211,395.0721,329.7935,389.5945,328.3807,391.0073,322.9031,385.288,330.9211" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="465" y="297.02">Pull</text><!--MD5=[cddcaa5981cee24a7165bc0add84d1da]
+link TransformProcess2 to MeasureIntermediary2--><path d="M548.141,252.1031 C548.298,271.1991 548.555,302.4421 548.747,325.7721 " fill="none" id="TransformProcess2-&gt;MeasureIntermediary2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="548.79,330.9211,552.7153,321.8883,548.7486,325.9213,544.7156,321.9546,548.79,330.9211" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="550" y="297.02">Push</text><!--MD5=[ba3aa09945e204401cde77ee17ab8653]
+reverse link MeasureIntermediary2 to MeasureIntermediaryConsumer2--><path d="M549,389.1231 C549,411.9111 549,442.1626 549,460.8307 " fill="none" id="MeasureIntermediary2&lt;-MeasureIntermediaryConsumer2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="549,384.0891,545,393.0891,549,389.0891,553,393.0891,549,384.0891" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="550" y="427.02">Pull</text><!--MD5=[989922b394fbb40e9ead320383ec6953]
+link TransformProcess3 to MeasureIntermediary2--><path d="M814.71,251.9751 C763.981,271.9211 679.227,305.2471 619.09,328.8931 " fill="none" id="TransformProcess3-&gt;MeasureIntermediary2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="614.078,330.8641,623.9175,331.2924,618.731,329.0341,620.9894,323.8476,614.078,330.8641" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="733" y="297.02">Pull</text><!--MD5=[16850d1a756fb9dbadb651478c3b30d3]
+link TransformProcess3 to MeasureIntermediary3--><path d="M858,252.1031 C858,271.1991 858,302.4421 858,325.7721 " fill="none" id="TransformProcess3-&gt;MeasureIntermediary3" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="858,330.9211,862,321.9211,858,325.9211,854,321.9211,858,330.9211" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="859" y="297.02">Push</text><!--MD5=[87d716d341a1b4f090911a2353234381]
+reverse link MeasureIntermediary3 to MeasureIntermediaryConsumer3--><path d="M858.257,389.1231 C858.447,411.9111 858.7,442.1626 858.857,460.8307 " fill="none" id="MeasureIntermediary3&lt;-MeasureIntermediaryConsumer3" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="858.215,384.0891,854.2897,393.122,858.2564,389.089,862.2895,393.0557,858.215,384.0891" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="860" y="427.02">Pull</text><!--MD5=[be4e19f97f29bef029e9b1c43e7e2d23]
+@startuml
+title Intermediaries enable multi-level reporting
+rectangle "Hospital EHR System A" as Hospital1 {
+agent "Measure Source" as MeasureSource1
+agent "Measure Consumer" as MeasureConsumer1
+}
+
+rectangle "Hospital EHR System B" as Hospital2 {
+agent "Measure Source" as MeasureSource2
+agent "Measure Consumer" as MeasureConsumer2
+}
+
+rectangle "Alternate Data Sources" as MiscData {
+agent "CSV" as MiscData1
+agent "XML" as MiscData2
+agent "JSON" as MiscData3
+agent "BulkFHIR" as MiscData4
+}
+
+rectangle "Intermediary" as HospitalGroup1 {
+agent "Transform Process" as TransformProcess1
+agent "Measure Source\n(FHIR Server)" as MeasureIntermediary1
+agent "Measure Consumer" as MeasureIntermediaryConsumer1
+}
+
+rectangle "Regional Public Health Authority" as PublicHealth1 {
+agent "Transform Process" as TransformProcess2
+agent "Measure Source\n(FHIR Server)" as MeasureIntermediary2
+agent "Measure Consumer" as MeasureIntermediaryConsumer2
+}
+
+rectangle "National Public Health Authority" as NationalAgency1 {
+agent "Transform Process" as TransformProcess3
+agent "Measure Source\n(FHIR Server)" as MeasureIntermediary3
+agent "Measure Consumer" as MeasureIntermediaryConsumer3
+}
+
+
+MeasureSource1 <- - MeasureConsumer1 : Pull
+MeasureSource2 <- - MeasureConsumer2 : Pull
+
+MiscData1 - -> TransformProcess1 : Push
+MiscData2 <- - TransformProcess1 : Pull
+MiscData3 <- - TransformProcess2: Pull
+MiscData4 - -> TransformProcess3: Push
+
+MeasureSource1 - -> TransformProcess1 : Push with Dump
+MeasureSource2 <- - TransformProcess1 : Pull with Dump
+TransformProcess1 - -> MeasureIntermediary1 : Push
+MeasureIntermediary1 <- - MeasureIntermediaryConsumer1 : Pull
+
+TransformProcess2 - ->  MeasureIntermediary1: Pull
+TransformProcess2 - -> MeasureIntermediary2 : Push
+MeasureIntermediary2 <- - MeasureIntermediaryConsumer2 : Pull
+
+TransformProcess3 - ->  MeasureIntermediary2: Pull
+TransformProcess3 - -> MeasureIntermediary3 : Push
+MeasureIntermediary3 <- - MeasureIntermediaryConsumer3 : Pull
+@enduml
+
+PlantUML version 1.2020.09beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 14.0.1+7
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

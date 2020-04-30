@@ -254,6 +254,10 @@ Measure Source implementing the Pull and API options is essentially the definiti
 
 ![FHIR Server](FHIRServer.svg)
 
+A multi-level data aggregation and reporting hierarchy using Measure Intermediaries is shown here:
+
+|[Multi-Level Aggregation and Reporting](ActorsMultiLevelReporting.svg) 
+
 #### Measure to Group Slicer
 A Measure Consumer that implements the API and Pull Option can be grouped with a Measure Source implementing the Push, API and
 Fine-Grained option to "slice and dice" Measure Reports into Groups, populating a Measure Consumer with fine-grained data from
