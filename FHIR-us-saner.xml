@@ -53,13 +53,15 @@
    <artifact name="Bed Location Operational Status"
              key="ValueSet-BedLocationOperationalStatus"
              id="ValueSet/BedLocationOperationalStatus"/>
-   <artifact name="Location Types"
+   <artifact name="Bed Location Types"
              key="ValueSet-BedLocationTypes"
              id="ValueSet/BedLocationTypes"/>
    <artifact name="Bed Property"
              key="ValueSet-BedProperty"
              id="ValueSet/BedProperty"/>
-   <artifact name="Bed Type" key="ValueSet-BedType" id="ValueSet/BedType"/>
+   <artifact name="Bed Type of Care"
+             key="ValueSet-BedTypeOfCare"
+             id="ValueSet/BedTypeOfCare"/>
    <artifact name="C19HCC Confirmed COVID19 Infection"
              key="ValueSet-2.16.840.1.113762.1.4.1032.117"
              id="ValueSet/2.16.840.1.113762.1.4.1032.117"/>
@@ -81,24 +83,32 @@
    <artifact name="Confirmed COVID-19 Diagnosis Values"
              key="ValueSet-ConfirmedCOVID19DiagnosisValues"
              id="ValueSet/ConfirmedCOVID19DiagnosisValues"/>
-   <artifact name="Device Resource Field Names"
-             key="ValueSet-DeviceFields"
-             id="ValueSet/DeviceFields"/>
+   <artifact name="Age Brackets By Decade"
+             key="ValueSet-DecadeAgeBrackets"
+             id="ValueSet/DecadeAgeBrackets"/>
    <artifact name="ED or Overflow Locations"
              key="ValueSet-EDorOverflowLocations"
              id="ValueSet/EDorOverflowLocations"/>
    <artifact name="Resource Fields" key="ValueSet-Fields" id="ValueSet/Fields"/>
-   <artifact name="Measure Groups" key="ValueSet-Groups" id="ValueSet/Groups"/>
+   <artifact name="Resource Fields for Device"
+             key="ValueSet-FieldsForDevice"
+             id="ValueSet/FieldsForDevice"/>
+   <artifact name="Resource Fields for Location"
+             key="ValueSet-FieldsForLocation"
+             id="ValueSet/FieldsForLocation"/>
    <artifact name="ICU Locations"
              key="ValueSet-ICULocations"
              id="ValueSet/ICULocations"/>
    <artifact name="Inpatient Locations"
              key="ValueSet-InpatientLocations"
              id="ValueSet/InpatientLocations"/>
-   <artifact name="Location Resource Field Names"
-             key="ValueSet-LocationFields"
-             id="ValueSet/LocationFields"/>
-   <artifact name="Rate Aggregation Value Set"
+   <artifact name="Measure Groups"
+             key="ValueSet-MeasureGroups"
+             id="ValueSet/MeasureGroups"/>
+   <artifact name="Measure Populations"
+             key="ValueSet-MeasurePopulations"
+             id="ValueSet/MeasurePopulations"/>
+   <artifact name="Measure Rate Aggregation Value Set"
              key="ValueSet-MeasureRateAggregationValues"
              id="ValueSet/MeasureRateAggregationValues"/>
    <artifact name="Measure Status Values"
@@ -110,36 +120,39 @@
    <artifact name="Patient Died"
              key="ValueSet-PatientDied"
              id="ValueSet/PatientDied"/>
-   <artifact name="Measure Populations"
-             key="ValueSet-Populations"
-             id="ValueSet/Populations"/>
+   <artifact name="Age Brackets By Score (20)"
+             key="ValueSet-ScoreAgeBrackets"
+             id="ValueSet/ScoreAgeBrackets"/>
    <artifact name="Suspected Or Diagnosed COVID-19"
              key="ValueSet-SuspectedOrDiagnosedCOVID19"
              id="ValueSet/SuspectedOrDiagnosedCOVID19"/>
    <artifact name="Ventilator Devices"
              key="ValueSet-VentilatorDevices"
              id="ValueSet/VentilatorDevices"/>
-   <artifact name="Devices used for Ventilation with Tracheostomy"
+   <artifact name="Ventilator Devices when used with Tracheostomy"
              key="ValueSet-VentilatorDevicesWithTracheostomy"
              id="ValueSet/VentilatorDevicesWithTracheostomy"/>
-   <artifact name="Saner Bed Type Coding System"
+   <artifact name="Age Bracket System"
+             key="CodeSystem-AgeBracket"
+             id="CodeSystem/AgeBracket"/>
+   <artifact name="Bed Type Coding System"
              key="CodeSystem-BedType"
              id="CodeSystem/BedType"/>
-   <artifact name="Device Resource Field Names"
-             key="CodeSystem-DeviceFieldNames"
-             id="CodeSystem/DeviceFieldNames"/>
-   <artifact name="Group System"
-             key="CodeSystem-GroupSystem"
-             id="CodeSystem/GroupSystem"/>
-   <artifact name="Location Resource Field Names"
-             key="CodeSystem-LocationFieldNames"
-             id="CodeSystem/LocationFieldNames"/>
-   <artifact name="Rate Aggregation Coding System"
+   <artifact name="Measure Group System"
+             key="CodeSystem-MeasureGroupSystem"
+             id="CodeSystem/MeasureGroupSystem"/>
+   <artifact name="Measure Population System"
+             key="CodeSystem-MeasurePopulationSystem"
+             id="CodeSystem/MeasurePopulationSystem"/>
+   <artifact name="Measure Rate Aggregation Coding System"
              key="CodeSystem-MeasureRateAggregation"
              id="CodeSystem/MeasureRateAggregation"/>
-   <artifact name="Population System"
-             key="CodeSystem-PopulationSystem"
-             id="CodeSystem/PopulationSystem"/>
+   <artifact name="Resource Fields for Device"
+             key="CodeSystem-ResourceFieldsForDevice"
+             id="CodeSystem/ResourceFieldsForDevice"/>
+   <artifact name="Resource Fields for Location"
+             key="CodeSystem-ResourceFieldsForLocation"
+             id="CodeSystem/ResourceFieldsForLocation"/>
    <artifact name="CDC Patient Impact and Hospital Capacity"
              key="Measure-CDCPatientImpactAndHospitalCapacity"
              id="Measure/CDCPatientImpactAndHospitalCapacity"/>
@@ -282,6 +295,12 @@
              key="ConceptMap-HAvBED2toFHIR"
              id="ConceptMap/HAvBED2toFHIR"/>
    <artifact name="NJ-DPH" key="Organization-NJ-DPH" id="Organization/NJ-DPH"/>
+   <artifact name="Search by Code in Definitions and Instances"
+             key="SearchParameter-SearchParmeter-code"
+             id="SearchParameter/SearchParmeter-code"/>
+   <artifact name="Search by Text in Definitions"
+             key="SearchParameter-SearchParmeter-definition-text"
+             id="SearchParameter/SearchParmeter-definition-text"/>
    <artifact name="states-NJ" key="Location-states-NJ" id="Location/states-NJ"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
@@ -296,6 +315,9 @@
    <page name="Definitions" key="definitions"/>
    <page name="Measures" key="measures"/>
    <page name="Vocabulary" key="vocabulary"/>
+   <page name="Transactions" key="transactions"/>
+   <page name="Profiles" key="profiles"/>
+   <page name="Examples" key="examples"/>
    <page name="Transaction 1" key="transaction-1"/>
    <page name="Transaction 2" key="transaction-2"/>
    <page name="Transaction 3" key="transaction-3"/>

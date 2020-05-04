@@ -9,10 +9,6 @@
     <description>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-
-![The SANER Project Logo](SANERLogo.png)
-&lt;div style='float: clear'/&gt;
-**Fighting COVID-19 with FHIR®**
     </description>
     <!-- overview is optional -->
     <overview file="SANER-overview.md"/>
@@ -225,10 +221,17 @@ focus (e.g., wider or smaller region).</description>
     <!--  Other Use Cases can describe options -->
     <actor id="MeasureSource">
         <name>Measure Source</name>
-        <description>The Measure Source Actor reports results for a single facility, collection of facilities
-        or aggragated data for a region</description>
+        <description>The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.</description>
         <!-- overview is optional -->
-        <overview>TBD</overview>
+        <overview>
+In a single facility, or organization, the Measure Source Actor will compile data directly from the facility
+or organization source systems.
+
+A Measure Source may also exist in an Aggregator, Intermediary or Bridging role.  In this guide we will use
+the term Intermediary to describe these roles.
+
+A Measure Source provides the FHIR data that is used by a Measure Consumer.
+</overview>
         <supports-tx transaction="PULL-TX" as="server" required-with-options="Pull">
             <role>Reports on selected data in response to a query.</role>
         </supports-tx>
@@ -246,6 +249,12 @@ focus (e.g., wider or smaller region).</description>
         <description>The Measure Consumer provides access to aggregated or fine-grained
 data gathered from one or more Measure Sources.
         </description>
+        <overview>
+The Measure Consumer provides the ability to report on data from one or more Measure Sources.
+
+In the case of a single facility or organization the Measure Consumer is reporting the data at aggregated
+or varying levels of granularity using data extracted from a Measure Source.
+        </overview>
         <!-- requirement is optional and can repeat -->
         <requires id="REPORT-R1" at-least-one="Pull Push"/>
         <!-- requirement is optional and can repeat -->
@@ -267,25 +276,42 @@ data gathered from one or more Measure Sources.
         <description>The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.</description>
         <overview>This actor represents the composition of a <ref actor='MeasureSource'/> with a <ref actor='MeasureSource'/>.
 
+The Measure Intermediary role can aggregate data from multiple Measure Sources.  Data from Measure Sources may
+be pulled in by the Intermediary, pushed to the Intermediary by the Measure Source, or may be pushed from a
+Measure Source via a dump.
+
+Using the Dump option with a Measure Intermediary provides a Push or Pull mechanism to transfer
+non-FHIR data or FHIR bulk data.  The Measure Intermediary can then convert the dump data into FHIR data that can be
+served up to Measure Consumers in a format that is compliant with the requirements of a Measure Source.
+
+The Measure Intermediary may also provide the capabilities of a Measure Consumer to enable data to be
+reported at an aggregated level.
+
+The Measure Intermediary role may aggregate data from other Measure Intermediaries.  Since the Intermediary
+is exposing a Measure Source capability this method allows data to be aggregated in a hierarchy such as:
+
+    - Supporting multiple data inputs within a single facility to create a complete measure from multiple partial reports,
+    - Enabling aggregation of data for Groups of hospitals in a health system, a hospital service area, or referral region,
+    - Aggregating to county or state levels for local and regional Public Health agencies
+    - Communicating aggregated data to National / Federal Agencies such as CDC or FEMA.
+
+
 #### Bridging between Incompatible Options
-A Measure Consumer that implements the Dump and Pull Options that is grouped with a Measure Source implementing the Push and API
-Options can be used as a bridge to adapt a Meaure Source implementing the Dump and Push options to communicate with a Measure
-Consumer implementing the API and Push options.
+In networking parlance, a Bridge is a system that connects between different protocols.  The different options in this Implementation Guide
+can create incompatibilities, but these can be bridged by an Intermediary.
+
+For example, a Measure Intermediary that implements the Dump and Pull Options in the Measure Consumer, that groups with a Measure Source
+implementing the Push and API Options can bridge bridge between a Measure Source implementing the Dump and Push options to enable
+communication with a Measure Consumer implementing the API and Push options.
 
 ![Bridge](Bridge.svg)
 
 #### Measure Repository
-A Measure Consumer that implements the API Option and Push Option that is grouped with a Measure Source implementing the Pull and API
-Options is essentially the definition of a FHIR Server.
+A Measure Respository is simply a FHIR Server.  A FHIR Server that supports CRUD operations on MeasureReport and Measure effectively implements both the Measure Consumer with the API and Push Options
+and the Measure Source actor implementing the Pull and API Options.
 
 ![FHIR Server](FHIRServer.svg)
 
-#### Measure to Group Slicer
-A Measure Consumer that implements the API and Pull Option can be grouped with a Measure Source implementing the Push, API and
-Fine-Grained option to "slice and dice" Measure Reports into Groups, populating a Measure Consumer with fine-grained data from
-a Measure Source.  This adapter can be used to add the Fine Grained Option to a Measure Repository.
-
-![Slicer](Slicer.svg)
 
         </overview>
     </actor>

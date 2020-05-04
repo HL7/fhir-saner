@@ -6,7 +6,7 @@ Description: "This Value Set is used to indicate whether a bed is in use (O), av
 * http://terminology.hl7.org/CodeSystem/v2-0116#U
 
 CodeSystem: BedType
-Title: "Saner Bed Type Coding System"
+Title: "Bed Type Coding System"
 Description: "This Coding System fills gaps describing types of care services that a bed can support."
 * #ROOM "Top level category for rooms" "Rooms used for treatment of inpatient or ambulatory patients"
 *    #OR "Operating Room" "Operating Rooms used for surgical procedures. When a room is used for both surgical andnon-surgical procedures, it should be classified as an operating room."
@@ -37,8 +37,8 @@ Description: "This Coding System fills gaps describing types of care services th
 * #AVAILABLE "This resource is available for use"  "Resources that are available for use"
 * #NOTAVAIL "This resource is not available for use" "Resources that are not available and are not in use"
 
-ValueSet: BedType
-Title: "Bed Type"
+ValueSet: BedTypeOfCare
+Title: "Bed Type of Care"
 Description: "This Value Set describes the types of care services that a bed can support."
 * http://terminology.hl7.org/CodeSystem/v3-RoleCode#HOSP
 *   http://terminology.hl7.org/CodeSystem/v3-RoleCode#ICU
@@ -54,8 +54,8 @@ Description: "This value set describes other properties of a bed, such as the ab
 * BedType#OTHISO
 * BedType#NONISO
 
-CodeSystem: LocationFieldNames
-Title: "Location Resource Field Names"
+CodeSystem: ResourceFieldsForLocation
+Title: "Resource Fields for Location"
 Description: "This Coding System identifies legal field names in a FHIR R4 Location Resource."
 //* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
 * ^status = #active
@@ -100,13 +100,8 @@ Description: "This Coding System identifies legal field names in a FHIR R4 Locat
 * #Location.availabilityExceptions
 * #Location.endpoint
 
-ValueSet: LocationFields
-Title: "Location Resource Field Names"
-Description: "Field names in the Location Resource"
-* codes from system LocationFieldNames
-
-CodeSystem: DeviceFieldNames
-Title: "Device Resource Field Names"
+CodeSystem: ResourceFieldsForDevice
+Title: "Resource Fields for Device"
 Description: "This Coding System identifies legal field names in a FHIR R4 Device Resource."
 //* ^url = "http://hl7.org/fhir/R4/StructureDefinition/Device"
 * ^status = #active
@@ -178,14 +173,19 @@ Description: "This Coding System identifies legal field names in a FHIR R4 Devic
 * #Device.safety
 * #Device.parent
 
-ValueSet: DeviceFields
-Title: "Device Resource Field Names"
+ValueSet: FieldsForLocation
+Title: "Resource Fields for Location"
+Description: "Field names in the Location Resource"
+* codes from system ResourceFieldsForLocation
+
+ValueSet: FieldsForDevice
+Title: "Resource Fields for Device"
 Description: "Field names in the Device Resource"
-* codes from system DeviceFieldNames
+* codes from system ResourceFieldsForDevice
 
 ValueSet: Fields
 Title: "Resource Fields"
 Description: "This value set describes fields used to stratify groups in a report"
-* codes from system LocationFieldNames
-* codes from system DeviceFieldNames
+* codes from valueset FieldsForDevice
+* codes from valueset FieldsForLocation
 

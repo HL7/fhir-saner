@@ -1,10 +1,10 @@
 Extension: GeoLocation
 Title: "Extension Attributes to associate with a Location Reference to simplify Geographic search"
+Mixins: SanerStructureDefinitionContent
 Description: """This is essentially a database denormalization that facilitates search by Geographics coordinates on a location.
 It enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.
 The extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)
 in the hope that it could eventually be absorbed by that extension."""
-* ^jurisdiction = urn:iso:std:iso:3166#US
 * extension contains latitude 1..1 and longitude 1..1
 * extension[latitude] ^short = "Like [geolocation:latitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:latitude)"
 * extension[latitude].value[x] only decimal
@@ -14,7 +14,7 @@ in the hope that it could eventually be absorbed by that extension."""
 Extension: MeasureGroupAttributes
 Title: "Attributes describing a group of measures"
 Description: "Attributes describing the group of measures"
-* ^jurisdiction = urn:iso:std:iso:3166#US
+Mixins: SanerStructureDefinitionContent
 * extension contains
     scoring 0..1 and
     compositeScoring 0..1 and
@@ -51,8 +51,8 @@ Description: "Attributes describing the group of measures"
 
 Profile: MeasureCriteria
 Parent: Expression
+Mixins: SanerStructureDefinitionContent
 Description: "Constraints on documentation for the evaluation of a Measure"
-* ^jurisdiction = urn:iso:std:iso:3166#US
 
 * name 1..1
 * name ^short = "name should align with code."
@@ -70,7 +70,7 @@ Description: "Constraints on documentation for the evaluation of a Measure"
 Extension: MeasurePopulationAlternateCriteria
 Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drules, et cetera)"
-* ^jurisdiction = urn:iso:std:iso:3166#US
+Mixins: SanerStructureDefinitionContent
 * value[x] only Expression
 * valueExpression only MeasureCriteria
 * valueExpression 1..1
@@ -80,7 +80,7 @@ Profile:        MeasuredItemDescription
 Parent:         CodeableConcept
 Title:          "Saner Measured Item Description"
 Description:    "A CodeableConcept describing the item to be counted in terms of the type of FHIR Resource to count, and subtype of item identified by that resource"
-* ^jurisdiction = urn:iso:std:iso:3166#US
+Mixins: SanerStructureDefinitionContent
 
 * coding ^slicing.discriminator.type = #pattern
 * coding ^slicing.discriminator.path = "system"
@@ -101,12 +101,12 @@ Profile:        PublicHealthMeasure
 Parent:         Measure
 Title:          "Saner Public Health Measure"
 Description:    """Profile Saner Public Health Measure
+Mixins: SanerStructureDefinitionContent
 
 The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
 of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
 and computation of it can be automated from systems that have the measure data.
 """
-* ^jurisdiction = urn:iso:std:iso:3166#US
 * name 1..1
 * name ^short = "Each measure must have a name."
 * name ^comment = "The name should be in PascalCase, and should represent the Author's title of the Measure.  Identify the Author to clarify"
@@ -201,7 +201,7 @@ point-in-time
 cumulative
 : Use this when the value being reported is a point-in-time cumulative value over all reports"""
 
- * group.population.code from Populations
+ * group.population.code from MeasurePopulations
  * group.population.code.coding 1..*
  * group.population.code.coding ^short = "The coding gives a 'name' for this population and must be supplied"
  * group.population.code.text ^short = "A human readable description of what this population is"
@@ -248,12 +248,12 @@ cumulative
 Profile:        PublicHealthMeasureStratifier
 Parent:         Measure
 Title:          "Saner Public Health Measure Stratifier"
+Mixins: SanerStructureDefinitionContent
 Description:    """Profile Saner Public Health Measure Stratifier
 
 A stratifier is effecitively a mixin that can be used with an existing measure
 to add stratification detail to that measure.
 """
- * ^jurisdiction = urn:iso:std:iso:3166#US
  * group.stratifier 0..*
  * group.stratifier ^short = "A group may have none, some or many strata"
  * group.stratifier.code 1..1

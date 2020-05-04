@@ -8,6 +8,7 @@ Profile: PreciseDateTime
 Parent: dateTime
 Title: "Precise Date Time"
 Description: "A dateTime value that contains seconds and a timezone"
+Mixins: SanerStructureDefinitionContent
 * value obeys DateTimePreciseToSecond
 
 Invariant: ReporterPresentInCompleteReport
@@ -25,6 +26,7 @@ Severity: #error
 Profile:        PublicHealthMeasureReport
 Parent:         MeasureReport
 Title:          "Saner Public Health Measure Report"
+Mixins: SanerStructureDefinitionContent
 Description:    """Profile Saner Public Health Measure Report
 
 The Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret
@@ -68,11 +70,11 @@ error - MeasureReport was determined to be in error."""
 * period.end only PreciseDateTime
 
 * group.code 1..1
-* group.code from Groups (required)
+* group.code from MeasureGroups (required)
 * group.code ^short = "The code for each group must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure"
 
 * group.population.code 1..1
-* group.population.code from Populations (required)
+* group.population.code from MeasurePopulations (required)
 * group.population.code ^short = "The code for each population must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure"
 //* group.population.count 1..1
 * group.population obeys HasValueOrDataAbsentReason

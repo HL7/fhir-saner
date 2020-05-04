@@ -3,22 +3,13 @@ Instance: CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasure
 Title: "CDC Patient Impact and Hospital Capacity"
 Description: "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements."
+Mixins: SanerDefinitionContent
 Usage: #example
  * name = "CDCPatientImpactAndHospitalCapacity"
  * url = "http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity"
- * status = #draft      // draft until final published
- * experimental = true  // true until ready for pilot, then false
- * version = "0.1.0"    // Follow IG Versioning rules
  * title = "Patient Impact and Hospital Capacity"  // Official name of measure being represented as given by the author
- * publisher = "HL7 International"
- * contact.telecom.system = #url
- * contact.telecom.value = "http://hl7.org/Special/committees/pafm/index.cfm"
- * contact[1].telecom.system = #email
- * contact[1].telecom.value = "mailto:kboone@ainq.com"
-
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
  * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * jurisdiction = urn:iso:std:iso:3166#US
  * definition = """Ventilator
 : Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive
 pressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.
@@ -55,7 +46,7 @@ ICU beds
  * relatedArtifact[3].display = "CDC/NHSN COVID-19 Reporting CSV File Template"
 
 // Describe the group of populations being reported, and WHAT this group counts.
- * group.code.coding = GroupSystem#Beds
+ * group.code.coding = MeasureGroupSystem#Beds
  * group.code.coding.display = "Beds"
 
  * group.code.text = "Hospital Bed Reporting"
@@ -70,7 +61,7 @@ ICU beds
  * group.extension[MeasureGroupAttributes].extension[rateAggregation].valueString = "aggregable-by-period"
 
  // Describe the initial population for this Measure Group
- * group.population.code = PopulationSystem#numTotBeds
+ * group.population.code = MeasurePopulationSystem#numTotBeds
  * group.population.code.coding.display = "All Hospital Beds"
  * group.population.code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group.population.code.text = "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
@@ -82,7 +73,7 @@ and overflow and surge/expansion beds used for inpatients or outpatients. This i
  * group.population.criteria.expression = "Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"
 
 // Describe the population strata for numBeds
- * group.population[1].code.coding = PopulationSystem#numBeds
+ * group.population[1].code.coding = MeasurePopulationSystem#numBeds
  * group.population[1].code.coding.display = "Hospital Inpatient Beds"
 // * group.population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group.population[1].code.text = "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
@@ -93,7 +84,7 @@ and overflow and surge/expansion beds used for inpatients or outpatients. This i
  * group.population[1].description = "Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."
 
 // Describe the population for numBedsOcc
- * group.population[2].code.coding = PopulationSystem#numBedsOcc
+ * group.population[2].code.coding = MeasurePopulationSystem#numBedsOcc
  * group.population[2].code.coding.display = "Hospital Inpatient Bed Occupancy"
  * group.population[2].code.text = "Total number of staffed inpatient beds that are occupied"
 // * group.population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
@@ -109,7 +100,7 @@ Follow-up in progress if staffed is less than licensed.
 Total includes all beds, even if with surge beds it exceeds licensed beds."""
 
 // Describe the population for numICUBeds
- * group.population[3].code.coding = PopulationSystem#numICUBeds
+ * group.population[3].code.coding = MeasurePopulationSystem#numICUBeds
  * group.population[3].code.coding.display = "ICU Beds"
  * group.population[3].code.text = "ICU Bed Occupancy"
 // * group.population[3].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
@@ -124,7 +115,7 @@ ICU beds include NICU
 """
 
 // Describe the population for numICUBedsOcc
- * group.population[4].code.coding = PopulationSystem#numICUBedsOcc
+ * group.population[4].code.coding = MeasurePopulationSystem#numICUBedsOcc
  * group.population[4].code.coding.display = "ICU Bed Occupancy"
 // * group.population[4].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group.population[4].code.text = """Total number of staffed inpatient intensive care unit (ICU) beds"""
@@ -137,7 +128,7 @@ ICU beds include NICU
 CDC Webinar 31-Mar-2020:
 ICU beds include NICU"""
 
- * group[1].code.coding = GroupSystem#Ventilators
+ * group[1].code.coding = MeasureGroupSystem#Ventilators
  * group[1].code.coding.display = "Ventilators"
  * group[1].code.text = "Hospital Ventilators Reporting"
 
@@ -152,7 +143,7 @@ ICU beds include NICU"""
  * group[1].extension[MeasureGroupAttributes].extension[rateAggregation].valueString = "aggregable-by-period"
 
 // Describe initial population
- * group[1].population.code.coding = PopulationSystem#numVent
+ * group[1].population.code.coding = MeasurePopulationSystem#numVent
  * group[1].population.code.coding.display = "Mechanical Ventilators"
  * group[1].population.code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[1].population.code.text = "Total number of ventilators available"
@@ -164,7 +155,7 @@ Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure v
  * group[1].population.criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
  * group[1].population.criteria.expression = "Device.where(type in %ValueSet-VentilatorDevices and status = active)"
 // Describe the population for numVentUse
- * group[1].population[1].code.coding = PopulationSystem#numVentUse
+ * group[1].population[1].code.coding = MeasurePopulationSystem#numVentUse
  * group[1].population[1].code.coding.display = "Mechanical Ventilators in Use"
 // * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[1].population[1].code.text = "Total number of ventilators in use"
@@ -175,7 +166,7 @@ Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure v
  * group[1].population[1].description = """Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia
 machines and portable/transport ventilators. Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways."""
 
- * group[2].code.coding = GroupSystem#Encounters
+ * group[2].code.coding = MeasureGroupSystem#Encounters
  * group[2].code.coding.display = "Encounters"
  * group[2].code.text = "Hospital COVID-19 Encounters Reporting"
 
@@ -192,7 +183,7 @@ machines and portable/transport ventilators. Include BiPAP machines if the hospi
 
 
 // describe the initial population
- * group[2].population.code.coding = PopulationSystem#numC19Pats
+ * group[2].population.code.coding = MeasurePopulationSystem#numC19Pats
  * group[2].population.code.coding.display = "All COVID-19 Confirmed or Suspected Patients"
  * group[2].population.code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[2].population.code.text = "Patients with suspected or confirmed COVID-19 in any location."
@@ -211,7 +202,7 @@ for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compat
 COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue)."""
 
 // Describe the criteria for numC19VentPats
- * group[2].population[1].code.coding = PopulationSystem#numC19VentPats
+ * group[2].population[1].code.coding = MeasurePopulationSystem#numC19VentPats
  * group[2].population[1].code.coding.display = "Ventilated COVID-19 Patients"
 // * group[2].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[1].code.text = "Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator."
@@ -224,7 +215,7 @@ currently on a mechanical ventilator* at the time the data is collected. This in
 diagnosed COVID-19."""
 
 // Describe the criteria for numC19HospPats
- * group[2].population[2].code.coding = PopulationSystem#numC19HospPats
+ * group[2].population[2].code.coding = MeasurePopulationSystem#numC19HospPats
  * group[2].population[2].code.coding.display = "Hospitalized COVID-19 Patients"
 // * group[2].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[2].code.text = "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
@@ -240,7 +231,7 @@ for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compat
 COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue)."""
 
 // Describe the criteria for numC19MechVentPats
- * group[2].population[3].code.coding = PopulationSystem#numC19MechVentPats
+ * group[2].population[3].code.coding = MeasurePopulationSystem#numC19MechVentPats
  * group[2].population[3].code.coding.display = "Hospitalized and Ventilated COVID-19 Patients"
 // * group[2].population[3].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[3].code.text = "Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
@@ -253,7 +244,7 @@ suspected or confirmed COVID-19 and are currently on a mechanical ventilator* at
 patients with laboratory-confirmed or clinically diagnosed COVID-19."""
 
 // Describe the criteria for numC19HOPats
- * group[2].population[4].code.coding = PopulationSystem#numC19HOPats
+ * group[2].population[4].code.coding = MeasurePopulationSystem#numC19HOPats
  * group[2].population[4].code.coding.display = "Hospital Onset COVID-19 Patients"
 // * group[2].population[4].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[4].code.text = """Patients currently hospitalized in an inpatient bed with onset of suspected or
@@ -271,7 +262,7 @@ day 1). This includes laboratory-confirmed or clinically diagnosed COVID-19 case
 
 
 // Describe the criteria for numC19OverflowPats
- * group[2].population[5].code.coding = PopulationSystem#numC19OverflowPats
+ * group[2].population[5].code.coding = MeasurePopulationSystem#numC19OverflowPats
  * group[2].population[5].code.coding.display = "ED/Overflow COVID-19 Patients"
 // * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[5].code.text = "Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed"
@@ -285,7 +276,7 @@ is collected . This includes patients with laboratory-confirmed or clinically di
 locations created to accommodate patients include but not limited to 24-hour observation units, hallways, parking lots, or tents."""
 
 // Describe the criteria for numC19OFMechVentPats
- * group[2].population[6].code.coding = PopulationSystem#numC19OFMechVentPats
+ * group[2].population[6].code.coding = MeasurePopulationSystem#numC19OFMechVentPats
  * group[2].population[6].code.coding.display = "ED/Overflow and Ventilated COVID-19 Patients"
 // * group[2].population[6].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"
@@ -297,7 +288,7 @@ locations created to accommodate patients include but not limited to 24-hour obs
 mechanical ventilator* at the time the data is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19."""
 
 // Describe the criteria for numC19Died
- * group[2].population[7].code.coding = PopulationSystem#numC19Died
+ * group[2].population[7].code.coding = MeasurePopulationSystem#numC19Died
  * group[2].population[7].code.coding.display = "COVID-19 Patient Deaths"
 // * group[2].population[7].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[2].population[7].code.text = "Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting."
