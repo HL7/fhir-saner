@@ -68,10 +68,6 @@ When the API option is implemented, the Measure Source performs the FHIR create
 operation on the MeasureReport resource at a Measure Consumer.  When the Dump option is implemented, the Measure Source
 writes the MeasureReport data to external storage specified by the Measure Consumer.
 
-When the Group option is implemented, the Measure Source also generates Group resources.  The Measure Source may
-be configured to disable generation of MeasureReport resources (e.g., when used to add Group capabilities to an
-existing server), but must be able to demostrate creation of the MeasureReport resources matching the Group.
-
 
 
 ###### The Measure Consumer Accepts Resource
@@ -82,5 +78,5 @@ used, the Measure Consumer reports success using the native protocols for the ex
 
 
 
-When the Group option is implemented, the Measure Consumer also accepts Group resources.
+
 

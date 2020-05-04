@@ -122,14 +122,17 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\pagecontent\actors_and_transactions.md                        | copied    | fsh\ig-data\input\pagecontent\3_actors_and_transactions.md                      |
 | input\pagecontent\architecture.md                                   | copied    | fsh\ig-data\input\pagecontent\6_architecture.md                                 |
 | input\pagecontent\definitions.md                                    | copied    | fsh\ig-data\input\pagecontent\7_definitions.md                                  |
+| input\pagecontent\examples.md                                       | copied    | fsh\ig-data\input\pagecontent\13_examples.md                                    |
 | input\pagecontent\index.md                                          | copied    | fsh\ig-data\input\pagecontent\index.md                                          |
 | input\pagecontent\measures.md                                       | copied    | fsh\ig-data\input\pagecontent\8_measures.md                                     |
 | input\pagecontent\overview.md                                       | copied    | fsh\ig-data\input\pagecontent\1_overview.md                                     |
+| input\pagecontent\profiles.md                                       | copied    | fsh\ig-data\input\pagecontent\11_profiles.md                                    |
 | input\pagecontent\security_considerations.md                        | copied    | fsh\ig-data\input\pagecontent\4_security_considerations.md                      |
 | input\pagecontent\technology_environment.md                         | copied    | fsh\ig-data\input\pagecontent\5_technology_environment.md                       |
 | input\pagecontent\transaction-1.md                                  | copied    | fsh\ig-data\input\pagecontent\transaction-1.md                                  |
 | input\pagecontent\transaction-2.md                                  | copied    | fsh\ig-data\input\pagecontent\transaction-2.md                                  |
 | input\pagecontent\transaction-3.md                                  | copied    | fsh\ig-data\input\pagecontent\transaction-3.md                                  |
+| input\pagecontent\transactions.md                                   | copied    | fsh\ig-data\input\pagecontent\10_transactions.md                                |
 | input\pagecontent\use_cases.md                                      | copied    | fsh\ig-data\input\pagecontent\2_use_cases.md                                    |
 | input\pagecontent\vocabulary.md                                     | copied    | fsh\ig-data\input\pagecontent\9_vocabulary.md                                   |
 | package.json                                                        | copied    | fsh\package.json                                                                |

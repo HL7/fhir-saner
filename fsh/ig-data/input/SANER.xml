@@ -9,10 +9,6 @@
     <description>The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-
-![The SANER Project Logo](SANERLogo.png)
-&lt;div style='float: clear'/&gt;
-**Fighting COVID-19 with FHIR®**
     </description>
     <!-- overview is optional -->
     <overview file="SANER-overview.md"/>
@@ -225,15 +221,14 @@ focus (e.g., wider or smaller region).</description>
     <!--  Other Use Cases can describe options -->
     <actor id="MeasureSource">
         <name>Measure Source</name>
-        <description>The Measure Source Actor reports results for a single facility, collection of facilities
-        or aggragated data for a region</description>
+        <description>The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.</description>
         <!-- overview is optional -->
         <overview>
 In a single facility, or organization, the Measure Source Actor will compile data directly from the facility
 or organization source systems.
 
 A Measure Source may also exist in an Aggregator, Intermediary or Bridging role.  In this guide we will use
-the term Intermediary to describe that role.
+the term Intermediary to describe these roles.
 
 A Measure Source provides the FHIR data that is used by a Measure Consumer.
 </overview>

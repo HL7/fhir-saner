@@ -1,8 +1,8 @@
 // This sheet convert output to FHIR Shorthand for generating measures.
 Alias: $Base = http://hl7.org/fhir/us/saner
 
-CodeSystem: PopulationSystem
-Title: "Population System"
+CodeSystem: MeasurePopulationSystem
+Title: "Measure Population System"
 Description: "A Code System for Populations defined by The SANER Project"
 * #numTotBeds                   "All Hospital Beds" "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
 * #numBeds                      "Hospital Inpatient Beds" "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
@@ -28,29 +28,26 @@ Description: "A Code System for Populations defined by The SANER Project"
 * #positive                     "Cumulative Positive COVID-19 Tests"
 * #allReports                   "All Laboratory Reports for any Order"
 * #latestReports                "Most Recent Laboratory Reports for any Order"
-* #positiveIncreasePercent "Percent Positive among Newly Resulted Tests"
-* #positivePercent         "Cumulative Percent Positive among Resulted Tests"
 
-CodeSystem: GroupSystem
-Title: "Group System"
+
+CodeSystem: MeasureGroupSystem
+Title: "Measure Group System"
 Description: "A Code System for Groups defined by The SANER Project"
 * #Beds             "Beds" ""
 * #Ventilators      "Ventilators" ""
 * #Encounters       "Encounters" ""
+* #positiveIncreasePercent "Percent Positive among Newly Resulted Tests"
+* #positivePercent         "Cumulative Percent Positive among Resulted Tests"
 
-
-ValueSet: Groups
+ValueSet: MeasureGroups
 Title: "Measure Groups"
 Description: "Measure Groups defined by the SANER Project"
-* codes from system GroupSystem
-* PopulationSystem#positiveIncreasePercent
-* PopulationSystem#positivePercent
+* codes from system MeasureGroupSystem
 
-
-ValueSet: Populations
+ValueSet: MeasurePopulations
 Title: "Measure Populations"
 Description: "Measure Populations defined by The SANER Project"
-* codes from system PopulationSystem
+* codes from system MeasurePopulationSystem
 
 
 ValueSet: MeasureStatus
@@ -60,24 +57,22 @@ Description: "Allowed Status Values for Saner Measures"
 * http://hl7.org/fhir/publication-status#draft
 * http://hl7.org/fhir/publication-status#retired
 
-
-
 CodeSystem: MeasureRateAggregation
-Title: "Rate Aggregation Coding System"
+Title: "Measure Rate Aggregation Coding System"
 Description: "This Coding System Identifies methods of rate aggregation"
 * #aggregable-by-period "Aggregable" "Rates can be accumulated over consecutive periods"
 * #point-in-time "Point in Time" "Rates are point in time measures during the reporting period"
 * #cumulative "Cumulative" "Rates are point in time measures showing cumulative values over all reporting periods"
 
 ValueSet: MeasureRateAggregationValues
-Title: "Rate Aggregation Value Set"
+Title: "Measure Rate Aggregation Value Set"
 Description: "This Value Set Identifies methods of rate aggregation"
 * codes from system MeasureRateAggregation
 
 
 ValueSet: BedLocationTypes
-Title: "Location Types"
-Description: "Codes used to locations"
+Title: "Bed Location Types"
+Description: "Codes used to identify types of service locations for beds"
 
 ValueSet:    InpatientLocations
 Title:       "Inpatient Locations"
@@ -93,14 +88,14 @@ Description: "Codes used for ED or Overflow locations"
 
 ValueSet:    OccupiedBed
 Title:       "Occupied Bed"
-Description: "Codes used Occupied Beds"
+Description: "Codes used for Occupied Beds"
 
 ValueSet:    VentilatorDevices
 Title:       "Ventilator Devices"
 Description: "Codes used for Ventilator Devices"
 
 ValueSet:    VentilatorDevicesWithTracheostomy
-Title:       "Devices used for Ventilation with Tracheostomy"
+Title:       "Ventilator Devices when used with Tracheostomy"
 Description: "Codes used for Devices that support Ventilation with a Tracheostomy"
 
 ValueSet:    SuspectedOrDiagnosedCOVID19

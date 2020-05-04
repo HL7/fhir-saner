@@ -1,8 +1,8 @@
 // This sheet convert output to FHIR Shorthand for generating measures.
 
 CodeSystem: Populations
-Title: "Population Measure Groups"
-Description: "Groups defined by The SANER Project for measure populations"
+Title: "Measure Groups and Populations"
+Description: "Groups and Populations defined by The SANER Project for measures"
 * #numTotBeds                   "All Hospital Beds" "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
 * #numBeds                      "Hospital Inpatient Beds" "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
 * #numBedsOcc                   "Hospital Inpatient Bed Occupancy" "Total number of staffed inpatient beds that are occupied"

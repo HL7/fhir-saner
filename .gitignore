@@ -7,3 +7,4 @@ _updatePublisher.bat
 /node_modules/
 /docs/
 /save/
+/bin/

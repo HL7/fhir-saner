@@ -2,10 +2,6 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-
-![The SANER Project Logo](SANERLogo.png)
-<div style='float: clear'/>
-**Fighting COVID-19 with FHIR®**
     
 
 
@@ -71,7 +67,8 @@ evolution from Bed Availability.
 
 [^4]: [HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
 
-This rapid assessment leads this guide to a focus on bed availability.
+This rapid assessment leads this guide to a focus on bed and ventilator
+availability.
 
 ### Bed Availability
 The key data for bed availability is found in Bed Management solutions integrated with
@@ -105,6 +102,10 @@ and general observations profiled by ANSI/HITSP to support organizational report
 
 ##### HL7 Version 3
 No HL7 Version 3 standards were developed to support Bed management or availability.
+The HL7 SOA Workgroup Collaborated with the OASIS EDXL Committee to develop a [Cross
+Paradigm](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
+specification supporting the communication of bed availability information.
+
 
 ##### HL7 FHIR
 In HL7 FHIR the [Location](https://hl7.org/fhir/R4/location.html) resource can describe information about
@@ -152,6 +153,12 @@ including simple counts, with measures over different strata.  It is not readily
 the stratum level.  MeasureReport is beginning to gain traction because of efforts using
 it in the [DaVinci Project](https://www.hl7.org/about/davinci/).
 
+###### Questionnaire Response
+The QuestionnaireResponse resource has been profiled for use in reporting to CDC's National
+Healthcare Safety Network (NHSN) in two implementation guides to report the occurrence
+of Healthcare Acquired Infections. These guides have seen limited implementation and
+testing.
+
 The table below shows the [FHIR Maturity Model](https://www.hl7.org/fhir/R4/versions.html#maturity) Level for each of the resources described
 above.
 
@@ -161,6 +168,7 @@ above.
 <tr><td><a href="https://hl7.org/fhir/group.html">Group</a></td><td>1</td></tr>
 <tr><td><a href="https://hl7.org/fhir/location.html">Location</a></td><td>3</td></tr>
 <tr><td><a href="https://hl7.org/fhir/measurereport.html">MeasureReport</a></td><td>2</td></tr>
+<tr><td><a href="https://hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a></td><td>3</td></tr>
 </tbody>
 </table>
 
@@ -181,6 +189,27 @@ R4.
 HL7 Version 2 Table 0116 [Bed Status Provides Vocabulary](https://www.hl7.org/fhir/v2/0116/index.html) that can describe the status
 of a bed, and has been adopted as the [Extensible](https://www.hl7.org/fhir/terminologies.html#extensible) vocabulary
 for `Location.operationalStatus` in the Location resource in FHIR R4.
+
+##### Codes used for Stratifying Populations
+Other codes are essential for stratifying populations to determine the impact of disease,
+by age, gender or race and ethnicity, either to determine risk factors, or identify
+disparities in treatment.  Existing code sets are available to support these sorts of
+stratification efforts.
+
+##### New Codes
+Until COVID-19 and SARS-Cov-2 were discovered, codes to describe the disease, diagnostic
+tests, antibody tests, or test results did not exist because these concepts did not
+yet exist.  Since then organizations like LOINC, SNOMED and CMS responsible for managing code
+systems used by EHR and other Health IT systems have produced codes where needed, and developed value
+sets and guidelines for coding conditions and situations related to COVID-19 including
+diagnosis, evaluation, treatment, procedures, and medications associated with the disease.
+
+These new codes and guidelines for use of existing codes support:
+
+* Laboratory Testing and Results
+* Diagnosis of COVID-19
+* Suspected Diagnosis of COVID-19
+* Suspected or actual Exposure to COVID-19
 
 
 

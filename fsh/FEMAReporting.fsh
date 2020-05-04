@@ -4,6 +4,8 @@ Instance: FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasure
 Title: "FEMA Laboratory Orders and Results Daily Increase Reporting"
 Description: "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts."
+Mixins: SanerDefinitionContent
+
  * name = "FEMADailyHospitalCOVID19Reporting"
  * version = "0.1.0"
  * status = #draft
@@ -12,16 +14,10 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * author.name = "FEMA"
  * author.telecom.system = #email
  * author.telecom.value = "mailto:fema-hhs-covid-diagnostics-tf@fema.dhs.gov "
- * publisher = "HL7 International"
- * contact.telecom.system = #url
- * contact.telecom.value = "http://hl7.org/Special/committees/pafm/index.cfm"
- * contact[1].telecom.system = #email
- * contact[1].telecom.value = "mailto:kboone@ainq.com"
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
  * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
  * type = http://terminology.hl7.org/CodeSystem/measure-type#outcome
  * topic = http://snomed.info/sct#252318005 "Immunology laboratory test (procedure)"
- * jurisdiction = urn:iso:std:iso:3166#US
  * rateAggregation = "aggregable-by-period"
  * relatedArtifact[0].type = #documentation
  * relatedArtifact[0].url = "https://www.cms.gov/newsroom/press-releases/trump-administration-engages-americas-hospitals-unprecedented-data-sharing"
@@ -42,7 +38,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
 
 
 // positiveIncreasePercent IS the measureScore
- * group.code.coding = PopulationSystem#positiveIncreasePercent
+ * group.code.coding = MeasureGroupSystem#positiveIncreasePercent
  * group.code.coding.display = "Percent Positive among Newly Resulted Tests"
  * group.code.text = "# of new positive test results released / # of total new tests released for previous date queried"
 
@@ -57,7 +53,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
 
 
 // describe the initial population
- * group.population.code.coding = PopulationSystem#totalOrdersIncrease
+ * group.population.code.coding = MeasurePopulationSystem#totalOrdersIncrease
  * group.population.code.coding.display = "New Diagnostic Tests Ordered/Received"
  * group.population.code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group.population.code.text = "Midnight to midnight cutoff, tests ordered on previous date queried"
@@ -71,7 +67,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
 )"""
  * group.population.description = "Enter the number of new Diagnostic Tests Ordered/Received during the reporting period."
 
- * group.population[1].code.coding = PopulationSystem#totalTestResultsIncrease
+ * group.population[1].code.coding = MeasurePopulationSystem#totalTestResultsIncrease
  * group.population[1].code.coding.display = "New Tests Resulted"
  * group.population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  * group.population[1].code.text = "Midnight to midnight cutoff, test results released on previous date queried"
@@ -88,7 +84,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  Do not include results where the test could not be completed because the specimen
  was rejected or a positive/negative result could not be established"""
 
- * group.population[2].code.coding = PopulationSystem#positiveIncrease
+ * group.population[2].code.coding = MeasurePopulationSystem#positiveIncrease
  * group.population[2].code.coding.display = "New Positive COVID-19 Tests"
  * group.population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  * group.population[2].code.text = "Midnight to midnight cutoff, positive test results released on previous date queried"
@@ -98,7 +94,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * group.population[2].criteria.expression = "DiagnosticReport.where($this in %totalTestResultsIncrease and conclusionCode in %ValueSet-ConfirmedCOVID19Diagnosis)"
  * group.population[2].description = "Enter the number of positive test results released during the reporting period."
 
- * group[1].code.coding = PopulationSystem#positivePercent
+ * group[1].code.coding = MeasureGroupSystem#positivePercent
  * group[1].code.coding.display = "Cumulative Percent Positive among Resulted Tests"
  * group[1].code.text = "# of total positive results to released date / # of total tests results released to date"
 
@@ -112,7 +108,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * group[1].extension[MeasureGroupAttributes].extension[rateAggregation].valueString = "cumulative"
 
 
- * group[1].population.code.coding = PopulationSystem#totalOrders
+ * group[1].population.code.coding = MeasurePopulationSystem#totalOrders
  * group[1].population.code.coding.display = "Cumulative Diagnostic Tests Ordered/Recieved"
  * group[1].population.code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[1].population.code.text = "All tests ordered to date."
@@ -128,7 +124,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
 )"""
  * group[1].population.description = "Enter the cumulative number of tests ordered to date."
 
- * group[1].population[1].code.coding = PopulationSystem#allReports
+ * group[1].population[1].code.coding = MeasurePopulationSystem#allReports
  * group[1].population[1].code.coding.display = "All Laboratory Reports for any Order"
 // * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[1].population[1].code.text = "Reports to date including corrected, amended and canceled reports"
@@ -138,7 +134,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * group[1].population[1].criteria.expression = "DiagnosticReport.where(basedOn in %totalOrders)"
  * group[1].population[1].description = "This is in intermediate population used to simplify calculations"
 
- * group[1].population[2].code.coding = PopulationSystem#latestReports
+ * group[1].population[2].code.coding = MeasurePopulationSystem#latestReports
  * group[1].population[2].code.coding.display = "Most Recent Laboratory Reports for any Order"
 // * group[1].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[1].population[2].code.text = "Latest Reports to date for each order"
@@ -148,7 +144,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * group[1].population[2].criteria.expression = "TBD"
  * group[1].population[2].description = "This is in intermediate population used to simplify calculations"
 
- * group[1].population[3].code.coding = PopulationSystem#rejected
+ * group[1].population[3].code.coding = MeasurePopulationSystem#rejected
  * group[1].population[3].code.coding.display = "Cumulative Specimens Rejected*"
  * group[1].population[3].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator-exclusion
  * group[1].population[3].code.text = "All specimens rejected for testing to date"
@@ -158,7 +154,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  * group[1].population[3].criteria.expression = "DiagnosticReport.where(status = 'cancelled' and code in %ValueSet-COVID19DiagnosticTest)"
  * group[1].population[3].description = "Enter the cumulative number of specimens rejected for testing to date."
 
- * group[1].population[4].code.coding = PopulationSystem#totalTestResults
+ * group[1].population[4].code.coding = MeasurePopulationSystem#totalTestResults
  * group[1].population[4].code.coding.display = "Cumulative Tests Performed"
  * group[1].population[4].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  * group[1].population[4].code.text = "All tests with results released to date"
@@ -173,7 +169,7 @@ Description: "This measure demonstrates reporting about Daily Laboratory Testing
  """Enter the total number tests with results released to date. Do not include tests where a
  positive/negative result could not be determined (e.g., because the specimen was inadequate)."""
 
- * group[1].population[5].code.coding = PopulationSystem#positive
+ * group[1].population[5].code.coding = MeasurePopulationSystem#positive
  * group[1].population[5].code.coding.display = "Cumulative Positive COVID-19 Tests"
  * group[1].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  * group[1].population[5].code.text = "All positive test results released to date"
