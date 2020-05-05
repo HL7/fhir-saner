@@ -95,3 +95,7 @@ error - MeasureReport was determined to be in error."""
 * group.stratifier.stratum.population.code ^short = "The population code must be present"
 * group.stratifier.stratum.population.count 1..1
 * group.stratifier.stratum.population.count ^short = "The population code count be present"
+
+* evaluatedResource MS
+* evaluatedResource 0..*
+* evaluatedResource ^short = "Include references to MeasureReport or QuestionnaireResponse resources used to compute an aggregated report"

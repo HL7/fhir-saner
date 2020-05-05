@@ -23,4 +23,4 @@ RuleSet: SanerStructureDefinitionContent
  * ^jurisdiction.coding = urn:iso:std:iso:3166#US
 
 RuleSet: SanerExample
- * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+ * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST "test health data"

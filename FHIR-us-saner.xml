@@ -156,6 +156,12 @@
    <artifact name="CDC Patient Impact and Hospital Capacity"
              key="Measure-CDCPatientImpactAndHospitalCapacity"
              id="Measure/CDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="Computable CDC Patient Impact and Hospital Capacity"
+             key="Measure-ComputableCDCPatientImpactAndHospitalCapacity"
+             id="Measure/ComputableCDCPatientImpactAndHospitalCapacity"/>
+   <artifact name="Computable FEMA Laboratory Orders and Results Daily Increase Reporting"
+             key="Measure-ComputableFEMADailyHospitalCOVID19Reporting"
+             id="Measure/ComputableFEMADailyHospitalCOVID19Reporting"/>
    <artifact name="ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"
              key="MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"
              id="MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"/>
