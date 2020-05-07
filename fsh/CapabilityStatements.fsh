@@ -193,24 +193,12 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[0].searchParam[5].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[0].searchParam[5].extension[0].valueCode = #SHALL
   // SHALL support search by reporter
+  // TODO: a SearchParameter should be defined that allows the identifier modifier
   * rest.resource[0].searchParam[6].name = "reporter"
   * rest.resource[0].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/MeasureReport-reporter"
   * rest.resource[0].searchParam[6].type = #reference
   * rest.resource[0].searchParam[6].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[0].searchParam[6].extension[0].valueCode = #SHALL
-  // SHALL support search by reporter
-  * rest.resource[0].searchParam[7].name = "reporter"
-  * rest.resource[0].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/MeasureReport-reporter"
-  * rest.resource[0].searchParam[7].type = #reference
-  * rest.resource[0].searchParam[7].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[0].searchParam[7].extension[0].valueCode = #SHALL
-  // SHALL support search by reporter
-  // TODO: a SearchParameter should be defined that allows the identifier modifier
-  * rest.resource[0].searchParam[8].name = "reporter"
-  * rest.resource[0].searchParam[8].definition = "http://hl7.org/fhir/SearchParameter/MeasureReport-reporter"
-  * rest.resource[0].searchParam[8].type = #reference
-  * rest.resource[0].searchParam[8].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[0].searchParam[8].extension[0].valueCode = #SHALL
   //SHALL support _include for any resource
   * rest.resource[0].searchInclude[0] = "*"
   * rest.resource[0].searchInclude[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
