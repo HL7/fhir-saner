@@ -24,3 +24,16 @@ RuleSet: SanerStructureDefinitionContent
 
 RuleSet: SanerExample
  * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST "test health data"
+
+RuleSet: SanerCapabilityStatementContent
+ * status = #draft
+ * experimental = true
+ * date = "2020-05-07"
+ * publisher = "Audacious Inquiry, Inc."
+ * contact.name = "Keith W. Boone"
+ * contact.telecom.system = #email
+ * contact.telecom.value = "kboone@ainq.com"
+ * kind = #requirements
+ * fhirVersion = #4.0.1
+ * format = #json
+ 
