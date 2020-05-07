@@ -1,6 +1,6 @@
 Instance: MeasureSourcePull
 InstanceOf: CapabilityStatement
-Title: "Measure Source - Pull Option"
+Title: "Measure Source - Pull Option (Server)"
 Usage: #definition
   * status = #draft
   * experimental = true
@@ -60,7 +60,7 @@ Usage: #definition
   * rest.resource[0].searchParam[3].extension[0].valueCode = #SHALL
   // SHALL support search by subject
   // TODO: a SearchParameter should be defined that constrains this to only Location references
-  // TODO: a SearchParameter should be defined that only allows the :Identifier modifier.  Should this also be constrained only to LocatioN?
+  // TODO: a SearchParameter should be defined that only allows the :Identifier modifier.  Should this also be constrained only to Location?
   * rest.resource[0].searchParam[4].name = "subject"
   * rest.resource[0].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/MeasureReport-subject"
   * rest.resource[0].searchParam[4].type = #reference
@@ -181,14 +181,14 @@ Usage: #definition
 
   // Organization requirements
   * rest.resource[2].type = #Organization
-  // SHOULD support Organization
+  // SHALL support Organization
   * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].extension[0].valueCode = #SHALL
-  // SHOULD support create on Organization
+  // SHALL support read on Organization
   * rest.resource[2].interaction[0].code = #read
   * rest.resource[2].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].interaction[0].extension[0].valueCode = #SHALL
-  // SHOULD support update on Organization
+  // SHALL support search on Organization
   * rest.resource[2].interaction[1].code = #search-type
   * rest.resource[2].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].interaction[1].extension[0].valueCode = #SHALL
