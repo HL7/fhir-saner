@@ -36,4 +36,3 @@ RuleSet: SanerCapabilityStatementContent
  * kind = #requirements
  * fhirVersion = #4.0.1
  * format = #json
- 
