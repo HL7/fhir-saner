@@ -1,6 +1,7 @@
 Instance: MeasureConsumerPush
-Title: "Measure Consumer - Push Option"
 InstanceOf: CapabilityStatement
+Title: "Measure Consumer - Push Option"
+Usage: #definition
   * status = #draft
   * experimental = true
   * date = "2020-05-07"

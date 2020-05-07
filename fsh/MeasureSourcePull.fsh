@@ -1,6 +1,7 @@
 Instance: MeasureSourcePull
-Title: "Measure Source - Pull Option"
 InstanceOf: CapabilityStatement
+Title: "Measure Source - Pull Option"
+Usage: #definition
   * status = #draft
   * experimental = true
   * date = "2020-05-07"
