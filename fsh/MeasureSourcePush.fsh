@@ -1,6 +1,6 @@
-Instance: MeasureConsumerPush
+Instance: MeasureSourcePush
 InstanceOf: CapabilityStatement
-Title: "Measure Consumer - Push Option (Server)"
+Title: "Measure Source - Push Option (Client)"
 Usage: #definition
   * status = #draft
   * experimental = true
@@ -12,12 +12,17 @@ Usage: #definition
   * kind = #requirements
   * fhirVersion = #4.0.1
   * format = #json
-  * rest.mode = #server
+  * rest.mode = #client
   * rest.documentation = """
-    The Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources.
-    The Measure Consumer provides the ability to report on data from one or more Measure Sources.
-    An Measure Consumer implementing the Pull Option periodically queries a Measure Source using the Query Measure transaction to enable collection of the current status.
+    The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.
+    In a single facility, or organization, the Measure Source Actor will compile data directly from the facility or organization source systems.
+    A Measure Source may also exist in an Aggregator, Intermediary or Bridging role. In this guide we will use the term Intermediary to describe these roles.
+    A Measure Source provides the FHIR data that is used by a Measure Consumer.
+    A Measure Source implementing the Pull Option is periodically queried by an Measure Consumer using the Query Measure transaction to enable collection of the current status.
   """
+
+  // Note these are the same requirements as a MeasureConsumer Server using the Push configuration.
+
   // MeasureReport requirements
   * rest.resource[0].type = #MeasureReport
   * rest.resource[0].supportedProfile = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
@@ -105,3 +110,4 @@ Usage: #definition
   * rest.resource[4].interaction[1].code = #update
   * rest.resource[4].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[4].interaction[1].extension[0].valueCode = #SHALL
+  
