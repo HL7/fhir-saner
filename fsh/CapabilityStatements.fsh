@@ -7,7 +7,7 @@ Mixins: SanerCapabilityStatementContent, CapabilityStatementPullOption
   * rest.documentation = """
     The Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources.
     The Measure Consumer provides the ability to report on data from one or more Measure Sources.
-    An Measure Consumer implementing the Pull Option periodically queries a Measure Source using the Query Measure transaction to enable collection of the current status.
+    A Measure Consumer implementing the Pull Option periodically queries a Measure Source using the Query Measure transaction to enable collection of the current status.
   """
 
 Instance: MeasureSourcePull
@@ -21,7 +21,7 @@ Mixins: SanerCapabilityStatementContent, CapabilityStatementPullOption
     In a single facility, or organization, the Measure Source Actor will compile data directly from the facility or organization source systems.
     A Measure Source may also exist in an Aggregator, Intermediary or Bridging role. In this guide we will use the term Intermediary to describe these roles.
     A Measure Source provides the FHIR data that is used by a Measure Consumer.
-    A Measure Source implementing the Pull Option is periodically queried by an Measure Consumer using the Query Measure transaction to enable collection of the current status.
+    A Measure Source implementing the Pull Option is periodically queried by a Measure Consumer using the Query Measure transaction to enable collection of the current status.
   """
 
 Instance: MeasureSourcePush
@@ -47,7 +47,7 @@ Mixins: SanerCapabilityStatementContent, CapabilityStatementPushOption
   * rest.documentation = """
     The Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources.
     The Measure Consumer provides the ability to report on data from one or more Measure Sources.
-    An Measure Consumer implementing the Push Option periodically recieves updates from the Measure Source using the Produce Measure transaction.
+    A Measure Consumer implementing the Push Option periodically recieves updates from the Measure Source using the Produce Measure transaction.
   """
 
 RuleSet: CapabilityStatementPushOption
