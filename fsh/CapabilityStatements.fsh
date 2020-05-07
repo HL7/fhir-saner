@@ -209,7 +209,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[0].searchParam[1].type = #token
   * rest.resource[0].searchParam[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[0].searchParam[1].extension[0].valueCode = #SHOULD
-  // TODO: a SearchParemeter for measure.title chained search as a SHOULD
+  // TODO: a SearchParameter for measure.title chained search as a SHOULD
 
   // Location requirements
   * rest.resource[1].type = #Location
