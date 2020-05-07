@@ -1,6 +1,6 @@
 Instance: MeasureConsumerPull
 InstanceOf: CapabilityStatement
-Title: "Measure Comsumer - Pull Option"
+Title: "Measure Consumer - Pull Option (Client)"
 Usage: #definition
   * status = #draft
   * experimental = true
