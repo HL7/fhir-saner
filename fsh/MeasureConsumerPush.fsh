@@ -54,11 +54,11 @@ InstanceOf: CapabilityStatement
   // SHOULD support Location with the SANERResourceLocation Profile
   * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].extension[0].valueCode = #SHOULD
-  // SHOULD support create on Measure
+  // SHOULD support create on Location
   * rest.resource[2].interaction[0].code = #create
   * rest.resource[2].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].interaction[0].extension[0].valueCode = #SHOULD
-  // SHOULD support update on Measure
+  // SHOULD support update on Location
   * rest.resource[2].interaction[1].code = #update
   * rest.resource[2].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].interaction[1].extension[0].valueCode = #SHOULD
@@ -92,7 +92,7 @@ InstanceOf: CapabilityStatement
   * rest.resource[3].interaction[1].extension[0].valueCode = #SHALL
 
   // Questionnaire requirements
-  * rest.resource[4].type = #QuestionnaireResponse
+  * rest.resource[4].type = #Questionnaire
   // SHALL support Questionnaire
   * rest.resource[4].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[4].extension[0].valueCode = #SHALL
