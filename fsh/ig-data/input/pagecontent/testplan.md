@@ -28,9 +28,12 @@ Unit Tests for Measure Storage actor test that it can produce valid content. Giv
 * provide CapabilityStatement with indications of support of the SANER Measure Source actor
 * Test output from Measure Source is valid
   * Action: Validate content to the SANER StructureDefinition 
+    * [PublicHealthMeasureReport](StructureDefinition-PublicHealthMeasure.html)
+	* [PublicHealthMeasure](StructureDefinition-PublicHealthMeasureReport.html)
 * Test output from Measure Source is accurate to expected values published
   * Given some specific input to the SUT, that it produces output with correct values
-
+* Optional test audit events "exist"
+  * no validation yet possible as this is underspecified
 
 ##### Negative Test Scenarios
 Negative tests are deliberate deviations from "happy path". They would not all be failure-modes. They must all be handled gracefully in a way appropriate to the SUT functionality.
@@ -45,6 +48,10 @@ Unit Tests for Measure Consumer actor test that it can consume valid and invalid
 ##### Postive Test Scenarios
 * provide CapabilityStatement with indicatinos of support of the SANER Measure Consumer actor
 * submit sample measures from SANER examples are consumed and made available in the Measure Consumer as expected by SUT functionality
+  * [Public Health Measure Examples](StructureDefinition-PublicHealthMeasure-examples.html)
+  * [Public Health Measure Report Examples](StructureDefinition-PublicHealthMeasureReport.html)
+* Optional test audit events "exist"
+  * no validation yet possible as this is underspecified
 
 ##### Negative Test Scenarios
 Negative tests are deliberate deviations from "happy path". They would not all be failure-modes. They must all be handled gracefully in a way appropriate to the SUT functionality.
@@ -54,7 +61,11 @@ Negative tests are deliberate deviations from "happy path". They would not all b
 * submit valid FHIR Measure that is not SANER compliant (from fhir core one of the examples?)
   * http://build.fhir.org/measurereport-cms146-cat3-example.html
 * submit valid SANER Measure that has extra data not minimally necessary
-* submit valid SANER MEasure that has measures that are outside natural boundary for that measure (e.g. negative integer for counts)
+  * TBD
+* submit valid SANER Measure that has measures that are outside natural boundary for that measure (e.g. negative integer for counts)
+  * TBD
+* submit valid SANER Measure that have random data that are valid
+  * TBD
 
 #### Measure Intermediary
 * 
