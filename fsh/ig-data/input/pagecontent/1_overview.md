@@ -115,7 +115,7 @@ set of characteristics.  The [MeasureReport](https://hl7.org/fhir/R4/measurerepo
 resource can report on measures using counts and other metrics over a variety of resources.
 
 ###### Device Resource
-The Device Resource can report on medical devices, including ventilators, repirators,
+The Device Resource can report on medical devices, including ventilators, respirators,
 personal protective equipment such as masks, and viral test kits.  Device is not widely
 used by systems reporting on device quantities or status.
 
