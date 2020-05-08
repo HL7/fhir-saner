@@ -10,6 +10,6 @@ MeasureConsumer -- MeasureConsumer : "Communicate Results [REPORT-TX] ↕"
 }
 rectangle "Measure Intermediary" as MeasureIntermediary { 
 agent "Measure Source" as MeasureSourced2e316
-agent "Measure Consumer" as MeasureConsumerd2e346
+agent "Measure Consumer" as MeasureConsumerd2e360
 }
 @enduml

@@ -1,8 +1,8 @@
-Instance: SearchParmeter-definition-text
+Instance: SearchParameter-definition-text
 InstanceOf: SearchParameter
 Title: "Search by Text in Definitions"
 Mixins: SanerDefinitionContent
- * url = "http://hl7.org/fhir/us/saner/SearchParameter/definition-text"
+ * url = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-definition-text"
  * description = "This SearchParameter enables definition resources used in The SANER Project to be discovered from text used in the resource definition."
  * name = "definition-text"
  * code = #definition-text
@@ -47,11 +47,11 @@ Mixins: SanerDefinitionContent
 * modifier[1] = #exact
 * modifier[2] = #contains
 
-Instance: SearchParmeter-code
+Instance: SearchParameter-code
 InstanceOf: SearchParameter
 Title: "Search by Code in Definitions and Instances"
 Mixins: SanerDefinitionContent
- * url = "http://hl7.org/fhir/us/saner/SearchParameter/code"
+ * url = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-code"
  * description = "This SearchParameter enables resources used in The SANER Project to be discovered by codes or valueSets used in the resource including those in any extensions."
  * name = "code"
  * purpose = """
