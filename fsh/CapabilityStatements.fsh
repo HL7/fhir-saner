@@ -3,6 +3,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Consumer - Pull Option (Client)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPullOption
+  * description = "These are the requirements of a Measure Consumer actor implementing the pull option"
   * rest.mode = #client
   * rest.documentation = """
     The Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources.
@@ -15,6 +16,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Source - Pull Option (Server)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPullOption
+  * description = "These are the requirements of a Measure Source actor implementing the pull option"
   * rest.mode = #server
   * rest.documentation = """
     The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.
@@ -29,6 +31,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Source - Push Option (Client)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPushOption
+  * description = "These are the requirements of a Measure Source actor implementing the push option"
   * rest.mode = #client
   * rest.documentation = """
     The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.
@@ -43,6 +46,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Consumer - Push Option (Server)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPushOption
+  * description = "These are the requirements of a Measure Consumer actor implementing the push option"
   * rest.mode = #server
   * rest.documentation = """
     The Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources.
@@ -55,8 +59,8 @@ RuleSet: CapabilityStatementPushOption
   * rest.resource[0].type = #MeasureReport
   * rest.resource[0].supportedProfile = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
   // SHALL support MeasureReport with the PublicHealthMeasureReport Profile
-  * rest.resource[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[0].extension[0].valueCode = #SHALL
+  // * rest.resource[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[0].extension[0].valueCode = #SHALL
   // SHALL support create on MeasureReport
   * rest.resource[0].interaction[0].code = #create
   * rest.resource[0].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -71,8 +75,8 @@ RuleSet: CapabilityStatementPushOption
   * rest.resource[1].supportedProfile[0] = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
   * rest.resource[1].supportedProfile[1] = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureStratifier"
   // SHOULD support Measure with the PublicHealthMeasure and PublicHealthMeasureStratifier Profile
-  * rest.resource[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[1].extension[0].valueCode = #SHOULD
+  // * rest.resource[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[1].extension[0].valueCode = #SHOULD
   // SHOULD support create on Measure
   * rest.resource[1].interaction[0].code = #create
   * rest.resource[1].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -86,8 +90,8 @@ RuleSet: CapabilityStatementPushOption
   * rest.resource[2].type = #Location
   * rest.resource[2].supportedProfile = "http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location"
   // SHOULD support Location with the SANERResourceLocation Profile
-  * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[2].extension[0].valueCode = #SHOULD
+  // * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[2].extension[0].valueCode = #SHOULD
   // SHOULD support create on Location
   * rest.resource[2].interaction[0].code = #create
   * rest.resource[2].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -98,54 +102,54 @@ RuleSet: CapabilityStatementPushOption
   * rest.resource[2].interaction[1].extension[0].valueCode = #SHOULD
 
   // Organization requirements
-  * rest.resource[2].type = #Organization
+  * rest.resource[3].type = #Organization
   // SHOULD support Organization
-  * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[2].extension[0].valueCode = #SHOULD
+  // * rest.resource[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[3].extension[0].valueCode = #SHOULD
   // SHOULD support create on Organization
-  * rest.resource[2].interaction[0].code = #create
-  * rest.resource[2].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[2].interaction[0].extension[0].valueCode = #SHOULD
-  // SHOULD support update on Organization
-  * rest.resource[2].interaction[1].code = #update
-  * rest.resource[2].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[2].interaction[1].extension[0].valueCode = #SHOULD
-
-  // QuestionnaireResponse requirements
-  * rest.resource[3].type = #QuestionnaireResponse
-  // SHALL support QuestionnaireResponse
-  * rest.resource[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[3].extension[0].valueCode = #SHALL
-  // SHALL support create on QuestionnaireResponse
   * rest.resource[3].interaction[0].code = #create
   * rest.resource[3].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[3].interaction[0].extension[0].valueCode = #SHALL
-  // SHALL support update on QuestionnaireResponse
+  * rest.resource[3].interaction[0].extension[0].valueCode = #SHOULD
+  // SHOULD support update on Organization
   * rest.resource[3].interaction[1].code = #update
   * rest.resource[3].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[3].interaction[1].extension[0].valueCode = #SHALL
+  * rest.resource[3].interaction[1].extension[0].valueCode = #SHOULD
 
-  // Questionnaire requirements
-  * rest.resource[4].type = #Questionnaire
-  // SHALL support Questionnaire
-  * rest.resource[4].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[4].extension[0].valueCode = #SHALL
-  // SHALL support create on Questionnaire
+  // QuestionnaireResponse requirements
+  * rest.resource[4].type = #QuestionnaireResponse
+  // SHALL support QuestionnaireResponse
+  // * rest.resource[4].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[4].extension[0].valueCode = #SHALL
+  // SHALL support create on QuestionnaireResponse
   * rest.resource[4].interaction[0].code = #create
   * rest.resource[4].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[4].interaction[0].extension[0].valueCode = #SHALL
-  // SHALL support update on Questionnaire
+  // SHALL support update on QuestionnaireResponse
   * rest.resource[4].interaction[1].code = #update
   * rest.resource[4].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[4].interaction[1].extension[0].valueCode = #SHALL
+
+  // Questionnaire requirements
+  * rest.resource[5].type = #Questionnaire
+  // SHALL support Questionnaire
+  // * rest.resource[5].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[5].extension[0].valueCode = #SHALL
+  // SHALL support create on Questionnaire
+  * rest.resource[5].interaction[0].code = #create
+  * rest.resource[5].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  * rest.resource[5].interaction[0].extension[0].valueCode = #SHALL
+  // SHALL support update on Questionnaire
+  * rest.resource[5].interaction[1].code = #update
+  * rest.resource[5].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  * rest.resource[5].interaction[1].extension[0].valueCode = #SHALL
 
 RuleSet: CapabilityStatementPullOption
   // MeasureReport requirements
   * rest.resource[0].type = #MeasureReport
   * rest.resource[0].supportedProfile = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
   // SHALL support MeasureReport with the PublicHealthMeasureReport Profile
-  * rest.resource[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[0].extension[0].valueCode = #SHALL
+  // * rest.resource[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[0].extension[0].valueCode = #SHALL
   // SHALL support read on MeasureReport
   * rest.resource[0].interaction[0].code = #read
   * rest.resource[0].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -154,6 +158,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[0].interaction[1].code = #search-type
   * rest.resource[0].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[0].interaction[1].extension[0].valueCode = #SHALL
+  * rest.resource[0].searchInclude = "*"
   // SHALL support search by _id
   * rest.resource[0].searchParam[0].name = "_id"
   * rest.resource[0].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -205,7 +210,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[0].searchInclude[0].extension[0].valueCode = #SHALL
   // SHOULD support search by code
   * rest.resource[0].searchParam[1].name = "code"
-  * rest.resource[0].searchParam[1].definition = "http://hl7.org/fhir/us/saner/SearchParameter/code"
+  * rest.resource[0].searchParam[1].definition = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-code"
   * rest.resource[0].searchParam[1].type = #token
   * rest.resource[0].searchParam[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[0].searchParam[1].extension[0].valueCode = #SHOULD
@@ -215,8 +220,8 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[1].type = #Location
   * rest.resource[1].supportedProfile = "http://hl7.org/fhir/us/saner/StructureDefinition/saner-resource-location"
   // SHOULD support Location with the SANERResourceLocation Profile
-  * rest.resource[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[1].extension[0].valueCode = #SHALL
+  // * rest.resource[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[1].extension[0].valueCode = #SHALL
   // SHOULD support read on Location
   * rest.resource[1].interaction[0].code = #read
   * rest.resource[1].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -282,15 +287,15 @@ RuleSet: CapabilityStatementPullOption
   // SHALL support search by address-use
   * rest.resource[1].searchParam[9].name = "address-use"
   * rest.resource[1].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/Location-address-use"
-  * rest.resource[1].searchParam[9].type = #string
+  * rest.resource[1].searchParam[9].type = #token
   * rest.resource[1].searchParam[9].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[1].searchParam[9].extension[0].valueCode = #SHALL
 
   // Organization requirements
   * rest.resource[2].type = #Organization
   // SHOULD support Organization
-  * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[2].extension[0].valueCode = #SHALL
+  // * rest.resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[2].extension[0].valueCode = #SHALL
   // SHOULD support create on Organization
   * rest.resource[2].interaction[0].code = #read
   * rest.resource[2].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -299,6 +304,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[2].interaction[1].code = #search-type
   * rest.resource[2].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[2].interaction[1].extension[0].valueCode = #SHALL
+
   // SHALL support search by _id
   * rest.resource[2].searchParam[0].name = "_id"
   * rest.resource[2].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -329,8 +335,8 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[3].supportedProfile[0] = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
   * rest.resource[3].supportedProfile[1] = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureStratifier"
   // SHOULD support Measure with the PublicHealthMeasure and PublicHealthMeasureStratifier Profile
-  * rest.resource[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[3].extension[0].valueCode = #SHOULD
+  // * rest.resource[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[3].extension[0].valueCode = #SHOULD
   // SHOULD support read on Measure
   * rest.resource[3].interaction[0].code = #read
   * rest.resource[3].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -339,6 +345,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[3].interaction[1].code = #search-type
   * rest.resource[3].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[3].interaction[1].extension[0].valueCode = #SHOULD
+  * rest.resource[3].searchInclude = "*"
   // SHOULD support search by url
   * rest.resource[3].searchParam[0].name = "url"
   * rest.resource[3].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Measure-url"
@@ -347,13 +354,13 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[3].searchParam[0].extension[0].valueCode = #SHOULD
   // SHOULD support search by code
   * rest.resource[3].searchParam[1].name = "code"
-  * rest.resource[3].searchParam[1].definition = "http://hl7.org/fhir/us/saner/SearchParameter/code"
+  * rest.resource[3].searchParam[1].definition = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-code"
   * rest.resource[3].searchParam[1].type = #token
   * rest.resource[3].searchParam[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[3].searchParam[1].extension[0].valueCode = #SHOULD
   // SHOULD support search by definition-text
   * rest.resource[3].searchParam[2].name = "definition-text"
-  * rest.resource[3].searchParam[2].definition = "http://hl7.org/fhir/us/saner/SearchParameter/definition-text"
+  * rest.resource[3].searchParam[2].definition = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-definition-text"
   * rest.resource[3].searchParam[2].type = #string
   * rest.resource[3].searchParam[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[3].searchParam[2].extension[0].valueCode = #SHOULD
@@ -361,8 +368,8 @@ RuleSet: CapabilityStatementPullOption
   // QuestionnaireResponse requirements
   * rest.resource[4].type = #QuestionnaireResponse
   // SHALL support QuestionnaireResponse
-  * rest.resource[4].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[4].extension[0].valueCode = #SHALL
+  // * rest.resource[4].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[4].extension[0].valueCode = #SHALL
   // SHALL support read
   * rest.resource[4].interaction[0].code = #read
   * rest.resource[4].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -371,6 +378,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[4].interaction[1].code = #search-type
   * rest.resource[4].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[4].interaction[1].extension[0].valueCode = #SHALL
+  * rest.resource[4].searchInclude = "*"
   // SHALL support search by _id
   * rest.resource[4].searchParam[0].name = "_id"
   * rest.resource[4].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -393,7 +401,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[4].searchParam[2].extension[0].valueCode = #SHALL
   // SHOULD support search by code
   * rest.resource[4].searchParam[3].name = "code"
-  * rest.resource[4].searchParam[3].definition = "http://hl7.org/fhir/us/saner/SearchParameter/code"
+  * rest.resource[4].searchParam[3].definition = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-code"
   * rest.resource[4].searchParam[3].type = #token
   * rest.resource[4].searchParam[3].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[4].searchParam[3].extension[0].valueCode = #SHOULD
@@ -405,8 +413,8 @@ RuleSet: CapabilityStatementPullOption
   // Questionnaire requirements
   * rest.resource[5].type = #Questionnaire
   // SHOULD support Measure with the PublicHealthMeasure and PublicHealthMeasureStratifier Profile
-  * rest.resource[5].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-  * rest.resource[5].extension[0].valueCode = #SHOULD
+  // * rest.resource[5].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  // * rest.resource[5].extension[0].valueCode = #SHOULD
   // SHOULD support read
   * rest.resource[5].interaction[0].code = #read
   * rest.resource[5].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -415,6 +423,7 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[5].interaction[1].code = #search-type
   * rest.resource[5].interaction[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[5].interaction[1].extension[0].valueCode = #SHOULD
+  * rest.resource[5].searchInclude = "*"
   // SHOULD support search by url
   * rest.resource[5].searchParam[0].name = "url"
   * rest.resource[5].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Measure-url"
@@ -423,13 +432,13 @@ RuleSet: CapabilityStatementPullOption
   * rest.resource[5].searchParam[0].extension[0].valueCode = #SHOULD
   // SHOULD support search by code
   * rest.resource[5].searchParam[1].name = "code"
-  * rest.resource[5].searchParam[1].definition = "http://hl7.org/fhir/us/saner/SearchParameter/code"
+  * rest.resource[5].searchParam[1].definition = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-code"
   * rest.resource[5].searchParam[1].type = #token
   * rest.resource[5].searchParam[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[5].searchParam[1].extension[0].valueCode = #SHOULD
   // SHOULD support search by definition-text
   * rest.resource[5].searchParam[2].name = "definition-text"
-  * rest.resource[5].searchParam[2].definition = "http://hl7.org/fhir/us/saner/SearchParameter/definition-text"
+  * rest.resource[5].searchParam[2].definition = "http://hl7.org/fhir/us/saner/SearchParameter/SearchParameter-definition-text"
   * rest.resource[5].searchParam[2].type = #string
   * rest.resource[5].searchParam[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
   * rest.resource[5].searchParam[2].extension[0].valueCode = #SHOULD

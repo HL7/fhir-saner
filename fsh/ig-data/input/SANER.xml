@@ -342,6 +342,63 @@ to retrieve the selected resources.  When the Storage Option is implemented, the
 storage specified by the Measure Source.
                 </description>
                 <overview></overview>
+                <!-- Interaction describes an interaction using a protocol -->
+                <interaction protocol='fhir' options='API'>
+                    <!-- Operation describes the specific operation for the protocol
+                        For HTTP, this might be GET, PUT, POST, et cetera.
+                        For FHIR, these are the defined FHIR operations, or
+                        a specific operation definition.
+
+                        Each operation describes one possible interaction.
+                     -->
+                     <operation name='read' resources='Location MeasureReport Measure Organization QuestionnaireResponse Questionnaire'>
+                        <description>A client must be able to read individual resources that are returned or referenced within resources
+                        returned by a query.</description>
+                        <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                        <parameter name='Accept:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                     </operation>
+                     <operation name='search' resources="Measure Questionnaire">
+                        <description>A client must be able to read individual resources returned in a query</description>
+                     </operation>
+                     <operation name='search' resources='MeasureReport'>
+                        <!-- Parameter describes each parameter that must be supported in the interaction
+                             To require support for multiple parameters, list each that can be used
+
+                             name - name of the parameter
+                             type - type of the parameter (specified by protocol, e.g. header, query parameter, post body parameter for http)
+                                    can be omitted if the value can be understood in the protocol
+                             comp - comparators supported
+                             min - The minimum number of values this parameter must have when requested by a client
+                                    (0 = optional in an interaction)
+                             max  - The maximum number of values this parameter the must be supported by a server
+                                    (0 = not permitted, * = no limit)
+                             required - if false, this is optional, if omitted or true, this parameter must be supported
+                        -->
+                        <!-- Servers should support all values for format, clients may use Accept header or _format -->
+                        <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                        <parameter name='Accept:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                        <!-- A client may search using _id, a server must support this search -->
+                        <parameter name='_id' min='0' max='1'/>
+                        <parameter name='_lastUpdated' comp='eq lt gt ge le' min='0' max='1'/>
+                        <parameter name='code' min='0' max='*' required='false'/>
+                        <parameter name='code:in' min='0' max='*' required='false'/>
+                        <parameter name='date' comp='eq lt gt ge le' min='0' max='2'/>
+                        <parameter name='measure' min='0' max='*'/>
+                        <parameter name='measure.title' min='0' max='*' required='false'/>
+                        <parameter name='location' min='0' max='*'/>
+                        <parameter name='location:identifier' min='0' max='*'/>
+                        <parameter name='location.near' min='0' max='1' required='false'/>
+                        <parameter name='period' comp='eq lt gt ge le' min='0' max='2'/>
+                        <parameter name='reporter' min='0' max='*'/>
+                        <parameter name='reporter:identifier' min='0' max='*'/>
+                        <parameter name='_include' min='0' max='1'/>
+                        <scenarios>
+                            <combo params='_id _include' required='true'/>
+                            <combo params='_lastUpdated location:identifier measure period reporter:identifier _include' required='true'/>
+                            <combo params='_lastUpdated measure period reporter:identifier _include' required='false'/>
+                        </scenarios>
+                    </operation>
+                </interaction>
             </action>
             <result>
                 <name>Search Response</name>
@@ -385,6 +442,17 @@ periodically report on availability of resources to a Measure Consumer.</descrip
 operation on the MeasureReport resource at a Measure Consumer.  When the Dump option is implemented, the Measure Source
 writes the MeasureReport data to external storage specified by the Measure Consumer.
 </overview>
+                <interaction protocol='fhir' options='API'>
+                    <!-- what about xml+fhir and json+fhir variants? -->
+                    <operation name='create' resources='MeasureReport'>
+                       <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                       <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                    </operation>
+                    <operation name='update' resources='MeasureReport' required='false'>
+                       <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                       <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                    </operation>
+                </interaction>
             </action>
             <action by="MeasureConsumer">
                 <name>The Measure Consumer Accepts Resource</name>

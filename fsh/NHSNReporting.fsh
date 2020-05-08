@@ -398,7 +398,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[2].population[1].description = """Enter the number of patients hospitalized in an inpatient bed who have
 suspected or confirmed COVID-19 and are currently on a mechanical ventilator* at the time the data is collected . This includes the
 patients with laboratory-confirmed or clinically diagnosed COVID-19."""
- * group[2].population[1].criteria.name = "numC19OFMechVentPats"
+ * group[2].population[1].criteria.name = "numC19MechVentPats"
  * group[2].population[1].criteria.description = "An COVID-19 encounter in an inpatient setting on a ventilator"
  * group[2].population[1].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
  * group[2].population[1].criteria.expression = "%numC19HospPats.intersect(%numC19VentPats)"

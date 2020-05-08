@@ -300,13 +300,25 @@
    <artifact name="HAvBED2 to FHIR Concept Map"
              key="ConceptMap-HAvBED2toFHIR"
              id="ConceptMap/HAvBED2toFHIR"/>
+   <artifact name="Measure Consumer - Pull Option (Client)"
+             key="CapabilityStatement-MeasureConsumerPull"
+             id="CapabilityStatement/MeasureConsumerPull"/>
+   <artifact name="Measure Consumer - Push Option (Server)"
+             key="CapabilityStatement-MeasureConsumerPush"
+             id="CapabilityStatement/MeasureConsumerPush"/>
+   <artifact name="Measure Source - Pull Option (Server)"
+             key="CapabilityStatement-MeasureSourcePull"
+             id="CapabilityStatement/MeasureSourcePull"/>
+   <artifact name="Measure Source - Push Option (Client)"
+             key="CapabilityStatement-MeasureSourcePush"
+             id="CapabilityStatement/MeasureSourcePush"/>
    <artifact name="NJ-DPH" key="Organization-NJ-DPH" id="Organization/NJ-DPH"/>
    <artifact name="Search by Code in Definitions and Instances"
-             key="SearchParameter-SearchParmeter-code"
-             id="SearchParameter/SearchParmeter-code"/>
+             key="SearchParameter-SearchParameter-code"
+             id="SearchParameter/SearchParameter-code"/>
    <artifact name="Search by Text in Definitions"
-             key="SearchParameter-SearchParmeter-definition-text"
-             id="SearchParameter/SearchParmeter-definition-text"/>
+             key="SearchParameter-SearchParameter-definition-text"
+             id="SearchParameter/SearchParameter-definition-text"/>
    <artifact name="states-NJ" key="Location-states-NJ" id="Location/states-NJ"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>

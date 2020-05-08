@@ -35,4 +35,6 @@ RuleSet: SanerCapabilityStatementContent
  * contact.telecom.value = "kboone@ainq.com"
  * kind = #requirements
  * fhirVersion = #4.0.1
- * format = #json
+ * format[0] = #json
+ * format[1] = #xml
+ * implementationGuide = "http://hl7.org/fhir/us/saner/ImplementationGuide/hl7.fhir.us.saner"
