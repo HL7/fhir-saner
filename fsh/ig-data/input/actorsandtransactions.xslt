@@ -531,7 +531,10 @@ between options when applicable are specified in notes.
     </xsl:template>
 
     <xsl:template match="ig:requires">
-        <xsl:text>1. </xsl:text><xsl:value-of select="ig:description"/>
+        <xsl:text>&#xA;</xsl:text>
+        <xsl:value-of select='position()'/>
+        <xsl:text>. </xsl:text>
+        <xsl:value-of select="ig:description"/>
         <xsl:if test="ig:overview">
             <xsl:text>&lt;br/></xsl:text><xsl:value-of select="ig:overview"/>
             <xsl:text>&#xA;</xsl:text>

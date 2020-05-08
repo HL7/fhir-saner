@@ -108,7 +108,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                     
 <tr>
                         
-<td rowspan="5">
+<td rowspan="9">
 <a href="#measure-intermediary">Measure Intermediary</a>
 </td>
                         
@@ -177,6 +177,62 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 </td>
 </tr>
                     
+<tr>
+                        
+<td>
+<a href='transaction-1.html'>
+                        Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i>
+</td>
+<td align='center'>
+                        C
+
+                                <sup> 5</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href='transaction-2.html'>
+                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i>
+</td>
+<td align='center'>
+                        C
+
+                                <sup> 6</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href='transaction-1.html'>
+                        Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i>
+</td>
+<td align='center'>
+                        C
+
+                                <sup> 7</sup>
+                            
+</td>
+</tr>
+                    
+<tr>
+                        
+<td>
+<a href='transaction-2.html'>
+                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i>
+</td>
+<td align='center'>
+                        C
+
+                                <sup> 8</sup>
+                            
+</td>
+</tr>
+                    
 </tbody>
 </table>
         
@@ -190,6 +246,14 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 3. This transaction is required when the Measure Consumer implements the [Pull Option](#pull-option).
 
 4. This transaction is required when the Measure Consumer implements the [Push Option](#push-option).
+
+5. This transaction is required when the Measure Intermediary implements the [Pull Option](#pull-option).
+
+6. This transaction is required when the Measure Intermediary implements the [Push Option](#push-option).
+
+7. This transaction is required when the Measure Intermediary implements the [Pull Option](#pull-option).
+
+8. This transaction is required when the Measure Intermediary implements the [Push Option](#push-option).
 
 ### Actors
 The actors in this profile are described in more detail in the sections below.
@@ -211,7 +275,13 @@ A Measure Source provides the FHIR data that is used by a Measure Consumer.
 
 
 ##### Measure Source Requirements
-1. 1. 
+
+1. The Measure Source shall implement either the Pull Option or the Push Option.
+2. A Measure Source that implements the Pull Option shall conform to the
+[Measure Source Pull Capability Statement](CapabilityStatement-MeasureSourcePull.html).
+3. A Measure Source that implements the Pull Option shall provide a CapabilityStatement when queried via [base]/metadata.
+4. A Measure Source that implements the Push Option shall conform to the
+[Measure Source Push Capability Statement](CapabilityStatement-MeasureSourcePush.html).
 
 #### Measure Consumer
 
@@ -229,7 +299,13 @@ or varying levels of granularity using data extracted from a Measure Source.
 
 
 ##### Measure Consumer Requirements
-1. 1. 
+
+1. The Measure Consumer shall implement either the Pull Option or the Push Option.
+2. A Measure Consumer that implements the Pull Option shall conform to the
+[Measure Consumer Pull Capability Statement](CapabilityStatement-MeasureConsumerPull.html).
+3. A Measure Consumer that implements the Push Option shall provide a CapabilityStatement when queried via [base]/metadata.
+4. A Measure Consumer that implements the Push Option shall conform to the
+[Measure Consumer Push Capability Statement](CapabilityStatement-MeasureConsumerPull.html).
 
 #### Measure Intermediary
 
@@ -273,11 +349,18 @@ A Measure Respository is simply a FHIR Server.  A FHIR Server that supports CRUD
 and the Measure Source actor implementing the Pull and API Options.
 
 ![FHIR Server](FHIRServer.svg)
-
-
         
 
 
+##### Measure Intermediary Requirements
+
+1. A Measure Intermediary whose Consumer implements the Pull Option shall conform to the
+[Measure Consumer Pull Capability Statement](CapabilityStatement-MeasureConsumerPull.html).
+2. A Measure Intermediary whose Consumer implements the Push Option shall provide a CapabilityStatement when queried via [base]/metadata.
+3. A Measure Intermediary whose Source implements the Pull Option shall conform to the
+[Measure Source Pull Capability Statement](CapabilityStatement-MeasureSourcePull.html).
+4. A Measure Intermediary whose Source implements the Push Option shall conform to the
+[Measure Source Push Capability Statement](CapabilityStatement-MeasureSourcePush.html).
 
 ### Actor Options
 

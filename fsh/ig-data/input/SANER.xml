@@ -239,9 +239,20 @@ A Measure Source provides the FHIR data that is used by a Measure Consumer.
             <role>Periodically generates data for a Measure Consumer.</role>
         </supports-tx>
         <!-- requirement is optional and can repeat -->
-        <requires id="COLLECT-R1" at-least-one="Pull Push"/>
-        <!-- requirement is optional and can repeat -->
-        <requires id="COLLECT-R2" at-least-one="API Dump"/>
+        <requires id="SOURCE-R1" at-least-one="Pull Push">
+            <description>The Measure Source shall implement either the Pull Option or the Push Option.</description>
+        </requires>
+        <requires id="SOURCE-Pull" implementing="Pull">
+            <description>A Measure Source that implements the Pull Option shall conform to the
+[Measure Source Pull Capability Statement](CapabilityStatement-MeasureSourcePull.html).</description>
+        </requires>
+        <requires id="SOURCE-Capability" implementing="Pull">
+            <description>A Measure Source that implements the Pull Option shall provide a CapabilityStatement when queried via [base]/metadata.</description>
+        </requires>
+        <requires id="SOURCE-Push" implementing="Push">
+            <description>A Measure Source that implements the Push Option shall conform to the
+[Measure Source Push Capability Statement](CapabilityStatement-MeasureSourcePush.html).</description>
+        </requires>
     </actor>
 
     <actor id="MeasureConsumer">
@@ -255,11 +266,6 @@ The Measure Consumer provides the ability to report on data from one or more Mea
 In the case of a single facility or organization the Measure Consumer is reporting the data at aggregated
 or varying levels of granularity using data extracted from a Measure Source.
         </overview>
-        <!-- requirement is optional and can repeat -->
-        <requires id="REPORT-R1" at-least-one="Pull Push"/>
-        <!-- requirement is optional and can repeat -->
-        <requires id="REPORT-R1" at-least-one="API Dump"/>
-
         <requires-tx transaction="REPORT-TX" as="self">
             <role>Display or transmits reports using availability data</role>
         </requires-tx>
@@ -269,6 +275,21 @@ or varying levels of granularity using data extracted from a Measure Source.
         <supports-tx transaction="PUSH-TX" as="server" required-with-options="Push">
             <role>Collects data for reporting</role>
         </supports-tx>
+        <requires id="CONSUMER-R1" at-least-one="Pull Push">
+            <description>The Measure Consumer shall implement either the Pull Option or the Push Option.</description>
+        </requires>
+        <requires id="CONSUMER-Pull" implementing="Pull">
+            <description>A Measure Consumer that implements the Pull Option shall conform to the
+[Measure Consumer Pull Capability Statement](CapabilityStatement-MeasureConsumerPull.html).</description>
+        </requires>
+        <requires id="CONSUMER-Capability" implementing="Push">
+            <description>A Measure Consumer that implements the Push Option shall provide a CapabilityStatement when queried via [base]/metadata.</description>
+        </requires>
+        <requires id="CONSUMER-Push" implementing="Pull">
+            <description>A Measure Consumer that implements the Push Option shall conform to the
+[Measure Consumer Push Capability Statement](CapabilityStatement-MeasureConsumerPull.html).</description>
+        </requires>
+
     </actor>
 
     <actor id="MeasureIntermediary" groups="MeasureSource MeasureConsumer">
@@ -311,9 +332,34 @@ A Measure Respository is simply a FHIR Server.  A FHIR Server that supports CRUD
 and the Measure Source actor implementing the Pull and API Options.
 
 ![FHIR Server](FHIRServer.svg)
-
-
         </overview>
+        <supports-tx transaction="PULL-TX" as="client" required-with-options="Pull">
+            <role>Collects data for reporting</role>
+        </supports-tx>
+        <supports-tx transaction="PUSH-TX" as="server" required-with-options="Push">
+            <role>Collects data for reporting</role>
+        </supports-tx>
+        <supports-tx transaction="PULL-TX" as="server" required-with-options="Pull">
+            <role>Reports on selected data in response to a query.</role>
+        </supports-tx>
+        <supports-tx transaction="PUSH-TX" as="client" required-with-options="Push">
+            <role>Periodically generates data for a Measure Consumer.</role>
+        </supports-tx>
+        <requires id="CONSUMER-Pull" implementing="Pull">
+            <description>A Measure Intermediary whose Consumer implements the Pull Option shall conform to the
+[Measure Consumer Pull Capability Statement](CapabilityStatement-MeasureConsumerPull.html).</description>
+        </requires>
+        <requires id="CONSUMER-Capability" implementing="Push">
+            <description>A Measure Intermediary whose Consumer implements the Push Option shall provide a CapabilityStatement when queried via [base]/metadata.</description>
+        </requires>
+        <requires id="SOURCE-Pull" implementing="Pull">
+            <description>A Measure Intermediary whose Source implements the Pull Option shall conform to the
+[Measure Source Pull Capability Statement](CapabilityStatement-MeasureSourcePull.html).</description>
+        </requires>
+        <requires id="SOURCE-Push" implementing="Push">
+            <description>A Measure Intermediary whose Source implements the Push Option shall conform to the
+[Measure Source Push Capability Statement](CapabilityStatement-MeasureSourcePush.html).</description>
+        </requires>
     </actor>
     <transaction id="PULL-TX" standards="FHIR-R4 RFC-7230 NDJSON">
         <name>Query Measure</name>
