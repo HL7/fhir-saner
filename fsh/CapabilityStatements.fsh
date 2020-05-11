@@ -3,6 +3,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Consumer - Pull Option (Client)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPullOption
+  * name = "MeasureConsumerPull"
   * description = "These are the requirements of a Measure Consumer actor implementing the pull option"
   * rest.mode = #client
   * rest.documentation = """
@@ -16,6 +17,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Source - Pull Option (Server)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPullOption
+  * name = "MeasureSourcePull"
   * description = "These are the requirements of a Measure Source actor implementing the pull option"
   * rest.mode = #server
   * rest.documentation = """
@@ -31,6 +33,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Source - Push Option (Client)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPushOption
+  * name = "MeasureSourcePush"
   * description = "These are the requirements of a Measure Source actor implementing the push option"
   * rest.mode = #client
   * rest.documentation = """
@@ -46,6 +49,7 @@ InstanceOf: CapabilityStatement
 Title: "Measure Consumer - Push Option (Server)"
 Usage: #definition
 Mixins: SanerCapabilityStatementContent, CapabilityStatementPushOption
+  * name = "MeasureConsumerPush"
   * description = "These are the requirements of a Measure Consumer actor implementing the push option"
   * rest.mode = #server
   * rest.documentation = """
