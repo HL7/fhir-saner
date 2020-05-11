@@ -138,6 +138,9 @@
    <artifact name="Bed Type Coding System"
              key="CodeSystem-BedType"
              id="CodeSystem/BedType"/>
+   <artifact name="BooleanAggregation"
+             key="CodeSystem-BooleanAggregation"
+             id="CodeSystem/BooleanAggregation"/>
    <artifact name="Measure Group System"
              key="CodeSystem-MeasureGroupSystem"
              id="CodeSystem/MeasureGroupSystem"/>
@@ -320,6 +323,16 @@
              key="SearchParameter-SearchParameter-definition-text"
              id="SearchParameter/SearchParameter-definition-text"/>
    <artifact name="states-NJ" key="Location-states-NJ" id="Location/states-NJ"/>
+   <artifact name="FHIR-4" key="Bundle-FHIR-4" id="Bundle/FHIR-4"/>
+   <artifact name="FHIR-6" key="Bundle-FHIR-6" id="Bundle/FHIR-6"/>
+   <artifact name="FHIR-8" key="Bundle-FHIR-8" id="Bundle/FHIR-8"/>
+   <artifact name="FHIR-2" key="Bundle-FHIR-2" id="Bundle/FHIR-2"/>
+   <artifact name="FHIR-5" key="Bundle-FHIR-5" id="Bundle/FHIR-5"/>
+   <artifact name="FHIR-7" key="Bundle-FHIR-7" id="Bundle/FHIR-7"/>
+   <artifact name="FHIR-9" key="Bundle-FHIR-9" id="Bundle/FHIR-9"/>
+   <artifact name="FHIR-3" key="Bundle-FHIR-3" id="Bundle/FHIR-3"/>
+   <artifact name="FHIR-379" key="Bundle-FHIR-379" id="Bundle/FHIR-379"/>
+   <artifact name="FHIR-43" key="Bundle-FHIR-43" id="Bundle/FHIR-43"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>
