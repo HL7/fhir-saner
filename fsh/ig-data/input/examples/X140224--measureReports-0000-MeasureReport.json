@@ -1,0 +1,171 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FHIR-317",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/R4/StructureDefinition/MeasureReport"
+    ],
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/us/saner/FEMADailyHospitalCOVID19Reporting",
+  "subject": {
+    "reference": "Location/Loc-X140224"
+  },
+  "date": "2020-05-08T00:00:00-05:00",
+  "reporter": {
+    "reference": "Organization/X140224",
+    "display": "SAINT VERNOR HOSPITAL"
+  },
+  "period": {
+    "start": "2020-05-08",
+    "end": "2020-05-08"
+  },
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "positiveIncreasePercent",
+            "display": "Percent Positive among Newly Resulted Tests"
+          }
+        ],
+        "text": "# of new positive test results released / # of total new tests released for previous date queried"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "totalOrdersIncrease",
+                "display": "New Diagnostic Tests Ordered/Received"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ],
+            "text": "Midnight to midnight cutoff, tests ordered on previous date queried."
+          },
+          "count": 376
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "totalTestResultsIncrease",
+                "display": "New Tests Resulted"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator"
+              }
+            ],
+            "text": "Midnight to midnight cutoff, test results released on previous date queried."
+          },
+          "count": 502
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "positiveIncrease",
+                "display": "New Positive COVID-19 Tests"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator"
+              }
+            ],
+            "text": "Midnight to midnight cutoff, positive test results released on the previous date queried."
+          },
+          "count": 93
+        }
+      ],
+      "measureScore": {
+        "value": 0.5
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "positivePercent",
+            "display": "Cumulative Percent Positive among Newly Resulted Tests"
+          }
+        ],
+        "text": "# of total positive results to released date / # of total tests results released to date"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "totalOrders",
+                "display": "Cumulative Diagnostic Tests Ordered/Received"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ],
+            "text": "All tests ordered to date."
+          },
+          "count": 376
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "totalTestResults",
+                "display": "Cumulative Tests Performed"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator"
+              }
+            ],
+            "text": "All tests with results released to date."
+          },
+          "count": 365
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "positive",
+                "display": "Cumulative Positive COVID-19 Tests"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator"
+              }
+            ],
+            "text": "All positive test results released to date."
+          },
+          "count": 93
+        }
+      ],
+      "measureScore": {
+        "value": 0.5
+      }
+    }
+  ]
+}
