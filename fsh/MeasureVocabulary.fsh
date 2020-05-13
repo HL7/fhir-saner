@@ -71,6 +71,12 @@ Description: "A Code System for Populations defined by The SANER Project"
 * #posshortothsfy               "Other HCP - Specify the groups - Critical Staffing Shortage Within a Week"
 
 
+ * #state
+ * #county
+ * #facilityId
+ * #collectionDate
+ * #summaryCensusId
+
 CodeSystem: MeasureGroupSystem
 Title: "Measure Group System"
 Description: "A Code System for Groups defined by The SANER Project"
@@ -86,6 +92,7 @@ Description: "A Code System for Groups defined by The SANER Project"
 * #Glove "Gloves"
 * #positiveIncreasePercent "Percent Positive among Newly Resulted Tests"
 * #positivePercent         "Cumulative Percent Positive among Resulted Tests"
+
 
 ValueSet: MeasureGroups
 Title: "Measure Groups"

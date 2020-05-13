@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="temp/|temp/pages/|temp/pages/_data/|temp/pages/_includes/|temp/qa/|template/|template/config/|template/content/|template/content/assets/css/|template/content/assets/fonts/|template/content/assets/ico/|template/content/assets/images/|template/content/assets/js/|template/includes/|template/layouts/|template/scripts/|template/var/lib/|docs/|docs/assets/css/|docs/assets/fonts/|docs/assets/ico/|docs/assets/images/|docs/assets/js/|fsh/|input/|input/examples/|input/images/|input/includes/|input/pagecontent/|input/profiles/|input/vocabulary/|node_modules/|node_modules/ajv/|node_modules/ajv/dist/|node_modules/ajv/lib/|node_modules/ajv/lib/compile/|node_modules/ajv/lib/dot/|node_modules/ajv/lib/dotjs/|node_modules/ajv/lib/refs/|node_modules/ajv/scripts/|node_modules/antlr4/|node_modules/antlr4/atn/|node_modules/antlr4/dfa/|node_modules/antlr4/error/|node_modules/antlr4/polyfills/|node_modules/antlr4/tree/|node_modules/asn1/|node_modules/asn1/lib/|node_modules/asn1/lib/ber/|node_modules/async/|node_modules/async/dist/|node_modules/async/internal/|node_modules/asynckit/|node_modules/asynckit/lib/|node_modules/aws4/|node_modules/caseless/|node_modules/chalk/|node_modules/chalk/source/|node_modules/chownr/|node_modules/color/|node_modules/color/node_modules/|node_modules/colornames/|node_modules/colornames/example/|node_modules/colors/|node_modules/colors/examples/|node_modules/colors/lib/|node_modules/colors/lib/custom/|node_modules/colors/lib/maps/|node_modules/colors/lib/system/|node_modules/colors/themes/|node_modules/colorspace/|node_modules/commander/|node_modules/commander/typings/|node_modules/dashdash/|node_modules/dashdash/etc/|node_modules/dashdash/lib/|node_modules/diagnostics/|node_modules/diagnostics/dist/|node_modules/enabled/|node_modules/extend/|node_modules/extsprintf/|node_modules/extsprintf/lib/|node_modules/fecha/|node_modules/getpass/|node_modules/getpass/lib/|node_modules/glob/|node_modules/he/|node_modules/he/bin/|node_modules/he/man/|node_modules/inflight/|node_modules/inherits/|node_modules/ini/|node_modules/isarray/|node_modules/isstream/|node_modules/jsbn/|node_modules/jsonfile/|node_modules/jsprim/|node_modules/jsprim/lib/|node_modules/kuler/|node_modules/lodash/|node_modules/lodash/fp/|node_modules/logform/|node_modules/logform/dist/|node_modules/logform/examples/|node_modules/minimatch/|node_modules/minimist/|node_modules/minimist/example/|node_modules/minimist/test/|node_modules/minipass/|node_modules/minizlib/|node_modules/mkdirp/|node_modules/mkdirp/bin/|node_modules/ms/|node_modules/once/|node_modules/psl/|node_modules/psl/data/|node_modules/psl/dist/|node_modules/punycode/|node_modules/qs/|node_modules/qs/dist/|node_modules/qs/lib/|node_modules/qs/test/|node_modules/relateurl/|node_modules/relateurl/lib/|node_modules/relateurl/lib/parse/|node_modules/relateurl/lib/relate/|node_modules/relateurl/lib/util/|node_modules/request/|node_modules/request/lib/|node_modules/rimraf/|node_modules/sax/|node_modules/sax/lib/|node_modules/sshpk/|node_modules/sshpk/bin/|node_modules/sshpk/lib/|node_modules/sshpk/lib/formats/|node_modules/sshpk/man/man1/|node_modules/string_decoder/|node_modules/string_decoder/lib/|node_modules/tar/|node_modules/tar/lib/|node_modules/temp/|node_modules/temp/lib/|node_modules/tslib/|node_modules/tweetnacl/|node_modules/universalify/|node_modules/uuid/|node_modules/uuid/bin/|node_modules/uuid/lib/|node_modules/verror/|node_modules/verror/lib/|node_modules/winston/|node_modules/winston/dist/|node_modules/winston/dist/winston/|node_modules/winston/dist/winston/config/|node_modules/winston/dist/winston/transports/|node_modules/winston/lib/|node_modules/winston/lib/winston/|node_modules/winston/lib/winston/config/|node_modules/winston/lib/winston/transports/|node_modules/winston/test/transports/|node_modules/wrappy/|node_modules/yallist/|resources/|output/|save/|save/input/|save/input/examples/|save/input/feature/|save/input/images/|save/input/includes/|save/input/pagecontent/|save/input/vocabulary/" kind="src" path=""/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/kboone/git/fhir-saner/input-cache/org.hl7.fhir.publisher.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

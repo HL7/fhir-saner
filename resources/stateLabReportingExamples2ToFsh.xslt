@@ -43,7 +43,7 @@
         xml  To generate xml output
         json Will also generate XML output, sorry, we aren't there yet.
     -->
-    <xsl:param name="format" select="'fsh'"/>
+    <xsl:param name="format" select="'xml'"/>
     
     <!-- Set to the name of the measure to generate from the CSV input data file
         This must be the name of a file from which the Measure resource can be 
@@ -117,25 +117,26 @@
                 </xsl:if>
             </xsl:variable>
             <!-- Generate the record -->
-            <xsl:copy-of
-                select="s:instance(concat('states-', $state), 'Location', concat('Example Location for the State of ', $geoData/@Name), 
-                 (s:string(('id'), ('states-',$state)),
-                  s:wrap('identifier',(
-                     s:string(('identifier.system'), 'https://www.census.gov/geographies'),
-                     s:string(('identifier.value'), $res/results/result[state/@value=$state][fips][1]/fips/@value))),
-                  s:wrap('position',
-                     (s:name(('position.latitude'), ($geoData/@Lat)), 
-                      s:name(('position.longitude'), ($geoData/@Long))
-                     )
-                  )
-                 )
-                )"/>
-
-            <xsl:copy-of
-                select="s:instance(concat($state, '-DPH'), 'Organization', concat('Example Organization for the ', $geoData/@Name, ' Department of Public Health'), 
-                (s:string(('id'), ($state,'-DPH')), s:string(('name'), ($geoData/@Name, ' Department of Public Health')))
-                )"/>
-            
+            <xsl:if test='$format = "fsh"'>
+                <xsl:copy-of
+                    select="s:instance(concat('states-', $state), 'Location', concat('Example Location for the State of ', $geoData/@Name), 
+                     (s:string(('id'), ('states-',$state)),
+                      s:wrap('identifier',(
+                         s:string(('identifier.system'), 'https://www.census.gov/geographies'),
+                         s:string(('identifier.value'), $res/results/result[state/@value=$state][fips][1]/fips/@value))),
+                      s:wrap('position',
+                         (s:name(('position.latitude'), ($geoData/@Lat)), 
+                          s:name(('position.longitude'), ($geoData/@Long))
+                         )
+                      )
+                     ), 'Location'
+                    )"/>
+    
+                <xsl:copy-of
+                    select="s:instance(concat($state, '-DPH'), 'Organization', concat('Example Organization for the ', $geoData/@Name, ' Department of Public Health'), 
+                    (s:string(('id'), ($state,'-DPH')), s:string(('name'), ($geoData/@Name, ' Department of Public Health'))), 'Organization'
+                    )"/>
+            </xsl:if>
         </xsl:for-each>
         <xsl:apply-templates select="$res/results/result[position() &lt; $count]"/>
     </xsl:template>
@@ -229,6 +230,7 @@
         <xsl:param name="t"/>
         <xsl:param name="d"/>
         <xsl:param name="body"/>
+        <xsl:param name="res"/>
         <xsl:choose>
             <xsl:when test="$format = 'fsh'">
                 <xsl:text>&#xA;</xsl:text>
@@ -238,9 +240,7 @@
                 <xsl:copy-of select="$body"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:element name='{$t}'>
-                    <xsl:attribute name="type" select="$t"/>
-                    <xsl:attribute name="desc" select="$d"/>
+                <xsl:element name='{$res}'>
                     <xsl:copy-of select="$body"/>
                 </xsl:element>
             </xsl:otherwise>
@@ -312,7 +312,9 @@
         <xsl:variable name="exampleName" select="concat('Example', $state, '-', $date, '-', $measure)"/>
         
         <xsl:variable name='measureBody'>
-            <xsl:copy-of select="s:def('Mixins', 'NJExamplesFEMA')"/>
+            <xsl:if test='$format="fsh"'>
+                <xsl:copy-of select="s:def('Mixins', 'NJExamplesFEMA')"/>
+            </xsl:if>
             <!--xsl:value-of select="s:def('Usage', '#inline')"/-->
             <xsl:copy-of select="s:string(('id'), ($exampleName))"/>
             <xsl:copy-of select="
@@ -334,7 +336,7 @@
                 ($exampleName), 
                 'PublicHealthMeasureReport', 
                 ('Example MeasureReport of ', $measure, ' for ', $state, ' on ', (substring($date, 5, 2), '/', substring($date, 7, 2), '/', substring($date, 1, 4))), 
-                $measureBody)"/>
+                $measureBody, 'MeasureReport')"/>
         
         
         <!--xsl:choose>
@@ -441,14 +443,26 @@
                                     <!-- don't output a value when there isn't one -->
                                 </xsl:when>
                                 <xsl:when test="$v">
-                                    <xsl:copy-of select="s:name(($n, '.measureScore.value'), $v/@value)"/>
-                                    <xsl:if test='$v/@unit'>
-                                        <xsl:copy-of select="s:string(($n, '.measureScore.unit'), ($v/@unit))"/>
-                                        <xsl:copy-of
-                                            select="s:code(($n, '.measureScore.code'), $v/@unit, '')"/>
-                                        <xsl:copy-of
-                                            select="s:string(($n, '.measureScore.system'), 'http://unitsofmeasure.org')"/>
-                                    </xsl:if>
+                                    <xsl:variable name='score'>
+                                        <xsl:copy-of select="s:name(($n, '.measureScore.value'), $v/@value)"/>
+                                        <xsl:if test='$v/@unit'>
+                                            <xsl:copy-of select="s:string(($n, '.measureScore.unit'), ($v/@unit))"/>
+                                            <xsl:copy-of
+                                                select="s:code(($n, '.measureScore.code'), $v/@unit, '')"/>
+                                            <xsl:copy-of
+                                                select="s:string(($n, '.measureScore.system'), 'http://unitsofmeasure.org')"/>
+                                        </xsl:if>
+                                    </xsl:variable>
+                                    <xsl:choose>
+                                        <xsl:when test='$format="xml"'>
+                                            <measureScore>
+                                                <xsl:copy-of select="$score"/>
+                                            </measureScore>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:copy-of select="$score"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:when>
                                 <xsl:when test="$format='fsh'">
                                     <xsl:copy-of 
