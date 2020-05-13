@@ -55,6 +55,12 @@ periodically report on availability of resources to a Measure Consumer.
 
 ##### Trigger Event - Periodic Reporting Interval elapsed
 
+brief description (markdown)
+
+
+more detailed description (markdown)
+
+
 ##### Message Semantics
 
 ##### Expected Actions

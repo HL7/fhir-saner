@@ -349,6 +349,10 @@ A Measure Respository is simply a FHIR Server.  A FHIR Server that supports CRUD
 and the Measure Source actor implementing the Pull and API Options.
 
 ![FHIR Server](FHIRServer.svg)
+
+A multi-level data aggregation and reporting hierarchy using Measure Intermediaries is shown here:
+
+![Multi-Level Aggregation and Reporting](ActorsMultilevelReporting.svg)
         
 
 

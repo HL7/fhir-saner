@@ -52,6 +52,31 @@ Description: "A Code System for Populations defined by The SANER Project"
  * #gloveobtain "Gloves"
 
 
+ * #state
+ * #county
+ * #facilityId
+ * #collectionDate
+ * #summaryCensusId
+
+ * #posshortenvsvc  "Possible Shortage of Environmental Services"
+ * #posshortnurse   "Possible Shortage of Nurses"
+ * #posshortoth     "Possible Shortage of Other Healthcare Personnel"
+ * #posshortothlic  "Possible Shortage of Other licensed independent practitioners"
+ * #posshortothsfy  "Possible Shortage of staff"
+ * #posshortphar    "Possible Shortage of Pharmacists and pharmacy techs"
+ * #posshortphys    "Possible Shortage of staff"
+ * #posshortrt      "Possible Shortage of Respiratory therapists"
+ * #posshorttemp    "Possible Shortage of Temporary physicians, nurses, respiratory therapists, and pharmacists"
+ * #shortenvsvc     "Shortage of Environmental Services"
+ * #shortnurse      "Shortage of Nurses"
+ * #shortoth        "Shortage of Other Healthcare Personnel"
+ * #shortothlic     "Shortage of Other licensed independent practitioners"
+ * #shortothsfy     "Shortage of staff"
+ * #shortphar       "Shortage of Pharmacists and pharmacy techs"
+ * #shortphys       "Shortage of staff"
+ * #shortrt         "Shortage of Respiratory therapists"
+ * #shorttemp       "Shortage of Temporary physicians, nurses, respiratory therapists, and pharmacists"
+
 CodeSystem: MeasureGroupSystem
 Title: "Measure Group System"
 Description: "A Code System for Groups defined by The SANER Project"

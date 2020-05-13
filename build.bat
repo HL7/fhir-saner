@@ -1,6 +1,6 @@
 rd input output /s/q
-call fetch-examples.cmd
 call build-vars.cmd
+call fetch-examples.cmd
 call build-content.cmd
 call build-images.cmd
 REM call sushi fsh -o .

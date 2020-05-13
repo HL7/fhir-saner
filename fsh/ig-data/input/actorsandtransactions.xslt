@@ -9,8 +9,8 @@
     <xsl:include href="utility.xslt"/>
     <xsl:param name="org" select="/ig:profile/ig:domain/ig:org"/>
     <!-- Preserve spaces in markdown content elements -->
-    <xsl:preserve-space elements="ig:description ig:overview"/>
 
+    <xsl:preserve-space elements="ig:description ig:overview"/>
     <!-- This template is overridden in generate.xsl.  It appears
         here to test JUST the generation of the index file.
     -->
@@ -192,18 +192,105 @@ Profile and the relevant transactions between them.&#xA;
             <xsl:apply-templates select="ig:description|ig:overview"/>
 
             <xsl:text>&#xA;##### Trigger Event - </xsl:text><xsl:value-of select="ig:trigger/ig:name"/><xsl:text>&#xA;</xsl:text>
-            <xsl:apply-templates select="xsl:trigger/ig:description|xsl:trigger/ig:overview"/>
+            <xsl:apply-templates select="ig:trigger/ig:description|ig:trigger/ig:overview"/>
 
             <xsl:text>&#xA;##### Message Semantics&#xA;</xsl:text>
-            <xsl:apply-templates select="xsl:trigger/ig:description|xsl:trigger/ig:overview"/>
+            <xsl:apply-templates select="ig:semantics/ig:description|ig:semantics/ig:overview"/>
 
+            <xsl:if test='ig:semantics/ig:interaction/ig:group'>
+                <xsl:text>&#xA;The following are general requirements of the interaction.&#xA;</xsl:text>                    
+                <xsl:text>&#xA;&lt;ol>&#xA;</xsl:text>
+                <xsl:apply-templates select="ig:semantics/ig:interaction/ig:group"/>
+                <xsl:text>&#xA;&lt;/ol>&#xA;</xsl:text>
+                <xsl:apply-templates select="ig:semantics/ig:interaction/ig:operation"/>
+            </xsl:if>
             <xsl:text>&#xA;##### Expected Actions&#xA;</xsl:text>
             <xsl:for-each select="ig:action">
                 <xsl:text>&#xA;###### </xsl:text><xsl:value-of select="ig:name"/><xsl:text>&#xA;</xsl:text>
                 <xsl:apply-templates select="ig:description|ig:overview"/>
             </xsl:for-each>
-
         </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="ig:group">
+        <xsl:text>&#xA;&lt;li>&#xA;</xsl:text>
+        <xsl:value-of select="ig:name"/>
+        <xsl:text>&#xA;&lt;div>&#xA;</xsl:text>
+        <xsl:apply-templates select="ig:description|ig:overview"/>
+        <xsl:text>&#xA;&lt;/div>&#xA;</xsl:text>
+        <xsl:call-template name="parameters"/>
+        <xsl:text>&#xA;&lt;/li>&#xA;</xsl:text>
+    </xsl:template>
+    <xsl:template match='@expect|@client'>
+        <xsl:text>&lt;b></xsl:text><xsl:value-of select='upper-case(translate(.,"-"," "))'/><xsl:text>&lt;/b></xsl:text>
+    </xsl:template>
+    <xsl:template match="ig:operation">
+        <xsl:text>&#xA;###### </xsl:text><xsl:value-of select="ig:name"/><xsl:text>&#xA;</xsl:text>
+        <xsl:apply-templates select="ig:description|ig:overview"/>
+        <xsl:if test="@client">
+            <xsl:text>The </xsl:text><xsl:value-of select='ancestor::ig:message[1]/@from'/>
+            <xsl:text> </xsl:text><xsl:apply-templates select="@client"/>
+            <xsl:text> demonstrate the FHIR </xsl:text><xsl:value-of select="@name"/>
+            <xsl:text> operation on </xsl:text>
+            <xsl:apply-templates select="@resources"/>
+            <xsl:if test='ig:parameter|ig:group'>
+                <xsl:text> with the following parameters</xsl:text>
+            </xsl:if>
+            <xsl:text>.&#xA;</xsl:text>
+        </xsl:if>
+        <xsl:text>The </xsl:text><xsl:value-of select='ancestor::ig:message[1]/@to'/>
+        <xsl:text> </xsl:text><xsl:apply-templates select="@expect"/>
+        <xsl:text> demonstrate the FHIR </xsl:text><xsl:value-of select="@name"/><xsl:text> operation on </xsl:text> 
+        <xsl:apply-templates select="@resources"/>
+        <xsl:if test='ig:parameter|ig:group'>
+            <xsl:text> with the following parameters</xsl:text>
+        </xsl:if>
+        <xsl:text>.&#xA;</xsl:text>
+
+        <xsl:apply-templates select="ig:group"/>
+        <xsl:call-template name="parameters"/>
+    </xsl:template>
+    <xsl:template match="@resources">
+        <xsl:variable name='res' select='tokenize(.,"\s+")'/>
+        <xsl:choose>
+            <xsl:when test="count($res) = 1"> the <xsl:value-of select="$res"/> resource</xsl:when>
+            <xsl:otherwise> the <xsl:value-of select='string-join($res[position() != last()],", ")'/> and <xsl:value-of select="$res[position() = last()]"/> resources</xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template name='parameters'>
+        <xsl:if test='ig:parameter'>
+&#xA;&lt;table class='grid'>
+&#xA;&lt;thead>&lt;tr>
+&#xA;&lt;th>Parameter&lt;/th>&lt;th>Cardinality&lt;/th>&lt;th>Expectation&lt;/th>                   
+&#xA;&lt;/tr>&lt;/thead>
+&#xA;&lt;tbody>            
+<xsl:for-each select="ig:parameter">
+&#xA;&lt;tr>
+&#xA;&lt;td>&#xA;
+<xsl:value-of select='@name'/>
+<xsl:if test='@values'>
+<xsl:text>=</xsl:text>
+<xsl:value-of select="string-join(tokenize(@values|@comp,'\s+'),'|')"/>
+<xsl:if test='@comp'>
+&lt;i>value&lt;/i>
+</xsl:if>
+</xsl:if>
+&#xA;&lt;/td>
+&#xA;&lt;td>&#xA;
+<xsl:if test='@min or @max'>
+<xsl:value-of select="@min"/>
+<xsl:text>..</xsl:text>
+<xsl:value-of select="@max"/>
+</xsl:if>
+&lt;/td>
+&lt;td>&#xA;
+<xsl:apply-templates select="@expect"/>
+&#xA;&lt;/td>
+&lt;/tr>
+</xsl:for-each>
+&lt;/tbody>
+&lt;/table>&#xA;
+        </xsl:if>
     </xsl:template>
     <xsl:template name="referenced-standards">
         <xsl:param name="tx"/>
