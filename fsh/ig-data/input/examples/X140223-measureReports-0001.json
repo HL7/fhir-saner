@@ -23,7 +23,8 @@
         "valueString": "X140223"
       }
     ],
-    "reference": "Location/Loc-X140223"
+    "reference": "Location/Loc-X140223",
+    "display": "BLISH GENERAL HOSPITAL Building"
   },
   "date": "2020-05-11T00:00:00-05:00",
   "reporter": {

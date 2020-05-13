@@ -23,7 +23,8 @@
         "valueString": "X140150"
       }
     ],
-    "reference": "Location/Loc-X140150"
+    "reference": "Location/Loc-X140150",
+    "display": "CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL Building"
   },
   "date": "2020-05-12T00:00:00-05:00",
   "reporter": {

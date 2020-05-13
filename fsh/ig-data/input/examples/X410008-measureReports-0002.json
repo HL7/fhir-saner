@@ -23,7 +23,8 @@
         "valueString": "X410008"
       }
     ],
-    "reference": "Location/Loc-X410008"
+    "reference": "Location/Loc-X410008",
+    "display": "CIMMERIAN FOUNDATION HOSPITAL Building"
   },
   "date": "2020-05-12T00:00:00-05:00",
   "reporter": {

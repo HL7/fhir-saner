@@ -23,7 +23,8 @@
         "valueString": "X140206"
       }
     ],
-    "reference": "Location/Loc-X140206"
+    "reference": "Location/Loc-X140206",
+    "display": "BRIN HOSPITAL Building"
   },
   "date": "2020-05-12T00:00:00-05:00",
   "reporter": {

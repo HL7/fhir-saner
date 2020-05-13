@@ -23,7 +23,8 @@
         "valueString": "X140158"
       }
     ],
-    "reference": "Location/Loc-X140158"
+    "reference": "Location/Loc-X140158",
+    "display": "POHL HOSPITAL AND MEDICAL CENTER Building"
   },
   "date": "2020-05-10T00:00:00-05:00",
   "reporter": {

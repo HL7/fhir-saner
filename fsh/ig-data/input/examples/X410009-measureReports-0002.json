@@ -23,7 +23,8 @@
         "valueString": "X410009"
       }
     ],
-    "reference": "Location/Loc-X410009"
+    "reference": "Location/Loc-X410009",
+    "display": "DUNWICH MEDICAL CENTER Building"
   },
   "date": "2020-05-12T00:00:00-05:00",
   "reporter": {

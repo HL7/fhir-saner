@@ -23,7 +23,8 @@
         "valueString": "X140300"
       }
     ],
-    "reference": "Location/Loc-X140300"
+    "reference": "Location/Loc-X140300",
+    "display": "STEPHENSON HOSPITAL OF CHEF COUNTY Building"
   },
   "date": "2020-05-11T00:00:00-05:00",
   "reporter": {

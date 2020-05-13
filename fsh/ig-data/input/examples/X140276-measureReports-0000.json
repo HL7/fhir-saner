@@ -23,7 +23,8 @@
         "valueString": "X140276"
       }
     ],
-    "reference": "Location/Loc-X140276"
+    "reference": "Location/Loc-X140276",
+    "display": "HALDEMAN UNIVERSITY MEDICAL CENTER Building"
   },
   "date": "2020-05-10T00:00:00-05:00",
   "reporter": {

@@ -23,7 +23,8 @@
         "valueString": "X140088"
       }
     ],
-    "reference": "Location/Loc-X140088"
+    "reference": "Location/Loc-X140088",
+    "display": "DAHL UNIVERSITY MEDICAL CENTER Building"
   },
   "date": "2020-05-12T00:00:00-05:00",
   "reporter": {

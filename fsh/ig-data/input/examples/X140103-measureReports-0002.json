@@ -23,7 +23,8 @@
         "valueString": "X140103"
       }
     ],
-    "reference": "Location/Loc-X140103"
+    "reference": "Location/Loc-X140103",
+    "display": "LABRADOR HOSPITAL Building"
   },
   "date": "2020-05-12T00:00:00-05:00",
   "reporter": {

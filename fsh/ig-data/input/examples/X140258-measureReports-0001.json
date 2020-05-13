@@ -23,7 +23,8 @@
         "valueString": "X140258"
       }
     ],
-    "reference": "Location/Loc-X140258"
+    "reference": "Location/Loc-X140258",
+    "display": "SIMAK FAMILY MEDICAL CENTER Building"
   },
   "date": "2020-05-11T00:00:00-05:00",
   "reporter": {

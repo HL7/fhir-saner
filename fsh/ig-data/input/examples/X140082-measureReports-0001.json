@@ -23,7 +23,8 @@
         "valueString": "X140082"
       }
     ],
-    "reference": "Location/Loc-X140082"
+    "reference": "Location/Loc-X140082",
+    "display": "PAUL FRENCH MEMORIAL HOSPITAL Building"
   },
   "date": "2020-05-11T00:00:00-05:00",
   "reporter": {
