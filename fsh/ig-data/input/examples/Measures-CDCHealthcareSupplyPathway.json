@@ -1,0 +1,973 @@
+{
+  "resourceType": "Measure",
+  "id": "CDCHealthcareSupplyPathway",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/R4/StructureDefinition/Measure",
+      "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
+    ]
+  },
+  "url": "http://hl7.org/fhir/us/saner/Measure/CDCHealthcareSupplyPathway",
+  "version": "0.1.0",
+  "name": "CDCHealthcareSupplyPathway",
+  "title": "COVID-19 Healthcare Supply Pathway",
+  "status": "draft",
+  "experimental": true,
+  "subjectCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/resource-types",
+        "code": "Location"
+      }
+    ]
+  },
+  "date": "2020-04-27T07:08:50-04:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Patient Administration Workgroup",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/pafm/index.cfm"
+        }
+      ]
+    },
+    {
+      "name": "Audacious Inquiry",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://ainq.com"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "SANER implementation of the CDC COVID-19 Healthcare Supply Pathway",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "840539006",
+            "display": "COVID-19"
+          }
+        ]
+      }
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "author": [
+    {
+      "name": "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:nhsn@cdc.gov"
+        }
+      ]
+    }
+  ],
+  "relatedArtifact": [
+    {
+      "type": "documentation",
+      "label": "NHSN COVID-19 Reporting for Acute Care",
+      "display": "CDC/NHSN COVID-19 Acute Care Module Home Page",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "url": "https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
+    },
+    {
+      "type": "documentation",
+      "label": "How to import COVID-19 Summary Data",
+      "display": "Facility - How to Upload COVID-19 CSV Data Files",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
+    },
+    {
+      "type": "documentation",
+      "label": "COVID-19 Module Analysis Reports",
+      "display": "NHSN COVID-19 Module Analysis Reports",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/fac-analysis-qrg-508.pdf"
+    },
+    {
+      "type": "documentation",
+      "label": "Table of Instructions",
+      "display": "Instructions for Completion of the COVID-19 Healthcare Supply Pathway (CDC 57.132)",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/57.132-toi-508.pdf"
+    },
+    {
+      "type": "documentation",
+      "label": "PDF Form",
+      "display": "Healthcare Supply Pathway Form",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/57.132-covid19-sup-blank-p.pdf"
+    },
+    {
+      "type": "documentation",
+      "label": "CSV File Template",
+      "display": "CDC/NHSN COVID-19 Acute Care Healthcare Supply Reporting CSV File Template",
+      "citation": "Centers for Disease Control and Prevention (CDC), National Healthcare Safety Network (NHSN)",
+      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/facility-import-supplies.csv"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+          "code": "composite",
+          "display": "Composite"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "subject",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/resource-types",
+                    "code": "Device"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "706172005",
+                    "display": "Ventilator (physical object)"
+                  }
+                ],
+                "text": "Mechanical Ventilators"
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "decrease"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Ventilators",
+            "display": "Ventilator supplies (any, including tubing)"
+          }
+        ],
+        "text": "Ventilator Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "ventsupply",
+                "display": "Ventilator supplies (any, including tubing)"
+              }
+            ],
+            "text": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
+          },
+          "description": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc",
+          "criteria": {
+            "description": "Ventilator supplies (any, including tubing)",
+            "name": "ventsupply",
+            "language": "text/plain",
+            "expression": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "ventreuse",
+                "display": "Ventilator supplies (any, including tubing)"
+              }
+            ],
+            "text": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
+          },
+          "description": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc",
+          "criteria": {
+            "description": "Ventilator supplies (any, including tubing)",
+            "name": "ventreuse",
+            "language": "text/plain",
+            "expression": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "ventobtain",
+                "display": "Ventilator supplies (any, including tubing)"
+              }
+            ],
+            "text": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
+          },
+          "description": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc",
+          "criteria": {
+            "description": "Ventilator supplies (any, including tubing)",
+            "name": "ventobtain",
+            "language": "text/plain",
+            "expression": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "N95Masks",
+            "display": "N95 masks"
+          }
+        ],
+        "text": "N95 Mask Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "n95masksupply",
+                "display": "N95 masks"
+              }
+            ]
+          },
+          "description": "N95 masks",
+          "criteria": {
+            "description": "N95 masks",
+            "name": "n95masksupply",
+            "language": "text/plain",
+            "expression": "N95 masks"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "n95maskreuse",
+                "display": "N95 masks"
+              }
+            ]
+          },
+          "description": "N95 masks",
+          "criteria": {
+            "description": "N95 masks",
+            "name": "n95maskreuse",
+            "language": "text/plain",
+            "expression": "N95 masks"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "n95maskobtain",
+                "display": "N95 masks"
+              }
+            ]
+          },
+          "description": "N95 masks",
+          "criteria": {
+            "description": "N95 masks",
+            "name": "n95maskobtain",
+            "language": "text/plain",
+            "expression": "N95 masks"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "OtherRespirators",
+            "display": "Other respirators including PAPRs"
+          }
+        ],
+        "text": "Other Respirator Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "othrespsupply",
+                "display": "Other respirators including PAPRs"
+              }
+            ],
+            "text": "Other respirators such as PAPRs or elastomerics"
+          },
+          "description": "Other respirators such as PAPRs or elastomerics",
+          "criteria": {
+            "description": "Other respirators including PAPRs",
+            "name": "othrespsupply",
+            "language": "text/plain",
+            "expression": "Other respirators such as PAPRs or elastomerics"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "othrespreuse",
+                "display": "Other respirators including PAPRs"
+              }
+            ],
+            "text": "Other respirators such as PAPRs or elastomerics"
+          },
+          "description": "Other respirators such as PAPRs or elastomerics",
+          "criteria": {
+            "description": "Other respirators including PAPRs",
+            "name": "othrespreuse",
+            "language": "text/plain",
+            "expression": "Other respirators such as PAPRs or elastomerics"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "othrespobtain",
+                "display": "Other respirators including PAPRs"
+              }
+            ],
+            "text": "Other respirators such as PAPRs or elastomerics"
+          },
+          "description": "Other respirators such as PAPRs or elastomerics",
+          "criteria": {
+            "description": "Other respirators including PAPRs",
+            "name": "othrespobtain",
+            "language": "text/plain",
+            "expression": "Other respirators such as PAPRs or elastomerics"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "SurgicalMasks",
+            "display": "Surgical masks"
+          }
+        ],
+        "text": "Surgical Mask Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "surgmasksupply",
+                "display": "Surgical masks"
+              }
+            ]
+          },
+          "description": "Surgical masks",
+          "criteria": {
+            "description": "Surgical masks",
+            "name": "surgmasksupply",
+            "language": "text/plain",
+            "expression": "Surgical masks"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "surgmaskreuse",
+                "display": "Surgical masks"
+              }
+            ]
+          },
+          "description": "Surgical masks",
+          "criteria": {
+            "description": "Surgical masks",
+            "name": "surgmaskreuse",
+            "language": "text/plain",
+            "expression": "Surgical masks"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "surgmaskobtain",
+                "display": "Surgical masks"
+              }
+            ]
+          },
+          "description": "Surgical masks",
+          "criteria": {
+            "description": "Surgical masks",
+            "name": "surgmaskobtain",
+            "language": "text/plain",
+            "expression": "Surgical masks"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "EyeProtection",
+            "display": "Eye protection including face shields or goggles"
+          }
+        ],
+        "text": "Eye Protection Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "shieldsupply",
+                "display": "Eye protection including face shields or goggles"
+              }
+            ]
+          },
+          "description": "Eye protection including face shields or goggles",
+          "criteria": {
+            "description": "Eye protection including face shields or goggles",
+            "name": "shieldsupply",
+            "language": "text/plain",
+            "expression": "Eye protection including face shields or goggles"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "shieldreuse",
+                "display": "Eye protection including face shields or goggles"
+              }
+            ]
+          },
+          "description": "Eye protection including face shields or goggles",
+          "criteria": {
+            "description": "Eye protection including face shields or goggles",
+            "name": "shieldreuse",
+            "language": "text/plain",
+            "expression": "Eye protection including face shields or goggles"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "shieldobtain",
+                "display": "Eye protection including face shields or goggles"
+              }
+            ]
+          },
+          "description": "Eye protection including face shields or goggles",
+          "criteria": {
+            "description": "Eye protection including face shields or goggles",
+            "name": "shieldobtain",
+            "language": "text/plain",
+            "expression": "Eye protection including face shields or goggles"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Gown",
+            "display": "Gowns (single use)"
+          }
+        ],
+        "text": "Gown Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "gownsupply",
+                "display": "Gowns (single use)"
+              }
+            ]
+          },
+          "description": "Gowns (single use)",
+          "criteria": {
+            "description": "Gowns (single use)",
+            "name": "gownsupply",
+            "language": "text/plain",
+            "expression": "Gowns (single use)"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "gownreuse",
+                "display": "Gowns (single use)"
+              }
+            ]
+          },
+          "description": "Gowns (single use)",
+          "criteria": {
+            "description": "Gowns (single use)",
+            "name": "gownreuse",
+            "language": "text/plain",
+            "expression": "Gowns (single use)"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "gownobtain",
+                "display": "Gowns (single use)"
+              }
+            ]
+          },
+          "description": "Gowns (single use)",
+          "criteria": {
+            "description": "Gowns (single use)",
+            "name": "gownobtain",
+            "language": "text/plain",
+            "expression": "Gowns (single use)"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+                    "code": "continuous-variable",
+                    "display": "Continuous Variable"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+                    "code": "structure",
+                    "display": "Structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+                    "code": "increase"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Glove",
+            "display": "Gloves"
+          }
+        ],
+        "text": "Glove Supply Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "glovesupply",
+                "display": "Gloves"
+              }
+            ]
+          },
+          "description": "Gloves",
+          "criteria": {
+            "description": "Gloves",
+            "name": "glovesupply",
+            "language": "text/plain",
+            "expression": "Gloves"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "glovereuse",
+                "display": "Gloves"
+              }
+            ]
+          },
+          "description": "Gloves",
+          "criteria": {
+            "description": "Gloves",
+            "name": "glovereuse",
+            "language": "text/plain",
+            "expression": "Gloves"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "gloveobtain",
+                "display": "Gloves"
+              }
+            ]
+          },
+          "description": "Gloves",
+          "criteria": {
+            "description": "Gloves",
+            "name": "gloveobtain",
+            "language": "text/plain",
+            "expression": "Gloves"
+          }
+        }
+      ]
+    }
+  ]
+}

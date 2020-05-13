@@ -1,0 +1,115 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FHIR-204",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/R4/StructureDefinition/MeasureReport"
+    ],
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig/connectathon/locations",
+        "valueString": "X140197"
+      }
+    ],
+    "reference": "Location/Loc-X140197"
+  },
+  "date": "2020-05-11T00:00:00-05:00",
+  "reporter": {
+    "reference": "Organization/X140197",
+    "display": "MCINTYRE HOSPITAL OF CHEF COUNTY"
+  },
+  "period": {
+    "start": "2020-05-11",
+    "end": "2020-05-11"
+  },
+  "group": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Beds",
+            "display": "Beds"
+          }
+        ],
+        "text": "Hospital Bed Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "numTotBeds",
+                "display": "All Hospital Beds"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ],
+            "text": "Total number of all Inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow(surge) beds used for inpatients or outpatients."
+          },
+          "count": 609
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Ventilators",
+            "display": "Ventilators"
+          }
+        ],
+        "text": "Hospital Ventilator Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "code": "numVent",
+                "display": "Mechanical Ventilators"
+              },
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ],
+            "text": "Total number of ventilators available."
+          },
+          "count": 10
+        }
+      ]
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Encounters",
+            "display": "Encounters"
+          }
+        ],
+        "text": "Hospital COVID-19 Encounters Reporting"
+      }
+    }
+  ]
+}
