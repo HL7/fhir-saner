@@ -566,6 +566,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\pagecontent\profiles.md                                         | copied    | fsh\ig-data\input\pagecontent\11_profiles.md                                    |
 | input\pagecontent\security_considerations.md                          | copied    | fsh\ig-data\input\pagecontent\4_security_considerations.md                      |
 | input\pagecontent\technology_environment.md                           | copied    | fsh\ig-data\input\pagecontent\5_technology_environment.md                       |
+| input\pagecontent\testplan.md                                         | copied    | fsh\ig-data\input\pagecontent\testplan.md                                       |
 | input\pagecontent\transaction-1.md                                    | copied    | fsh\ig-data\input\pagecontent\transaction-1.md                                  |
 | input\pagecontent\transaction-2.md                                    | copied    | fsh\ig-data\input\pagecontent\transaction-2.md                                  |
 | input\pagecontent\transaction-3.md                                    | copied    | fsh\ig-data\input\pagecontent\transaction-3.md                                  |
