@@ -93,6 +93,7 @@ Description: "A Code System for Groups defined by The SANER Project"
 * #positiveIncreasePercent "Percent Positive among Newly Resulted Tests"
 * #positivePercent         "Cumulative Percent Positive among Resulted Tests"
 
+
 ValueSet: MeasureGroups
 Title: "Measure Groups"
 Description: "Measure Groups defined by the SANER Project"
