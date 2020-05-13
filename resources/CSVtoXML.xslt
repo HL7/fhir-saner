@@ -46,52 +46,44 @@
         <xsl:param name="attribute"/>
         <xsl:param name="names"/>
         <xsl:param name="omitEmpty" select="true()"/>
-        <xsl:choose>
-            <xsl:when test="unparsed-text-available($pathToCSV)">
-                <xsl:variable name="csv" select="unparsed-text($pathToCSV)"/>
-                <xsl:variable name="lines" select="tokenize($csv, '&#xA;')" as="xs:string+"/>
-                <xsl:variable name="elemNames" select="fn:getTokens($lines[1])" as="xs:string+"/>
-                <xsl:element name="{$names[1]}">
-                    <xsl:for-each select="$lines[position() &gt; 1]">
-                        <xsl:variable name="lineItems" select="fn:getTokens(.)" as="xs:string+"/>
-                        <xsl:if test="string-length(string-join(.,'')) != 0 or not($omitEmpty)">
-                            <xsl:element name="{$names[2]}">
-                                <xsl:for-each select="$elemNames">
-                                    <xsl:variable name="pos" select="position()"/>
-                                    <xsl:variable name="elemName"
-                                        select="
-                                            if ($useFieldNames) then
-                                                .
-                                            else
-                                                'elem'"/>
-                                    <xsl:if
-                                        test="string-length($lineItems[$pos]) != 0 or not($omitEmpty)">
-                                        <xsl:element name="{$elemName}">
-                                            <xsl:if test="not($useFieldNames)">
-                                                <xsl:attribute name="name" select="."/>
-                                            </xsl:if>
-                                            <xsl:choose>
-                                                <xsl:when test="$attribute">
-                                                  <xsl:attribute name="{$attribute}"
-                                                  select="$lineItems[$pos]"/>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                  <xsl:value-of select="$lineItems[$pos]"/>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:element>
+        <xsl:variable name="csv" select="if (unparsed-text-available($pathToCSV)) then unparsed-text($pathToCSV) else ($pathToCSV)"/>
+        <xsl:variable name="lines" select="tokenize($csv, '&#xA;')" as="xs:string+"/>
+        <xsl:variable name="elemNames" select="fn:getTokens($lines[1])" as="xs:string+"/>
+        <xsl:element name="{$names[1]}">
+            <xsl:for-each select="$lines[position() &gt; 1]">
+                <xsl:variable name="lineItems" select="fn:getTokens(.)" as="xs:string+"/>
+                <xsl:if test="string-length(string-join(.,'')) != 0 or not($omitEmpty)">
+                    <xsl:element name="{$names[2]}">
+                        <xsl:for-each select="$elemNames">
+                            <xsl:variable name="pos" select="position()"/>
+                            <xsl:variable name="elemName"
+                                select="
+                                    if ($useFieldNames) then
+                                        .
+                                    else
+                                        'elem'"/>
+                            <xsl:if
+                                test="string-length($lineItems[$pos]) != 0 or not($omitEmpty)">
+                                <xsl:element name="{$elemName}">
+                                    <xsl:if test="not($useFieldNames)">
+                                        <xsl:attribute name="name" select="."/>
                                     </xsl:if>
-                                </xsl:for-each>
-                            </xsl:element>
-                        </xsl:if>
-                    </xsl:for-each>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>Cannot locate : </xsl:text>
-                <xsl:value-of select="$pathToCSV"/>
-            </xsl:otherwise>
-        </xsl:choose>
+                                    <xsl:choose>
+                                        <xsl:when test="$attribute">
+                                          <xsl:attribute name="{$attribute}"
+                                          select="$lineItems[$pos]"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                          <xsl:value-of select="$lineItems[$pos]"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:element>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:element>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:element>
     </xsl:template>
     <xsl:function name="fn:getSheetAsXML">
         <xsl:param name="pathToCSV"/>
