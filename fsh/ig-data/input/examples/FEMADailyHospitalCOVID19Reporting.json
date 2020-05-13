@@ -6,7 +6,7 @@
       "http://hl7.org/fhir/StructureDefinition/Questionnaire"
     ]
   },
-  "url": "http://hl7.org/fhir/us/saner/FEMADailyHospitalCOVID19Reporting",
+  "url": "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting",
   "version": "0.1.0",
   "name": "FEMADailyHospitalCOVID19Reporting",
   "title": "SANER FEMA Template for daily Hospital COVID-19 Reporting",

@@ -15,7 +15,7 @@
   },
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/saner/FEMADailyHospitalCOVID19Reporting",
+  "measure": "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting",
   "subject": {
     "reference": "Location/Loc-X140124",
     "identifier": {
@@ -136,8 +136,31 @@
           "code": {
             "coding": [
               {
+                "code": "rejected",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+              },
+              {
+                "code": "denominator-exclusion",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ]
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unsupported"
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
                 "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
                 "code": "totalTestResults",
+
                 "display": "Cumulative Tests Performed"
               },
               {

@@ -101,12 +101,11 @@ Profile:        PublicHealthMeasure
 Parent:         Measure
 Title:          "Saner Public Health Measure"
 Description:    """Profile Saner Public Health Measure
-Mixins: SanerStructureDefinitionContent
-
 The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
 of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
 and computation of it can be automated from systems that have the measure data.
 """
+Mixins: SanerStructureDefinitionContent
 * name 1..1
 * name ^short = "Each measure must have a name."
 * name ^comment = "The name should be in PascalCase, and should represent the Author's title of the Measure.  Identify the Author to clarify"
