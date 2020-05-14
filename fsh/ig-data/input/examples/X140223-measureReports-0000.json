@@ -3,7 +3,7 @@
   "id": "FHIR-282",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/R4/StructureDefinition/MeasureReport"
+      "http://hl7.org/fhir/StructureDefinition/MeasureReport"
     ],
     "security": [
       {
@@ -17,12 +17,11 @@
   "type": "summary",
   "measure": "http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity",
   "subject": {
-    "extension": [
+    "identifier": 
       {
-        "url": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig/connectathon/locations",
-        "valueString": "X140223"
-      }
-    ],
+        "system": "http://build.fhir.org/ig/AudaciousInquiry/saner-ig/connectathon/locations",
+        "value": "X140223"
+      },
     "reference": "Location/Loc-X140223",
     "display": "BLISH GENERAL HOSPITAL Building"
   },
@@ -71,7 +70,7 @@
             "coding": [
               {
                 "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
-                "code": "numbeds",
+                "code": "numBeds",
                 "display": "Hospital Inpatient Beds"
               }
             ],

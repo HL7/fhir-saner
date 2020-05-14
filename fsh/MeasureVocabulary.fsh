@@ -104,10 +104,6 @@ Title: "Measure Populations"
 Description: "Measure Populations defined by The SANER Project"
 * codes from system MeasurePopulationSystem
 
-CodeSystem: BooleanAggregation
- * #true "Count of 'Yes' or 'True' responses for this field"
- * #false "Count of 'No' or 'False' responses for this field"
-
 ValueSet: MeasureStatus
 Title: "Measure Status Values"
 Description: "Allowed Status Values for Saner Measures"

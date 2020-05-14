@@ -3,7 +3,7 @@
   "id": "CDCHealthcareWorkerStaffingPathway",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/R4/StructureDefinition/Questionnaire"
+      "http://hl7.org/fhir/StructureDefinition/Questionnaire"
     ]
   },
   "url": "http://hl7.org/fhir/us/saner/Questionnaire/CDCHealthcareWorkerStaffingPathway",
