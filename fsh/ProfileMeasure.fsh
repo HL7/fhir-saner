@@ -101,7 +101,6 @@ Profile:        PublicHealthMeasure
 Parent:         Measure
 Title:          "Saner Public Health Measure"
 Description:    """Profile Saner Public Health Measure
-
 The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
 of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
 and computation of it can be automated from systems that have the measure data.

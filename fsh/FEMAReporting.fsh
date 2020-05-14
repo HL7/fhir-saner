@@ -86,7 +86,7 @@ Mixins: SanerDefinitionContent, FEMADailyHospitalCOVID19ReportingRules
  * group[1].code.text = "# of total positive results to released date / # of total tests results released to date"
 
  * group[1].population[0].code.coding = MeasurePopulationSystem#totalOrders
- * group[1].population[0].code.coding.display = "Cumulative Diagnostic Tests Ordered/Recieved"
+ * group[1].population[0].code.coding.display = "Cumulative Diagnostic Tests Ordered/Received"
  * group[1].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[1].population[0].code.text = "All tests ordered to date."
  * group[1].population[0].description = "Enter the cumulative number of tests ordered to date."
@@ -102,7 +102,7 @@ Mixins: SanerDefinitionContent, FEMADailyHospitalCOVID19ReportingRules
 )"""
 
  * group[1].population[1].code.coding = MeasurePopulationSystem#rejected
- * group[1].population[1].code.coding.display = "Cumulative Specimens Rejected*"
+ * group[1].population[1].code.coding.display = "Cumulative Specimens Rejected"
  * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator-exclusion
  * group[1].population[1].code.text = "All specimens rejected for testing to date"
  * group[1].population[1].description = "Enter the cumulative number of specimens rejected for testing to date."
@@ -217,7 +217,7 @@ Mixins: SanerDefinitionContent, FEMADailyHospitalCOVID19ReportingRules
  * group[1].code.text = "# of total positive results to released date / # of total tests results released to date"
 
  * group[1].population[0].code.coding = MeasurePopulationSystem#totalOrders
- * group[1].population[0].code.coding.display = "Cumulative Diagnostic Tests Ordered/Recieved"
+ * group[1].population[0].code.coding.display = "Cumulative Diagnostic Tests Ordered/Received"
  * group[1].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[1].population[0].code.text = "All tests ordered to date."
  * group[1].population[0].description = "Enter the cumulative number of tests ordered to date."
@@ -233,7 +233,7 @@ Mixins: SanerDefinitionContent, FEMADailyHospitalCOVID19ReportingRules
 )"""
 
  * group[1].population[1].code.coding = MeasurePopulationSystem#rejected
- * group[1].population[1].code.coding.display = "Cumulative Specimens Rejected*"
+ * group[1].population[1].code.coding.display = "Cumulative Specimens Rejected"
  * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator-exclusion
  * group[1].population[1].code.text = "All specimens rejected for testing to date"
  * group[1].population[1].description = "Enter the cumulative number of specimens rejected for testing to date."
