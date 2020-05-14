@@ -7,7 +7,7 @@
   "title": "Device Resource Field Names",
   "description": "This Coding System identifies legal field names in a FHIR R4 Device Resource.",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/R4/StructureDefinition/Device",
+  "url": "http://hl7.org/fhir/StructureDefinition/Device",
   "concept": [
     {
       "code": "Device"

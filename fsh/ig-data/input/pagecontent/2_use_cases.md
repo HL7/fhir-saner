@@ -48,11 +48,11 @@ and Hospital Capacity Module asks for the following data elements:
 
 
 These data elements are often not available through a single system. For example, an
-[ICU/Central Monitoring System](technical_environment.html#icucentral-monitoring-systems) might
+[ICU/Central Monitoring System](technology_environment.html#icucentral-monitoring-systems) might
 have knowledge of 1.2,5 and 2.4-7 above, while the
-[Bed Management System](technical_environment.html#bed-management-aka-housekeeping-systems) could report
-on 2.1-3, the Hospital's [EHR](technical_environment.html#ehr-systems) is aware of 1.1, 1.3 and 1.6, and the
-[Emergency Department system](technical_environment.html#emergency-department-systems) can provide
+[Bed Management System](technology_environment.html#bed-management-aka-housekeeping-systems) could report
+on 2.1-3, the Hospital's [EHR](technology_environment.html#ehr-systems) is aware of 1.1, 1.3 and 1.6, and the
+[Emergency Department system](technology_environment.html#emergency-department-systems) can provide
 an update on 1-4.
 
 In order to  automate capture of this information, a central reporting system (e.g., a FHIR Server) can be made
