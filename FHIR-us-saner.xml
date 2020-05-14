@@ -150,6 +150,12 @@
    <artifact name="Measure Rate Aggregation Coding System"
              key="CodeSystem-MeasureRateAggregation"
              id="CodeSystem/MeasureRateAggregation"/>
+   <artifact name="Questionnaire CDC System"
+             key="CodeSystem-QuestionnaireSystemCDC"
+             id="CodeSystem/QuestionnaireSystemCDC"/>
+   <artifact name="Questionnaire FEMA System"
+             key="CodeSystem-QuestionnaireSystemFEMA"
+             id="CodeSystem/QuestionnaireSystemFEMA"/>
    <artifact name="Resource Fields for Device"
              key="CodeSystem-ResourceFieldsForDevice"
              id="CodeSystem/ResourceFieldsForDevice"/>
@@ -329,12 +335,6 @@
    <artifact name="CDCHealthcareWorkerStaffingPathway"
              key="Questionnaire-CDCHealthcareWorkerStaffingPathway"
              id="Questionnaire/CDCHealthcareWorkerStaffingPathway"/>
-   <artifact name="CDCPatientImpactAndHospitalCapacity"
-             key="Questionnaire-CDCPatientImpactAndHospitalCapacity"
-             id="Questionnaire/CDCPatientImpactAndHospitalCapacity"/>
-   <artifact name="FEMADailyHospitalCOVID19Reporting"
-             key="Questionnaire-FEMADailyHospitalCOVID19Reporting"
-             id="Questionnaire/FEMADailyHospitalCOVID19Reporting"/>
    <artifact name="FHIR-101"
              key="MeasureReport-FHIR-101"
              id="MeasureReport/FHIR-101"/>
@@ -1539,6 +1539,7 @@
    <page name="Transactions" key="transactions"/>
    <page name="Profiles" key="profiles"/>
    <page name="Examples" key="examples"/>
+   <page name="Testplan" key="testplan"/>
    <page name="Transaction 1" key="transaction-1"/>
    <page name="Transaction 2" key="transaction-2"/>
    <page name="Transaction 3" key="transaction-3"/>
