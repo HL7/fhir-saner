@@ -335,12 +335,6 @@
    <artifact name="CDCHealthcareWorkerStaffingPathway"
              key="Questionnaire-CDCHealthcareWorkerStaffingPathway"
              id="Questionnaire/CDCHealthcareWorkerStaffingPathway"/>
-   <artifact name="CDCPatientImpactAndHospitalCapacity"
-             key="Questionnaire-CDCPatientImpactAndHospitalCapacity"
-             id="Questionnaire/CDCPatientImpactAndHospitalCapacity"/>
-   <artifact name="FEMADailyHospitalCOVID19Reporting"
-             key="Questionnaire-FEMADailyHospitalCOVID19Reporting"
-             id="Questionnaire/FEMADailyHospitalCOVID19Reporting"/>
    <artifact name="FHIR-101"
              key="MeasureReport-FHIR-101"
              id="MeasureReport/FHIR-101"/>
