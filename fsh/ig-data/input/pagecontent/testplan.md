@@ -1,5 +1,6 @@
 The overall SANER is an API between [three actors](actors_and_transactions.html#actor-options), and four different [Transactions types](actors_and_transactions.html#transaction-descriptions). The tests that can be executed are limited to the functionality of the system-under-test (SUT), and the transaction type it implements. Where that SUT has a specific function, it can be tested. 
 
+TODO: Add linkage to Inferno
 
 ### Test Plan
 
