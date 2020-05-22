@@ -1,4 +1,3 @@
-##
 This Implementation Guide defines a profile for Measure.
 
 ### Stratifiers

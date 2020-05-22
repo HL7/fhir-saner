@@ -519,6 +519,7 @@ currently on a mechanical ventilator* at the time the data is collected. This in
 diagnosed COVID-19."""
 
 Instance: CDCHealthcareSupplyPathway
+Title: "CDC Healthcare Supply Pathway"
 InstanceOf: http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure
 Mixins: SanerDefinitionContent
 * id = "CDCHealthcareSupplyPathway"

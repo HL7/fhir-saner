@@ -336,6 +336,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\includes\CodeSystem-PopulationSystem-intro.md                   | copied    | fsh\ig-data\input\includes\CodeSystem-PopulationSystem-intro.md                    |
 | input\includes\CodeSystem-PopulationSystem-notes.md                   | copied    | fsh\ig-data\input\includes\CodeSystem-PopulationSystem-notes.md                    |
 | input\includes\CodeSystem-intro.md                                    | copied    | fsh\ig-data\input\includes\CodeSystem-intro.md                                     |
+| input\includes\Measure-CDCPatientImpactAndHospitalCapacity-intro.md   | copied    | fsh\ig-data\input\includes\Measure-CDCPatientImpactAndHospitalCapacity-intro.md    |
 | input\includes\Measure-CDCPatientImpactAndHospitalCapacity-notes.md   | copied    | fsh\ig-data\input\includes\Measure-CDCPatientImpactAndHospitalCapacity-notes.md    |
 | input\includes\Measure-FEMADailyHospitalCOVID19Reporting-intro.md     | copied    | fsh\ig-data\input\includes\Measure-FEMADailyHospitalCOVID19Reporting-intro.md      |
 | input\includes\Measure-FEMADailyHospitalCOVID19Reporting-notes.md     | copied    | fsh\ig-data\input\includes\Measure-FEMADailyHospitalCOVID19Reporting-notes.md      |
