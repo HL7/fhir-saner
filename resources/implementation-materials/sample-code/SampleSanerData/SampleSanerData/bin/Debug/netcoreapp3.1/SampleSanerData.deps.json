@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SampleSanerData/1.0.0": {
+        "dependencies": {
+          "MathNet.Numerics": "4.9.1"
+        },
+        "runtime": {
+          "SampleSanerData.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.9.1": {
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "4.9.1.0",
+            "fileVersion": "4.9.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SampleSanerData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MathNet.Numerics/4.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tLg/nvtdYd830Ee8nWsrsIiBTxeKmUEtsrQIPX4Sn60l7eMmZFIvSaMdG6o08FGsByi0TArJ6tx8LVT4vpWqyQ==",
+      "path": "mathnet.numerics/4.9.1",
+      "hashPath": "mathnet.numerics.4.9.1.nupkg.sha512"
+    }
+  }
+}

@@ -1,1 +1,0 @@
-Looks like I can't commit a directory without anything in it?  
