@@ -6,7 +6,7 @@ namespace SampleSanerData
     {
         static void Main(string[] args)
         {
-            SampleCdcHospital hospital = new SampleCdcHospital();
+            Hospital hospital = new Hospital();
             
             Console.WriteLine("{0,6} {1,6} {2,8} {3,6} {4,6} {5,6}",
                 "Beds", "in use", "ICU Beds", "in use", "Vents", "in use");

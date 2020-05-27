@@ -3,7 +3,7 @@ using MathNet.Numerics.Distributions;
 
 namespace SampleSanerData
 {
-    public class SampleCdcHospital
+    public class Hospital
     {
         /// <summary>
         /// The total number of staffed inpatient beds in the hospital
@@ -73,25 +73,42 @@ namespace SampleSanerData
         public int DeltaIcuBedMin { get; set; }
 
         /// <summary>
-        /// When IcuBedsInUse changes each day, the number of ventilators in use (VentsInUse)
+        /// When IcuBedsInUse changes each day, the number of ventilators in use (VentsInUse) changes.  
+        /// The delta for VentsInUse is a random percentage of delta for IcuBedsInUse.  DeltaVentMax 
+        /// is the high end of this random percentage. 
         /// </summary>
+        /// <example>
+        /// If IcuBedsInUse decreases from 45 to 40 (a delta of -5) and DeltaVentMax is 80, the most 
+        /// VentsInUse will decrease is 4.
+        /// </example>
         public int DeltaVentMax { get; set; }
+
+        /// <summary>
+        /// When IcuBedsInUse changes each day, the number of ventilators in use (VentsInUse) changes.  
+        /// The delta for VentsInUse is a random percentage of delta for IcuBedsInUse.  DeltaVentMin 
+        /// is the low end of this random percentage. 
+        /// DeltaVentMin should be >= 0; VentsInUse will go down if IcuBedsInUse goes down.
+        /// </summary>
+        /// <example>
+        /// If IcuBedsInUse increases from 32 to 42 (a delta of 10) and DeltaVentMin is 50, the least 
+        /// VentsInUse will increase is 5.
+        /// </example>
         public int DeltaVentMin { get; set; }
 
         #region Constructors
-        public SampleCdcHospital(int beds, int icuBeds, int vents)
+        public Hospital(int beds, int icuBeds, int vents)
         {
             Initialize(beds, icuBeds, vents);
         }
 
-        public SampleCdcHospital(int beds)
+        public Hospital(int beds)
         {
             int icuBeds = TotalIcuBeds(beds);
             int vents = TotalVents(icuBeds);
             Initialize(beds, icuBeds, vents);
         }
 
-        public SampleCdcHospital() 
+        public Hospital() 
         {
             int beds = TotalBeds();
             int icuBeds = TotalIcuBeds(beds);
@@ -105,6 +122,7 @@ namespace SampleSanerData
             IcuBeds = icuBeds;
             Vents = vents;
 
+            // Set default delta ranges; these can be reset manually if desired.
             DeltaBedUseMax = 15;
             DeltaBedUseMin = -15;
             DeltaIcuBedMax = 80;
@@ -118,43 +136,24 @@ namespace SampleSanerData
 
         #region Initialize the hospital
         /// <returns>A realistic random number of beds in a hospital</returns>
-        /// <remarks>
-        /// Totals for the US
-        ///  hospitals:      6,146 [1]
-        ///  staffed beds: 924,107 [1]
-        ///  beds/hospital:   ~150
-        ///  largest:        2,259 [2]
-        ///  smallest:          19 [3]
-        /// </remarks>
         private int TotalBeds()
         {
-            int averageBeds = 150;
-            int maxBeds = 2259;
-            int minBeds = 19;
-            double standardDeviation = 100;
+            int averageBeds = Constants.HospitalBedsAverage;
+            int maxBeds = Constants.HospitalBedsMax;
+            int minBeds = Constants.HospitalBedsMin;
+            double standardDeviation = Constants.HospitalBedsStdDev;
             return Convert.ToInt32(RandomFromBetaDist(minBeds, maxBeds, averageBeds, standardDeviation));
         }
 
         /// <param name="totalInpatientBeds">The total number of inpatient beds in the hospital</param>
-        /// <returns>A realistic random number of ICU beds (between 9% and 10%)</returns>
-        /// <remarks>"We do know that most systems/countries operate on a relatively fixed ratio of ICU beds to hospital beds of
-        /// approximately 2 to 5 ICU beds for every 100 hospital beds in total, while the United States operates with
-        /// a very different ratio of 9 to 10 ICU beds per 100 hospital beds in total." [4]</remarks>
+        /// <returns>A realistic random number of ICU beds based on the total number of beds</returns>
         private int TotalIcuBeds(int totalInpatientBeds)
         {
-            return RandomPercentOf(totalInpatientBeds, 9, 10);
+            return RandomPercentOf(totalInpatientBeds, Constants.IcuBedPercentLow, Constants.IcuBedPercentLow);
         }
 
         /// <param name="totalIcuBeds">The total number of ICU beds in a hospital</param>
-        /// <returns>A realistic random number of ventilators (between 60% and 80%)</returns>
-        /// <remarks>
-        /// Totals for the US
-        ///   Ventilators: 62,188 [5]
-        ///   Beds:       924,107 [1]
-        ///   ICU Bed %:     9-10% [4]
-        ///   ICU Beds:   ~87,790
-        ///   Vents / ICU Bed: 71%
-        /// </remarks>
+        /// <returns>A realistic random number of ventilators based on the number of ICU beds</returns>
         private int TotalVents(int totalIcuBeds)
         {
             return RandomPercentOf(totalIcuBeds, 60, 80);
@@ -165,29 +164,37 @@ namespace SampleSanerData
         /// </summary>
         private void DayOneOccupancy()
         {
-            BedsInUse = RandomPercentOf(Beds, 64, 77);        // [6]
-            IcuBedsInUse = RandomPercentOf(IcuBeds, 65, 68);  // [7]
+            BedsInUse = RandomPercentOf(Beds, Constants.InUseBedsPercentLow, Constants.InUseBedsPercentHigh);        
+            IcuBedsInUse = RandomPercentOf(IcuBeds, Constants.InUseIcuBedsPercentLow, Constants.InUseIcuBedsPercentHigh);  
             if (IcuBedsInUse > BedsInUse) { IcuBedsInUse = BedsInUse; }
-            VentsInUse = RandomPercentOf(IcuBedsInUse, 20, 70);
+            VentsInUse = RandomPercentOf(IcuBedsInUse, Constants.InUseVentsPercentLow, Constants.InUseVentsPercentHigh);
         }
         #endregion
 
         #region Adjust the numbers each day
-
         /// <summary>
-        /// Increment the 
+        /// Simulate passage of a day.  
+        ///     BedsInUse changes based on DeltaBedUse* and constrained by Beds
+        ///     IcuBedsInUse changes based on DeltaIcuBed* and constrained by IcuBeds and BedsInUse
+        ///     VentsInUse changes based on DeltaVent* and constrained by Vents.
         /// </summary>
         public void Tomorrow()
         {
-            int bedChange = RandomPercentOf(Beds, -15, 15);
-            int icuChange = RandomPercentOf(bedChange, 0, 80);
-            int ventChange = RandomPercentOf(icuChange, 0, 100);
+            int bedChange = RandomPercentOf(Beds, DeltaBedUseMin, DeltaBedUseMax);
+            int icuChange = RandomPercentOf(bedChange, DeltaIcuBedMin, DeltaIcuBedMax);
+            int ventChange = RandomPercentOf(icuChange, DeltaVentMin, DeltaVentMax);
 
             BedsInUse = Adjust(BedsInUse, bedChange, 0, Beds);
             IcuBedsInUse = Adjust(IcuBedsInUse, icuChange, 0, Math.Min(IcuBeds, BedsInUse));
             VentsInUse = Adjust(VentsInUse, ventChange, 0, Vents);
         }
 
+        /// <summary>
+        /// Increase <paramref name="initial"/> by <paramref name="delta"/> with a total no \
+        /// larger than <paramref name="max"/> and no smaller than <paramref name="min"/>.
+        /// </summary>
+        /// <param name="delta">How much to increase <paramref name="initial"/>; if this is 
+        /// negative, initial is decreased.</param>
         private int Adjust(int initial, int delta, int min, int max)
         {
             int newValue = initial + delta;
@@ -199,7 +206,7 @@ namespace SampleSanerData
 
         #region Probability helper functions
         /// <summary>
-        /// Generate a random integer that is in a percentage range of a provided value.
+        /// Return a random percent of a provided value.
         /// </summary>
         /// <param name="denominator">The base value of which to take a percentage</param>
         /// <param name="lowPercent">The low end of the range; this can be a negative value</param>
@@ -213,6 +220,10 @@ namespace SampleSanerData
             return Convert.ToInt32(result);
         }
 
+        /// <summary>
+        /// Generate a random value using a beta distribution.
+        /// </summary>
+        /// <seealso cref="https://en.wikipedia.org/wiki/Beta_distribution"/>
         private double RandomFromBetaDist(double min, double max, double mean, double standardDeviation)
         {
             double scale = max - min;
@@ -230,15 +241,5 @@ namespace SampleSanerData
             return BetaScaled.Sample(a, b, location, scale);
         }
         #endregion
-
-        /* References
-         * 1. https://www.aha.org/statistics/fast-facts-us-hospitals
-         * 2. https://www.beckershospitalreview.com/lists/8-7-14-100-largest-hospitals-in-america.html
-         * 3. anecdotal
-         * 4. https://accessmedicine.mhmedical.com/content.aspx?bookid=1944&sectionid=143521546
-         * 5. https://www.sccm.org/getattachment/Blog/March-2020/United-States-Resource-Availability-for-COVID-19/United-States-Resource-Availability-for-COVID-19.pdf?lang=en-US
-         * 6. https://www.statista.com/statistics/185904/hospital-occupancy-rate-in-the-us-since-2001/
-         * 7. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5520980/
-         */
     }
 }
