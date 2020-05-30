@@ -85,7 +85,7 @@ should support other commonly used expressions representing JSON or XML outputs 
 those specified in prior releases (e.g., the DSTU2 application/xml+fhir or application/json+fhir types that
 have since changed in R4). \[Ed. Note: We may want to consider requiring support for simplified forms of json and xml.
 Most servers handle this well, and it's less for a developer to remember or mess up.  If you've spent a day
-tracking down a problem with applicatoin/xml, you'll understand].
+tracking down a problem with application/xml, you'll understand].
                        
 
 
@@ -291,6 +291,8 @@ these are not recommended.
 
 The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Location, MeasureReport, Measure and Organization resources with the following parameters.
 
+<ol>
+
 <li>
 _id
 <div>
@@ -333,6 +335,97 @@ _id
 
         
 </li>
+
+<li>
+Search by Text
+<div>
+
+A client system should be able to search for Measure or other definition resources
+associated with by text within the definition.  This requirement can be met through support of the
+<a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters</a>, or by implementation
+of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter</a>.
+
+
+</div>
+
+
+<table class='grid'>
+
+<thead><tr>
+
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+
+</tr></thead>
+
+<tbody>            
+
+
+<tr>
+
+<td>
+
+_text
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+_content
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+definition-text
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+        
+</li>
+
+</ol>
 
 ###### Read on Recommended Resources
 
@@ -350,6 +443,8 @@ We are still experimenting with QuestionnaireResponse, but expect to adopt it.
 
 The MeasureSource <b>SHOULD</b> demonstrate the FHIR search operation on  the Questionnaire and QuestionnaireResponse resources with the following parameters.
 
+<ol>
+
 <li>
 _id
 <div>
@@ -393,9 +488,102 @@ _id
         
 </li>
 
+<li>
+Search by Text
+<div>
+
+A client system should be able to search for Questionnaire or other definition resources
+associated with by text within the definition.  This requirement can be met through support of the
+<a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters</a>, or by implementation
+of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter</a>.
+
+
+</div>
+
+
+<table class='grid'>
+
+<thead><tr>
+
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+
+</tr></thead>
+
+<tbody>            
+
+
+<tr>
+
+<td>
+
+_text
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+_content
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+definition-text
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+        
+</li>
+
+</ol>
+
 ###### Search on Required Resources
 The MeasureConsumer <b>SHALL</b> demonstrate the FHIR search operation on  the MeasureReport resource with the following parameters.
 The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the MeasureReport resource with the following parameters.
+
+<ol>
 
 <li>
 Search by Date
@@ -498,13 +686,15 @@ A client system must be able to retrieve the data they need, be it about beds,
 ventilators, PPE, or other measure.  The data can be identified by codes used in the measure,
 or by the measure itself, by canonical URL, or by something easier for a user to recall, such
 as the title of the measure or code.  Multiple measures may report on the same kind of thing (e.g., beds),
-so retrieval by code, or by code within a value set should be supported.  There may also be
+so retrieval by code, or by code within a value set should be supported.  There may be
 multiple measures which identify the kind of thing that the client system is interested in
-learning more about.
+learning more about.  Search by code should be met by implementing the <a href='SearchParameter-SearchParameter-code.html'>SearchParameter-code</a>
+search parameter.
+
 
 
 However, search by code is not supported by default by many off-the-shelf systems,
-and so this is not at present, a hard requirement of implementers.  Also, chained searching
+and so this is not a strict requirement for implementers.  Also, chained searching
 is also not always readily available, and so search by measure title is also not a hard requirement.
 At the very least, a server must be able to search by measure, and a client must also to ensure
 the greatest interoperability between systems with differing capabilities.
@@ -746,6 +936,8 @@ reporter:identifier
 
         
 </li>
+
+</ol>
 
 ##### Expected Actions
 

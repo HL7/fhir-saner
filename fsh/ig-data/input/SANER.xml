@@ -398,7 +398,7 @@ should support other commonly used expressions representing JSON or XML outputs 
 those specified in prior releases (e.g., the DSTU2 application/xml+fhir or application/json+fhir types that
 have since changed in R4). \[Ed. Note: We may want to consider requiring support for simplified forms of json and xml.
 Most servers handle this well, and it's less for a developer to remember or mess up.  If you've spent a day
-tracking down a problem with applicatoin/xml, you'll understand].
+tracking down a problem with application/xml, you'll understand].
                        </description>
                         <parameter name='_format' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shall'/>
                         <!-- Servers should support all values for format, clients may use Accept header or _format -->
@@ -454,6 +454,16 @@ these are not recommended.</overview>
                             <name>_id</name>
                             <parameter name='_id' min='1' max='*' expect='shall'/>
                         </group>
+                        <group>
+                            <name>Search by Text</name>
+                            <description>A client system should be able to search for Measure or other definition resources
+associated with by text within the definition.  This requirement can be met through support of the
+&lt;a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters&lt;/a>, or by implementation
+of the &lt;a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter&lt;/a>.</description>
+                            <parameter name='_text' min='0' max='*' expect='should'/>
+                            <parameter name='_content' min='0' max='*' expect='should'/>
+                            <parameter name='definition-text' min='0' max='*' expect='should'/>
+                        </group>
                      </operation>
                      <operation name='read' resources='Questionnaire QuestionnaireResponse' expect='should'>
                         <name>Read on Recommended Resources</name>
@@ -467,6 +477,16 @@ via forms that better fit a QuestionnaireResponse approach (e.g., free form answ
                         <group>
                             <name>_id</name>
 	                        <parameter name='_id' min='1' max='*' expect='shall'/>
+                        </group>
+                        <group>
+                            <name>Search by Text</name>
+                            <description>A client system should be able to search for Questionnaire or other definition resources
+associated with by text within the definition.  This requirement can be met through support of the
+&lt;a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters&lt;/a>, or by implementation
+of the &lt;a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter&lt;/a>.</description>
+                            <parameter name='_text' min='0' max='*' expect='should'/>
+                            <parameter name='_content' min='0' max='*' expect='should'/>
+                            <parameter name='definition-text' min='0' max='*' expect='should'/>
                         </group>
                      </operation>
                      <operation name='search' resources='MeasureReport' expect='shall' client='shall'>
@@ -507,11 +527,13 @@ to specify date ranges.</description>
 ventilators, PPE, or other measure.  The data can be identified by codes used in the measure,
 or by the measure itself, by canonical URL, or by something easier for a user to recall, such
 as the title of the measure or code.  Multiple measures may report on the same kind of thing (e.g., beds),
-so retrieval by code, or by code within a value set should be supported.  There may also be
+so retrieval by code, or by code within a value set should be supported.  There may be
 multiple measures which identify the kind of thing that the client system is interested in
-learning more about.</description>
+learning more about.  Search by code should be met by implementing the &lt;a href='SearchParameter-SearchParameter-code.html'>SearchParameter-code&lt;/a>
+search parameter.
+</description>
                             <overview>However, search by code is not supported by default by many off-the-shelf systems,
-and so this is not at present, a hard requirement of implementers.  Also, chained searching
+and so this is not a strict requirement for implementers.  Also, chained searching
 is also not always readily available, and so search by measure title is also not a hard requirement.
 At the very least, a server must be able to search by measure, and a client must also to ensure
 the greatest interoperability between systems with differing capabilities.</overview>
@@ -520,7 +542,6 @@ the greatest interoperability between systems with differing capabilities.</over
                             <parameter name='measure' min='0' max='*' expect='shall'/>
                             <parameter name='measure.title' min='0' max='*' expect='should'/>
                         </group>
-
                         <group>
                             <name>Search by Geography</name>
                             <description>In order to enable querys within a geographic region, search must allow for a client

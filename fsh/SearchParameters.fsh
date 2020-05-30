@@ -63,23 +63,11 @@ Mixins: SanerDefinitionContent
  * base[3] = #QuestionnaireResponse
  * type = #token
  * expression = """
- Measure.topic | Measure.group.code | Measure.group.population.code |
- Measure.group.stratifier.code | Measure.group.stratifier.component.code | Measure.supplementalData.code |
- MeasureReport.group.code | MeasureReport.group.population.code |
- MeasureReport.group.stratifier.code | MeasureReport.group.stratifier.stratum.component.code |  MeasureReport.group.stratifier.stratum.population.code |
- Questionnaire.subjectType | Questionnaire.descendant().item.code | Questionnaire.item.answerOption.valueCoding | Questionnaire.item.descendant().item.code | Questionnaire.item.descendant().answerOption.valueCoding |
- QuestionnaireResponse.item.answer.valueCoding | QuestionnaireResponse.item.descendant().item.answer.valueCoding |
- descendant().extension.valueCodeableConcept | descendant().extension.valueCoding
+ descendants().valueCodeableConcept | descendants().valueCoding | descendants().valueCode | code | descendants().ofType(Coding).not().code
 """
 
  * xpath = """
- f:Measure/f:topic | f:Measure/f:group/f:code | f:Measure/f:group/f:population/f:code |
- f:Measure/f:group/f:stratifier/f:code | f:Measure/f:group/f:stratifier/f:component/f:code | f:Measure/f:supplementalData/f:code |
- f:MeasureReport/f:group/f:code | f:MeasureReport/f:group/f:population/f:code |
- f:MeasureReport/f:group/f:stratifier/f:code | f:MeasureReport/f:group/f:stratifier/f:stratum/f:component/f:code | f: MeasureReport/f:group/f:stratifier/f:stratum/f:population/f:code |
- f:Questionnaire/f:subjectType | f:Questionnaire/descendant::f:item/f:code | f:Questionnaire/descendant::f:item/f:answerOption/f:valueCoding
- f:QuestionnaireResponse/descendant::f:item/f:answer/f:valueCoding |
- f:*/descendant::f:extension/f:valueCodeableConcept | f:*/descendant::f:extension/f:valueCoding
+ descendant::f:valueCodeableConcept | descendant::f:valueCoding | descendant::f:valueCode | f:code | f:descendant::f:code[ends-with(local-name(..),'oding')]
 """
 * xpathUsage = #normal
 * multipleOr = true

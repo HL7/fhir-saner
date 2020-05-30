@@ -246,8 +246,11 @@ Profile and the relevant transactions between them.&#xA;
             <xsl:text> with the following parameters</xsl:text>
         </xsl:if>
         <xsl:text>.&#xA;</xsl:text>
-
+        <xsl:if test='ig:group'>
+        <xsl:text>&#xA;&lt;ol>&#xA;</xsl:text>
         <xsl:apply-templates select="ig:group"/>
+        <xsl:text>&#xA;&lt;/ol>&#xA;</xsl:text>
+        </xsl:if>
         <xsl:call-template name="parameters"/>
     </xsl:template>
     <xsl:template match="@resources">
