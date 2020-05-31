@@ -1046,7 +1046,7 @@
    <page name="Home" key="index"/>
    <page name="Overview" key="overview"/>
    <page name="Use Cases" key="use_cases"/>
-   <page name="Actors and Transactions" key="actors_and_transactions"/>
+   <page name="Actors" key="actors"/>
    <page name="Security Considerations" key="security_considerations"/>
    <page name="Technology Environment" key="technology_environment"/>
    <page name="Architecture" key="architecture"/>
@@ -1055,8 +1055,8 @@
    <page name="Vocabulary" key="vocabulary"/>
    <page name="Transactions" key="transactions"/>
    <page name="Profiles" key="profiles"/>
+   <page name="Test Plan" key="test_plan"/>
    <page name="Examples" key="examples"/>
-   <page name="Testplan" key="testplan"/>
    <page name="Transaction 1" key="transaction-1"/>
    <page name="Transaction 2" key="transaction-2"/>
    <page name="Transaction 3" key="transaction-3"/>

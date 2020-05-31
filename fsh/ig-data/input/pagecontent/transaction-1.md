@@ -6,6 +6,11 @@ The Query Measure transaction allows a Measure Consumer to
 periodically query about the availability of a resource from an Measure Source.
 
 
+This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
+resources from a MeasureSource actor.  It defines the query parameters that the actors must and should support for search,
+and the read operations that must be supported.
+
+
 ### Actors Roles
 
 ![Figure 2.1-1: Query Measure Use Case Diagram](transaction-1-uc.svg "Figure 2.1-1: Query Measure Use Case Diagram")
@@ -15,10 +20,10 @@ periodically query about the availability of a resource from an Measure Source.
 <table border='1' borderspacing='0'>
 <caption><b>Table 2.1-1: Actor Roles</b></caption>
 <thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors_and_transactions.html#measure-source">Measure Source</a></td>
+<tbody><tr><td><a href="actors.html#measure-source">Measure Source</a></td>
 <td>Reports on selected data in response to a query.</td>
 </tr>
-        <tr><td><a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a></td>
+        <tr><td><a href="actors.html#measure-consumer">Measure Consumer</a></td>
 <td>Collects data for reporting</td>
 </tr>
         
@@ -65,9 +70,6 @@ If the Storage Option is supported, the Measure Consumer will read resources fro
 using appropriate operations for the storage in use (e.g., SFTP/S3/Blob/File).
 
 
-
-
-
 The following are general requirements of the interaction.
 
 <ol>
@@ -96,11 +98,11 @@ tracking down a problem with application/xml, you'll understand].
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -212,11 +214,11 @@ the client expected.  Thus, these are not recommended.
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -304,11 +306,11 @@ _id
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -353,11 +355,11 @@ of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -456,11 +458,11 @@ _id
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -505,11 +507,11 @@ of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -606,11 +608,11 @@ to specify date ranges.
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -707,11 +709,11 @@ the greatest interoperability between systems with differing capabilities.
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -825,11 +827,11 @@ bounding box, rather than a circle, because it increases search efficiency).
 
 <thead><tr>
 
-<th>Parameter</th><th>Cardinality</th><th>Expectation</th>                   
+<th>Parameter</th><th>Cardinality</th><th>Expectation</th>
 
 </tr></thead>
 
-<tbody>            
+<tbody>
 
 
 <tr>
@@ -947,9 +949,6 @@ When the API Option is implemented, the Measure Consumer performs a FHIR Search 
 to retrieve the selected resources.  When the Storage Option is implemented, the Measure Consumer reads resources from external
 storage specified by the Measure Source.
                 
-
-
-
 
 
 #### Search Response

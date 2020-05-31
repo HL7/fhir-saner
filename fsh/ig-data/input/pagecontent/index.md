@@ -27,7 +27,7 @@ Volume I: [Overview](overview.html) - Provides an overview of the challenges thi
    2. [Architecture](architecture.html) - Illustrates the Microservice Architecture
    3. [Security Considerations](security_considerations.html) - Documents security concerns and mitigations
    4. [Use Cases](use_cases.html) - Illustrates key use cases
-   5. [Actors and Transactions](actors_and_transactions.html) - Provides an overview of technical components
+   5. [Actors and Transactions](actors.html) - Provides an overview of technical components
    6. [Measures used for Reporting](measures.html) - Defines measures used by CDC and FEMA as FHIR Measure resources
 </details>
 

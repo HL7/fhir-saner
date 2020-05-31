@@ -369,6 +369,9 @@ A multi-level data aggregation and reporting hierarchy using Measure Intermediar
         <name>Query Measure</name>
         <description>The Query Measure transaction allows a Measure Consumer to
 periodically query about the availability of a resource from an Measure Source.</description>
+        <overview>This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
+resources from a MeasureSource actor.  It defines the query parameters that the actors must and should support for search,
+and the read operations that must be supported.</overview>
         <!-- like steps, messages can nest to support activation lines -->
         <message from="MeasureConsumer" to="MeasureSource">
             <name>Search Request</name>
@@ -383,7 +386,6 @@ available resources.
 
 If the Storage Option is supported, the Measure Consumer will read resources from external storage
 using appropriate operations for the storage in use (e.g., SFTP/S3/Blob/File).</description>
-                <overview></overview>
                 <interaction protocol='fhir' options='API'>
                     <!-- Common parameter requirements -->
                     <!-- Servers must support standard values for format, clients may use Accept header or _format -->
@@ -571,7 +573,6 @@ bounding box, rather than a circle, because it increases search efficiency).
 to retrieve the selected resources.  When the Storage Option is implemented, the Measure Consumer reads resources from external
 storage specified by the Measure Source.
                 </description>
-                <overview></overview>
             </action>
             <result>
                 <name>Search Response</name>
@@ -605,6 +606,8 @@ option is used, the Measure Source will return all resources requested by the Me
         <name>Produce Measure</name>
         <description>The Produce Measure transaction allows an Measure Source to
 periodically report on availability of resources to a Measure Consumer.</description>
+        <overview>This transaction defines the create and update operations that a MeasureConsumer and
+MeasureSource actor must support.</overview>
         <message from="MeasureSource" to="MeasureConsumer">
             <name>Push Measure</name>
             <description></description>
@@ -622,11 +625,11 @@ writes the MeasureReport data to external storage specified by the Measure Consu
 </overview>
                 <interaction protocol='fhir' options='API'>
                     <!-- what about xml+fhir and json+fhir variants? -->
-                    <operation name='create' resources='MeasureReport'>
+                    <operation name='create' resources='MeasureReport' expect='shall'>
                        <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
                        <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
                     </operation>
-                    <operation name='update' resources='MeasureReport' required='false'>
+                    <operation name='update' resources='MeasureReport' expect='shall'>
                        <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
                        <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
                     </operation>
@@ -664,27 +667,22 @@ availability data or some computation over it to another system.
     <content id="bed-location">
         <name>bed-location</name>
         <description>This content profile describes the structure of a Location Resource describing a reported upon Bed in a Bed Measure Report</description>
-        <overview></overview>
     </content>
     <content id="supporting-device">
         <name>Supporting Device</name>
         <description>This content profile describes the structure of a Device Resource describing a reported upon Device in Device Measure Report</description>
-        <overview></overview>
     </content>
     <content id="resource-location">
         <name>Resource Location</name>
         <description>This content profile describes the structure of a Location Resource describing the physical location (e.g., building)
 where a bed or device is located</description>
-        <overview></overview>
     </content>
     <content id="audit-event-write">
         <name>Audit Event Write</name>
         <description>This content profile describes the structure of an AuditEvent Resource reporting a write on a resource.</description>
-        <overview></overview>
     </content>
     <content id="audit-event-read">
         <name>Audit Event Read</name>
         <description>This content profile describes the structure of an AuditEvent Resource reporting a read on a resource.</description>
-        <overview></overview>
     </content>
 </profile>

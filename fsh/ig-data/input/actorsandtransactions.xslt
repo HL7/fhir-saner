@@ -19,9 +19,9 @@
     </xsl:template>
 
     <xsl:template name="actorsandtransactions" match="/" mode="actorsandtransactions">
-        <xsl:param name="dest" select="'pagecontent/3_actors_and_transactions.md'"/>
-        <xsl:result-document href="pagecontent/3_actors_and_transactions.md" method="text">
-This section defines the actors and transactions in this implementation guide.
+        <xsl:param name="dest" select="'pagecontent/3_actors.md'"/>
+        <xsl:result-document href="pagecontent/3_actors.md" method="text">
+This section defines the actors in this implementation guide.
 
 Figure <xsl:value-of select="/ig:profile/@chapter"/>.1-1 below shows the actors directly
 involved in the <xsl:value-of select="/ig:profile/@id"/>
@@ -40,6 +40,8 @@ Profile and the relevant transactions between them.&#xA;
 
             <xsl:call-template name="actor-options"/>
 
+        </xsl:result-document>
+        <xsl:result-document href="pagecontent/10_transactions.md" method="text">
             <xsl:call-template name="transaction-descriptions"/>
         </xsl:result-document>
         <xsl:apply-templates select="/ig:profile/ig:transaction" mode="transaction"/>
@@ -165,7 +167,7 @@ Profile and the relevant transactions between them.&#xA;
 &lt;thead>&lt;tr>&lt;th>Actor&lt;/th>&lt;th>Role&lt;/th>&lt;/tr>&lt;/thead>
 &lt;tbody></xsl:text>
         <xsl:for-each select="//ig:actor[@id = $actorids]">
-            <xsl:text>&lt;tr>&lt;td>&lt;a href="actors_and_transactions.html#</xsl:text>
+            <xsl:text>&lt;tr>&lt;td>&lt;a href="actors.html#</xsl:text>
             <xsl:value-of select="translate(lower-case(ig:name),' ', '-')"/>"><xsl:value-of select="ig:name"/>
             <xsl:text>&lt;/a>&lt;/td>
 &lt;td></xsl:text><xsl:value-of select='(ig:supports-tx|ig:requires-tx)[@transaction=$tx/@id]/ig:role'/>&lt;/td>
@@ -198,7 +200,7 @@ Profile and the relevant transactions between them.&#xA;
             <xsl:apply-templates select="ig:semantics/ig:description|ig:semantics/ig:overview"/>
 
             <xsl:if test='ig:semantics/ig:interaction/ig:group'>
-                <xsl:text>&#xA;The following are general requirements of the interaction.&#xA;</xsl:text>                    
+                <xsl:text>&#xA;The following are general requirements of the interaction.&#xA;</xsl:text>
                 <xsl:text>&#xA;&lt;ol>&#xA;</xsl:text>
                 <xsl:apply-templates select="ig:semantics/ig:interaction/ig:group"/>
                 <xsl:text>&#xA;&lt;/ol>&#xA;</xsl:text>
@@ -211,7 +213,7 @@ Profile and the relevant transactions between them.&#xA;
             </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
-    
+
     <xsl:template match="ig:group">
         <xsl:text>&#xA;&lt;li>&#xA;</xsl:text>
         <xsl:value-of select="ig:name"/>
@@ -240,7 +242,7 @@ Profile and the relevant transactions between them.&#xA;
         </xsl:if>
         <xsl:text>The </xsl:text><xsl:value-of select='ancestor::ig:message[1]/@to'/>
         <xsl:text> </xsl:text><xsl:apply-templates select="@expect"/>
-        <xsl:text> demonstrate the FHIR </xsl:text><xsl:value-of select="@name"/><xsl:text> operation on </xsl:text> 
+        <xsl:text> demonstrate the FHIR </xsl:text><xsl:value-of select="@name"/><xsl:text> operation on </xsl:text>
         <xsl:apply-templates select="@resources"/>
         <xsl:if test='ig:parameter|ig:group'>
             <xsl:text> with the following parameters</xsl:text>
@@ -264,9 +266,9 @@ Profile and the relevant transactions between them.&#xA;
         <xsl:if test='ig:parameter'>
 &#xA;&lt;table class='grid'>
 &#xA;&lt;thead>&lt;tr>
-&#xA;&lt;th>Parameter&lt;/th>&lt;th>Cardinality&lt;/th>&lt;th>Expectation&lt;/th>                   
+&#xA;&lt;th>Parameter&lt;/th>&lt;th>Cardinality&lt;/th>&lt;th>Expectation&lt;/th>
 &#xA;&lt;/tr>&lt;/thead>
-&#xA;&lt;tbody>            
+&#xA;&lt;tbody>
 <xsl:for-each select="ig:parameter">
 &#xA;&lt;tr>
 &#xA;&lt;td>&#xA;
@@ -609,10 +611,9 @@ between options when applicable are specified in notes.
     </xsl:template>
 
     <xsl:template name='transaction-descriptions'>
-        <xsl:text>&#xA;### Transaction Descriptions&#xA;</xsl:text>
         <xsl:text>The transactions in this profile are summarized in the sections below.&#xA;</xsl:text>
         <xsl:for-each select="/ig:profile/ig:transaction">
-            <xsl:text>&#xA;#### </xsl:text>
+            <xsl:text>&#xA;### </xsl:text>
             <xsl:value-of select="ig:name"/>
             <xsl:text>&#xA;</xsl:text>
             <xsl:apply-templates select="ig:description|ig:overview"/>

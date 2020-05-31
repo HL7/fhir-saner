@@ -395,7 +395,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\includes\ValueSet-VentilatorDevicesWithTracheostomy-intro.md    | copied    | fsh\ig-data\input\includes\ValueSet-VentilatorDevicesWithTracheostomy-intro.md     |
 | input\includes\ValueSet-VentilatorDevicesWithTracheostomy-notes.md    | copied    | fsh\ig-data\input\includes\ValueSet-VentilatorDevicesWithTracheostomy-notes.md     |
 | input\includes\menu.xml                                               | copied    | fsh\ig-data\input\includes\menu.xml                                                |
-| input\pagecontent\actors_and_transactions.md                          | copied    | fsh\ig-data\input\pagecontent\3_actors_and_transactions.md                         |
+| input\pagecontent\actors.md                                           | copied    | fsh\ig-data\input\pagecontent\3_actors.md                                          |
 | input\pagecontent\architecture.md                                     | copied    | fsh\ig-data\input\pagecontent\6_architecture.md                                    |
 | input\pagecontent\definitions.md                                      | copied    | fsh\ig-data\input\pagecontent\7_definitions.md                                     |
 | input\pagecontent\examples.md                                         | copied    | fsh\ig-data\input\pagecontent\13_examples.md                                       |
@@ -405,7 +405,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input\pagecontent\profiles.md                                         | copied    | fsh\ig-data\input\pagecontent\11_profiles.md                                       |
 | input\pagecontent\security_considerations.md                          | copied    | fsh\ig-data\input\pagecontent\4_security_considerations.md                         |
 | input\pagecontent\technology_environment.md                           | copied    | fsh\ig-data\input\pagecontent\5_technology_environment.md                          |
-| input\pagecontent\testplan.md                                         | copied    | fsh\ig-data\input\pagecontent\testplan.md                                          |
+| input\pagecontent\test_plan.md                                        | copied    | fsh\ig-data\input\pagecontent\12_test_plan.md                                      |
 | input\pagecontent\transaction-1.md                                    | copied    | fsh\ig-data\input\pagecontent\transaction-1.md                                     |
 | input\pagecontent\transaction-2.md                                    | copied    | fsh\ig-data\input\pagecontent\transaction-2.md                                     |
 | input\pagecontent\transaction-3.md                                    | copied    | fsh\ig-data\input\pagecontent\transaction-3.md                                     |
