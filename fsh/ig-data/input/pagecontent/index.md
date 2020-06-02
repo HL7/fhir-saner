@@ -110,6 +110,12 @@ Volume V: [Examples](examples.html)
 </ol>
 </details>
 
+<details><summary>
+
+Volume VI: [Test Plan](testplan.html)
+</summary>
+</details>
+
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
 
