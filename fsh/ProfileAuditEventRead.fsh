@@ -1,4 +1,4 @@
-Profile:        ProfileAuditEventRead
+Profile:        AuditEventRead
 Parent:         AuditEvent
 Id:             audit-event-read
 Title:          "Audit Event Read"
