@@ -84,7 +84,24 @@ Volume IV: [Vocabulary](vocabulary.html)
 </details>
 <details><summary>
 
-Volume V: [Examples](examples.html)
+Volume V: [Testing and Conformance](examples.html)
+</summary>
+<ol>
+    <li>Test Plan
+        <ol>
+           <a href='test_plan.html'>Test Plan</a>
+        </ol>
+    </li>
+    <li>Capability Statements
+        <ol>
+           {% include list-simple-capabilitystatements.xhtml %}
+        </ol>
+    </li>
+</ol>
+</details>
+<details><summary>
+
+Volume VI: [Examples](examples.html)
 </summary>
 <ol>
     <li>Measures

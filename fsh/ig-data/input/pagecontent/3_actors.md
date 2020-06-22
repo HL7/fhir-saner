@@ -383,7 +383,7 @@ between options when applicable are specified in notes.
         
                 <tr>
                 
-                    <td rowspan='4'>Measure Source</td>
+                    <td rowspan='5'>Measure Source</td>
                 
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
@@ -405,7 +405,12 @@ between options when applicable are specified in notes.
             
                 <tr>
                 
-                    <td rowspan='4'>Measure Consumer</td>
+                <td><a href="#questionnaire-option">Questionnaire Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                    <td rowspan='5'>Measure Consumer</td>
                 
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
@@ -423,6 +428,11 @@ between options when applicable are specified in notes.
                 <tr>
                 
                 <td><a href="#pull-option">Pull Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#questionnaire-option">Questionnaire Option</a></td>
                 </tr>
             
                 <tr><td>Measure Intermediary</td>
@@ -516,4 +526,30 @@ A Measure Source implementing the Pull Option is periodically queried by an
 An Measure Consumer implementing the Pull Option periodically queries a
 [Measure Source](actors.html#measure-source) using the [Query Measure](transactions.html#query-measure) transaction to enable collection of the current status.
             
+
+
+#### Questionnaire Option
+
+An actor implementing the Questionnaire Option supports the use of Questionnaire 
+and QuestionnaireResponse resources to determine the current status of selected 
+health delivery resources. Implementers of this option must also implement 
+the API option.
+
+
+
+
+This option applies to the actors as described below.
+
+##### Measure Source
+
+A Measure Source implementing the Questionnaire Option will interact
+using Questionnaire and QuestionnaireResponse resources to report on the current status
+of health delivery resources.
+
+
+##### Measure Consumer
+
+A Measure Consumer implementing the Questionnaire Option will interact
+using Questionnaire and QuestionnaireResponse resources to access the current status
+of health delivery resources.
 

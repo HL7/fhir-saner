@@ -90,3 +90,11 @@ used, the Measure Consumer reports success using the native protocols for the ex
 
 
 
+
+
+### Conformance
+See the following CapabilityStatement resources for conformance requirements:
+
+        
+* [CapabilityStatement-MeasureSource-PUSH-TX-API](CapabilityStatement-MeasureSource-PUSH-TX-API.html) defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the API Option.
+* [CapabilityStatement-MeasureConsumer-PUSH-TX-API](CapabilityStatement-MeasureConsumer-PUSH-TX-API.html) defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the API Option.

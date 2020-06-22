@@ -61,3 +61,9 @@ This requirement can be met by a Measure Consumer that consumes and displays dat
 ##### Message Semantics
 
 ##### Expected Actions
+
+
+### Conformance
+See the following CapabilityStatement resources for conformance requirements:
+
+        

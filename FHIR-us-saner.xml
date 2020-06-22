@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                url="http://hl7.org/fhir/us/saner"
-               ciUrl="http://hl7.org/fhir/us/saner"
+               ciUrl="http://build.fhir.org/ig/example/example-ig"
                defaultWorkgroup=""
                defaultVersion="current"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
-               ballotUrl="http://hl7.org/fhir/us/saner">
-   <version code="current" url="http://hl7.org/fhir/us/saner"/>
-   <version code="0.1.0" url="http://hl7.org/fhir/us/saner"/>
+               ballotUrl="http://example.org/fhir/STU1">
+   <version code="current" url="http://build.fhir.org/ig/example/example-ig"/>
+   <version code="0.0.1" url="http://example.org/fhir/STU1"/>
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
@@ -306,12 +306,30 @@
    <artifact name="HAvBED2 to FHIR Concept Map"
              key="ConceptMap-HAvBED2toFHIR"
              id="ConceptMap/HAvBED2toFHIR"/>
+   <artifact name="MeasureConsumer-PULL-TX-API"
+             key="CapabilityStatement-MeasureConsumer-PULL-TX-API"
+             id="CapabilityStatement/MeasureConsumer-PULL-TX-API"/>
+   <artifact name="MeasureConsumer-PULL-TX-API-Questionnaire"
+             key="CapabilityStatement-MeasureConsumer-PULL-TX-API-Questionnaire"
+             id="CapabilityStatement/MeasureConsumer-PULL-TX-API-Questionnaire"/>
+   <artifact name="MeasureConsumer-PUSH-TX-API"
+             key="CapabilityStatement-MeasureConsumer-PUSH-TX-API"
+             id="CapabilityStatement/MeasureConsumer-PUSH-TX-API"/>
    <artifact name="Measure Consumer - Pull Option (Client)"
              key="CapabilityStatement-MeasureConsumerPull"
              id="CapabilityStatement/MeasureConsumerPull"/>
    <artifact name="Measure Consumer - Push Option (Server)"
              key="CapabilityStatement-MeasureConsumerPush"
              id="CapabilityStatement/MeasureConsumerPush"/>
+   <artifact name="MeasureSource-PULL-TX-API"
+             key="CapabilityStatement-MeasureSource-PULL-TX-API"
+             id="CapabilityStatement/MeasureSource-PULL-TX-API"/>
+   <artifact name="MeasureSource-PULL-TX-API-Questionnaire"
+             key="CapabilityStatement-MeasureSource-PULL-TX-API-Questionnaire"
+             id="CapabilityStatement/MeasureSource-PULL-TX-API-Questionnaire"/>
+   <artifact name="MeasureSource-PUSH-TX-API"
+             key="CapabilityStatement-MeasureSource-PUSH-TX-API"
+             id="CapabilityStatement/MeasureSource-PUSH-TX-API"/>
    <artifact name="Measure Source - Pull Option (Server)"
              key="CapabilityStatement-MeasureSourcePull"
              id="CapabilityStatement/MeasureSourcePull"/>

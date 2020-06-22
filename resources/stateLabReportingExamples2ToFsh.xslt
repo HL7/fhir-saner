@@ -78,6 +78,9 @@
     <!-- Import UUID Generation utilities -->
     <xsl:import href="uuid.xslt"/>
     
+    <!-- Import FSH Support Functions -->
+    <xsl:import href="fsh.xslt"/>
+    
     <!-- Process the input -->
     <xsl:template match="/">
         <!-- Load the CSV file to process -->

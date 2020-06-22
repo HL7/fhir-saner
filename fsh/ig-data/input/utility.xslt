@@ -112,5 +112,26 @@
         <xsl:text>")&#xA;&#xA;**</xsl:text><xsl:value-of select="$title"/><xsl:text>**&#xA;&#xA;</xsl:text>
     </xsl:template>
 
-
+    <xsl:template match='*' mode='copy-as-text'>
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="local-name()"/>
+        <xsl:apply-templates select='@*' mode='copy-as-text'/>
+        <xsl:text>&gt;</xsl:text>
+        <xsl:apply-templates select='text()|*' mode='copy-as-text'/>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="local-name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match='text()' mode='copy-as-text'>
+        <xsl:copy-of select="."/>    
+    </xsl:template>
+    
+    <xsl:template match='@*' mode='copy-as-text'>
+        <xsl:text> </xsl:text>
+        <xsl:value-of select='local-name()'/>
+        <xsl:text>='</xsl:text>
+        <xsl:value-of select='.'/>
+        <xsl:text>' </xsl:text>
+    </xsl:template>
 </xsl:stylesheet>
