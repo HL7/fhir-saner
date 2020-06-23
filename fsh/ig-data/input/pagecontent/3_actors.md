@@ -1,5 +1,5 @@
 
-This section defines the actors and transactions in this implementation guide.
+This section defines the actors in this implementation guide.
 
 Figure 1.1-1 below shows the actors directly
 involved in the SANER
@@ -312,7 +312,7 @@ or varying levels of granularity using data extracted from a Measure Source.
 The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.
 
 
-This actor represents the composition of a [Measure Source](actors_and_transactions.html#measure-source) with a [Measure Source](actors_and_transactions.html#measure-source).
+This actor represents the composition of a [Measure Source](actors.html#measure-source) with a [Measure Source](actors.html#measure-source).
 
 The Measure Intermediary role can aggregate data from multiple Measure Sources.  Data from Measure Sources may
 be pulled in by the Intermediary, pushed to the Intermediary by the Measure Source, or may be pushed from a
@@ -383,7 +383,7 @@ between options when applicable are specified in notes.
         
                 <tr>
                 
-                    <td rowspan='4'>Measure Source</td>
+                    <td rowspan='5'>Measure Source</td>
                 
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
@@ -405,7 +405,12 @@ between options when applicable are specified in notes.
             
                 <tr>
                 
-                    <td rowspan='4'>Measure Consumer</td>
+                <td><a href="#questionnaire-option">Questionnaire Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                    <td rowspan='5'>Measure Consumer</td>
                 
                 <td><a href="#storage-option">Storage Option</a></td>
                 </tr>
@@ -423,6 +428,11 @@ between options when applicable are specified in notes.
                 <tr>
                 
                 <td><a href="#pull-option">Pull Option</a></td>
+                </tr>
+            
+                <tr>
+                
+                <td><a href="#questionnaire-option">Questionnaire Option</a></td>
                 </tr>
             
                 <tr><td>Measure Intermediary</td>
@@ -446,12 +456,12 @@ This option applies to the actors as described below.
 
 ##### Measure Source
 
-A [Measure Source](actors_and_transactions.html#measure-source) actor implementing the Storage Option uses external storage to communicate data.
+A [Measure Source](actors.html#measure-source) actor implementing the Storage Option uses external storage to communicate data.
 
 
 ##### Measure Consumer
 
-A [Measure Consumer](actors_and_transactions.html#measure-consumer) actor implementing the Storage Option uses external storage to communicate data.
+A [Measure Consumer](actors.html#measure-consumer) actor implementing the Storage Option uses external storage to communicate data.
 
 
 #### API Option
@@ -463,12 +473,12 @@ This option applies to the actors as described below.
 
 ##### Measure Source
 
-An [Measure Source](actors_and_transactions.html#measure-source) actor implementing the API option uses FHIR RESTful APIs to communicate data.
+An [Measure Source](actors.html#measure-source) actor implementing the API option uses FHIR RESTful APIs to communicate data.
 
 
 ##### Measure Consumer
 
-An [Measure Consumer](actors_and_transactions.html#measure-consumer) actor implementing the API option uses FHIR RESTful APIs to communicate data.
+An [Measure Consumer](actors.html#measure-consumer) actor implementing the API option uses FHIR RESTful APIs to communicate data.
 
 
 #### Push Option
@@ -485,13 +495,13 @@ This option applies to the actors as described below.
 ##### Measure Source
 
 A Measure Source implementing the Push Option periodically sends updates to a
-[Measure Consumer](actors_and_transactions.html#measure-consumer) using the [Produce Measure](actors_and_transactions.html#produce-measure) transaction.
+[Measure Consumer](actors.html#measure-consumer) using the [Produce Measure](transactions.html#produce-measure) transaction.
 
 
 ##### Measure Consumer
 
 An Measure Consumer implementing the Push Option periodically recieves updates from the
-[Measure Source](actors_and_transactions.html#measure-source) using the [Produce Measure](actors_and_transactions.html#produce-measure) transaction.
+[Measure Source](actors.html#measure-source) using the [Produce Measure](transactions.html#produce-measure) transaction.
 
 
 #### Pull Option
@@ -507,40 +517,39 @@ This option applies to the actors as described below.
 ##### Measure Source
 
 A Measure Source implementing the Pull Option is periodically queried by an
-[Measure Consumer](actors_and_transactions.html#measure-consumer) using the [Query Measure](actors_and_transactions.html#query-measure) transaction to enable collection of the current status.
+[Measure Consumer](actors.html#measure-consumer) using the [Query Measure](transactions.html#query-measure) transaction to enable collection of the current status.
 
 
 
 ##### Measure Consumer
 
 An Measure Consumer implementing the Pull Option periodically queries a
-[Measure Source](actors_and_transactions.html#measure-source) using the [Query Measure](actors_and_transactions.html#query-measure) transaction to enable collection of the current status.
+[Measure Source](actors.html#measure-source) using the [Query Measure](transactions.html#query-measure) transaction to enable collection of the current status.
             
 
 
-### Transaction Descriptions
-The transactions in this profile are summarized in the sections below.
+#### Questionnaire Option
 
-#### Query Measure
-
-The Query Measure transaction allows a Measure Consumer to
-periodically query about the availability of a resource from an Measure Source.
-
-
-For more details see the detailed [transaction description](transaction-1.html)
-
-#### Produce Measure
-
-The Produce Measure transaction allows an Measure Source to
-periodically report on availability of resources to a Measure Consumer.
+An actor implementing the Questionnaire Option supports the use of Questionnaire 
+and QuestionnaireResponse resources to determine the current status of selected 
+health delivery resources. Implementers of this option must also implement 
+the API option.
 
 
-For more details see the detailed [transaction description](transaction-2.html)
-
-#### Communicate Results
-
-The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
-or other systems to access resource availability data.
 
 
-For more details see the detailed [transaction description](transaction-3.html)
+This option applies to the actors as described below.
+
+##### Measure Source
+
+A Measure Source implementing the Questionnaire Option will interact
+using Questionnaire and QuestionnaireResponse resources to report on the current status
+of health delivery resources.
+
+
+##### Measure Consumer
+
+A Measure Consumer implementing the Questionnaire Option will interact
+using Questionnaire and QuestionnaireResponse resources to access the current status
+of health delivery resources.
+

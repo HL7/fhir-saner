@@ -15,9 +15,9 @@ This use case is supported by the following
 
 * Actors
 
-  - [Measure Source](actors_and_transactions.html#measure-source)
+  - [Measure Source](actors.html#measure-source)
 
-  - [Measure Consumer](actors_and_transactions.html#measure-consumer)
+  - [Measure Consumer](actors.html#measure-consumer)
 
 * Transactions
 
@@ -162,9 +162,9 @@ This use case is supported by the following
 
 * Actors
 
-  - [Measure Consumer](actors_and_transactions.html#measure-consumer)
+  - [Measure Consumer](actors.html#measure-consumer)
 
-  - [Measure Intermediary](actors_and_transactions.html#measure-intermediary)
+  - [Measure Intermediary](actors.html#measure-intermediary)
 
 * Transactions
 

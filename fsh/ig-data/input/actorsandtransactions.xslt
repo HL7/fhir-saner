@@ -2,12 +2,19 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:ig="http://ainq.com/ig-definition"
+    xmlns:s="https://github.com/FHIR/sushi"
     xmlns:html="http://www.w3.org/1999/xhtml"
     exclude-result-prefixes="xs"
     version="2.0">
 
     <xsl:include href="utility.xslt"/>
+
+    <!-- Include FSH Support Functions -->
+    <xsl:include href="fsh.xslt"/>
+
     <xsl:param name="org" select="/ig:profile/ig:domain/ig:org"/>
+    <xsl:variable name='base' select='/ig:profile/@base'/>
+
     <!-- Preserve spaces in markdown content elements -->
 
     <xsl:preserve-space elements="ig:description ig:overview"/>
@@ -19,9 +26,9 @@
     </xsl:template>
 
     <xsl:template name="actorsandtransactions" match="/" mode="actorsandtransactions">
-        <xsl:param name="dest" select="'pagecontent/3_actors_and_transactions.md'"/>
-        <xsl:result-document href="pagecontent/3_actors_and_transactions.md" method="text">
-This section defines the actors and transactions in this implementation guide.
+        <xsl:param name="dest" select="'pagecontent/3_actors.md'"/>
+        <xsl:result-document href="pagecontent/3_actors.md" method="text">
+This section defines the actors in this implementation guide.
 
 Figure <xsl:value-of select="/ig:profile/@chapter"/>.1-1 below shows the actors directly
 involved in the <xsl:value-of select="/ig:profile/@id"/>
@@ -40,6 +47,8 @@ Profile and the relevant transactions between them.&#xA;
 
             <xsl:call-template name="actor-options"/>
 
+        </xsl:result-document>
+        <xsl:result-document href="pagecontent/10_transactions.md" method="text">
             <xsl:call-template name="transaction-descriptions"/>
         </xsl:result-document>
         <xsl:apply-templates select="/ig:profile/ig:transaction" mode="transaction"/>
@@ -58,6 +67,9 @@ Profile and the relevant transactions between them.&#xA;
                 <xsl:result-document href="images-source/transaction-1-seq.txt" method="text">
                     <xsl:call-template name="transaction-seq"/>
                 </xsl:result-document>
+                <xsl:result-document href="../../Transaction-1.fsh" method="text">
+                    <xsl:call-template name="transaction-capability"/>
+                </xsl:result-document>
             </xsl:when>
             <xsl:when test="position()=2">
                 <xsl:result-document href="pagecontent/transaction-2.md" method="text">
@@ -68,6 +80,9 @@ Profile and the relevant transactions between them.&#xA;
                 </xsl:result-document>
                 <xsl:result-document href="images-source/transaction-2-seq.txt" method="text">
                     <xsl:call-template name="transaction-seq"/>
+                </xsl:result-document>
+                <xsl:result-document href="../../Transaction-2.fsh" method="text">
+                    <xsl:call-template name="transaction-capability"/>
                 </xsl:result-document>
             </xsl:when>
             <xsl:when test="position()=3">
@@ -80,6 +95,9 @@ Profile and the relevant transactions between them.&#xA;
                 <xsl:result-document href="images-source/transaction-3-seq.txt" method="text">
                     <xsl:call-template name="transaction-seq"/>
                 </xsl:result-document>
+                <xsl:result-document href="../../Transaction-3.fsh" method="text">
+                    <xsl:call-template name="transaction-capability"/>
+                </xsl:result-document>
             </xsl:when>
             <xsl:when test="position()=4">
                 <xsl:result-document href="pagecontent/transaction-4.md" method="text">
@@ -91,6 +109,9 @@ Profile and the relevant transactions between them.&#xA;
                 <xsl:result-document href="images-source/transaction-4-seq.txt" method="text">
                     <xsl:call-template name="transaction-seq"/>
                 </xsl:result-document>
+                <xsl:result-document href="../../Transaction-4.fsh" method="text">
+                    <xsl:call-template name="transaction-capability"/>
+                </xsl:result-document>
             </xsl:when>
             <xsl:when test="position()=5">
                 <xsl:result-document href="pagecontent/transaction-5.md" method="text">
@@ -101,6 +122,9 @@ Profile and the relevant transactions between them.&#xA;
                 </xsl:result-document>
                 <xsl:result-document href="images-source/transaction-5-seq.txt" method="text">
                     <xsl:call-template name="transaction-seq"/>
+                </xsl:result-document>
+                <xsl:result-document href="../../Transaction-5.fsh" method="text">
+                    <xsl:call-template name="transaction-capability"/>
                 </xsl:result-document>
             </xsl:when>
         </xsl:choose>
@@ -165,7 +189,7 @@ Profile and the relevant transactions between them.&#xA;
 &lt;thead>&lt;tr>&lt;th>Actor&lt;/th>&lt;th>Role&lt;/th>&lt;/tr>&lt;/thead>
 &lt;tbody></xsl:text>
         <xsl:for-each select="//ig:actor[@id = $actorids]">
-            <xsl:text>&lt;tr>&lt;td>&lt;a href="actors_and_transactions.html#</xsl:text>
+            <xsl:text>&lt;tr>&lt;td>&lt;a href="actors.html#</xsl:text>
             <xsl:value-of select="translate(lower-case(ig:name),' ', '-')"/>"><xsl:value-of select="ig:name"/>
             <xsl:text>&lt;/a>&lt;/td>
 &lt;td></xsl:text><xsl:value-of select='(ig:supports-tx|ig:requires-tx)[@transaction=$tx/@id]/ig:role'/>&lt;/td>
@@ -198,7 +222,7 @@ Profile and the relevant transactions between them.&#xA;
             <xsl:apply-templates select="ig:semantics/ig:description|ig:semantics/ig:overview"/>
 
             <xsl:if test='ig:semantics/ig:interaction/ig:group'>
-                <xsl:text>&#xA;The following are general requirements of the interaction.&#xA;</xsl:text>                    
+                <xsl:text>&#xA;The following are general requirements of the interaction.&#xA;</xsl:text>
                 <xsl:text>&#xA;&lt;ol>&#xA;</xsl:text>
                 <xsl:apply-templates select="ig:semantics/ig:interaction/ig:group"/>
                 <xsl:text>&#xA;&lt;/ol>&#xA;</xsl:text>
@@ -210,8 +234,16 @@ Profile and the relevant transactions between them.&#xA;
                 <xsl:apply-templates select="ig:description|ig:overview"/>
             </xsl:for-each>
         </xsl:for-each>
+
+### Conformance
+See the following CapabilityStatement resources for conformance requirements:
+
+        <xsl:call-template name='transaction-capability'>
+            <xsl:with-param name='isCapabilityLink' select='true()'/>
+        </xsl:call-template>
+
     </xsl:template>
-    
+
     <xsl:template match="ig:group">
         <xsl:text>&#xA;&lt;li>&#xA;</xsl:text>
         <xsl:value-of select="ig:name"/>
@@ -240,14 +272,17 @@ Profile and the relevant transactions between them.&#xA;
         </xsl:if>
         <xsl:text>The </xsl:text><xsl:value-of select='ancestor::ig:message[1]/@to'/>
         <xsl:text> </xsl:text><xsl:apply-templates select="@expect"/>
-        <xsl:text> demonstrate the FHIR </xsl:text><xsl:value-of select="@name"/><xsl:text> operation on </xsl:text> 
+        <xsl:text> demonstrate the FHIR </xsl:text><xsl:value-of select="@name"/><xsl:text> operation on </xsl:text>
         <xsl:apply-templates select="@resources"/>
         <xsl:if test='ig:parameter|ig:group'>
             <xsl:text> with the following parameters</xsl:text>
         </xsl:if>
         <xsl:text>.&#xA;</xsl:text>
-
+        <xsl:if test='ig:group'>
+        <xsl:text>&#xA;&lt;ol>&#xA;</xsl:text>
         <xsl:apply-templates select="ig:group"/>
+        <xsl:text>&#xA;&lt;/ol>&#xA;</xsl:text>
+        </xsl:if>
         <xsl:call-template name="parameters"/>
     </xsl:template>
     <xsl:template match="@resources">
@@ -261,9 +296,11 @@ Profile and the relevant transactions between them.&#xA;
         <xsl:if test='ig:parameter'>
 &#xA;&lt;table class='grid'>
 &#xA;&lt;thead>&lt;tr>
-&#xA;&lt;th>Parameter&lt;/th>&lt;th>Cardinality&lt;/th>&lt;th>Expectation&lt;/th>                   
+&#xA;&lt;th>Parameter&lt;/th>&lt;th>Cardinality&lt;/th>&lt;th>
+<xsl:value-of select='//ig:actor[@id = current()/ancestor::ig:message/@to]/ig:name'/> Expectation&lt;/th>&lt;th>
+<xsl:value-of select='//ig:actor[@id = current()/ancestor::ig:message/@from]/ig:name'/> Expectation&lt;/th>
 &#xA;&lt;/tr>&lt;/thead>
-&#xA;&lt;tbody>            
+&#xA;&lt;tbody>
 <xsl:for-each select="ig:parameter">
 &#xA;&lt;tr>
 &#xA;&lt;td>&#xA;
@@ -285,6 +322,9 @@ Profile and the relevant transactions between them.&#xA;
 &lt;/td>
 &lt;td>&#xA;
 <xsl:apply-templates select="@expect"/>
+&#xA;&lt;/td>
+&lt;td>&#xA;
+<xsl:apply-templates select="if (@client) then (@client) else (@expect)"/>
 &#xA;&lt;/td>
 &lt;/tr>
 </xsl:for-each>
@@ -606,10 +646,9 @@ between options when applicable are specified in notes.
     </xsl:template>
 
     <xsl:template name='transaction-descriptions'>
-        <xsl:text>&#xA;### Transaction Descriptions&#xA;</xsl:text>
         <xsl:text>The transactions in this profile are summarized in the sections below.&#xA;</xsl:text>
         <xsl:for-each select="/ig:profile/ig:transaction">
-            <xsl:text>&#xA;#### </xsl:text>
+            <xsl:text>&#xA;### </xsl:text>
             <xsl:value-of select="ig:name"/>
             <xsl:text>&#xA;</xsl:text>
             <xsl:apply-templates select="ig:description|ig:overview"/>
@@ -783,4 +822,261 @@ between options when applicable are specified in notes.
         None
         {endif}
     </xsl:template>
+
+    <xsl:function name='s:combine'>
+        <xsl:param name='values'/>
+        <xsl:choose>
+            <xsl:when test="count($values)=0"/>
+            <xsl:when test="count($values)=1">
+                <xsl:sequence select="$values[1], ''"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name='rest' select='s:combine($values[2 to last()])'/>
+                <xsl:for-each select="$rest">
+                    <xsl:sequence select="string-join(($values[1], .), ' '), ."/>
+                </xsl:for-each>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
+    <xsl:template name='transaction-capability'>
+        <xsl:param name='isCapabilityLink' select='false()'/>
+        <!-- identify the set of options -->
+        <xsl:variable name="options" select="distinct-values(tokenize(string-join(.//*/@options,' '),'\s+'))"/>
+        <xsl:variable name="trans" select="."/>
+        <xsl:variable name='combination' select='s:combine($options)'/>
+        <xsl:for-each select="$combination">
+            <xsl:sort select="."/>
+            <xsl:variable name='opts' select='tokenize(normalize-space(.), "\s+")'/>
+            <!-- Create the transaction content with this combination of options -->
+            <xsl:variable name='tx'>
+                <xsl:apply-templates select='$trans' mode="copy-with-options">
+                    <xsl:with-param name="options" select="$opts"/>
+                </xsl:apply-templates>
+            </xsl:variable>
+            <!-- If there is an operation to be performed -->
+            <xsl:variable name="options" select="normalize-space(.)"/>
+            <xsl:if test="$tx//ig:interaction">
+                <!-- Handle requirements of client first -->
+                <xsl:for-each select="$tx">
+                    <xsl:choose>
+                        <xsl:when test='$isCapabilityLink'>
+                            <xsl:call-template name='rest-resource-capability-link'>
+                                <xsl:with-param name="mode" select="'client'"/>
+                                <xsl:with-param name="options" select="$options"/>
+                            </xsl:call-template>
+                            <xsl:call-template name='rest-resource-capability-link'>
+                                <xsl:with-param name="mode" select="'server'"/>
+                                <xsl:with-param name="options" select="$options"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:call-template name='rest-resource-capability'>
+                                <xsl:with-param name="mode" select="'client'"/>
+                                <xsl:with-param name="options" select="$options"/>
+                            </xsl:call-template>
+                            <xsl:call-template name='rest-resource-capability'>
+                                <xsl:with-param name="mode" select="'server'"/>
+                                <xsl:with-param name="options" select="$options"/>
+                            </xsl:call-template>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+
+    <!-- Copy the content of an interaction or parameter or operation depending on the value
+        of it's options -->
+    <xsl:template match="ig:*" mode="copy-with-options">
+        <!-- The set of applicable options -->
+        <xsl:param name='options'/>
+        <xsl:choose>
+            <xsl:when test="not(self::ig:interaction | self::ig:operation) or
+                ((not(@options) or
+                  (count($options) != 0 and count(distinct-values(tokenize(@options,'\s+'))[.=$options])!=0)) and
+                  (not(self::ig:operation) or count(distinct-values(tokenize(string-join(ancestor-or-self::*/@options,' '),'\s+'))) = count($options))
+                )
+                ">
+                <xsl:copy>
+                    <xsl:copy-of select="@*"/>
+                    <xsl:apply-templates select="ig:*|text()" mode="copy-with-options">
+                        <xsl:with-param name="options" select="$options"/>
+                    </xsl:apply-templates>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:when test='self::ig:operation'>
+                <!-- xsl:message>Got Here <xsl:value-of select="string-join($options,', ')"/></xsl:message>
+                <xsl:message>!</xsl:message -->
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:function name="s:expect">
+        <xsl:param name='f'/>
+        <xsl:param name='e'/>
+        <xsl:value-of select="s:string(($f,'.extension.url'),'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation')"/>
+        <xsl:value-of select="s:code(($f,'.extension.valueCode'),upper-case($e),'')"/>
+    </xsl:function>
+    <xsl:function name="s:client">
+        <xsl:param name="mode"/>
+        <xsl:param name="op"/>
+        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op/@client) else (if ($op/@min = 0) then 'may' else $op/@expect)) else ($op/@expect)"/>
+    </xsl:function>
+    <xsl:function name="s:combo">
+        <xsl:param name="f"/>
+        <xsl:param name="r"/>
+        <xsl:param name="v"/>
+        <xsl:value-of select="s:string(($f,'.url'),$r)"/>
+        <xsl:value-of select="s:string(($f,'.valueString'),$v)"/>
+    </xsl:function>
+    <xsl:function name='s:optionlist'>
+        <xsl:param name='options'/>
+        <xsl:for-each select='tokenize($options,"\s+")'>
+            <xsl:value-of select='$base/..//ig:option[current()=@id]/ig:name'/>
+            <xsl:choose>
+                <xsl:when test='position()=last()'>
+                    <xsl:text>.</xsl:text>
+                </xsl:when>
+                <xsl:when test='last()=2 and position() = 1'>
+                    <xsl:text> and the </xsl:text>
+                </xsl:when>
+                <xsl:when test='position()+1=last()'>
+                    <xsl:text>, and the </xsl:text>
+                </xsl:when>
+                <xsl:otherwise>, the </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:function>
+    <xsl:template name="rest-resource-capability">
+        <xsl:param name="mode"/><!-- client or server -->
+        <xsl:param name="options"/><!-- Applicable options -->
+        <xsl:variable name='optionset' select='if (string-length($options)=0) then "" else concat("-",translate(normalize-space($options)," ","-"))'/>
+        <xsl:variable name='optionlist' select='string-join(s:optionlist($options))'/>
+        <xsl:variable name='tx' select='ancestor-or-self::ig:transaction|.//ig:transaction'/>
+
+        <xsl:for-each-group select=".//ig:message" group-by="if ($mode='client') then (@from) else (@to)">
+            <xsl:for-each select="current-group()">
+                <xsl:variable name="actor" select='$base/..//ig:actor[@id=current-grouping-key()]'/>
+
+                <xsl:value-of select="s:instance((current-grouping-key(), '-', $tx/@id,$optionset),'CapabilityStatement',('Capability Statement of ', $actor/ig:name,' for ', $tx/ig:name), 'SanerDefinitionContent', null)"/>
+                <xsl:value-of select="s:string('date',current-dateTime())"/>
+                <xsl:value-of select="s:code('kind', 'requirements', null)"/>
+                <xsl:choose>
+                    <xsl:when test='not($options)'>
+                        <xsl:value-of select="s:string('description',
+                            concat('This CapabilityStatement defines the requirements for the ', $actor/ig:name, ' implementing the ', $tx/ig:name, ' transaction.'))"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="s:string('description',
+                            concat('This CapabilityStatement defines the additional requirements for the ', $actor/ig:name, ' implementing the ', $tx/ig:name, ' transaction with the ', $optionlist))"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:value-of select="s:code('format[0]', 'xml', null)"/>
+                <!-- xsl:value-of select="s:expect(('format[0]'), if ($mode='client') then ('may') else ('shall'))"/ -->
+                <xsl:value-of select="s:code('format[1]', 'json', null)"/>
+                <!-- xsl:value-of select="s:expect(('format[1]'), if ($mode='client') then ('may') else ('shall'))"/ -->
+                <xsl:value-of select="s:code('fhirVersion', '4.0.1', null)"/>
+
+                <xsl:value-of select="s:code('rest.mode', $mode, null)"/>
+                <xsl:for-each select="distinct-values(tokenize(string-join(.//ig:operation/@resources,' '),'\s+'))">
+                    <xsl:variable name="r" select="."/>
+                    <xsl:variable name='res' select="concat('rest.resource[',position()-1,']')"/>
+                    <xsl:variable name='operations' select='$tx//ig:message[
+                        ($mode="client" and @from=current-grouping-key()) or
+                        ($mode="server" and @to=current-grouping-key())
+                        ]//ig:operation[tokenize(@resources,"\s+")=$r]'/>
+                    <xsl:variable name='content'  select='$tx//ig:result//ig:content/@profiles'/>
+
+                    <xsl:value-of select="s:code(($res,'.type'), $r, '')"/>
+                    <!-- xsl:value-of select="s:expect(($res), s:client($mode, $operations[1]))"/-->
+                    <xsl:for-each select="tokenize($content,'\s+')[ends-with(lower-case(.), lower-case($r))]">
+                        <xsl:variable name='url' select="if (contains(.,':')) then . else concat($base,'/StructureDefinition/',.)"/>
+                        <xsl:value-of select="s:string(($res,'.supportedProfile[',position()-1,']'),$url)"/>
+                    </xsl:for-each>
+                    <!-- Generate interactions -->
+                    <xsl:for-each select="distinct-values($operations/@name)">
+                        <xsl:variable name='op' select="$operations[@name=current()]"/>
+                        <xsl:value-of select="s:code(($res,'.interaction[',position()-1,'].code'),if (. = 'search') then 'search-type' else .,'')"/>
+                        <xsl:value-of select="s:expect(($res,'.interaction[',position()-1,']'), s:client($mode, $op[1]))"/>
+                    </xsl:for-each>
+                    <!-- Generate search parameters -->
+                    <xsl:for-each select='distinct-values($operations[@name="search"]//ig:parameter/@name)'>
+                        <xsl:variable name='op' select="$operations[@name='search']//ig:parameter[@name=current()]"/>
+                        <xsl:value-of select="s:string(($res,'.searchParam[',position()-1,'].name'),.)"/>
+                        <xsl:value-of select="s:code(($res,'.searchParam[',position()-1,'].type'),$op[1]/@type,'')"/>
+                        <xsl:value-of select="s:expect(($res,'.searchParam[',position()-1,']'), s:client($mode, $op))"/>
+                    </xsl:for-each>
+                    <!-- Check for _include values -->
+                    <xsl:for-each select='tokenize($operations[@name="search"]/ancestor::ig:interaction//ig:parameter[@name="_include"]/@values, "\s+")'>
+                        <xsl:variable name="op" select='$operations[@name="search"]/ancestor::ig:interaction//ig:parameter[@name="_include"]'/>
+                        <xsl:value-of select="s:string(($res,'.searchInclude[',position()-1,']'),.)"/>
+                        <xsl:value-of select="s:expect(($res,'.searchInclude[',position()-1,']'), s:client($mode, $op))"/>
+                    </xsl:for-each>
+                    <!-- Generate search operations based on groups -->
+                    <xsl:for-each select='$operations[@name="search"]/ig:group'>
+                        <!--
+                            Position is the number of preceding groups having
+                                ig:parameter[@min!=0] +
+                                number of parameters in groups not having ig:parameter[@min!=0]
+                        -->
+                        <xsl:variable name='pos' select='count(preceding-sibling::ig:group[ig:parameter/@min != 0]) +
+                            count(preceding-sibling::ig:group[not(ig:parameter/@min != 0)]/ig:parameter)'/>
+                        <xsl:variable name='ext' select='concat($res,".extension[", $pos, "]")'/>
+                        <xsl:choose>
+                            <xsl:when test='count(ig:parameter[@min!=0])=0'>
+                                <xsl:for-each select='ig:parameter'>
+                                    <xsl:value-of select="s:string(($ext,'.url'),
+                                        'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination')"/>
+                                    <xsl:value-of select="s:combo(($ext,'.extension[0]'),'required', @name)"/>
+                                    <xsl:for-each select="following-sibling::ig:parameter[position()!=1]">
+                                        <xsl:value-of select="s:combo(($ext,'.extension[',position(),']'), 'optional', @name)"/>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="s:string(($ext,'.url'),
+                                    'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination')"/>
+                                <xsl:for-each select="ig:parameter[@min!=0]">
+                                    <xsl:value-of select="s:combo(($ext,'.extension[',position()-1,']'),'required',@name)"/>
+                                </xsl:for-each>
+                                <xsl:variable name='offset' select="count(ig:parameter[@min!=0])-1"/>
+                                <xsl:for-each select="ig:parameter[@min=0]">
+                                    <xsl:value-of select="s:combo(($ext,'.extension[',position() + $offset,']'), 'optional', @name)"/>
+                                </xsl:for-each>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:for-each-group>
+    </xsl:template>
+    <xsl:template name="rest-resource-capability-link">
+        <xsl:param name="mode"/><!-- client or server -->
+        <xsl:param name="options"/><!-- Applicable options -->
+        <xsl:variable name='optionset' select='if (string-length($options)=0) then "" else concat("-",translate(normalize-space($options)," ","-"))'/>
+        <xsl:variable name='optionlist' select='string-join(s:optionlist($options))'/>
+        <xsl:variable name='tx' select='ancestor-or-self::ig:transaction|.//ig:transaction'/>
+
+        <xsl:for-each-group select=".//ig:message" group-by="if ($mode='client') then (@from) else (@to)">
+            <xsl:for-each select="current-group()">
+                <xsl:variable name="actor" select='$base/..//ig:actor[@id=current-grouping-key()]'/>
+                <xsl:variable name="capName" select="concat(current-grouping-key(), '-', $tx/@id,$optionset)"/>
+                <xsl:text>&#xA;* [CapabilityStatement-</xsl:text>
+                <xsl:value-of select='$capName'/>
+                <xsl:text>](CapabilityStatement-</xsl:text>
+                <xsl:value-of select='$capName'/>
+                <xsl:text>.html) defines the </xsl:text>
+                <xsl:choose>
+                    <xsl:when test='not($options)'>
+                        <xsl:value-of
+                            select="concat('requirements for the ', $actor/ig:name, ' implementing the ', $tx/ig:name, ' transaction.')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of
+                            select="concat('additional requirements for the ', $actor/ig:name, ' implementing the ', $tx/ig:name, ' transaction with the ', $optionlist)"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:for-each-group>
+     </xsl:template>
 </xsl:stylesheet>

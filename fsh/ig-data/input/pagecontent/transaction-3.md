@@ -15,7 +15,7 @@ or other systems to access resource availability data.
 <table border='1' borderspacing='0'>
 <caption><b>Table 2.3-1: Actor Roles</b></caption>
 <thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors_and_transactions.html#measure-consumer">Measure Consumer</a></td>
+<tbody><tr><td><a href="actors.html#measure-consumer">Measure Consumer</a></td>
 <td>Display or transmits reports using availability data</td>
 </tr>
         
@@ -61,3 +61,9 @@ This requirement can be met by a Measure Consumer that consumes and displays dat
 ##### Message Semantics
 
 ##### Expected Actions
+
+
+### Conformance
+See the following CapabilityStatement resources for conformance requirements:
+
+        

@@ -9,13 +9,14 @@
 	   <li><a href="architecture.html">Architecture</a></li>
 	   <li><a href="security_considerations.html">Security Considerations</a></li>
 	   <li><a href="use_cases.html">Use Cases</a></li>
-	   <li><a href="actors_and_transactions.html">Actors and Transactions</a></li>
+	   <li><a href="actors.html">Actors</a></li>
 	   <li><a href="measures.html">Measures used for Reporting</a></li>
     </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions<b class="caret"></b></a>
     <ul class="dropdown-menu">
+      <li><a href='transactions.html'>Transaction Overview</a></li>
       <li><a href="transaction-1.html">Query Availability</a></li>
       <li><a href="transaction-2.html">Update Availability</a></li>
       <li><a href="transaction-3.html">Report Availability</a></li>

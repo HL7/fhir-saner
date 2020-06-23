@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                url="http://hl7.org/fhir/us/saner"
-               ciUrl="http://hl7.org/fhir/us/saner"
+               ciUrl="http://build.fhir.org/ig/example/example-ig"
                defaultWorkgroup=""
                defaultVersion="current"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
-               ballotUrl="http://hl7.org/fhir/us/saner">
-   <version code="current" url="http://hl7.org/fhir/us/saner"/>
-   <version code="0.1.0" url="http://hl7.org/fhir/us/saner"/>
+               ballotUrl="http://example.org/fhir/STU1">
+   <version code="current" url="http://build.fhir.org/ig/example/example-ig"/>
+   <version code="0.0.1" url="http://example.org/fhir/STU1"/>
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
@@ -153,7 +153,7 @@
    <artifact name="Resource Fields for Location"
              key="CodeSystem-ResourceFieldsForLocation"
              id="CodeSystem/ResourceFieldsForLocation"/>
-   <artifact name="CDCHealthcareSupplyPathway"
+   <artifact name="CDC Healthcare Supply Pathway"
              key="Measure-CDCHealthcareSupplyPathway"
              id="Measure/CDCHealthcareSupplyPathway"/>
    <artifact name="CDCHealthcareWorkerStaffingPathway"
@@ -306,12 +306,30 @@
    <artifact name="HAvBED2 to FHIR Concept Map"
              key="ConceptMap-HAvBED2toFHIR"
              id="ConceptMap/HAvBED2toFHIR"/>
+   <artifact name="MeasureConsumer-PULL-TX-API"
+             key="CapabilityStatement-MeasureConsumer-PULL-TX-API"
+             id="CapabilityStatement/MeasureConsumer-PULL-TX-API"/>
+   <artifact name="MeasureConsumer-PULL-TX-API-Questionnaire"
+             key="CapabilityStatement-MeasureConsumer-PULL-TX-API-Questionnaire"
+             id="CapabilityStatement/MeasureConsumer-PULL-TX-API-Questionnaire"/>
+   <artifact name="MeasureConsumer-PUSH-TX-API"
+             key="CapabilityStatement-MeasureConsumer-PUSH-TX-API"
+             id="CapabilityStatement/MeasureConsumer-PUSH-TX-API"/>
    <artifact name="Measure Consumer - Pull Option (Client)"
              key="CapabilityStatement-MeasureConsumerPull"
              id="CapabilityStatement/MeasureConsumerPull"/>
    <artifact name="Measure Consumer - Push Option (Server)"
              key="CapabilityStatement-MeasureConsumerPush"
              id="CapabilityStatement/MeasureConsumerPush"/>
+   <artifact name="MeasureSource-PULL-TX-API"
+             key="CapabilityStatement-MeasureSource-PULL-TX-API"
+             id="CapabilityStatement/MeasureSource-PULL-TX-API"/>
+   <artifact name="MeasureSource-PULL-TX-API-Questionnaire"
+             key="CapabilityStatement-MeasureSource-PULL-TX-API-Questionnaire"
+             id="CapabilityStatement/MeasureSource-PULL-TX-API-Questionnaire"/>
+   <artifact name="MeasureSource-PUSH-TX-API"
+             key="CapabilityStatement-MeasureSource-PUSH-TX-API"
+             id="CapabilityStatement/MeasureSource-PUSH-TX-API"/>
    <artifact name="Measure Source - Pull Option (Server)"
              key="CapabilityStatement-MeasureSourcePull"
              id="CapabilityStatement/MeasureSourcePull"/>
@@ -1046,7 +1064,7 @@
    <page name="Home" key="index"/>
    <page name="Overview" key="overview"/>
    <page name="Use Cases" key="use_cases"/>
-   <page name="Actors and Transactions" key="actors_and_transactions"/>
+   <page name="Actors" key="actors"/>
    <page name="Security Considerations" key="security_considerations"/>
    <page name="Technology Environment" key="technology_environment"/>
    <page name="Architecture" key="architecture"/>
@@ -1055,8 +1073,8 @@
    <page name="Vocabulary" key="vocabulary"/>
    <page name="Transactions" key="transactions"/>
    <page name="Profiles" key="profiles"/>
+   <page name="Test Plan" key="test_plan"/>
    <page name="Examples" key="examples"/>
-   <page name="Testplan" key="testplan"/>
    <page name="Transaction 1" key="transaction-1"/>
    <page name="Transaction 2" key="transaction-2"/>
    <page name="Transaction 3" key="transaction-3"/>

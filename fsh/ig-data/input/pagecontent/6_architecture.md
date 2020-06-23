@@ -24,7 +24,7 @@ That solution could be as simple as a file system, or more complex (e.g., using
 cloud-based storage), and could involve different protocols, including S3, Azure Blob
 Storage, SFTP, or FHIR RESTful APIs and a FHIR Server.
 
-In this guide, the Reporting component is implemented by the [Measure Source](actors_and_transactions.html#measure-source) actor.
+In this guide, the Reporting component is implemented by the [Measure Source](actors.html#measure-source) actor.
 
 ### Presentation
 The presentation component selects some subset of available data and presents it to
@@ -33,13 +33,13 @@ information.  These components may generate maps showing hot spots based on some
 of the measured data, charts and annotations of recent trends (e.g., current values
 plus projections over time), or other visualizations.
 
-In this guide, the Presentation component is implemented by the [Measure Consumer](actors_and_transactions.html#measure-consumer) actor.
+In this guide, the Presentation component is implemented by the [Measure Consumer](actors.html#measure-consumer) actor.
 
 ### Adapters
 Adapters bridge systems lacking certain capabilities with other systems requiring
 those capabilities, much like a ground adapter does with two pronged electrical outlet.
 
-In this guide, the Adapter component is implemented by the [Measure Intermediary](actors_and_transactions.html#measure-intermediary) actor.
+In this guide, the Adapter component is implemented by the [Measure Intermediary](actors.html#measure-intermediary) actor.
 
 ### FHIR Server
 Several off the shelf FHIR Server components exist which can be stood up in a data center

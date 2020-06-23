@@ -1,4 +1,4 @@
-<profile xmlns="http://ainq.com/ig-definition" id="SANER" chapter='1' codingsystems="SanerBedType" valuesets="BedLocationOperationalStatus BedProperty BedType">
+<profile xmlns="http://ainq.com/ig-definition" id="SANER" chapter='1' base='http://hl7.org/fhir/us/saner' codingsystems="SanerBedType" valuesets="BedLocationOperationalStatus BedProperty BedType">
 	<domain id="AI">
 	    <org>Audacious Inquiry</org>
 	    <name>Situational Awareness for Novel Epidemic Response</name>
@@ -67,6 +67,24 @@ describing the current status of selected health delivery resources.</descriptio
             <description>An Measure Consumer implementing the Pull Option periodically queries a
 <ref actor='MeasureSource'/> using the <ref tx='PULL-TX'/> transaction to enable collection of the current status.
             </description>
+        </participant>
+    </option>
+    <option id="Questionnaire">
+        <name>Questionnaire Option</name>
+        <description>An actor implementing the Questionnaire Option supports the use of Questionnaire 
+and QuestionnaireResponse resources to determine the current status of selected 
+health delivery resources. Implementers of this option must also implement 
+the API option.</description>
+        <overview/>
+        <participant actor='MeasureSource'>
+            <description>A Measure Source implementing the Questionnaire Option will interact
+using Questionnaire and QuestionnaireResponse resources to report on the current status
+of health delivery resources.</description>
+        </participant>
+        <participant actor='MeasureConsumer'>
+            <description>A Measure Consumer implementing the Questionnaire Option will interact
+using Questionnaire and QuestionnaireResponse resources to access the current status
+of health delivery resources.</description>
         </participant>
     </option>
     <!-- standard is repeatable -->
@@ -369,6 +387,9 @@ A multi-level data aggregation and reporting hierarchy using Measure Intermediar
         <name>Query Measure</name>
         <description>The Query Measure transaction allows a Measure Consumer to
 periodically query about the availability of a resource from an Measure Source.</description>
+        <overview>This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
+resources from a MeasureSource actor.  It defines the query parameters that the actors must and should support for search,
+and the read operations that must be supported.</overview>
         <!-- like steps, messages can nest to support activation lines -->
         <message from="MeasureConsumer" to="MeasureSource">
             <name>Search Request</name>
@@ -383,32 +404,47 @@ available resources.
 
 If the Storage Option is supported, the Measure Consumer will read resources from external storage
 using appropriate operations for the storage in use (e.g., SFTP/S3/Blob/File).</description>
-                <overview></overview>
                 <interaction protocol='fhir' options='API'>
                     <!-- Common parameter requirements -->
                     <!-- Servers must support standard values for format, clients may use Accept header or _format -->
                     <group>
-                       <name>Formats</name>
-                       <description>All servers must support the _format parameter for any read or search and the standard values
+                        <name>Server Business Rules</name>
+                        <description>A server may implement business rules that restrict
+the combinations of parmeters that may be used in a search in order to ensure appropriate
+performance.  For example, when searching for a MeasureReport, a server may require the
+presence of the measure or _id parameters, and may require other parameters to restrict
+the size of the query.  For example, it may require the use of a location parameter, or
+a date range for the measure period, in order to limit the results that may be returned.
+
+A client can expect that a server will return results on a query for a MeasureReport
+given a measure and a date range.</description>
+                    </group>
+                    <group>
+                        <name>Formats</name>
+                        <description>All servers must support the _format parameter for any read or search and the standard values
 defined by FHIR for JSON and XML output. This value must override the Accept: header when present in an exchange.
 Servers must also support the Accept: header, and shall support any value in Accept: that can be given to _format
 for consistency. Servers are also free to support other output formats (e.g. turtle as defined in the base FHIR
 specifications, or other formats such as CSV which might be easier for clients to present or use). Servers
 should support other commonly used expressions representing JSON or XML outputs without complaint, including
 those specified in prior releases (e.g., the DSTU2 application/xml+fhir or application/json+fhir types that
-have since changed in R4). \[Ed. Note: We may want to consider requiring support for simplified forms of json and xml.
-Most servers handle this well, and it's less for a developer to remember or mess up.  If you've spent a day
-tracking down a problem with applicatoin/xml, you'll understand].
-                       </description>
+have since changed in R4).
+                        </description>
                         <parameter name='_format' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shall'/>
                         <!-- Servers should support all values for format, clients may use Accept header or _format -->
                         <parameter name='_format' min='0' max='1'
                             values='xml json text/xml application/json application/xml application/xml+fhir application/json+fhir'
-                            expect='should'/>
+                            expect='should' client='should-not'/>
                         <parameter name='Accept:' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shall'/>
                         <parameter name='Accept:' min='0' max='1'
                             values='xml json text/xml application/json application/xml application/xml+fhir application/json+fhir'
-                            expect='should'/>
+                            expect='should' client='should-not'/>
+                    </group>
+                    <group>
+                        <description>The server must support the _count parameter for queries. Servers should use a default
+value for _count if no value is provided to avoid server overloading.  This guide recommends a default value of 100 based on
+existing implementation experience.</description>
+                        <parameter name='_count' min='0' max='1' expect='shall'/>
                     </group>
                     <group>
                         <name>Include Support</name>
@@ -421,7 +457,7 @@ Systems that support _include gernally handle _include=*, in fact, in some ways 
 than more selective _include operations.  Recursive includes can be a source of server loading issues, as
 an incorrectly implemented include with recursive includes could wind up retrieving far more data than
 the client expected.  Thus, these are not recommended.</overview>
-                        <parameter name='_include' min='0' max='1' values='*' expect='shall'/>
+                        <parameter name='_include' min='0' max='1' values='*' type='string' expect='shall'/>
                         <parameter name='_include:iterate' expect='should-not'/>
                     </group>
 
@@ -440,34 +476,114 @@ these must all be able to be read.</description>
                      </operation>
                      <operation name='search' resources='Location MeasureReport Measure Organization' expect='shall'>
                         <name>Search by _id on Required Resources</name>
-                        <description>A client must be able to read individual resources that are returned or referenced within resources
+                        <group>
+                            <name>Search by _id</name>
+                            <description>A client must be able to read individual resources that are returned or referenced within resources
 returned by a query.  Client systems may save resource references for future use, retrieving them later as
 needed.  To reduce overhead, a client system may also wish to retrieve the resources referenced by the
-selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*
-                        </description>
-                        <overview>This guide does not further specify specify resource includes.  Systems that support _include
-generally handle _include=*, in fact, in some ways it is easier to implement than more selective _include
-operations.  Recursive includes can be a source of server loading issues, as an incorrectly implemented
-include with recursive includes could wind up retrieving far more data than the client expected.  Thus,
-these are not recommended.</overview>
-                        <group>
-                            <name>_id</name>
-                            <parameter name='_id' min='1' max='*' expect='shall'/>
+selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*</description>
+                            <parameter name='_id' min='1' max='*' type='token' expect='shall'/>
                         </group>
                      </operation>
-                     <operation name='read' resources='Questionnaire QuestionnaireResponse' expect='should'>
-                        <name>Read on Recommended Resources</name>
+                     <operation name='search' resources='Location Organization' expect='shall'>
+                        <name>Search by name or identifier on Referenced Resources</name>
+                        <group>
+                            <name>Search by name or identifier</name>
+                            <description>A client must be able to read resources that are referenced within resources
+returned by a query by name or identifier.</description>
+                            <parameter name='name' min='0' max='*' type='string' expect='shall'/>
+                            <parameter name='identifier' min='0' max='*' type='token' expect='shall'/>
+                        </group>
+                    </operation>
+                     <operation id='search-for-measure-definition' name='search' resources='Measure' expect='shall'>
+                        <name>Search on Definition Resources</name>
+                        <description>A client system must be able to retrieve the data they need, be it about beds,
+ventilators, PPE, or other measure.</description>
+                            <overview>Measures can be identified by codes used in the measure,
+or by the measure title, its canonical URL, or by something easier for a user to recall, such
+as the text of the measure or a code within it.  Multiple measures may report on the same kind of thing (e.g., beds),
+so retrieval by code, or by code within a value set should be supported.  There may be
+multiple measures which identify the kind of thing that the client system is interested in
+learning more about.  Search by code should be met by implementing the &lt;a href='SearchParameter-SearchParameter-code.html'>SearchParameter-code&lt;/a>
+search parameter.
+
+However, search by code is not supported by default by many off-the-shelf systems,
+and so this is not a strict requirement for implementers.  Also, chained searching
+is also not always readily available, and so search by measure title is also not a hard requirement.
+At the very least, a server must be able to search by measure, and a client must also to ensure
+the greatest interoperability between systems with differing capabilities.</overview>
+
+                        <group>
+                            <name>Search by Text or Code</name>
+                            <description>A client system should be able to search for Measure or other definition resources
+associated with by text within the definition.  This requirement can be met through support of the
+&lt;a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters&lt;/a>, or by implementation
+of the &lt;a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter&lt;/a>.</description>
+                            <parameter name='_text' min='0' max='*' type='string' expect='should'/>
+                            <parameter name='_content' min='0' max='*' type='string' expect='should'/>
+                            <parameter name='definition-text' min='0' type='string' max='*' expect='should'/>
+                            <parameter name='code' min='0' max='*' type='token' expect='should'/>
+                            <parameter name='code:in' min='0' max='*' type='token' expect='should'/>
+                        </group>
+                     </operation>
+                     <operation name='read' resources='Questionnaire QuestionnaireResponse' expect='shall' options='Questionnaire'>
+                        <name>Read on Questionnaire and QuestionnaireResponse Resources</name>
                         <description>Questionnaire and QuestionnaireResponse are being considered because some data is being requested
 via forms that better fit a QuestionnaireResponse approach (e.g., free form answers).</description>
                      </operation>
-                     <operation name='search' resources="Questionnaire QuestionnaireResponse" expect='should'>
-                        <name>Search by _id on Recommended Resources</name>
+                     <operation name='search' resources="Questionnaire QuestionnaireResponse" expect='shall' options='Questionnaire'>
+                        <name>Search by _id</name>
                         <description>A client must be able to read individual resources returned in a query</description>
                         <overview>We are still experimenting with QuestionnaireResponse, but expect to adopt it.</overview>
                         <group>
-                            <name>_id</name>
-	                        <parameter name='_id' min='1' max='*' expect='shall'/>
+                            <name>Search by _id</name>
+	                        <parameter name='_id' min='1' max='*' type='token' expect='shall'/>
                         </group>
+                        <group>
+                            <name>Search by Text or Code</name>
+                            <description>A client system should be able to search for Questionnaire or other definition resources
+associated with by text within the definition.  This requirement can be met through support of the
+&lt;a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters&lt;/a>, or by implementation
+of the &lt;a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter&lt;/a>.</description>
+                            <parameter name='_text' min='0' max='*' type='string' expect='should'/>
+                            <parameter name='_content' min='0' max='*' type='string' expect='should'/>
+                            <parameter name='definition-text' min='0' type='string' max='*' expect='should'/>
+                            <parameter name='code' min='0' max='*' type='token' expect='should'/>
+                            <parameter name='code:in' min='0' max='*' type='token' expect='should'/>
+                        </group>
+                     </operation>
+                     <operation name='search' resources='QuestionnaireResponse' expect='shall' client='shall' options="Questionnaire">
+                         <name>Search by Date and Questionnaire</name>
+                         <description>A client must be able to search for responses by Questionnaire for relevant dates,
+e.g., the date of _lastUpdate of a previously retrieved resource to see if it has changed (e.g., in cases
+where data needs to be refreshed), the date it was reported, or the period it applies to.
+
+In order to enable queries within a geographic region, search must allow for a client to at least enumerate locations
+by a well defined identifier (e.g., an NPI, a HIFLD location identifier, or some other readily and publicly available
+facility identifier.)  This enables systems to use publicly available data to identify facilities within a
+particular region.
+
+Further geographic search can be enabled by chaining to location, and using the near search operation location,
+which allows search to be performed based on geographic coordinates and a distance measure to specify a search
+within a region. This enables systems without extensive geographic capabilities to come close in identifying a
+facility within a particular distance (some implementations e.g., HAPI, use a bounding box, rather than a circle,
+because it increases search efficiency).</description>
+                             <overview>All date searches
+must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
+to be supported because server support for these is not commonly available, nor implemented in readily reproducable
+fashions (the definition of an approximate date can have different meanings for different servers).  Simple eq, le, lt, ge,
+and gt should be sufficient to specify date ranges.</overview>
+                         <group>
+                             <parameter name='_lastUpdated' comp='eq lt gt ge le' type='date' min='0' max='2' expect='shall'/>
+                             <parameter name='authored' comp='eq lt gt ge le' min='0' max='2'  type='date' expect='shall'/>
+                             <parameter name='questionnaire' min='1' max='*' type='uri' expect='shall'/>
+                             <parameter name='questionnaire.title' min='0' max='*' type='string' expect='should'/>
+                             <parameter name='subject' min='0' max='*' type='reference' expect='shall'/>
+                             <parameter name='subject:identifier' min='0' max='*' type='reference' expect='shall'/>
+                             <parameter name='subject:Location.near' min='0' max='1' type='special' expect='should'/>
+                             <parameter name='author' min='0' max='*' type='reference' expect='shall'/>
+                             <parameter name='author:identifier' min='0' max='*' type='reference' expect='shall'/>
+                         </group>
                      </operation>
                      <operation name='search' resources='MeasureReport' expect='shall' client='shall'>
                         <name>Search on Required Resources</name>
@@ -485,62 +601,38 @@ via forms that better fit a QuestionnaireResponse approach (e.g., free form answ
                              expect - shall|should|should-not
                         -->
 
-                        <!-- A client may search using _id, a server must support this search -->
                         <group>
-                            <name>Search by Date</name>
-                            <description>A client must be able to search by relevant dates, e.g., the date of _lastUpdate of
-a previously retrieved resource to see if it has changed (e.g., in cases where data needs
-to be refreshed), the date it was reported, or the period it applies to.  All date searches
-must allow a range to be specified, but need not allow more than one range. Approximate ranges
-are not required to be supported because server support for these is not commonly available,
-nor implemented in readily reproducable fashions (the definition of an approximate date can
-have different meanings for different servers).  Simple eq, le, lt, ge, and gt should be sufficient
-to specify date ranges.</description>
-                            <parameter name='_lastUpdated' comp='eq lt gt ge le' min='0' max='2' expect='shall'/>
-                            <parameter name='date' comp='eq lt gt ge le' min='0' max='2'  expect='shall'/>
-                            <parameter name='period' comp='eq lt gt ge le' min='0' max='2'  expect='shall'/>
-                        </group>
+                            <name>Search by Date and Measure</name>
+                            <description>A client must be able to search by Measure for relevant dates,
+e.g., the date of _lastUpdate of a previously retrieved resource to see if it has changed (e.g., in cases
+where data needs to be refreshed), the date it was reported, or the period it applies to.
 
-                        <group>
-                            <name>Search by what was Measured</name>
-                            <description>A client system must be able to retrieve the data they need, be it about beds,
-ventilators, PPE, or other measure.  The data can be identified by codes used in the measure,
-or by the measure itself, by canonical URL, or by something easier for a user to recall, such
-as the title of the measure or code.  Multiple measures may report on the same kind of thing (e.g., beds),
-so retrieval by code, or by code within a value set should be supported.  There may also be
-multiple measures which identify the kind of thing that the client system is interested in
-learning more about.</description>
-                            <overview>However, search by code is not supported by default by many off-the-shelf systems,
-and so this is not at present, a hard requirement of implementers.  Also, chained searching
-is also not always readily available, and so search by measure title is also not a hard requirement.
-At the very least, a server must be able to search by measure, and a client must also to ensure
-the greatest interoperability between systems with differing capabilities.</overview>
-                            <parameter name='code' min='0' max='*' expect='should'/>
-                            <parameter name='code:in' min='0' max='*' expect='should'/>
-                            <parameter name='measure' min='0' max='*' expect='shall'/>
-                            <parameter name='measure.title' min='0' max='*' expect='should'/>
-                        </group>
+In order to enable querys within a geographic region, search must allow for a client to at least enumerate locations
+by a well defined identifier (e.g., an NPI, a HIFLD location identifier, or some other readily and publicly available
+facility identifier.)  This enables systems to use publicly available data to identify facilities within a
+particular region.
 
-                        <group>
-                            <name>Search by Geography</name>
-                            <description>In order to enable querys within a geographic region, search must allow for a client
-to at least enumerate locations by a well defined identifier (e.g., an NPI, a HIFLD location
-identifier, or some other readily and publicly available facility identifier.)  This enables systems
-to use publicly available data to identify facilities within a particular region.
-                            </description>
-                            <overview>Further geographic search can be enabled by chaining to location, and using the near
-search operation location, which allows search to be performed based on geographic coordinates and a distance
-measure to specify a search within a region. This enables systems without extensive geographic capabilities
-to come close in identifying a facility within a particular distance (some implementations e.g., HAPI, use a
-bounding box, rather than a circle, because it increases search efficiency).
-                            </overview>
-                            <parameter name='location' min='0' max='*' expect='shall'/>
-                            <parameter name='location:identifier' min='0' max='*' expect='shall'/>
-                            <parameter name='location.near' min='0' max='1' expect='should'/>
-                            <parameter name='reporter' min='0' max='*' expect='shall'/>
-                            <parameter name='reporter:identifier' min='0' max='*' expect='shall'/>
+Further geographic search can be enabled by chaining to location, and using the near search operation location,
+which allows search to be performed based on geographic coordinates and a distance measure to specify a search
+within a region. This enables systems without extensive geographic capabilities to come close in identifying a
+facility within a particular distance (some implementations e.g., HAPI, use a bounding box, rather than a circle,
+because it increases search efficiency).</description>
+                            <overview>All date searches
+must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
+to be supported because server support for these is not commonly available, nor implemented in readily reproducable
+fashions (the definition of an approximate date can have different meanings for different servers).  Simple eq, le, lt, ge,
+and gt should be sufficient to specify date ranges.</overview>
+                            <parameter name='_lastUpdated' comp='eq lt gt ge le' type='date' min='0' max='2' expect='shall'/>
+                            <parameter name='date' comp='eq lt gt ge le' min='0' max='2'  type='date' expect='shall'/>
+                            <parameter name='period' comp='eq lt gt ge le' min='1' max='2'  type='date'  expect='shall'/>
+                            <parameter name='measure' min='1' max='*' type='uri' expect='shall'/>
+                            <parameter name='measure.title' min='0' max='*' type='string' expect='should'/>
+                            <parameter name='location' min='0' max='*' type='reference' expect='shall'/>
+                            <parameter name='location:identifier' min='0' max='*' type='reference' expect='shall'/>
+                            <parameter name='location.near' min='0' max='1' type='special' expect='should'/>
+                            <parameter name='reporter' min='0' max='*' type='reference' expect='shall'/>
+                            <parameter name='reporter:identifier' min='0' max='*' type='reference' expect='shall'/>
                         </group>
-
                     </operation>
                 </interaction>
             </semantics>
@@ -550,7 +642,6 @@ bounding box, rather than a circle, because it increases search efficiency).
 to retrieve the selected resources.  When the Storage Option is implemented, the Measure Consumer reads resources from external
 storage specified by the Measure Source.
                 </description>
-                <overview></overview>
             </action>
             <result>
                 <name>Search Response</name>
@@ -584,6 +675,8 @@ option is used, the Measure Source will return all resources requested by the Me
         <name>Produce Measure</name>
         <description>The Produce Measure transaction allows an Measure Source to
 periodically report on availability of resources to a Measure Consumer.</description>
+        <overview>This transaction defines the create and update operations that a MeasureConsumer and
+MeasureSource actor must support.</overview>
         <message from="MeasureSource" to="MeasureConsumer">
             <name>Push Measure</name>
             <description></description>
@@ -601,13 +694,17 @@ writes the MeasureReport data to external storage specified by the Measure Consu
 </overview>
                 <interaction protocol='fhir' options='API'>
                     <!-- what about xml+fhir and json+fhir variants? -->
-                    <operation name='create' resources='MeasureReport'>
-                       <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
-                       <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                    <operation name='create' resources='MeasureReport' expect='shall'>
+                        <parameter name='_format' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shall'/>
+                        <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application xml+fhir application/json+fhir' expect='should'/>
+                        <parameter name='Content-Type:' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shal1'/>
+                        <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/xml+fhir application/json+fhir' expect='should'/>
                     </operation>
-                    <operation name='update' resources='MeasureReport' required='false'>
-                       <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
-                       <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/fhir+xml application/fhir+json'/>
+                    <operation name='update' resources='MeasureReport' expect='shall'>
+                        <parameter name='_format' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shal1'/>
+                        <parameter name='_format' min='0' max='1' values='xml json text/xml application/json application/xml application/xml+fhir application/json+fhir' expect='should'/>
+                        <parameter name='Content-Type:' min='0' max='1' values='application/fhir+xml application/fhir+json' expect='shal1'/>
+                        <parameter name='Content-Type:' min='0' max='1' values='xml json text/xml application/json application/xml application/xml+fhir application/json+fhir' expect='should'/>
                     </operation>
                 </interaction>
             </action>
@@ -643,27 +740,22 @@ availability data or some computation over it to another system.
     <content id="bed-location">
         <name>bed-location</name>
         <description>This content profile describes the structure of a Location Resource describing a reported upon Bed in a Bed Measure Report</description>
-        <overview></overview>
     </content>
     <content id="supporting-device">
         <name>Supporting Device</name>
         <description>This content profile describes the structure of a Device Resource describing a reported upon Device in Device Measure Report</description>
-        <overview></overview>
     </content>
     <content id="resource-location">
         <name>Resource Location</name>
         <description>This content profile describes the structure of a Location Resource describing the physical location (e.g., building)
 where a bed or device is located</description>
-        <overview></overview>
     </content>
     <content id="audit-event-write">
         <name>Audit Event Write</name>
         <description>This content profile describes the structure of an AuditEvent Resource reporting a write on a resource.</description>
-        <overview></overview>
     </content>
     <content id="audit-event-read">
         <name>Audit Event Read</name>
         <description>This content profile describes the structure of an AuditEvent Resource reporting a read on a resource.</description>
-        <overview></overview>
     </content>
 </profile>
