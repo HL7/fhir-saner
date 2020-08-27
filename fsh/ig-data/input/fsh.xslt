@@ -39,7 +39,7 @@
         <xsl:param name="n"/>
         <xsl:param name="v"/>
         <xsl:variable name="lastPart" select="translate(tokenize(string-join($n),'\.')[last()],'[]0123456789','')"/>
-        <xsl:value-of select="concat($n, ': ',string-join($v, ''),'&#xA;')"/>
+        <xsl:value-of select="concat(string-join($n, ''), ': ',string-join($v, ''),'&#xA;')"/>
     </xsl:function>
     <xsl:function name="s:instance">
         <xsl:param name="n"/>
@@ -51,7 +51,9 @@
         <xsl:value-of select="s:def('Instance', $n)"/>
         <xsl:value-of select="s:def('InstanceOf', $t)"/>
         <xsl:value-of select="concat('Description: &quot;',string-join($d, ''),'&quot;&#xA;')"/>
-        <xsl:value-of select="concat('Mixins: ',string-join($m, ', '),'&#xA;')"/>
+        <xsl:for-each select="$m">
+            <xsl:value-of select="concat('* insert ',.,'&#xA;')"/>
+        </xsl:for-each>
         <xsl:copy-of select="$body"/>
     </xsl:function>
 </xsl:stylesheet>

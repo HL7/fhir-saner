@@ -7,7 +7,7 @@ periodically query about the availability of a resource from an Measure Source.
 
 
 This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
-resources from a MeasureSource actor.  It defines the query parameters that the actors must and should support for search,
+resources from a MeasureSource actor.  It defines the query parameters that the actors must and **should** support for search,
 and the read operations that must be supported.
 
 
@@ -99,7 +99,7 @@ Formats
 
 All servers must support the _format parameter for any read or search and the standard values
 defined by FHIR for JSON and XML output. This value must override the Accept: header when present in an exchange.
-Servers must also support the Accept: header, and shall support any value in Accept: that can be given to _format
+Servers must also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
 for consistency. Servers are also free to support other output formats (e.g. turtle as defined in the base FHIR
 specifications, or other formats such as CSV which might be easier for clients to present or use). Servers
 should support other commonly used expressions representing JSON or XML outputs without complaint, including
@@ -233,7 +233,7 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 
 <div>
 
-The server must support the _count parameter for queries. Servers should use a default
+The server must support the _count parameter for queries. Servers **should** use a default
 value for _count if no value is provided to avoid server overloading.  This guide recommends a default value of 100 based on
 existing implementation experience.
 
@@ -381,6 +381,428 @@ returned by a query.  Since MeasureReport references at the very least, Measure,
 these must all be able to be read.
 
 The MeasureSource <b>SHALL</b> demonstrate the FHIR read operation on  the Location, MeasureReport, Measure and Organization resources.
+
+###### Read in CSV Format
+
+Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.
+
+The MeasureConsumer <b>MAY</b> demonstrate the FHIR $read-csv operation on  the MeasureReport resource with the following parameters.
+The MeasureSource <b>SHALL</b> demonstrate the FHIR $read-csv operation on  the MeasureReport resource with the following parameters.
+
+<ol>
+
+<li>
+Convert Instance
+<div>
+
+</div>
+
+
+<table class='grid'>
+
+<thead><tr>
+
+<th>Parameter</th><th>Cardinality</th><th>
+Measure Source Expectation</th><th>
+Measure Consumer Expectation</th>
+
+</tr></thead>
+
+<tbody>
+
+
+<tr>
+
+<td>
+
+map
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+return
+
+</td>
+
+<td>
+
+1..1
+</td>
+<td>
+
+
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+        
+</li>
+
+</ol>
+
+###### Search in CSV Format
+
+Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.
+
+The MeasureConsumer <b>SHALL</b> demonstrate the FHIR $search-csv operation on  the MeasureReport resource with the following parameters.
+The MeasureSource <b>SHALL</b> demonstrate the FHIR $search-csv operation on  the MeasureReport resource with the following parameters.
+
+<ol>
+
+<li>
+Search Instances
+<div>
+
+</div>
+
+
+<table class='grid'>
+
+<thead><tr>
+
+<th>Parameter</th><th>Cardinality</th><th>
+Measure Source Expectation</th><th>
+Measure Consumer Expectation</th>
+
+</tr></thead>
+
+<tbody>
+
+
+<tr>
+
+<td>
+
+_lastUpdated
+
+</td>
+
+<td>
+
+0..2
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+date
+
+</td>
+
+<td>
+
+0..2
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+period
+
+</td>
+
+<td>
+
+1..2
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+measure
+
+</td>
+
+<td>
+
+1..*
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+measure.title
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+subject
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+subject:identifier
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+subject:Location.near
+
+</td>
+
+<td>
+
+0..1
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+<td>
+
+<b>SHOULD</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+reporter
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+reporter:identifier
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+map
+
+</td>
+
+<td>
+
+0..*
+</td>
+<td>
+
+
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+return
+
+</td>
+
+<td>
+
+1..1
+</td>
+<td>
+
+
+
+</td>
+<td>
+
+
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+        
+</li>
+
+</ol>
 
 ###### Search by _id on Required Resources
 The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Location, MeasureReport, Measure and Organization resources with the following parameters.
@@ -540,9 +962,9 @@ ventilators, PPE, or other measure.
 Measures can be identified by codes used in the measure,
 or by the measure title, its canonical URL, or by something easier for a user to recall, such
 as the text of the measure or a code within it.  Multiple measures may report on the same kind of thing (e.g., beds),
-so retrieval by code, or by code within a value set should be supported.  There may be
+so retrieval by code, or by code within a value set **should** be supported.  There may be
 multiple measures which identify the kind of thing that the client system is interested in
-learning more about.  Search by code should be met by implementing the <a href='SearchParameter-SearchParameter-code.html'>SearchParameter-code</a>
+learning more about.  Search by code **should** be met by implementing the <a href='SearchParameter-SearchParameter-code.html'>SearchParameter-code</a>
 search parameter.
 
 However, search by code is not supported by default by many off-the-shelf systems,
@@ -559,7 +981,7 @@ The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Mea
 Search by Text or Code
 <div>
 
-A client system should be able to search for Measure or other definition resources
+A client system **should** be able to search for Measure or other definition resources
 associated with by text within the definition.  This requirement can be met through support of the
 <a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters</a>, or by implementation
 of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter</a>.
@@ -785,7 +1207,7 @@ _id
 Search by Text or Code
 <div>
 
-A client system should be able to search for Questionnaire or other definition resources
+A client system **should** be able to search for Questionnaire or other definition resources
 associated with by text within the definition.  This requirement can be met through support of the
 <a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters</a>, or by implementation
 of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter</a>.
@@ -961,7 +1383,7 @@ All date searches
 must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
 to be supported because server support for these is not commonly available, nor implemented in readily reproducable
 fashions (the definition of an approximate date can have different meanings for different servers).  Simple eq, le, lt, ge,
-and gt should be sufficient to specify date ranges.
+and gt **should** be sufficient to specify date ranges.
 
 The MeasureConsumer <b>SHALL</b> demonstrate the FHIR search operation on  the QuestionnaireResponse resource with the following parameters.
 The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the QuestionnaireResponse resource with the following parameters.
@@ -1250,7 +1672,7 @@ All date searches
 must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
 to be supported because server support for these is not commonly available, nor implemented in readily reproducable
 fashions (the definition of an approximate date can have different meanings for different servers).  Simple eq, le, lt, ge,
-and gt should be sufficient to specify date ranges.
+and gt **should** be sufficient to specify date ranges.
 
 
 </div>
@@ -1398,7 +1820,7 @@ measure.title
 
 <td>
 
-location
+subject
 
 </td>
 
@@ -1423,7 +1845,7 @@ location
 
 <td>
 
-location:identifier
+subject:identifier
 
 </td>
 
@@ -1448,7 +1870,7 @@ location:identifier
 
 <td>
 
-location.near
+subject:Location.near
 
 </td>
 
@@ -1565,7 +1987,3 @@ The Measure Source returns the requested resource.
 See the following CapabilityStatement resources for conformance requirements:
 
         
-* [CapabilityStatement-MeasureConsumer-PULL-TX-API](CapabilityStatement-MeasureConsumer-PULL-TX-API.html) defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option.
-* [CapabilityStatement-MeasureSource-PULL-TX-API](CapabilityStatement-MeasureSource-PULL-TX-API.html) defines the additional requirements for the Measure Source implementing the Query Measure transaction with the API Option.
-* [CapabilityStatement-MeasureConsumer-PULL-TX-API-Questionnaire](CapabilityStatement-MeasureConsumer-PULL-TX-API-Questionnaire.html) defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option and the Questionnaire Option.
-* [CapabilityStatement-MeasureSource-PULL-TX-API-Questionnaire](CapabilityStatement-MeasureSource-PULL-TX-API-Questionnaire.html) defines the additional requirements for the Measure Source implementing the Query Measure transaction with the API Option and the Questionnaire Option.

@@ -1,0 +1,414 @@
+
+This section of the IG explains possible ways to record the expressions used to automate a Measure.  Essentially it is a phrase book
+from English to the Expression elements used in the PublicHealthMeasure resource to describe the automation.  Due to different
+workflows and national requirements, these phrases may require translation to different FHIR models to represent the concept
+being tested.
+
+Preferred models are marked with an asterisk.
+
+The examples below are informative, and show how measures could be developed to support different constraints using existing
+vocabularies and value sets supported by HL7 FHIR.
+
+### Patient Encounters
+Encounters represent interactions between a patient and a healthcare provider in inpatient, outpatient or other settings. Many measures
+for situational awareness start with a patient encounter as the context for the measurement.
+
+#### Encounters Within a Time Frame
+Both Encounter.period.start and Encounter.period.end can be tested for occurence on a specific day, or within a given date range,
+allowing for tests of Admit/Discharge/Transfer/Death by date.
+
+#### Admission
+An admission generally starts an encounter that lasts more than a single day, although might also be used for encounters lasting only
+a single day (e.g., emergency department encounters which could last more than a day, but often are completed with a single day).
+
+Admission
+: An admission is identified from an Encounter that has not yet ended. Encounter.status **should** be "in-progress".  The date (and time) of
+admission can generally be determined from Encounter.period.start. Encounter.period.end will not be present, and
+Encounter.hospitalization.dispositionCode will also not be present, but the latter is not generally directly accessible
+through a search.
+
+##### Examples for Admission
+
+<table border='1' cellspacing='0'>
+  <caption>Locating Admissions via the Encounter resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+     <tr><td>Encounter.status</td>
+         <td>Active encounters</td>
+         <td>status=in-progress</td>
+         <td>Encounter.where(status='in-progress')</td>
+         <td>[Encounter] E where E.status = 'in-progress'</td>
+     </tr>
+     <tr><td>Encounter.period.start</td>
+         <td>Encounters starting starting on a given date or within a particular period</td>
+         <td>date=sa<i>2020-09-07T23:59:59</i>&date=lt<i>2020-09-09</i><br/>
+             Because the date search parameter is compared to a period data type, the upper and lower
+             bounds must be set in a way that ensures inclusion of the target period.  Using a high
+             precision time value for the sa component is less likely to run into implementation
+             errors even though sa2020-09-07 **should** be equivalent.
+         </td>
+         <td>Encounter.where(period.start >= @<i>2020-09-08</i> and period.start < @<i>2020-09-09</i>)<br/>
+             It is generally preferable for comparisons in for a time period to use an the inclusive
+             lower bound with greater than or equal to (>=) and an exclusive upper bound with
+             less-than (<). This is less likely to run into implementation errors affecting date comparisions.
+         </td>
+         <td>parameter MeasurementPeriod default Interval[@2020-09-08, @2020-09-09)<br/>
+             [Encounter] E where E.period starts during <i>MeasurementPeriod</i></td>
+     </tr>
+  </tbody>
+</table>
+
+#### Encounters with a Disposition
+The base FHIR specification does not support query by discharge disposition. Some FHIR Servers may be configurable
+to support this search.  See the [disposition](SearchParameter-SearchParameter-disposition.html) search parameter for an example of a resource
+that can be used to support this capability.  When present, discharge disposition codes are often populated according to
+requirements established for payment (e.g.,
+[US Medicare payment requirements](https://www.cms.gov/medicare/medicare-contracting/contractorlearningresources/downloads/ja0801.pdf#page=2),
+rather than treatment.
+
+\* The date of the disposition (discharge/transfer or death) may be determined from Encounter.period.end.
+
+<table border='1' cellspacing='0'>
+  <caption>Locating Discharges, Transfers and Deaths via the Encounter resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+     <tr><td>Encounter.status</td>
+         <td>Encounters that have been completed</td>
+         <td>status=finished</td>
+         <td>Encounter.where(status='finished')</td>
+         <td>[Encounter] E where E.status = 'finished'</td>
+     </tr>
+     <tr><td>Encounter.period.end</td>
+         <td>Encounters ending on a given date or within a particular period.</td>
+         <td>date=ge<i>2020-09-07T23:59:59</i>&date=eb<i>2020-09-09</i><br/>
+             Because the date search parameter is compared to a period data type, the upper and lower
+             bounds must be set.
+         </td>
+         <td>Encounter.where(period.end >= @<i>2020-09-08</i> and period.end < @<i>2020-09-09</i>)<br/>
+             It is generally preferable for comparisons in for a time period to use an the inclusive
+             lower bound with greater than or equal to (>=) and an exclusive upper bound with
+             less-than (<). This is less likely to run into implementation errors affecting date comparisions.
+         </td>
+         <td>parameter MeasurementPeriod default Interval[@2020-09-08, @2020-09-09)<br/>
+             [Encounter] E where E.period ends during <i>MeasurementPeriod</i></td>
+     </tr>
+  </tbody>
+</table>
+
+To distinguish between discharge to home vs. a transfer to another facility vs. death, the value of
+\* Encounter.hospitalization.disposionCode must be examined. Usually discharge means "to home" or
+other non-healthcare setting (e.g., another family member's home). These cases are shown in more detail below.
+
+##### Discharge
+A discharge is represented by an Encounter that has been completed in some way, either Encounter.status is "finished" to indicate
+normal completion, or in some cases, the Encounter.status may be marked as "cancelled" for special cases.
+Encounter.hospitalization.dispositionCode **should** be present, and where the the patient was discharged to.
+
+<table border='1' cellspacing='0'>
+  <caption>Locating Discharges via the Encounter resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+    <tr><td>Encounter.hospitalization.dispositionCode</td>
+        <td>Transitions to home or similar settings</td>
+        <td>disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|home,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|alt-home</i>,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|aadvice</i>,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|oth</i><br/>
+        </td>
+        <td>Encounter.where(<br/>
+            hospitalization.dispositionCode.where(system='http://terminology.hl7.org/CodeSystem/discharge-disposition'<br/>
+               and code = ('home'|'alt-home'|'aadvice'|'oth') ) )</td>
+        <td>valueset HomeEnvironment http://example.com/valueset/HomeEvironment<br/>
+            [Encounter] E where E.hospitalization.dispositionCode in HomeEnvironment</td>
+    </tr>
+  </tbody>
+</table>
+
+##### Transfers
+A transfer to another facility (inter-facility transfer) is like a discharge, except that the Encounter.hospitalization.dispositionCode **should** be
+present and indicates a transfer to a different healthcare setting (e.g., rehabilitation, hospice, long-term care).
+
+<table border='1' cellspacing='0'>
+  <caption>Locating Transfers via the Encounter resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+    <tr><td>Encounter.hospitalization.dispositionCode</td>
+        <td>Transitions to other healthcare settings other than home or death</td>
+        <td>disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|home</i>&<br/><
+            disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|alt-home</i>&<br/>
+            disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|aadvice</i>&
+            disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|oth</i><br/>
+        </td>
+        <td>Encounter.where(<br/>
+            hospitalization.dispositionCode.where(system='http://terminology.hl7.org/CodeSystem/discharge-disposition'<br/>
+               and code = ('home'|'alt-home'|'aadvice'|'oth'|'exp') ) ).not()</td>
+        <td>valueset TransferEnvironment http://example.com/valueset/TransferEnvironment<br/>
+            [Encounter] E where E.hospitalization.dispositionCode in TransferEnvironment</td>
+    </tr>
+  </tbody>
+</table>
+
+Notes
+: A transfer within a facility (intra-facility transfer) can mark a change in patient class (e.g., outpatient, emergency, observation, inpatient, long-term care) and type of
+service being provided, but may also simply indicate movement between locations within a facility.
+
+: Measure developers **should** provide clarity around the distinctions between discharge and transfer.  Is discharge to home-health
+a "discharge" or a "transfer"?  If "long-term care" is the same as "home" for the patient, how would different hospital workflows
+vary with regard to coding these values?
+
+##### Death
+Not every discharge is a good outcome. Discharge due to death reqires special handling because of different
+hospital workfows used to track the death of a patient.
+
+1. * The discharge disposition may indicate death in the Encounter.hospitalization.dispositionCode value, or
+2. The fact that a patient has died (but not when) may appear in Patient.deceasedBoolean, or
+3. * The date of death may appear in Patient.deceasedDateTime, or
+4. A date of death may be recorded in an Observation for the patient, or
+5. The Location resource referenced by Encounter.hospitalization.destination may indicate a morgue or autopsy
+   room in Location.type.
+
+When testing for death during an encounter using date of death (numbers 3 and 4 above), take care to verify that death
+occured during the encounter (i.e., date of death is >= Encounter.period.start and <= Encounter.period.end).
+
+<table border='1' cellspacing='0'>
+  <caption>Locating Deaths via the Encounter resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+    <tr><td>Encounter.hospitalization.dispositionCode</td>
+        <td>Transitions due to Death</td>
+        <td>disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|exp</i></td>
+        <td>Encounter.where(<br/>
+            hospitalization.dispositionCode.where(system='http://terminology.hl7.org/CodeSystem/discharge-disposition'<br/>
+               and code = 'exp') ) )</td>
+        <td>valueset PatientExpired http://example.com/valueset/PatientExpired<br/>
+            [Encounter] E where E.hospitalization.dispositionCode in PatientExpired</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border='1' cellspacing='0'>
+  <caption>Locating Deaths via the Patient resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+    <tr><td>Patient.deceasedDateTime</td>
+        <td>Patient date of death</td>
+        <td>death-date=2020-09-09</td>
+        <td>Patient.where(deceasedDateTime = @2020-09-09)</td>
+        <td>[Patient] P where P.deceasedDateTime = @2020-09-09</td>
+    </tr>
+    <tr><td rowspan='2'>Patient.deceased[x]</td>
+        <td>Patient has died</td>
+        <td>deceased=true</td>
+        <td>// Patient has died, or there is a date of death<br/>Patient.where(deceasedBoolean = true | deceasedDateTime.exists())</td>
+        <td>[Patient] E where P.deceasedBoolean = true or P.deceasedDateTime is not null</td>
+    </tr>
+    <tr><td>Patient has died within this encounter</td>
+        <td>N/A</td>
+        <td>Encounter.where(<br/>
+            // Patient has died during the encounter<br/>
+            (resolve(patient).deceasedDateTime >= $this.period.start and<br/>
+            &#xA0;resolve(patient).deceasedDateTime <= $this.period.end) or<br/>
+            // Encounter is in-progress and patient has died<br/>
+            &#xA0;&#xA0;($this.status = 'in-progress' and<br/>
+            &#xA0;&#xA0;// Patient has died, or there is a date of death<br/>
+            &#xA0;&#xA0;&#xA0;resolve(patient).where(deceasedDateTime.exists() or deceasedBoolean = true)<br/>
+            &#xA0;&#xA0;)<br/>
+            )
+        </td>
+        <td>Context Encounter <br/>
+            [Patient] P where <br/>
+            P.id = E.patient and<br/>
+            // Patient has died during the encounter<br/>
+            &#xA0;(P.deceasedDateTime in E.period or<br/>
+            // Encounter is in-progress and patient has died<br/>
+            &#xA0;&#xA0;(E.status = 'in-progress' and<br/>
+            &#xA0;&#xA0;&#xA0;(P.deceasedBoolean = true or P.deceasedDateTime is not null)<br/>
+            &#xA0;&#xA0;)<br/>
+            &#xA0;)<br/>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+### For a type of healthcare service (e.g., ED, Observation, Acute, ICU, Outpatient)
+The type of healthcare service may be determined in a couple of different ways depending on hospital workflow:
+
+1. * It may be broadly coded in Encounter.class (e.g., ED, Observation, Acute, ICU, Outpatient), or
+2. Deeply coded in Encounter.serviceClass (more detailed encoding for different kinds of services,
+   from which one can infer ED, Observation, et cetera.
+3. Encoded in the Location resource referenced by Encounter.location.location in Location.type, again, from
+   which one can infer ED, Observation, et cetera.
+
+Many HL7 standards use the HL7 Version 3 Service Delivery Location Role Type vocabulary to describe locations.
+In the US, the [HSLOC Coding System](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest)
+is used to record the type of healthcare service for the HL7 Healthcare Acquired Infections Implementation Guides in both
+(CDA)[https://www.hl7.org/implement/standards/product_brief.cfm?product_id=20] and (FHIR)[http://hl7.org/fhir/us/hai/].
+This coding system supports development of value set that can be used in the expression to identify a location
+supporting a specific type of service.
+
+This guide provides a (ConceptMap)[ConceptMap_ServiceDeliveryLocations.html) that supports mapping between these two vocabularies.
+
+<table border='1' cellspacing='0'>
+  <caption>Determining the type of service using Encounter resource</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+     <tr><td>Encounter.class</td>
+         <td>Inpatient (Acute) Encounters</td>
+         <td>class=http://terminology.hl7.org/CodeSystem/v3-ActCode|ACUTE</td>
+         <td>Encounter.where(status.where(system='http://terminology.hl7.org/CodeSystem/v3-ActCode' and code='ACUTE'))</td>
+         <td>valueset AcuteEncounter http://example.com/valueset/AcuteEncounter
+             [Encounter] E where E.class in AcuteEncounter</td>
+     </tr>
+     <tr><td>Encounter.serviceType</td>
+         <td>Encounters providing a specific kind of service</td>
+         <td>N/A</td>
+         <td>Encounter.where(serviceType.where(system='http://terminology.hl7.org/CodeSystem/service-type' and code='237')
+         </td>
+         <td>valueset EncounterServiceType http://example.com/valueset/EncounterServiceType<br/>
+             [Encounter] E where <br/>
+             E.serviceType in EncounterServiceType
+         </td>
+     </tr>
+     <tr><td>Location.type</td>
+         <td>Encounters in a specific type of location</td>
+         <td>// Encounters in a hospital unit
+         location.type=http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|HU</td>
+         <td>Encounter.where(location.physicalType.where(system='http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType' and code='HU'))</td>
+         <td>valueset LocationType http://example.com/valueset/LocationType<br/>
+             context Encounter
+             [Location] L where <br/>
+             L.id = Encounter.location
+             L.type in LocationType
+         </td>
+     </tr>
+  </tbody>
+</table>
+
+### Temporary/Surge/Overflow
+Some facilities, especially under stress will house patients in temporary locations, known as surge or overflow locations.  NHSN
+defined these thus:
+
+> Overflow locations include any physical locations created to accommodate patients including but not
+> limited to 24-hour observation units, hallways, parking lots, or tents.
+
+There is no common workflow or model used to represent this sort of situation. This IG recommends the use of
+a special code within Encounter.location.physicalType to identify a location that is a temporary location.  This value should
+also appear within Location.physicalType in the location resource referenced by Encounter.location.location.
+
+### With a Given Condition or Symptom
+Patient conditions or symptoms may appear in several places, with different degrees of confidence in the
+patient having the condition (e.g., admission, preliminary, differential, possible, or confirmed diagnosis).
+
+#### Admitted/Seen for:
+In the context of a given encounter, the condition may appear in:
+
+1. The Condition resource referenced by Encounter.diagnosis.condition in Condition.code.  When using this field,
+consider also the value of Encounter.diagnosis.use, which encodes the provider confidence in the diagnosis, or
+2. As a coded value in Encounter.reasonCode, or
+3. As a reference to a Condition resource in Encounter.reasonReference, or
+4. As a reference to an Observation resource in Encounter.reasonReference
+5. As a problem in a Condition resource linked to the encounter, i.e., where Condition.encounter references
+the Encounter of interest.
+6. As a problem in a Condition resource from a prior period or encounter.
+7. As an finding reported in an Observation resource linked to the encounter i.e.,
+where Observation.encounter references the encounter of interest.  These observations may report subjective
+or objective findings during review of systems or physical examination (e.g., shortness of breath, sense of smell,
+et cetera).
+8. As a finding reported in an Observation from a prior period or encounter.
+
+NOTE: In all cases where Condition is used, consider also the values of `Condition.verificationStatus` and
+`Condition.clinicalStatus` during evaluation.  The `verificationStatus` indicates whether the condition
+is unconfirmed, provisional, confirmed or even refuted or entered-in-error.  Note that the last two cases the
+patient does NOT have the condition.  The `clinicalStatus` may describe clinical status of the condition
+of interest, using the value active, inactive or resolved.  Again, note that resolved indicates the condition
+is no longer active.
+
+The `Condition.onset[x]` and `Condition.abatement[x]` fields identity the time frame over which the condition was
+active.  The `Condition.recordedDate` indicates when the provider recorded the condition in the system.
+
+<table border='1' cellspacing='0'>
+  <caption>Determining the reason for care using Encounter resources</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+     <tr><td>Encounter.reasonCode</td>
+         <td>Encounter for a specific disease by code</td>
+         <td>reason-code=</td>
+         <td>Encounter.where(reasonCode.where(system='http://terminology.hl7.org/CodeSystem/v3-ActCode' and code='ACUTE'))</td>
+         <td>valueset COVID-19 http://example.com/valueset/AcuteEncounter
+             [Encounter] E where E.class in AcuteEncounter</td>
+     </tr>
+     <tr><td>Encounter.serviceType</td>
+         <td>Encounters providing a specific kind of service</td>
+         <td>N/A</td>
+         <td>Encounter.where(serviceType.where(system='http://terminology.hl7.org/CodeSystem/service-type' and code='237')
+         </td>
+         <td>valueset EncounterServiceType http://example.com/valueset/EncounterServiceType<br/>
+             [Encounter] E where <br/>
+             E.serviceType in EncounterServiceType
+         </td>
+     </tr>
+     <tr><td>Location.type</td>
+         <td>Encounters in a specific type of location</td>
+         <td>// Encounters in a hospital unit
+         location.type=http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|HU</td>
+         <td>Encounter.where(location.physicalType.where(system='http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType' and code='HU'))</td>
+         <td>valueset LocationType http://example.com/valueset/LocationType<br/>
+             context Encounter
+             [Location] L where <br/>
+             L.id = Encounter.location
+             L.type in LocationType
+         </td>
+     </tr>
+  </tbody>
+</table>
+
+
+### With a Diagnostic Test Result Outcome
+
+Test Performed
+:
+
+Positive Result
+:
+
+Negative Result
+:
+
+Indeterminate Result
+:
+
+Test Value within a Range
+:
+
+Test Value with an interpretation
+:
+
+### Using or Not using a given medication
+on/not on a given medication:
+  medication prescribed
+  medication administered
+  reporting via Medication Resource vs. Medication code
+
+### Immunized / Not Immunized for a Disease
+having/not having a given immunization:
+
+### Having/Not Having had a given Procedure
+having/not having had a given procedure:
+
+with X (see above) within N days of today:
+
+### Handling Temporal Relationships
+In the example below, NHSN defined HOSPITAL ONSET for COVID-19 as shown below:
+
+> HOSPITAL ONSET: Patients currently hospitalized in an inpatient bed with onset of
+> suspected or confirmed COVID-19 fourteen or more days after hospital admission
+> due to a condition other than COVID-19
+
+
+
+
+
+
+
+
+

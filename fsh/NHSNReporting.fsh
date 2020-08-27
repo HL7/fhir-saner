@@ -26,8 +26,9 @@ Instance: CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasure
 Title: "CDC Patient Impact and Hospital Capacity"
 Description: "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements."
-Mixins: SanerDefinitionContent, CDCPatientImpactAndHospitalCapacityRules
 Usage: #example
+* insert SanerDefinitionContent
+* insert CDCPatientImpactAndHospitalCapacityRules
  * name = "CDCPatientImpactAndHospitalCapacity"
  * url = "http://hl7.org/fhir/us/saner/Measure/CDCPatientImpactAndHospitalCapacity"
  * title = "Patient Impact and Hospital Capacity"  // Official name of measure being represented as given by the author
@@ -67,12 +68,12 @@ and overflow and surge/expansion beds used for inpatients or outpatients. This i
  * group[0].population[0].criteria.expression = "Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"
 
 // Describe the population strata for numBeds
- * group[0].population[1].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numBeds
+ * group[0].population[1].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numbeds
  * group[0].population[1].code.coding.display = "Hospital Inpatient Beds"
 // * group[0].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[0].population[1].code.text = "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
  * group[0].population[1].description = "Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."
- * group[0].population[1].criteria.name = "numBeds"
+ * group[0].population[1].criteria.name = "numbeds"
  * group[0].population[1].criteria.description = "A Bed where the location is an inpatient location."
  * group[0].population[1].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
  * group[0].population[1].criteria.expression = "%numTotBeds.where(location.type in %ValueSet-InpatientLocations)"
@@ -91,7 +92,7 @@ Total includes all beds, even if with surge beds it exceeds licensed beds."""
  * group[0].population[2].criteria.name = "numBedsOcc"
  * group[0].population[2].criteria.description = "An Inpatient Bed where the Bed is occupied."
  * group[0].population[2].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
- * group[0].population[2].criteria.expression = "%numBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
+ * group[0].population[2].criteria.expression = "%numbeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
 
 // Describe the population for numICUBeds
  * group[0].population[3].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numICUBeds
@@ -106,7 +107,7 @@ ICU beds include NICU
  * group[0].population[3].criteria.name = "numICUBeds"
  * group[0].population[3].criteria.description = "A Bed where the location is an inpatient ICU location."
  * group[0].population[3].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
- * group[0].population[3].criteria.expression = "%numBeds.where(location.type in %ValueSet-ICULocations)"
+ * group[0].population[3].criteria.expression = "%numbeds.where(location.type in %ValueSet-ICULocations)"
 
 // Describe the population for numICUBedsOcc
  * group[0].population[4].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numICUBedsOcc
@@ -245,8 +246,9 @@ Instance: ComputableCDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasure
 Title: "Computable CDC Patient Impact and Hospital Capacity"
 Description: "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements."
-Mixins: SanerDefinitionContent, CDCPatientImpactAndHospitalCapacityRules
 Usage: #example
+ * insert SanerDefinitionContent
+ * insert CDCPatientImpactAndHospitalCapacityRules
  * name = "ComputableCDCPatientImpactAndHospitalCapacity"
  * url = "http://hl7.org/fhir/us/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
  * title = "Patient Impact and Hospital Capacity"  // Official name of measure being represented as given by the author
@@ -286,12 +288,12 @@ and overflow and surge/expansion beds used for inpatients or outpatients. This i
  * group[0].population[0].criteria.expression = "Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"
 
 // Describe the population strata for numBeds
- * group[0].population[1].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numBeds
+ * group[0].population[1].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numbeds
  * group[0].population[1].code.coding.display = "Hospital Inpatient Beds"
 // * group[0].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
  * group[0].population[1].code.text = "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
  * group[0].population[1].description = "Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."
- * group[0].population[1].criteria.name = "numBeds"
+ * group[0].population[1].criteria.name = "numbeds"
  * group[0].population[1].criteria.description = "A Bed where the location is an inpatient location."
  * group[0].population[1].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
  * group[0].population[1].criteria.expression = "%numTotBeds.where(location.type in %ValueSet-InpatientLocations)"
@@ -310,7 +312,7 @@ Total includes all beds, even if with surge beds it exceeds licensed beds."""
  * group[0].population[2].criteria.name = "numBedsOcc"
  * group[0].population[2].criteria.description = "An Inpatient Bed where the Bed is occupied."
  * group[0].population[2].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
- * group[0].population[2].criteria.expression = "%numBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
+ * group[0].population[2].criteria.expression = "%numbeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
 
 // Describe the population for numICUBeds
  * group[0].population[3].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numICUBeds
@@ -325,7 +327,7 @@ ICU beds include NICU
  * group[0].population[3].criteria.name = "numICUBeds"
  * group[0].population[3].criteria.description = "A Bed where the location is an inpatient ICU location."
  * group[0].population[3].criteria.language = http://hl7.org/fhir/expression-language#text/fhirpath
- * group[0].population[3].criteria.expression = "%numBeds.where(location.type in %ValueSet-ICULocations)"
+ * group[0].population[3].criteria.expression = "%numbeds.where(location.type in %ValueSet-ICULocations)"
 
 // Describe the population for numICUBedsOcc
  * group[0].population[4].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numICUBedsOcc
@@ -521,7 +523,7 @@ diagnosed COVID-19."""
 Instance: CDCHealthcareSupplyPathway
 Title: "CDC Healthcare Supply Pathway"
 InstanceOf: http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure
-Mixins: SanerDefinitionContent
+* insert SanerDefinitionContent
 * id = "CDCHealthcareSupplyPathway"
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/Measure"
 * meta.profile[1] = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
@@ -773,7 +775,7 @@ Mixins: SanerDefinitionContent
 
 Instance: CDCHealthcareWorkerStaffingPathway
 InstanceOf: http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure
-Mixins: SanerDefinitionContent
+* insert SanerDefinitionContent
 * id = "CDCHealthcareWorkerStaffingPathway"
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/Measure"
 * meta.profile[1] = "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
@@ -858,7 +860,7 @@ Mixins: SanerDefinitionContent
 * group[1].extension[MeasureGroupAttributes].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
 * group[1].extension[MeasureGroupAttributes].extension[subject].valueCodeableConcept.coding[0] = http://hl7.org/fhir/resource-types#Practitioner
 * group[1].extension[MeasureGroupAttributes].extension[subject].valueCodeableConcept.coding[1] = http://snomed.info/sct#106293008
-* group[1].extension[MeasureGroupAttributes].extension[subject].valueCodeableConcept.coding[1].display = "Nursing Personell"
+* group[1].extension[MeasureGroupAttributes].extension[subject].valueCodeableConcept.coding[1].display = "Nursing personnel"
 * group[1].extension[MeasureGroupAttributes].extension[subject].valueCodeableConcept.text = "Nurses"
 * group[1].extension[MeasureGroupAttributes].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#increase
 * group[1].extension[MeasureGroupAttributes].extension[rateAggregation].valueString = "aggregable-by-period"

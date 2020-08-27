@@ -12,7 +12,8 @@ Instance: FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasure
 Title: "FEMA Laboratory Orders and Results Daily Increase Reporting"
 Description: "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts."
-Mixins: SanerDefinitionContent, FEMADailyHospitalCOVID19ReportingRules
+ * insert SanerDefinitionContent
+ * insert FEMADailyHospitalCOVID19ReportingRules
 
  * name = "FEMADailyHospitalCOVID19Reporting"
  * url = "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting"
@@ -142,7 +143,8 @@ Instance: ComputableFEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasure
 Title: "Computable FEMA Laboratory Orders and Results Daily Increase Reporting"
 Description: "This measure demonstrates reporting about Daily Laboratory Testing at a inpatient test sites capturing laboratory orders and results daily increase and cumulative counts."
-Mixins: SanerDefinitionContent, FEMADailyHospitalCOVID19ReportingRules
+ * insert SanerDefinitionContent
+ * insert FEMADailyHospitalCOVID19ReportingRules
 
  * name = "ComputableFEMADailyHospitalCOVID19Reporting"
  * url = "http://hl7.org/fhir/us/saner/Measure/ComputableFEMADailyHospitalCOVID19Reporting"

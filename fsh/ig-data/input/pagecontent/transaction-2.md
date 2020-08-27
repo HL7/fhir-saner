@@ -80,6 +80,8 @@ writes the MeasureReport data to external storage specified by the Measure Consu
 
 
 
+###### 
+
 ###### The Measure Consumer Accepts Resource
 
 When the API option is used, the Measure Consumer reports
@@ -96,5 +98,3 @@ used, the Measure Consumer reports success using the native protocols for the ex
 See the following CapabilityStatement resources for conformance requirements:
 
         
-* [CapabilityStatement-MeasureSource-PUSH-TX-API](CapabilityStatement-MeasureSource-PUSH-TX-API.html) defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the API Option.
-* [CapabilityStatement-MeasureConsumer-PUSH-TX-API](CapabilityStatement-MeasureConsumer-PUSH-TX-API.html) defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the API Option.

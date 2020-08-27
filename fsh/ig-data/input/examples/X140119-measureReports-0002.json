@@ -70,7 +70,7 @@
             "coding": [
               {
                 "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
-                "code": "numBeds",
+                "code": "numbeds",
                 "display": "Hospital Inpatient Beds"
               }
             ],
