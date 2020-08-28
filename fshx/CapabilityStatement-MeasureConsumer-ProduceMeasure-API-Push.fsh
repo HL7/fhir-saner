@@ -5,7 +5,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_ProduceMeasure_API_Push"
 * title = "Measure Consumer implementing the Produce Measure transaction with the API Option and the Push Option."
-* date = "2020-08-26T23:45:46.843685-04:00"
+* date = "2020-08-27T16:12:12.962279-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the API Option and the Push Option."
 * format[0] = #xml
