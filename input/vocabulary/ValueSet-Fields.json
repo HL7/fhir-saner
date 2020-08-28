@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Fields",
+  "id": "Fields",
+  "title": "Resource Fields",
+  "description": "This value set describes fields used to stratify groups in a report",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/Fields",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/us/saner/ValueSet/FieldsForDevice"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/us/saner/ValueSet/FieldsForLocation"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BedProperty",
+  "id": "BedProperty",
+  "title": "Bed Property",
+  "description": "This value set describes other properties of a bed, such as the ability to support isolation.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/BedProperty",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
+        "concept": [
+          {
+            "code": "NEGISO"
+          },
+          {
+            "code": "OTHISO"
+          },
+          {
+            "code": "NONISO"
+          }
+        ]
+      }
+    ]
+  }
+}
