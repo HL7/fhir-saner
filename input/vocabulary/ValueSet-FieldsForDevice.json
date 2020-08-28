@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "FieldsForDevice",
+  "id": "FieldsForDevice",
+  "title": "Resource Fields for Device",
+  "description": "Field names in the Device Resource",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/FieldsForDevice",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/saner/CodeSystem/ResourceFieldsForDevice"
+      }
+    ]
+  }
+}

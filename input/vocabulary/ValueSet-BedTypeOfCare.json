@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BedTypeOfCare",
+  "id": "BedTypeOfCare",
+  "title": "Bed Type of Care",
+  "description": "This Value Set describes the types of care services that a bed can support.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/BedTypeOfCare",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "concept": [
+          {
+            "code": "HOSP"
+          },
+          {
+            "code": "ICU"
+          },
+          {
+            "code": "ER"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
+        "concept": [
+          {
+            "code": "OR"
+          },
+          {
+            "code": "NURSERY"
+          },
+          {
+            "code": "BURNU"
+          }
+        ]
+      }
+    ]
+  }
+}
