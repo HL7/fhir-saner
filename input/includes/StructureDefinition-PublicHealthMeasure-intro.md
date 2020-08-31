@@ -156,7 +156,7 @@ Measures are published by organizations rather than individuals.  This profile r
 and furthermore, that there is at least one organizational e-mail address which can be used to contact that publisher about the Measure in `Measure.contact`
 
 ### <span id='national-cores'>Use of Appropriate National Models</span>
-Many countries have developed national healthcare information models in various states of completion. This IG requires the use of national core standards 
+Many countries have developed national healthcare information models in various states of completion. This IG requires the use of national core standards
 or guides to localize the PublicHealthMeasure to ensure a consistent data model for automation.
 
 1. A conforming PublicHealthMeasure **shall** specify a jurisdiction to enable support for validation against national requirements.
@@ -164,25 +164,8 @@ or guides to localize the PublicHealthMeasure to ensure a consistent data model 
 
 Setting the Measure jurisdiction ensures that resources referenced by the Measure or MeasureReport conform to appropriate national standards.
 
-
-### Considerations for Existing (or Legacy) Systems
-#### System Configuration vs Product Development
-#### Timeliness of Data
-#### Converting to/from CSV
-#### Converting to/from Other Formats
-
-#### Identifying what is being Measured
-##### Types of Location (including Beds)
-##### Types of Service (e.g., ICU, NICU,
-##### Types of Devices
-
-#### Considerations with regard to Emergency Use
-##### Counting Repurposed or "Modified" Devices
-##### Temporary Locations
-##### Coordination of Similar Measurements
-
-#### Stratifying Data in a Measure
-##### Stratifying for Social Determinants of Health
+### Measure Reporting Period
+A measure **shall** suggest the approrpriate reporting frequency and period using the [ReportingPeriod](StructureDefinition-ReportingPeriod.html] extension.
 
 ### Stratifiers
 Stratifiers partition a measure so that it counts subsets of the measure population

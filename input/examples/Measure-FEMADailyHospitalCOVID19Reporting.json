@@ -6,6 +6,18 @@
       "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/saner/StructureDefinition/ReportingPeriod",
+      "valueTiming": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      }
+    }
+  ],
   "status": "draft",
   "experimental": true,
   "version": "0.1.0",

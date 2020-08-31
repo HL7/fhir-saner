@@ -78,6 +78,36 @@
   "differential": {
     "element": [
       {
+        "id": "Measure.extension",
+        "path": "Measure.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Measure.extension:measureTiming",
+        "path": "Measure.extension",
+        "sliceName": "measureTiming",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/saner/StructureDefinition/ReportingPeriod"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Measure.url",
         "path": "Measure.url",
         "short": "Each measure must have a url.",

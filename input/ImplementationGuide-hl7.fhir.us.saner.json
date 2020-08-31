@@ -119,6 +119,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/MeasureReportingTiming"
+        },
+        "name": "Recommended Measure Reporting Times",
+        "description": "Provides the timing for measure  reporting",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/MeasuredItemDescription"
         },
         "name": "Saner Measured Item Description",
@@ -203,6 +211,14 @@
         },
         "name": "Alternate criteria for performing a measure",
         "description": "Provides Alternate criteria for performing a measure, (e.g., CQL, Drools, et cetera)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportingPeriod"
+        },
+        "name": "Enables specification of proposed measure reporting",
+        "description": "The timing used for measure reporting",
         "exampleBoolean": false
       },
       {
