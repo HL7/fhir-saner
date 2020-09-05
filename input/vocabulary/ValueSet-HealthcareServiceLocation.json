@@ -3,6 +3,7 @@
   "status": "active",
   "name": "HealthcareServiceLocation",
   "id": "HealthcareServiceLocation",
+  "description": "This Value Set includes codes describing Service Locations in a healthcare facility",
   "version": "20200604",
   "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275",
   "date": "2019-08-30T01:00:18-04:00",

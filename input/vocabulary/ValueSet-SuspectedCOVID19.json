@@ -3,6 +3,7 @@
   "status": "active",
   "name": "SuspectedCOVID19",
   "id": "SuspectedCOVID19",
+  "description": "This Value Set identifies conditions that may be related to COVID-19",
   "version": "20200410",
   "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.116",
   "date": "2020-04-10T01:00:18-04:00",
