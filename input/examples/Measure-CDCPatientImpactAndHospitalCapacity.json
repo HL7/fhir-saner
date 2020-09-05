@@ -87,28 +87,31 @@
   "relatedArtifact": [
     {
       "type": "documentation",
-      "url": "https://www.cdc.gov/nhsn/acute-care-hospital/covid19/",
+      "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/",
       "label": "NHSN COVID-19 Reporting",
       "display": "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page"
     },
     {
       "type": "documentation",
-      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf",
+      "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf",
       "label": "How to import COVID-19 Summary Data",
       "display": "Importing COVID-19 Patient Module Denominator data for Patient Safety Component"
     },
     {
       "type": "documentation",
-      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf",
+      "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf",
       "label": "Table of Instructions",
       "display": "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)"
     },
     {
       "type": "documentation",
-      "url": "https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv",
+      "url": "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv",
       "label": "CSV File Template",
       "display": "CDC/NHSN COVID-19 Reporting CSV File Template"
     }
+  ],
+  "library": [
+    "http://hl7.org/fhir/us/saner/StructureDefinition/NHSNMeasureLibrary"
   ],
   "group": [
     {

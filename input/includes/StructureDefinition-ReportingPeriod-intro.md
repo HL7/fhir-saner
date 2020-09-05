@@ -30,7 +30,7 @@ almost all cases of measures reported for COVID-19 to date.
 See the [CDC Patient Impact and Hospital Capacity example Measure](Measure-CDCPatientImpactAndHospitalCapacity.json.html) for an example use of this extension in a resource.
 
 The example below illustrates a measure with a reporting period of one report provided every one day for data as of midnight.
-
+```
    "extension": [
      {
        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/ReportingPeriod",
@@ -46,9 +46,11 @@ The example below illustrates a measure with a reporting period of one report pr
        }
      }
    ]
+```
 
 The example below illustrates a measure with a reporting period every 8 hours (i.e., three reports per day) for data as of 2am, 10am and 6pm.
 
+```
    "extension": [
      {
        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/ReportingPeriod",
@@ -64,9 +66,11 @@ The example below illustrates a measure with a reporting period every 8 hours (i
        }
      }
    ]
+```
 
 The example below illustrates a measure with a reporting period of once a week on Monday 8/31/2020 at midnight
 
+```
    "extension": [
      {
        "url": "http://hl7.org/fhir/us/saner/StructureDefinition/ReportingPeriod",
@@ -82,4 +86,4 @@ The example below illustrates a measure with a reporting period of once a week o
        }
      }
    ]
-
+```

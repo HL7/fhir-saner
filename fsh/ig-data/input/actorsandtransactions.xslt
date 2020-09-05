@@ -856,7 +856,7 @@ between options when applicable are specified in notes.
     <xsl:function name="s:client">
         <xsl:param name="mode"/>
         <xsl:param name="op"/>
-        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op/@client) else (if ($op/@min = 0) then 'may' else $op/@expect)) else ($op/@expect)"/>
+        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op/@client[1]) else (if ($op/@min = 0) then 'may' else $op/@expect[1])) else ($op/@expect[1])"/>
     </xsl:function>
     <xsl:function name="s:combo">
         <xsl:param name="f"/>
@@ -1060,8 +1060,8 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="s:expect(($res,'.searchParam[',position()-1,']'), s:client($mode, $op))"/>
             </xsl:for-each>
             <!-- Check for _include values -->
-            <xsl:for-each select='tokenize($operations[@name="search"]/ancestor::ig:interaction//ig:parameter[@name="_include"]/@values, "\s+")'>
-                <xsl:variable name="op" select='$operations[@name="search"]/ancestor::ig:interaction//ig:parameter[@name="_include"]'/>
+            <xsl:for-each select='tokenize(string-join($operations[@name="search"]/ancestor::ig:interaction//ig:parameter[@name="_include"]/@values, " "), "\s+")'>
+                <xsl:variable name="op" select='$operations[@name="search"]/ancestor::ig:interaction//ig:parameter[@name="_include"][1]'/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:string(($res,'.searchInclude[',position()-1,']'),.)"/>
                 <xsl:value-of select="s:expect(($res,'.searchInclude[',position()-1,']'), s:client($mode, $op))"/>
@@ -1121,7 +1121,7 @@ between options when applicable are specified in notes.
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:code('status','draft','')"/>
                 <xsl:value-of select="s:code('kind','operation','')"/>
-                <xsl:value-of select="s:code('code',$op/@name,'')"/>
+                <xsl:value-of select="s:code('code',substring($op/@name,2),'')"/>
                 <xsl:for-each select="tokenize($op/@resources,'\s+')">
                     <xsl:value-of select="s:code(('resource[',position()-1,']'),.,'')"/>
                 </xsl:for-each>

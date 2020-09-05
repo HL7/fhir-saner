@@ -1,6 +1,7 @@
 
 Instance: ProduceMeasure-aggregate
 InstanceOf: OperationDefinition
+Usage: #definition
 Description: "This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.
 The MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by
 specifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources
@@ -10,7 +11,7 @@ being aggregated must reference the same Measure resource defining the MeasureRe
  
 * status = #draft
 * kind = #operation
-* code = #$aggregate
+* code = #aggregate
 * resource[0] = #MeasureReport
 * system = false
 * type = false

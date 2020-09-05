@@ -1,12 +1,13 @@
 
 Instance: QueryMeasure-search-csv
 InstanceOf: OperationDefinition
+Usage: #definition
 Description: "Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details."
 * insert SanerDefinitionContent
  
 * status = #draft
 * kind = #operation
-* code = #$search-csv
+* code = #search-csv
 * resource[0] = #MeasureReport
 * system = false
 * type = true

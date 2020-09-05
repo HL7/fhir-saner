@@ -151,6 +151,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/PublicHealthMeasureLibrary"
+        },
+        "name": "Public Health Measure Library",
+        "description": "A Public Health Measure Library contains essential ConceptMap, ValueSet, CodingSystem,\nNamingSystem, SearchParameter, CQL definitions or other resources for measure evaluation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PublicHealthMeasureMetadataAttachments"
+        },
+        "name": "PublicHealthMeasureMetadataAttachments",
+        "description": "Attachments providing resources containing essential content supporting a measure definition",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/PublicHealthMeasureReport"
         },
         "name": "Saner Public Health Measure Report",
@@ -191,9 +207,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/definition-expectation"
+          "reference": "StructureDefinition/measure-expectation"
         },
-        "name": "DefinitionExpection",
+        "name": "MeasureExpection",
         "description": "Enables definitions to identify components that are required, recommended or optional",
         "exampleBoolean": false
       },
@@ -239,50 +255,23 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BedProperty"
+          "reference": "ValueSet/COVID19Antibody"
         },
-        "name": "Bed Property",
-        "description": "This value set describes other properties of a bed, such as the ability to support isolation.",
+        "name": "COVID19Antibody",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/BedTypeOfCare"
+          "reference": "ValueSet/COVID19DXICD10"
         },
-        "name": "Bed Type of Care",
-        "description": "This Value Set describes the types of care services that a bed can support.",
+        "name": "COVID19DXICD10",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.117"
+          "reference": "ValueSet/COVID19DXSNOMED"
         },
-        "name": "C19HCC Confirmed COVID19 Infection",
-        "description": "**Purpose:**\n\nClinical Focus:\n\nThis value set contains conditions associated with a confirmed diagnosis of COVID-19.\n\nData Element Scope:\n\nUsed to identify patients with a confirmed COVID-19 infection.\n\nInclusion Criteria:\n\nConditions associated with confirmed COVID-19 infection, including laboratory-confirmed COVID (symptomic or asymptomatic).\n\nExclusion Criteria:\n\nSuspected, possible or probable COVID-19, or possible exposure to COVID-19 without a definitive COVID-19 diagnosis.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.127"
-        },
-        "name": "C19HCC Hydroxychloroquine",
-        "description": "**Purpose:**\n\nClinical Focus:\n\nThis value set contains branded and non-branded hydroxychloroquine medications.\n\nData Element Scope:\n\nUsed to identify patients who had hydroxychloroquine as an active medication on their medication list or who were administered hydroxychloroquine during a hospitalization.\n\nInclusion Criteria:\n\nBranded and non-branded medications with hydroxychloroquine as an ingredient. RxNorm term types: SCD\\/GPCK, SBD\\/BPCK, SCDG, BCDG, SCDC, BCDC, IN, PIN, BN.\n\nExclusion Criteria:\n\nnone",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.120"
-        },
-        "name": "C19HCC SARSCoV2 Exposure",
-        "description": "**Purpose:**\n\nClinical Focus:\n\nThis value set contains conditions indicating the patient may have been exposed to SARS-CoV-2.\n\nData Element Scope:\n\nTo identify patients exposed or with a suspicion of exposure to SARS-CoV-2, whether associated with a suspicion of COVID-19 infection or not.\n\nInclusion Criteria:\n\nConditions indicative of possible exposure to SARS-CoV-2.\n\nExclusion Criteria:\n\n: Conditions representing suspicion or confirmation of COVID-19.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/2.16.840.1.113762.1.4.1032.116"
-        },
-        "name": "C19HCC Suspected COVID19 Infection",
-        "description": "**Purpose:**\n\nClinical Focus:\n\nConditions indicative of a possible COVID-19 infection but no definitive COVID-19 diagnosis.\n\nData Element Scope:\n\nUsed to identify patients suspected to have COVID-19.\n\nInclusion Criteria:\n\nIncludes conditions indicative of a possible COVID-19 diagnosis.\n\nExclusion Criteria:\n\nConditions associated with a confirmed COVID-19 infection.",
+        "name": "COVID19DXSNOMED",
         "exampleBoolean": false
       },
       {
@@ -291,6 +280,20 @@
         },
         "name": "COVID-19 Diagnostic Test",
         "description": "Codes for COVID-19 Diagnostic Tests",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/COVID19Exposure"
+        },
+        "name": "COVID19Exposure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/COVID19Organism"
+        },
+        "name": "COVID19Organism",
         "exampleBoolean": false
       },
       {
@@ -327,26 +330,17 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Fields"
+          "reference": "ValueSet/EventContext"
         },
-        "name": "Resource Fields",
-        "description": "This value set describes fields used to stratify groups in a report",
+        "name": "Event Context",
+        "description": "This Value Set enables classification of environmental events for categorizing measures.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/FieldsForDevice"
+          "reference": "ValueSet/HealthcareServiceLocation"
         },
-        "name": "Resource Fields for Device",
-        "description": "Field names in the Device Resource",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/FieldsForLocation"
-        },
-        "name": "Resource Fields for Location",
-        "description": "Field names in the Location Resource",
+        "name": "HealthcareServiceLocation",
         "exampleBoolean": false
       },
       {
@@ -415,10 +409,56 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/PatientsOnVentilator"
+        },
+        "name": "Observations for Patients on a Ventilator",
+        "description": "This Value Set identifies patients currently on a ventilator",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PublicHealthMeasureAttachmentTypes"
+        },
+        "name": "Public Health Measure Attachment Types",
+        "description": "Preferred Mime Types for use with Public Health Measure Definitions",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Remdesivir"
+        },
+        "name": "Remdesivir",
+        "description": "This Value Set identifies Remdesivir",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/SARSCoV2GeneticLabs"
+        },
+        "name": "SARSCoV2 Genetic Labs",
+        "description": "This Value Set Labs which gene-based testing instead of other methods (e.g., Antibody testing)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/SARSCoV2Labs"
+        },
+        "name": "SARSCoV2Labs",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/ScoreAgeBrackets"
         },
         "name": "Age Brackets By Score (20)",
         "description": "A Value Set of age groups in 20 year increments used in some public health dashboards",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/SuspectedCOVID19"
+        },
+        "name": "SuspectedCOVID19",
         "exampleBoolean": false
       },
       {
@@ -443,14 +483,6 @@
         },
         "name": "Ventilator Devices when used with Tracheostomy",
         "description": "Codes used for Devices that support Ventilation with a Tracheostomy",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/BedType"
-        },
-        "name": "Bed Type Coding System",
-        "description": "This Coding System fills gaps describing types of care services that a bed can support.",
         "exampleBoolean": false
       },
       {
@@ -483,22 +515,6 @@
         },
         "name": "Measure Rate Aggregation Coding System",
         "description": "This Coding System Identifies methods of rate aggregation",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/ResourceFieldsForDevice"
-        },
-        "name": "Resource Fields for Device",
-        "description": "This Coding System identifies legal field names in a FHIR R4 Device Resource.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/ResourceFieldsForLocation"
-        },
-        "name": "Resource Fields for Location",
-        "description": "This Coding System identifies legal field names in a FHIR R4 Location Resource.",
         "exampleBoolean": false
       },
       {
@@ -545,7 +561,7 @@
         },
         "name": "ComputeMeasure-evaluate-measure",
         "description": "Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated.\n                            Otherwise, a new report is created.",
-        "exampleBoolean": true
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -909,6 +925,13 @@
       },
       {
         "reference": {
+          "reference": "Library/FEMAMeasureLibrary"
+        },
+        "name": "FEMAMeasureLibrary",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureLibrary"
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/HAvBED2toFHIR"
         },
         "name": "HAvBED2 to FHIR Concept Map",
@@ -920,7 +943,7 @@
         },
         "name": "MeasureComputer",
         "description": "Defines the requirements for the Measure Computer.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -928,7 +951,7 @@
         },
         "name": "MeasureComputer-ComputeMeasure",
         "description": "Defines the requirements for the Measure Computer implementing the Compute Measure transaction.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -936,7 +959,7 @@
         },
         "name": "MeasureConsumer-API-Pull",
         "description": "Defines the additional requirements for the Measure Consumer implementing the API Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -944,7 +967,7 @@
         },
         "name": "MeasureConsumer-API-Pull-Questionnaire",
         "description": "Defines the additional requirements for the Measure Consumer implementing the API Option, the Pull Option, and the Questionnaire Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -952,7 +975,7 @@
         },
         "name": "MeasureConsumer-API-Push",
         "description": "Defines the additional requirements for the Measure Consumer implementing the API Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -960,7 +983,7 @@
         },
         "name": "MeasureConsumer-Aggregate",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Aggregate Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -968,7 +991,7 @@
         },
         "name": "MeasureConsumer-CSV-Pull",
         "description": "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -976,7 +999,7 @@
         },
         "name": "MeasureConsumer-CSV-Push",
         "description": "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -984,7 +1007,7 @@
         },
         "name": "MeasureConsumer-ProduceMeasure-API-Push",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the API Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -992,7 +1015,7 @@
         },
         "name": "MeasureConsumer-ProduceMeasure-CSV-Push",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1000,7 +1023,7 @@
         },
         "name": "MeasureConsumer-QueryMeasure-API-Pull",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1008,7 +1031,7 @@
         },
         "name": "MeasureConsumer-QueryMeasure-API-Pull-Questionnaire",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1016,7 +1039,7 @@
         },
         "name": "MeasureConsumer-QueryMeasure-CSV-Pull",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1024,7 +1047,7 @@
         },
         "name": "MeasureDefinitionConsumer",
         "description": "Defines the requirements for the Measure Definition Consumer.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1032,7 +1055,7 @@
         },
         "name": "MeasureDefinitionConsumer-QueryMeasureDefinition",
         "description": "Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1040,7 +1063,7 @@
         },
         "name": "MeasureDefinitionSource",
         "description": "Defines the requirements for the Measure Definition Source.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1048,7 +1071,7 @@
         },
         "name": "MeasureDefinitionSource-QueryMeasureDefinition",
         "description": "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1056,7 +1079,7 @@
         },
         "name": "MeasureSource-API-Pull",
         "description": "Defines the additional requirements for the Measure Source implementing the API Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1064,7 +1087,7 @@
         },
         "name": "MeasureSource-API-Pull-Questionnaire",
         "description": "Defines the additional requirements for the Measure Source implementing the API Option, the Pull Option, and the Questionnaire Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1072,7 +1095,7 @@
         },
         "name": "MeasureSource-API-Push",
         "description": "Defines the additional requirements for the Measure Source implementing the API Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1080,7 +1103,7 @@
         },
         "name": "MeasureSource-Aggregate",
         "description": "Defines the additional requirements for the Measure Source implementing the Aggregate Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1088,7 +1111,7 @@
         },
         "name": "MeasureSource-CSV-Pull",
         "description": "Defines the additional requirements for the Measure Source implementing the CSV Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1096,7 +1119,7 @@
         },
         "name": "MeasureSource-CSV-Push",
         "description": "Defines the additional requirements for the Measure Source implementing the CSV Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1104,7 +1127,7 @@
         },
         "name": "MeasureSource-ProduceMeasure-API-Push",
         "description": "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the API Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1112,7 +1135,7 @@
         },
         "name": "MeasureSource-ProduceMeasure-CSV-Push",
         "description": "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the CSV Option and the Push Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1120,7 +1143,7 @@
         },
         "name": "MeasureSource-QueryMeasure-API-Pull",
         "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the API Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1128,7 +1151,7 @@
         },
         "name": "MeasureSource-QueryMeasure-API-Pull-Questionnaire",
         "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1136,7 +1159,14 @@
         },
         "name": "MeasureSource-QueryMeasure-CSV-Pull",
         "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the CSV Option and the Pull Option.",
-        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/CapabilityStatementWithSlices"
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Library/NHSNMeasureLibrary"
+        },
+        "name": "NHSNMeasureLibrary",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureLibrary"
       },
       {
         "reference": {
@@ -1152,7 +1182,7 @@
         },
         "name": "ProduceMeasure-aggregate",
         "description": "This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.\nThe MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by\nspecifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources\nbeing aggregated must reference the same Measure resource defining the MeasureReport to generate.\n                        ",
-        "exampleBoolean": true
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1160,7 +1190,7 @@
         },
         "name": "ProduceMeasure-report-csv",
         "description": "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.\nOtherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
-        "exampleBoolean": true
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1168,7 +1198,7 @@
         },
         "name": "QueryMeasure-read-csv",
         "description": "Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.",
-        "exampleBoolean": true
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -1176,7 +1206,7 @@
         },
         "name": "QueryMeasure-search-csv",
         "description": "Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.",
-        "exampleBoolean": true
+        "exampleBoolean": false
       },
       {
         "reference": {

@@ -1,11 +1,12 @@
 
 Instance: MeasureDefinitionSource
 InstanceOf: CapabilityStatementWithSlices
+Usage: #definition
 Description: "Defines the requirements for the Measure Definition Source."
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionSource"
 * title = "Measure Definition Source."
-* date = "2020-08-31T01:16:36.012543-04:00"
+* date = "2020-09-04T23:05:22.903075-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Source."
 * format[0] = #xml
@@ -55,6 +56,10 @@ Description: "Defines the requirements for the Measure Definition Source."
 * rest[serverSlice].resource[MeasureSlice].searchParam[5].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[MeasureSlice].searchParam[5].extension.valueCode = #SHOULD
 
+* rest[serverSlice].resource[MeasureSlice].searchInclude[0] = "*"
+* rest[serverSlice].resource[MeasureSlice].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[MeasureSlice].searchInclude[0].extension.valueCode = #SHALL
+
 * rest[serverSlice].resource[MeasureSlice].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
 * rest[serverSlice].resource[MeasureSlice].extension[0].extension[0].url = "required"
 * rest[serverSlice].resource[MeasureSlice].extension[0].extension[0].valueString = "_id"
@@ -98,3 +103,26 @@ Description: "Defines the requirements for the Measure Definition Source."
 * rest[serverSlice].resource[MeasureSlice].extension[5].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
 * rest[serverSlice].resource[MeasureSlice].extension[5].extension[0].url = "required"
 * rest[serverSlice].resource[MeasureSlice].extension[5].extension[0].valueString = "code:in"
+
+* rest[serverSlice].resource[LibrarySlice].type = #Library
+
+* rest[serverSlice].resource[LibrarySlice].interaction[0].code = #read
+* rest[serverSlice].resource[LibrarySlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[LibrarySlice].interaction[0].extension.valueCode = #SHALL
+
+* rest[serverSlice].resource[LibrarySlice].interaction[1].code = #search-type
+* rest[serverSlice].resource[LibrarySlice].interaction[1].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[LibrarySlice].interaction[1].extension.valueCode = #SHALL
+
+* rest[serverSlice].resource[LibrarySlice].searchParam[0].name = "_id"
+* rest[serverSlice].resource[LibrarySlice].searchParam[0].type = #token
+* rest[serverSlice].resource[LibrarySlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[LibrarySlice].searchParam[0].extension.valueCode = #SHALL
+
+* rest[serverSlice].resource[LibrarySlice].searchInclude[0] = "*"
+* rest[serverSlice].resource[LibrarySlice].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[LibrarySlice].searchInclude[0].extension.valueCode = #SHALL
+
+* rest[serverSlice].resource[LibrarySlice].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+* rest[serverSlice].resource[LibrarySlice].extension[0].extension[0].url = "required"
+* rest[serverSlice].resource[LibrarySlice].extension[0].extension[0].valueString = "_id"

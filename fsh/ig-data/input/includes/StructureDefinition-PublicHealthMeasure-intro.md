@@ -112,7 +112,7 @@ It **should** come from SNOMED CT codes descending from
 `Measure.useContext.code = `[http://snomed.info/sct#272379006 Event](https://browser.ihtsdotools.org/?perspective=full&conceptId1=272379006)<br/>
 and<br/>
 2. `Measure.useContext.valueCodableConcept` **should** come from SNOMED CT Codes descending from 276746005 Environmental Event
-to classify the type of event. See [Event Context](#todo) for the ValueSet for this classification.
+to classify the type of event. See [Event Context](ValueSet-EventContext.html) for the Value Set for this classification.
 
 #### Measures Focused on a Particular Specialty
 1. Measures focusing on a particular specialty **shall** record the specialty in Measure.useContext, where:<br/>

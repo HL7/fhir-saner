@@ -1,11 +1,12 @@
 
 Instance: MeasureDefinitionConsumer
 InstanceOf: CapabilityStatementWithSlices
+Usage: #definition
 Description: "Defines the requirements for the Measure Definition Consumer."
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer"
 * title = "Measure Definition Consumer."
-* date = "2020-08-31T01:16:36.012543-04:00"
+* date = "2020-09-04T23:05:22.903075-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer."
 * format[0] = #xml
@@ -23,7 +24,7 @@ Description: "Defines the requirements for the Measure Definition Consumer."
 
 * rest[clientSlice].resource[MeasureSlice].interaction[1].code = #search-type
 * rest[clientSlice].resource[MeasureSlice].interaction[1].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[clientSlice].resource[MeasureSlice].interaction[1].extension.valueCode = #SHALL
+* rest[clientSlice].resource[MeasureSlice].interaction[1].extension.valueCode = #SHOULD
 
 * rest[clientSlice].resource[MeasureSlice].searchParam[0].name = "_id"
 * rest[clientSlice].resource[MeasureSlice].searchParam[0].type = #token
@@ -54,6 +55,10 @@ Description: "Defines the requirements for the Measure Definition Consumer."
 * rest[clientSlice].resource[MeasureSlice].searchParam[5].type = #token
 * rest[clientSlice].resource[MeasureSlice].searchParam[5].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].resource[MeasureSlice].searchParam[5].extension.valueCode = #MAY
+
+* rest[clientSlice].resource[MeasureSlice].searchInclude[0] = "*"
+* rest[clientSlice].resource[MeasureSlice].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[clientSlice].resource[MeasureSlice].searchInclude[0].extension.valueCode = #MAY
 
 * rest[clientSlice].resource[MeasureSlice].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
 * rest[clientSlice].resource[MeasureSlice].extension[0].extension[0].url = "required"
@@ -98,3 +103,26 @@ Description: "Defines the requirements for the Measure Definition Consumer."
 * rest[clientSlice].resource[MeasureSlice].extension[5].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
 * rest[clientSlice].resource[MeasureSlice].extension[5].extension[0].url = "required"
 * rest[clientSlice].resource[MeasureSlice].extension[5].extension[0].valueString = "code:in"
+
+* rest[clientSlice].resource[LibrarySlice].type = #Library
+
+* rest[clientSlice].resource[LibrarySlice].interaction[0].code = #read
+* rest[clientSlice].resource[LibrarySlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[clientSlice].resource[LibrarySlice].interaction[0].extension.valueCode = #SHALL
+
+* rest[clientSlice].resource[LibrarySlice].interaction[1].code = #search-type
+* rest[clientSlice].resource[LibrarySlice].interaction[1].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[clientSlice].resource[LibrarySlice].interaction[1].extension.valueCode = #SHOULD
+
+* rest[clientSlice].resource[LibrarySlice].searchParam[0].name = "_id"
+* rest[clientSlice].resource[LibrarySlice].searchParam[0].type = #token
+* rest[clientSlice].resource[LibrarySlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[clientSlice].resource[LibrarySlice].searchParam[0].extension.valueCode = #SHALL
+
+* rest[clientSlice].resource[LibrarySlice].searchInclude[0] = "*"
+* rest[clientSlice].resource[LibrarySlice].searchInclude[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[clientSlice].resource[LibrarySlice].searchInclude[0].extension.valueCode = #MAY
+
+* rest[clientSlice].resource[LibrarySlice].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+* rest[clientSlice].resource[LibrarySlice].extension[0].extension[0].url = "required"
+* rest[clientSlice].resource[LibrarySlice].extension[0].extension[0].valueString = "_id"

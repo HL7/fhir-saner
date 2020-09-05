@@ -1,11 +1,12 @@
 
 Instance: MeasureConsumer-QueryMeasure-API-Pull-Questionnaire
 InstanceOf: CapabilityStatementWithSlices
+Usage: #definition
 Description: "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option."
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_QueryMeasure_API_Pull_Questionnaire"
 * title = "Measure Consumer implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option."
-* date = "2020-08-31T01:16:36.012543-04:00"
+* date = "2020-09-04T23:05:22.903075-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option."
 * format[0] = #xml

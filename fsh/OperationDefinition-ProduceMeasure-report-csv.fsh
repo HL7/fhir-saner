@@ -1,13 +1,14 @@
 
 Instance: ProduceMeasure-report-csv
 InstanceOf: OperationDefinition
+Usage: #definition
 Description: "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.
 Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."
 * insert SanerDefinitionContent
  
 * status = #draft
 * kind = #operation
-* code = #$report-csv
+* code = #report-csv
 * resource[0] = #Measure
 * system = false
 * type = false
