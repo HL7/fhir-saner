@@ -12,6 +12,7 @@ Description:    "A Capability Statement with slicing defined"
 * rest[clientSlice].mode = #client (exactly)
 * rest[serverSlice].mode = #server (exactly)
 
+
 * rest.resource ^slicing.discriminator.type = #value
 * rest.resource ^slicing.discriminator.path = "type"
 * rest.resource ^slicing.rules = #open
@@ -22,7 +23,8 @@ Description:    "A Capability Statement with slicing defined"
     MeasureSlice 0..1 and
     MeasureReportSlice 0..1 and
     QuestionnaireSlice 0..1 and
-    QuestionnaireResponseSlice 0..1
+    QuestionnaireResponseSlice 0..1 and
+    LibrarySlice 0..*
 
 * rest.resource[LocationSlice].type = #Location (exactly)
 * rest.resource[OrganizationSlice].type = #Organization (exactly)
@@ -30,4 +32,5 @@ Description:    "A Capability Statement with slicing defined"
 * rest.resource[MeasureReportSlice].type = #MeasureReport (exactly)
 * rest.resource[QuestionnaireSlice].type = #Questionnaire (exactly)
 * rest.resource[QuestionnaireResponseSlice].type = #QuestionnaireResponse (exactly)
+* rest.resource[LibrarySlice].type = #Library (exactly)
 

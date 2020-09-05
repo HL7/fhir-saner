@@ -260,7 +260,7 @@ focus (e.g., wider or smaller region).</description>
     <!--  Other Use Cases can describe options -->
     <actor id="MeasureSource">
         <name>Measure Source</name>
-        <description>The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.</description>
+        <description>The Measure Source Actor reports results Meor a single facility, collection of facilities or aggregated data for a region.</description>
         <!-- overview is optional -->
         <overview>
 In a single facility, or organization, the Measure Source Actor will compile data directly from the facility
@@ -402,7 +402,7 @@ A multi-level data aggregation and reporting hierarchy using Measure Intermediar
             The Measure Definition Consumer actor is responsible for retrieving measures from publishing systems to automate measure reporting.
         </overview>
         <requires-tx transaction="PULL-MX" as="client">
-            <role>Queries for available measures.</role>
+            <role>Queries for available measures and components.</role>
         </requires-tx>
     </actor>
     <actor id="MeasureComputer" groups="MeasureSource MeasureDefinitionConsumer">
@@ -504,7 +504,7 @@ than more selective _include operations.  Recursive includes can be a source of 
 an incorrectly implemented include with recursive includes could wind up retrieving far more data than
 the client expected.  Thus, these are not recommended.</overview>
                         <parameter name='_include' min='0' max='1' values='*' type='string' expect='shall'/>
-                        <parameter name='_include:iterate' expect='should-not'/>
+                        <parameter name='_include:iterate' type='string' expect='should-not'/>
                     </group>
 
                     <!-- Operation describes the specific operation for the protocol
@@ -902,17 +902,31 @@ have since changed in R4).
                             expect='should' client='should-not'/>
                     </group>
                     <group>
+                        <name>Include Support</name>
+                        <description>To reduce transaction overhead, a client system may wish to retrieve all the resources referenced by the
+                            selected resource when obtaining it. This can be accomplished by using a search with an _id parameter, combined with
+                            _include=*.
+                        </description>
+                        <overview>This guide does not further specify specify resource includes beyond required support for *.
+                            Systems that support _include gernally handle _include=*, in fact, in some ways it is easier to implement
+                            than more selective _include operations.  Recursive includes can be a source of server loading issues, as
+                            an incorrectly implemented include with recursive includes could wind up retrieving far more data than
+                            the client expected.  Thus, these are not recommended.</overview>
+                        <parameter name='_include' min='0' max='1' values='*' type='string' expect='shall'/>
+                        <parameter name='_include:iterate' type='string' expect='should-not'/>
+                    </group>
+                    <group>
                         <description>The server must support the _count parameter for queries. Servers **should** use a default
 value for _count if no value is provided to avoid server overloading.  This guide recommends a default value of 100 based on
 existing implementation experience.</description>
                         <parameter name='_count' min='0' max='1' expect='shall'/>
                     </group>
-                    <operation name='read' resources='Measure' expect='shall'>
+                    <operation name='read' resources='Measure Library' expect='shall'>
                         <name>Read on Required Resources</name>
-                        <description>A client must be able to read individual Measure resources that are returned by a query.</description>
+                        <description>A client must be able to read individual Measure and Library resources that are returned by a query.</description>
                     </operation>
-                    <operation name='search' resources='Measure' expect='shall'>
-                        <name>Search by _id on Measure Resources</name>
+                    <operation name='search' resources='Measure Library' expect='shall' client="should">
+                        <name>Search by _id on Measure and Library Resources</name>
                         <group>
                             <name>Search by _id</name>
                             <description>A client must be able to read individual resources that are returned or referenced within resources
@@ -922,7 +936,7 @@ selected resource. This can be accomplished by using a search with an _id parame
                             <parameter name='_id' min='1' max='*' type='token' expect='shall'/>
                         </group>
                     </operation>
-                    <operation id='search-for-measure-definition' name='search' resources='Measure' expect='shall'>
+                    <operation id='search-for-measure-definition' name='search' resources='Measure' expect='shall' client="should">
                         <name>Search on Measure Definition Resources</name>
                         <description>Systems must be able to retrieve measures needed for automation.</description>
                             <overview>Measures can be identified by codes used in the measure,
@@ -938,7 +952,6 @@ and so this is not a strict requirement for implementers.  Also, chained searchi
 is also not always readily available, and so search by measure title is also not a hard requirement.
 At the very least, a server must be able to search by measure, and a client must also to ensure
 the greatest interoperability between systems with differing capabilities.</overview>
-
                         <group>
                             <name>Search by Text or Code</name>
                             <description>A client system **should** be able to search for Measure definitions.  This requirement can be met through support of the
@@ -992,7 +1005,8 @@ an appropriate success response in a FHIR resource following the protocol for th
             <name>Compute Measure</name>
             <description>The Measure Computer computes the measure report for the current reporting period.</description>
             <trigger id="CTRIGGER1">
-                <name>The current reporting period has elapsed. [TBD Define how reporting periods are specified in a measure](#todo)</name>
+                <name>The current reporting period has elapsed.</name>
+                <description>See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension</description>
             </trigger>
             <semantics>
                 <description>The Measure Computer prepares a Measure Report.</description>

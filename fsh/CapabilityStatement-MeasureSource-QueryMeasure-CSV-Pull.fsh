@@ -1,11 +1,12 @@
 
 Instance: MeasureSource-QueryMeasure-CSV-Pull
 InstanceOf: CapabilityStatementWithSlices
+Usage: #definition
 Description: "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the CSV Option and the Pull Option."
 * insert SanerDefinitionContent
 * name = "MeasureSource_QueryMeasure_CSV_Pull"
 * title = "Measure Source implementing the Query Measure transaction with the CSV Option and the Pull Option."
-* date = "2020-08-31T01:16:36.012543-04:00"
+* date = "2020-09-04T23:05:22.903075-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the CSV Option and the Pull Option."
 * format[0] = #xml

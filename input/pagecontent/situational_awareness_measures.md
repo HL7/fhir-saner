@@ -242,6 +242,6 @@ are not generally available in computable form. When reporting these elements, t
 MeasureReport resource for these elements to indicate that they are not available.
 
 To enable measure developers to specify which measure components are required, recommended or optional
-this IG defines the [Measure-expectation](StructureDefinition-measure-expectation.html) extension. This
+this IG defines the [Measure Expectation](StructureDefinition-measure-expectation.html) extension. This
 extension operates identically to the https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html
 extension, but can be applied to Measure resources.

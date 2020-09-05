@@ -1953,6 +1953,9 @@
       "url": "https://www.cdc.gov/nhsn/pdfs/covid19/facility-import-hcw.csv"
     }
   ],
+  "library": [
+    "http://hl7.org/fhir/us/saner/StructureDefinition/NHSNMeasureLibrary"
+  ],
   "type": [
     {
       "coding": [

@@ -1,5 +1,5 @@
-Extension: DefinitionExpection
-Id: definition-expectation
+Extension: MeasureExpection
+Id: measure-expectation
 Description: "Enables definitions to identify components that are required, recommended or optional"
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element
@@ -103,37 +103,26 @@ Description:    "A CodeableConcept describing the item to be counted in terms of
 * text 1..1
 * text ^short = "Supply human readable text describing what is enumerated/counted for the measure"
 
-Profile:        PublicHealthMeasure
-Parent:         Measure
-Title:          "Saner Public Health Measure"
-Description:    """Profile Saner Public Health Measure
-The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
-of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
-and computation of it can be automated from systems that have the measure data.
-"""
-* insert SanerStructureDefinitionContent
-
+RuleSet: PublicHealthMeasureMetadata
 * name 1..1
-* name ^short = "Each measure must have a name."
-* name ^comment = "The name should be in PascalCase, and should represent the Author's title of the Measure.  Identify the Author to clarify"
+* name ^short = "Each resource must have a name."
+* name ^comment = "The name should be in PascalCase, and should represent the Author's title of the resource.  Identify the Author to clarify"
 * url 1..1
-* url ^short = "Each measure must have a url."
-* url ^comment = "The url for measures defined in The Situation Awareness for Novel Epidemic Response IG will follow IG URL naming conventions."
+* url ^short = "Each resource must have a url."
+* url ^comment = "The url for resource defined in The Situation Awareness for Novel Epidemic Response IG will follow IG URL naming conventions."
 * status from MeasureStatus
 * status ^short = "draft | active | retired"
-* status ^comment = "draft - The Measure is still in development. active - The Measure is ready for piloting or normal use.  retired - Measure has been deprecated or replaced."
+* status ^comment = "draft - The resource is still in development. active - The resource is ready for piloting or normal use.  retired - resource has been deprecated or replaced."
 * experimental 1..1
-* experimental ^short = "A measure must indicate its experimental status"
+* experimental ^short = "A resource must indicate its experimental status"
 * experimental ^comment = "true - development, testing or pilots, false - production use"
-* version ^short = "Measure resources are versioned like IG's 0.1.0 = first development version, 0.2.0 - first published for review version, 1.0.0 first official version ..."
+* version ^short = "Resources are versioned like IG's 0.1.0 = first development version, 0.2.0 - first published for review version, 1.0.0 first official version ..."
 * version 1..1
 * publisher 1..1
-* publisher ^short = "The name of the organization publishing this Measure resource"
+* publisher ^short = "The name of the organization publishing this resource"
 * contact 1..*
-* contact ^short = "The contact information for whom to contact about this Measure resource"
+* contact ^short = "The contact information for whom to contact about this resource"
 * contact ^comment = "At least one contact shall be an email"
-* subject[x] only CodeableConcept
-* subjectCodeableConcept = http://hl7.org/fhir/resource-types#Location
 * useContext 1..*
 * useContext ^short = "The ISO 3166 code for use context"
 * author 1..1
@@ -144,8 +133,61 @@ and computation of it can be automated from systems that have the measure data.
 * author.telecom ^short = "There must be contact information for the author."
 * author.telecom ^comment = "At least on author contact should be an email address."
 * relatedArtifact 1..*
-* relatedArtifact ^short = "There must be at least one artifact describing the measure in human readable form.  This does not include software generated pages from the IG-Builder."
+* relatedArtifact ^short = "There must be at least one artifact describing the measure in human readable form."
+
+Profile:        PublicHealthMeasureMetadataAttachments
+Parent:         Attachment
+Title:          "PublicHealthMeasureMetadataAttachments"
+Description:    "Attachments providing resources containing essential content supporting a measure definition"
+* id 1..1   // ID is required to support references
+* contentType 1..1
+* contentType ^short = "application/fhir+xml | application/fhir+json | text/cql | application/gzip"
+* contentType ^definition = """FHIR Resources should use application/fhir+xml or application/fhir+json, CQL source files should use text/cql, and FHIR Packages
+should use application/gzip.
+"""
+* contentType from PublicHealthMeasureAttachmentTypes (required)
+* data 0..1     // for now, we have no good way to generate this SO
+* url 1..1      // we require a url
+* title 1..1
+
+ValueSet: PublicHealthMeasureAttachmentTypes
+Title: "Public Health Measure Attachment Types"
+Description: "Preferred Mime Types for use with Public Health Measure Definitions"
+* http://tools.ietf.org/html/bcp13#application/fhir+xml
+* http://tools.ietf.org/html/bcp13#application/fhir+json
+* http://tools.ietf.org/html/bcp13#text/cql
+* http://tools.ietf.org/html/bcp13#application/gzip
+
+
+Profile:        PublicHealthMeasureLibrary
+Parent:         Library
+Title:          "Public Health Measure Library"
+Description:    """A Public Health Measure Library contains essential ConceptMap, ValueSet, CodingSystem,
+NamingSystem, SearchParameter, CQL definitions or other resources for measure evaluation.
+"""
+* insert SanerStructureDefinitionContent
+* insert PublicHealthMeasureMetadata
+* content only PublicHealthMeasureMetadataAttachments
+* content 1..*
+
+
+Profile:        PublicHealthMeasure
+Parent:         Measure
+Title:          "Saner Public Health Measure"
+Description:    """Profile Saner Public Health Measure
+The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
+of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
+and computation of it can be automated from systems that have the measure data.
+"""
+* insert SanerStructureDefinitionContent
+* insert PublicHealthMeasureMetadata
+
+* subject[x] only CodeableConcept
+* subjectCodeableConcept = http://hl7.org/fhir/resource-types#Location
 * extension contains ReportingPeriod named measureTiming 1..1
+* library ^type.targetProfile = Canonical(PublicHealthMeasureLibrary)
+* library 1..*
+
 * group.extension contains MeasureGroupAttributes named groupAtts 0..1
 * group.extension[groupAtts] ^short = "Describes the attributes of one or more sections of the measure (form) being reported"
 

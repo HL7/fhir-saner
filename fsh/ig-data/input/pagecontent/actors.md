@@ -387,7 +387,7 @@ The actors in this profile are described in more detail in the sections below.
 
 #### Measure Source
 
-The Measure Source Actor reports results for a single facility, collection of facilities or aggregated data for a region.
+The Measure Source Actor reports results Meor a single facility, collection of facilities or aggregated data for a region.
 
 
 

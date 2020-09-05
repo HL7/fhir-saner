@@ -19,13 +19,33 @@ Preferred models are marked with an asterisk.
 The examples below are informative, and show how measures could be developed to support different constraints using existing
 vocabularies and value sets supported by HL7 FHIR.
 
-### Patient Encounters
+In the text below, examples are based on measures analyzed from the CDC Patient Impact and Hospital Capacity module used for
+reporting in the first half of 2020 and shown below.
+![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)
+
+
+### Active Patient Encounters
 Encounters represent interactions between a patient and a healthcare provider in inpatient, outpatient or other settings. Many measures
 for situational awareness start with a patient encounter as the context for the measurement.
 
-#### Encounters Within a Time Frame
+The HOSPITAL INPATIENT BED OCCUPANCY measure can be evaluated through encounters.
+The initial set of encounters can be retrieved using the `Encounters?status=in-progress` FHIR query, or represented as
+`Encounter.where(status='in-progress')` in FHIRPath.
+
+#### Active Encounters Within a Time Frame
 Both Encounter.period.start and Encounter.period.end can be tested for occurence on a specific day, or within a given date range,
 allowing for tests of Admit/Discharge/Transfer/Death by date.
+
+If looking for encounters started yesterday, and today is September 1, 2020, the appropriate FHIR query is:
+`Encounter?date=sa2020-08-30T23:59:59&date=le2020-09-01`. This query will find encounters that start after the last second of August 30,
+and which were present before September 1.  These encounters must have been present Yesterday, and started after the day before yesterday,
+thus, must have started yesterday.  The same query expressed as a filter in FHIRPath is `Encounter.where(period.start.toDate() = @2020-08-31)`.
+FHIRPath provides finer grained access than FHIR queries, enabling direct access to the start component of the encounter period.  The start
+component needs to be converted to a date to ensure that precision matches for the equals operator.
+
+The first and second examples above can be combined to ensure that the encounters in question are still in-progress, and filter out other
+encounters (e.g., those created in error).  For the FHIR query, this would be `Encounters?status=in-progress&date=sa2020-08-30T23:59:59&date=le2020-09-01`.
+In FHIRPath, this would be `Encounter.where(period.start.toDate() = @2020-08-31 and status = 'in-progress')`
 
 #### Admission
 An admission generally starts an encounter that lasts more than a single day, although might also be used for encounters lasting only
@@ -45,13 +65,13 @@ through a search.
   <tbody>
      <tr><td>Encounter.status</td>
          <td>Active encounters</td>
-         <td>status=in-progress</td>
+         <td>Encounter?status=in-progress</td>
          <td>Encounter.where(status='in-progress')</td>
          <td>[Encounter] E where E.status = 'in-progress'</td>
      </tr>
      <tr><td>Encounter.period.start</td>
          <td>Encounters starting starting on a given date or within a particular period</td>
-         <td>date=sa<i>2020-09-07T23:59:59</i>&date=lt<i>2020-09-09</i><br/>
+         <td>Encounter?date=sa<i>2020-09-07T23:59:59</i>&date=lt<i>2020-09-09</i><br/>
              Because the date search parameter is compared to a period data type, the upper and lower
              bounds must be set in a way that ensures inclusion of the target period.  Using a high
              precision time value for the sa component is less likely to run into implementation
@@ -84,13 +104,13 @@ rather than treatment.
   <tbody>
      <tr><td>Encounter.status</td>
          <td>Encounters that have been completed</td>
-         <td>status=finished</td>
+         <td>Encounter?status=finished</td>
          <td>Encounter.where(status='finished')</td>
          <td>[Encounter] E where E.status = 'finished'</td>
      </tr>
      <tr><td>Encounter.period.end</td>
          <td>Encounters ending on a given date or within a particular period.</td>
-         <td>date=ge<i>2020-09-07T23:59:59</i>&date=eb<i>2020-09-09</i><br/>
+         <td>Encounter?date=ge<i>2020-09-07T23:59:59</i>&date=eb<i>2020-09-09</i><br/>
              Because the date search parameter is compared to a period data type, the upper and lower
              bounds must be set.
          </td>
@@ -120,7 +140,7 @@ Encounter.hospitalization.dispositionCode **should** be present, and where the t
   <tbody>
     <tr><td>Encounter.hospitalization.dispositionCode</td>
         <td>Transitions to home or similar settings</td>
-        <td>disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|home,<br/>
+        <td>Encounter?disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|home,<br/>
             http://terminology.hl7.org/CodeSystem/discharge-disposition|alt-home</i>,<br/>
             http://terminology.hl7.org/CodeSystem/discharge-disposition|aadvice</i>,<br/>
             http://terminology.hl7.org/CodeSystem/discharge-disposition|oth</i><br/>
@@ -144,14 +164,16 @@ present and indicates a transfer to a different healthcare setting (e.g., rehabi
   <tbody>
     <tr><td>Encounter.hospitalization.dispositionCode</td>
         <td>Transitions to other healthcare settings other than home or death</td>
-        <td>disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|home</i>&<br/><
-            disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|alt-home</i>&<br/>
-            disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|aadvice</i>&
-            disposition:not=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|oth</i><br/>
+        <td>Encounter?disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|other-hcf,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|hosp,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|long,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|psy,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|rehab,<br/>
+            http://terminology.hl7.org/CodeSystem/discharge-disposition|snf</i>
         </td>
         <td>Encounter.where(<br/>
             hospitalization.dispositionCode.where(system='http://terminology.hl7.org/CodeSystem/discharge-disposition'<br/>
-               and code = ('home'|'alt-home'|'aadvice'|'oth'|'exp') ) ).not()</td>
+               and code = ('other-hcf'|'hosp'|'long'|'psy'|'rehab'|'snf') ) )</td>
         <td>valueset TransferEnvironment http://example.com/valueset/TransferEnvironment<br/>
             [Encounter] E where E.hospitalization.dispositionCode in TransferEnvironment</td>
     </tr>
@@ -186,7 +208,7 @@ occured during the encounter (i.e., date of death is >= Encounter.period.start a
   <tbody>
     <tr><td>Encounter.hospitalization.dispositionCode</td>
         <td>Transitions due to Death</td>
-        <td>disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|exp</i></td>
+        <td>Encounter?disposition=<i>http://terminology.hl7.org/CodeSystem/discharge-disposition|exp</i></td>
         <td>Encounter.where(<br/>
             hospitalization.dispositionCode.where(system='http://terminology.hl7.org/CodeSystem/discharge-disposition'<br/>
                and code = 'exp') ) )</td>
@@ -202,18 +224,22 @@ occured during the encounter (i.e., date of death is >= Encounter.period.start a
   <tbody>
     <tr><td>Patient.deceasedDateTime</td>
         <td>Patient date of death</td>
-        <td>death-date=2020-09-09</td>
+        <td>Patient?death-date=2020-09-09</td>
         <td>Patient.where(deceasedDateTime = @2020-09-09)</td>
         <td>[Patient] P where P.deceasedDateTime = @2020-09-09</td>
     </tr>
     <tr><td rowspan='2'>Patient.deceased[x]</td>
         <td>Patient has died</td>
-        <td>deceased=true</td>
+        <td>Patient?deceased=true</td>
         <td>// Patient has died, or there is a date of death<br/>Patient.where(deceasedBoolean = true | deceasedDateTime.exists())</td>
-        <td>[Patient] E where P.deceasedBoolean = true or P.deceasedDateTime is not null</td>
+        <td>[Patient] P where P.deceasedBoolean = true or P.deceasedDateTime is not null</td>
     </tr>
     <tr><td>Patient has died within this encounter</td>
-        <td>N/A</td>
+        <td>// NOTE: This query uses chained search, and will NOT test that the patient died during the encounter <br/>
+            // It will return both encounters and patients so that further analysis can<br/>
+            // be performed by the client.  This sort of issue should be documented in<br/>
+            // <a href='https://www.hl7.org/fhir/metadatatypes-definitions.html#Expression.description'>Expression.description</a> in the measure definition.<br/>
+            Encounter?patient.deceased=true&_include=Encounter:subject</td>
         <td>Encounter.where(<br/>
             // Patient has died during the encounter<br/>
             (resolve(patient).deceasedDateTime >= $this.period.start and<br/>
@@ -264,14 +290,15 @@ This guide provides a (ConceptMap)[ConceptMap_ServiceDeliveryLocations.html) tha
   <tbody>
      <tr><td>Encounter.class</td>
          <td>Inpatient (Acute) Encounters</td>
-         <td>class=http://terminology.hl7.org/CodeSystem/v3-ActCode|ACUTE</td>
+         <td>Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode|ACUTE</td>
          <td>Encounter.where(status.where(system='http://terminology.hl7.org/CodeSystem/v3-ActCode' and code='ACUTE'))</td>
          <td>valueset AcuteEncounter http://example.com/valueset/AcuteEncounter
              [Encounter] E where E.class in AcuteEncounter</td>
      </tr>
      <tr><td>Encounter.serviceType</td>
          <td>Encounters providing a specific kind of service</td>
-         <td>N/A</td>
+         <td>// NOTE: Requires custom search parameter for service-type
+             Encounter?serviceType=http://terminology.hl7.org/CodeSystem/service-type|237</td>
          <td>Encounter.where(serviceType.where(system='http://terminology.hl7.org/CodeSystem/service-type' and code='237')
          </td>
          <td>valueset EncounterServiceType http://example.com/valueset/EncounterServiceType<br/>
@@ -281,8 +308,8 @@ This guide provides a (ConceptMap)[ConceptMap_ServiceDeliveryLocations.html) tha
      </tr>
      <tr><td>Location.type</td>
          <td>Encounters in a specific type of location</td>
-         <td>// Encounters in a hospital unit
-         location.type=http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|HU</td>
+         <td>// NOTE: Used chained search for Encounters in a hospital unit
+             Encounter?location.type=http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|HU</td>
          <td>Encounter.where(location.physicalType.where(system='http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType' and code='HU'))</td>
          <td>valueset LocationType http://example.com/valueset/LocationType<br/>
              context Encounter
@@ -342,72 +369,113 @@ active.  The `Condition.recordedDate` indicates when the provider recorded the c
   <tbody>
      <tr><td>Encounter.reasonCode</td>
          <td>Encounter for a specific disease by code</td>
-         <td>reason-code=</td>
-         <td>Encounter.where(reasonCode.where(system='http://terminology.hl7.org/CodeSystem/v3-ActCode' and code='ACUTE'))</td>
-         <td>valueset COVID-19 http://example.com/valueset/AcuteEncounter
+         <td>Encounter?reason-code=http://snomed.info/sct|186747009,http://snomed.info/sct|713084008,http://snomed.info/sct|840539006,http://snomed.info/sct|840544004</td>
+         <td>Encounter.where(reasonCode.where(system='http://snomed.info/sct' and code=('186747009','713084008','840539006','840544004')))</td>
+         <td>valueset AcuteEncounter http://example.com/valueset/AcuteEncounter
              [Encounter] E where E.class in AcuteEncounter</td>
      </tr>
-     <tr><td>Encounter.serviceType</td>
-         <td>Encounters providing a specific kind of service</td>
-         <td>N/A</td>
-         <td>Encounter.where(serviceType.where(system='http://terminology.hl7.org/CodeSystem/service-type' and code='237')
+     <tr><td>Encounter.reasonReference</td>
+         <td>Encounters referencing a condition resource</td>
+         <td>// Chained search<br/>
+             Encounter.reasonReference.code=http://snomed.info/sct|186747009,<br/>
+             http://snomed.info/sct|713084008,<br/>
+             http://snomed.info/sct|840539006,<br/>
+             http://snomed.info/sct|840544004</td>
+         <td>Encounter.where(reasonReference.resolve().code.where(system='http://snomed.info/sct' and <br/>
+               code=('186747009','713084008','840539006','840544004'))
          </td>
-         <td>valueset EncounterServiceType http://example.com/valueset/EncounterServiceType<br/>
-             [Encounter] E where <br/>
-             E.serviceType in EncounterServiceType
+         <td>valueset COVID19Conditions http://example.com/valueset/COVID19Conditions<br/>
+             [Condition] C where <br/>
+             C.id = Encounter.reasonReference and<br/>
+             C.code in COVID19Conditions
          </td>
      </tr>
-     <tr><td>Location.type</td>
-         <td>Encounters in a specific type of location</td>
-         <td>// Encounters in a hospital unit
-         location.type=http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|HU</td>
-         <td>Encounter.where(location.physicalType.where(system='http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType' and code='HU'))</td>
-         <td>valueset LocationType http://example.com/valueset/LocationType<br/>
+     <tr><td>Condition.code</td>
+         <td>Condition recorded for a given encounter</td>
+         <td>Condition?encounter=<i>encounterId</i>&<br/>
+             code=http://snomed.info/sct|186747009,http://snomed.info/sct|713084008,http://snomed.info/sct|840539006,http://snomed.info/sct|840544004
+         </td>
+         <td>Condition.where(system='http://snomed.info/sct' and <br/>
+               code=('186747009','713084008','840539006','840544004')) and<br/>
+               encounter=<i>encounterId</i>
+         </td>
+         <td>valueset COVID19Conditions http://example.com/valueset/COVID19Conditions<br/>
              context Encounter
-             [Location] L where <br/>
-             L.id = Encounter.location
-             L.type in LocationType
+             [Condition] C where <br/>
+             C.encounter = Encounter.id<br/>
+             C.code in COVID19Conditions
          </td>
      </tr>
   </tbody>
 </table>
 
 
-### With a Diagnostic Test Result Outcome
+### Measures based on Diagnostic Values
+Several different kinds of measures can be based on values of diagnostic tests or observations, including
+observations such as those about social history or vital signs.
 
-Test Performed
-:
+#### Test Performed
+Electronic laboratory reporting is used to track both the kinds of tested performed as well as the results.
+A commonly reported measure for COVID-19 is the number of COVID-19 diagnostic tests performed.
 
-Positive Result
-:
+Reporting of certain kinds of observations (e.g., Fraction of Inhaled Oxygen or Positive End Expiratory Pressure) are commonly reported
+for patients who are on a ventilator.  Existence of these observations indicate that a patient is on a ventilator.
 
-Negative Result
-:
+<table border='1' cellspacing='0'>
+  <caption>Determining the reason for care using Encounter resources</caption>
+  <thead><tr><th>Field</th><th>Description</th><th>FHIR Query</th><th>FHIR Path</th><th>CQL</th></tr></thead>
+  <tbody>
+     <tr><td>Observation.code</td>
+         <td>Diagnostic Result from a COVID-19 test</td>
+         <td>Observation?code=http://loinc.org|94307-6,http://loinc.org|94308-4,http://loinc.org|94309-2,http://loinc.org|94310-0,<br/>
+http://loinc.org|94314-2,http://loinc.org|94315-9,http://loinc.org|94316-7,http://loinc.org|94500-6,<br/>
+http://loinc.org|94533-7,http://loinc.org|94534-5,http://loinc.org|94558-4,http://loinc.org|94559-2
+        </td>
+         <td>Observation.where(code.where(system = 'http://loinc.org' and <br/>
+             code = ('19994-3','19995-0','19996-8','94310-0','94314-2','94315-9','94316-7','94500-6','94533-7','94534-5','94558-4','94559-2') ) )</td>
+         <td>valueset SarsCoV2Labs http://example.com/valueset/SarsCoV2Labs
+             [Observation] O where O.code in SarsCoV2Labs</td>
+     </tr>
+     <tr><td>Observation.code</td>
+         <td>Patients with observations indicating that they are on a ventilator</td>
+         <td>// Chained search<br/>
+             Observation.code=http://loinc.org|,http://loinc.org|</td>
+         <td>Observation?code=http://loinc.org|19835-8,http://loinc.org|19994-3,http://loinc.org|20077-4,http://loinc.org|20079-0,http://loinc.org|20103-8,<br/>
+http://loinc.org|20112-9,http://loinc.org|20115-2,http://loinc.org|33438-3,http://loinc.org|57655-3,http://loinc.org|76530-5,http://loinc.org|19839-0
+        </td>
+         <td>Observation.where(code.where(system = 'http://loinc.org' and <br/>
+             code = ('19835-8','19994-3','20077-4','20079-0','20103-8','20112-9','20115-2','33438-3','57655-3','76530-5','19839-0') ) )</td>
+         <td>valueset PatientsOnVentilator http://example.com/valueset/PatientsOnVentilator
+             [Observation] O where O.code in PatientsOnVentilator</td>
+     </tr>
+  </tbody>
+</table>
 
-Indeterminate Result
-:
-
-Test Value within a Range
-:
-
-Test Value with an interpretation
-:
+#### Test with a coded result or interpretation
+[Todo: Test Value with a coded result](#todo)
+#### Test Value within a Range
+[Todo: Test Value within a range](#todo)
 
 ### Using or Not using a given medication
+[Todo: Test Medications](#todo)
+
 on/not on a given medication:
   medication prescribed
   medication administered
   reporting via Medication Resource vs. Medication code
 
 ### Immunized / Not Immunized for a Disease
+[Todo: Test Immunizations](#todo)
 having/not having a given immunization:
 
 ### Having/Not Having had a given Procedure
+[Todo: Test Procedures](#todo)
 having/not having had a given procedure:
 
 with X (see above) within N days of today:
 
 ### Handling Temporal Relationships
+[Todo: Temporal and Resource relationships](#todo)
 In the example below, NHSN defined HOSPITAL ONSET for COVID-19 as shown below:
 
 > HOSPITAL ONSET: Patients currently hospitalized in an inpatient bed with onset of

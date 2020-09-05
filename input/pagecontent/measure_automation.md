@@ -16,7 +16,7 @@ of one-off reporting solutions, including operational disruptions to address cha
 Among institutions, barriers to reporting include having available systems to report to,
 and challenges in interfacing to facility Health IT infrastructure and extracting data from EHR systems[^4].
 
-Thus, measures **should** bee automatable where feasible, and integratee with existing Health IT system capabilities.
+Thus, measures **should** be automatable where feasible, and integratee with existing Health IT system capabilities.
 Automation of measurement is possible when:
 1. There is a common information model:
    1. A commonly understood information model and terminology that enables data collection requirements to be
@@ -52,7 +52,7 @@ based on the national implementation model for a region with translations to loc
 The value sets used to automate the computation of a measure must be available to systems that are computing the measure.
 These **shall** be recorded in [Library.relatedArtifact](https://www.hl7.org/fhir/library-definitions.html#Library.relatedArtifact)
 in at least one of the [library](https://www.hl7.org/fhir/measure-definitions.html#Measure.library)
-components referenced by the Measure. 
+components referenced by the Measure.
 
 ### Data Access for Computation
 Data access is encouraged through one of three mechanisms, all of which rely eventually on FHIR core search capabilities.  These mechanisms
@@ -96,16 +96,21 @@ list above):
 
 3. text/cql<br/>
    Expressions defines in CQL **shall** conform to the [Clinical Quality Language](https://cql.hl7.org/), and are permitteed to
-   use CQL modules referenced by one of the [libraries](https://www.hl7.org/fhir/measure-definitions.html#Measure.library) 
+   use CQL modules referenced by one of the [libraries](https://www.hl7.org/fhir/measure-definitions.html#Measure.library)
    referenced by the measure.
 
 ### Other Measure Definition Content
-A computable public health measure may reference [ValueSet](), [ConceptMap](), [CQL definitions](), [SearchParameter]() and 
-other FHIR conformance resources to support automation. The [PublicHealthMeasureLibary](StructureDefinition-PublicHealthMeasureLibary.html) defines
+A computable public health measure may reference [ValueSet](https://www.hl7.org/fhir/ValueSet), [ConceptMap](https://www.hl7.org/fhir/), [CQL definitions](https://cql.hl7.org/), [SearchParameter](https://www.hl7.org/fhir/SearchParameter) and
+other FHIR conformance resources to support automation. The [PublicHealthMeasureLibrary](StructureDefinition-PublicHealthMeasureLibrary.html) defines
 the constraints relevant to referencing the FHIR resources needed to automate measure computation.
 
 **Footnotes**
+
 [^1]: Effler P, Ching-Lee M, Bogard A, Ieong MC, Nekomoto T, Jernigan D. Statewide system of electronic notifiable disease reporting from clinical laboratories: comparing automated reporting with conventional methods. JAMA. 1999 Nov 17;282(19):1845-50. doi: 10.1001/jama.282.19.1845. Erratum in: JAMA 2000 Jun 14;283(22):2937. PMID: 10573276. Available on the web at https://pubmed.ncbi.nlm.nih.gov/10573276/
+
 [^2]: Overhage JM, Grannis S, McDonald CJ. A comparison of the completeness and timeliness of automated electronic laboratory reporting and spontaneous reporting of notifiable conditions. Am J Public Health. 2008 Feb;98(2):344-50. doi: 10.2105/AJPH.2006.092700. Epub 2008 Jan 2. PMID: 18172157; PMCID: PMC2376898. Available on the web at https://pubmed.ncbi.nlm.nih.gov/18172157/
+
 [^3]: Rizi SA, Roudsari A. Development of a public health reporting data warehouse: lessons learned. Stud Health Technol Inform. 2013;192:861-5. PMID: 23920680. Available on the web at http://ebooks.iospress.nl/volumearticle/34122
+
 [^4]: Holmgren AJ, Apathy NC, Adler-Milstein J. Barriers to Hospital Electronic Public Health Reporting and Implications for the COVID-19 Pandemic. J Am Med Inform Assoc. 2020 May 22:ocaa112. doi: 10.1093/jamia/ocaa112. Epub ahead of print. PMID: 32442266. Available on the web at https://pubmed.ncbi.nlm.nih.gov/32442266/
+

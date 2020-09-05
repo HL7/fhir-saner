@@ -58,7 +58,10 @@ This transaction enables automatic computing of measure reports.
 The Measure Computer computes the measure report for the current reporting period.
 
 
-##### Trigger Event - The current reporting period has elapsed. [TBD Define how reporting periods are specified in a measure](#todo)
+##### Trigger Event - The current reporting period has elapsed.
+
+See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension
+
 
 ##### Message Semantics
 

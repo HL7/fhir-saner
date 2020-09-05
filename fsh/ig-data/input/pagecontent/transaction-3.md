@@ -23,7 +23,7 @@ This transaction enables a MeasureDefinition Consumer actor to access Measure re
 <td>Reports on available measures in response to a query.</td>
 </tr>
         <tr><td><a href="actors.html#measure-definition-consumer">Measure Definition Consumer</a></td>
-<td>Queries for available measures.</td>
+<td>Queries for available measures and components.</td>
 </tr>
         
 </tbody>
@@ -207,6 +207,94 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </li>
 
 <li>
+Include Support
+<div>
+
+To reduce transaction overhead, a client system may wish to retrieve all the resources referenced by the
+                            selected resource when obtaining it. This can be accomplished by using a search with an _id parameter, combined with
+                            _include=*.
+                        
+
+
+This guide does not further specify specify resource includes beyond required support for *.
+                            Systems that support _include gernally handle _include=*, in fact, in some ways it is easier to implement
+                            than more selective _include operations.  Recursive includes can be a source of server loading issues, as
+                            an incorrectly implemented include with recursive includes could wind up retrieving far more data than
+                            the client expected.  Thus, these are not recommended.
+
+
+</div>
+
+
+<table class='grid'>
+
+<thead><tr>
+
+<th>Parameter</th><th>Cardinality</th><th>
+Measure Definition Source Expectation</th><th>
+Measure Definition Consumer Expectation</th>
+
+</tr></thead>
+
+<tbody>
+
+
+<tr>
+
+<td>
+
+_include=*
+
+</td>
+
+<td>
+
+0..1
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+<td>
+
+<b>SHALL</b>
+
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+
+_include:iterate
+
+</td>
+
+<td>
+
+
+</td>
+<td>
+
+<b>SHOULD NOT</b>
+
+</td>
+<td>
+
+<b>SHOULD NOT</b>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+        
+</li>
+
+<li>
 
 <div>
 
@@ -265,12 +353,13 @@ _count
 
 ###### Read on Required Resources
 
-A client must be able to read individual Measure resources that are returned by a query.
+A client must be able to read individual Measure and Library resources that are returned by a query.
 
-The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR read operation on  the Measure resource.
+The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR read operation on  the Measure and Library resources.
 
-###### Search by _id on Measure Resources
-The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
+###### Search by _id on Measure and Library Resources
+The MeasureDefinitionConsumer <b>SHOULD</b> demonstrate the FHIR search operation on  the Measure and Library resources with the following parameters.
+The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation on  the Measure and Library resources with the following parameters.
 
 <ol>
 
@@ -351,6 +440,7 @@ is also not always readily available, and so search by measure title is also not
 At the very least, a server must be able to search by measure, and a client must also to ensure
 the greatest interoperability between systems with differing capabilities.
 
+The MeasureDefinitionConsumer <b>SHOULD</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
 The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
 
 <ol>

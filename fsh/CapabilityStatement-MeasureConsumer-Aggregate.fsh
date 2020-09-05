@@ -1,11 +1,12 @@
 
 Instance: MeasureConsumer-Aggregate
 InstanceOf: CapabilityStatementWithSlices
+Usage: #definition
 Description: "Defines the additional requirements for the Measure Consumer implementing the Aggregate Option."
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Aggregate"
 * title = "Measure Consumer implementing the Aggregate Option."
-* date = "2020-08-31T01:16:36.012543-04:00"
+* date = "2020-09-04T23:05:22.903075-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Aggregate Option."
 * format[0] = #xml

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -34,8 +35,12 @@ public class ResourceToFSH {
     private static boolean explode = false;
     private static String WILDCARDS[] = { "*.json", "*.xml" };
     public static void main(String args[]) {
+        boolean isB64 = false;
         for (String arg: args) {
             switch (arg) {
+            case "-b":
+                isB64 = true;
+                continue;
             case "-4":
                 ctx = FhirContext.forR4();
                 continue;
@@ -50,27 +55,37 @@ public class ResourceToFSH {
                 continue;
             }
             if (arg.contains("?") || arg.contains("*")) {
-                readFiles(new File("."), arg);
+                String front = StringUtils.substringBeforeLast(arg.replace("\\", "/"),"/");
+                readFiles(new File(front), isB64, arg.substring(front.length() + 1));
             } else {
-                readFiles(new File(arg), WILDCARDS);
+                readFiles(new File(arg), isB64, WILDCARDS);
             }
         }
     }
 
-    private static void readFiles(File f, String ... wildcards) {
+    private static void readFiles(File f, boolean isB64, String ... wildcards) {
         if (f.isDirectory()) {
             FileFilter fileFilter = new WildcardFileFilter(wildcards);
             for (File file: f.listFiles(fileFilter)) {
-                readFile(file);
+                readFile(file, isB64);
             }
         } else {
-            readFile(f);
+            readFile(f, isB64);
         }
     }
 
-    private static void readFile(File f) {
+    private static void readFile(File f, boolean isB64) {
         String resource = null;
         try {
+            if (isB64) {
+                byte data[] = FileUtils.readFileToByteArray(f);
+                Base64.Encoder encoder = Base64.getMimeEncoder();
+                String encoded = encoder.encodeToString(data);
+                System.out.println(f.getName());
+                System.out.println(encoded);
+                System.out.println("------");
+                return;
+            }
             resource = FileUtils.readFileToString(f, StandardCharsets.UTF_8);
         } catch (IOException e) {
             e.printStackTrace();
@@ -81,10 +96,6 @@ public class ResourceToFSH {
             IBaseResource r = p.parseResource(resource);
             if (r instanceof ValueSet) {
                 writeValueSet((ValueSet) r);
-            } else if (r instanceof org.hl7.fhir.dstu3.model.ValueSet) {
-                // Convert to R4 and then translate to FSH
-            } else if (r instanceof org.hl7.fhir.dstu2.model.ValueSet) {
-                // Convert to R4 and then translate to FSH
             } else if (r instanceof org.hl7.fhir.r4.model.Bundle) {
                 writeBundle((Bundle)r, explode);
             } else if (r instanceof org.hl7.fhir.r4.model.Resource) {
@@ -252,7 +263,11 @@ public class ResourceToFSH {
                 if (include.hasValueSet()) {
 
                 } else {
-
+                    for (ValueSet.ConceptReferenceComponent ref: include.getConcept()) {
+                        System.out.printf(" * %s#%s \"%s\"%n",
+                            include.getSystem(), ref.getCode(),
+                            expand(ref.getDisplay()));
+                    }
                 }
             }
             for (ValueSet.ConceptSetComponent exclude: r.getCompose().getExclude()) {

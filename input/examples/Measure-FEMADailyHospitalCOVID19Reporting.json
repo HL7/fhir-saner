@@ -52,11 +52,11 @@
   ],
   "author": [
     {
-      "name": "FEMA",
+      "name": "HL7 Public Health Workgroup",
       "telecom": [
         {
           "system": "email",
-          "value": "mailto:fema-hhs-covid-diagnostics-tf@fema.dhs.gov "
+          "value": "mailto:pher@lists.hl7.org"
         }
       ]
     }
@@ -100,8 +100,6 @@
     }
   ],
   "rateAggregation": "aggregable-by-period",
-  "name": "FEMADailyHospitalCOVID19Reporting",
-  "url": "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting",
   "relatedArtifact": [
     {
       "type": "documentation",
@@ -128,6 +126,11 @@
       "label": "Excel Spreadsheet template for reporting to FEMA"
     }
   ],
+  "library": [
+    "http://hl7.org/fhir/us/saner/StructureDefinition/FEMAMeasureLibrary"
+  ],
+  "name": "FEMADailyHospitalCOVID19Reporting",
+  "url": "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting",
   "group": [
     {
       "code": {

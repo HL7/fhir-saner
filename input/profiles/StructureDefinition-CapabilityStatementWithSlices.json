@@ -178,6 +178,18 @@
         "fixedCode": "QuestionnaireResponse"
       },
       {
+        "id": "CapabilityStatement.rest.resource:LibrarySlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "LibrarySlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:LibrarySlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Library"
+      },
+      {
         "id": "CapabilityStatement.rest:clientSlice",
         "path": "CapabilityStatement.rest",
         "sliceName": "clientSlice",

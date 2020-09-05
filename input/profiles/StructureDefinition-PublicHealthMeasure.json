@@ -110,28 +110,28 @@
       {
         "id": "Measure.url",
         "path": "Measure.url",
-        "short": "Each measure must have a url.",
-        "comment": "The url for measures defined in The Situation Awareness for Novel Epidemic Response IG will follow IG URL naming conventions.",
+        "short": "Each resource must have a url.",
+        "comment": "The url for resource defined in The Situation Awareness for Novel Epidemic Response IG will follow IG URL naming conventions.",
         "min": 1
       },
       {
         "id": "Measure.version",
         "path": "Measure.version",
-        "short": "Measure resources are versioned like IG's 0.1.0 = first development version, 0.2.0 - first published for review version, 1.0.0 first official version ...",
+        "short": "Resources are versioned like IG's 0.1.0 = first development version, 0.2.0 - first published for review version, 1.0.0 first official version ...",
         "min": 1
       },
       {
         "id": "Measure.name",
         "path": "Measure.name",
-        "short": "Each measure must have a name.",
-        "comment": "The name should be in PascalCase, and should represent the Author's title of the Measure.  Identify the Author to clarify",
+        "short": "Each resource must have a name.",
+        "comment": "The name should be in PascalCase, and should represent the Author's title of the resource.  Identify the Author to clarify",
         "min": 1
       },
       {
         "id": "Measure.status",
         "path": "Measure.status",
         "short": "draft | active | retired",
-        "comment": "draft - The Measure is still in development. active - The Measure is ready for piloting or normal use.  retired - Measure has been deprecated or replaced.",
+        "comment": "draft - The resource is still in development. active - The resource is ready for piloting or normal use.  retired - resource has been deprecated or replaced.",
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus"
@@ -140,7 +140,7 @@
       {
         "id": "Measure.experimental",
         "path": "Measure.experimental",
-        "short": "A measure must indicate its experimental status",
+        "short": "A resource must indicate its experimental status",
         "comment": "true - development, testing or pilots, false - production use",
         "min": 1
       },
@@ -180,13 +180,13 @@
       {
         "id": "Measure.publisher",
         "path": "Measure.publisher",
-        "short": "The name of the organization publishing this Measure resource",
+        "short": "The name of the organization publishing this resource",
         "min": 1
       },
       {
         "id": "Measure.contact",
         "path": "Measure.contact",
-        "short": "The contact information for whom to contact about this Measure resource",
+        "short": "The contact information for whom to contact about this resource",
         "comment": "At least one contact shall be an email",
         "min": 1
       },
@@ -219,8 +219,21 @@
       {
         "id": "Measure.relatedArtifact",
         "path": "Measure.relatedArtifact",
-        "short": "There must be at least one artifact describing the measure in human readable form.  This does not include software generated pages from the IG-Builder.",
+        "short": "There must be at least one artifact describing the measure in human readable form.",
         "min": 1
+      },
+      {
+        "id": "Measure.library",
+        "path": "Measure.library",
+        "min": 1,
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureLibrary"
+            ]
+          }
+        ]
       },
       {
         "id": "Measure.group.extension",
