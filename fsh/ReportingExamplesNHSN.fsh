@@ -71,6 +71,14 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -133,6 +141,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -192,6 +209,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -251,6 +277,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -310,6 +345,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -370,6 +414,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -429,6 +482,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -488,6 +550,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -547,6 +618,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -606,6 +686,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -665,6 +754,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -724,6 +822,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -783,6 +890,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -842,6 +958,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -901,6 +1026,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -960,6 +1094,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -1019,6 +1162,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -1078,6 +1230,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -1137,6 +1298,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -1196,6 +1366,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -1255,6 +1434,15 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport
@@ -1314,3 +1502,12 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
 * group[2].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[2].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[6].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19Pats
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[6].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[2].population[7].code.coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numC19VentPats
+* group[2].population[7].code.text = "Ventilated COVID-19 Patients"
+* group[2].population[7].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+

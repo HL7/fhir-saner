@@ -42,14 +42,16 @@
   "publisher": "HL7 International",
   "contact": [
     {
+      "name": "HL7 Public Health Workgroup",
       "telecom": [
         {
           "system": "url",
-          "value": "http://hl7.org/Special/committees/pafm/index.cfm"
+          "value": "http://hl7.org/Special/committees/pher/index.cfm"
         }
       ]
     },
     {
+      "name": "Keith W. Boone",
       "telecom": [
         {
           "system": "email",
@@ -70,7 +72,7 @@
   ],
   "name": "MeasureConsumer_ProduceMeasure_API_Push",
   "title": "Measure Consumer implementing the Produce Measure transaction with the API Option and the Push Option.",
-  "date": "2020-09-04T23:05:22.903075-04:00",
+  "date": "2020-09-05T19:38:22.796578-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the API Option and the Push Option.",
   "format": [

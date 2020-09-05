@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureSource_API_Pull"
 * title = "Measure Source implementing the API Option and the Pull Option."
-* date = "2020-09-04T23:05:22.903075-04:00"
+* date = "2020-09-05T19:38:22.796578-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the API Option and the Pull Option."
 * format[0] = #xml

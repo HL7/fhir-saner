@@ -21,7 +21,7 @@ Description: "This Value Set identifies patients currently on a ventilator"
 * http://loinc.org#76530-5 // Mean pressure Respiratory system airway --on ventilator
 * http://loinc.org#19839-0 // Breath rate spontaneous --on ventilator
 
-ValueSet: Remdsivir
+ValueSet: Remdesivir
 Title: "Remdesivir"
 Description: "This Value Set identifies Remdesivir"
 * ^name = "Remdesivir"
@@ -43,6 +43,7 @@ Description: "This Value Set identifies Remdesivir"
 
 // The following value sets are expansions from VSAC
 ValueSet: COVID19Organism
+Description: "This Value Set identifies codes describing SARS COV2 Related Substances detected during testing"
  * ^version = "20200716"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1143"
  * ^status = #active
@@ -52,6 +53,7 @@ ValueSet: COVID19Organism
  * http://snomed.info/sct#840536004 "Antigen of severe acute respiratory syndrome coronavirus 2 (substance)"
 
 ValueSet: COVID19Antibody
+Description: "This Value Set includes codes describing SARS COV-2 antibodies detected during testing"
  * ^version = "20200430"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155"
  * ^status = #active
@@ -60,6 +62,7 @@ ValueSet: COVID19Antibody
  * http://snomed.info/sct#840535000 "Antibody to severe acute respiratory syndrome coronavirus 2 (substance)"
 
 ValueSet: COVID19DXICD10
+Description: "This Value Set includes codes describing COVID-19 illness from ICD-10-CM"
  * ^version = "20200516"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
  * ^status = #active
@@ -71,6 +74,7 @@ ValueSet: COVID19DXICD10
  * http://hl7.org/fhir/sid/icd-10-cm#U07.1 "COVID-19"
 
 ValueSet: COVID19DXSNOMED
+Description: "This Value Set includes codes describing COVID-19 illness from SNOMED-CT"
  * ^version = "Draft"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
  * ^status = #draft
@@ -82,6 +86,7 @@ ValueSet: COVID19DXSNOMED
  * http://snomed.info/sct#840544004 "Suspected disease caused by severe acute respiratory coronavirus 2 (situation)"
 
 ValueSet: COVID19Exposure
+Description: "This Value Set includes codes describing COVID-19 exposure from SNOMED-CT"
  * ^version = "20200604"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
  * ^status = #active
@@ -90,6 +95,7 @@ ValueSet: COVID19Exposure
  * http://snomed.info/sct#840546002 "Exposure to severe acute respiratory syndrome coronavirus 2 (event)"
 
 ValueSet: HealthcareServiceLocation
+Description: "This Value Set includes codes describing Service Locations in a healthcare facility"
  * ^version = "20200604"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275"
  * ^status = #active
@@ -311,6 +317,7 @@ ValueSet: HealthcareServiceLocation
  * urn:oid:2.16.840.1.113883.6.259#1268-2 "Outpatient Hemodialysis Clinic - Acute Kidney Injury"
 
 ValueSet: SARSCoV2Labs
+Description: "This Value Set identifies Lab tests related to detection of current or prior COVID-19 infection."
  * ^version = "20200417"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
  * ^status = #active
@@ -331,7 +338,7 @@ ValueSet: SARSCoV2Labs
 
 ValueSet: SARSCoV2GeneticLabs
 Title: "SARSCoV2 Genetic Labs"
-Description: "This Value Set Labs which gene-based testing instead of other methods (e.g., Antibody testing)"
+Description: "This Value Set identifies Lab tests using gene-based testing instead of other methods (e.g., Antibody testing)"
  * ^version = "20200904"
  * ^status = #active
  * ^publisher = "HL7"
@@ -348,6 +355,7 @@ Description: "This Value Set Labs which gene-based testing instead of other meth
  * http://loinc.org#94559-2 "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory specimen by NAA with probe detection"
 
 ValueSet: SuspectedCOVID19
+Description: "This Value Set identifies conditions that may be related to COVID-19"
  * ^version = "20200410"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.116"
  * ^status = #active

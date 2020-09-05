@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_CSV_Push"
 * title = "Measure Consumer implementing the CSV Option and the Push Option."
-* date = "2020-09-04T23:05:22.903075-04:00"
+* date = "2020-09-05T19:38:22.796578-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Push Option."
 * format[0] = #xml

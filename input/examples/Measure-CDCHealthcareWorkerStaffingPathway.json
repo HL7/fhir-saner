@@ -44,8 +44,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "45956004",
                     "system": "http://snomed.info/sct",
+                    "code": "45956004",
                     "display": "Sanitarian"
                   }
                 ],
@@ -152,8 +152,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "106293008",
                     "system": "http://snomed.info/sct",
+                    "code": "106293008",
                     "display": "Nursing personnel"
                   }
                 ],
@@ -260,8 +260,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "442867008",
                     "system": "http://snomed.info/sct",
+                    "code": "442867008",
                     "display": "Respiratory therapist"
                   }
                 ],
@@ -368,8 +368,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "46255001",
                     "system": "http://snomed.info/sct",
+                    "code": "46255001",
                     "display": "Pharmacist"
                   }
                 ],
@@ -476,8 +476,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "309343006",
                     "system": "http://snomed.info/sct",
+                    "code": "309343006",
                     "display": "Physician"
                   }
                 ],
@@ -584,8 +584,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "405623001",
                     "system": "http://snomed.info/sct",
+                    "code": "405623001",
                     "display": "Assigned practitioner"
                   }
                 ],
@@ -692,8 +692,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "33738006",
                     "system": "http://snomed.info/sct",
+                    "code": "33738006",
                     "display": "Other medical/dental/veterinary/related worker"
                   }
                 ],
@@ -800,8 +800,8 @@
                     "code": "Practitioner"
                   },
                   {
-                    "code": "158965000",
                     "system": "http://snomed.info/sct",
+                    "code": "158965000",
                     "display": "Medical practitioner"
                   }
                 ],
@@ -906,75 +906,13 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "106375005"
                   }
                 ],
-                "text": "Persons who work in the facility"
-              }
-            },
-            {
-              "url": "type",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "structure",
-                    "system": "http://terminology.hl7.org/CodeSystem/measure-type"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "improvementNotation",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "increase",
-                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
-        }
-      ],
-      "code": {
-        "coding": [
-          {
-            "code": "shortothsfy",
-            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
-          }
-        ],
-        "text": "Persons who work in the facility, regardless of clinical responsibility or patient contact not included in categories above"
-      }
-    },
-    {
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "scoring",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "continuous-variable",
-                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "subject",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/resource-types",
-                    "code": "Practitioner"
-                  }
-                ]
+                "text": "Cleaning Staff"
               }
             },
             {
@@ -1075,8 +1013,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Nursing Staff"
               }
             },
             {
@@ -1177,8 +1119,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Respiratory Specialists"
               }
             },
             {
@@ -1279,8 +1225,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Pharmacy Specialists"
               }
             },
             {
@@ -1381,8 +1331,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Attending Physicians"
               }
             },
             {
@@ -1483,8 +1437,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Intermittent Staff"
               }
             },
             {
@@ -1585,8 +1543,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Other Staff"
               }
             },
             {
@@ -1687,8 +1649,12 @@
                   {
                     "system": "http://hl7.org/fhir/resource-types",
                     "code": "Practitioner"
+                  },
+                  {
+                    "system": "http://snomed.info/sct"
                   }
-                ]
+                ],
+                "text": "Advanced Practice Nurse/Physician Assistant"
               }
             },
             {
@@ -1766,72 +1732,6 @@
           }
         }
       ]
-    },
-    {
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "scoring",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "continuous-variable",
-                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "subject",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/resource-types",
-                    "code": "Practitioner"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "type",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "structure",
-                    "system": "http://terminology.hl7.org/CodeSystem/measure-type"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "improvementNotation",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "increase",
-                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-                  }
-                ]
-              }
-            },
-            {
-              "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
-        }
-      ],
-      "code": {
-        "coding": [
-          {
-            "code": "posshortothsfy",
-            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
-          }
-        ],
-        "text": "Persons who work in the facility, regardless of clinical responsibility or patient contact not included in categories above."
-      }
     }
   ],
   "status": "draft",
@@ -1840,22 +1740,22 @@
   "publisher": "HL7 International",
   "contact": [
     {
+      "name": "HL7 Patient Administration Workgroup",
       "telecom": [
         {
           "system": "url",
           "value": "http://hl7.org/Special/committees/pafm/index.cfm"
         }
-      ],
-      "name": "HL7 Patient Administration Workgroup"
+      ]
     },
     {
+      "name": "Audacious Inquiry",
       "telecom": [
         {
           "system": "url",
           "value": "http://ainq.com"
         }
-      ],
-      "name": "Audacious Inquiry"
+      ]
     },
     {
       "name": "Keith W. Boone",

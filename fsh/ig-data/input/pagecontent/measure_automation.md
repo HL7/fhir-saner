@@ -65,11 +65,13 @@ are available, but this technology has not yet reached the maturity of other sor
 of systems supporting FHIR.
 
 #### Measure Definition Criteria
-A Measure is defined by the computable criteria contained in definitions for the Measure [population](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.population.criteria),
+A Measure is defined by the computable criteria contained in definitions for the Measure
+[population](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.population.criteria),
 [stratifier](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.stratifier.criteria) and other criteria components within the measure.
 These criteria elements are defined using the [Expression](https://www.hl7.org/fhir/metadatatypes.html#Expression) datatype.  This datatype
 requires the language used for the criteria to be defined using one of the following values (cooresponding to mechanisms listed in the
 list above):
+
 1. application/x-fhir-query<br/>
    Expressions defined using FHIR Search are defined by the URLs allowed by FHIR [Search](https://www.hl7.org/fhir/search.html). The URLs provided
    in the [Expression.expression](https://www.hl7.org/fhir/metadatatypes-definitions.html#Expression.expression) field **shall** be provided as

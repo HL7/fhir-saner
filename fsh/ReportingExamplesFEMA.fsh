@@ -57,6 +57,17 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
+
 Instance: ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/05/2020"
@@ -101,6 +112,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -147,6 +168,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/07/2020"
@@ -191,6 +222,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -237,6 +278,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/09/2020"
@@ -281,6 +332,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -327,6 +388,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/11/2020"
@@ -371,6 +442,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -417,6 +498,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/13/2020"
@@ -461,6 +552,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -507,6 +608,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/15/2020"
@@ -551,6 +662,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -597,6 +718,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/17/2020"
@@ -641,6 +772,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -687,6 +828,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/19/2020"
@@ -731,6 +882,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -777,6 +938,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/21/2020"
@@ -821,6 +992,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -867,6 +1048,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/23/2020"
@@ -911,6 +1102,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
 
 Instance: ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
@@ -957,6 +1158,16 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
 
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+
 Instance: ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting
 InstanceOf: PublicHealthMeasureReport
 Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ on 04/25/2020"
@@ -1001,3 +1212,14 @@ Description : "Example MeasureReport of FEMADailyHospitalCOVID19Reporting for NJ
 * group[1].measureScore.unit = "%"
 * group[1].measureScore.code = #%
 * group[1].measureScore.system = "http://unitsofmeasure.org"
+
+* group[1].population[4].code.coding = MeasurePopulationSystem#allReports
+* group[1].population[4].code.text = "All Laboratory Reports for any Order"
+* group[1].population[4].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[4].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+
+* group[1].population[5].code.coding = MeasurePopulationSystem#latestReports
+* group[1].population[5].code.text = "Most Recent Laboratory Reports for any Order"
+* group[1].population[5].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* group[1].population[5].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
+

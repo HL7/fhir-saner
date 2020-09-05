@@ -25,22 +25,38 @@
         <a href="overview.html">Overview</a>
       </li>
       <li>
-        <a href="technology_environment.html">Technology Environment</a>
+        <a href="situational_awareness_measures.html">Situational Awareness Measures</a>
       </li>
+      <li>
+        <a href="measure_aggregation.html">Aggregatating Measure Reports</a>
+      </li>
+      <li>
+        <a href="measure_automation.html">Computing Measures</a>
+      </li>
+      <li>
+        <a href="phrase_book.html">Creating Measures Supporting Automation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
       <li>
         <a href="architecture.html">Architecture</a>
-      </li>
-      <li>
-        <a href="security_considerations.html">Security Considerations</a>
       </li>
       <li>
         <a href="use_cases.html">Use Cases</a>
       </li>
       <li>
-        <a href="actors.html">Actors</a>
+        <a href="technology_environment.html">Technology Environment</a>
       </li>
       <li>
-        <a href="measures.html">Measures used for Reporting</a>
+        <a href="security_considerations.html">Security Considerations</a>
+      </li>
+      <li>
+        <a href="actors.html">Actors</a>
       </li>
     </ul>
   </li>

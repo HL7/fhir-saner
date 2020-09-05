@@ -6,7 +6,7 @@
   "title": "Remdesivir",
   "description": "This Value Set identifies Remdesivir",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/ValueSet/Remdsivir",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/Remdesivir",
   "compose": {
     "include": [
       {
