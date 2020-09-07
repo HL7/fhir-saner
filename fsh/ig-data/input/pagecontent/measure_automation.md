@@ -297,12 +297,20 @@ criteria.name = "InitialPop".  So, the example above:
 For CQL, this value will be a named parameter in the execution of other CQL Expressions.
 
 ### Invariants
-Within a measure, values in population.criteria.expression which are expressed in FHIRPath may use:
-1. Variables predefined by [FHIRPath](http://hl7.org/fhirpath/N1/#environment-variables), e.g., %ucum, %context
-2. Variables predefined by [FHIR in its use of FHIRPath](https://www.hl7.org/fhir/fhirpath.html#vars), e.g., %sct, %loinc, %"vs-[name]", %"ext-[name]", %resource
-3. Variables explicitely defined by [this guide](parameters-defined-in-this-guide), e.g., %_ReportingPeriod_, %_Today_, %_Tomorrow_, %_Yesterday_
-4. Variables which have been named in any Libary.content item referenced by the Measure, e.g., %_VentPatients_
-5. Variables which have been identified in other criteria.name elements found in the Measure. e.g., %_InitialPop_, %_VentilatedPatients_
+1. Within a measure, values in population.criteria.expression which are expressed in FHIRPath **may** use:
+   1. Variables predefined by [FHIRPath](http://hl7.org/fhirpath/N1/#environment-variables), e.g., %ucum, %context
+   2. Variables predefined by [FHIR in its use of FHIRPath](https://www.hl7.org/fhir/fhirpath.html#vars), e.g., %sct, %loinc, %"vs-[name]", %"ext-[name]", %resource
+   3. Variables explicitely defined by [this guide](#parameters-defined-in-this-guide), e.g., %_ReportingPeriod_, %_Today_, %_Tomorrow_, %_Yesterday_
+   4. Variables which have been named in any [Libary.content](#library-resources) item referenced by the Measure, e.g., %_VentPatients_
+   5. Variables which have been identified in other [population.criteria.name](#population-parameters) elements found in the Measure. e.g., %_InitialPop_, %_VentilatedPatients_
+2. Any other parmeters found **should** be reported as a warning, as implementation may agree on additional parmeters.
+3. No two parameters **shall** be provided in the context of a single measure with the same name having different values.
+   NOTE: The same resource may be referenced by two different libraries. So long as the URL and content of the resource is the same, the
+   name given to it in the referenced measure libaries **may** be identical.
+   1. More specifically, a Library **shall not** name a resource with any of the names defined by items 1-3 in rule 1 above,
+   2. A Measure **shall not** name a criteria with any of the names defined from items 1-4.
+   3. Parameter Names **shall not** be duplicated within a measure or library.
+
 
 ### Implementation Strategies
 The MeasureComputer actor is free to use whichever search strategies best fit. Implementers should remember the constraints on Measure

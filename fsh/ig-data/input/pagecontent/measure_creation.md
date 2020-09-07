@@ -1,6 +1,8 @@
 
 This section of the implementation guide walks through an example for automating computation
-of a measure.  Like the phrase book, it is based on the measure derived from the
+of a measure.  Like the phrase book, it is based on the measure derived from the CDC Patient Impact and
+Hospital Capacity module shown below.
+
 ![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)
 
 ### Patient Impact Data Elements
@@ -42,7 +44,7 @@ To simplify this section, this measure should be divided into at least three sep
 
 For these proposed groupings:
 #### Deaths in the Hospital
-Deaths in the hospital during the reporting period is half of an [event growth measure](situation_awareness_measures.html#event-growth),
+Deaths in the hospital during the reporting period is half of an [event growth measure](situational_awareness_measures.html#event-growth),
 it does not include the cumulative total number of deaths.  There are several good reasons to use an event growth measure in this case:
    1. Loss of a single report does not damage the cumulative total value.  When the next report is sent, a new cumulative total will also
       be sent, allowing the reciever to adjust for the missing data.
@@ -57,7 +59,7 @@ this is based on the date the sender started reporting data (the simplest to imp
 a given date or other criteria (more complicated).
 
 #### Suspected or Confirmed COVID-19 Patients Stratified by Location and Ventilator Status
-Upon further inspection, this is a [Queue Length](situation_awareness_measures.html#queue-length) measure. It measures patients in the hospital (in
+Upon further inspection, this is a [Queue Length](situational_awareness_measures.html#queue-length) measure. It measures patients in the hospital (in
 an inpatient setting or overflow area) awaiting completion of treatment. This is especially evidident in the case for patients in an ED/Overflow
 area awaiting an inpatient bed, but generally true for all the different strata.
 
@@ -83,7 +85,7 @@ Several measures consider dates and times that have a relative offset to the rep
 ### Hospital Capacity
 The next section of this measure addresses hospital capacity with respect to all beds, inpatient beds, ICU beds, and ventilators. It can be clearly
 divided into two groups: those dealing with available beds, and those dealing with available ventilators.
-These are all clearly [Capacity and Utilization](situation_awareness_measures.html#capacity-and-utilization) measures.
+These are all clearly [Capacity and Utilization](situational_awareness_measures.html#capacity-and-utilization) measures.
 
 #### Hospital Beds
 The "All Hospital Beds" measurement does not include both "available" and "in use" beds, and so would not normally be considered to be a
