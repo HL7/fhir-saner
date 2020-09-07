@@ -55,8 +55,8 @@ in at least one of the [library](https://www.hl7.org/fhir/measure-definitions.ht
 components referenced by the Measure.
 
 ### Data Access for Computation
-Data access is encouraged through one of three mechanisms, all of which rely eventually on FHIR core search capabilities.  These mechanisms
-are described in order from lowest to highest implementation complexity.
+Data access is encouraged through one of three mechanisms, all of which rely on core [FHIR search](https://www.hl7.org/fhir/search.html) capabilities.
+These mechanisms are described in order from lowest to highest implementation complexity.
 1. [FHIR Search](http://hl7.org/fhir/R4/search.html) is the basic capability supporing automation. Applications can support counting by using
 FHIR queries to select appropriate data elements for evaluation, and then compute measures based on the responses.  This is the most limited
 and "chatty" of mechanisms supporting integration, as many servers to not provide search capabilities supporting query across resource
@@ -73,6 +73,11 @@ context, the language includes capabilities which support automation of queries,
 localization of models to support variations in organizational workflows and data models.  Several open source implementations of CQL interpreters
 are available, but this technology has not yet reached the maturity of other sorts of systems, and it is not always widely available for users
 of systems supporting FHIR.
+
+While measures conforming to this guide may use any of the above in expressions, FHIRPath is the preferred format because open source
+implementations of FHIRPath are [generally available](https://confluence.hl7.org/display/FHIR/Open+Source+Implementations) for multiple
+platforms including Java, JavaScript, .Net, and it supports most of the necessary functions to support comparisons for measures, including
+measures with complex date relationships (e.g., Patients acquiring COVID-19 14 days after admission).
 
 #### Measure Definition Criteria
 A Measure is defined by the computable criteria contained in definitions for the Measure
@@ -100,6 +105,16 @@ list above):
    Expressions defines in CQL **shall** conform to the [Clinical Quality Language](https://cql.hl7.org/), and are permitteed to
    use CQL modules referenced by one of the [libraries](https://www.hl7.org/fhir/measure-definitions.html#Measure.library)
    referenced by the measure.
+
+#### Implementation and Conformance
+The computable criteria found definitions for the Measure in
+[population](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.population.criteria),
+[stratifier](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.stratifier.criteria) and other criteria
+components within the measure are deemed to be the "normative" definition of the measure.  However, measure developers may wish to provide
+alternative implementations to support application environments that cannot support FHIRPath, or which have access to a high quality CQL
+engine. These definitions can be supplied using the [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html)
+extension. This extension allows alternate criteria to be supplied which can support evaluation on systems not having support for the
+preferred (and normative) specification for the measure.
 
 ### Other Measure Definition Content
 A computable public health measure may reference [ValueSet](https://www.hl7.org/fhir/ValueSet), [ConceptMap](https://www.hl7.org/fhir/), [CQL definitions](https://cql.hl7.org/), [SearchParameter](https://www.hl7.org/fhir/SearchParameter) and
@@ -197,19 +212,19 @@ Yesterday
 
 ##### Library Resources
 Attachments in Library resources referenced by a Measure (through Measure.library) are also available as parameters using the name given
-to the Attachment in the Attachment.id element (see [Element.id](https://www.hl7.org/fhir/element-definitions.html#Element.id) in FHIR).
+to the Attachment in the Attachment.id element (see the notes on [Internal Id Scope](https://www.hl7.org/fhir/element.html#id) for Elements in FHIR).
 
 NOTE: The use of Attachment.id to provide a computable name for the component referenced by the measure addresses the issue that while
-ValueSet and other definition resources include a "computable name" intended to support automation.  This name is not appropriate for 
+ValueSet and other definition resources include a "computable name" intended to support automation. This name is not appropriate for
 several reasons:
 
 1. Value Set developers and publishers do not follow the recommendations for computable names, which results in value sets (and other definition resources)
-having names that include spaces and other special characters (e.g. 
+having names that include spaces and other special characters (e.g.
 "[COVID_19 (Organism or Substance in Lab Results)](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1146.1203/expansion/Latest)").
 2. Measure developers may rely on value sets from multiple sources, which can result in value set names which conflict. However
-measure developers can control the names used in the Library resources they use to support a measure. 
+measure developers can control the names used in the Library resources they use to support a measure.
 
-This guide chosee to use a name specified in the id element of the resource because these names 
+This guide chose to use a name specified in the id element of the resource because these names
 
 For a give Measure resource, if Measure.library[0].content references a ValueSet resource, Measure.library[0].content.id is
 "ReferencedValueSet", then @_ReferencedValueSet_ is a parameter that can be used in a FHIR Query string.  It is available in
@@ -235,14 +250,81 @@ Servers can declare support for :in and :not-in by fully defining the search cap
 :in and :not-in modifiers are supported (e.g., by executing test queries), or simply translate for all cases.
 
 ##### Population Parameters
-Measure Populations are often computed iteratively.  For example, it's common to first identify the initial population via a search, and then
+Populations are often computed iteratively.  For example, it is common to first identify the initial population via a search, and then
 the compute the denominator by filtering results from the initial population matching a given criteria, and finally, the numerator by
 filtering results from the denominator.
 
+These components can be used in the criteria of other components using FHIRPath or CQL (but not when using FHIR Queries).  To assign a name to the
+one of these components, assign an name value to expression defining the population.
+
+#### Illustrating the Use of Parameters
+The example below illustrates the use of three different kinds parameters in evaluation:
+
+```
+<Measure>
+   ...
+   <group>
+     ...
+     <population>
+        ...
+        <criteria>
+           <name value='InitialPop'/>
+           <expression value='Encounter.where(...)'/>
+        </criteria>
+     </population>
+     <population>
+        ...
+        <criteria>
+           <name value='VentilatedPatients'/>
+           <expression value='Observation.where(
+                encounter = %Foo.id and
+                code.memberOf(%VentPatients.url)).patient and
+                effectiveDateTime >= %ReportingPeriod.start and effectiveDateTime < %ReportingPeriod.end'/>
+        </criteria>
+     </population>
+
+     ...
+   </group>
+</Measure>
+```
+
+The criteria for the population of the first group of a Measure has the name value of "InitialPop" in the example above.  References to
+%_InitialPop_ in other FHIRPath expressions will resolve to the value returned by execution of criteria.expression where
+criteria.name = "InitialPop".  So, the example above:
+
+1. Selects a particular set of encounters for the initial population, and defines the variable %_InitialPop_ to reference it by.
+2. It defines a second population in terms of the initial population, selecting the
+   distinct Patients that have observations that reference encounters found in %_InitialPop_ identified in the previous population,
+3. including only those Observations having a code in the ValueSet represented by %VentPatients
+4. and which occur during the predefined %_ReportingPeriod_ parameter.
+5. Finally, these patients will now be addressable as %_VentilatedPatients_ in other populations in this measure.
+
+For CQL, this value will be a named parameter in the execution of other CQL Expressions.
+
+### Invariants
+Within a measure, values in population.criteria.expression which are expressed in FHIRPath may use:
+1. Variables predefined by [FHIRPath](http://hl7.org/fhirpath/N1/#environment-variables), e.g., %ucum, %context
+2. Variables predefined by [FHIR in its use of FHIRPath](https://www.hl7.org/fhir/fhirpath.html#vars), e.g., %sct, %loinc, %"vs-[name]", %"ext-[name]", %resource
+3. Variables explicitely defined by [this guide](parameters-defined-in-this-guide), e.g., %_ReportingPeriod_, %_Today_, %_Tomorrow_, %_Yesterday_
+4. Variables which have been named in any Libary.content item referenced by the Measure, e.g., %_VentPatients_
+5. Variables which have been identified in other criteria.name elements found in the Measure. e.g., %_InitialPop_, %_VentilatedPatients_
 
 ### Implementation Strategies
-The MeasureComputer actor is free to use whichever search strategies best fit.  Implementers should remember the constraints on Measure
+The MeasureComputer actor is free to use whichever search strategies best fit. Implementers should remember the constraints on Measure
 Populations to ensure correct evaluation (e.g., an item in the denominator must be present in the initial population).
+
+While expressions are written in a way that supports use of FHIR Search, a MeasureComputer is NOT required to use FHIR Search capabilities depending
+upon how it is implemented.  It may perform queries using [FHIR Bulk Data](https://hl7.org/fhir/uv/bulkdata/), internal
+[data access mechanisms](https://hapifhir.io/hapi-fhir/apidocs/hapi-fhir-jpaserver-api/ca/uhn/fhir/jpa/api/dao/IFhirResourceDao.html) such
+as those found FHIR Server implementations, or through integration with
+[CQL](https://cql.hl7.org/10-c-referenceimplementations.html#appendix-c-reference-implementations) or FHIRPath engines
+supporting internal server access.
+
+Measure Computer implementations should consider strategies for data access that avoid overwhelming a connected FHIR Server with repeated requests for
+large amounts of data. Depending on the implementation, it may be more efficient to query using easy to evaluate criteria that returns
+more than what the measure is looking for, and then filter the results after they have been returned to the Measure Computer.
+
+[TBD: Write more about this](#todo)
 
 **Footnotes**
 

@@ -43,7 +43,7 @@ While the most common use case is aggregation by geopolitical boundry (e.g., cit
 US, a Census Tract) can define regions that are smaller than a city or county. Smaller geographic regions can support additional analysis, e.g., in regard to
 social determinants of health, or geographic regions addressing patterns of referral or service areas (e.g., hospital referral regions and service areas).
 
-The [Aggregate](OperationDefinition-ProduceMeasure-aggregate.html) operation defines the algorithm for aggregating measure reports.
+The [Aggregate](OperationDefinition-Measure-aggregate.html) operation defines the algorithm for aggregating measure reports.
 
 ### Recommended Coding Systems and Value Sets for Location.identifer
 This implementation guide requires the Location resource reference by MeasureReport.subject to have both a name and an identitifer. This raises the question of
