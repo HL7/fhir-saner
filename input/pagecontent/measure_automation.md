@@ -106,6 +106,144 @@ A computable public health measure may reference [ValueSet](https://www.hl7.org/
 other FHIR conformance resources to support automation. The [PublicHealthMeasureLibrary](StructureDefinition-PublicHealthMeasureLibrary.html) defines
 the constraints relevant to referencing the FHIR resources needed to automate measure computation.
 
+### Automated Measure Computation
+
+The process for measure computation relies on several preconditions:
+
+1. The measure establishes the initial context for evaluation by
+   defining libraries, value sets, code systems or other resources
+   necessary for automating the computation. These can be found in the
+   Library resources defined by the measure.
+2. A measure is broken up into groups, populations and strata which
+   facilitate evaluation.
+3. A group evaluates a measurement associated with a specific kind of
+   resource or event, e.g., a patient, an admission or patient encounter,
+   a lab result, et cetera. This is defined in the groups of the measure as described
+   in the [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html)
+   extension.
+4. Populations are evaluated based on queries of resources associated with
+   the group, and may depend on other resources defined within the context
+   of the measure.  Populations may be defined by refining other
+   populations within the group or measure, but at least one population
+   (normally the initial population) does not have any unresolved context
+   references.
+5. Once a population has been evaluated, it establishes a element within
+   the measure context that uses the population code as it's
+   computable name.  This element may enable the evaluation of other
+   populations with the measure.
+6. Having evaluated a population, the strata within the population should
+   now be computable without evaluation of other populations. Evaluation
+   of strata follow a similar pattern to evaluation of populations.
+
+The general algorithm is:
+
+Given a Measure, find a population within a group of the measure that does
+not reference an unresolved contextual element. Evaluate that population
+and update the context. If the population has strata, evaluate its strata.
+
+If there are no more unevaluated populations, then evaluation is complete.
+There should not be a population that cannot be resolved because of a missing dependency.
+
+#### Resolving Parameters and Computed Content
+Named parameters are essential to support automated measure evaluation. They are used to constrain queries using FHIR Search, FHIRPath
+or CQL in order to limit the data retrieved to that which is relevant for measure computation.  The names of parameters used in Measure resources
+conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a perdiod to must match the
+regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
+
+FHIRPath and CQL provide mechanisms to provide named parameters (e.g., reporting period) and collections
+of FHIR resources during their evaluation.
+
+* FHIR Search<br/>
+  To support named parameters in FHIR Queries, this guide uses the notation @_Name_ to indicate a named parameter in a FHIR Query.
+  NOTE: @ is general only found in e-mail addresses, which are not relevant for queries used in this guide.
+
+* FHIRPath<br/>
+  Parameters in FHIRPath are supported via FHIRPath [Environment Variables](https://www.hl7.org/fhir/fhirpath.html#vars).
+  This will be shown as %_Name_ in this guide.
+
+* CQL<br/>
+  CQL provides for [named parameters](https://cql.hl7.org/02-authorsguide.html#parameters).  This guide uses the notation
+  _Name_ to indicate a named parameter in a CQL Expression.
+
+#### Parameter Types
+Parameters have a data type, either a FHIR Primitive type such as date, dateTime, or string, or complex types such as Coding, Quantity, Period or Resource and
+any of its subtypes (e.g., Patient, Encounter).  The fields of the parameter are accessible via dot notation.
+
+For example:
+```
+Encounters?status=in-progress,finished&date=gt@ReportingPeriod.start&date=lt@ReportingPeriod.end
+```
+Will produce a query that selects those encounters which are either active or which finished during the reporting period.
+
+#### Parameters Defined in this Guide
+The following parameters are predefined by this guide:
+
+##### Date Parameters
+Date parameters are essential to support appropriate filters for queries.  This enables essential dates such as the date of evaluation and the
+reporting period to be communicated correctly when evaluating the measure.
+
+ReportingPeriod
+: The ReportingPeriod parameter is of the FHIR Period data type and contains the starting (inclusive) and ending time (exclusive) of
+the reporting period.
+
+Today
+: This parameter is the current date and is of the FHIR Date data type.
+
+Tomorrow
+: This parameter is the day after today and is of the FHIR Date data type.
+
+Yesterday
+: This parameter is the day before today and is of the FHIR Date data type.
+
+##### Library Resources
+Attachments in Library resources referenced by a Measure (through Measure.library) are also available as parameters using the name given
+to the Attachment in the Attachment.id element (see [Element.id](https://www.hl7.org/fhir/element-definitions.html#Element.id) in FHIR).
+
+NOTE: The use of Attachment.id to provide a computable name for the component referenced by the measure addresses the issue that while
+ValueSet and other definition resources include a "computable name" intended to support automation.  This name is not appropriate for 
+several reasons:
+
+1. Value Set developers and publishers do not follow the recommendations for computable names, which results in value sets (and other definition resources)
+having names that include spaces and other special characters (e.g. 
+"[COVID_19 (Organism or Substance in Lab Results)](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1146.1203/expansion/Latest)").
+2. Measure developers may rely on value sets from multiple sources, which can result in value set names which conflict. However
+measure developers can control the names used in the Library resources they use to support a measure. 
+
+This guide chosee to use a name specified in the id element of the resource because these names 
+
+For a give Measure resource, if Measure.library[0].content references a ValueSet resource, Measure.library[0].content.id is
+"ReferencedValueSet", then @_ReferencedValueSet_ is a parameter that can be used in a FHIR Query string.  It is available in
+a FHIRPath expression as %_ReferencedValueSet_, and in CQL simply as _ReferencedValueSet_.  These parameters are of the type of
+the referenced resource.
+
+If "VentPatients" is the id given for an attachment referencing the [Observations for Patients on a Ventilator](ValueSet-PatientsOnVentilator.html)
+value set, then @_VentPatients_ may be used in a FHIR Query as follows:
+
+```
+Observation?date=gt@ReportingPeriod.start&date=lt@ReportingPeriod.end&code:in=@VentPatients.url&status:not=cancelled&status:not=entered-in-error
+```
+
+This query will select all observations whose code in the Value Set referenced by the Attachment whose id is "VentPatients".
+
+The use of value sets in writing measures for automation is critical to avoid mistakes in entering long lists of codes, but pragmatically,
+many FHIR implementations will not support the :in or :not-in modifiers.  A MeasureComputer implementing queries **shall** translate these into the
+appropriate notation using the FHIR notation for [combining query parameters](https://www.hl7.org/fhir/search.html#combining) for servers which
+do not understand :in and :not-in.
+
+Servers can declare support for :in and :not-in by fully defining the search capabilities in referenced
+[SearchParameter](https://www.hl7.org/fhir/searchparameter.html) resources, but in practice, few do.  A MeasureComputer should either verify that
+:in and :not-in modifiers are supported (e.g., by executing test queries), or simply translate for all cases.
+
+##### Population Parameters
+Measure Populations are often computed iteratively.  For example, it's common to first identify the initial population via a search, and then
+the compute the denominator by filtering results from the initial population matching a given criteria, and finally, the numerator by
+filtering results from the denominator.
+
+
+### Implementation Strategies
+The MeasureComputer actor is free to use whichever search strategies best fit.  Implementers should remember the constraints on Measure
+Populations to ensure correct evaluation (e.g., an item in the denominator must be present in the initial population).
+
 **Footnotes**
 
 [^1]: Effler P, Ching-Lee M, Bogard A, Ieong MC, Nekomoto T, Jernigan D. Statewide system of electronic notifiable disease reporting from clinical laboratories: comparing automated reporting with conventional methods. JAMA. 1999 Nov 17;282(19):1845-50. doi: 10.1001/jama.282.19.1845. Erratum in: JAMA 2000 Jun 14;283(22):2937. PMID: 10573276. Available on the web at https://pubmed.ncbi.nlm.nih.gov/10573276/

@@ -51,7 +51,7 @@ Description: "Attributes describing the group of measures"
 * extension[improvementNotation].value[x] only CodeableConcept
 * extension[improvementNotation].valueCodeableConcept from http://hl7.org/fhir/ValueSet/measure-improvement-notation (extensible)
 
-* extension[subject] ^short = "Like Measure.subject, but applies to group"
+* extension[subject] ^short = "Identifies the type of FHIR Resource to evaluate. Like Measure.subject, but applies to group."
 * extension[subject].value[x] only CodeableConcept
 * extension[subject].valueCodeableConcept only MeasuredItemDescription
 * extension[subject].valueCodeableConcept from http://hl7.org/fhir/ValueSet/resource-types (extensible)
@@ -154,10 +154,10 @@ should use application/gzip.
 ValueSet: PublicHealthMeasureAttachmentTypes
 Title: "Public Health Measure Attachment Types"
 Description: "Preferred Mime Types for use with Public Health Measure Definitions"
-* #application/fhir+xml
-* #application/fhir+json
-* #text/cql
-* #application/gzip
+* urn:ietf:bcp:13#application/fhir+xml
+* urn:ietf:bcp:13#application/fhir+json
+* urn:ietf:bcp:13#text/cql
+* urn:ietf:bcp:13#application/gzip
 
 Profile:        PublicHealthMeasureLibrary
 Parent:         Library

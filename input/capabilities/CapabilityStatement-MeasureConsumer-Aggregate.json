@@ -12,10 +12,13 @@
       "resource": [
         {
           "type": "MeasureReport",
+          "supportedProfile": [
+            "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"
+          ],
           "operation": [
             {
               "name": "aggregate",
-              "definition": "http://hl7.org/fhir/us/saner/OperationDefinition/ProduceMeasure-aggregate",
+              "definition": "http://hl7.org/fhir/us/saner/OperationDefinition/MeasureReport-aggregate",
               "documentation": "Aggregate two or more more Messure Report resources into a single MeasureReport."
             }
           ]
@@ -59,7 +62,7 @@
   ],
   "name": "MeasureConsumer_Aggregate",
   "title": "Measure Consumer implementing the Aggregate Option.",
-  "date": "2020-09-05T19:38:22.796578-04:00",
+  "date": "2020-09-06T20:42:40.443229-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Consumer implementing the Aggregate Option.",
   "format": [

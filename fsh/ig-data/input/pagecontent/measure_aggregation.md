@@ -6,7 +6,8 @@ There are four different ways to consolidate a collection of MeasureReport resou
 
 All MeasureReport resources being consolidated must reference a common Measure in MeasureReport.measure.
 
-The process to perform this aggregation is the same for all of the above cases, and is defined in more detail in the [Aggregate operation](http://hl7.org/fhir/us/saner/OperationDefinition-ProduceMeasure-aggregate.html). That operation
+The process to perform this aggregation is the same for all of the above cases, and is defined in more detail in the
+[Aggregate operation](http://hl7.org/fhir/us/saner/OperationDefinition-Measure-aggregate.html). That operation
 can be used by an Intermediary to consolidate MeasureReport resources into an aggregated MeasureReport for further processing.
 
 The MeasureReport resource can be used to report on situational awareness not just for individual facilities,
@@ -32,7 +33,7 @@ While the most common use case is aggregation by geopolitical boundry (e.g., cit
 US, a Census Tract) can define regions that are smaller than a city or county. Smaller geographic regions can support additional analysis, e.g., in regard to
 social determinants of health, or geographic regions addressing patterns of referral or service areas (e.g., hospital referral regions and service areas).
 
-The [Aggregate](OperationDefinition-ProduceMeasure-aggregate.html) operation defines the algorithm for aggregating measure reports.
+The [Aggregate](OperationDefinition-Measure-aggregate.html) operation defines the algorithm for aggregating measure reports.
 
 ### Recommended Coding Systems and Value Sets for Location.identifer
 This implementation guide requires the Location resource reference by MeasureReport.subject to have both a name and an identitifer. This raises the question of

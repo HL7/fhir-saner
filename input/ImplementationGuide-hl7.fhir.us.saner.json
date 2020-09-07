@@ -549,14 +549,6 @@
       },
       {
         "reference": {
-          "reference": "OperationDefinition/ComputeMeasure-evaluate-measure"
-        },
-        "name": "ComputeMeasure-evaluate-measure",
-        "description": "Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated.\n                            Otherwise, a new report is created.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"
         },
         "name": "ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity",
@@ -2659,6 +2651,22 @@
       },
       {
         "reference": {
+          "reference": "OperationDefinition/Measure-evaluate-measure"
+        },
+        "name": "Measure-evaluate-measure",
+        "description": "Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated.\n                            Otherwise, a new report is created.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/Measure-report-csv"
+        },
+        "name": "Measure-report-csv",
+        "description": "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.\n                            Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/MeasureComputer"
         },
         "name": "MeasureComputer",
@@ -2671,30 +2679,6 @@
         },
         "name": "MeasureComputer-ComputeMeasure",
         "description": "Defines the requirements for the Measure Computer implementing the Compute Measure transaction.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CapabilityStatement/MeasureConsumer-API-Pull"
-        },
-        "name": "MeasureConsumer-API-Pull",
-        "description": "Defines the additional requirements for the Measure Consumer implementing the API Option and the Pull Option.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CapabilityStatement/MeasureConsumer-API-Pull-Questionnaire"
-        },
-        "name": "MeasureConsumer-API-Pull-Questionnaire",
-        "description": "Defines the additional requirements for the Measure Consumer implementing the API Option, the Pull Option, and the Questionnaire Option.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CapabilityStatement/MeasureConsumer-API-Push"
-        },
-        "name": "MeasureConsumer-API-Push",
-        "description": "Defines the additional requirements for the Measure Consumer implementing the API Option and the Push Option.",
         "exampleBoolean": false
       },
       {
@@ -2723,14 +2707,6 @@
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureConsumer-ProduceMeasure-API-Push"
-        },
-        "name": "MeasureConsumer-ProduceMeasure-API-Push",
-        "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the API Option and the Push Option.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CapabilityStatement/MeasureConsumer-ProduceMeasure-CSV-Push"
         },
         "name": "MeasureConsumer-ProduceMeasure-CSV-Push",
@@ -2739,18 +2715,34 @@
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureConsumer-QueryMeasure-API-Pull"
+          "reference": "CapabilityStatement/MeasureConsumer-ProduceMeasure-Push"
         },
-        "name": "MeasureConsumer-QueryMeasure-API-Pull",
-        "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option and the Pull Option.",
+        "name": "MeasureConsumer-ProduceMeasure-Push",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the Push Option.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureConsumer-QueryMeasure-API-Pull-Questionnaire"
+          "reference": "CapabilityStatement/MeasureConsumer-Pull"
         },
-        "name": "MeasureConsumer-QueryMeasure-API-Pull-Questionnaire",
-        "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option.",
+        "name": "MeasureConsumer-Pull",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Pull Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureConsumer-Pull-Questionnaire"
+        },
+        "name": "MeasureConsumer-Pull-Questionnaire",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Pull Option and the Questionnaire Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureConsumer-Push"
+        },
+        "name": "MeasureConsumer-Push",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Push Option.",
         "exampleBoolean": false
       },
       {
@@ -2759,6 +2751,22 @@
         },
         "name": "MeasureConsumer-QueryMeasure-CSV-Pull",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureConsumer-QueryMeasure-Pull"
+        },
+        "name": "MeasureConsumer-QueryMeasure-Pull",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureConsumer-QueryMeasure-Pull-Questionnaire"
+        },
+        "name": "MeasureConsumer-QueryMeasure-Pull-Questionnaire",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option and the Questionnaire Option.",
         "exampleBoolean": false
       },
       {
@@ -2795,26 +2803,26 @@
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureSource-API-Pull"
+          "reference": "OperationDefinition/MeasureReport-aggregate"
         },
-        "name": "MeasureSource-API-Pull",
-        "description": "Defines the additional requirements for the Measure Source implementing the API Option and the Pull Option.",
+        "name": "MeasureReport-aggregate",
+        "description": "This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.\nThe MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by\nspecifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources\nbeing aggregated must reference the same Measure resource defining the MeasureReport to generate.\n                        ",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureSource-API-Pull-Questionnaire"
+          "reference": "OperationDefinition/MeasureReport-read-csv"
         },
-        "name": "MeasureSource-API-Pull-Questionnaire",
-        "description": "Defines the additional requirements for the Measure Source implementing the API Option, the Pull Option, and the Questionnaire Option.",
+        "name": "MeasureReport-read-csv",
+        "description": "Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureSource-API-Push"
+          "reference": "OperationDefinition/MeasureReport-search-csv"
         },
-        "name": "MeasureSource-API-Push",
-        "description": "Defines the additional requirements for the Measure Source implementing the API Option and the Push Option.",
+        "name": "MeasureReport-search-csv",
+        "description": "Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.",
         "exampleBoolean": false
       },
       {
@@ -2843,14 +2851,6 @@
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureSource-ProduceMeasure-API-Push"
-        },
-        "name": "MeasureSource-ProduceMeasure-API-Push",
-        "description": "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the API Option and the Push Option.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CapabilityStatement/MeasureSource-ProduceMeasure-CSV-Push"
         },
         "name": "MeasureSource-ProduceMeasure-CSV-Push",
@@ -2859,18 +2859,34 @@
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureSource-QueryMeasure-API-Pull"
+          "reference": "CapabilityStatement/MeasureSource-ProduceMeasure-Push"
         },
-        "name": "MeasureSource-QueryMeasure-API-Pull",
-        "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the API Option and the Pull Option.",
+        "name": "MeasureSource-ProduceMeasure-Push",
+        "description": "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the Push Option.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/MeasureSource-QueryMeasure-API-Pull-Questionnaire"
+          "reference": "CapabilityStatement/MeasureSource-Pull"
         },
-        "name": "MeasureSource-QueryMeasure-API-Pull-Questionnaire",
-        "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the API Option, the Pull Option, and the Questionnaire Option.",
+        "name": "MeasureSource-Pull",
+        "description": "Defines the additional requirements for the Measure Source implementing the Pull Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureSource-Pull-Questionnaire"
+        },
+        "name": "MeasureSource-Pull-Questionnaire",
+        "description": "Defines the additional requirements for the Measure Source implementing the Pull Option and the Questionnaire Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureSource-Push"
+        },
+        "name": "MeasureSource-Push",
+        "description": "Defines the additional requirements for the Measure Source implementing the Push Option.",
         "exampleBoolean": false
       },
       {
@@ -2879,6 +2895,22 @@
         },
         "name": "MeasureSource-QueryMeasure-CSV-Pull",
         "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the CSV Option and the Pull Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureSource-QueryMeasure-Pull"
+        },
+        "name": "MeasureSource-QueryMeasure-Pull",
+        "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the Pull Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureSource-QueryMeasure-Pull-Questionnaire"
+        },
+        "name": "MeasureSource-QueryMeasure-Pull-Questionnaire",
+        "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the Pull Option and the Questionnaire Option.",
         "exampleBoolean": false
       },
       {
@@ -2895,38 +2927,6 @@
         "name": "NJ-DPH",
         "description": "Example Organization for the New Jersey Department of Public Health",
         "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "OperationDefinition/ProduceMeasure-aggregate"
-        },
-        "name": "ProduceMeasure-aggregate",
-        "description": "This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.\nThe MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by\nspecifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources\nbeing aggregated must reference the same Measure resource defining the MeasureReport to generate.\n                        ",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "OperationDefinition/ProduceMeasure-report-csv"
-        },
-        "name": "ProduceMeasure-report-csv",
-        "description": "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.\nOtherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "OperationDefinition/QueryMeasure-read-csv"
-        },
-        "name": "QueryMeasure-read-csv",
-        "description": "Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "OperationDefinition/QueryMeasure-search-csv"
-        },
-        "name": "QueryMeasure-search-csv",
-        "description": "Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.",
-        "exampleBoolean": false
       },
       {
         "reference": {

@@ -311,7 +311,7 @@
         "id": "Extension.extension:subject",
         "path": "Extension.extension",
         "sliceName": "subject",
-        "short": "Like Measure.subject, but applies to group",
+        "short": "Identifies the type of FHIR Resource to evaluate. Like Measure.subject, but applies to group.",
         "min": 1,
         "max": "1"
       },

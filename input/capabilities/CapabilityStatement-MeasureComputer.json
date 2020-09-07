@@ -15,7 +15,7 @@
           "operation": [
             {
               "name": "evaluate-measure",
-              "definition": "http://hl7.org/fhir/us/saner/OperationDefinition/ComputeMeasure-evaluate-measure",
+              "definition": "http://hl7.org/fhir/us/saner/OperationDefinition/Measure-evaluate-measure",
               "documentation": "Evaluate the measure"
             }
           ]
@@ -30,7 +30,7 @@
           "operation": [
             {
               "name": "evaluate-measure",
-              "definition": "http://hl7.org/fhir/us/saner/OperationDefinition/ComputeMeasure-evaluate-measure",
+              "definition": "http://hl7.org/fhir/us/saner/OperationDefinition/Measure-evaluate-measure",
               "documentation": "Evaluate the measure"
             }
           ]
@@ -74,7 +74,7 @@
   ],
   "name": "MeasureComputer",
   "title": "Measure Computer.",
-  "date": "2020-09-05T19:38:22.796578-04:00",
+  "date": "2020-09-06T20:42:40.443229-04:00",
   "kind": "requirements",
   "description": "Defines the requirements for the Measure Computer.",
   "format": [
