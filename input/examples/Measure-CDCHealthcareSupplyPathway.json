@@ -44,8 +44,8 @@
                     "code": "Device"
                   },
                   {
-                    "code": "706172005",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "706172005"
                   }
                 ],
                 "text": "Mechanical Ventilators"
@@ -171,10 +171,11 @@
                     "code": "Device"
                   },
                   {
-                    "code": "289971007",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "409532003"
                   }
-                ]
+                ],
+                "text": "N95 Masks"
               }
             },
             {
@@ -294,10 +295,11 @@
                     "code": "Device"
                   },
                   {
-                    "code": "277973009",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "277973009"
                   }
-                ]
+                ],
+                "text": "Other Respirator Equipment"
               }
             },
             {
@@ -420,10 +422,11 @@
                     "code": "Device"
                   },
                   {
-                    "code": "409528009",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "409528009"
                   }
-                ]
+                ],
+                "text": "Surgical Masks"
               }
             },
             {
@@ -543,10 +546,11 @@
                     "code": "Device"
                   },
                   {
-                    "code": "706725000",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "38126007"
                   }
-                ]
+                ],
+                "text": "Eye Protection"
               }
             },
             {
@@ -666,10 +670,11 @@
                     "code": "Device"
                   },
                   {
-                    "code": "409527004",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "409527004"
                   }
-                ]
+                ],
+                "text": "Gowns"
               }
             },
             {
@@ -789,10 +794,11 @@
                     "code": "Device"
                   },
                   {
-                    "code": "52291003",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "code": "52291003"
                   }
-                ]
+                ],
+                "text": "Gloves"
               }
             },
             {
@@ -895,22 +901,13 @@
   "publisher": "HL7 International",
   "contact": [
     {
+      "name": "HL7 Public Health Workgroup",
       "telecom": [
         {
           "system": "url",
-          "value": "http://hl7.org/Special/committees/pafm/index.cfm"
+          "value": "http://hl7.org/Special/committees/pher/index.cfm"
         }
-      ],
-      "name": "HL7 Patient Administration Workgroup"
-    },
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "http://ainq.com"
-        }
-      ],
-      "name": "Audacious Inquiry"
+      ]
     },
     {
       "name": "Keith W. Boone",

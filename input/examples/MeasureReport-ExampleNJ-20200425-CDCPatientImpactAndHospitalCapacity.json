@@ -303,6 +303,44 @@
               }
             ]
           }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numC19Pats",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+              }
+            ],
+            "text": "Patients with suspected or confirmed COVID-19 in any location."
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unsupported"
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numC19VentPats",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+              }
+            ],
+            "text": "Ventilated COVID-19 Patients"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unsupported"
+              }
+            ]
+          }
         }
       ]
     }

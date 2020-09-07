@@ -83,10 +83,10 @@ pages:
     phrase_book.md:
       title: Creating Measures Supporting Automation
       generation: markdown
-    measures.md:
-      title: Example Measures
-      generation: markdown
 
+  architecture.md:
+    title: Architecture
+    generation: markdown
     use_cases.md:
       title: Use Cases
       generation: markdown
@@ -96,33 +96,30 @@ pages:
     security_considerations.md:
       title: Security Considerations
       generation: markdown
-    architecture.md:
-      title: Architecture
-      generation: markdown
     actors.md:
       title: Actors
       generation: markdown
-    transactions.md:
-      title: Transactions
+  transactions.md:
+    title: Transactions
+    generation: markdown
+    transaction-1.md:
+      title: Query Measure
       generation: markdown
-      transaction-1.md:
-        title: Query Measure
-        generation: markdown
-      transaction-2.md:
-        title: Produce Measure
-        generation: markdown
-      transaction-3.md:
-        title: Query Measure Definition
-        generation: markdown
-      transaction-4.md:
-        title: Compute Measure
-        generation: markdown
-      transaction-5.md:
-        title: Communicate Results
-        generation: markdown
-      CSV_Conversion.md:
-        title: CSV Conversion
-        generation: markdown
+    transaction-2.md:
+      title: Produce Measure
+      generation: markdown
+    transaction-3.md:
+      title: Query Measure Definition
+      generation: markdown
+    transaction-4.md:
+      title: Compute Measure
+      generation: markdown
+    transaction-5.md:
+      title: Communicate Results
+      generation: markdown
+    CSV_Conversion.md:
+      title: CSV Conversion
+      generation: markdown
   profiles.md:
     title: Profiles and Extensions
     generation: markdown
@@ -146,12 +143,18 @@ menu:
   Table of Contents: toc.html
   SANER IG Content:
     Overview: overview.html
-    Technology Environment: technology_environment.html
+    Situational Awareness Measures: situational_awareness_measures.html
+    Aggregatating Measure Reports: measure_aggregation.html
+    Computing Measures: measure_automation.html
+    Creating Measures Supporting Automation: phrase_book.html
+
+  Technology:
     Architecture: architecture.html
-    Security Considerations: security_considerations.html
     Use Cases: use_cases.html
+    Technology Environment: technology_environment.html
+    Security Considerations: security_considerations.html
     Actors: actors.html
-    Measures used for Reporting: measures.html
+
   Transactions:
     Transaction Overview: transactions.html
     Query Measure: transaction-1.html

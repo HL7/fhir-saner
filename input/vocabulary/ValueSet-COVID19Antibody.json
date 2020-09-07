@@ -3,6 +3,7 @@
   "status": "active",
   "name": "COVID19Antibody",
   "id": "COVID19Antibody",
+  "description": "This Value Set includes codes describing SARS COV-2 antibodies detected during testing",
   "version": "20200430",
   "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155",
   "date": "2020-04-30T01:00:18-04:00",

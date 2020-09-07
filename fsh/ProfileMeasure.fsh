@@ -51,8 +51,9 @@ Description: "Attributes describing the group of measures"
 * extension[improvementNotation].value[x] only CodeableConcept
 * extension[improvementNotation].valueCodeableConcept from http://hl7.org/fhir/ValueSet/measure-improvement-notation (extensible)
 
-* extension[subject] ^short = "Like Measure.subject, but applies to group"
-* extension[subject].value[x] only MeasuredItemDescription
+* extension[subject] ^short = "Identifies the type of FHIR Resource to evaluate. Like Measure.subject, but applies to group."
+* extension[subject].value[x] only CodeableConcept
+* extension[subject].valueCodeableConcept only MeasuredItemDescription
 * extension[subject].valueCodeableConcept from http://hl7.org/fhir/ValueSet/resource-types (extensible)
 
 Profile: MeasureCriteria
@@ -90,13 +91,13 @@ Description:    "A CodeableConcept describing the item to be counted in terms of
 
 * coding ^slicing.discriminator.type = #pattern
 * coding ^slicing.discriminator.path = "system"
-* coding ^slicing.rules = #open
+* coding ^slicing.rules = #openAtEnd
 * coding ^slicing.description = "Slice based on the component.code pattern"
 
-* coding 1..*
-* coding contains ResourceType 1..1 and Snomed 1..1 and Other 0..*
+//* coding 1..*
+* coding contains ResourceType 1..1 and Snomed 1..*
 
-* coding[ResourceType] from http://hl7.org/fhir/ValueSet/resource-types (required)
+* coding[ResourceType].system = "http://hl7.org/fhir/resource-types"
 * coding[ResourceType] ^short = "Describe the FHIR resource type that should be counted for the measure"
 * coding[Snomed].system = "http://snomed.info/sct"
 * coding[Snomed].system ^short = "Further clarify the type of resource using SNOMED"
@@ -153,11 +154,10 @@ should use application/gzip.
 ValueSet: PublicHealthMeasureAttachmentTypes
 Title: "Public Health Measure Attachment Types"
 Description: "Preferred Mime Types for use with Public Health Measure Definitions"
-* http://tools.ietf.org/html/bcp13#application/fhir+xml
-* http://tools.ietf.org/html/bcp13#application/fhir+json
-* http://tools.ietf.org/html/bcp13#text/cql
-* http://tools.ietf.org/html/bcp13#application/gzip
-
+* urn:ietf:bcp:13#application/fhir+xml
+* urn:ietf:bcp:13#application/fhir+json
+* urn:ietf:bcp:13#text/cql
+* urn:ietf:bcp:13#application/gzip
 
 Profile:        PublicHealthMeasureLibrary
 Parent:         Library
@@ -188,7 +188,7 @@ and computation of it can be automated from systems that have the measure data.
 * library ^type.targetProfile = Canonical(PublicHealthMeasureLibrary)
 * library 1..*
 
-* group.extension contains MeasureGroupAttributes named groupAtts 0..1
+* group.extension contains MeasureGroupAttributes named groupAtts 1..1
 * group.extension[groupAtts] ^short = "Describes the attributes of one or more sections of the measure (form) being reported"
 
 * group.extension[MeasureGroupAttributes].extension[scoring].valueCodeableConcept 1..1

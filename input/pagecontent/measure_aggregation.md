@@ -16,7 +16,8 @@ There are four different ways to consolidate a collection of MeasureReport resou
 
 All MeasureReport resources being consolidated must reference a common Measure in MeasureReport.measure.
 
-The process to perform this aggregation is the same for all of the above cases, and is defined in more detail in the [Aggregate operation](http://hl7.org/fhir/us/saner/OperationDefinition-ProduceMeasure-aggregate.html). That operation
+The process to perform this aggregation is the same for all of the above cases, and is defined in more detail in the
+[Aggregate operation](http://hl7.org/fhir/us/saner/OperationDefinition-Measure-aggregate.html). That operation
 can be used by an Intermediary to consolidate MeasureReport resources into an aggregated MeasureReport for further processing.
 
 The MeasureReport resource can be used to report on situational awareness not just for individual facilities,

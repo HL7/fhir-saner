@@ -26,10 +26,8 @@ This guide is organized into five main sections:
     <ol>
       <li><a href="situational_awareness_measures.html">Measuring Situational Awareness</a> - Describes situational awareness and how to measure it.</li>
       <li><a href="measure_aggregation.html">Aggregating Data</a> - Describes how to aggregate Measure data.</li>
-      <li><a href="StructureDefinition-PublicHealthMeasure.html">The Public Health Measure Profile</a> - </li>
       <li><a href="measure_automation.html">Computing Measures</a> - Describes mechanisms to automate measure computation.</li>
       <li><a href="phrase_book.html">Creating Measures supporting Automation</a> - A Phrase Book for creating automatable Measures</li>
-      <li><a href="measures.html">Example Measures used for Reporting</a> - Demonstrates examples for measures used by CDC as FHIR Measure resources.</li>
     </ol>
 </details>
 
@@ -51,14 +49,15 @@ This guide is organized into five main sections:
     <summary>Chapter III: <a href="profiles.html">Profiles and Extensions</a> - Describes the purpose of the resource profiles and
 extensions defined by this guide.</summary>
     <ol>
-        <li>Profiles
+        <li><summary>Profiles<details>
             <ol>
                {% include list-simple-profiles.xhtml %}
-            </ol></li>
-        <li>Extensions
+            </ol></details></summary>
+        </li>
+        <li><summary>Extensions<details>
             <ol>
                {% include list-simple-extensions.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
     </ol>
 </details>
@@ -66,36 +65,36 @@ extensions defined by this guide.</summary>
 <details>
     <summary>Chapter IV: <a href="vocabulary.html">Vocabulary</a></summary>
     <ol>
-        <li>Value Sets
+        <li><summary>Value Sets<details>
             <ol>
                {% include list-simple-valuesets.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
         <li>Code Systems
             <ol>
                {% include list-simple-codesystems.xhtml %}
             </ol>
         </li>
-        <li>Concept Maps
+        <!--li>Concept Maps
             <ol>
                {% include list-simple-conceptmaps.xhtml %}
             </ol>
-        </li>
+        </li-->
     </ol>
 </details>
 <details>
     <summary>Chapter V: Testing and Conformance</summary>
     <ol>
         <li><a href='test_plan.html'>Test Plan</a></ol></li>
-        <li id='capabilities'>Capability Statements
+        <li id='capabilities'><summary>Capability Statements<details>
             <ol>
                {% include list-simple-capabilitystatements.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
-        <li>Operations
+        <li><summary>Operations<details>
             <ol>
                {% include list-simple-operationdefinitions.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
         <li>Search Parameters
             <ol>
@@ -108,25 +107,25 @@ extensions defined by this guide.</summary>
 <details>
     <summary>Chapter VI: <a id='examples' href="examples.html">Examples</a></summary>
     <ol>
-        <li>Measures
+        <li><summary>Measures<details>
             <ol>
                {% include list-simple-measures.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
-        <li>Locations
+        <li><summary>Locations<details>
             <ol>
                {% include list-simple-locations.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
-        <li>Organizations
+        <li><summary>Organizations<details>
             <ol>
                  {% include list-simple-organizations.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
-        <li>Measure Reports
+        <li><summary>Measure Reports<details>
             <ol>
                {% include list-simple-measurereports.xhtml %}
-            </ol>
+            </ol></details></summary>
         </li>
     </ol>
 </details>
