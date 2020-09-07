@@ -81,7 +81,10 @@ pages:
       title: Computing Measures
       generation: markdown
     phrase_book.md:
-      title: Creating Measures Supporting Automation
+      title: A Phrase Book for Measures Supporting Automation
+      generation: markdown
+    measure_creation.md:
+      title: Creating an Example Measure
       generation: markdown
 
   architecture.md:
@@ -146,7 +149,8 @@ menu:
     Situational Awareness Measures: situational_awareness_measures.html
     Aggregatating Measure Reports: measure_aggregation.html
     Computing Measures: measure_automation.html
-    Creating Measures Supporting Automation: phrase_book.html
+    Phrase Book for Measure Creation: phrase_book.html
+    Creating an Example Measure: measure_creation.html
 
   Technology:
     Architecture: architecture.html
@@ -166,6 +170,7 @@ menu:
   Conformance and Testing:
     Profiles and Extensions: profiles.html
     Vocabulary: vocabulary.html
-    Testing and Examples:
+    Testing: test_plan.html
     Examples: examples.html
+
   Artifact Index: artifacts.html

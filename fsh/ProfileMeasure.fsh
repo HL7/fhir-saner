@@ -73,7 +73,6 @@ Description: "Constraints on documentation for the evaluation of a Measure"
 * expression 1..1
 * expression ^short = "A measure must describe how to automate the computation in an expression that can be evaluated in the specified language"
 
-
 Extension: MeasurePopulationAlternateCriteria
 Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drools, et cetera)"

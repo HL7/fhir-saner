@@ -131,7 +131,7 @@ Examing the data being captured for Situational Awareness during the COVID-19 cr
 of measures:
 
 * Capacity or Utilization
-* Current and Cumulative Event Counting
+* Current and Cumulative Event Counting (Event Growth)
 * Queue Length
 * Service Times
 * Availability

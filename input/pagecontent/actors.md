@@ -397,7 +397,7 @@ The actors in this profile are described in more detail in the sections below.
 
 #### Measure Source
 
-The Measure Source Actor reports results Meor a single facility, collection of facilities or aggregated data for a region.
+The Measure Source Actor reports results Measures for a single facility, collection of facilities or aggregated data for a region.
 
 
 
@@ -480,21 +480,14 @@ is exposing a Measure Source capability this method allows data to be aggregated
 In networking parlance, a Bridge is a system that connects between different protocols.  The different options in this Implementation Guide
 can create incompatibilities, but these can be bridged by an Intermediary.
 
-For example, a Measure Intermediary that implements the Pull Option in the Measure Consumer, that groups with a Measure Source
-implementing the Push Option can bridge bridge between a Measure Source implementing the Pull option to enable
-communication with a Measure Consumer implementing the Push option.
+For example, a Measure Intermediary that implements the Push Option in the Measure Consumer, that groups with a Measure Source
+implementing the Push Option can bridge between a Measure Source implementing the Pull option to enable
+communication with a Measure Consumer implementing the Pull option.
 
-![Bridge](Bridge.svg)
-
-#### Measure Repository
-A Measure Respository is simply a FHIR Server.  A FHIR Server that supports CRUD operations on MeasureReport and Measure effectively implements both the Measure Consumer with the Push Option
+In this example, the Bridge is simply a FHIR Server.  A FHIR Server that supports CRUD operations on MeasureReport and Measure effectively implements both the Measure Consumer with the Push Option
 and the Measure Source actor implementing the Pull Option.
 
 ![FHIR Server](FHIRServer.svg)
-
-A multi-level data aggregation and reporting hierarchy using Measure Intermediaries is shown here:
-
-![Multi-Level Aggregation and Reporting](ActorsMultilevelReporting.svg)
         
 
 
@@ -511,9 +504,8 @@ See the following CapabilityStatement resources for conformance requirements:
 The Measure Definition Source Actor provides access to Measures defined by public health and emergency response authorities.
 
 
-
-            The Measure Definition Source actor is responsible for maintaining measures for systems that are using this
-            implementation guide to automate measure reporting.
+The Measure Definition Source actor is responsible for maintaining measures for systems that are using this
+implementation guide to automate measure reporting.
         
 
 
@@ -530,9 +522,7 @@ See the following CapabilityStatement resources for conformance requirements:
 The Measure Definition Consumer Actor accesses Measures defined by public health and emergency response authorities.
 
 
-
-            The Measure Definition Consumer actor is responsible for retrieving measures from publishing systems to automate measure reporting.
-        
+The Measure Definition Consumer actor is responsible for retrieving measures from publishing systems to automate measure reporting.
 
 
 
