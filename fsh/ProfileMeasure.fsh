@@ -154,10 +154,10 @@ should use application/gzip.
 ValueSet: PublicHealthMeasureAttachmentTypes
 Title: "Public Health Measure Attachment Types"
 Description: "Preferred Mime Types for use with Public Health Measure Definitions"
-* urn:ietf:bcp:13#application/fhir+xml
-* urn:ietf:bcp:13#application/fhir+json
-* urn:ietf:bcp:13#text/cql
-* urn:ietf:bcp:13#application/gzip
+* #application/fhir+xml
+* #application/fhir+json
+* #text/cql
+* #application/gzip
 
 Profile:        PublicHealthMeasureLibrary
 Parent:         Library

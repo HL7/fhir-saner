@@ -1113,8 +1113,9 @@ between options when applicable are specified in notes.
         <xsl:param name='mode'/>
         <xsl:for-each select="$operations[starts-with(@name,'$') and $mode='server']">
             <xsl:variable name='op' select="."/>
+            <xsl:variable name='res' select='distinct-values(tokenize($op/@resources,"\s+"))'/>
             <xsl:variable name='name'
-                select="concat(translate($op/ancestor-or-self::ig:transaction/ig:name,' ',''),'-',
+                select="concat(if (count($res) &gt; 1) then 'Resource' else $res,'-',
                 substring($op/@name,2))"/>
             <xsl:result-document href="../../OperationDefinition-{$name}.fsh" method="text">
                 <xsl:value-of select="s:instance($name, 'OperationDefinition', $op/ig:description, 'SanerDefinitionContent', '')"/>
@@ -1131,8 +1132,7 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="s:string('name',translate($op/ig:name,' ',''))"/>
                 <xsl:value-of select="s:string('title',$op/ig:name)"/>
                 <xsl:value-of select="s:string('description',$op/ig:description)"/>
-                <xsl:value-of select="s:string('url',concat($base,'/OperationDefinition/',
-                    translate($op/ancestor-or-self::ig:transaction/ig:name,' ',''),'-',substring($op[1]/@name,2)))"/>
+                <xsl:value-of select="s:string('url',concat($base,'/OperationDefinition/', $name))"/>
                 <xsl:for-each select="$op//ig:parameter">
                     <xsl:sort select="@use"/>
                     <xsl:sort select="@name"/>
