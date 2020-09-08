@@ -38,6 +38,7 @@ This guide is organized into five main sections:
       <li><a href="measure_aggregation.html">Aggregating Data</a> - Describes how to aggregate Measure data.</li>
       <li><a href="measure_automation.html">Computing Measures</a> - Describes mechanisms to automate measure computation.</li>
       <li><a href="phrase_book.html">Creating Measures supporting Automation</a> - A Phrase Book for creating automatable Measures</li>
+      <li><a href="measure_creation.html">Creating an Automated Measure</a> - Walks through the steps of creating an automated measure.</li>
     </ol>
 </details>
 

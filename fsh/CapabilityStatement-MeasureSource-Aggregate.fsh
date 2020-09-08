@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureSource_Aggregate"
 * title = "Measure Source implementing the Aggregate Option."
-* date = "2020-09-07T02:50:27.474555-04:00"
+* date = "2020-09-08T07:59:09.421964-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Aggregate Option."
 * format[0] = #xml

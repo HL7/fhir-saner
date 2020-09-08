@@ -175,14 +175,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/PublicHealthMeasureStratifier"
-        },
-        "name": "Saner Public Health Measure Stratifier",
-        "description": "Profile Saner Public Health Measure Stratifier\n\nA stratifier is effecitively a mixin that can be used with an existing measure\nto add stratification detail to that measure.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/saner-resource-location"
         },
         "name": "Resource Location Profile",
@@ -513,8 +505,8 @@
         "reference": {
           "reference": "CodeSystem/MeasurePopulationSystem"
         },
-        "name": "Measure Population System",
-        "description": "A Code System for Populations defined by The SANER Project",
+        "name": "Situationa Awareness Measure Populations",
+        "description": "A Code System for Situation Awareness Measure Populations defined by The SANER Project",
         "exampleBoolean": false
       },
       {
@@ -523,6 +515,22 @@
         },
         "name": "Measure Rate Aggregation Coding System",
         "description": "This Coding System Identifies methods of rate aggregation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/MeasuredValues"
+        },
+        "name": "Measured Values in Sample Measures",
+        "description": "A Code System for Populations in Sample Measures defined by The SANER Project",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PublicHealthMeasureScoring"
+        },
+        "name": "Public Health Measure Scoring",
+        "description": "A code system describing types of measure scoring used for situational awareness measures",
         "exampleBoolean": false
       },
       {
@@ -546,6 +554,21 @@
         "name": "CDC Patient Impact and Hospital Capacity",
         "description": "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
         "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
+      },
+      {
+        "reference": {
+          "reference": "Measure/ComputableCDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "Computable CDC Patient Impact and Hospital Capacity",
+        "description": "This measure demonstrates automated reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
+      },
+      {
+        "reference": {
+          "reference": "Library/ComputableNHSNMeasureLibrary"
+        },
+        "name": "ComputableNHSNMeasureLibrary",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureLibrary"
       },
       {
         "reference": {
@@ -3422,8 +3445,30 @@
             },
             {
               "nameUrl": "phrase_book.html",
-              "title": "Creating Measures Supporting Automation",
+              "title": "A Phrase Book for Measures Supporting Automation",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_creation.html",
+              "title": "Creating an Example Measure",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "measure_group_covid19_patients.html",
+                  "title": "Creating the Patients with COVID 19 Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_group_hospital_acquired_covid19_patients.html",
+                  "title": "Creating the Hospital Acquired COVID 19 Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_group_covid19_deaths.html",
+                  "title": "Creating the COVID 19 Deaths Group",
+                  "generation": "markdown"
+                }
+              ]
             }
           ]
         },

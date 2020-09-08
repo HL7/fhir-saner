@@ -34,7 +34,26 @@
         <a href="measure_automation.html">Computing Measures</a>
       </li>
       <li>
-        <a href="phrase_book.html">Creating Measures Supporting Automation</a>
+        <a href="phrase_book.html">Phrase Book for Measure Creation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Creating an Example Measure
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="measure_creation.html">Measure Creation</a>
+      </li>
+      <li>
+        <a href="measure_group_covid19_patients.html">Creating the Patients with COVID 19 Group</a>
+      </li>
+      <li>
+        <a href="measure_group_hospital_acquired_covid19_patients.html">Creating the Hospital Acquired COVID 19 Group</a>
+      </li>
+      <li>
+        <a href="measure_group_covid19_deaths.html">Creating the COVID 19 Deaths Group</a>
       </li>
     </ul>
   </li>
@@ -97,7 +116,7 @@
         <a href="vocabulary.html">Vocabulary</a>
       </li>
       <li>
-        Testing and Examples
+        <a href="test_plan.html">Testing</a>
       </li>
       <li>
         <a href="examples.html">Examples</a>

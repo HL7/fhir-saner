@@ -136,6 +136,9 @@ of measures:
 * Service Times
 * Availability
 
+These categories describe different ways of scoring of a measure and are included in the
+[Public Health Measure Scoring](CodingSystem-PublicHealthMeasureScoring.html) coding system established by this guide.
+
 ### Capacity and Utilization
 A Capacity and Utilitization measure describes the current capacity and utilization of fixed assets for treatment,
 and provides scores showing used and available capacity. It is a specialization of a
@@ -165,9 +168,16 @@ of growth during the measure period of events of interest.
 This is simply another form of Proportion measure, since what is being counted in the numerator and denominator come from the
 same initial population.
 
+NOTE: The score for this measure group **shall** always range from 0 to 1, where 1 represents the highest rate of
+cumulative growth.  If there were no prior event, the growth rate will be 1 in the first reporting period because the
+number of total events is the same as the number of new events.  The number of total events never exceed the number of new
+events becasue they are counted at the same point in time (new events is part of total events). When the number of new events
+is 0, the measure score **shall** be reported as 0. Implementations failing to account for this may generate divide by zero
+exceptions, or attempt to report NaN (Not a Number) values, which can result in errors elsewhere.
+
 The [Covid Trends](https://aatishb.com/covidtrends/) site demonstrates use of this measure in a graph to show the
-trajectory of confirmed cases. When plotted over time on a log-log scale, this kind of measure illustrates significant changes in events with
-exponential rates of growth. An example plot is shown below:
+trajectory of confirmed cases. When plotted over time on a log-log scale, this kind of measure illustrates significant changes
+in events with exponential rates of growth. An example plot is shown below:
 
 ![Graph of Covid Trends in the World as of July 25, 2020](CovidTrends.png)
 
@@ -247,11 +257,14 @@ of facilities or time periods for which the stratification criteria were met.
 ### Measure Populations in Situation Awareness Measures
 In addition to initial population, denominator, denominator-exclusions and numerators, situational awareness measures
 may report other populations or population scores.  Unlike quality measures, situational awareness measures do not
-use denominator exceptions.  This implementation guide defines three additional types of populations:
+use denominator exceptions.  This implementation guide defines four additional types of populations:
 
 * Numerator Complement
 * Duration
 * Duration Squared
+* Supporting
+
+These population types are defined in the [Measure Populations](CodeSystem-MeasurePopulations.html) code system.
 
 #### Numerator Complement
 The numerator complement is the quantity in the denominator that match neither the numerator the numerator exclusion criteria.
@@ -271,11 +284,20 @@ Like Duration, duration-squared is a measure-observation. It represents the sum 
 to support computation of variance in time of service measures. Increases in variation over time represent areas where service times are changing, and measures
 of variance allow for hypotheses testing about the distribution of measured events.
 
+#### Supporting
+A supporting population represents an intermediate computation helpful in defining a measure, but not needing to be reported.  It
+may be used to compute common groups of artifacts which are needed to report other populations.
+
+Supporting populations **should not** be reported in production measures, but may be reported when testing or under other
+circumstances. A Measure Consumer that recieves a report containing a supporting population **should** simply ignore or perhaps
+even discard it from the stored MeasureReport resource.  These are like extra subtotals in spreadsheets, helpful for computing
+a final total, but not essential.
+
 #### Specifying Population Criteria
 
 <table rows='12'>
   <thead>
-    <tr><th>MeasureType</th><th>Initial Population</th>
+    <tr><th>MeasureType</th><th>Initial Population</th><th>Suppporing Population</th>
         <th>Denominator</th><th>Denominator Exclusion</th>
         <th>Numerator</th><th>Numerator Exclusion</th><th>Numerator Complement</th>
         <th>Duration</th><th>Duration Squared</th>
@@ -283,31 +305,31 @@ of variance allow for hypotheses testing about the distribution of measured even
   </thead>
   <tbody>
     <tr><td>Capacity and Utilization</td>
-      <td>R</td>
+      <td>R</td><td>O</td>
       <td>R</td><td>O</td>
       <td>R</td><td>O</td><td>R</td>
       <td>NP</td><td>NP</td>
     </tr>
     <tr><td>Event Growth</td>
-      <td>R</td>
+      <td>R</td><td>O</td>
       <td>R</td><td>O</td>
       <td>R</td><td>O</td><td>NP</td>
       <td>NP</td><td>NP</td>
     </tr>
     <tr><td>Queue Length</td>
-      <td>R</td>
+      <td>R</td><td>O</td>
       <td>NP</td><td>NP</td>
       <td>NP</td><td>NP</td><td>NP</td>
       <td>NP</td><td>NP</td>
     </tr>
     <tr><td>Service Time</td>
-      <td>R</td>
+      <td>R</td><td>O</td>
       <td>R</td><td>O</td>
       <td>NP</td><td>NP</td><td>NP</td>
       <td>R</td><td>O</td>
     </tr>
     <tr><td>Availability</td>
-      <td>R</td>
+      <td>R</td><td>O</td>
       <td>R</td><td>O</td>
       <td>R</td><td>O</td><td>R</td>
       <td>NP</td><td>NP</td>
@@ -327,8 +349,6 @@ To enable measure developers to specify which measure components are required, r
 this IG defines the [Measure Expectation](StructureDefinition-measure-expectation.html) extension. This
 extension operates identically to the https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html
 extension, but can be applied to Measure resources.
-
-
 
 ### Profiles
 * [Public Health Measure](StructureDefinition-PublicHealthMeasure.html) profiles the
@@ -360,13 +380,17 @@ extension, but can be applied to Measure resources.
   an extension that enables interpretation the structure of a group as a collection
   of populations that evaluate to a single measured item.
 
-
 ### Predefined Measures
-This implementation guide includes two predefined measures describing the measurements
-that are required to be reported to CDC/NHSN and FEMA.
+This implementation guide includes predefined measures describing the measurements
+that were previously required to be reported to CDC/NHSN and FEMA.
+
+* [Computable CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html)
+  defines a computable measure that is aligned with the reporting previously required by the
+  [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
+  Hospital Capacity module, and
 
 * [CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-CDCPatientImpactAndHospitalCapacity.html)
-  defines a measure that is aligned with the reporting required by the
+  defines a measure that is aligned with the reporting previously required by the
   [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
   Hospital Capacity module, and
 
@@ -374,7 +398,5 @@ that are required to be reported to CDC/NHSN and FEMA.
   defines a measure that is aligned with the reporting required by the [Federal Emergency Management Agency (FEMA)](https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19)
   for reporting COVID-19 test results from Hospital in-house laboratories.
 
-Additional reporting requirements have already been established by these Federal agencies.
-This implementation guide will be updated as feasible to include measures for those reports
-as time allows.
-
+These measures are only provided as examples to illustrate measure development and reporting.
+Official reporting requirements are established by HHS and other US Federal agencies and not by this guide.
