@@ -175,14 +175,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/PublicHealthMeasureStratifier"
-        },
-        "name": "Saner Public Health Measure Stratifier",
-        "description": "Profile Saner Public Health Measure Stratifier\n\nA stratifier is effecitively a mixin that can be used with an existing measure\nto add stratification detail to that measure.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/saner-resource-location"
         },
         "name": "Resource Location Profile",
@@ -279,14 +271,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/COVID19DiagnosticTest"
-        },
-        "name": "COVID-19 Diagnostic Test",
-        "description": "Codes for COVID-19 Diagnostic Tests",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/COVID19Exposure"
         },
         "name": "COVID19Exposure",
@@ -303,18 +287,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ConfirmedCOVID19Diagnosis"
-        },
-        "name": "Confirmed COVID-19 Diagnosis",
-        "description": "Codes confirming COVID-19 Diagnostic Test Result",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/ConfirmedCOVID19DiagnosisValues"
         },
         "name": "Confirmed COVID-19 Diagnosis Values",
         "description": "Codes for result values confirming COVID-19 Diagnostic Test Result",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Covid19Labs"
+        },
+        "name": "COVID-19 Diagnostic Test",
+        "description": "Codes for COVID-19 Diagnostic Tests",
         "exampleBoolean": false
       },
       {
@@ -423,6 +407,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/PositiveResult"
+        },
+        "name": "Confirmed COVID-19 Diagnosis",
+        "description": "Codes confirming COVID-19 Diagnostic Test Result",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/PublicHealthMeasureAttachmentTypes"
         },
         "name": "Public Health Measure Attachment Types",
@@ -495,6 +487,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/VentilatorObservations"
+        },
+        "name": "Ventilator Observations",
+        "description": "Codes used to report ventilation activity",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VentilatorProcedures"
+        },
+        "name": "Ventilator Procedures",
+        "description": "Codes used to report a ventilation procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/IHE-ADX-agerange"
         },
         "name": "Age Range Coding System",
@@ -513,8 +521,8 @@
         "reference": {
           "reference": "CodeSystem/MeasurePopulationSystem"
         },
-        "name": "Measure Population System",
-        "description": "A Code System for Populations defined by The SANER Project",
+        "name": "Situationa Awareness Measure Populations",
+        "description": "A Code System for Situation Awareness Measure Populations defined by The SANER Project",
         "exampleBoolean": false
       },
       {
@@ -523,6 +531,22 @@
         },
         "name": "Measure Rate Aggregation Coding System",
         "description": "This Coding System Identifies methods of rate aggregation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/MeasuredValues"
+        },
+        "name": "Measured Values in Sample Measures",
+        "description": "A Code System for Populations in Sample Measures defined by The SANER Project",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PublicHealthMeasureScoring"
+        },
+        "name": "Public Health Measure Scoring",
+        "description": "A code system describing types of measure scoring used for situational awareness measures",
         "exampleBoolean": false
       },
       {
@@ -546,6 +570,333 @@
         "name": "CDC Patient Impact and Hospital Capacity",
         "description": "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
         "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
+      },
+      {
+        "reference": {
+          "reference": "Measure/ComputableCDCPatientImpactAndHospitalCapacity"
+        },
+        "name": "Computable CDC Patient Impact and Hospital Capacity",
+        "description": "This measure demonstrates automated reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements.",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasure"
+      },
+      {
+        "reference": {
+          "reference": "Library/ComputableNHSNMeasureLibrary"
+        },
+        "name": "ComputableNHSNMeasureLibrary",
+        "exampleCanonical": "http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureLibrary"
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition1a"
+        },
+        "name": "Condition1a",
+        "description": "Condition for Test Case 1a: Admission date =Today (T) w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition1c"
+        },
+        "name": "Condition1c",
+        "description": "Condition for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition2a"
+        },
+        "name": "Condition2a",
+        "description": "Condition for Test Case 2a: Positive test result w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition2b"
+        },
+        "name": "Condition2b",
+        "description": "Condition for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition2c"
+        },
+        "name": "Condition2c",
+        "description": "Condition for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition3b"
+        },
+        "name": "Condition3b",
+        "description": "Condition for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition4c"
+        },
+        "name": "Condition4c",
+        "description": "Condition for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition5a"
+        },
+        "name": "Condition5a",
+        "description": "Condition for Test Case 5a: Only positive collected today w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition5c"
+        },
+        "name": "Condition5c",
+        "description": "Condition for Test Case 5c: Positives collected T-13 and T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition6a"
+        },
+        "name": "Condition6a",
+        "description": "Condition for Test Case 6a: Ventilator (intubation) start date = T-1 and no stop (extubation) date w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition6c"
+        },
+        "name": "Condition6c",
+        "description": "Condition for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition7a"
+        },
+        "name": "Condition7a",
+        "description": "Condition for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition7b"
+        },
+        "name": "Condition7b",
+        "description": "Condition for Test Case 7b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition9c"
+        },
+        "name": "Condition9c",
+        "description": "Condition for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter1a"
+        },
+        "name": "Encounter1a",
+        "description": "Encounter for Test Case 1a: Admission date =Today (T) w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter1b"
+        },
+        "name": "Encounter1b",
+        "description": "Encounter for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter1c"
+        },
+        "name": "Encounter1c",
+        "description": "Encounter for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter2a"
+        },
+        "name": "Encounter2a",
+        "description": "Encounter for Test Case 2a: Positive test result w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter2b"
+        },
+        "name": "Encounter2b",
+        "description": "Encounter for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter2c"
+        },
+        "name": "Encounter2c",
+        "description": "Encounter for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter3a"
+        },
+        "name": "Encounter3a",
+        "description": "Encounter for Test Case 3a: Neither Adm diagnosis or Problem list  doument COVID w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter3b"
+        },
+        "name": "Encounter3b",
+        "description": "Encounter for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter4a"
+        },
+        "name": "Encounter4a",
+        "description": "Encounter for Test Case 4a: T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter4b"
+        },
+        "name": "Encounter4b",
+        "description": "Encounter for Test Case 4b: T-15 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter4c"
+        },
+        "name": "Encounter4c",
+        "description": "Encounter for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter5a"
+        },
+        "name": "Encounter5a",
+        "description": "Encounter for Test Case 5a: Only positive collected today w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter5b"
+        },
+        "name": "Encounter5b",
+        "description": "Encounter for Test Case 5b: Only positive collected T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter5c"
+        },
+        "name": "Encounter5c",
+        "description": "Encounter for Test Case 5c: Positives collected T-13 and T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter6a"
+        },
+        "name": "Encounter6a",
+        "description": "Encounter for Test Case 6a: Ventilator (intubation) start date = T-1 and no stop (extubation) date w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter6b"
+        },
+        "name": "Encounter6b",
+        "description": "Encounter for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter6c"
+        },
+        "name": "Encounter6c",
+        "description": "Encounter for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter7a"
+        },
+        "name": "Encounter7a",
+        "description": "Encounter for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter7b"
+        },
+        "name": "Encounter7b",
+        "description": "Encounter for Test Case 7b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter8a"
+        },
+        "name": "Encounter8a",
+        "description": "Encounter for Test Case 8a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter8b"
+        },
+        "name": "Encounter8b",
+        "description": "Encounter for Test Case 8b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter8c"
+        },
+        "name": "Encounter8c",
+        "description": "Encounter for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter9a"
+        },
+        "name": "Encounter9a",
+        "description": "Encounter for Test Case 9a: Diagnosis of Suspected COVID-19 WITHOUT positive viral test w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter9b"
+        },
+        "name": "Encounter9b",
+        "description": "Encounter for Test Case 9b: No Diagnosis of Suspected  COVID-19 nor positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/Encounter9c"
+        },
+        "name": "Encounter9c",
+        "description": "Encounter for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -2219,6 +2570,62 @@
       },
       {
         "reference": {
+          "reference": "Immunization/Immunization11c"
+        },
+        "name": "Immunization11c",
+        "description": "Immunization for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/Immunization12a"
+        },
+        "name": "Immunization12a",
+        "description": "Immunization for Test Case 2a: Positive test result w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/Immunization12b"
+        },
+        "name": "Immunization12b",
+        "description": "Immunization for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/Immunization12c"
+        },
+        "name": "Immunization12c",
+        "description": "Immunization for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/Immunization16c"
+        },
+        "name": "Immunization16c",
+        "description": "Immunization for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/Immunization19a"
+        },
+        "name": "Immunization19a",
+        "description": "Immunization for Test Case 9a: Diagnosis of Suspected COVID-19 WITHOUT positive viral test w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/Immunization19b"
+        },
+        "name": "Immunization19b",
+        "description": "Immunization for Test Case 9b: No Diagnosis of Suspected  COVID-19 nor positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Location/Loc-X140008"
         },
         "name": "Loc-X140008",
@@ -2651,6 +3058,206 @@
       },
       {
         "reference": {
+          "reference": "Location/Location1a"
+        },
+        "name": "Location1a",
+        "description": "Location for Test Case 1a: Admission date =Today (T) w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location1b"
+        },
+        "name": "Location1b",
+        "description": "Location for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location1c"
+        },
+        "name": "Location1c",
+        "description": "Location for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location2a"
+        },
+        "name": "Location2a",
+        "description": "Location for Test Case 2a: Positive test result w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location2b"
+        },
+        "name": "Location2b",
+        "description": "Location for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location2c"
+        },
+        "name": "Location2c",
+        "description": "Location for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location3a"
+        },
+        "name": "Location3a",
+        "description": "Location for Test Case 3a: Neither Adm diagnosis or Problem list  doument COVID w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location3b"
+        },
+        "name": "Location3b",
+        "description": "Location for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location4a"
+        },
+        "name": "Location4a",
+        "description": "Location for Test Case 4a: T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location4b"
+        },
+        "name": "Location4b",
+        "description": "Location for Test Case 4b: T-15 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location4c"
+        },
+        "name": "Location4c",
+        "description": "Location for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location5a"
+        },
+        "name": "Location5a",
+        "description": "Location for Test Case 5a: Only positive collected today w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location5b"
+        },
+        "name": "Location5b",
+        "description": "Location for Test Case 5b: Only positive collected T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location5c"
+        },
+        "name": "Location5c",
+        "description": "Location for Test Case 5c: Positives collected T-13 and T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location6a"
+        },
+        "name": "Location6a",
+        "description": "Location for Test Case 6a: Ventilator (intubation) start date = T-1 and no stop (extubation) date w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location6b"
+        },
+        "name": "Location6b",
+        "description": "Location for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location6c"
+        },
+        "name": "Location6c",
+        "description": "Location for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location7a"
+        },
+        "name": "Location7a",
+        "description": "Location for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location7b"
+        },
+        "name": "Location7b",
+        "description": "Location for Test Case 7b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location8a"
+        },
+        "name": "Location8a",
+        "description": "Location for Test Case 8a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location8b"
+        },
+        "name": "Location8b",
+        "description": "Location for Test Case 8b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location8c"
+        },
+        "name": "Location8c",
+        "description": "Location for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location9a"
+        },
+        "name": "Location9a",
+        "description": "Location for Test Case 9a: Diagnosis of Suspected COVID-19 WITHOUT positive viral test w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location9b"
+        },
+        "name": "Location9b",
+        "description": "Location for Test Case 9b: No Diagnosis of Suspected  COVID-19 nor positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Location/Location9c"
+        },
+        "name": "Location9c",
+        "description": "Location for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "OperationDefinition/Measure-evaluate-measure"
         },
         "name": "Measure-evaluate-measure",
@@ -2915,6 +3522,142 @@
       },
       {
         "reference": {
+          "reference": "MedicationRequest/MedicationRequest11a"
+        },
+        "name": "MedicationRequest11a",
+        "description": "MedicationRequest for Test Case 1a: Admission date =Today (T) w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest11b"
+        },
+        "name": "MedicationRequest11b",
+        "description": "MedicationRequest for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest12b"
+        },
+        "name": "MedicationRequest12b",
+        "description": "MedicationRequest for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest12c"
+        },
+        "name": "MedicationRequest12c",
+        "description": "MedicationRequest for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest13a"
+        },
+        "name": "MedicationRequest13a",
+        "description": "MedicationRequest for Test Case 3a: Neither Adm diagnosis or Problem list  doument COVID w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest14b"
+        },
+        "name": "MedicationRequest14b",
+        "description": "MedicationRequest for Test Case 4b: T-15 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest14c"
+        },
+        "name": "MedicationRequest14c",
+        "description": "MedicationRequest for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest15a"
+        },
+        "name": "MedicationRequest15a",
+        "description": "MedicationRequest for Test Case 5a: Only positive collected today w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest15b"
+        },
+        "name": "MedicationRequest15b",
+        "description": "MedicationRequest for Test Case 5b: Only positive collected T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest16b"
+        },
+        "name": "MedicationRequest16b",
+        "description": "MedicationRequest for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest16c"
+        },
+        "name": "MedicationRequest16c",
+        "description": "MedicationRequest for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest17a"
+        },
+        "name": "MedicationRequest17a",
+        "description": "MedicationRequest for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest17b"
+        },
+        "name": "MedicationRequest17b",
+        "description": "MedicationRequest for Test Case 7b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest18a"
+        },
+        "name": "MedicationRequest18a",
+        "description": "MedicationRequest for Test Case 8a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest18b"
+        },
+        "name": "MedicationRequest18b",
+        "description": "MedicationRequest for Test Case 8b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest18c"
+        },
+        "name": "MedicationRequest18c",
+        "description": "MedicationRequest for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequest19c"
+        },
+        "name": "MedicationRequest19c",
+        "description": "MedicationRequest for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Library/NHSNMeasureLibrary"
         },
         "name": "NHSNMeasureLibrary",
@@ -2926,6 +3669,558 @@
         },
         "name": "NJ-DPH",
         "description": "Example Organization for the New Jersey Department of Public Health",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation11a"
+        },
+        "name": "Observation11a",
+        "description": "Observation-1 for Test Case 1a: Admission date =Today (T) w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation11b"
+        },
+        "name": "Observation11b",
+        "description": "Observation-1 for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation11c"
+        },
+        "name": "Observation11c",
+        "description": "Observation-1 for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation12a"
+        },
+        "name": "Observation12a",
+        "description": "Observation-1 for Test Case 2a: Positive test result w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation12b"
+        },
+        "name": "Observation12b",
+        "description": "Observation-1 for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation12c"
+        },
+        "name": "Observation12c",
+        "description": "Observation-1 for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation13a"
+        },
+        "name": "Observation13a",
+        "description": "Observation-1 for Test Case 3a: Neither Adm diagnosis or Problem list  doument COVID w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation13b"
+        },
+        "name": "Observation13b",
+        "description": "Observation-1 for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation14a"
+        },
+        "name": "Observation14a",
+        "description": "Observation-1 for Test Case 4a: T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation14b"
+        },
+        "name": "Observation14b",
+        "description": "Observation-1 for Test Case 4b: T-15 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation14c"
+        },
+        "name": "Observation14c",
+        "description": "Observation-1 for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation15a"
+        },
+        "name": "Observation15a",
+        "description": "Observation-1 for Test Case 5a: Only positive collected today w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation15b"
+        },
+        "name": "Observation15b",
+        "description": "Observation-1 for Test Case 5b: Only positive collected T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation15c"
+        },
+        "name": "Observation15c",
+        "description": "Observation-1 for Test Case 5c: Positives collected T-13 and T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation16a"
+        },
+        "name": "Observation16a",
+        "description": "Observation-1 for Test Case 6a: Ventilator (intubation) start date = T-1 and no stop (extubation) date w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation16b"
+        },
+        "name": "Observation16b",
+        "description": "Observation-1 for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation16c"
+        },
+        "name": "Observation16c",
+        "description": "Observation-1 for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation17a"
+        },
+        "name": "Observation17a",
+        "description": "Observation-1 for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation17b"
+        },
+        "name": "Observation17b",
+        "description": "Observation-1 for Test Case 7b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation18a"
+        },
+        "name": "Observation18a",
+        "description": "Observation-1 for Test Case 8a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation18b"
+        },
+        "name": "Observation18b",
+        "description": "Observation-1 for Test Case 8b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation18c"
+        },
+        "name": "Observation18c",
+        "description": "Observation-1 for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation19c"
+        },
+        "name": "Observation19c",
+        "description": "Observation-1 for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation22c"
+        },
+        "name": "Observation22c",
+        "description": "Observation-2 for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation31c"
+        },
+        "name": "Observation31c",
+        "description": "Observation-3 for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation32c"
+        },
+        "name": "Observation32c",
+        "description": "Observation-3 for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation33b"
+        },
+        "name": "Observation33b",
+        "description": "Observation-3 for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation34a"
+        },
+        "name": "Observation34a",
+        "description": "Observation-3 for Test Case 4a: T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation34b"
+        },
+        "name": "Observation34b",
+        "description": "Observation-3 for Test Case 4b: T-15 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation34c"
+        },
+        "name": "Observation34c",
+        "description": "Observation-3 for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation36a"
+        },
+        "name": "Observation36a",
+        "description": "Observation-3 for Test Case 6a: Ventilator (intubation) start date = T-1 and no stop (extubation) date w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation36b"
+        },
+        "name": "Observation36b",
+        "description": "Observation-3 for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation36c"
+        },
+        "name": "Observation36c",
+        "description": "Observation-3 for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation37a"
+        },
+        "name": "Observation37a",
+        "description": "Observation-3 for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation38c"
+        },
+        "name": "Observation38c",
+        "description": "Observation-3 for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation39c"
+        },
+        "name": "Observation39c",
+        "description": "Observation-3 for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation41c"
+        },
+        "name": "Observation41c",
+        "description": "Observation-4 for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation42b"
+        },
+        "name": "Observation42b",
+        "description": "Observation-4 for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation43a"
+        },
+        "name": "Observation43a",
+        "description": "Observation-4 for Test Case 3a: Neither Adm diagnosis or Problem list  doument COVID w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation46b"
+        },
+        "name": "Observation46b",
+        "description": "Observation-4 for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation46c"
+        },
+        "name": "Observation46c",
+        "description": "Observation-4 for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation47a"
+        },
+        "name": "Observation47a",
+        "description": "Observation-4 for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation48c"
+        },
+        "name": "Observation48c",
+        "description": "Observation-4 for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/Observation49b"
+        },
+        "name": "Observation49b",
+        "description": "Observation-4 for Test Case 9b: No Diagnosis of Suspected  COVID-19 nor positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient1a"
+        },
+        "name": "Patient1a",
+        "description": "Patient for Test Case 1a: Admission date =Today (T) w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient1b"
+        },
+        "name": "Patient1b",
+        "description": "Patient for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient1c"
+        },
+        "name": "Patient1c",
+        "description": "Patient for Test Case 1c: Admission date =T-2 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient2a"
+        },
+        "name": "Patient2a",
+        "description": "Patient for Test Case 2a: Positive test result w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient2b"
+        },
+        "name": "Patient2b",
+        "description": "Patient for Test Case 2b: Negative test result w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient2c"
+        },
+        "name": "Patient2c",
+        "description": "Patient for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient3a"
+        },
+        "name": "Patient3a",
+        "description": "Patient for Test Case 3a: Neither Adm diagnosis or Problem list  doument COVID w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient3b"
+        },
+        "name": "Patient3b",
+        "description": "Patient for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient4a"
+        },
+        "name": "Patient4a",
+        "description": "Patient for Test Case 4a: T-1 w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient4b"
+        },
+        "name": "Patient4b",
+        "description": "Patient for Test Case 4b: T-15 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient4c"
+        },
+        "name": "Patient4c",
+        "description": "Patient for Test Case 4c: T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient5a"
+        },
+        "name": "Patient5a",
+        "description": "Patient for Test Case 5a: Only positive collected today w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient5b"
+        },
+        "name": "Patient5b",
+        "description": "Patient for Test Case 5b: Only positive collected T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient5c"
+        },
+        "name": "Patient5c",
+        "description": "Patient for Test Case 5c: Positives collected T-13 and T w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient6a"
+        },
+        "name": "Patient6a",
+        "description": "Patient for Test Case 6a: Ventilator (intubation) start date = T-1 and no stop (extubation) date w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient6b"
+        },
+        "name": "Patient6b",
+        "description": "Patient for Test Case 6b: Ventilator (intubation)start date = T-3 and stop (extubation) date = T  w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient6c"
+        },
+        "name": "Patient6c",
+        "description": "Patient for Test Case 6c: Ventilator (intubation) start date = T-6 and stop date (extubation) =T-1 w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient7a"
+        },
+        "name": "Patient7a",
+        "description": "Patient for Test Case 7a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient7b"
+        },
+        "name": "Patient7b",
+        "description": "Patient for Test Case 7b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient8a"
+        },
+        "name": "Patient8a",
+        "description": "Patient for Test Case 8a: No w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient8b"
+        },
+        "name": "Patient8b",
+        "description": "Patient for Test Case 8b: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient8c"
+        },
+        "name": "Patient8c",
+        "description": "Patient for Test Case 8c: Yes w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient9a"
+        },
+        "name": "Patient9a",
+        "description": "Patient for Test Case 9a: Diagnosis of Suspected COVID-19 WITHOUT positive viral test w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient9b"
+        },
+        "name": "Patient9b",
+        "description": "Patient for Test Case 9b: No Diagnosis of Suspected  COVID-19 nor positive viral test w/ outcome = No",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient9c"
+        },
+        "name": "Patient9c",
+        "description": "Patient for Test Case 9c: Diagnosis of Suspected COVID-19 AND ALSO  positive viral test w/ outcome = No",
         "exampleBoolean": true
       },
       {
@@ -3422,8 +4717,45 @@
             },
             {
               "nameUrl": "phrase_book.html",
-              "title": "Creating Measures Supporting Automation",
+              "title": "A Phrase Book for Measures Supporting Automation",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_creation.html",
+              "title": "Creating an Example Measure",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "measure_group_covid19_patients.html",
+                  "title": "Creating the Patients with COVID 19 Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_group_hospital_acquired_covid19_patients.html",
+                  "title": "Creating the Hospital Acquired COVID 19 Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_group_covid19_deaths.html",
+                  "title": "Creating the COVID 19 Deaths Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_group_ventilators.html",
+                  "title": "Creating the Ventilator Avaiability Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_group_beds.html",
+                  "title": "Creating the Bed Avaiability Group",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "measure_library.html",
+                  "title": "Sample Measure Library",
+                  "generation": "markdown"
+                }
+              ]
             }
           ]
         },

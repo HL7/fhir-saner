@@ -62,7 +62,7 @@
   ],
   "name": "MeasureSource_Aggregate",
   "title": "Measure Source implementing the Aggregate Option.",
-  "date": "2020-09-07T02:50:27.474555-04:00",
+  "date": "2020-09-09T05:19:04.618819-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the Aggregate Option.",
   "format": [

@@ -75,7 +75,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -97,7 +97,7 @@
             "coding": [
               {
                 "code": "numTotBeds",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "All Hospital Beds"
               },
               {
@@ -120,7 +120,7 @@
             "coding": [
               {
                 "code": "numbeds",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Inpatient Beds"
               }
             ],
@@ -139,7 +139,7 @@
             "coding": [
               {
                 "code": "numBedsOcc",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Inpatient Bed Occupancy"
               }
             ],
@@ -158,7 +158,7 @@
             "coding": [
               {
                 "code": "numICUBeds",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "ICU Beds"
               }
             ],
@@ -177,7 +177,7 @@
             "coding": [
               {
                 "code": "numICUBedsOcc",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "ICU Bed Occupancy"
               }
             ],
@@ -249,7 +249,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -271,7 +271,7 @@
             "coding": [
               {
                 "code": "numVent",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators"
               },
               {
@@ -294,7 +294,7 @@
             "coding": [
               {
                 "code": "numVentUse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators in Use"
               }
             ],
@@ -366,7 +366,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -388,7 +388,7 @@
             "coding": [
               {
                 "code": "numC19HospPats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Hospitalized COVID-19 Patients"
               }
             ],
@@ -407,7 +407,7 @@
             "coding": [
               {
                 "code": "numC19MechVentPats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Hospitalized and Ventilated COVID-19 Patients"
               }
             ],
@@ -426,7 +426,7 @@
             "coding": [
               {
                 "code": "numC19HOPats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Onset COVID-19 Patients"
               }
             ],
@@ -445,7 +445,7 @@
             "coding": [
               {
                 "code": "numC19OverflowPats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "ED/Overflow COVID-19 Patients"
               }
             ],
@@ -464,7 +464,7 @@
             "coding": [
               {
                 "code": "numC19OFMechVentPats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "ED/Overflow and Ventilated COVID-19 Patients"
               }
             ],
@@ -489,7 +489,7 @@
             "coding": [
               {
                 "code": "numC19Died",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "COVID-19 Patient Deaths"
               }
             ],
@@ -502,7 +502,7 @@
             "coding": [
               {
                 "code": "numC19Pats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "All COVID-19 Confirmed or Suspected Patients"
               },
               {
@@ -525,7 +525,7 @@
             "coding": [
               {
                 "code": "numC19VentPats",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Ventilated COVID-19 Patients"
               }
             ],

@@ -44,6 +44,7 @@ Description: "This Value Set identifies Remdesivir"
 // The following value sets are expansions from VSAC
 ValueSet: COVID19Organism
 Description: "This Value Set identifies codes describing SARS COV2 Related Substances detected during testing"
+ * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
  * ^version = "20200716"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1143"
  * ^status = #active
@@ -54,6 +55,7 @@ Description: "This Value Set identifies codes describing SARS COV2 Related Subst
 
 ValueSet: COVID19Antibody
 Description: "This Value Set includes codes describing SARS COV-2 antibodies detected during testing"
+ * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
  * ^version = "20200430"
  * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155"
  * ^status = #active

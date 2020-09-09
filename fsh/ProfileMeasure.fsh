@@ -169,7 +169,6 @@ NamingSystem, SearchParameter, CQL definitions or other resources for measure ev
 * content only PublicHealthMeasureMetadataAttachments
 * content 1..*
 
-
 Profile:        PublicHealthMeasure
 Parent:         Measure
 Title:          "Saner Public Health Measure"
@@ -240,8 +239,8 @@ that is associated with the measure.  The first code should identify the FHIR Re
 it using SNOMED CT. Subsequent codes may describe it using other coding systems."""
 
 * group.extension[MeasureGroupAttributes].extension[rateAggregation].valueString from  MeasureRateAggregationValues
-* group.extension[MeasureGroupAttributes].extension[rateAggregation].valueString ^short = "aggregable-by-period | point-in-time | cumulative"
-* group.extension[MeasureGroupAttributes].extension[rateAggregation].valueString ^comment = """aggregable-by-period
+* group.extension[MeasureGroupAttributes].extension[rateAggregation].valueString ^short = "count | point-in-time | cumulative"
+* group.extension[MeasureGroupAttributes].extension[rateAggregation].valueString ^comment = """count
 : Use this when the value being reported can be aggregated (added to) values in other periods and retain meaning (e.g., adding admissions on day 1 and day 2 reporting period gives admissions for the combined reporting period)"
 
 point-in-time
@@ -259,7 +258,7 @@ cumulative
 
  * group.population.criteria 1..1
  * group.population.criteria ^short = "Instructions for how to automatically count this population"
- * group.population.criteria.name 1..1
+ * group.population.criteria.name 0..1
  * group.population.criteria ^short = "name should align with code."
 
  * group.population.criteria.description 1..1
@@ -279,43 +278,17 @@ cumulative
  * group.stratifier 0..*
  * group.stratifier ^short = "A group may have none, some or many strata"
  * group.stratifier.code 1..1
- * group.stratifier.code.coding 1..*
- * group.stratifier.code.coding ^short = "Uniquely identifies the strata"
+ * group.stratifier.code ^short = "Describes the purpose of this stratifier"
+ * group.stratifier.code.coding 0..*
+ * group.stratifier.code.coding ^short = "Optional code uniquely identifying the strata"
  * group.stratifier.code.coding.display 1..1
  * group.stratifier.code.coding.display ^short = "Provides a human readable name for the strata"
+ * group.stratifier.code.text 1..1
+ * group.stratifier.code.text ^short = "Describes the function of the stratifier."
  * group.stratifier.description 1..1
  * group.stratifier.description ^short = "Describes the overall function of the strata."
-
- * group.stratifier.code.text ^short = "Describes the function of the stratifier."
- * group.stratifier.code ^short = "Describes the purpose of this stratifier"
- * group.stratifier.component 1..*
- * group.stratifier.component ^short = "A stratifier must have at least one stratum"
- * group.stratifier.component.description 1..1
- * group.stratifier.component.description ^short = "Describes the purpose of this stratum"
-
-
-Profile:        PublicHealthMeasureStratifier
-Parent:         Measure
-Title:          "Saner Public Health Measure Stratifier"
-Description:    """Profile Saner Public Health Measure Stratifier
-
-A stratifier is effecitively a mixin that can be used with an existing measure
-to add stratification detail to that measure.
-"""
- * insert SanerStructureDefinitionContent
- * group.stratifier 0..*
- * group.stratifier ^short = "A group may have none, some or many strata"
- * group.stratifier.code 1..1
- * group.stratifier.code.coding 1..*
- * group.stratifier.code.coding ^short = "Uniquely identifies the strata"
- * group.stratifier.code.coding.display 1..1
- * group.stratifier.code.coding.display ^short = "Provides a human readable name for the strata"
- * group.stratifier.description 1..1
- * group.stratifier.description ^short = "Describes the overall function of the strata."
-
- * group.stratifier.code.text ^short = "Describes the function of the stratifier."
- * group.stratifier.code ^short = "Describes the purpose of this stratifier"
- * group.stratifier.component 1..*
- * group.stratifier.component ^short = "A stratifier must have at least one stratum"
- * group.stratifier.component.description 1..1
- * group.stratifier.component.description ^short = "Describes the purpose of this stratum"
+ * group.stratifier.criteria 1..1
+ * group.stratifier.criteria.language 1..1
+ * group.stratifier.criteria.expression 1..1
+ * group.stratifier.component 0..0
+ * group.stratifier.component ^short = "Strata components are not used"

@@ -75,7 +75,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "cumulative"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -97,7 +97,7 @@
             "coding": [
               {
                 "code": "totalOrdersIncrease",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "New Diagnostic Tests Ordered/Received"
               },
               {
@@ -120,7 +120,7 @@
             "coding": [
               {
                 "code": "totalTestResultsIncrease",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "New Tests Resulted"
               },
               {
@@ -143,7 +143,7 @@
             "coding": [
               {
                 "code": "positiveIncrease",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "New Positive COVID-19 Tests"
               },
               {
@@ -241,7 +241,7 @@
             "coding": [
               {
                 "code": "totalOrders",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative Diagnostic Tests Ordered/Received"
               },
               {
@@ -264,7 +264,7 @@
             "coding": [
               {
                 "code": "rejected",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative Specimens Rejected"
               },
               {
@@ -287,7 +287,7 @@
             "coding": [
               {
                 "code": "totalTestResults",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative Tests Performed"
               },
               {
@@ -310,7 +310,7 @@
             "coding": [
               {
                 "code": "positive",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative Positive COVID-19 Tests"
               },
               {
@@ -333,7 +333,7 @@
             "coding": [
               {
                 "code": "allReports",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "All Laboratory Reports for any Order"
               }
             ],
@@ -352,7 +352,7 @@
             "coding": [
               {
                 "code": "latestReports",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
                 "display": "Most Recent Laboratory Reports for any Order"
               }
             ],
@@ -454,7 +454,7 @@
       ]
     }
   ],
-  "rateAggregation": "aggregable-by-period",
+  "rateAggregation": "count",
   "relatedArtifact": [
     {
       "type": "documentation",

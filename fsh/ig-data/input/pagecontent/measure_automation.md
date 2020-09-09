@@ -69,6 +69,9 @@ implementations of FHIRPath are [generally available](https://confluence.hl7.org
 platforms including Java, JavaScript, .Net, and it supports most of the necessary functions to support comparisons for measures, including
 measures with complex date relationships (e.g., Patients acquiring COVID-19 14 days after admission).
 
+A measure **shall** use the same language for all population criteria in the measure.
+A measure **should** use the same language for all stratifiers in the measure.
+
 #### Measure Definition Criteria
 A Measure is defined by the computable criteria contained in definitions for the Measure
 [population](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.population.criteria),
@@ -131,23 +134,38 @@ The process for measure computation relies on several preconditions:
    of the measure.  Populations may be defined by refining other
    populations within the group or measure, but at least one population
    (normally the initial population) does not have any unresolved context
-   references.
+   references.  The result of an evaluation is either a collection, in which
+   case the population count is computed based on the number of elements
+   in the collection, OR it is a singular numeric result or quantity, in
+   which case the count is the numeric value.
 5. Once a population has been evaluated, it establishes a element within
-   the measure context that uses the population code as it's
-   computable name.  This element may enable the evaluation of other
-   populations with the measure.
-6. Having evaluated a population, the strata within the population should
-   now be computable without evaluation of other populations. Evaluation
-   of strata follow a similar pattern to evaluation of populations.
+   the measure context that uses a computable name established by the
+   criteria.  This element may enable the evaluation of other populations
+   with the measure.  This element contains the collection or
+   singular numeric result or quantity returned by the evaluation process.
+6. Having evaluated a population, the strata within the population may
+   be computable, but could reequire evaluation of other populations.
+   Evaluation of strata follow a similar pattern to evaluation of
+   populations.
 
 The general algorithm is:
 
-Given a Measure, find a population within a group of the measure that does
-not reference an unresolved contextual element. Evaluate that population
-and update the context. If the population has strata, evaluate its strata.
+Given a Measure, find a population or strata within a group of the measure
+that does not reference an unresolved contextual element. Evaluate that population
+or strata and update the context with the evaluted result. If the population
+has strata without an unresolved contextual reference, evaluate its strata.
 
-If there are no more unevaluated populations, then evaluation is complete.
-There should not be a population that cannot be resolved because of a missing dependency.
+If there are no more unevaluated populations or strata, then evaluation
+is complete. There should not be a population or strata that cannot be resolved
+because of a missing dependency.  If an implementation detects a case where
+a population or stratum cannot be evaluated, it should report an
+evaluation error.  It may populate the unpopulated components of the measure
+(e.g., count or score) using the
+[data-absent-reason](http://hl7.org/fhir/StructureDefinition/data-absent-reason)
+extension, indicating that the value is unavailable due to an
+[error](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html#data-absent-reason-error)
+in order to support reporting of partial results while the error condition
+is being corrected.
 
 #### Resolving Parameters and Computed Content
 Named parameters are essential to support automated measure evaluation. They are used to constrain queries using FHIR Search, FHIRPath
@@ -183,6 +201,29 @@ Will produce a query that selects those encounters which are either active or wh
 #### Parameters Defined in this Guide
 The following parameters are predefined by this guide:
 
+##### Server Details
+Base
+: The Base parameter is of the FHIR string data type and contains the base address of the FHIR Server associated with a Measure Computer. The Measure
+Computer must supply this information. Note that this base endpoint **shall not** end with a "/". This may be used to specify FHIR queries that
+should be resolved by the FHIRPath engine within the expression.  This **shall** be the same value found in the
+[implementation.url](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.implementation.url) field of the server's
+CapabilityStatement.
+
+Metadata
+: The Metadata parameter is of the FHIR CapabilityStatement resource type, and contains the Capability statement that would be resolved
+by the CapabilityStatement resource. The Measure Computer must supply this information. This **shall** be the equivalent of what is returned
+by (%Base + "/metadata").[resolve](https://www.hl7.org/fhir/fhirpath.html#functions)().
+
+##### Measure Details
+Measure
+: The Measure parameter is of the FHIR Measure resource type, and represents the measure being computed.
+
+PriorReport
+: The PriorReport parameter is of the FHIR MeasureReport resource type, and represents the details of the
+most recent version (e.g., including any corrections) of the MeasureReport that was computed for the prior
+reporting period. This simplifies computations for cumulative results, and enables reuse of infrequently
+changing values (e.g., total ventilators).
+
 ##### Date Parameters
 Date parameters are essential to support appropriate filters for queries.  This enables essential dates such as the date of evaluation and the
 reporting period to be communicated correctly when evaluating the measure.
@@ -190,7 +231,15 @@ reporting period to be communicated correctly when evaluating the measure.
 ReportingPeriod
 : The ReportingPeriod parameter is of the FHIR Period data type and contains the starting (inclusive) and ending time (exclusive) of
 the reporting period.  It is determined based on the current reporting period as defined in the [ReportingPeriod](StructureDefinition-ReportingPeriod.html)
-extension appearing within the Measure.
+extension appearing within the Measure. If the reporting period is daily, midnight to midnight, and report is being generated "today", then the reporting
+period for it is "yesterday".
+
+PriorReportingPeriod
+: The PriorReportingPeriod parameter is of the FHIR Period data type, and contains the starting (inclusive) and ending time (exclusive) of
+the immediately prior reporting period. It is determined based on the current reporting period as defined in the
+[ReportingPeriod](StructureDefinition-ReportingPeriod.html) extension appearing within the Measure.  If the reporting period is daily, midnight to midnight, and a report
+is being generated "today", then the prior reporting period for it is "the day before yesterday". The Prior Reporting period is helpful for obtaining
+data from prior measures, for example, to support reporting of cumulative totals.
 
 Today
 : This parameter is the current date and is of the FHIR Date data type.  This is equivalent to the FHIRPath
@@ -328,12 +377,27 @@ large amounts of data. Depending on the implementation, it may be more efficient
 more than what the measure is looking for, and then filter the results after they have been returned to the Measure Computer.
 
 Measure developers should consider writing evaluation criteria in ways that simplify implementation. For example, when using FHIRPath,
-the first part of the expression should be of the form "_Resource_.where(_search criteria_)." so that Measure Computers can kick start
-their evaluations.  The _Resource_ should name the type of resource to query for, and the _search criteria_ should be a widely supported
-search that limits the resources being returned for subsequent filtering by the remainder of thee FHIRPath expression.
-Consider the use of date and/or _lastUpdated parameters to restrict the data to the time period relevant to the search.
+the first part of the expression should be of the form:
+```
+     (%Base + '/Resource?_include=Resource:*'
+            + '&status=allowed-status-values'
+            + '&date=ge' + %ReportingPeriod.start
+            + '&date=lt' + %ReportingPeriod.end
+            + 'other search criteria'
 
-[TBD: Write more about this](#todo)
+     ).resolve().select(resource)
+```
+This enables the Measure Computer to kick start their evaluations with .  The _Resource_ should name the type of resource
+to query for, and _search criteria_ should be a widely supported search that limits the resources being returned for
+subsequent filtering by the remainder of thee FHIRPath expression. Consider the use of date and/or _lastUpdated
+parameters to restrict the data to the time period relevant to the search.
+
+The second part of the expression should be a [where() or select()](http://hl7.org/fhirpath/#filtering-and-projection)
+clause which filters out or projects to other relevant content. This where clause can make use of the FHIRPath
+[iif()] function to support short-circuit evaluation of logical expressions.
+
+Additional retrievals can appear in this clause, but should be done after other filtering that can be performed using
+available data through FHIRPath. This helps to eliminate excessive queries to the server.
 
 **Footnotes**
 

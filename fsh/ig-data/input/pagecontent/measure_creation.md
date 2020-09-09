@@ -1,9 +1,44 @@
 
 This section of the implementation guide walks through an example for automating computation
-of a measure.  Like the phrase book, it is based on the measure derived from the CDC Patient Impact and
+of a measure.
+
+### Conventions in this Section
+The definitions for these proposed groupings appear below.  For simplicity and brevity, the definitions below are provided in a
+slightly modified version of the [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) notation.  The modification
+introduces "with _fieldparts_ do" keyword to shorten repetitions.
+
+For example:
+```
+* with name do
+**   given[] = "Robert"
+**   given[] = "Rob"
+**   last = "Williams"
+```
+Would be the same as
+```
+*   name.given[0] = "Robert"
+*   name.given[1] = "Rob"
+*   name.last = "Williams"
+```
+
+To save space only the description for the first population in the first group will be provided in
+this narrative. However, the [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html)
+includes descriptions for all populations.
+
+### Patient Impact and Hospital Capacity Module Definition
+Like the phrase book, this walkthrough is based on the measure derived from the CDC Patient Impact and
 Hospital Capacity module shown below.
 
 ![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)
+
+### Measure Header
+[Describe content of the Measure Header](#todo)
+
+Every measure must have at least one Library resource conforming to the
+[PublicHealthMeasureLibrary](StructureDefinition-PublicHealthMeasureLibrary.html) profile that
+provides the essential value sets and other resources that may be used to evaluate the measure.
+Details about the measure library for this sample measure can be found in the
+[Sample Measure Library](measure_library.html) page.
 
 ### Patient Impact Data Elements
 This measure first addresses the Impact of COVID-19 on hospital patients, stratifying data by
@@ -32,75 +67,57 @@ Patients who aquired COVID-19 while in the hospital are a separate strata from p
 The Venn Diagram below illustrates the different subsets of patients in this measure.
 ![Venn Diagram](venn.png).
 
-To simplify this section, this measure should be divided into at least three separate groups:
-1. Deaths in the hospital during the reporting period
-2. Patients in the hospital during the reporting period who have suspected or confirmed COVID-19.<br/>
-   This last group should be stratified by the product of location and ventilator status.
-   1. Inpatient Setting and Non-Ventilated
-   2. Inpatient Setting and Ventilated
-   3. ED/Overflow Setting and Non-Ventilated
-   4. ED/Overflow Setting and Ventilated
-3. Patients in the hospital during the reporting period who have acquired suspected or confirmed COVID-19 14 days or more after admission.
+To simplify this section, this measure should be divided into at least three separate groups. Each group and stratum is preceded by the name
+used to identify it.
 
-For these proposed groupings:
-#### Deaths in the Hospital
-Deaths in the hospital during the reporting period is half of an [event growth measure](situational_awareness_measures.html#event-growth),
-it does not include the cumulative total number of deaths.  There are several good reasons to use an event growth measure in this case:
-   1. Loss of a single report does not damage the cumulative total value.  When the next report is sent, a new cumulative total will also
-      be sent, allowing the reciever to adjust for the missing data.
-   2. Reporting both the incremental, and cumulative total allows the reciever to detect potential reporting errors over time.
-   3. Using the Event Growth measure supports data correction over time. During a public health emergency where there are limited resources,
-      activities are triaged to protect life first. Death reporting may be delayed for facilities under extreme stress.
-   4. Event growth measures support the [BASE Consistency](https://en.wikipedia.org/wiki/Eventual_consistency) model, which means that prior
-      reports don't need to be corrected for the reported data to eventually become consistent.
-
-NOTE: When using an event growth measure, it is important to establish a convention for how to accumulate the total.  By convention,
-this is based on the date the sender started reporting data (the simplest to implement), but may be altered to be based on reporting as of
-a given date or other criteria (more complicated).
-
-#### Suspected or Confirmed COVID-19 Patients Stratified by Location and Ventilator Status
-Upon further inspection, this is a [Queue Length](situational_awareness_measures.html#queue-length) measure. It measures patients in the hospital (in
-an inpatient setting or overflow area) awaiting completion of treatment. This is especially evidident in the case for patients in an ED/Overflow
-area awaiting an inpatient bed, but generally true for all the different strata.
-
-The use of different strata for this measure helps with the prioritization of additional resource assignments to assist facilities in need,
-improves accuracy and provides for error detection and resiliency. The count for the overall population of patients with suspected or
-confirmed COVID-19 in the hospital) must be equal to the sum counts over each stratum.  This provides for additional opportunity for
-error detection by both the sender and the reciever.  It may also help to identify special cases that may not have been included in the
-design or logic of the measure or its stratifying criteria.
-
-NOTE: When designing measures for manual implementation, the use of redundant data assigns more work for the users manually collecting and reporting
-the data.  When measures are automatically computed, the work is being done by computer systems implementing software algorithms. It is very little
-addition work for the software to do some additional arithmetic, but additional value in providing cross-checks on data accuracy for automated
-systems.
-
-#### Patients Acquiring COVID-19 14 days or more after Admission
-This measure includes criteria that depends on the timing of two different events.  It cannot be easily evaluated via a FHIR Query
-because FHIR Queries do not support complex join criteria (e.g., Observation.date - Observation.encounter.date > 14 days).  Such criteria
-can be evaluated using FHIRPath [Date/Time Arithmetic](http://hl7.org/fhirpath/#datetime-arithmetic) or
-[CQL Date and Time Operators](https://cql.hl7.org/02-authorsguide.html#datetime-operators).
-Several measures consider dates and times that have a relative offset to the reporting period, or an event occuring
-3. Patients in the hospital during the reporting period who have acquired suspected or confirmed COVID-19 14 days or more after admission.
+1. [Encounters](measure_group_covid19_patients.html): Patients in the hospital during the reporting period who have suspected or confirmed COVID-19.<br/>
+   This last group should be stratified by the [cartesian product](https://en.wikipedia.org/wiki/Cartesian_product) of
+   location and ventilator status.
+   1. InpNotVentilated: Inpatient Setting and Non-Ventilated
+   2. InpVentilated: Inpatient Setting and Ventilated
+   3. OFNotVentilated: ED/Overflow Setting and Non-Ventilated
+   4. OFVentilated: ED/Overflow Setting and Ventilated
+2. [AcquiredCovid](measure_group_hospital_acquired_covid19_patients.html): Patients in the hospital during the reporting period who have acquired suspected or confirmed COVID-19 14 days or more after admission.
+3. [CovidDeaths](measure_group_covid19_deaths.html): Deaths in the hospital during the reporting period
 
 ### Hospital Capacity
-The next section of this measure addresses hospital capacity with respect to all beds, inpatient beds, ICU beds, and ventilators. It can be clearly
-divided into two groups: those dealing with available beds, and those dealing with available ventilators.
+The next section of this measure addresses hospital capacity with respect to all beds, inpatient beds, ICU beds, and ventilators.
 These are all clearly [Capacity and Utilization](situational_awareness_measures.html#capacity-and-utilization) measures.
+It can be clearly divided into two groups, with stratification of the Bed group in across three categories to support
+all reporting needs.
 
-#### Hospital Beds
-The "All Hospital Beds" measurement does not include both "available" and "in use" beds, and so would not normally be considered to be a
-capacity measurement, however, it is included with other measures that clearly provide an approximation of the in use and available beds.
-The Bed Venn Diagram below illustrates stratification of beds such that all desirable capacities can be determined from the measure.
+This portion of the measure makes two assumptions: the total number of licensed and staffed beds and ventilators changes infrequently,
+and that measure data is reviewed and adjusted (e.g., to account for institutional changes in staffing levels or bed counts) before
+being sent forward, so that prior measure reports and transmission review processes can be used to manage counts of total beds
+or ventilators).
 
-![Bed Venn Diagram](venn2.png)
+1. [Ventilators](measure_group_ventilators.html): Utilization of ventilators.
+2. [Beds](measure_group_beds.html): Utilization of Beds in the different locations.
 
-#### Ventilators
-Finally, a note on the Ventilators measurement. EHR systems may not directly track ventilator devices in the hospital. Ventilator use is indirectly determined in this measure based on the presence of observations that would only be present in the patient chart
-when the patient is being ventilated. Direct tracking of ventilator devices and teleemetry is typically the purview of other systems used for asset
-management or ICU central monitoring.  The number of ventilator devices is generally known, and does not change frequently, and so implementers may
-provide an alternate mechanism (e.g., a defined parameter) to supply this value.  Thus, while this guide provides an expression for identifying
-ventilators in this sample measure, more user feedback on how to obtain this value is desired.
+   NOTE: The requested data for Beds is at different levels than the proposed measure. However, the data request
+   is accessible from the proposed location categories below as follows:
 
+   * All Beds -- The sum of all three strata below: NumICUBeds, NumImpBeds and NumAmbBeds
+   * All Inpatient Beds -- The sum of the first two strata: NumICUBeds and NumImpBeds
+   * All ICU Beds -- The first strata: NumICUBeds
+
+   1. NumICUBeds: ICU Beds -- Utilization of staffed inpatient intensive care unit (ICU) beds.
+   2. NumImpBeds: Inpatient Non-ICU Beds -- Utilization of staffed inpatient non-ICU beds.
+   3. NumAmbBeds: Outpatient Beds -- Utilization of non-inpatient (e.g., ED, Ambulatory, Overflow) beds.
+
+These are provided in a different order in the measure because the group for Beds builds on a similar framework
+as is used for Ventilators, but includes complexity around stratification.
+
+NOTE: The Beds group uses strata to reduce repetition in this exposition. However, this would prevent further
+stratification by social determinants such as age, race, ethnicity and gender.  Any stratification layer can be
+"bumped" up a level into a numerator population by the addition of a final filter by the criteria which
+distinguishes it.
+
+```
+    .where(fieldToStratifyBy = 'ValueToMatch')
+```
+
+[TODO: Discuss measure scoring when there are multiple numerators](#todo)
 
 
 

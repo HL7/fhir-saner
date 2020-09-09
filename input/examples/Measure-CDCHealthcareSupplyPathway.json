@@ -75,7 +75,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -96,7 +96,7 @@
             "coding": [
               {
                 "code": "ventsupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ],
             "text": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
@@ -114,7 +114,7 @@
             "coding": [
               {
                 "code": "ventreuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ],
             "text": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
@@ -132,7 +132,7 @@
             "coding": [
               {
                 "code": "ventobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ],
             "text": "any supplies, including flow sensors, tubing, connectors, valves, filters, etc"
@@ -202,7 +202,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -223,7 +223,7 @@
             "coding": [
               {
                 "code": "n95masksupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -240,7 +240,7 @@
             "coding": [
               {
                 "code": "n95maskreuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -257,7 +257,7 @@
             "coding": [
               {
                 "code": "n95maskobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -326,7 +326,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -347,7 +347,7 @@
             "coding": [
               {
                 "code": "othrespsupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ],
             "text": "Other respirators such as PAPRs or elastomerics"
@@ -365,7 +365,7 @@
             "coding": [
               {
                 "code": "othrespreuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ],
             "text": "Other respirators such as PAPRs or elastomerics"
@@ -383,7 +383,7 @@
             "coding": [
               {
                 "code": "othrespobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ],
             "text": "Other respirators such as PAPRs or elastomerics"
@@ -453,7 +453,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -474,7 +474,7 @@
             "coding": [
               {
                 "code": "surgmasksupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -491,7 +491,7 @@
             "coding": [
               {
                 "code": "surgmaskreuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -508,7 +508,7 @@
             "coding": [
               {
                 "code": "surgmaskobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -577,7 +577,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -598,7 +598,7 @@
             "coding": [
               {
                 "code": "shieldsupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -615,7 +615,7 @@
             "coding": [
               {
                 "code": "shieldreuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -632,7 +632,7 @@
             "coding": [
               {
                 "code": "shieldobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -701,7 +701,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -722,7 +722,7 @@
             "coding": [
               {
                 "code": "gownsupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -739,7 +739,7 @@
             "coding": [
               {
                 "code": "gownreuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -756,7 +756,7 @@
             "coding": [
               {
                 "code": "gownobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -825,7 +825,7 @@
             },
             {
               "url": "rateAggregation",
-              "valueString": "aggregable-by-period"
+              "valueString": "count"
             }
           ],
           "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"
@@ -846,7 +846,7 @@
             "coding": [
               {
                 "code": "glovesupply",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -863,7 +863,7 @@
             "coding": [
               {
                 "code": "glovereuse",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
@@ -880,7 +880,7 @@
             "coding": [
               {
                 "code": "gloveobtain",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues"
               }
             ]
           },
