@@ -32,13 +32,23 @@ Would be the same as
 ```
 
 To save space only the description for the first population in the first group will be provided in
-this narrative. However, the [completed measure](#linktbd) includes descriptions for all populations.
+this narrative. However, the [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html)
+includes descriptions for all populations.
 
 ### Patient Impact and Hospital Capacity Module Definition
 Like the phrase book, this walkthrough is based on the measure derived from the CDC Patient Impact and
 Hospital Capacity module shown below.
 
 ![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)
+
+### Measure Header
+[Describe content of the Measure Header](#todo)
+
+Every measure must have at least one Library resource conforming to the
+[PublicHealthMeasureLibrary](StructureDefinition-PublicHealthMeasureLibrary.html) profile that
+provides the essential value sets and other resources that may be used to evaluate the measure.
+Details about the measure library for this sample measure can be found in the
+[Sample Measure Library](measure_library.html) page.
 
 ### Patient Impact Data Elements
 This measure first addresses the Impact of COVID-19 on hospital patients, stratifying data by
@@ -81,25 +91,43 @@ used to identify it.
 3. [CovidDeaths](measure_group_covid19_deaths.html): Deaths in the hospital during the reporting period
 
 ### Hospital Capacity
-The next section of this measure addresses hospital capacity with respect to all beds, inpatient beds, ICU beds, and ventilators. It can be clearly
-divided into two groups: those dealing with available beds, and those dealing with available ventilators.
+The next section of this measure addresses hospital capacity with respect to all beds, inpatient beds, ICU beds, and ventilators.
 These are all clearly [Capacity and Utilization](situational_awareness_measures.html#capacity-and-utilization) measures.
+It can be clearly divided into two groups, with stratification of the Bed group in across three categories to support
+all reporting needs.
 
-#### Hospital Beds
-The "All Hospital Beds" measurement does not include both "available" and "in use" beds, and so would not normally be considered to be a
-capacity measurement, however, it is included with other measures that clearly provide an approximation of the in use and available beds.
-The Bed Venn Diagram below illustrates stratification of beds such that all desirable capacities can be determined from the measure.
+This portion of the measure makes two assumptions: the total number of licensed and staffed beds and ventilators changes infrequently,
+and that measure data is reviewed and adjusted (e.g., to account for institutional changes in staffing levels or bed counts) before
+being sent forward, so that prior measure reports and transmission review processes can be used to manage counts of total beds
+or ventilators).
 
-![Bed Venn Diagram](venn2.png)
+1. [Ventilators](measure_group_ventilators.html): Utilization of ventilators.
+2. [Beds](measure_group_beds.html): Utilization of Beds in the different locations.
 
-#### Ventilators
-Finally, a note on the Ventilators measurement. EHR systems may not directly track ventilator devices in the hospital. Ventilator use is indirectly determined in this measure based on the presence of observations that would only be present in the patient chart
-when the patient is being ventilated. Direct tracking of ventilator devices and teleemetry is typically the purview of other systems used for asset
-management or ICU central monitoring.  The number of ventilator devices is generally known, and does not change frequently, and so implementers may
-provide an alternate mechanism (e.g., a defined parameter) to supply this value.  Thus, while this guide provides an expression for identifying
-ventilators in this sample measure, more user feedback on how to obtain this value is desired.
+   NOTE: The requested data for Beds is at different levels than the proposed measure. However, the data request
+   is accessible from the proposed location categories below as follows:
 
-### Measure Library
-[Fill this out](#todo)
+   * All Beds -- The sum of all three strata below: NumICUBeds, NumImpBeds and NumAmbBeds
+   * All Inpatient Beds -- The sum of the first two strata: NumICUBeds and NumImpBeds
+   * All ICU Beds -- The first strata: NumICUBeds
+
+   1. NumICUBeds: ICU Beds -- Utilization of staffed inpatient intensive care unit (ICU) beds.
+   2. NumImpBeds: Inpatient Non-ICU Beds -- Utilization of staffed inpatient non-ICU beds.
+   3. NumAmbBeds: Outpatient Beds -- Utilization of non-inpatient (e.g., ED, Ambulatory, Overflow) beds.
+
+These are provided in a different order in the measure because the group for Beds builds on a similar framework
+as is used for Ventilators, but includes complexity around stratification.
+
+NOTE: The Beds group uses strata to reduce repetition in this exposition. However, this would prevent further
+stratification by social determinants such as age, race, ethnicity and gender.  Any stratification layer can be
+"bumped" up a level into a numerator population by the addition of a final filter by the criteria which
+distinguishes it.
+
+```
+    .where(fieldToStratifyBy = 'ValueToMatch')
+```
+
+[TODO: Discuss measure scoring when there are multiple numerators](#todo)
+
 
 

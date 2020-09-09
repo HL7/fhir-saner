@@ -23,12 +23,22 @@ CodeSystem: MeasuredValues
 Title: "Measured Values in Sample Measures"
 Description: "A Code System for Populations in Sample Measures defined by The SANER Project"
 * #numTotBeds                   "All Hospital Beds" "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
+* #numTotBedsOcc                "Hospital Beds Occupied" "Total number of all Inpatient and outpatient beds that are occupied"
+* #numTotBedsAvail              "Hospital Beds Available" "Total number of all Inpatient and outpatient beds that are available"
 * #numbeds                      "Hospital Inpatient Beds" "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
 * #numBedsOcc                   "Hospital Inpatient Bed Occupancy" "Total number of staffed inpatient beds that are occupied"
 * #numICUBeds                   "ICU Beds" "Total number of staffed inpatient intensive care unit (ICU) beds"
 * #numICUBedsOcc                "ICU Bed Occupancy" "Total number of staffed inpatient ICU beds that are occupied"
+* #numICUBedsAvail              "ICU Bed Availability" "Total number of staffed inpatient ICU beds that are available"
+* #numImpBeds                   "Inpatient (non-ICU) Beds" "Total number of staffed inpatient non-ICU beds"
+* #numImpBedsOcc                "Inpatient (non-ICU) Bed Occupancy" "Total number of staffed inpatient non-ICU beds that are occupied"
+* #numImpBedsAvail              "Inpatient (non-ICU) Bed Availability" "Total number of staffed inpatient non-ICU beds that are available"
+* #numAmbBeds                   "Ambulatory Beds" "Total number of staffed ambulatory beds"
+* #numAmbBedsOcc                "Ambulatory Bed Occupancy" "Total number of staffed ambulatory beds that are occupied"
+* #numAmbBedsAvail              "Ambulatory Bed Availability" "Total number of staffed ambulatory beds that are available"
 * #numVent                      "Mechanical Ventilators" "Total number of ventilators available"
 * #numVentUse                   "Mechanical Ventilators in Use" "Total number of ventilators in use"
+* #numVentAvail                 "Mechanical Ventilators Available" "Total number of ventilators available"
 * #numC19Pats                   "All COVID-19 Confirmed or Suspected Patients" "Patients with suspected or confirmed COVID-19 in any location."
 * #numC19HospPats               "Hospitalized COVID-19 Patients" "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
 * #numC19OverflowPats           "ED/Overflow COVID-19 Patients" "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed"
@@ -176,6 +186,14 @@ ValueSet:    VentilatorDevicesWithTracheostomy
 Title:       "Ventilator Devices when used with Tracheostomy"
 Description: "Codes used for Devices that support Ventilation with a Tracheostomy"
 
+ValueSet:    VentilatorObservations
+Title:       "Ventilator Observations"
+Description: "Codes used to report ventilation activity"
+
+ValueSet:    VentilatorProcedures
+Title:       "Ventilator Procedures"
+Description: "Codes used to report a ventilation procedure"
+
 ValueSet:    SuspectedOrDiagnosedCOVID19
 Title:       "Suspected Or Diagnosed COVID-19"
 Description: "Coded identifying suspected or confirmed COVID-19"
@@ -184,11 +202,11 @@ ValueSet:    PatientDied
 Title:       "Patient Died"
 Description: "Codes used to identify that a patient has died"
 
-ValueSet:    COVID19DiagnosticTest
+ValueSet:    Covid19Labs
 Title:       "COVID-19 Diagnostic Test"
 Description: "Codes for COVID-19 Diagnostic Tests"
 
-ValueSet:    ConfirmedCOVID19Diagnosis
+ValueSet:    PositiveResult
 Title:       "Confirmed COVID-19 Diagnosis"
 Description: "Codes confirming COVID-19 Diagnostic Test Result"
 

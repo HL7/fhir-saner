@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Aggregate"
 * title = "Measure Consumer implementing the Aggregate Option."
-* date = "2020-09-08T07:59:09.421964-04:00"
+* date = "2020-09-09T05:19:04.618819-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Aggregate Option."
 * format[0] = #xml

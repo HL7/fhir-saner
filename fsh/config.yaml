@@ -95,7 +95,15 @@ pages:
       measure_group_covid19_deaths.md:
         title: Creating the COVID 19 Deaths Group
         generation: markdown
-
+      measure_group_ventilators.md:
+        title: Creating the Ventilator Avaiability Group
+        generation: markdown
+      measure_group_beds.md:
+        title: Creating the Bed Avaiability Group
+        generation: markdown
+      measure_library.md:
+        title: Sample Measure Library
+        generation: markdown
   architecture.md:
     title: Architecture
     generation: markdown
@@ -164,6 +172,9 @@ menu:
     Creating the Patients with COVID 19 Group: measure_group_covid19_patients.html
     Creating the Hospital Acquired COVID 19 Group: measure_group_hospital_acquired_covid19_patients.html
     Creating the COVID 19 Deaths Group: measure_group_covid19_deaths.html
+    Creating the Ventilator Avaiability Group: measure_group_ventilators.html
+    Creating the Bed Avaiability Group: measure_group_beds.html
+    Sample Measure Library: measure_library.html
   Technology:
     Architecture: architecture.html
     Use Cases: use_cases.html

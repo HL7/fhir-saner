@@ -144,7 +144,7 @@ The next population identifies patients who have died.
  ** language = #text/fhirpath
  ** expression = """
     Encounter.where(
-      iff(
+      iif(
         hospitalization.where(
           dispositionCode.memberOf(%PatientExpired)
         ),
@@ -156,12 +156,12 @@ The next population identifies patients who have died.
     .select(subject).resolve()
  """
 ```
-Again, note the use of of nested iff() calls in the query to ensure short-circuit evaluation.
+Again, note the use of of nested iif() calls in the query to ensure short-circuit evaluation.
 ```
  * with group[2].population[2].criteria do
  ** name = "CumC19Died"
  ** language = #text/fhirpath
- ** expression = "iff(%PriorReport.empty(),0,%PriorReport.group[2].population[2].count) + %NumC29Died)"
+ ** expression = "iif(%PriorReport.empty(),0,%PriorReport.group[2].population[2].count) + %NumC29Died)"
 ```
 NOTE: This expression simply returns a numeric value based on the previously reported value plus the number of new infections
 detected.
@@ -198,11 +198,11 @@ these values into appropriate groupings.
     .extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
     .extension('ombCategory')
     .select(
-      iff(valueCoding.code contains '1992-5', 'A', ' ') +
-      iff(valueCoding.code contains '2054-5', 'B', ' ') +
-      iff(valueCoding.code contains '2076-8', 'H', ' ') +
-      iff(valueCoding.code contains '2028-9', 'S', ' ') +
-      iff(valueCoding.code contains '2106-3', 'W', ' ')
+      iif(valueCoding.code contains '1992-5', 'A', ' ') +
+      iif(valueCoding.code contains '2054-5', 'B', ' ') +
+      iif(valueCoding.code contains '2076-8', 'H', ' ') +
+      iif(valueCoding.code contains '2028-9', 'S', ' ') +
+      iif(valueCoding.code contains '2106-3', 'W', ' ')
     )
     """
 ```

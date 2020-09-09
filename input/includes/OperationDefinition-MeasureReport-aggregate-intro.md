@@ -28,4 +28,17 @@ the MeasureReport
 6. Compute the group.measureScore and group.stratifier.stratum.measure score for each group and stratum from the computed counts.
 
 ### Aggregating Population count values
-[Discuss aggregation of population counts based on measure scoring and rate aggregation classification](#todo)
+Measures aggregate values according to the [Measure Rate Aggregation Values](ValueSet-MeasureRateAggregationValues.html) value set.
+Across facilities, population counts are always summed. Within a facility the different population types are aggregated differently when
+aggregating over a larger time period.
+
+* count<br/>
+  All population count values are summed.
+* point-in-time<br/>
+  The most recent population count value is the "aggregated" value, representing the final point-in-time
+  measure.
+* cumulative<br/>
+  The initial population and numerator are summed, being a count of individual events.
+  The denominator population takes on the value of the report at the end of the time period (the most recent value), beeing a cumulative count.
+
+Measure scores are recomputed based on measure populations after aggregation following the usual rules for measure scoring.

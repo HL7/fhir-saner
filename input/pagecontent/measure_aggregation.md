@@ -49,7 +49,7 @@ The [Aggregate](OperationDefinition-MeasureReport-aggregate.html) operation defi
 The aggregation of population.count requires special attention.
 
 For a given facility and time period, a measures can be aggregated in different ways depending on
-the [scoring of the measure](CodingSystem-PublicHealthMeasureScoring.html).
+the [scoring of the measure](CodeSystem-PublicHealthMeasureScoring.html).
 The scoring of measures implies the way that which rate aggregation can be performed:
 
 * Capacity<br/>

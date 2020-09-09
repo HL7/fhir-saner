@@ -139,12 +139,12 @@ this latter two week period in the discussion for the prior measure group.
  ** language = #text/fhirpath
  ** expression = """
     Encounter.where(
-      iff(
+      iif(
         // Rule out any encounter that is less than 14 days old.
         period.start + 14 days > today(),
         // return false to rule out this encounter.
         false,
-        iff(
+        iif(
           // Rule out patients who have a diagnosis of suspected or confirmed
           // Covid prior between period.start - 14 days and period.start + 14 days
           (%Base + '/Condition?_count=1'+
@@ -177,14 +177,14 @@ this latter two week period in the discussion for the prior measure group.
     .select(patient).resolve()
  """
 ```
-Again, note the use of of nested iff() calls and _count=1 in the query to ensure short-circuit evaluation.
+Again, note the use of of nested iif() calls and _count=1 in the query to ensure short-circuit evaluation.
 Also note that these queries are almost identical to the [queries](measure_group_covid19_patients.html#fhir-queries)
 used in the first measure group.
 ```
  * with group[1].population[2].criteria do
  ** name = "CumC19HOPats"
  ** language = #text/fhirpath
- ** expression = "iff(%PriorReport.empty(),0,%PriorReport.group[1].population[2].count) + %NumC19HOPats)"
+ ** expression = "iif(%PriorReport.empty(),0,%PriorReport.group[1].population[2].count) + %NumC19HOPats)"
 ```
 NOTE: This expression simply returns a numeric value based on the previously reported value plus the number of new infections
 detected.
@@ -213,13 +213,13 @@ specification for durations.
  ** criteria.language = #text/fhirpath
  ** criteria.expression = """
     Patient.select(
-      iff(birthDate + 20 years < today(), 'P0Y--P20Y',
-        iff(birthDate + 30 years < today(), 'P20Y--P30Y',
-          iff(birthDate + 40 years < today(), 'P30Y--P40Y',
-            iff(birthDate + 50 years < today(), 'P40Y--P50Y',
-              iff(birthDate + 60 years < today(), 'P50Y--P60Y',
-                iff(birthDate + 70 years < today(), 'P60Y--P70Y',
-                  iff(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')
+      iif(birthDate + 20 years < today(), 'P0Y--P20Y',
+        iif(birthDate + 30 years < today(), 'P20Y--P30Y',
+          iif(birthDate + 40 years < today(), 'P30Y--P40Y',
+            iif(birthDate + 50 years < today(), 'P40Y--P50Y',
+              iif(birthDate + 60 years < today(), 'P50Y--P60Y',
+                iif(birthDate + 70 years < today(), 'P60Y--P70Y',
+                  iif(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')
                 )
               )
             )
@@ -273,9 +273,9 @@ a new category to report 'Mixed' race.
     .extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
     .extension('ombCategory')
     .select(
-      iff(valueCoding.count() > 1,
+      iif(valueCoding.count() > 1,
          'Mixed',
-         iff(valueCoding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor',
+         iif(valueCoding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor',
              'Unknown',
              valueCoding.code
          )

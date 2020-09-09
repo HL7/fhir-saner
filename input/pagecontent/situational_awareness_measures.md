@@ -147,7 +147,7 @@ of measures:
 * Availability
 
 These categories describe different ways of scoring of a measure and are included in the
-[Public Health Measure Scoring](CodingSystem-PublicHealthMeasureScoring.html) coding system established by this guide.
+[Public Health Measure Scoring](CodeSystem-PublicHealthMeasureScoring.html) coding system established by this guide.
 
 ### Capacity and Utilization
 A Capacity and Utilitization measure describes the current capacity and utilization of fixed assets for treatment,
@@ -274,7 +274,7 @@ use denominator exceptions.  This implementation guide defines four additional t
 * Duration Squared
 * Supporting
 
-These population types are defined in the [Measure Populations](CodeSystem-MeasurePopulations.html) code system.
+These population types are defined in the [Measure Populations](CodeSystem-MeasurePopulationSystem.html) code system.
 
 #### Numerator Complement
 The numerator complement is the quantity in the denominator that match neither the numerator the numerator exclusion criteria.
@@ -304,6 +304,12 @@ even discard it from the stored MeasureReport resource.  These are like extra su
 a final total, but not essential.
 
 #### Specifying Population Criteria
+The table below illustrates the populations that are required for computing a situation awareness measure.
+Unlike quality measures, situation awareness measures do not require that an initial population be present
+for all measure types. It is permitted, and may be helpful in measure computation, but it is not essential
+for scoring or reporting.
+
+[Move Initial Population in queue-length Measure to denominator (enabling easy switch to service-time).](#todo)
 
 <table rows='12'>
   <thead>
@@ -315,13 +321,13 @@ a final total, but not essential.
   </thead>
   <tbody>
     <tr><td>Capacity and Utilization</td>
-      <td>R</td><td>O</td>
+      <td>O</td><td>O</td>
       <td>R</td><td>O</td>
       <td>R</td><td>O</td><td>R</td>
       <td>NP</td><td>NP</td>
     </tr>
     <tr><td>Event Growth</td>
-      <td>R</td><td>O</td>
+      <td>O</td><td>O</td>
       <td>R</td><td>O</td>
       <td>R</td><td>O</td><td>NP</td>
       <td>NP</td><td>NP</td>
@@ -333,13 +339,13 @@ a final total, but not essential.
       <td>NP</td><td>NP</td>
     </tr>
     <tr><td>Service Time</td>
-      <td>R</td><td>O</td>
+      <td>O</td><td>O</td>
       <td>R</td><td>O</td>
       <td>NP</td><td>NP</td><td>NP</td>
       <td>R</td><td>O</td>
     </tr>
     <tr><td>Availability</td>
-      <td>R</td><td>O</td>
+      <td>O</td><td>O</td>
       <td>R</td><td>O</td>
       <td>R</td><td>O</td><td>R</td>
       <td>NP</td><td>NP</td>

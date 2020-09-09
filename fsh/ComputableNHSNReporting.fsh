@@ -6,7 +6,7 @@ InstanceOf: PublicHealthMeasureLibrary
  * insert SanerDefinitionContent
  * id = "ComputableNHSNMeasureLibrary"
  * name = "ComputableNHSNMeasureLibrary"
- * url = "http://hl7.org/fhir/us/saner/StructureDefinition/NHSNMeasureLibrary"
+ * url = "http://hl7.org/fhir/us/saner/StructureDefinition/ComputableNHSNMeasureLibrary"
  * title = "Computable NHSN Patient Impact and Hospital Capacity Measure Library"
  * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
@@ -66,8 +66,6 @@ InstanceOf: PublicHealthMeasureLibrary
  * content[9].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
 */
 
-
-
 Instance: ComputableCDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasure
 Title: "Computable CDC Patient Impact and Hospital Capacity"
@@ -101,6 +99,7 @@ ICU beds
  * insert NHSNArtifacts
  * library = Canonical(ComputableNHSNMeasureLibrary)
 
+// COVID-19 Patients
  //* with group[0].code do
  * group[0].code.coding = MeasureGroupSystem#Encounters
  * group[0].code.coding.display = "Encounters"
@@ -156,14 +155,14 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
             + '&date=lt' + %ReportingPeriod.end
      ).resolve().select(resource).
      where(
-       iff(
+       iif(
          // The reason is a positive lab test result
          Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or
 
          // The reason or diagnosis associated with the encounter is COVID-19
          ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),
 
-         iff(
+         iif(
            // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days
            Patient.distinct().where(
              %Base + '/Observation?_count=1' +
@@ -211,7 +210,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
           iif(Encounter.location.resolve().type in %InpatientLocation, 'InpNotVentilated', 'OFNotVentilated')
       )
  """
-
+// Hospital Acquired COVID-19
  //* with group[1].code do
  * group[1].code.coding = MeasureGroupSystem#AcquiredCovid
  * group[1].code.coding.display = "Acquired COVID-19 in Hospital"
@@ -274,12 +273,12 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[1].population[1].criteria.language = #text/fhirpath
  * group[1].population[1].criteria.expression = """
     Encounter.where(
-      iff(
+      iif(
         // Rule out any encounter that is less than 14 days old.
         period.start + 14 days > today(),
         // return false to rule out this encounter.
         false,
-        iff(
+        iif(
           // Rule out patients who have a diagnosis of suspected or confirmed
           // Covid prior between period.start - 14 days and period.start + 14 days
           (%Base + '/Condition?_count=1'+
@@ -314,7 +313,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
 
  //* with group[1].population[2].criteria do
  * group[1].population[2].criteria.language = #text/fhirpath
- * group[1].population[2].criteria.expression = "iff(%PriorReport.empty(),0,%PriorReport.group[1].population[2].count) + %NumC19HOPats)"
+ * group[1].population[2].criteria.expression = "iif(%PriorReport.empty(),0,%PriorReport.group[1].population[2].count) + %NumC19HOPats)"
 
  //* with group[1].stratifier[0] do
  * group[1].stratifier[0].code.text = "By Age Group"
@@ -323,13 +322,13 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[1].stratifier[0].criteria.language = #text/fhirpath
  * group[1].stratifier[0].criteria.expression = """
     Patient.select(
-      iff(birthDate + 20 years < today(), 'P0Y--P20Y',
-        iff(birthDate + 30 years < today(), 'P20Y--P30Y',
-          iff(birthDate + 40 years < today(), 'P30Y--P40Y',
-            iff(birthDate + 50 years < today(), 'P40Y--P50Y',
-              iff(birthDate + 60 years < today(), 'P50Y--P60Y',
-                iff(birthDate + 70 years < today(), 'P60Y--P70Y',
-                  iff(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')
+      iif(birthDate + 20 years < today(), 'P0Y--P20Y',
+        iif(birthDate + 30 years < today(), 'P20Y--P30Y',
+          iif(birthDate + 40 years < today(), 'P30Y--P40Y',
+            iif(birthDate + 50 years < today(), 'P40Y--P50Y',
+              iif(birthDate + 60 years < today(), 'P50Y--P60Y',
+                iif(birthDate + 70 years < today(), 'P60Y--P70Y',
+                  iif(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')
                 )
               )
             )
@@ -365,15 +364,16 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
     .extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
     .extension('ombCategory')
     .select(
-      iff(valueCoding.count() > 1,
+      iif(valueCoding.count() > 1,
          'Mixed',
-         iff(valueCoding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor',
+         iif(valueCoding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor',
              'Unknown',
              valueCoding.code
          )
     )
     """
 
+// COVID-19 Deaths
  //* with group[2].code do
  * group[2].code.coding = MeasureGroupSystem#CovidDeaths
  * group[2].code.coding.display = "COVID-19 Deaths"
@@ -433,7 +433,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[2].population[1].criteria.language = #text/fhirpath
  * group[2].population[1].criteria.expression = """
     Encounter.where(
-      iff(
+      iif(
         hospitalization.where(
           dispositionCode.memberOf(%PatientExpired)
         ),
@@ -448,7 +448,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  //* with group[2].population[2].criteria do
  * group[2].population[2].criteria.name = "CumC19Died"
  * group[2].population[2].criteria.language = #text/fhirpath
- * group[2].population[2].criteria.expression = "iff(%PriorReport.empty(),0,%PriorReport.group[2].population[2].count) + %NumC29Died)"
+ * group[2].population[2].criteria.expression = "iif(%PriorReport.empty(),0,%PriorReport.group[2].population[2].count) + %NumC29Died)"
 
  //* with group[2].stratifier[0] do
  * group[2].stratifier[0].code.text = "By Age Group"
@@ -457,13 +457,13 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[2].stratifier[0].criteria.language = #text/fhirpath
  * group[2].stratifier[0].criteria.expression = """
     Patient.select(
-      iff(birthDate + 20 years < today(), 'P0Y--P20Y',
-        iff(birthDate + 30 years < today(), 'P20Y--P30Y',
-          iff(birthDate + 40 years < today(), 'P30Y--P40Y',
-            iff(birthDate + 50 years < today(), 'P40Y--P50Y',
-              iff(birthDate + 60 years < today(), 'P50Y--P60Y',
-                iff(birthDate + 70 years < today(), 'P60Y--P70Y',
-                  iff(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')
+      iif(birthDate + 20 years < today(), 'P0Y--P20Y',
+        iif(birthDate + 30 years < today(), 'P20Y--P30Y',
+          iif(birthDate + 40 years < today(), 'P30Y--P40Y',
+            iif(birthDate + 50 years < today(), 'P40Y--P50Y',
+              iif(birthDate + 60 years < today(), 'P50Y--P60Y',
+                iif(birthDate + 70 years < today(), 'P60Y--P70Y',
+                  iif(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')
                 )
               )
             )
@@ -499,10 +499,181 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
     .extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
     .extension('ombCategory')
     .select(
-      iff(valueCoding.code contains '1992-5', 'A', ' ') +
-      iff(valueCoding.code contains '2054-5', 'B', ' ') +
-      iff(valueCoding.code contains '2076-8', 'H', ' ') +
-      iff(valueCoding.code contains '2028-9', 'S', ' ') +
-      iff(valueCoding.code contains '2106-3', 'W', ' ')
+      iif(valueCoding.code contains '1992-5', 'A', ' ') +
+      iif(valueCoding.code contains '2054-5', 'B', ' ') +
+      iif(valueCoding.code contains '2076-8', 'H', ' ') +
+      iif(valueCoding.code contains '2028-9', 'S', ' ') +
+      iif(valueCoding.code contains '2106-3', 'W', ' ')
     )
     """
+
+// Ventiltors
+ * group[3].code.coding = MeasureGroupSystem#Ventilators
+ * group[3].code.coding.display = "Ventilators"
+ * group[3].code.text = "Ventilator Reporting"
+ * group[3].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/PublicHealthMeasureScoring#capacity
+ * group[3].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+ * group[3].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
+ * group[3].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
+ * group[3].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#257463002 "Ventilator Outlet"
+ * group[3].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Ventilator capacity"
+ * group[3].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
+
+ * group[3].population[0].code.coding[0] = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numVent "Mechanical Ventilators"
+ * group[3].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
+ * group[3].population[0].code.text = "Total number of ventilators"
+ * group[3].population[0].description = "Count of all ventilators that can support patient care, whether or not they are presently in use."
+
+ * group[3].population[1].code.coding[0] = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numVentUse "Mechanical Ventilators in Use"
+ * group[3].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
+ * group[3].population[1].code.text = "Total number of ventilators in use"
+ * group[3].population[1].description = "Count of all ventilators in use."
+
+ * group[3].population[2].code.coding[0] = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numVentAvail "Mechanical Ventilators Available"
+ * group[3].population[2].code.coding[1] = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
+ * group[3].population[2].code.text = "Total number of ventilators not presently in use."
+ * group[3].population[2].description = "Count of all ventilators not presently in use."
+
+ * group[3].population[0].criteria.name = "NumVent"
+ * group[3].population[0].criteria.description = """Computes the total number of ventilators from the previously reported MeasureReport"""
+ * group[3].population[0].criteria.language = #text/fhirpath
+ * group[3].population[0].criteria.expression = "%PriorReport.group[3].population[0].count"
+
+ * group[3].population[1].criteria.name = "NumVentUse"
+ * group[3].population[1].criteria.description = """Identifies the number of ventilators in use by counting Patient with an Observation
+ or Procedure resource from an appropriate value set indicating ventilator use."""
+ * group[3].population[1].criteria.language = #text/fhirpath
+ * group[3].population[1].criteria.expression = """
+       // Find all active encounters
+       (
+         %Base + '/Encounter?' +
+         // Get only those encounters which were in-progress or finished during the reporting period
+         'status= in-progress,finished' +
+         // Include the patient in the results
+         '&_include=Encounter:subject'+
+         '&date=ge' + %ReportingPeriod.start +
+         '&date=lt' + %ReportingPeriod.end
+       ).resolve()
+       // Filter to patients
+       .select(resource as Patient)
+       .where(
+         iif(
+           ( %Base + '/Observation?_count=1'+
+             '&status=registered,preliminary,final,amended,corrected' +
+             '&patient=' + $this.id +
+             '&verificationStatus:not=refuted,entered-in-error' +
+             '&date=gt' + %ReportingPeriod.start  +
+             '&date=le' + %ReportingPeriod.end  +
+             '&code:in=' + %VentilatorObservations.url
+           ).resolve().select(resource as Observation).exists(),
+           true,
+           ( %Base + '/Procedure?_count=1'+
+             '&status=in-progress,competed' +
+             '&patient=' + $this.id +
+             '&date=gt' + %ReportingPeriod.start  +
+             '&date=le' + %ReportingPeriod.end  +
+             '&code:in=' + %VentilatorProcedures.url
+           ).resolve().select(resource as Procedure).exists()
+         )
+       )
+ """
+ * group[3].population[2].criteria.name = "NumVentAvail"
+ * group[3].population[2].criteria.description = """Computes the number of ventilators available by substracting the number of ventilators in use
+ determined by population 1 from thee total number of ventilators given in population 0
+ """
+ * group[3].population[2].criteria.language = #text/fhirpath
+ * group[3].population[2].criteria.expression = "%NumVent - %NumVentUse.count()"
+
+// Beds
+ * group[4].code.coding = MeasureGroupSystem#Beds
+ * group[4].code.coding.display = "Beds"
+ * group[4].code.text = "Bed Reporting"
+ * group[4].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/PublicHealthMeasureScoring#capacity
+ * group[4].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+ * group[4].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
+ * group[4].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
+ * group[4].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#91537007 "Hospital Bed"
+ * group[4].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Bed capacity"
+ * group[4].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
+
+ * group[4].population[0].code.coding[0] = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numTotBeds "All Hospital Beds"
+ * group[4].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
+ * group[4].population[0].code.text = "Total number of beds"
+ * group[4].population[0].description = """
+ Total number of all Inpatient and outpatient beds, including all staffed, ICU,
+ licensed, and overflow (surge) beds used for inpatients or outpatients"""
+
+ * group[4].population[1].code.coding[0] = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numTotBedsOcc "Hospital Beds Occupied"
+ * group[4].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
+ * group[4].population[1].code.text = "Total number of beds in use"
+ * group[4].population[1].description = "Total number of all Inpatient and outpatient beds that are occupied"
+
+ * group[4].population[2].code.coding[0] = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numTotBedsAvail "Hospital Beds Available"
+ * group[4].population[2].code.coding[1] = http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
+ * group[4].population[2].code.text = "Total number of hospital beds available"
+ * group[4].population[2].description = "Total number of all hospital inpatient and outpatient beds that are available"
+
+ * group[4].population[0].criteria.name = "NumTotBeds"
+ * group[4].population[0].criteria.description = """Computes the total number of beds from the previously reported MeasureReport"""
+ * group[4].population[0].criteria.language = #text/fhirpath
+ * group[4].population[0].criteria.expression = "%PriorReport.group[3].population[0].count"
+
+ * group[4].population[1].criteria.name = "NumTotBedsOcc"
+ * group[4].population[1].criteria.description = """
+ Identifies the number of beds in use by counting the most recent Encounter for each patient where the encounter
+ was in-progress or finished within the period.
+   """
+ * group[4].population[1].criteria.language = #text/fhirpath
+ * group[4].population[1].criteria.expression = """
+       // Find all active encounters
+       (
+         %Base + '/Encounter?' +
+         // Get only those encounters which are in-progress during the reporting period
+         // because if an encounter finished during the reporting period, the bed is now
+         // available.
+         'status=in-progress' +
+         '&date=ge' + %ReportingPeriod.start +
+         '&date=lt' + %ReportingPeriod.end
+       ).resolve().select(resource as Encounter)
+       // Select the most recent encounter for each location
+       // Assumes that encounters are returned in reverse chonological order
+       // and that the most recent location is reported first in the list
+       // of locations.
+       .aggregate(
+          iif($total.select(location[0]).location contains $this.location.location.first(),
+              {},
+              $total | $this
+          )
+       )
+       // NOTE: Aggregate returns a list of both Encounter and Location resources
+       // representing beds in use.
+       // From Encounter, one can get to both the Patient (via Encounter.subject) and
+       // Location resources (via Encounter.location.location).  This enables the result
+       // to be stratifed by patient demographics, or location type.
+ """
+
+ * group[4].population[2].criteria.name = "NumTotBedsAvail"
+ * group[4].population[2].criteria.description = """Computes the number of beds  available by substracting the number of beds in use
+ determined by population 1 from the total number of beds given in population 0
+ """
+ * group[4].population[2].criteria.language = #text/fhirpath
+ * group[4].population[2].criteria.expression = "%NumTotBeds - %NumTotBedsOcc.count()"
+
+ * group[4].stratifier.code.text = "By Type of Location"
+ * group[4].stratifier.description = "Inpatient Non-ICU, Inpatient ICU, Other"
+ * group[4].stratifier.criteria.description = """
+ Determines the location of the encounter based on the membership
+ of location.type in the InpatientNonICU and InpatientICU ValueSet resources.
+ When location.type is assigned to any other value, it is reported to be Other
+ """
+ * group[4].stratifier.criteria.language = #text/fhirpath
+ * group[4].stratifier.criteria.expression = """
+    Encounter.location.location.resolve()
+    .iif(type.memberOf(%InpatientNonICU.url),
+        'Inpatient Non-ICU',
+        iif (type.memberOf(%InpatientICU.url),
+             'Inpatient ICU',
+             'Other'
+        )
+    )
+"""

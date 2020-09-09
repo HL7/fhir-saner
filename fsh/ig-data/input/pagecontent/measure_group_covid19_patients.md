@@ -116,14 +116,14 @@ The computable content "implements" the automated computation of the measure.
             + '&date=lt' + %ReportingPeriod.end
      ).resolve().select(resource).
      where(
-       iff(
+       iif(
          // The reason is a positive lab test result
          Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or
 
          // The reason or diagnosis associated with the encounter is COVID-19
          ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),
 
-         iff(
+         iif(
            // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days
            Patient.distinct().where(
              %Base + '/Observation?_count=1' +
@@ -142,9 +142,9 @@ The computable content "implements" the automated computation of the measure.
              '&verificationStatus:not=refuted,entered-in-error' +
              '&date=gt' + (%ReportingPeriod.start - 14 days) +
              '&code:in=' + %SuspectedOrDiagnosedCOVID19.url,
-           )
+           ).resolve().select(resource as Condition).exists()
          )
-      ).resolve().select(resource as Condition).exists()
+      )
     )
     // Finally, resolve to the unique list of encounters (just in case)
     .distinct()
@@ -183,11 +183,11 @@ Encounter:* is written to:
 
 #### Filtering Criteria by included resources
 The next part of the query is a where() clause which filters the resources returned by the first query.
-This where clause includes the use of the iff() function to enable short circuit evaluation, so that
+This where clause includes the use of the iif() function to enable short circuit evaluation, so that
 additional queries are only performed when necessary.
 
-The first clause in the iff() uses Observation, Encounter and Condition resources returned by the initial
-query, and check for codes and values that are members of value sets established in the [library](#measure-library)
+The first clause in the iif() uses Observation, Encounter and Condition resources returned by the initial
+query, and check for codes and values that are members of value sets established in the [library](measure_library.html)
 associated with the measure.  If an encounter matches for either of these reasons, then there is no reason
 to look further.
 
@@ -195,7 +195,7 @@ The first part filters the returned resources by type (Observation) and then eva
 whether the observation matches one of the appropriate codes for a Covid-19 lab test and has a
 positive result.
 ```
-       iff(
+       iif(
          // The reason is a positive lab test result
          Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or
 ```
@@ -217,13 +217,13 @@ determine whether the encounter is for suspected or confirmed COVID-19.
 Sometimes the initial query is insufficient to determine if the returned resources qualify
 for inclusion in the population, and additional data may be necessary.  This is the "chatty"
 part of the protocol, because it can result in a query to test each case not already included,
-and is the reason for use of the outer iff() in first part, and in the inner iff() in this
+and is the reason for use of the outer iif() in first part, and in the inner iif() in this
 second part of FHIRPath expression.
 
 The first of the two queries identifies patients for whom there is at least one positive
 diagnostic test for COVID-19 in the past two weeks.
 ```
-      iff(
+      iif(
          // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days
          Patient.distinct().where(
            %Base + '/Observation?_count=1' +
@@ -275,7 +275,7 @@ where the resulting value is positive using the [PositiveResult](ValueSet-Positi
 ```
 NOTE: Some lab results may be reported in a panel form using observation.component.code and observation.component.value. To query for lab
 results using this form, change code and value-concept in the query above to component-code and component-value-concept respectively. To query
-for both, add a third iff() statement which includes both.  It is not included in this example simply for brevity.
+for both, add a third iif() statement which includes both.  It is not included in this example simply for brevity.
 
 The last section of the expression requires some explanation.
 ```
@@ -325,7 +325,7 @@ element.  In this first case, that is a patient encounter.
  ** criteria.name = "LocationAndVentStatus"
  ** criteria.language = #text/fhirpath
  ** criteria.expression = """
-      iif(%PatientsOnVent.id contains Encounter.subject,
+      iif(%NumVentUse.id contains Encounter.subject,
           iif(Encounter.location.resolve().type in %InpatientLocation, 'InpVentilated', 'OFVentilated')
           iif(Encounter.location.resolve().type in %InpatientLocation, 'InpNotVentilated', 'OFNotVentilated')
       )
