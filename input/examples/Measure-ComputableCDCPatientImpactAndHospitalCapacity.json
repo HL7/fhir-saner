@@ -112,7 +112,7 @@
             "name": "NumC19Pats",
             "description": "Active encounters where the encounter diagnosis is suspected or confirmed COVID-19,\n or a Condition of suspected or confirmed COVID-19 was created during that encounter.  This includes the patients with laboratory-confirmed\n or clinically diagnosed COVID-19.\n\nConfirmed\n: A patient with a laboratory confirmed COVID-19 diagnosis\n\nSuspected\n: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance\nfor Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed\nCOVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue).",
             "language": "text/fhirpath",
-            "expression": " // Start with encounters that were active during the reporting period. Note, this may find the same patient twice\n // because they may have had an ED encounter followed by an inpatient encounter both within the reporting period.\n (%Base + '/Encounter?_include=Encounter:*&status=in-progress,finished'\n        + '&date=ge' + %ReportingPeriod.start +\n        + '&date=lt' + %ReportingPeriod.end\n ).resolve().select(resource).\n where(\n   iff(\n     // The reason is a positive lab test result\n     Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or\n\n     // The reason or diagnosis associated with the encounter is COVID-19\n     ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),\n\n     iff(\n       // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days\n       Patient.distinct().where(\n         %Base + '/Observation?_count=1' +\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&date=gt' + (%ReportingPeriod.start - 14 days) +\n         '&code:in=' + %Covid19Labs.url +\n         '&value-concept:in=' + %PositiveResult.url\n       ).resolve().select(resource as Observation).exists(),\n\n       // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days\n       Patient.distinct().where(\n         %Base + '/Condition?_count=1'+\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&verificationStatus:not=refuted,entered-in-error' +\n         '&date=gt' + (%ReportingPeriod.start - 14 days) +\n         '&code:in=' + %SuspectedOrDiagnosedCOVID19.url,\n       )\n     )\n  ).resolve().select(resource as Condition).exists()\n)\n// Finally, resolve to the unique list of encounters (just in case)\n.distinct()\n// And remove duplicate encounters for the same patient\n// NOTE! Assumes that encounters are returned in order by most to least recent\n// This assumption holds commonly on many implementations, but may not be true\n// for all cases. In the worst case scenario where it does not, the situation\n// will be corrected in the very next reporting period, where only the most\n// recent encounter will appear.\n.aggregate(\n  iif($total.subject contains $this.subject,\n      {}, $total | $this\n  )\n)"
+            "expression": " // Start with encounters that were active during the reporting period. Note, this may find the same patient twice\n // because they may have had an ED encounter followed by an inpatient encounter both within the reporting period.\n (%Base + '/Encounter?_include=Encounter:*&status=in-progress,finished'\n        + '&date=ge' + %ReportingPeriod.start +\n        + '&date=lt' + %ReportingPeriod.end\n ).resolve().select(resource).\n where(\n   iif(\n     // The reason is a positive lab test result\n     Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or\n\n     // The reason or diagnosis associated with the encounter is COVID-19\n     ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),\n\n     iif(\n       // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days\n       Patient.distinct().where(\n         %Base + '/Observation?_count=1' +\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&date=gt' + (%ReportingPeriod.start - 14 days) +\n         '&code:in=' + %Covid19Labs.url +\n         '&value-concept:in=' + %PositiveResult.url\n       ).resolve().select(resource as Observation).exists(),\n\n       // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days\n       Patient.distinct().where(\n         %Base + '/Condition?_count=1'+\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&verificationStatus:not=refuted,entered-in-error' +\n         '&date=gt' + (%ReportingPeriod.start - 14 days) +\n         '&code:in=' + %SuspectedOrDiagnosedCOVID19.url,\n       )\n     )\n  ).resolve().select(resource as Condition).exists()\n)\n// Finally, resolve to the unique list of encounters (just in case)\n.distinct()\n// And remove duplicate encounters for the same patient\n// NOTE! Assumes that encounters are returned in order by most to least recent\n// This assumption holds commonly on many implementations, but may not be true\n// for all cases. In the worst case scenario where it does not, the situation\n// will be corrected in the very next reporting period, where only the most\n// recent encounter will appear.\n.aggregate(\n  iif($total.subject contains $this.subject,\n      {}, $total | $this\n  )\n)"
           }
         }
       ],
@@ -245,7 +245,7 @@
             "name": "NumC19HOPats",
             "description": "ilters the initial population by ruling out those patients whose first suspected or\nconfirmed diagnosis or lab result appears less than 14 days from admission.",
             "language": "text/fhirpath",
-            "expression": "Encounter.where(\n  iff(\n    // Rule out any encounter that is less than 14 days old.\n    period.start + 14 days > today(),\n    // return false to rule out this encounter.\n    false,\n    iff(\n      // Rule out patients who have a diagnosis of suspected or confirmed\n      // Covid prior between period.start - 14 days and period.start + 14 days\n      (%Base + '/Condition?_count=1'+\n       '&status=registered,preliminary,final,amended,corrected' +\n       '&patient=' + $this.subject +\n       '&verificationStatus:not=refuted,entered-in-error' +\n       '&date=gt' + ($this.period.start - 14 days) +\n       '&date=le' + ($this.period.start + 14 days) +\n       '&code:in=' + %SuspectedOrDiagnosedCOVID19.url\n      ).resolve().select(resource as Condition).exists(),\n      // return false to rule out this encounter\n      false,\n      // Rule out remaining patients who have a positive lab result between\n      // period.start - 14 days and period.start + 14 days\n      (%Base + '/Observation?_count=1' +\n       '&status=registered,preliminary,final,amended,corrected' +\n       '&patient=' + $this.subject +\n       '&date=gt' + ($this.period.start - 14 days) +\n       '&date=le' + ($this.period.start + 14 days) +\n       '&code:in=' + %Covid19Labs.url +\n       '&value-concept:in=' + %PositiveResult.url\n      ).resolve().select(resource as Observation)\n      // If the query returned an observations, then empty() will return false, ruling\n      // out this encounter.\n      .empty()\n    )\n  )\n)\n// Resolve to patient to simplify stratification\n.select(patient).resolve()"
+            "expression": "Encounter.where(\n  iif(\n    // Rule out any encounter that is less than 14 days old.\n    period.start + 14 days > today(),\n    // return false to rule out this encounter.\n    false,\n    iif(\n      // Rule out patients who have a diagnosis of suspected or confirmed\n      // Covid prior between period.start - 14 days and period.start + 14 days\n      (%Base + '/Condition?_count=1'+\n       '&status=registered,preliminary,final,amended,corrected' +\n       '&patient=' + $this.subject +\n       '&verificationStatus:not=refuted,entered-in-error' +\n       '&date=gt' + ($this.period.start - 14 days) +\n       '&date=le' + ($this.period.start + 14 days) +\n       '&code:in=' + %SuspectedOrDiagnosedCOVID19.url\n      ).resolve().select(resource as Condition).exists(),\n      // return false to rule out this encounter\n      false,\n      // Rule out remaining patients who have a positive lab result between\n      // period.start - 14 days and period.start + 14 days\n      (%Base + '/Observation?_count=1' +\n       '&status=registered,preliminary,final,amended,corrected' +\n       '&patient=' + $this.subject +\n       '&date=gt' + ($this.period.start - 14 days) +\n       '&date=le' + ($this.period.start + 14 days) +\n       '&code:in=' + %Covid19Labs.url +\n       '&value-concept:in=' + %PositiveResult.url\n      ).resolve().select(resource as Observation)\n      // If the query returned an observations, then empty() will return false, ruling\n      // out this encounter.\n      .empty()\n    )\n  )\n)\n// Resolve to patient to simplify stratification\n.select(patient).resolve()"
           }
         },
         {
@@ -268,7 +268,7 @@
             "name": "CumC19HOPats",
             "description": "omputes the cumulative total from the prior measure report and the number of new\ninfections detected in the current reporting period.",
             "language": "text/fhirpath",
-            "expression": "iff(%PriorReport.empty(),0,%PriorReport.group[1].population[2].count) + %NumC19HOPats)"
+            "expression": "iif(%PriorReport.empty(),0,%PriorReport.group[1].population[2].count) + %NumC19HOPats)"
           }
         }
       ],
@@ -281,7 +281,7 @@
           "criteria": {
             "name": "AgeGroup",
             "language": "text/fhirpath",
-            "expression": "Patient.select(\n  iff(birthDate + 20 years < today(), 'P0Y--P20Y',\n    iff(birthDate + 30 years < today(), 'P20Y--P30Y',\n      iff(birthDate + 40 years < today(), 'P30Y--P40Y',\n        iff(birthDate + 50 years < today(), 'P40Y--P50Y',\n          iff(birthDate + 60 years < today(), 'P50Y--P60Y',\n            iff(birthDate + 70 years < today(), 'P60Y--P70Y',\n              iff(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')\n            )\n          )\n        )\n      )\n    )\n  )\n)"
+            "expression": "Patient.select(\n  iif(birthDate + 20 years < today(), 'P0Y--P20Y',\n    iif(birthDate + 30 years < today(), 'P20Y--P30Y',\n      iif(birthDate + 40 years < today(), 'P30Y--P40Y',\n        iif(birthDate + 50 years < today(), 'P40Y--P50Y',\n          iif(birthDate + 60 years < today(), 'P50Y--P60Y',\n            iif(birthDate + 70 years < today(), 'P60Y--P70Y',\n              iif(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')\n            )\n          )\n        )\n      )\n    )\n  )\n)"
           }
         },
         {
@@ -314,7 +314,7 @@
           "criteria": {
             "name": "Race",
             "language": "text/fhirpath",
-            "expression": "Patient\n.extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')\n.extension('ombCategory')\n.select(\n  iff(valueCoding.count() > 1,\n     'Mixed',\n     iff(valueCoding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor',\n         'Unknown',\n         valueCoding.code\n     )\n)"
+            "expression": "Patient\n.extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')\n.extension('ombCategory')\n.select(\n  iif(valueCoding.count() > 1,\n     'Mixed',\n     iif(valueCoding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor',\n         'Unknown',\n         valueCoding.code\n     )\n)"
           }
         }
       ]
@@ -434,7 +434,7 @@
             "name": "NumC19Died",
             "description": "Filters the initial population by selecting those who have died.",
             "language": "text/fhirpath",
-            "expression": "Encounter.where(\n  iff(\n    hospitalization.where(\n      dispositionCode.memberOf(%PatientExpired)\n    ),\n    true,\n    subject.resolve().where(deceasedBoolean = true | deceasedDateTime.exists())\n  )\n)\n// Resolve to patient to simplify stratification\n.select(subject).resolve()"
+            "expression": "Encounter.where(\n  iif(\n    hospitalization.where(\n      dispositionCode.memberOf(%PatientExpired)\n    ),\n    true,\n    subject.resolve().where(deceasedBoolean = true | deceasedDateTime.exists())\n  )\n)\n// Resolve to patient to simplify stratification\n.select(subject).resolve()"
           }
         },
         {
@@ -457,7 +457,7 @@
             "name": "CumC19Died",
             "description": "Computes the cumulative total from the prior measure report and the number of new deaths in the current reporting period.",
             "language": "text/fhirpath",
-            "expression": "iff(%PriorReport.empty(),0,%PriorReport.group[2].population[2].count) + %NumC29Died)"
+            "expression": "iif(%PriorReport.empty(),0,%PriorReport.group[2].population[2].count) + %NumC29Died)"
           }
         }
       ],
@@ -470,7 +470,7 @@
           "criteria": {
             "name": "AgeGroup",
             "language": "text/fhirpath",
-            "expression": "Patient.select(\n  iff(birthDate + 20 years < today(), 'P0Y--P20Y',\n    iff(birthDate + 30 years < today(), 'P20Y--P30Y',\n      iff(birthDate + 40 years < today(), 'P30Y--P40Y',\n        iff(birthDate + 50 years < today(), 'P40Y--P50Y',\n          iff(birthDate + 60 years < today(), 'P50Y--P60Y',\n            iff(birthDate + 70 years < today(), 'P60Y--P70Y',\n              iff(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')\n            )\n          )\n        )\n      )\n    )\n  )\n)"
+            "expression": "Patient.select(\n  iif(birthDate + 20 years < today(), 'P0Y--P20Y',\n    iif(birthDate + 30 years < today(), 'P20Y--P30Y',\n      iif(birthDate + 40 years < today(), 'P30Y--P40Y',\n        iif(birthDate + 50 years < today(), 'P40Y--P50Y',\n          iif(birthDate + 60 years < today(), 'P50Y--P60Y',\n            iif(birthDate + 70 years < today(), 'P60Y--P70Y',\n              iif(birthDate + 80 years < today(), 'P70Y--P80Y', 'P80Y-P9999Y')\n            )\n          )\n        )\n      )\n    )\n  )\n)"
           }
         },
         {
@@ -503,7 +503,308 @@
           "criteria": {
             "name": "Race",
             "language": "text/fhirpath",
-            "expression": "Patient\n.extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')\n.extension('ombCategory')\n.select(\n  iff(valueCoding.code contains '1992-5', 'A', ' ') +\n  iff(valueCoding.code contains '2054-5', 'B', ' ') +\n  iff(valueCoding.code contains '2076-8', 'H', ' ') +\n  iff(valueCoding.code contains '2028-9', 'S', ' ') +\n  iff(valueCoding.code contains '2106-3', 'W', ' ')\n)"
+            "expression": "Patient\n.extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')\n.extension('ombCategory')\n.select(\n  iif(valueCoding.code contains '1992-5', 'A', ' ') +\n  iif(valueCoding.code contains '2054-5', 'B', ' ') +\n  iif(valueCoding.code contains '2076-8', 'H', ' ') +\n  iif(valueCoding.code contains '2028-9', 'S', ' ') +\n  iif(valueCoding.code contains '2106-3', 'W', ' ')\n)"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes",
+          "extension": [
+            {
+              "url": "subject",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/resource-types",
+                    "code": "Device"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "257463002",
+                    "display": "Ventilator Outlet"
+                  }
+                ],
+                "text": "Ventilator capacity"
+              }
+            },
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "capacity",
+                    "system": "http://terminology.hl7.org/CodeSystem/PublicHealthMeasureScoring"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "structure",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "decrease",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "point-in-time"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "Ventilators",
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "display": "Ventilators"
+          }
+        ],
+        "text": "Ventilator Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numVent",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
+                "display": "Mechanical Ventilators"
+              },
+              {
+                "code": "denominator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Total number of ventilators"
+          },
+          "description": "Count of all ventilators that can support patient care, whether or not they are presently in use.",
+          "criteria": {
+            "name": "NumVent",
+            "description": "Computes the total number of ventilators from the previously reported MeasureReport",
+            "language": "text/fhirpath",
+            "expression": "%PriorReport.group[3].population[0].count"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numVentUse",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
+                "display": "Mechanical Ventilators in Use"
+              },
+              {
+                "code": "numerator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Total number of ventilators in use"
+          },
+          "description": "Count of all ventilators in use.",
+          "criteria": {
+            "name": "NumVentUse",
+            "description": "dentifies the number of ventilators in use by counting Patient with an Observation\nor Procedure resource from an appropriate value set indicating ventilator use.",
+            "language": "text/fhirpath",
+            "expression": "// Find all active encounters\n(\n  %Base + '/Encounter?' +\n  // Get only those encounters which were in-progress or finished during the reporting period\n  'status= in-progress,finished' +\n  // Include the patient in the results\n  '&_include=Encounter:subject'+\n  '&date=ge' + %ReportingPeriod.start +\n  '&date=lt' + %ReportingPeriod.end\n).resolve()\n// Filter to patients\n.select(resource as Patient)\n.where(\n  iif(\n    ( %Base + '/Observation?_count=1'+\n      '&status=registered,preliminary,final,amended,corrected' +\n      '&patient=' + $this.id +\n      '&verificationStatus:not=refuted,entered-in-error' +\n      '&date=gt' + %ReportingPeriod.start  +\n      '&date=le' + %ReportingPeriod.end  +\n      '&code:in=' + %VentilatorObservations.url\n    ).resolve().select(resource as Observation).exists(),\n    true,\n    ( %Base + '/Procedure?_count=1'+\n      '&status=in-progress,competed' +\n      '&patient=' + $this.id +\n      '&date=gt' + %ReportingPeriod.start  +\n      '&date=le' + %ReportingPeriod.end  +\n      '&code:in=' + %VentilatorProcedures.url\n    ).resolve().select(resource as Procedure).exists()\n  )\n)"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numVentAvail",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
+                "display": "Mechanical Ventilators Available"
+              },
+              {
+                "code": "numerator-complement",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem"
+              }
+            ],
+            "text": "Total number of ventilators not presently in use."
+          },
+          "description": "Count of all ventilators not presently in use.",
+          "criteria": {
+            "name": "NumVentAvail",
+            "description": "omputes the number of ventilators available by substracting the number of ventilators in use\ndetermined by population 1 from thee total number of ventilators given in population 0",
+            "language": "text/fhirpath",
+            "expression": "%NumVent - %NumVentUse.count()"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes",
+          "extension": [
+            {
+              "url": "subject",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/resource-types",
+                    "code": "Device"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "91537007",
+                    "display": "Hospital Bed"
+                  }
+                ],
+                "text": "Bed capacity"
+              }
+            },
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "capacity",
+                    "system": "http://terminology.hl7.org/CodeSystem/PublicHealthMeasureScoring"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "structure",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "decrease",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "point-in-time"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "Beds",
+            "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem",
+            "display": "Beds"
+          }
+        ],
+        "text": "Bed Reporting"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numTotBeds",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
+                "display": "All Hospital Beds"
+              },
+              {
+                "code": "denominator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Total number of beds"
+          },
+          "description": "Total number of all Inpatient and outpatient beds, including all staffed, ICU,\nlicensed, and overflow (surge) beds used for inpatients or outpatients",
+          "criteria": {
+            "name": "NumTotBeds",
+            "description": "Computes the total number of beds from the previously reported MeasureReport",
+            "language": "text/fhirpath",
+            "expression": "%PriorReport.group[3].population[0].count"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numTotBedsOcc",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
+                "display": "Hospital Beds Occupied"
+              },
+              {
+                "code": "numerator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Total number of beds in use"
+          },
+          "description": "Total number of all Inpatient and outpatient beds that are occupied",
+          "criteria": {
+            "name": "NumTotBedsOcc",
+            "description": "Identifies the number of beds in use by counting the most recent Encounter for each patient where the encounter\nwas in-progress or finished within the period.",
+            "language": "text/fhirpath",
+            "expression": "// Find all active encounters\n(\n  %Base + '/Encounter?' +\n  // Get only those encounters which are in-progress during the reporting period\n  // because if an encounter finished during the reporting period, the bed is now\n  // available.\n  'status=in-progress' +\n  '&date=ge' + %ReportingPeriod.start +\n  '&date=lt' + %ReportingPeriod.end\n).resolve().select(resource as Encounter)\n// Select the most recent encounter for each location\n// Assumes that encounters are returned in reverse chonological order\n// and that the most recent location is reported first in the list\n// of locations.\n.aggregate(\n   iif($total.select(location[0]).location contains $this.location.location.first(),\n       {},\n       $total | $this\n   )\n)\n// NOTE: Aggregate returns a list of both Encounter and Location resources\n// representing beds in use.\n// From Encounter, one can get to both the Patient (via Encounter.subject) and\n// Location resources (via Encounter.location.location).  This enables the result\n// to be stratifed by patient demographics, or location type."
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "numTotBedsAvail",
+                "system": "http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues",
+                "display": "Hospital Beds Available"
+              },
+              {
+                "code": "numerator-complement",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Total number of hospital beds available"
+          },
+          "description": "Total number of all hospital inpatient and outpatient beds that are available",
+          "criteria": {
+            "name": "NumTotBedsAvail",
+            "description": "omputes the number of beds  available by substracting the number of beds in use\ndetermined by population 1 from the total number of beds given in population 0",
+            "language": "text/fhirpath",
+            "expression": "%NumTotBeds - %NumTotBedsOcc.count()"
+          }
+        }
+      ],
+      "stratifier": [
+        {
+          "code": {
+            "text": "By Type of Location"
+          },
+          "description": "Inpatient Non-ICU, Inpatient ICU, Other",
+          "criteria": {
+            "description": "Determines the location of the encounter based on the membership\nof location.type in the InpatientNonICU and InpatientICU ValueSet resources.\nWhen location.type is assigned to any other value, it is reported to be Other",
+            "language": "text/fhirpath",
+            "expression": "Encounter.location.location.resolve()\n.iif(type.memberOf(%InpatientNonICU.url),\n    'Inpatient Non-ICU',\n    iif (type.memberOf(%InpatientICU.url),\n         'Inpatient ICU',\n         'Other'\n    )\n)"
           }
         }
       ]
@@ -604,6 +905,6 @@
     }
   ],
   "library": [
-    "http://hl7.org/fhir/us/saner/StructureDefinition/NHSNMeasureLibrary"
+    "http://hl7.org/fhir/us/saner/StructureDefinition/ComputableNHSNMeasureLibrary"
   ]
 }

@@ -62,7 +62,7 @@
   ],
   "name": "MeasureSource_CSV_Push",
   "title": "Measure Source implementing the CSV Option and the Push Option.",
-  "date": "2020-09-08T07:59:09.421964-04:00",
+  "date": "2020-09-09T05:19:04.618819-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the CSV Option and the Push Option.",
   "format": [

@@ -15,6 +15,16 @@
       "definition": "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
     },
     {
+      "code": "numTotBedsOcc",
+      "display": "Hospital Beds Occupied",
+      "definition": "Total number of all Inpatient and outpatient beds that are occupied"
+    },
+    {
+      "code": "numTotBedsAvail",
+      "display": "Hospital Beds Available",
+      "definition": "Total number of all Inpatient and outpatient beds that are available"
+    },
+    {
       "code": "numbeds",
       "display": "Hospital Inpatient Beds",
       "definition": "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
@@ -35,6 +45,41 @@
       "definition": "Total number of staffed inpatient ICU beds that are occupied"
     },
     {
+      "code": "numICUBedsAvail",
+      "display": "ICU Bed Availability",
+      "definition": "Total number of staffed inpatient ICU beds that are available"
+    },
+    {
+      "code": "numImpBeds",
+      "display": "Inpatient (non-ICU) Beds",
+      "definition": "Total number of staffed inpatient non-ICU beds"
+    },
+    {
+      "code": "numImpBedsOcc",
+      "display": "Inpatient (non-ICU) Bed Occupancy",
+      "definition": "Total number of staffed inpatient non-ICU beds that are occupied"
+    },
+    {
+      "code": "numImpBedsAvail",
+      "display": "Inpatient (non-ICU) Bed Availability",
+      "definition": "Total number of staffed inpatient non-ICU beds that are available"
+    },
+    {
+      "code": "numAmbBeds",
+      "display": "Ambulatory Beds",
+      "definition": "Total number of staffed ambulatory beds"
+    },
+    {
+      "code": "numAmbBedsOcc",
+      "display": "Ambulatory Bed Occupancy",
+      "definition": "Total number of staffed ambulatory beds that are occupied"
+    },
+    {
+      "code": "numAmbBedsAvail",
+      "display": "Ambulatory Bed Availability",
+      "definition": "Total number of staffed ambulatory beds that are available"
+    },
+    {
       "code": "numVent",
       "display": "Mechanical Ventilators",
       "definition": "Total number of ventilators available"
@@ -43,6 +88,11 @@
       "code": "numVentUse",
       "display": "Mechanical Ventilators in Use",
       "definition": "Total number of ventilators in use"
+    },
+    {
+      "code": "numVentAvail",
+      "display": "Mechanical Ventilators Available",
+      "definition": "Total number of ventilators available"
     },
     {
       "code": "numC19Pats",
@@ -302,5 +352,5 @@
       "code": "summaryCensusId"
     }
   ],
-  "count": 70
+  "count": 80
 }

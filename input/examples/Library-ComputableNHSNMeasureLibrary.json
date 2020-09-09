@@ -41,7 +41,7 @@
     }
   ],
   "name": "ComputableNHSNMeasureLibrary",
-  "url": "http://hl7.org/fhir/us/saner/StructureDefinition/NHSNMeasureLibrary",
+  "url": "http://hl7.org/fhir/us/saner/StructureDefinition/ComputableNHSNMeasureLibrary",
   "title": "Computable NHSN Patient Impact and Hospital Capacity Measure Library",
   "type": {
     "coding": [

@@ -55,6 +55,15 @@
       <li>
         <a href="measure_group_covid19_deaths.html">Creating the COVID 19 Deaths Group</a>
       </li>
+      <li>
+        <a href="measure_group_ventilators.html">Creating the Ventilator Avaiability Group</a>
+      </li>
+      <li>
+        <a href="measure_group_beds.html">Creating the Bed Avaiability Group</a>
+      </li>
+      <li>
+        <a href="measure_library.html">Sample Measure Library</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
