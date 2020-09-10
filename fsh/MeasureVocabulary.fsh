@@ -335,7 +335,19 @@ Description: "Codes used for Devices that support Ventilation with a Tracheostom
 ValueSet:    VentilatorObservations
 Title:       "Ventilator Observations"
 Description: "Codes used to report ventilation activity"
-* codes from valueset PatientsOnVentilator
+//* codes from valueset PatientsOnVentilator
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* LOINC#19835-8 // Breath rate setting Ventilator synchronized intermittent mandatory
+* LOINC#19994-3 // Oxygen/Inspired gas setting [Volume Fraction] Ventilator
+* LOINC#20077-4 // Positive end expiratory pressure setting Ventilator
+* LOINC#20079-0 // Pressure support setting Ventilator
+* LOINC#20103-8 // Tidal volume expired/Plateau pressure --post 1.5-2.0 seconds inspiratory hold on ventilator
+* LOINC#20112-9 // Tidal volume setting Ventilator
+* LOINC#20115-2 // Tidal volume.spontaneous/Body weight [Volume/mass] --on ventilator
+* LOINC#33438-3 // Breath rate mechanical --on ventilator
+* LOINC#57655-3 // Tidal volume.exhaled maximum setting Ventilator alarm
+* LOINC#76530-5 // Mean pressure Respiratory system airway --on ventilator
+* LOINC#19839-0 // Breath rate spontaneous --on ventilator
 
 ValueSet:    VentilatorProcedures
 Title:       "Ventilator Procedures"
@@ -345,17 +357,75 @@ Description: "Codes used to report a ventilation procedure"
 ValueSet:    ConfirmedCOVID19Diagnoses
 Title:       "Confirmed COVID-19 Diagnosis Values"
 Description: "Codes confirming a COVID-19 diagnosis"
-* codes from valueset COVID19DXSNOMED
-* codes from valueset COVID19DXICD10
+ * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+//* codes from valueset COVID19DXSNOMED
+ * ICD10CM#B34.2 "Coronavirus infection, unspecified"
+ * ICD10CM#B97.2 "Coronavirus as the cause of diseases classified elsewhere"
+ * ICD10CM#B97.29 "Other coronavirus as the cause of diseases classified elsewhere"
+ * ICD10CM#U07.1 "COVID-19"
+//* codes from valueset COVID19DXICD10
+ * SCT#186747009 "Coronavirus infection (disorder)"
+ * SCT#713084008 "Pneumonia caused by Human coronavirus (disorder)"
+ * SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+ * SCT#882784691000119100 Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)
 
 ValueSet:    SuspectedCOVID19Diagnoses
-Title:       "Suspected COVID-19 Diagnosis Values"
-Description: "Codes for suspected COVID-19"
-* codes from valueset COVID19Exposures
+Description: "This Value Set identifies conditions that may be related to COVID-19"
+ * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+ * ^version = "20200410"
+ * ^status = #draft
+ * ^date = "2020-04-10T01:00:18-04:00"
+ * ^publisher = "HL7"
+//* codes from valueset COVID19Exposures
+ * SCT#840546002 "Exposure to severe acute respiratory syndrome coronavirus 2 (event)"
+//*
+ * ICD10CM#A41.89 "Other specified sepsis"
+ * ICD10CM#B34.2 "Coronavirus infection, unspecified"
+ * ICD10CM#J12.8 "Other viral pneumonia"
+ * ICD10CM#J12.89 "Other viral pneumonia"
+ * ICD10CM#J20.8 "Acute bronchitis due to other specified organisms"
+ * ICD10CM#J22 "Unspecified acute lower respiratory infection"
+ * ICD10CM#J40 "Bronchitis, not specified as acute or chronic"
+ * ICD10CM#J80 "Acute respiratory distress syndrome"
+ * ICD10CM#J98.8 "Other specified respiratory disorders"
+ * ICD10CM#R05 "Cough"
+ * ICD10CM#R06.0 "Dyspnea"
+ * ICD10CM#R06.02 "Shortness of breath"
+ * ICD10CM#R50.9 "Fever, unspecified"
+ * SCT#840544004 "Suspected disease caused by severe acute respiratory coronavirus 2 (situation)"
+ * SCT#233604007 "Pneumonia (disorder)"
+ * SCT#67782005 "Acute respiratory distress syndrome (disorder)"
 
 ValueSet:    SuspectedOrConfirmedCOVID19Diagnoses
 Title:       "Suspected Or Diagnosed COVID-19"
 Description: "Codes identifying suspected or confirmed COVID-19"
+ * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+//* codes from ConfirmedCOVID19Diagnoses
+ * ICD10CM#B34.2 "Coronavirus infection, unspecified"
+ * ICD10CM#B97.2 "Coronavirus as the cause of diseases classified elsewhere"
+ * ICD10CM#B97.29 "Other coronavirus as the cause of diseases classified elsewhere"
+ * ICD10CM#U07.1 "COVID-19"
+ * SCT#186747009 "Coronavirus infection (disorder)"
+ * SCT#713084008 "Pneumonia caused by Human coronavirus (disorder)"
+ * SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+//* codes from SuspectedCOVID19Diagnoses
+ * SCT#840544004 "Suspected disease caused by severe acute respiratory coronavirus 2 (situation)"
+ * SCT#840546002 "Exposure to severe acute respiratory syndrome coronavirus 2 (event)"
+ * SCT#233604007 "Pneumonia (disorder)"
+ * SCT#67782005 "Acute respiratory distress syndrome (disorder)"
+ * ICD10CM#A41.89 "Other specified sepsis"
+ * ICD10CM#B34.2 "Coronavirus infection, unspecified"
+ * ICD10CM#J12.8 "Other viral pneumonia"
+ * ICD10CM#J12.89 "Other viral pneumonia"
+ * ICD10CM#J20.8 "Acute bronchitis due to other specified organisms"
+ * ICD10CM#J22 "Unspecified acute lower respiratory infection"
+ * ICD10CM#J40 "Bronchitis, not specified as acute or chronic"
+ * ICD10CM#J80 "Acute respiratory distress syndrome"
+ * ICD10CM#J98.8 "Other specified respiratory disorders"
+ * ICD10CM#R05 "Cough"
+ * ICD10CM#R06.0 "Dyspnea"
+ * ICD10CM#R06.02 "Shortness of breath"
+ * ICD10CM#R50.9 "Fever, unspecified"
 
 ValueSet:    PatientDeaths
 Title:       "Patient Died"
@@ -365,7 +435,25 @@ Description: "Codes used to identify that a patient has died"
 ValueSet:    Covid19Labs
 Title:       "COVID-19 Diagnostic Test"
 Description: "Codes for COVID-19 Diagnostic Tests"
-* codes from valueset SARSCoV2Labs // Day 2: SARSCoV2GeneticLabs
+ * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at LOINC/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+
+ * codes from valueset SARSCoV2Labs // Day 2: SARSCoV2GeneticLabs
+
+ * LOINC#94307-6 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by Nucleic acid amplification using CDC primer-probe set N1"
+ * LOINC#94308-4 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by Nucleic acid amplification using CDC primer-probe set N2"
+ * LOINC#94309-2 "SARS-CoV-2 (COVID-19) RNA [Presence] in Unspecified specimen by NAA with probe detection"
+ * LOINC#94310-0 "SARS-like coronavirus N gene [Presence] in Unspecified specimen by NAA with probe detection"
+ * LOINC#94314-2 "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Unspecified specimen by NAA with probe detection"
+ * LOINC#94315-9 "SARS-related coronavirus E gene [Presence] in Unspecified specimen by NAA with probe detection"
+ * LOINC#94316-7 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by NAA with probe detection"
+ * LOINC#94500-6 "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94533-7 "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94534-5 "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94559-2 "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94759-8 "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with probe detection"
+
+ // This should be deleted for day 2
+ * LOINC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"
 
 ValueSet:    PositiveResults
 Title:       "Confirmed COVID-19 Diagnosis"
