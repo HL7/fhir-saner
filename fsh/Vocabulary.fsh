@@ -355,6 +355,7 @@ Description: "This Value Set identifies Lab tests related to detection of curren
  * LOINC#94534-5 "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory specimen by NAA with probe detection"
  * LOINC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"
  * LOINC#94559-2 "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94759-8 "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with probe detection"
 
 ValueSet: SARSCoV2GeneticLabs
 Title: "SARSCoV2 Genetic Labs"
