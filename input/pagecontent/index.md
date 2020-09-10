@@ -29,8 +29,6 @@ the SANER project.
 ### Organization of This Guide
 This guide is organized into five main sections:
 
-
-
 <details>
     <summary>Chapter I: <a href="overview.html">Overview</a> - Provides an overview of the challenges this effort is trying to address.</summary>
     <ol>
@@ -157,3 +155,25 @@ The source code for this Implementation Guide can be found on
 ![The SANER Project Logo](SANERLogo.png)
 <div style='float: clear'/>
 **Fighting COVID-19 with FHIR®**
+
+### Copyrights and Acknowledgements
+
+Value Sets in this guide include:
+
+* Vocabulary Content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards
+Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT
+is not covered by this agreement.
+
+* Vocabulary Content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and
+the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license
+at LOINC/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
+
+* Vocabulary Content developed by the US National Library of Medicine: Reference to specific
+commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation
+by the U.S. Government, Department of Health and Human Services, or NLM. Source materials are available from the
+NLM Website at no charge at https://www.nlm.nih.gov/research/umls/rxnorm/index.html
+
+* Vocabulary Content developed by CDC: Reference to specific commercial products, manufacturers, companies, or
+trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and
+Human Services, or Centers for Disease Control and Prevention. Source materials are available from the CDC Website
+at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html

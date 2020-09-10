@@ -16,6 +16,10 @@ Description: "Enables definitions to identify components that are required, reco
 * valueCode ^short = "SHALL | SHOULD | MAY | SHOULD-NOT"
 * valueCode ^comment = "Defines the level of expectation associated with a resource using this definition."
 
+ValueSet: MeasureScoring
+Description: "All codes from the Public Health Measure Scoring System"
+* include codes from system PublicHealthMeasureScoring
+* include codes from valueset http://hl7.org/fhir/ValueSet/measure-scoring
 
 Extension: MeasureGroupAttributes
 Title: "Attributes describing a group of measures"
@@ -31,7 +35,7 @@ Description: "Attributes describing the group of measures"
     subject 1..1
 * extension[scoring] ^short = "Like Measure.scoring, but applies to group"
 * extension[scoring].value[x] only CodeableConcept
-* extension[scoring].valueCodeableConcept from http://hl7.org/fhir/ValueSet/measure-scoring (extensible)
+* extension[scoring].valueCodeableConcept from MeasureScoring
 
 * extension[compositeScoring] ^short = "Like Measure.compositeScoring, but applies to group"
 * extension[compositeScoring].value[x] only CodeableConcept
@@ -61,7 +65,8 @@ Parent: Expression
 Description: "Constraints on documentation for the evaluation of a Measure"
 * insert SanerStructureDefinitionContent
 
-* name 1..1
+// Name only needs to be present if the expression will be reused
+* name 0..1
 * name ^short = "name should align with code."
 
 * description 1..1
@@ -256,21 +261,7 @@ cumulative
  * group.population.description 1..1
  * group.population.description ^short = "Human readable instructions for counting or measuring this population"
 
- * group.population.criteria 1..1
- * group.population.criteria ^short = "Instructions for how to automatically count this population"
- * group.population.criteria.name 0..1
- * group.population.criteria ^short = "name should align with code."
-
- * group.population.criteria.description 1..1
- * group.population.criteria.description ^short = "Describe what the criterion does to a human (non-engineer)"
-
- * group.population.criteria.language 1..1
-
- * group.population.criteria.language ^short = "Provide the language for the criterion"
-
  * group.population.criteria only MeasureCriteria
- * group.population.criteria.expression 1..1
- * group.population.criteria.language ^short = "Give the expression for execution"
 
  * group.population.extension contains MeasurePopulationAlternateCriteria named alternateCriteria 0..1
  * group.population.extension[MeasurePopulationAlternateCriteria] ^short = "Other expressions for computing the criterion"

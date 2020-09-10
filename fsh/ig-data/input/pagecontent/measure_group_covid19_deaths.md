@@ -104,8 +104,11 @@ NOTE: The description **shall** be given in detail for each population and provi
 information for a competent human reader to correctly implement the computation.
 ```
  * with group[2].population[0].criteria do
+ ** name = "NumC19HospPats"
  // This criteria does not have a name because it duplicates a previously computed criteria
- // NOTE: The description is omitted for brevity (is is the same for the previous group) but should be present
+ ** description = """Identifies patients with suspected or confirmed COVID-19 in any location based
+ on the existence of an encounter, observation or condition related to COVID that was
+ active in the last 14 days"""
 
  * with group[2].population[1].criteria do
  ** name = "NumC19Died"
@@ -120,9 +123,9 @@ information for a competent human reader to correctly implement the computation.
 The computable content "implements" the automated computation of the measure.
 
 The first population is easily computed as it is the same as %NumC19HospPats which is computed
-in the [second part](#todo-add-link-to-this-part) of the measure. This also illustrates the value
-of reporting multiple measures in one measure report, as it enables reuse of common subexpressions
-and reduces evaluation overhead.
+in the group reporting on [hospital acquired COVID-19](#todo-add-link-to-this-part) of the measure.
+This also illustrates the value of reporting multiple measures in one measure report, as it enables
+reuse of common subexpressions and reduces evaluation overhead.
 
 Measure Developers **should** consider the order of presentation of groups within measures.
 While this walkthrough follows the original order in which the groups are presented, a different
@@ -146,7 +149,7 @@ The next population identifies patients who have died.
     Encounter.where(
       iif(
         hospitalization.where(
-          dispositionCode.memberOf(%PatientExpired)
+          dispositionCode.memberOf(%PatientDeaths.url)
         ),
         true,
         subject.resolve().where(deceasedBoolean = true | deceasedDateTime.exists())

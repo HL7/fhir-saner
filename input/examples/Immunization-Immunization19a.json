@@ -7,17 +7,17 @@
       "value": "556677"
     }
   ],
-  "occurrenceDateTime": "2020-09-09",
   "status": "completed",
   "vaccineCode": {
     "coding": [
       {
         "code": "346524008",
-        "system": "http://http://snomed.info/sct"
+        "system": "http://SCT"
       }
     ]
   },
   "patient": {
     "reference": "Patient/Patient9c"
-  }
+  },
+  "occurrenceDateTime": "2020-09-09"
 }

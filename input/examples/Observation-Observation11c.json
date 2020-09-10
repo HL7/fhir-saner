@@ -23,5 +23,14 @@
         "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection"
       }
     ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "260415000",
+        "system": "http://snomed.info/sct",
+        "display": "Not detected"
+      }
+    ]
   }
 }

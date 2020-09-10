@@ -23,5 +23,14 @@
         "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with probe detection"
       }
     ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "260373001",
+        "system": "http://snomed.info/sct",
+        "display": "Detected"
+      }
+    ]
   }
 }

@@ -1,71 +1,3 @@
-Instance: ComputableNHSNMeasureLibrary
-InstanceOf: PublicHealthMeasureLibrary
-// We aren't automating anything other than patient impact and hospital capacity, this library
-// will be referenced by other NHSN inspired measures but will not be used by them.
-
- * insert SanerDefinitionContent
- * id = "ComputableNHSNMeasureLibrary"
- * name = "ComputableNHSNMeasureLibrary"
- * url = "http://hl7.org/fhir/us/saner/StructureDefinition/ComputableNHSNMeasureLibrary"
- * title = "Computable NHSN Patient Impact and Hospital Capacity Measure Library"
- * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
- * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * author.name = "HL7 Public Health Workgroup"
- * author.telecom.system = #email
- * author.telecom.value = "mailto:pher@lists.hl7.org"
- * insert NHSNArtifacts
- * content[0].id = "SARSCoV2Labs"
- * content[0].contentType = #application/fhir+xml
- * content[0].title = "C19HCC SARS coronavirus 2 Qualitative Detection Laboratory Tests"
- * content[0].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
-
- * content[1].id = "COVID19DXSNOMED"
- * content[1].contentType = #application/fhir+xml
- * content[1].title = "COVID_19 SNOMED CT (Disorders)"
- * content[1].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
-
- * content[2].id = "COVID19DXICD10"
- * content[2].contentType = #application/fhir+xml
- * content[2].title = "COVID_19 ICD-10 (Disorders)"
- * content[2].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
-
- * content[3].id = "Remdesivir"
- * content[3].contentType = #application/fhir+xml
- * content[3].title = "Remdesivir"
- * content[3].url = Canonical(Remdesivir)
-
- * content[4].id = "COVID19Exposure"
- * content[4].contentType = #application/fhir+xml
- * content[4].title = "COVID_19 (COVID_19 Exposure)"
- * content[4].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
-
- * content[5].id = "SuspectedCOVID19"
- * content[5].contentType = #application/fhir+xml
- * content[5].title = "C19HCC Suspected COVID19 Infection"
- * content[5].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.116"
-
- * content[6].id = "HealthcareServiceLocation"
- * content[6].contentType = #application/fhir+xml
- * content[6].title = "Healthcare Service Location"
- * content[6].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.13.192.16.840.1.113883.1.11.20275"
-
- * content[7].id = "PatientsOnVentilator"
- * content[7].contentType = #application/fhir+xml
- * content[7].title = "Patients on a Ventilator"
- * content[7].url = Canonical(PatientsOnVentilator)
-
-/* PLACEHOLDERS for the next two
-
- * content[8].contentType = #application/fhir+xml
- * content[8].title = "COVID_19 (Disorders)"
- * content[8].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
-
- * content[9].contentType = #application/fhir+xml
- * content[9].title = "COVID_19 (Disorders)"
- * content[9].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
-*/
-
 Instance: ComputableCDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasure
 Title: "Computable CDC Patient Impact and Hospital Capacity"
@@ -157,7 +89,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
      where(
        iif(
          // The reason is a positive lab test result
-         Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or
+         Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResults.url)) or
 
          // The reason or diagnosis associated with the encounter is COVID-19
          ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),
@@ -170,17 +102,17 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
              '&patient=' + $this.id +
              '&date=gt' + (%ReportingPeriod.start - 14 days) +
              '&code:in=' + %Covid19Labs.url +
-             '&value-concept:in=' + %PositiveResult.url
+             '&value-concept:in=' + %PositiveResults.url
            ).resolve().select(resource as Observation).exists(),
 
            // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days
            Patient.distinct().where(
              %Base + '/Condition?_count=1'+
-             '&status=registered,preliminary,final,amended,corrected' +
+             '&status:not=refuted&status:not=entered-in-error' +
              '&patient=' + $this.id +
              '&verificationStatus:not=refuted,entered-in-error' +
              '&date=gt' + (%ReportingPeriod.start - 14 days) +
-             '&code:in=' + %SuspectedOrDiagnosedCOVID19.url,
+             '&code:in=' + SuspectedOrConfirmedCOVID19Diagnoses.url,
            )
          )
       ).resolve().select(resource as Condition).exists()
@@ -205,9 +137,9 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[0].stratifier[0].criteria.name = "LocationAndVentStatus"
  * group[0].stratifier[0].criteria.language = #text/fhirpath
  * group[0].stratifier[0].criteria.expression = """
-      iif(%PatientsOnVent.id contains Encounter.subject,
-          iif(Encounter.location.resolve().type in %InpatientLocation, 'InpVentilated', 'OFVentilated')
-          iif(Encounter.location.resolve().type in %InpatientLocation, 'InpNotVentilated', 'OFNotVentilated')
+      iif(%NumVentUse.id contains Encounter.subject,
+          iif(Encounter.location.resolve().type.memberOf(%InpatientLocations.url), 'InpVentilated', 'OFVentilated')
+          iif(Encounter.location.resolve().type.memberOf(%InpatientLocations.url), 'InpNotVentilated', 'OFNotVentilated')
       )
  """
 // Hospital Acquired COVID-19
@@ -249,7 +181,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
 
  //* with group[1].population[0].criteria do
  // This criteria does not have a name because it duplicates a computed criteria in another group.
- * group[1].population[0].criteria.description = """ """
+ * group[1].population[0].criteria.description = "Uses the value of NumC19HospPat as the initial population"
 
  //* with group[1].population[1].criteria do
  * group[1].population[1].criteria.name = "NumC19HOPats"
@@ -282,12 +214,12 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
           // Rule out patients who have a diagnosis of suspected or confirmed
           // Covid prior between period.start - 14 days and period.start + 14 days
           (%Base + '/Condition?_count=1'+
-           '&status=registered,preliminary,final,amended,corrected' +
+           '&status:not=refuted&status:not=entered-in-error' +
            '&patient=' + $this.subject +
            '&verificationStatus:not=refuted,entered-in-error' +
            '&date=gt' + ($this.period.start - 14 days) +
            '&date=le' + ($this.period.start + 14 days) +
-           '&code:in=' + %SuspectedOrDiagnosedCOVID19.url
+           '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url
           ).resolve().select(resource as Condition).exists(),
           // return false to rule out this encounter
           false,
@@ -299,7 +231,7 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
            '&date=gt' + ($this.period.start - 14 days) +
            '&date=le' + ($this.period.start + 14 days) +
            '&code:in=' + %Covid19Labs.url +
-           '&value-concept:in=' + %PositiveResult.url
+           '&value-concept:in=' + %PositiveResults.url
           ).resolve().select(resource as Observation)
           // If the query returned an observations, then empty() will return false, ruling
           // out this encounter.
@@ -663,17 +595,17 @@ COVID-19 have developed fever and/or symptoms of acute respiratory illness, such
  * group[4].stratifier.description = "Inpatient Non-ICU, Inpatient ICU, Other"
  * group[4].stratifier.criteria.description = """
  Determines the location of the encounter based on the membership
- of location.type in the InpatientNonICU and InpatientICU ValueSet resources.
+ of location.type in the InpatientLocations and ICULocations ValueSet resources.
  When location.type is assigned to any other value, it is reported to be Other
  """
  * group[4].stratifier.criteria.language = #text/fhirpath
  * group[4].stratifier.criteria.expression = """
     Encounter.location.location.resolve()
-    .iif(type.memberOf(%InpatientNonICU.url),
-        'Inpatient Non-ICU',
-        iif (type.memberOf(%InpatientICU.url),
-             'Inpatient ICU',
-             'Other'
-        )
+    .iif(type.memberOf(%InpatientLocations.url),
+        iif (type.memberOf(%ICULocations.url),
+            'Inpatient ICU',
+            'Inpatient Non-ICU'
+        ),
+        'Other'
     )
 """

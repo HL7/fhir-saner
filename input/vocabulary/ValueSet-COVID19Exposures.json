@@ -1,8 +1,8 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "COVID19Exposure",
-  "id": "COVID19Exposure",
+  "name": "COVID19Exposures",
+  "id": "COVID19Exposures",
   "description": "This Value Set includes codes describing COVID-19 exposure from SNOMED-CT",
   "version": "20200604",
   "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203",

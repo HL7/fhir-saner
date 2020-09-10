@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "SuspectedCOVID19Diagnoses",
+  "id": "SuspectedCOVID19Diagnoses",
+  "title": "Suspected COVID-19 Diagnosis Values",
+  "description": "Codes for suspected COVID-19",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/SuspectedCOVID19Diagnoses",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
+        ]
+      }
+    ]
+  }
+}
