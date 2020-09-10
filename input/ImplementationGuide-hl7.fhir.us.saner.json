@@ -449,8 +449,8 @@
         "reference": {
           "reference": "ValueSet/SuspectedCOVID19Diagnoses"
         },
-        "name": "Suspected COVID-19 Diagnosis Values",
-        "description": "Codes for suspected COVID-19",
+        "name": "SuspectedCOVID19Diagnoses",
+        "description": "This Value Set identifies conditions that may be related to COVID-19",
         "exampleBoolean": false
       },
       {
