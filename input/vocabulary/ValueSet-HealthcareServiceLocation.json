@@ -8,6 +8,7 @@
   "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275",
   "date": "2019-08-30T01:00:18-04:00",
   "publisher": "HL7 Terminology",
+  "copyright": "aterials developed by CDC: Reference to specific commercial products, manufacturers, companies, or trademarks does not\nconstitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control\nand Prevention. Source materials are available from the CDC Website at no charge at\nhttps://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
   "compose": {
     "include": [
       {

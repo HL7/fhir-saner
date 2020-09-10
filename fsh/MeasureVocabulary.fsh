@@ -1,6 +1,12 @@
 // This sheet convert output to FHIR Shorthand for generating measures.
 Alias: $Base = http://hl7.org/fhir/us/saner
-
+Alias: HSLOC = https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+Alias: ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
+Alias: SCT = http://snomed.info/sct
+Alias: LOINC = http://loinc.org
+Alias: RXNORM = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias: ROLECODE = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: UCUM = http://unitsofmeasure.com
 
 CodeSystem:   PublicHealthMeasureScoring
 Title: "Public Health Measure Scoring"
@@ -157,59 +163,220 @@ Title: "Measure Rate Aggregation Value Set"
 Description: "This Value Set Identifies methods of rate aggregation"
 * codes from system MeasureRateAggregation
 
-
-ValueSet: BedLocationTypes
-Title: "Bed Location Types"
-Description: "Codes used to identify types of service locations for beds"
-
 ValueSet:    InpatientLocations
 Title:       "Inpatient Locations"
 Description: "Codes used for inpatient locations"
-
+* ^copyright = """Materials developed by CDC: Reference to specific commercial products, manufacturers, companies, or trademarks does not
+ constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control
+ and Prevention. Source materials are available from the CDC Website at no charge at
+ https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"""
+* HSLOC#1026-4  "Burn Critical Care"
+* HSLOC#1028-0  "Medical Cardiac Critical Care"
+* HSLOC#1027-2  "Medical Critical Care"
+* HSLOC#1029-8  "Medical-Surgical Critical Care"
+* HSLOC#1035-5  "Neurologic Critical Care"
+* HSLOC#1031-4  "Neurosurgical Critical Care"
+* HSLOC#1223-7  "ONC Medical Critical Care"
+* HSLOC#1224-5  "ONC Surgical Critical Care"
+* HSLOC#1225-2  "ONC Medical-Surgical Critical Care"
+* HSLOC#1034-8  "Prenatal Critical Care"
+* HSLOC#1033-0  "Respiratory Critical Care"
+* HSLOC#1032-2  "Surgical Cardiothoracic Critical Care"
+* HSLOC#1030-6  "Surgical Critical Care"
+* HSLOC#1025-6  "Trauma Critical Care"
+* HSLOC#1233-6  "ONC Pediatric Critical Care"
+* HSLOC#1042-1  "Pediatric Burn Critical Care"
+* HSLOC#1043-9  "Cardiothoracic Critical Care"
+* HSLOC#1044-7  "Pediatric Medical Critical Care"
+* HSLOC#1045-4  "Pediatric Medical-Surgical Critical Care"
+* HSLOC#1046-2  "Pediatric Neurosurgical Critical Care"
+* HSLOC#1047-0  "Pediatric Respiratory Critical Care"
+* HSLOC#1048-8  "Pediatric Surgical Critical Care"
+* HSLOC#1049-6  "Pediatric Trauma Critical Care"
+* HSLOC#1038-9  "Well Baby Nursery (Level I)"
+* HSLOC#1041-3  "Step down Neonatal Nursery (Level II)"
+* HSLOC#1039-7  "Neonatal Critical Care (Level II/III)"
+* HSLOC#1040-5  "Neonatal Critical Care (Level III)"
+* HSLOC#1269-0  "Neonatal Critical Care  (Level IV)"
+* HSLOC#1198-1  "Dialysis Specialty Care Area"
+* HSLOC#1091-8  "Pediatric Dialysis Specialty Care Area"
+* HSLOC#1093-4  "Transplant  Specialty Care Area"
+* HSLOC#1092-6  "Solid Organ Transplant   Specialty Care Area"
+* HSLOC#1205-4  "Antenatal Care Ward"
+* HSLOC#1051-2  "Behavioral Health/Psych Ward"
+* HSLOC#1052-0  "Burn Ward"
+* HSLOC#1053-8  "Ear, Nose, Throat Ward"
+* HSLOC#1054-6  "Gastrointestinal Ward"
+* HSLOC#1055-3  "Genitourinary Ward"
+* HSLOC#1056-1  "Gerontology Ward"
+* HSLOC#1057-9  "Gynecology Ward"
+* HSLOC#1171-8  "Jail Unit"
+* HSLOC#1058-7  "Labor and Delivery Ward"
+* HSLOC#1059-5  "Labor, Delivery, Recovery, Postpartum Suite"
+* HSLOC#1060-3  "Medical Ward"
+* HSLOC#1061-1  "Medical-Surgical Ward"
+* HSLOC#1062-9  "Neurology Ward"
+* HSLOC#1063-7  "Neurosurgical Ward"
+* HSLOC#1226-0  "ONC Leukemia Ward"
+* HSLOC#1228-6  "ONC Lymphoma Ward"
+* HSLOC#1229-4  "ONC Leukemia/Lymphoma Ward"
+* HSLOC#1230-2  "ONC Solid Tumor Ward"
+* HSLOC#1231-0  "ONC Hematopoietic Stem Cell Transplant Ward"
+* HSLOC#1232-8  "Hematology/Oncology Ward"
+* HSLOC#1064-5  "Ophthalmology Ward"
+* HSLOC#1065-2  "Orthopedic Ward"
+* HSLOC#1066-0  "Orthopedic Trauma Ward"
+* HSLOC#1067-8  "Plastic Surgery Ward"
+* HSLOC#1068-6  "Postpartum Ward"
+* HSLOC#1069-4  "Pulmonary Ward"
+* HSLOC#1070-2  "Rehabilitation Ward   (within Acute Care Hospital)"
+* HSLOC#1172-6  "School Infirmary"
+* HSLOC#1071-0  "Stroke (Acute) Ward"
+* HSLOC#1072-8  "Surgical Ward"
+* HSLOC#1208-8  "Telemetry Ward"
+* HSLOC#1073-6  "Vascular Surgery Ward"
+* HSLOC#1075-1  "Adolescent Behavioral Health Ward"
+* HSLOC#1234-4  "ONC Pediatric Hematopoietic Stem Cell Transplant Ward"
+* HSLOC#1235-1  "Hematology/Oncology Ward"
+* HSLOC#1077-7  "Pediatric Behavioral Health Ward"
+* HSLOC#1078-5  "Pediatric Burn Ward"
+* HSLOC#1079-3  "Pediatric Ear, Nose, Throat Ward"
+* HSLOC#1080-1  "Pediatric Genitourinary Ward"
+* HSLOC#1076-9  "Pediatric Medical Ward"
+* HSLOC#1081-9  "Pediatric Medical-Surgical Ward"
+* HSLOC#1082-7  "Pediatric Neurology Ward"
+* HSLOC#1083-5  "Pediatric Neurosurgical Ward"
+* HSLOC#1084-3  "Pediatric Orthopedic Ward"
+* HSLOC#1085-0  "Pediatric Rehabilitation Ward (within Acute Care Hospital)"
+* HSLOC#1086-8  "Pediatric Surgical Ward"
+* HSLOC#1099-1  "Adult Step Down Unit"
+* HSLOC#1227-8  "(all ages) (e.g., post-critical care)"
+* HSLOC#1100-7  "Pediatric Step Down Unit"
+* HSLOC#1210-4  "Adult Mixed Acuity Unit"
+* HSLOC#1211-2  "Pediatric Mixed Acuity Unit"
+* HSLOC#1212-0  "Mixed Age Mixed Acuity Unit"
+* HSLOC#1236-9  "(all ages)"
+* HSLOC#1005-8  "Cardiac Catheterization Room/Suite"
+* HSLOC#1095-9  "Cesarean Section Room/Suite"
+* HSLOC#1203-9  "Interventional Radiology"
+* HSLOC#1096-7  "Operating Room/Suite"
+* HSLOC#1097-5  "Post Anesthesia Care Unit/Recovery Room"
+* HSLOC#1165-0  "Inpatient Hospice"
+* HSLOC#1103-1  "Chronic Alzheimer's Unit"
+* HSLOC#1104-9  "Chronic Behavioral Health/Psych Unit"
+* HSLOC#1105-6  "Chronic Rehabilitation Unit"
+* HSLOC#1102-3  "Chronic Care Unit"
+* HSLOC#1164-3  "Ventilator Dependent Unit"
+* HSLOC#1254-2  "Long Term Care Facility Inpatient Hospice Unit"
+* HSLOC#1255-9  "Long Term Care Facility  Dementia Unit"
+* HSLOC#1256-7  "Long Term Care Facility  Psychiatric Unit"
+* HSLOC#1257-5  "Rehabilitation"
+* HSLOC#1258-3  "Long Term Care Facility  General Nursing Unit"
+* HSLOC#1259-1  "Long Term Care Facility  Ventilator Dependent Unit"
+* HSLOC#1260-9  "Long Term Care Facility Bariatric Unit"
+* HSLOC#1220-3  "Long Term Acute Care Intensive Care Unit"
+* HSLOC#1221-1  "Long Term Acute Care Ward"
+* HSLOC#1222-9  "Long Term Acute Care Intensive Care Unit"
+* HSLOC#1214-6  "Long Term Acute Care Pediatric Ward"
+* HSLOC#1217-9  "Rehabilitation Facility)"
+* HSLOC#1218-7  "Rehabilitation Facility)"
+* HSLOC#1223-7  "Oncology Medical Critical Care"
+* HSLOC#1224-5  "Oncology Surgical Critical Care"
+* HSLOC#1225-2  "Oncology Medical-Surgical Critical Care"
+* HSLOC#1233-6  "Oncology Pediatric Critical Care"
+* HSLOC#1226-0  "Oncology Leukemia Ward"
+* HSLOC#1228-6  "Oncology Lymphoma Ward"
+* HSLOC#1229-4  "Oncology LeukemiaLymphoma Ward"
+* HSLOC#1230-2  "Oncology Solid Tumor Ward"
+* HSLOC#1231-0  "Oncology Hematopoietic Stem Cell Transplant Ward"
+* HSLOC#1232-8  "Hematology-Oncology Ward"
+* HSLOC#1234-4  "Hematopoietic Stem Cell Transplant Ward"
+* HSLOC#1235-1  "Oncology Pediatric General Hematology-Oncology Ward"
+* HSLOC#1227-8  "Oncology Step Down Unit"
+* HSLOC#1236-9  "Oncology  Mixed Acuity Unit (all ages)"
 ValueSet:    ICULocations
 Title:       "ICU Locations"
 Description: "Codes used for ICU locations"
-
-ValueSet:    EDorOverflowLocations
-Title:       "ED or Overflow Locations"
-Description: "Codes used for ED or Overflow locations"
-
-ValueSet:    OccupiedBed
-Title:       "Occupied Bed"
-Description: "Codes used for Occupied Beds"
-
+* ^copyright = """This value set includes source materials developed by CDC: Reference to specific commercial products, manufacturers,
+companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human
+Services, or Centers for Disease Control and Prevention. Source materials are available from the CDC Website at no charge at
+https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"""
+* HSLOC#1026-4  "Burn Critical Care"
+* HSLOC#1028-0  "Medical Cardiac Critical Care"
+* HSLOC#1027-2  "Medical Critical Care"
+* HSLOC#1029-8  "Medical-Surgical Critical Care"
+* HSLOC#1035-5  "Neurologic Critical Care"
+* HSLOC#1223-7  "ONC Medical Critical Care"
+* HSLOC#1224-5  "ONC Surgical Critical Care"
+* HSLOC#1225-2  "ONC Medical-Surgical Critical Care"
+* HSLOC#1034-8  "Prenatal Critical Care"
+* HSLOC#1033-0  "Respiratory Critical Care"
+* HSLOC#1032-2  "Surgical Cardiothoracic Critical Care"
+* HSLOC#1233-6  "ONC Pediatric Critical Care"
+* HSLOC#1043-9  "Cardiothoracic Critical Care"
+* HSLOC#1044-7  "Pediatric Medical Critical Care"
+* HSLOC#1045-4  "Pediatric Medical-Surgical Critical Care"
+* HSLOC#1047-0  "Pediatric Respiratory Critical Care"
+* HSLOC#1048-8  "Pediatric Surgical Critical Care"
+* HSLOC#1039-7  "Neonatal Critical Care (Level II/III)"
+* HSLOC#1221-1  "Long Term Acute Care Ward"
+* HSLOC#1224-5  "Oncology Surgical Critical Care"
+* HSLOC#1225-2  "Oncology Medical-Surgical Critical Care"
 ValueSet:    VentilatorDevices
 Title:       "Ventilator Devices"
-Description: "Codes used for Ventilator Devices"
+Description: "Codes used for Ventilator Devices [Populate VentilatorDevices](#todo)"
+// We have none at the momement
 
-ValueSet:    VentilatorDevicesWithTracheostomy
+ValueSet:    VentilatorWithTracheostomyDevices
 Title:       "Ventilator Devices when used with Tracheostomy"
-Description: "Codes used for Devices that support Ventilation with a Tracheostomy"
+Description: "Codes used for Devices that support Ventilation with a Tracheostomy [Populate VentilatorWithTracheostomyDevices](#todo)"
+// We have none at the momement
 
 ValueSet:    VentilatorObservations
 Title:       "Ventilator Observations"
 Description: "Codes used to report ventilation activity"
+* codes from valueset PatientsOnVentilator
 
 ValueSet:    VentilatorProcedures
 Title:       "Ventilator Procedures"
 Description: "Codes used to report a ventilation procedure"
+// We have none at the momement
 
-ValueSet:    SuspectedOrDiagnosedCOVID19
+ValueSet:    ConfirmedCOVID19Diagnoses
+Title:       "Confirmed COVID-19 Diagnosis Values"
+Description: "Codes confirming a COVID-19 diagnosis"
+* codes from valueset COVID19DXSNOMED
+* codes from valueset COVID19DXICD10
+
+ValueSet:    SuspectedCOVID19Diagnoses
+Title:       "Suspected COVID-19 Diagnosis Values"
+Description: "Codes for suspected COVID-19"
+* codes from valueset COVID19Exposures
+
+ValueSet:    SuspectedOrConfirmedCOVID19Diagnoses
 Title:       "Suspected Or Diagnosed COVID-19"
-Description: "Coded identifying suspected or confirmed COVID-19"
+Description: "Codes identifying suspected or confirmed COVID-19"
 
-ValueSet:    PatientDied
+ValueSet:    PatientDeaths
 Title:       "Patient Died"
 Description: "Codes used to identify that a patient has died"
+* http://terminology.hl7.org/CodeSystem/discharge-disposition#exp "Expired"
 
 ValueSet:    Covid19Labs
 Title:       "COVID-19 Diagnostic Test"
 Description: "Codes for COVID-19 Diagnostic Tests"
+* codes from valueset SARSCoV2Labs // Day 2: SARSCoV2GeneticLabs
 
-ValueSet:    PositiveResult
+ValueSet:    PositiveResults
 Title:       "Confirmed COVID-19 Diagnosis"
-Description: "Codes confirming COVID-19 Diagnostic Test Result"
+Description: "Codes for a positive COVID-19 Diagnostic Test Result"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+* SCT#10828004  "Positive"
+* SCT#260373001 "Detected"
 
-ValueSet:    ConfirmedCOVID19DiagnosisValues
-Title:       "Confirmed COVID-19 Diagnosis Values"
-Description: "Codes for result values confirming COVID-19 Diagnostic Test Result"
+ValueSet:    NegativeResults
+Title:       "COVID-19 Not Detected"
+Description: "Codes for a negative COVID-19 Diagnostic Test Result"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
+* SCT#260385009   "Negative"
+* SCT#260415000   "Not detected"

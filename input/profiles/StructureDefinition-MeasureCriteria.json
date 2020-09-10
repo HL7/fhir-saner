@@ -62,8 +62,7 @@
       {
         "id": "Expression.name",
         "path": "Expression.name",
-        "short": "name should align with code.",
-        "min": 1
+        "short": "name should align with code."
       },
       {
         "id": "Expression.language",

@@ -107,52 +107,172 @@
   ],
   "content": [
     {
-      "id": "SARSCoV2Labs",
-      "contentType": "application/fhir+xml",
-      "title": "C19HCC SARS coronavirus 2 Qualitative Detection Laboratory Tests",
-      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
+      "id": "BedLocationOperationalStatus",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/BedLocationOperationalStatus",
+      "title": "Bed Location Operational Status",
+      "contentType": "application/fhir+xml"
     },
     {
-      "id": "COVID19DXSNOMED",
-      "contentType": "application/fhir+xml",
-      "title": "COVID_19 SNOMED CT (Disorders)",
-      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
+      "id": "ConfirmedCOVID19Diagnoses",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19Diagnoses",
+      "title": "Confirmed COVID-19 Diagnosis Values",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "PositiveResults",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/PositiveResults",
+      "title": "Confirmed COVID-19 Diagnosis",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "Covid19Labs",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/Covid19Labs",
+      "title": "COVID-19 Diagnostic Test",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "NegativeResults",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/NegativeResults",
+      "title": "COVID-19 Not Detected",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "COVID19Antibody",
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155",
+      "title": "COVID19Antibody",
+      "contentType": "application/fhir+xml"
     },
     {
       "id": "COVID19DXICD10",
-      "contentType": "application/fhir+xml",
-      "title": "COVID_19 ICD-10 (Disorders)",
-      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123",
+      "title": "COVID19DXICD10",
+      "contentType": "application/fhir+xml"
     },
     {
-      "id": "Remdesivir",
-      "contentType": "application/fhir+xml",
-      "title": "Remdesivir",
-      "url": "http://hl7.org/fhir/us/saner/ValueSet/Remdesivir"
+      "id": "COVID19DXSNOMED",
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124",
+      "title": "COVID19DXSNOMED",
+      "contentType": "application/fhir+xml"
     },
     {
-      "id": "COVID19Exposure",
-      "contentType": "application/fhir+xml",
-      "title": "COVID_19 (COVID_19 Exposure)",
-      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
+      "id": "COVID19Exposures",
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203",
+      "title": "COVID19Exposures",
+      "contentType": "application/fhir+xml"
     },
     {
-      "id": "SuspectedCOVID19",
-      "contentType": "application/fhir+xml",
-      "title": "C19HCC Suspected COVID19 Infection",
-      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.116"
+      "id": "COVID19Organism",
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1143",
+      "title": "COVID19Organism",
+      "contentType": "application/fhir+xml"
     },
     {
       "id": "HealthcareServiceLocation",
-      "contentType": "application/fhir+xml",
-      "title": "Healthcare Service Location",
-      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.13.192.16.840.1.113883.1.11.20275"
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275",
+      "title": "HealthcareServiceLocation",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "ICULocations",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/ICULocations",
+      "title": "ICU Locations",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "InpatientLocations",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/InpatientLocations",
+      "title": "Inpatient Locations",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "MeasureGroups",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/MeasureGroups",
+      "title": "Measure Groups",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "MeasurePopulations",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/MeasurePopulations",
+      "title": "Measure Populations",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "MeasureRateAggregationValues",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/MeasureRateAggregationValues",
+      "title": "Measure Rate Aggregation Value Set",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "MeasureStatus",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/MeasureStatus",
+      "title": "Measure Status Values",
+      "contentType": "application/fhir+xml"
     },
     {
       "id": "PatientsOnVentilator",
-      "contentType": "application/fhir+xml",
-      "title": "Patients on a Ventilator",
-      "url": "http://hl7.org/fhir/us/saner/ValueSet/PatientsOnVentilator"
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/PatientsOnVentilator",
+      "title": "Observations for Patients on a Ventilator",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "PatientDeaths",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/PatientDeaths",
+      "title": "Patient Died",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "Remdesivir",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/Remdesivir",
+      "title": "Remdesivir",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "SARSCoV2GeneticLabs",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/SARSCoV2GeneticLabs",
+      "title": "SARSCoV2 Genetic Labs",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "SARSCoV2Labs",
+      "url": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109",
+      "title": "SARSCoV2Labs",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "SuspectedCOVID19Diagnoses",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/SuspectedCOVID19Diagnoses",
+      "title": "Suspected COVID-19 Diagnosis Values",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "SuspectedOrConfirmedCOVID19Diagnoses",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/SuspectedOrConfirmedCOVID19Diagnoses",
+      "title": "Suspected Or Diagnosed COVID-19",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "VentilatorDevices",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/VentilatorDevices",
+      "title": "Ventilator Devices",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "VentilatorWithTracheostomyDevices",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/VentilatorWithTracheostomyDevices",
+      "title": "Ventilator Devices when used with Tracheostomy",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "VentilatorObservations",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/VentilatorObservations",
+      "title": "Ventilator Observations",
+      "contentType": "application/fhir+xml"
+    },
+    {
+      "id": "VentilatorProcedures",
+      "url": "http://hl7.org/fhir/us/saner/ValueSet/VentilatorProcedures",
+      "title": "Ventilator Procedures",
+      "contentType": "application/fhir+xml"
     }
   ]
 }

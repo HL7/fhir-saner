@@ -80,19 +80,19 @@ the Initial Population, a Numerator (the new infections), and a Denominator (the
 
 Provide a code describing each population.
 ```
- * with group[1].population[0].code do
+ * with group[1].population[1].code do
  ** coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numC19HospPats
  ** coding.display = "Hospitalized COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  ** text = "Patients with suspected or confirmed COVID-19 in an inpatient location"
 
- * with group[1].population[1].code do
+ * with group[1].population[2].code do
  ** coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#numC19HOPats
  ** coding.display = "Hospital Onset COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  ** text = "Hospital Onset COVID-19 Patients"
 
- * with group[1].population[2].code do
+ * with group[1].population[3].code do
  ** coding = http://hl7.org/fhir/us/saner/CodeSystem/MeasuredValues#cumC19HOPats
  ** coding.display = "Cumulative Hospital Onset COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
@@ -109,16 +109,17 @@ Name the criteria and give a description for what qualifies to to be included.
 NOTE: The description **shall** be given in detail for each population and provide enough
 information for a competent human reader to correctly implement the computation.
 ```
- * with group[1].population[0].criteria do
- // This criteria does not have a name because it duplicates a computed criteria in another group.
- // NOTE: The description is omitted for brevity (is is the same for the other group) but should be present
-
  * with group[1].population[1].criteria do
+ ** name = "NumC19HospPats"
+ ** description = """Patients in the hospital in an inpatient setting with confirmed or suspected COVID-19"""
+ """
+
+ * with group[1].population[2].criteria do
  ** name = "NumC19HOPats"
  ** description = """Filters the initial population by ruling out those patients whose first suspected or
  confirmed diagnosis or lab result appears less than 14 days from admission."""
 
- * with group[1].population[2].criteria do
+ * with group[1].population[3].criteria do
  ** name = "CumC19HOPats"
  ** description = """Computes the cumulative total from the prior measure report and the number of new
  infections detected in the current reporting period."""
@@ -127,14 +128,12 @@ information for a competent human reader to correctly implement the computation.
 #### Provide the Computable Content
 The computable content "implements" the automated computation of the measure.
 
-The first population is easily computed as it is the same as %NumC19HospPats.
-NOTE: This is an easily detectable situation, and implementers should consider optimizing
-for this case.
+The first population includes patients in the hospital who are in an inpatient setting.
 
 ```
- * with group[1].population[0].criteria do
+ * with group[1].population[1].criteria do
  ** language = #text/fhirpath
- ** expression = "%NumC19HospPats"
+ ** expression = "%NumC19Pats.where(location.location.resolve.type().memberOf(%InpatientLocations.url))"
 ```
 
 The next population rules out patients whose first suspected or confirmed diagnosis
@@ -158,12 +157,12 @@ this latter two week period in the discussion for the prior measure group.
           // Rule out patients who have a diagnosis of suspected or confirmed
           // Covid prior between period.start - 14 days and period.start + 14 days
           (%Base + '/Condition?_count=1'+
-           '&status=registered,preliminary,final,amended,corrected' +
+           '&status:not=refuted&status:not=entered-in-error' +
            '&patient=' + $this.subject +
            '&verificationStatus:not=refuted,entered-in-error' +
            '&date=gt' + ($this.period.start - 14 days) +
            '&date=le' + ($this.period.start + 14 days) +
-           '&code:in=' + %SuspectedOrDiagnosedCOVID19.url
+           '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url
           ).resolve().select(resource as Condition).exists(),
           // return false to rule out this encounter
           false,
@@ -175,7 +174,7 @@ this latter two week period in the discussion for the prior measure group.
            '&date=gt' + ($this.period.start - 14 days) +
            '&date=le' + ($this.period.start + 14 days) +
            '&code:in=' + %Covid19Labs.url +
-           '&value-concept:in=' + %PositiveResult.url
+           '&value-concept:in=' + %PositiveResults.url
           ).resolve().select(resource as Observation)
           // If the query returned an observations, then empty() will return false, ruling
           // out this encounter.

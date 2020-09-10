@@ -25,7 +25,8 @@
     ]
   },
   "valueQuantity": {
+    "value": 5,
     "code": "cm[H2O]",
-    "value": 5
+    "system": "http://unitsofmeasure.org"
   }
 }

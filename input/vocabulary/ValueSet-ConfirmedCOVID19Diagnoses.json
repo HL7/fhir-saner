@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ConfirmedCOVID19Diagnoses",
+  "id": "ConfirmedCOVID19Diagnoses",
+  "title": "Confirmed COVID-19 Diagnosis Values",
+  "description": "Codes confirming a COVID-19 diagnosis",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/ConfirmedCOVID19Diagnoses",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
+        ]
+      }
+    ]
+  }
+}

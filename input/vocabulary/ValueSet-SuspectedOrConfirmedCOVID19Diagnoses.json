@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "SuspectedOrConfirmedCOVID19Diagnoses",
+  "id": "SuspectedOrConfirmedCOVID19Diagnoses",
+  "title": "Suspected Or Diagnosed COVID-19",
+  "description": "Codes identifying suspected or confirmed COVID-19",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/saner/ValueSet/SuspectedOrConfirmedCOVID19Diagnoses"
+}

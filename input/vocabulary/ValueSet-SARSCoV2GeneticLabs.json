@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "SARSCoV2GeneticLabs",
   "id": "SARSCoV2GeneticLabs",
   "title": "SARSCoV2 Genetic Labs",

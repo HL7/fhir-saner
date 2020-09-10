@@ -239,14 +239,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BedLocationTypes"
-        },
-        "name": "Bed Location Types",
-        "description": "Codes used to identify types of service locations for beds",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/COVID19Antibody"
         },
         "name": "COVID19Antibody",
@@ -271,9 +263,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/COVID19Exposure"
+          "reference": "ValueSet/COVID19Exposures"
         },
-        "name": "COVID19Exposure",
+        "name": "COVID19Exposures",
         "description": "This Value Set includes codes describing COVID-19 exposure from SNOMED-CT",
         "exampleBoolean": false
       },
@@ -287,10 +279,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ConfirmedCOVID19DiagnosisValues"
+          "reference": "ValueSet/ConfirmedCOVID19Diagnoses"
         },
         "name": "Confirmed COVID-19 Diagnosis Values",
-        "description": "Codes for result values confirming COVID-19 Diagnostic Test Result",
+        "description": "Codes confirming a COVID-19 diagnosis",
         "exampleBoolean": false
       },
       {
@@ -307,14 +299,6 @@
         },
         "name": "Age Brackets By Decade",
         "description": "A Value Set of age groups generally by decade except youth (under 20), or over 80, commonly used for stratification in public health dashboards",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EDorOverflowLocations"
-        },
-        "name": "ED or Overflow Locations",
-        "description": "Codes used for ED or Overflow locations",
         "exampleBoolean": false
       },
       {
@@ -375,6 +359,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/MeasureScoring"
+        },
+        "name": "MeasureScoring",
+        "description": "All codes from the Public Health Measure Scoring System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/MeasureStatus"
         },
         "name": "Measure Status Values",
@@ -383,15 +375,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OccupiedBed"
+          "reference": "ValueSet/NegativeResults"
         },
-        "name": "Occupied Bed",
-        "description": "Codes used for Occupied Beds",
+        "name": "COVID-19 Not Detected",
+        "description": "Codes for a negative COVID-19 Diagnostic Test Result",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/PatientDied"
+          "reference": "ValueSet/PatientDeaths"
         },
         "name": "Patient Died",
         "description": "Codes used to identify that a patient has died",
@@ -407,10 +399,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PositiveResult"
+          "reference": "ValueSet/PositiveResults"
         },
         "name": "Confirmed COVID-19 Diagnosis",
-        "description": "Codes confirming COVID-19 Diagnostic Test Result",
+        "description": "Codes for a positive COVID-19 Diagnostic Test Result",
         "exampleBoolean": false
       },
       {
@@ -455,18 +447,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/SuspectedCOVID19"
+          "reference": "ValueSet/SuspectedCOVID19Diagnoses"
         },
-        "name": "SuspectedCOVID19",
-        "description": "This Value Set identifies conditions that may be related to COVID-19",
+        "name": "Suspected COVID-19 Diagnosis Values",
+        "description": "Codes for suspected COVID-19",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/SuspectedOrDiagnosedCOVID19"
+          "reference": "ValueSet/SuspectedOrConfirmedCOVID19Diagnoses"
         },
         "name": "Suspected Or Diagnosed COVID-19",
-        "description": "Coded identifying suspected or confirmed COVID-19",
+        "description": "Codes identifying suspected or confirmed COVID-19",
         "exampleBoolean": false
       },
       {
@@ -474,15 +466,7 @@
           "reference": "ValueSet/VentilatorDevices"
         },
         "name": "Ventilator Devices",
-        "description": "Codes used for Ventilator Devices",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/VentilatorDevicesWithTracheostomy"
-        },
-        "name": "Ventilator Devices when used with Tracheostomy",
-        "description": "Codes used for Devices that support Ventilation with a Tracheostomy",
+        "description": "Codes used for Ventilator Devices [Populate VentilatorDevices](#todo)",
         "exampleBoolean": false
       },
       {
@@ -499,6 +483,14 @@
         },
         "name": "Ventilator Procedures",
         "description": "Codes used to report a ventilation procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VentilatorWithTracheostomyDevices"
+        },
+        "name": "Ventilator Devices when used with Tracheostomy",
+        "description": "Codes used for Devices that support Ventilation with a Tracheostomy [Populate VentilatorWithTracheostomyDevices](#todo)",
         "exampleBoolean": false
       },
       {
@@ -596,6 +588,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/Condition1b"
+        },
+        "name": "Condition1b",
+        "description": "Condition for 1b",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/Condition1c"
         },
         "name": "Condition1c",
@@ -607,7 +607,7 @@
           "reference": "Condition/Condition2a"
         },
         "name": "Condition2a",
-        "description": "Condition for Test Case 2a: Positive test result w/ outcome = Yes",
+        "description": "Condition for Test Case 2a: Positive test result w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -620,18 +620,18 @@
       },
       {
         "reference": {
-          "reference": "Condition/Condition2c"
-        },
-        "name": "Condition2c",
-        "description": "Condition for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Condition/Condition3b"
         },
         "name": "Condition3b",
         "description": "Condition for Test Case 3b: Adm diagnosis documents COVID but problem list does not w/ outcome = Yes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition4b"
+        },
+        "name": "Condition4b",
+        "description": "Condition for 4b",
         "exampleBoolean": true
       },
       {
@@ -692,6 +692,30 @@
       },
       {
         "reference": {
+          "reference": "Condition/Condition8a"
+        },
+        "name": "Condition8a",
+        "description": "Condition for 8a",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition9a"
+        },
+        "name": "Condition9a",
+        "description": "Condition for 9a",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/Condition9b"
+        },
+        "name": "Condition9b",
+        "description": "Condition for 9b",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/Condition9c"
         },
         "name": "Condition9c",
@@ -711,7 +735,7 @@
           "reference": "Encounter/Encounter1b"
         },
         "name": "Encounter1b",
-        "description": "Encounter for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "description": "Encounter for Test Case 1b: Admission date =T-1 w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -727,7 +751,7 @@
           "reference": "Encounter/Encounter2a"
         },
         "name": "Encounter2a",
-        "description": "Encounter for Test Case 2a: Positive test result w/ outcome = Yes",
+        "description": "Encounter for Test Case 2a: Positive test result w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -736,14 +760,6 @@
         },
         "name": "Encounter2b",
         "description": "Encounter for Test Case 2b: Negative test result w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/Encounter2c"
-        },
-        "name": "Encounter2c",
-        "description": "Encounter for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {
@@ -2581,7 +2597,7 @@
           "reference": "Immunization/Immunization12a"
         },
         "name": "Immunization12a",
-        "description": "Immunization for Test Case 2a: Positive test result w/ outcome = Yes",
+        "description": "Immunization for Test Case 2a: Positive test result w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -2590,14 +2606,6 @@
         },
         "name": "Immunization12b",
         "description": "Immunization for Test Case 2b: Negative test result w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Immunization/Immunization12c"
-        },
-        "name": "Immunization12c",
-        "description": "Immunization for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {
@@ -2613,7 +2621,7 @@
           "reference": "Immunization/Immunization19a"
         },
         "name": "Immunization19a",
-        "description": "Immunization for Test Case 9a: Diagnosis of Suspected COVID-19 WITHOUT positive viral test w/ outcome = Yes",
+        "description": "Immunization for Immunization1-9a",
         "exampleBoolean": true
       },
       {
@@ -3069,7 +3077,7 @@
           "reference": "Location/Location1b"
         },
         "name": "Location1b",
-        "description": "Location for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "description": "Location for Test Case 1b: Admission date =T-1 w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -3085,7 +3093,7 @@
           "reference": "Location/Location2a"
         },
         "name": "Location2a",
-        "description": "Location for Test Case 2a: Positive test result w/ outcome = Yes",
+        "description": "Location for Test Case 2a: Positive test result w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -3094,14 +3102,6 @@
         },
         "name": "Location2b",
         "description": "Location for Test Case 2b: Negative test result w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Location/Location2c"
-        },
-        "name": "Location2c",
-        "description": "Location for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {
@@ -3533,7 +3533,7 @@
           "reference": "MedicationRequest/MedicationRequest11b"
         },
         "name": "MedicationRequest11b",
-        "description": "MedicationRequest for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "description": "MedicationRequest for Test Case 1b: Admission date =T-1 w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -3542,14 +3542,6 @@
         },
         "name": "MedicationRequest12b",
         "description": "MedicationRequest for Test Case 2b: Negative test result w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "MedicationRequest/MedicationRequest12c"
-        },
-        "name": "MedicationRequest12c",
-        "description": "MedicationRequest for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {
@@ -3684,7 +3676,7 @@
           "reference": "Observation/Observation11b"
         },
         "name": "Observation11b",
-        "description": "Observation-1 for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "description": "Observation-1 for Test Case 1b: Admission date =T-1 w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -3700,7 +3692,7 @@
           "reference": "Observation/Observation12a"
         },
         "name": "Observation12a",
-        "description": "Observation-1 for Test Case 2a: Positive test result w/ outcome = Yes",
+        "description": "Observation-1 for Test Case 2a: Positive test result w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -3709,14 +3701,6 @@
         },
         "name": "Observation12b",
         "description": "Observation-1 for Test Case 2b: Negative test result w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Observation/Observation12c"
-        },
-        "name": "Observation12c",
-        "description": "Observation-1 for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {
@@ -3857,26 +3841,10 @@
       },
       {
         "reference": {
-          "reference": "Observation/Observation22c"
-        },
-        "name": "Observation22c",
-        "description": "Observation-2 for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "Observation/Observation31c"
         },
         "name": "Observation31c",
         "description": "Observation-3 for Test Case 1c: Admission date =T-2 w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Observation/Observation32c"
-        },
-        "name": "Observation32c",
-        "description": "Observation-3 for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {
@@ -4036,7 +4004,7 @@
           "reference": "Patient/Patient1b"
         },
         "name": "Patient1b",
-        "description": "Patient for Test Case 1b: Admission date =T-1 w/ outcome = Yes",
+        "description": "Patient for Test Case 1b: Admission date =T-1 w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -4052,7 +4020,7 @@
           "reference": "Patient/Patient2a"
         },
         "name": "Patient2a",
-        "description": "Patient for Test Case 2a: Positive test result w/ outcome = Yes",
+        "description": "Patient for Test Case 2a: Positive test result w/ outcome = Yes/No",
         "exampleBoolean": true
       },
       {
@@ -4061,14 +4029,6 @@
         },
         "name": "Patient2b",
         "description": "Patient for Test Case 2b: Negative test result w/ outcome = No",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Patient/Patient2c"
-        },
-        "name": "Patient2c",
-        "description": "Patient for Test Case 2c: Negative test followed by Positive  w/ outcome = Yes",
         "exampleBoolean": true
       },
       {

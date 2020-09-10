@@ -25,6 +25,8 @@
     ]
   },
   "valueQuantity": {
-    "value": 100
+    "value": 100,
+    "code": "%",
+    "system": "http://unitsofmeasure.org"
   }
 }

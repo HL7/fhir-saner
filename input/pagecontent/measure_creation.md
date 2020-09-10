@@ -31,9 +31,11 @@ Would be the same as
 *   name.last = "Williams"
 ```
 
-To save space only the description for the first population in the first group will be provided in
-this narrative. However, the [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html)
-includes descriptions for all populations.
+NOTE: The the [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html) may vary slightly from the
+text in this section.
+1. To save space only the description for the first population in the first group will be provided in this narrative. However,
+it is included in the completed measure.
+2. Technical corrections made to ensure measure
 
 ### Patient Impact and Hospital Capacity Module Definition
 Like the phrase book, this walkthrough is based on the measure derived from the CDC Patient Impact and

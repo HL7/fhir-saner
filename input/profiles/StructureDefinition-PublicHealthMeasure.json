@@ -405,7 +405,6 @@
       {
         "id": "Measure.group.population.criteria",
         "path": "Measure.group.population.criteria",
-        "short": "name should align with code.",
         "type": [
           {
             "code": "Expression",
@@ -414,22 +413,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Measure.group.population.criteria.description",
-        "path": "Measure.group.population.criteria.description",
-        "short": "Describe what the criterion does to a human (non-engineer)",
-        "min": 1
-      },
-      {
-        "id": "Measure.group.population.criteria.language",
-        "path": "Measure.group.population.criteria.language",
-        "short": "Give the expression for execution"
-      },
-      {
-        "id": "Measure.group.population.criteria.expression",
-        "path": "Measure.group.population.criteria.expression",
-        "min": 1
       },
       {
         "id": "Measure.group.stratifier",

@@ -128,10 +128,10 @@ The computable content "implements" the automated computation of the measure.
      where(
        iif(
          // The reason is a positive lab test result
-         Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResult.url)) or
+         Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResults.url)) or
 
          // The reason or diagnosis associated with the encounter is COVID-19
-         ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),
+         ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrConfirmedCOVID19Diagnoses.url),
 
          iif(
            // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days
@@ -141,13 +141,13 @@ The computable content "implements" the automated computation of the measure.
              '&patient=' + $this.id +
              '&date=gt' + (%ReportingPeriod.start - 14 days) +
              '&code:in=' + %Covid19Labs.url +
-             '&value-concept:in=' + %PositiveResult.url
+             '&value-concept:in=' + %PositiveResults.url
            ).resolve().select(resource as Observation).exists(),
 
            // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days
            Patient.distinct().where(
              %Base + '/Condition?_count=1'+
-             '&status=registered,preliminary,final,amended,corrected' +
+             '&status:not=refuted&status:not=entered-in-error' +
              '&patient=' + $this.id +
              '&verificationStatus:not=refuted,entered-in-error' +
              '&date=gt' + (%ReportingPeriod.start - 14 days) +
@@ -219,7 +219,7 @@ The second part evaluates the codes associated with the Encounter.reasonCode or 
 determine whether the encounter is for suspected or confirmed COVID-19.
 ```
          // The reason or diagnosis associated with the encounter is COVID-19
-         ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrDiagnosedCOVID19.url),
+         ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrConfirmedCOVID19Diagnoses.url),
 ```
 
 <span id='fhir-queries'> </span>
@@ -241,7 +241,7 @@ diagnostic test for COVID-19 in the past two weeks.
            '&patient=' + $this.id +
            '&date=gt' + (%ReportingPeriod.start - 14 days) +
            '&code:in=' + %Covid19Labs.url +
-           '&value-concept:in=' + %PositiveResult.url
+           '&value-concept:in=' + %PositiveResults.url
          ).resolve().select(resource as Observation).exists(),
 ```
 
@@ -269,16 +269,16 @@ The query further restricts results to those whose effective time is within a tw
 reasonable time period. The two week time period is arbitrary, and may be changed based on further clinical guidance.
 
 Finally, the query restricts observations to only those matching codes in the [COVID-19 Labs](ValueSet-Covid19Labs.html) value set
-where the resulting value is positive using the [PositiveResult](ValueSet-PositiveResult.html) value set.
+where the resulting value is positive using the [Positive Results](ValueSet-PositiveResults.html) value set.
 ```
          // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days
          Patient.distinct().where(
            %Base + '/Condition?_count=1'+
-           '&status=registered,preliminary,final,amended,corrected' +
+           '&status:not=refuted&status:not=entered-in-error' +
            '&patient=' + $this.id +
            '&verificationStatus:not=refuted,entered-in-error' +
            '&date=gt' + (%ReportingPeriod.start - 14 days) +
-           '&code:in=' + %SuspectedOrDiagnosedCOVID19.url
+           '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url
          )
        ).resolve().select(resource as Condition).exists()
      )
@@ -336,12 +336,11 @@ element.  In this first case, that is a patient encounter.
  ** criteria.language = #text/fhirpath
  ** criteria.expression = """
       iif(%NumVentUse.id contains Encounter.subject,
-          iif(Encounter.location.resolve().type in %InpatientLocation, 'InpVentilated', 'OFVentilated')
-          iif(Encounter.location.resolve().type in %InpatientLocation, 'InpNotVentilated', 'OFNotVentilated')
+          iif(Encounter.location.resolve().type.memberOf(%InpatientLocations.url), 'InpVentilated', 'OFVentilated')
+          iif(Encounter.location.resolve().type.memberOf(%InpatientLocations.url), 'InpNotVentilated', 'OFNotVentilated')
       )
  """
 ```
-
 This expression returns one of four values: 'InpVentilated', 'OFVentilated', 'InpNotVentilated', 'OFNotVentilated').
 It first determines whether the patient has been ventilated by comparing patients using a ventilator (computed as shown below)
 with the subject of this encounter.  While patients on a ventilator is calculated "later" in the measure, the strata for this
@@ -349,9 +348,9 @@ group cannot be computed until that computation is finished.
 
 This expression returns one of four values: 'InpVentilated', 'OFVentilated', 'InpNotVentilated', 'OFNotVentilated').
 It first determines whether the patient has been ventilated by comparing patients using a ventilator with the subject of this encounter.
-%PatientsOnVent is computed as shown in a [later group](measure_group_ventilators.html).
+`%NumVentUse` is computed as shown in the [ventilators measure group](measure_group_ventilators.html).
 
 While patients on a ventilator is calculated "later" in the measure, the strata for this group cannot be computed until
-that computation is finished.  Assuming that computation has completed, the next step is to compare the type location where
+that computation is finished.  Once that computation has completed, the next step is to compare the type location where
 the encounter has occured with a value set describing inpatient encounter locations.  If that matches, the patient is considered
 to be in a normal inpatient location (including the ICU), and if not, an overflow location (such as an ED or other location).

@@ -76,12 +76,15 @@ Capacity measures are point in time measures.
 ### Define each Population
 
 The population definitions provide both descriptive and computable content for the measure, describing it to the
-implementer, and to the system that automates its computation. Capacity measures have three populations:
-1. The initial population from which the other populations are found.
+implementer, and to the system that automates its computation. Capacity measures have three or four populations:
+1. An optional initial population from which the other populations are found.
 2. The denominator population, which may simply be the initial population (this is the case for ventilators).
 3. The numerator population, which usually applies a filter to the initial population.
+4. The numerator-complement population, which represents the population in the denomonator not found in the numerator.
 
-Provide a code describing the initial population.
+The initial population is not used in the Ventilators measure becase it would be the same as the denominator population
+so the measure starts with the denominator.
+
 ```
  * with group[3].population[0] do
  ** with code do
@@ -107,9 +110,6 @@ Provide a code describing the initial population.
 
 #### Describe the Evaluation Criteria
 Name the criteria and give a description for what qualifies to to be included.
-The description is omitted for brevity (and exhuastion)[it will be added later](#todo).
-NOTE: The description **shall** be given in detail for each population and provide enough
-information for a competent human reader to correctly implement the computation.
 
 ```
  * with group[3].population[0].criteria do
