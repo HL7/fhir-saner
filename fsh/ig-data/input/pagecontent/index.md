@@ -139,7 +139,7 @@ You can also download:
 * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
 
 The source code for this Implementation Guide can be found on
-[https://github.com/AudaciousInquiry/saner-ig](https://github.com/AudaciousInquiry/fhir-saner).
+[https://github.com/AudaciousInquiry/fhir-saner](https://github.com/AudaciousInquiry/fhir-saner).
 
 
 ![The SANER Project Logo](SANERLogo.png)
