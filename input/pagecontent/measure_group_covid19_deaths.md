@@ -67,7 +67,8 @@ It is meant to convey information to an implementor, rather than to automated sy
  ** with extension[subject] do
  *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
  *** valueCodeableConcept.coding[Snomed] = #419620001 "Death"
- *** valueCodeableConcept.coding[Snomed].display = "Patient Deaths"
+ *** valueCodeableConcept.coding[Snomed].display = "Death"
+ *** valueCodeableConcetp.coding.text = "Patient Deaths"
  *** valueCodeableConcept.text = "Patients with conformed or suspected COVID-19 who have died"
 ```
 

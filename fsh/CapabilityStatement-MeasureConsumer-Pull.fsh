@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Pull"
 * title = "Measure Consumer implementing the Pull Option."
-* date = "2020-10-01T02:36:53.144341-04:00"
+* date = "2020-10-06T01:26:18.27027-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Pull Option."
 * format[0] = #xml
@@ -16,7 +16,6 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * rest[clientSlice].mode = #client
 
 * rest[clientSlice].resource[LocationSlice].type = #Location
-* rest[clientSlice].resource[LocationSlice].supportedProfile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
 
 * rest[clientSlice].resource[LocationSlice].interaction[0].code = #read
 * rest[clientSlice].resource[LocationSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -245,7 +244,6 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * rest[clientSlice].resource[MeasureSlice].extension[5].extension[0].valueString = "code:in"
 
 * rest[clientSlice].resource[OrganizationSlice].type = #Organization
-* rest[clientSlice].resource[OrganizationSlice].supportedProfile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 
 * rest[clientSlice].resource[OrganizationSlice].interaction[0].code = #read
 * rest[clientSlice].resource[OrganizationSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

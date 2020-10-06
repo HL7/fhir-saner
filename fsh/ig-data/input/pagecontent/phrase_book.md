@@ -1,4 +1,3 @@
-
 This section of the IG explains possible ways to record the expressions used to automate a Measure.  Essentially it is a phrase book
 from English to the Expression elements used in the PublicHealthMeasure resource to describe the automation.  Due to different
 workflows and national requirements, these phrases may require translation to different FHIR models to represent the concept

@@ -1,4 +1,4 @@
-The SANER Project envisions a system architecture comprised of small, easily deliverable
+This guide envisions a system architecture comprised of small, easily deliverable
 components that can be used together to support deployment of reporting, analysis,
 alerting and data aggregation tools to support fast deployment of solutions supporting
 public health situation awareness.
@@ -11,7 +11,7 @@ to implement the functionality described in this guide. These transactions excha
 conforming to [profiles](profiles.html) and using the [vocabulary](vocabulary.html) defined
 in this guide.
 
-## Major Components
+### Major Components
 The major design components described by this guide support the following functions:
 
 * Reporting - Generates the data to be reported and make it available.

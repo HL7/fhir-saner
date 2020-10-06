@@ -1,3 +1,5 @@
+
+
 ValueSet: BedLocationOperationalStatus
 Title: "Bed Location Operational Status"
 Description: "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."

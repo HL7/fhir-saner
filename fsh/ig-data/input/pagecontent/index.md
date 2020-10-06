@@ -4,131 +4,63 @@ of high level situational awareness information from inpatient facilities to cen
 to support the treatment of novel influenza-like illness.
 
 
-### About This Guide
-This is a draft implementation guide to promote discussion with leaders in the Health
-IT industry, and very much a work in progress.  All content in this guide is subject
-to discussion and change.
-
-The goal of publishing this guide is to encourage the creation of a community interested
-in extremely rapid development of interfaces that can support communication Bed and other
-resources to Public Health in this time of crisis.
-
-This implementation guide provides the FHIR Implementation materials associated with
-the SANER project.
-
 ### Organization of This Guide
 This guide is organized into five main sections:
 
-<details>
-    <summary>Chapter I: Background and Overview</summary>
-    <ol>
-      <li><a href="background.html">Background</a> - Provides background about this IG</li>
-      <li><a href="situational_awareness_measures.html">Measuring Situational Awareness</a> - Describes situational awareness and how to measure it.</li>
-      <li><a href="measure_aggregation.html">Aggregating Data</a> - Describes how to aggregate Measure data.</li>
-      <li><a href="measure_automation.html">Computing Measures</a> - Describes mechanisms to automate measure computation.</li>
-      <li><a href="phrase_book.html">Creating Measures supporting Automation</a> - A Phrase Book for creating automatable Measures</li>
-      <li><a href="measure_creation.html">Creating an Automated Measure</a> - Walks through the steps of creating an automated measure.</li>
-    </ol>
-</details>
+* Chapter I: Introduction and Overview
+1. [Introduction](introduction.html) - Provides and Introduction to this IG
+2. [Measuring Situational Awareness](situational_awareness_measures.html) - Describes situational awareness and how to measure it.
+3. [Use Cases](use_cases.html) - Illustrates Key Uses Cases addressed by this guide.
+* Chapter II: Technical Implementation
+1. [Architecture](architecture.html) - Illustrates the Microservice Architecture.
+2. [Security Considerations](security_considerations.html) - Documents security concerns and mitigations.
+3. [Actors and Transactions](actors.html) - Provides an overview of technical components
 
-<details>
-    <summary>Chapter II: <a href="transactions.html">Technical Implementation</a> - Describes the technical approach of this guide.</summary>
-    <ol>
-        <li><a href="technology_environment.html">Environment</a> - Describes the technology environment.</li>
-        <li><a href="architecture.html">Architecture</a> - Illustrates the Microservice Architecture.</li>
-        <li><a href="security_considerations.html">Security Considerations</a> - Documents security concerns and mitigations.</li>
-        <li><a href="use_cases.html">Use Cases</a> - Illustrates key use cases.</li>
-        <li><a href="actors.html">Actors and Transactions</a> - Provides an overview of technical components.</li>
-        <li><a href="transaction-1.html">Query Measure [PULL-TX]</a></li>
-        <li><a href="transaction-2.html">Produce Measure [PUSH-TX]</a></li>
-        <li><a href="transaction-3.html">Communicate Results [REPORT-TX]</a></li>
-    </ol>
-</details>
+* Chapter III: Integrating with Existing Systems
+1. [Technology Environment](technology_environment.html) - Identifies existing information systems containing situational awareness data.
+2. [Integrating via CSV Files](CSV_Conversion.html) - Describes how CSV Conversions are performed.
+3. [Aggregating Data](measure_aggregation.html) - Describes how to aggregate Measure data.
 
-<details>
-    <summary>Chapter III: <a href="profiles.html">Profiles and Extensions</a> - Describes the purpose of the resource profiles and
-extensions defined by this guide.</summary>
-    <ol>
-        <li><summary>Profiles<details>
-            <ol>
-               {% include list-simple-profiles.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li><summary>Extensions<details>
-            <ol>
-               {% include list-simple-extensions.xhtml %}
-            </ol></details></summary>
-        </li>
-    </ol>
-</details>
+* Chapter IV: Conformance and Testing
+<ol>
+    <li><details><summary>Capability Statements</summary><ol>
 
-<details>
-    <summary>Chapter IV: <a href="vocabulary.html">Vocabulary</a></summary>
-    <ol>
-        <li><summary>Value Sets<details>
-            <ol>
-               {% include list-simple-valuesets.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li>Code Systems
-            <ol>
-               {% include list-simple-codesystems.xhtml %}
-            </ol>
-        </li>
-        <!--li>Concept Maps
-            <ol>
-               {% include list-simple-conceptmaps.xhtml %}
-            </ol>
-        </li-->
-    </ol>
-</details>
-<details>
-    <summary>Chapter V: Testing and Conformance</summary>
-    <ol>
-        <li><a href='test_plan.html'>Test Plan</a></ol></li>
-        <li id='capabilities'><summary>Capability Statements<details>
-            <ol>
-               {% include list-simple-capabilitystatements.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li><summary>Operations<details>
-            <ol>
-               {% include list-simple-operationdefinitions.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li>Search Parameters
-            <ol>
-               {% include list-simple-searchparameters.xhtml %}
-            </ol>
-        </li>
-    </ol>
-</details>
+        {% include list-name-capabilitystatements.xhtml %}
 
-<details>
-    <summary>Chapter VI: <a id='examples' href="examples.html">Examples</a></summary>
-    <ol>
-        <li><summary>Measures<details>
-            <ol>
-               {% include list-simple-measures.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li><summary>Locations<details>
-            <ol>
-               {% include list-simple-locations.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li><summary>Organizations<details>
-            <ol>
-                 {% include list-simple-organizations.xhtml %}
-            </ol></details></summary>
-        </li>
-        <li><summary>Measure Reports<details>
-            <ol>
-               {% include list-simple-measurereports.xhtml %}
-            </ol></details></summary>
-        </li>
-    </ol>
-</details>
+        </ol></details>
+    </li>
+    <li><details><summary>Operations</summary><ol>
+        <li><a href='OperationDefinition-Measure-evaluate-measure.html'>Measure/$evaluate-measure</a> Evaluate the Measure</li>
+        <li><a href='OperationDefinition-Measure-report-csv.html'>Measure/$report-csv</a> Create or update a MeasureReport from CSV Format</li>
+        <li><a href='OperationDefinition-MeasureReport-aggregate.html'>MeasureReport/$aggregate</a> Aggregate MeeasureReport resources</li>
+        <li><a href='OperationDefinition-MeasureReport-read-csv.html'>MeasureReport/$read-csv</a> Read in CSV Format</li>
+        <li><a href='OperationDefinition-MeasureReport-search-csv.html'>MeasureReport/$search-csv</a> Search in CSV Format</li>
+        </ol></details>
+    </li>
+    <li><details><summary>Search Parameters</summary><ol>
+        <li><a href='SearchParameter-SearchParameter-code.html'>code</a> Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
+        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a> Enables definition resources to be discovered from text used in the resource definition</li>
+        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a> Enables query of encounters by discharge disposition</li>
+        </ol></details>
+    </li>
+    <li><a href='profiles_and_extensions.html'>Profiles and Extensions</a></li>
+    <li><a href='vocabulary.html'>Terminology Resources</a></li>
+    <li><a href='test_plan.html'>Test Plan</a></li>
+    <li><details><summary>Test Data Sets</summary><ol>
+        <li><a href='hospital_capacity_examples.html'>Hospital Capacity Measure and Report Examples</a></li>
+        <li><a href='laboratory_reporting_examples.html'>Laboratory Reporting Measure and Report Examples</a></li>
+        <li><a href='automation_testing_examples.html'>Automation Testing Data</a></li>
+        </ol></details>
+    </li>
+</ol>
+
+* Chapter V: Defining Measures from Essential Elements of Information
+1. [Computing Measures](measure_automation.html) - Describes mechanisms to automate measure computation.
+2. [Phrase Book](phrase_book.html) - A Phrase Book for creating automatable Measures
+3. [Creating an Automated Measure](measure_creation.html) - A detailed walk through the steps for creating an automated measure.
+
+* [Appendix A: Supporting Terminology](supporting_vocabulary.html)
+* [Appendix B: Fluent Query](fluent_query.html)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
@@ -168,3 +100,5 @@ NLM Website at no charge at https://www.nlm.nih.gov/research/umls/rxnorm/index.h
 trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and
 Human Services, or Centers for Disease Control and Prevention. Source materials are available from the CDC Website
 at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+
+* The SANER Logo was created by Adrian "Kingsley" McDermott, additional imagery by [@RoseFyreWolf](https://www.instagram.com/rosefyrewolf/)

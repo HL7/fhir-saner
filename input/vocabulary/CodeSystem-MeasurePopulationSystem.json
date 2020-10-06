@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "MeasurePopulationSystem",
   "id": "MeasurePopulationSystem",
-  "title": "Situationa Awareness Measure Populations",
-  "description": "A Code System for Situation Awareness Measure Populations defined by The SANER Project",
+  "title": "Situational Awareness Measure Populations",
+  "description": "A Code System for Situation Awareness Measure Populations",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem",
   "concept": [

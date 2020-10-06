@@ -1,4 +1,5 @@
 Instance: Loc-X140008
+Usage: #example
 InstanceOf: Location
 Description: "Description for CLARKE MEMORIAL HOSPITAL Building"
 * id = "Loc-X140008"
@@ -21,6 +22,7 @@ Description: "Description for CLARKE MEMORIAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140008"
 
 Instance: Loc-X140010
+Usage: #example
 InstanceOf: Location
 Description: "Description for VINGE UNIVERSITY HOSPITAL Building"
 * id = "Loc-X140010"
@@ -43,6 +45,7 @@ Description: "Description for VINGE UNIVERSITY HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140010"
 
 Instance: Loc-X140048
+Usage: #example
 InstanceOf: Location
 Description: "Description for VALENTINE HOSPITAL Building"
 * id = "Loc-X140048"
@@ -65,6 +68,7 @@ Description: "Description for VALENTINE HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140048"
 
 Instance: Loc-X140049
+Usage: #example
 InstanceOf: Location
 Description: "Description for JEMISIN MEDICAL CENTER Building"
 * id = "Loc-X140049"
@@ -87,6 +91,7 @@ Description: "Description for JEMISIN MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140049"
 
 Instance: Loc-X140054
+Usage: #example
 InstanceOf: Location
 Description: "Description for WILHELM HOSPITAL Building"
 * id = "Loc-X140054"
@@ -109,6 +114,7 @@ Description: "Description for WILHELM HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140054"
 
 Instance: Loc-X140062
+Usage: #example
 InstanceOf: Location
 Description: "Description for GIBSON COMMUNITY HOSPITAL Building"
 * id = "Loc-X140062"
@@ -131,6 +137,7 @@ Description: "Description for GIBSON COMMUNITY HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140062"
 
 Instance: Loc-X140063
+Usage: #example
 InstanceOf: Location
 Description: "Description for ROBERT GALBRAITH HOSPITAL Building"
 * id = "Loc-X140063"
@@ -153,6 +160,7 @@ Description: "Description for ROBERT GALBRAITH HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140063"
 
 Instance: Loc-X140065
+Usage: #example
 InstanceOf: Location
 Description: "Description for BESTER MEMORIAL HOSPITAL Building"
 * id = "Loc-X140065"
@@ -175,6 +183,7 @@ Description: "Description for BESTER MEMORIAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140065"
 
 Instance: Loc-X140068
+Usage: #example
 InstanceOf: Location
 Description: "Description for WILLIS COMMUNITY HOSPITAL Building"
 * id = "Loc-X140068"
@@ -197,6 +206,7 @@ Description: "Description for WILLIS COMMUNITY HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140068"
 
 Instance: Loc-X140080
+Usage: #example
 InstanceOf: Location
 Description: "Description for SAINT LOIS HOSPITAL Building"
 * id = "Loc-X140080"
@@ -219,6 +229,7 @@ Description: "Description for SAINT LOIS HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140080"
 
 Instance: Loc-X140082
+Usage: #example
 InstanceOf: Location
 Description: "Description for PAUL FRENCH MEMORIAL HOSPITAL Building"
 * id = "Loc-X140082"
@@ -241,6 +252,7 @@ Description: "Description for PAUL FRENCH MEMORIAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140082"
 
 Instance: Loc-X140083
+Usage: #example
 InstanceOf: Location
 Description: "Description for FARMERS HOSPITAL Building"
 * id = "Loc-X140083"
@@ -263,6 +275,7 @@ Description: "Description for FARMERS HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140083"
 
 Instance: Loc-X140088
+Usage: #example
 InstanceOf: Location
 Description: "Description for DAHL UNIVERSITY MEDICAL CENTER Building"
 * id = "Loc-X140088"
@@ -285,6 +298,7 @@ Description: "Description for DAHL UNIVERSITY MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140088"
 
 Instance: Loc-X140095
+Usage: #example
 InstanceOf: Location
 Description: "Description for ST ROBERT HOSPITAL Building"
 * id = "Loc-X140095"
@@ -307,6 +321,7 @@ Description: "Description for ST ROBERT HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140095"
 
 Instance: Loc-X140103
+Usage: #example
 InstanceOf: Location
 Description: "Description for LABRADOR HOSPITAL Building"
 * id = "Loc-X140103"
@@ -329,6 +344,7 @@ Description: "Description for LABRADOR HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140103"
 
 Instance: Loc-X140114
+Usage: #example
 InstanceOf: Location
 Description: "Description for WALTON HOSPITAL Building"
 * id = "Loc-X140114"
@@ -351,6 +367,7 @@ Description: "Description for WALTON HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140114"
 
 Instance: Loc-X140115
+Usage: #example
 InstanceOf: Location
 Description: "Description for LECKIE HOSPITAL Building"
 * id = "Loc-X140115"
@@ -373,6 +390,7 @@ Description: "Description for LECKIE HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140115"
 
 Instance: Loc-X140117
+Usage: #example
 InstanceOf: Location
 Description: "Description for KEATS MEDICAL CENTER Building"
 * id = "Loc-X140117"
@@ -395,6 +413,7 @@ Description: "Description for KEATS MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140117"
 
 Instance: Loc-X140119
+Usage: #example
 InstanceOf: Location
 Description: "Description for LAKESIDE MEDICAL CENTER Building"
 * id = "Loc-X140119"
@@ -417,6 +436,7 @@ Description: "Description for LAKESIDE MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140119"
 
 Instance: Loc-X140124
+Usage: #example
 InstanceOf: Location
 Description: "Description for URSULA KROEBER HOSPITAL Building"
 * id = "Loc-X140124"
@@ -439,6 +459,7 @@ Description: "Description for URSULA KROEBER HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140124"
 
 Instance: Loc-X140133
+Usage: #example
 InstanceOf: Location
 Description: "Description for SELENE HOSPITAL Building"
 * id = "Loc-X140133"
@@ -461,6 +482,7 @@ Description: "Description for SELENE HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140133"
 
 Instance: Loc-X140150
+Usage: #example
 InstanceOf: Location
 Description: "Description for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL Building"
 * id = "Loc-X140150"
@@ -483,6 +505,7 @@ Description: "Description for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140150"
 
 Instance: Loc-X140158
+Usage: #example
 InstanceOf: Location
 Description: "Description for POHL HOSPITAL AND MEDICAL CENTER Building"
 * id = "Loc-X140158"
@@ -505,6 +528,7 @@ Description: "Description for POHL HOSPITAL AND MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140158"
 
 Instance: Loc-X140177
+Usage: #example
 InstanceOf: Location
 Description: "Description for BRUNNER GROVE HOSPITAL Building"
 * id = "Loc-X140177"
@@ -527,6 +551,7 @@ Description: "Description for BRUNNER GROVE HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140177"
 
 Instance: Loc-X140179
+Usage: #example
 InstanceOf: Location
 Description: "Description for GENERAL PRODUCTS HOSPITAL Building"
 * id = "Loc-X140179"
@@ -549,6 +574,7 @@ Description: "Description for GENERAL PRODUCTS HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140179"
 
 Instance: Loc-X140180
+Usage: #example
 InstanceOf: Location
 Description: "Description for ARES MEDICAL CENTER Building"
 * id = "Loc-X140180"
@@ -571,6 +597,7 @@ Description: "Description for ARES MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140180"
 
 Instance: Loc-X140181
+Usage: #example
 InstanceOf: Location
 Description: "Description for WILSON HOSPITAL Building"
 * id = "Loc-X140181"
@@ -593,6 +620,7 @@ Description: "Description for WILSON HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140181"
 
 Instance: Loc-X140182
+Usage: #example
 InstanceOf: Location
 Description: "Description for LEIBER FAMILY MEDICAL CENTER Building"
 * id = "Loc-X140182"
@@ -615,6 +643,7 @@ Description: "Description for LEIBER FAMILY MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140182"
 
 Instance: Loc-X140191
+Usage: #example
 InstanceOf: Location
 Description: "Description for ZELAZNY MEMORIAL HOSPITAL Building"
 * id = "Loc-X140191"
@@ -637,6 +666,7 @@ Description: "Description for ZELAZNY MEMORIAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140191"
 
 Instance: Loc-X140197
+Usage: #example
 InstanceOf: Location
 Description: "Description for MCINTYRE HOSPITAL OF CHEF COUNTY Building"
 * id = "Loc-X140197"
@@ -659,6 +689,7 @@ Description: "Description for MCINTYRE HOSPITAL OF CHEF COUNTY Building"
 * managingOrganization.reference = "Organization/X140197"
 
 Instance: Loc-X140206
+Usage: #example
 InstanceOf: Location
 Description: "Description for BRIN HOSPITAL Building"
 * id = "Loc-X140206"
@@ -681,6 +712,7 @@ Description: "Description for BRIN HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140206"
 
 Instance: Loc-X140208
+Usage: #example
 InstanceOf: Location
 Description: "Description for CLIFTON MEDICAL CENTER Building"
 * id = "Loc-X140208"
@@ -703,6 +735,7 @@ Description: "Description for CLIFTON MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140208"
 
 Instance: Loc-X140223
+Usage: #example
 InstanceOf: Location
 Description: "Description for BLISH GENERAL HOSPITAL Building"
 * id = "Loc-X140223"
@@ -725,6 +758,7 @@ Description: "Description for BLISH GENERAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140223"
 
 Instance: Loc-X140224
+Usage: #example
 InstanceOf: Location
 Description: "Description for SAINT VERNOR HOSPITAL Building"
 * id = "Loc-X140224"
@@ -747,6 +781,7 @@ Description: "Description for SAINT VERNOR HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140224"
 
 Instance: Loc-X140240
+Usage: #example
 InstanceOf: Location
 Description: "Description for KOWEL HOSPITAL Building"
 * id = "Loc-X140240"
@@ -769,6 +804,7 @@ Description: "Description for KOWEL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140240"
 
 Instance: Loc-X140250
+Usage: #example
 InstanceOf: Location
 Description: "Description for ST LEIBOWITZ HOSPITAL Building"
 * id = "Loc-X140250"
@@ -791,6 +827,7 @@ Description: "Description for ST LEIBOWITZ HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140250"
 
 Instance: Loc-X140251
+Usage: #example
 InstanceOf: Location
 Description: "Description for HERBERT MEDICAL CENTER Building"
 * id = "Loc-X140251"
@@ -813,6 +850,7 @@ Description: "Description for HERBERT MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140251"
 
 Instance: Loc-X140252
+Usage: #example
 InstanceOf: Location
 Description: "Description for PELL COMMUNITY HOSPITAL Building"
 * id = "Loc-X140252"
@@ -835,6 +873,7 @@ Description: "Description for PELL COMMUNITY HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140252"
 
 Instance: Loc-X140258
+Usage: #example
 InstanceOf: Location
 Description: "Description for SIMAK FAMILY MEDICAL CENTER Building"
 * id = "Loc-X140258"
@@ -857,6 +896,7 @@ Description: "Description for SIMAK FAMILY MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140258"
 
 Instance: Loc-X140276
+Usage: #example
 InstanceOf: Location
 Description: "Description for HALDEMAN UNIVERSITY MEDICAL CENTER Building"
 * id = "Loc-X140276"
@@ -879,6 +919,7 @@ Description: "Description for HALDEMAN UNIVERSITY MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140276"
 
 Instance: Loc-X140281
+Usage: #example
 InstanceOf: Location
 Description: "Description for FOUNDATION HOSPITAL Building"
 * id = "Loc-X140281"
@@ -901,6 +942,7 @@ Description: "Description for FOUNDATION HOSPITAL Building"
 * managingOrganization.reference = "Organization/X140281"
 
 Instance: Loc-X140290
+Usage: #example
 InstanceOf: Location
 Description: "Description for SITKA MEDICAL CENTER Building"
 * id = "Loc-X140290"
@@ -923,6 +965,7 @@ Description: "Description for SITKA MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X140290"
 
 Instance: Loc-X140300
+Usage: #example
 InstanceOf: Location
 Description: "Description for STEPHENSON HOSPITAL OF CHEF COUNTY Building"
 * id = "Loc-X140300"
@@ -945,6 +988,7 @@ Description: "Description for STEPHENSON HOSPITAL OF CHEF COUNTY Building"
 * managingOrganization.reference = "Organization/X140300"
 
 Instance: Loc-X143300
+Usage: #example
 InstanceOf: Location
 Description: "Description for LEIBER CHILDRENS HOSPITAL Building"
 * id = "Loc-X143300"
@@ -967,6 +1011,7 @@ Description: "Description for LEIBER CHILDRENS HOSPITAL Building"
 * managingOrganization.reference = "Organization/X143300"
 
 Instance: Loc-X143302
+Usage: #example
 InstanceOf: Location
 Description: "Description for CLARKE CHILDRENS HOSPITAL Building"
 * id = "Loc-X143302"
@@ -989,6 +1034,7 @@ Description: "Description for CLARKE CHILDRENS HOSPITAL Building"
 * managingOrganization.reference = "Organization/X143302"
 
 Instance: Loc-X410007
+Usage: #example
 InstanceOf: Location
 Description: "Location for NEW CYPRUS HOSPITAL Building"
 * id = "Loc-X410007"
@@ -1012,6 +1058,7 @@ Description: "Location for NEW CYPRUS HOSPITAL Building"
 
 
 Instance: X140008
+Usage: #example
 InstanceOf: Organization
 Description: "Description for CLARKE MEMORIAL HOSPITAL"
 * id = "X140008"
@@ -1031,6 +1078,7 @@ Description: "Description for CLARKE MEMORIAL HOSPITAL"
 * address.country = "USA"
 
 Instance: X140010
+Usage: #example
 InstanceOf: Organization
 Description: "Description for VINGE UNIVERSITY HOSPITAL"
 * id = "X140010"
@@ -1050,6 +1098,7 @@ Description: "Description for VINGE UNIVERSITY HOSPITAL"
 * address.country = "USA"
 
 Instance: X140048
+Usage: #example
 InstanceOf: Organization
 Description: "Description for VALENTINE HOSPITAL"
 * id = "X140048"
@@ -1069,6 +1118,7 @@ Description: "Description for VALENTINE HOSPITAL"
 * address.country = "USA"
 
 Instance: X140049
+Usage: #example
 InstanceOf: Organization
 Description: "Description for JEMISIN MEDICAL CENTER"
 * id = "X140049"
@@ -1088,6 +1138,7 @@ Description: "Description for JEMISIN MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140054
+Usage: #example
 InstanceOf: Organization
 Description: "Description for WILHELM HOSPITAL"
 * id = "X140054"
@@ -1107,6 +1158,7 @@ Description: "Description for WILHELM HOSPITAL"
 * address.country = "USA"
 
 Instance: X140062
+Usage: #example
 InstanceOf: Organization
 Description: "Description for GIBSON COMMUNITY HOSPITAL"
 * id = "X140062"
@@ -1126,6 +1178,7 @@ Description: "Description for GIBSON COMMUNITY HOSPITAL"
 * address.country = "USA"
 
 Instance: X140063
+Usage: #example
 InstanceOf: Organization
 Description: "Description for ROBERT GALBRAITH HOSPITAL"
 * id = "X140063"
@@ -1145,6 +1198,7 @@ Description: "Description for ROBERT GALBRAITH HOSPITAL"
 * address.country = "USA"
 
 Instance: X140065
+Usage: #example
 InstanceOf: Organization
 Description: "Description for BESTER MEMORIAL HOSPITAL"
 * id = "X140065"
@@ -1164,6 +1218,7 @@ Description: "Description for BESTER MEMORIAL HOSPITAL"
 * address.country = "USA"
 
 Instance: X140068
+Usage: #example
 InstanceOf: Organization
 Description: "Description for WILLIS COMMUNITY HOSPITAL"
 * id = "X140068"
@@ -1183,6 +1238,7 @@ Description: "Description for WILLIS COMMUNITY HOSPITAL"
 * address.country = "USA"
 
 Instance: X140080
+Usage: #example
 InstanceOf: Organization
 Description: "Description for SAINT LOIS HOSPITAL"
 * id = "X140080"
@@ -1202,6 +1258,7 @@ Description: "Description for SAINT LOIS HOSPITAL"
 * address.country = "USA"
 
 Instance: X140082
+Usage: #example
 InstanceOf: Organization
 Description: "Description for PAUL FRENCH MEMORIAL HOSPITAL"
 * id = "X140082"
@@ -1221,6 +1278,7 @@ Description: "Description for PAUL FRENCH MEMORIAL HOSPITAL"
 * address.country = "USA"
 
 Instance: X140083
+Usage: #example
 InstanceOf: Organization
 Description: "Description for FARMERS HOSPITAL"
 * id = "X140083"
@@ -1240,6 +1298,7 @@ Description: "Description for FARMERS HOSPITAL"
 * address.country = "USA"
 
 Instance: X140088
+Usage: #example
 InstanceOf: Organization
 Description: "Description for DAHL UNIVERSITY MEDICAL CENTER"
 * id = "X140088"
@@ -1259,6 +1318,7 @@ Description: "Description for DAHL UNIVERSITY MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140095
+Usage: #example
 InstanceOf: Organization
 Description: "Description for ST ROBERT HOSPITAL"
 * id = "X140095"
@@ -1278,6 +1338,7 @@ Description: "Description for ST ROBERT HOSPITAL"
 * address.country = "USA"
 
 Instance: X140103
+Usage: #example
 InstanceOf: Organization
 Description: "Description for LABRADOR HOSPITAL"
 * id = "X140103"
@@ -1297,6 +1358,7 @@ Description: "Description for LABRADOR HOSPITAL"
 * address.country = "USA"
 
 Instance: X140114
+Usage: #example
 InstanceOf: Organization
 Description: "Description for WALTON HOSPITAL"
 * id = "X140114"
@@ -1316,6 +1378,7 @@ Description: "Description for WALTON HOSPITAL"
 * address.country = "USA"
 
 Instance: X140115
+Usage: #example
 InstanceOf: Organization
 Description: "Description for LECKIE HOSPITAL"
 * id = "X140115"
@@ -1335,6 +1398,7 @@ Description: "Description for LECKIE HOSPITAL"
 * address.country = "USA"
 
 Instance: X140117
+Usage: #example
 InstanceOf: Organization
 Description: "Description for KEATS MEDICAL CENTER"
 * id = "X140117"
@@ -1354,6 +1418,7 @@ Description: "Description for KEATS MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140119
+Usage: #example
 InstanceOf: Organization
 Description: "Description for LAKESIDE MEDICAL CENTER"
 * id = "X140119"
@@ -1373,6 +1438,7 @@ Description: "Description for LAKESIDE MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140124
+Usage: #example
 InstanceOf: Organization
 Description: "Description for URSULA KROEBER HOSPITAL"
 * id = "X140124"
@@ -1392,6 +1458,7 @@ Description: "Description for URSULA KROEBER HOSPITAL"
 * address.country = "USA"
 
 Instance: X140133
+Usage: #example
 InstanceOf: Organization
 Description: "Description for SELENE HOSPITAL"
 * id = "X140133"
@@ -1411,6 +1478,7 @@ Description: "Description for SELENE HOSPITAL"
 * address.country = "USA"
 
 Instance: X140150
+Usage: #example
 InstanceOf: Organization
 Description: "Description for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL"
 * id = "X140150"
@@ -1430,6 +1498,7 @@ Description: "Description for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL"
 * address.country = "USA"
 
 Instance: X140158
+Usage: #example
 InstanceOf: Organization
 Description: "Description for POHL HOSPITAL AND MEDICAL CENTER"
 * id = "X140158"
@@ -1449,6 +1518,7 @@ Description: "Description for POHL HOSPITAL AND MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140177
+Usage: #example
 InstanceOf: Organization
 Description: "Description for BRUNNER GROVE HOSPITAL"
 * id = "X140177"
@@ -1468,6 +1538,7 @@ Description: "Description for BRUNNER GROVE HOSPITAL"
 * address.country = "USA"
 
 Instance: X140179
+Usage: #example
 InstanceOf: Organization
 Description: "Description for GENERAL PRODUCTS HOSPITAL"
 * id = "X140179"
@@ -1487,6 +1558,7 @@ Description: "Description for GENERAL PRODUCTS HOSPITAL"
 * address.country = "USA"
 
 Instance: X140180
+Usage: #example
 InstanceOf: Organization
 Description: "Description for ARES MEDICAL CENTER"
 * id = "X140180"
@@ -1506,6 +1578,7 @@ Description: "Description for ARES MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140181
+Usage: #example
 InstanceOf: Organization
 Description: "Description for WILSON HOSPITAL"
 * id = "X140181"
@@ -1525,6 +1598,7 @@ Description: "Description for WILSON HOSPITAL"
 * address.country = "USA"
 
 Instance: X140182
+Usage: #example
 InstanceOf: Organization
 Description: "Description for LEIBER FAMILY MEDICAL CENTER"
 * id = "X140182"
@@ -1544,6 +1618,7 @@ Description: "Description for LEIBER FAMILY MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140191
+Usage: #example
 InstanceOf: Organization
 Description: "Description for ZELAZNY MEMORIAL HOSPITAL"
 * id = "X140191"
@@ -1563,6 +1638,7 @@ Description: "Description for ZELAZNY MEMORIAL HOSPITAL"
 * address.country = "USA"
 
 Instance: X140197
+Usage: #example
 InstanceOf: Organization
 Description: "Description for MCINTYRE HOSPITAL OF CHEF COUNTY"
 * id = "X140197"
@@ -1582,6 +1658,7 @@ Description: "Description for MCINTYRE HOSPITAL OF CHEF COUNTY"
 * address.country = "USA"
 
 Instance: X140206
+Usage: #example
 InstanceOf: Organization
 Description: "Description for BRIN HOSPITAL"
 * id = "X140206"
@@ -1601,6 +1678,7 @@ Description: "Description for BRIN HOSPITAL"
 * address.country = "USA"
 
 Instance: X140208
+Usage: #example
 InstanceOf: Organization
 Description: "Description for CLIFTON MEDICAL CENTER"
 * id = "X140208"
@@ -1620,6 +1698,7 @@ Description: "Description for CLIFTON MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140223
+Usage: #example
 InstanceOf: Organization
 Description: "Description for BLISH GENERAL HOSPITAL"
 * id = "X140223"
@@ -1639,6 +1718,7 @@ Description: "Description for BLISH GENERAL HOSPITAL"
 * address.country = "USA"
 
 Instance: X140224
+Usage: #example
 InstanceOf: Organization
 Description: "Description for SAINT VERNOR HOSPITAL"
 * id = "X140224"
@@ -1658,6 +1738,7 @@ Description: "Description for SAINT VERNOR HOSPITAL"
 * address.country = "USA"
 
 Instance: X140240
+Usage: #example
 InstanceOf: Organization
 Description: "Description for KOWEL HOSPITAL"
 * id = "X140240"
@@ -1677,6 +1758,7 @@ Description: "Description for KOWEL HOSPITAL"
 * address.country = "USA"
 
 Instance: X140250
+Usage: #example
 InstanceOf: Organization
 Description: "Description for ST LEIBOWITZ HOSPITAL"
 * id = "X140250"
@@ -1696,6 +1778,7 @@ Description: "Description for ST LEIBOWITZ HOSPITAL"
 * address.country = "USA"
 
 Instance: X140251
+Usage: #example
 InstanceOf: Organization
 Description: "Description for HERBERT MEDICAL CENTER"
 * id = "X140251"
@@ -1715,6 +1798,7 @@ Description: "Description for HERBERT MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140252
+Usage: #example
 InstanceOf: Organization
 Description: "Description for PELL COMMUNITY HOSPITAL"
 * id = "X140252"
@@ -1734,6 +1818,7 @@ Description: "Description for PELL COMMUNITY HOSPITAL"
 * address.country = "USA"
 
 Instance: X140258
+Usage: #example
 InstanceOf: Organization
 Description: "Description for SIMAK FAMILY MEDICAL CENTER"
 * id = "X140258"
@@ -1753,6 +1838,7 @@ Description: "Description for SIMAK FAMILY MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140276
+Usage: #example
 InstanceOf: Organization
 Description: "Description for HALDEMAN UNIVERSITY MEDICAL CENTER"
 * id = "X140276"
@@ -1772,6 +1858,7 @@ Description: "Description for HALDEMAN UNIVERSITY MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140281
+Usage: #example
 InstanceOf: Organization
 Description: "Description for FOUNDATION HOSPITAL"
 * id = "X140281"
@@ -1791,6 +1878,7 @@ Description: "Description for FOUNDATION HOSPITAL"
 * address.country = "USA"
 
 Instance: X140290
+Usage: #example
 InstanceOf: Organization
 Description: "Description for SITKA MEDICAL CENTER"
 * id = "X140290"
@@ -1810,6 +1898,7 @@ Description: "Description for SITKA MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: X140300
+Usage: #example
 InstanceOf: Organization
 Description: "Description for STEPHENSON HOSPITAL OF CHEF COUNTY"
 * id = "X140300"
@@ -1829,6 +1918,7 @@ Description: "Description for STEPHENSON HOSPITAL OF CHEF COUNTY"
 * address.country = "USA"
 
 Instance: X143300
+Usage: #example
 InstanceOf: Organization
 Description: "Description for LEIBER CHILDRENS HOSPITAL"
 * id = "X143300"
@@ -1848,6 +1938,7 @@ Description: "Description for LEIBER CHILDRENS HOSPITAL"
 * address.country = "USA"
 
 Instance: X143302
+Usage: #example
 InstanceOf: Organization
 Description: "Description for CLARKE CHILDRENS HOSPITAL"
 * id = "X143302"
@@ -1867,6 +1958,7 @@ Description: "Description for CLARKE CHILDRENS HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410004
+Usage: #example
 InstanceOf: Location
 Description: "Location for CHARLES D WARD MEMORIAL HOSPITAL Building"
 * id = "Loc-X410004"
@@ -1889,6 +1981,7 @@ Description: "Location for CHARLES D WARD MEMORIAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410004"
 
 Instance: X410004
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for CHARLES D WARD MEMORIAL HOSPITAL"
 * id = "X410004"
@@ -1908,6 +2001,7 @@ Description: "Organization for CHARLES D WARD MEMORIAL HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410005
+Usage: #example
 InstanceOf: Location
 Description: "Location for SAINT JOHN HOSPITAL Building"
 * id = "Loc-X410005"
@@ -1930,6 +2024,7 @@ Description: "Location for SAINT JOHN HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410005"
 
 Instance: X410005
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for SAINT JOHN HOSPITAL"
 * id = "X410005"
@@ -1949,6 +2044,7 @@ Description: "Organization for SAINT JOHN HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410006
+Usage: #example
 InstanceOf: Location
 Description: "Location for INNSMOUTH HOSPITAL Building"
 * id = "Loc-X410006"
@@ -1971,6 +2067,7 @@ Description: "Location for INNSMOUTH HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410006"
 
 Instance: X410006
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for INNSMOUTH HOSPITAL"
 * id = "X410006"
@@ -1989,6 +2086,7 @@ Description: "Organization for INNSMOUTH HOSPITAL"
 * address.postalCode = "02840"
 * address.country = "USA"
 Instance: X410007
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for NEW CYPRUS HOSPITAL"
 * id = "X410007"
@@ -2008,6 +2106,7 @@ Description: "Organization for NEW CYPRUS HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410008
+Usage: #example
 InstanceOf: Location
 Description: "Location for CIMMERIAN FOUNDATION HOSPITAL Building"
 * id = "Loc-X410008"
@@ -2030,6 +2129,7 @@ Description: "Location for CIMMERIAN FOUNDATION HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410008"
 
 Instance: X410008
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for CIMMERIAN FOUNDATION HOSPITAL"
 * id = "X410008"
@@ -2049,6 +2149,7 @@ Description: "Organization for CIMMERIAN FOUNDATION HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410009
+Usage: #example
 InstanceOf: Location
 Description: "Location for DUNWICH MEDICAL CENTER Building"
 * id = "Loc-X410009"
@@ -2071,6 +2172,7 @@ Description: "Location for DUNWICH MEDICAL CENTER Building"
 * managingOrganization.reference = "Organization/X410009"
 
 Instance: X410009
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for DUNWICH MEDICAL CENTER"
 * id = "X410009"
@@ -2090,6 +2192,7 @@ Description: "Organization for DUNWICH MEDICAL CENTER"
 * address.country = "USA"
 
 Instance: Loc-X410010
+Usage: #example
 InstanceOf: Location
 Description: "Location for MISKATONIC UNIVERSITY HOSPITAL Building"
 * id = "Loc-X410010"
@@ -2112,6 +2215,7 @@ Description: "Location for MISKATONIC UNIVERSITY HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410010"
 
 Instance: X410010
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for MISKATONIC UNIVERSITY HOSPITAL"
 * id = "X410010"
@@ -2131,6 +2235,7 @@ Description: "Organization for MISKATONIC UNIVERSITY HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410011
+Usage: #example
 InstanceOf: Location
 Description: "Location for NORTH COUNTY HOSPITAL Building"
 * id = "Loc-X410011"
@@ -2153,6 +2258,7 @@ Description: "Location for NORTH COUNTY HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410011"
 
 Instance: X410011
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for NORTH COUNTY HOSPITAL"
 * id = "X410011"
@@ -2172,6 +2278,7 @@ Description: "Organization for NORTH COUNTY HOSPITAL"
 * address.country = "USA"
 
 Instance: Loc-X410013
+Usage: #example
 InstanceOf: Location
 Description: "Location for WASHINGTON COUNTY MEMORIAL HOSPITAL Building"
 * id = "Loc-X410013"
@@ -2194,6 +2301,7 @@ Description: "Location for WASHINGTON COUNTY MEMORIAL HOSPITAL Building"
 * managingOrganization.reference = "Organization/X410013"
 
 Instance: X410013
+Usage: #example
 InstanceOf: Organization
 Description: "Organization for WASHINGTON COUNTY MEMORIAL HOSPITAL"
 * id = "X410013"
@@ -2214,6 +2322,7 @@ Description: "Organization for WASHINGTON COUNTY MEMORIAL HOSPITAL"
 * address.country = "USA"
 
 Instance: FHIR-102
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for NORTH COUNTY HOSPITAL Building on May 11, 2020"
 * id = "FHIR-102"
@@ -2288,6 +2397,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for NORTH COUNTY HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-105
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for NORTH COUNTY HOSPITAL Building on May 12, 2020"
 * id = "FHIR-105"
@@ -2365,6 +2475,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for NORTH COUNTY HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-108
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for NORTH COUNTY HOSPITAL Building on May 13, 2020"
 * id = "FHIR-108"
@@ -2442,6 +2553,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for NORTH COUNTY HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-111
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT LOIS HOSPITAL Building on May 11, 2020"
 * id = "FHIR-111"
@@ -2519,6 +2631,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT LOIS HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-114
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT LOIS HOSPITAL Building on May 12, 2020"
 * id = "FHIR-114"
@@ -2596,6 +2709,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT LOIS HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-117
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT LOIS HOSPITAL Building on May 13, 2020"
 * id = "FHIR-117"
@@ -2673,6 +2787,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT LOIS HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-12
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT JOHN HOSPITAL Building on May 11, 2020"
 * id = "FHIR-12"
@@ -2750,6 +2865,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT JOHN HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-120
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for POHL HOSPITAL AND MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-120"
@@ -2827,6 +2943,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for POHL HOSPITAL AND MEDICAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-123
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for POHL HOSPITAL AND MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-123"
@@ -2904,6 +3021,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for POHL HOSPITAL AND MEDICAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-126
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for POHL HOSPITAL AND MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-126"
@@ -2981,6 +3099,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for POHL HOSPITAL AND MEDICAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-129
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for GIBSON COMMUNITY HOSPITAL Building on May 11, 2020"
 * id = "FHIR-129"
@@ -3058,6 +3177,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for GIBSON COMMUNITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-132
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for GIBSON COMMUNITY HOSPITAL Building on May 12, 2020"
 * id = "FHIR-132"
@@ -3135,6 +3255,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for GIBSON COMMUNITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-135
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for GIBSON COMMUNITY HOSPITAL Building on May 13, 2020"
 * id = "FHIR-135"
@@ -3212,6 +3333,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for GIBSON COMMUNITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-138
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WASHINGTON COUNTY MEMORIAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-138"
@@ -3289,6 +3411,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WASHINGTON COUNTY MEMORIAL
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-141
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WASHINGTON COUNTY MEMORIAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-141"
@@ -3366,6 +3489,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WASHINGTON COUNTY MEMORIAL
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-144
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WASHINGTON COUNTY MEMORIAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-144"
@@ -3443,6 +3567,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WASHINGTON COUNTY MEMORIAL
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-147
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for FOUNDATION HOSPITAL Building on May 11, 2020"
 * id = "FHIR-147"
@@ -3520,6 +3645,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for FOUNDATION HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-15
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT JOHN HOSPITAL Building on May 12, 2020"
 * id = "FHIR-15"
@@ -3597,6 +3723,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT JOHN HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-150
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for FOUNDATION HOSPITAL Building on May 12, 2020"
 * id = "FHIR-150"
@@ -3674,6 +3801,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for FOUNDATION HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-153
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for FOUNDATION HOSPITAL Building on May 13, 2020"
 * id = "FHIR-153"
@@ -3751,6 +3879,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for FOUNDATION HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-156
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CHARLES D WARD MEMORIAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-156"
@@ -3828,6 +3957,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CHARLES D WARD MEMORIAL HO
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-159
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CHARLES D WARD MEMORIAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-159"
@@ -3905,6 +4035,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CHARLES D WARD MEMORIAL HO
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-162
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CHARLES D WARD MEMORIAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-162"
@@ -3982,6 +4113,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CHARLES D WARD MEMORIAL HO
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-165
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for MISKATONIC UNIVERSITY HOSPITAL Building on May 11, 2020"
 * id = "FHIR-165"
@@ -4059,6 +4191,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for MISKATONIC UNIVERSITY HOSP
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-168
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for MISKATONIC UNIVERSITY HOSPITAL Building on May 12, 2020"
 * id = "FHIR-168"
@@ -4136,6 +4269,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for MISKATONIC UNIVERSITY HOSP
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-171
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for MISKATONIC UNIVERSITY HOSPITAL Building on May 13, 2020"
 * id = "FHIR-171"
@@ -4213,6 +4347,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for MISKATONIC UNIVERSITY HOSP
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-174
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for PAUL FRENCH MEMORIAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-174"
@@ -4290,6 +4425,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for PAUL FRENCH MEMORIAL HOSPI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-177
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for PAUL FRENCH MEMORIAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-177"
@@ -4367,6 +4503,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for PAUL FRENCH MEMORIAL HOSPI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-18
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT JOHN HOSPITAL Building on May 13, 2020"
 * id = "FHIR-18"
@@ -4444,6 +4581,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT JOHN HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-180
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for PAUL FRENCH MEMORIAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-180"
@@ -4521,6 +4659,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for PAUL FRENCH MEMORIAL HOSPI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-183
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLIFTON MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-183"
@@ -4598,6 +4737,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLIFTON MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-186
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLIFTON MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-186"
@@ -4675,6 +4815,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLIFTON MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-189
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLIFTON MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-189"
@@ -4752,6 +4893,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLIFTON MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-192
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ST LEIBOWITZ HOSPITAL Building on May 11, 2020"
 * id = "FHIR-192"
@@ -4829,6 +4971,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ST LEIBOWITZ HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-195
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ST LEIBOWITZ HOSPITAL Building on May 12, 2020"
 * id = "FHIR-195"
@@ -4906,6 +5049,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ST LEIBOWITZ HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-198
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ST LEIBOWITZ HOSPITAL Building on May 13, 2020"
 * id = "FHIR-198"
@@ -4983,6 +5127,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ST LEIBOWITZ HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-201
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for MCINTYRE HOSPITAL OF CHEF COUNTY Building on May 11, 2020"
 * id = "FHIR-201"
@@ -5060,6 +5205,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for MCINTYRE HOSPITAL OF CHEF 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-204
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for MCINTYRE HOSPITAL OF CHEF COUNTY Building on May 12, 2020"
 * id = "FHIR-204"
@@ -5137,6 +5283,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for MCINTYRE HOSPITAL OF CHEF 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-207
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for MCINTYRE HOSPITAL OF CHEF COUNTY Building on May 13, 2020"
 * id = "FHIR-207"
@@ -5214,6 +5361,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for MCINTYRE HOSPITAL OF CHEF 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-21
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for HERBERT MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-21"
@@ -5291,6 +5439,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for HERBERT MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-210
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for JEMISIN MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-210"
@@ -5368,6 +5517,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for JEMISIN MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-213
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for JEMISIN MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-213"
@@ -5445,6 +5595,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for JEMISIN MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-216
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for JEMISIN MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-216"
@@ -5522,6 +5673,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for JEMISIN MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-219
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CIMMERIAN FOUNDATION HOSPITAL Building on May 11, 2020"
 * id = "FHIR-219"
@@ -5599,6 +5751,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CIMMERIAN FOUNDATION HOSPI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-222
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CIMMERIAN FOUNDATION HOSPITAL Building on May 12, 2020"
 * id = "FHIR-222"
@@ -5676,6 +5829,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CIMMERIAN FOUNDATION HOSPI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-225
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CIMMERIAN FOUNDATION HOSPITAL Building on May 13, 2020"
 * id = "FHIR-225"
@@ -5753,6 +5907,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CIMMERIAN FOUNDATION HOSPI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-228
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for KEATS MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-228"
@@ -5830,6 +5985,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for KEATS MEDICAL CENTER Build
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-231
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for KEATS MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-231"
@@ -5907,6 +6063,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for KEATS MEDICAL CENTER Build
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-234
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for KEATS MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-234"
@@ -5984,6 +6141,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for KEATS MEDICAL CENTER Build
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-237
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for DAHL UNIVERSITY MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-237"
@@ -6061,6 +6219,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for DAHL UNIVERSITY MEDICAL CE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-24
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for HERBERT MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-24"
@@ -6138,6 +6297,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for HERBERT MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-240
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for DAHL UNIVERSITY MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-240"
@@ -6215,6 +6375,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for DAHL UNIVERSITY MEDICAL CE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-243
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for DAHL UNIVERSITY MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-243"
@@ -6292,6 +6453,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for DAHL UNIVERSITY MEDICAL CE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-246
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL Building on May 11, 2020"
 * id = "FHIR-246"
@@ -6369,6 +6531,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CHEF COUNTY ACADEMY OF SCI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-249
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL Building on May 12, 2020"
 * id = "FHIR-249"
@@ -6446,6 +6609,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CHEF COUNTY ACADEMY OF SCI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-252
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CHEF COUNTY ACADEMY OF SCIENCES HOSPITAL Building on May 13, 2020"
 * id = "FHIR-252"
@@ -6523,6 +6687,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CHEF COUNTY ACADEMY OF SCI
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-255
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILLIS COMMUNITY HOSPITAL Building on May 11, 2020"
 * id = "FHIR-255"
@@ -6600,6 +6765,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILLIS COMMUNITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-258
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILLIS COMMUNITY HOSPITAL Building on May 12, 2020"
 * id = "FHIR-258"
@@ -6677,6 +6843,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILLIS COMMUNITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-261
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILLIS COMMUNITY HOSPITAL Building on May 13, 2020"
 * id = "FHIR-261"
@@ -6754,6 +6921,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILLIS COMMUNITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-264
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LEIBER CHILDRENS HOSPITAL Building on May 11, 2020"
 * id = "FHIR-264"
@@ -6831,6 +6999,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LEIBER CHILDRENS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-267
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LEIBER CHILDRENS HOSPITAL Building on May 12, 2020"
 * id = "FHIR-267"
@@ -6908,6 +7077,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LEIBER CHILDRENS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-27
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for HERBERT MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-27"
@@ -6985,6 +7155,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for HERBERT MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-270
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LEIBER CHILDRENS HOSPITAL Building on May 13, 2020"
 * id = "FHIR-270"
@@ -7062,6 +7233,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LEIBER CHILDRENS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-273
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ARES MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-273"
@@ -7139,6 +7311,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ARES MEDICAL CENTER Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-276
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ARES MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-276"
@@ -7216,6 +7389,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ARES MEDICAL CENTER Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-279
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ARES MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-279"
@@ -7293,6 +7467,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ARES MEDICAL CENTER Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-282
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BLISH GENERAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-282"
@@ -7370,6 +7545,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BLISH GENERAL HOSPITAL Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-285
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BLISH GENERAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-285"
@@ -7447,6 +7623,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BLISH GENERAL HOSPITAL Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-288
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BLISH GENERAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-288"
@@ -7524,6 +7701,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BLISH GENERAL HOSPITAL Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-291
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LABRADOR HOSPITAL Building on May 11, 2020"
 * id = "FHIR-291"
@@ -7601,6 +7779,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LABRADOR HOSPITAL Building
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-294
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LABRADOR HOSPITAL Building on May 12, 2020"
 * id = "FHIR-294"
@@ -7678,6 +7857,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LABRADOR HOSPITAL Building
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-297
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LABRADOR HOSPITAL Building on May 13, 2020"
 * id = "FHIR-297"
@@ -7755,6 +7935,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LABRADOR HOSPITAL Building
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-30
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLARKE CHILDRENS HOSPITAL Building on May 11, 2020"
 * id = "FHIR-30"
@@ -7832,6 +8013,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLARKE CHILDRENS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-300
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for PELL COMMUNITY HOSPITAL Building on May 11, 2020"
 * id = "FHIR-300"
@@ -7909,6 +8091,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for PELL COMMUNITY HOSPITAL Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-303
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for PELL COMMUNITY HOSPITAL Building on May 12, 2020"
 * id = "FHIR-303"
@@ -7986,6 +8169,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for PELL COMMUNITY HOSPITAL Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-306
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for PELL COMMUNITY HOSPITAL Building on May 13, 2020"
 * id = "FHIR-306"
@@ -8063,6 +8247,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for PELL COMMUNITY HOSPITAL Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-309
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for VINGE UNIVERSITY HOSPITAL Building on May 11, 2020"
 * id = "FHIR-309"
@@ -8140,6 +8325,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for VINGE UNIVERSITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-312
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for VINGE UNIVERSITY HOSPITAL Building on May 12, 2020"
 * id = "FHIR-312"
@@ -8217,6 +8403,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for VINGE UNIVERSITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-315
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for VINGE UNIVERSITY HOSPITAL Building on May 13, 2020"
 * id = "FHIR-315"
@@ -8294,6 +8481,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for VINGE UNIVERSITY HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-318
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT VERNOR HOSPITAL Building on May 11, 2020"
 * id = "FHIR-318"
@@ -8371,6 +8559,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT VERNOR HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-321
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT VERNOR HOSPITAL Building on May 12, 2020"
 * id = "FHIR-321"
@@ -8448,6 +8637,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT VERNOR HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-324
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SAINT VERNOR HOSPITAL Building on May 13, 2020"
 * id = "FHIR-324"
@@ -8525,6 +8715,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SAINT VERNOR HOSPITAL Buil
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-327
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LEIBER FAMILY MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-327"
@@ -8602,6 +8793,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LEIBER FAMILY MEDICAL CENT
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-33
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLARKE CHILDRENS HOSPITAL Building on May 12, 2020"
 * id = "FHIR-33"
@@ -8679,6 +8871,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLARKE CHILDRENS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-330
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LEIBER FAMILY MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-330"
@@ -8756,6 +8949,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LEIBER FAMILY MEDICAL CENT
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-333
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LEIBER FAMILY MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-333"
@@ -8833,6 +9027,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LEIBER FAMILY MEDICAL CENT
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-336
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LECKIE HOSPITAL Building on May 11, 2020"
 * id = "FHIR-336"
@@ -8910,6 +9105,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LECKIE HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-339
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LECKIE HOSPITAL Building on May 12, 2020"
 * id = "FHIR-339"
@@ -8987,6 +9183,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LECKIE HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-342
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LECKIE HOSPITAL Building on May 13, 2020"
 * id = "FHIR-342"
@@ -9064,6 +9261,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LECKIE HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-345
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BRIN HOSPITAL Building on May 11, 2020"
 * id = "FHIR-345"
@@ -9141,6 +9339,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BRIN HOSPITAL Building on 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-348
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BRIN HOSPITAL Building on May 12, 2020"
 * id = "FHIR-348"
@@ -9218,6 +9417,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BRIN HOSPITAL Building on 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-351
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BRIN HOSPITAL Building on May 13, 2020"
 * id = "FHIR-351"
@@ -9295,6 +9495,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BRIN HOSPITAL Building on 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-354
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for FARMERS HOSPITAL Building on May 11, 2020"
 * id = "FHIR-354"
@@ -9372,6 +9573,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for FARMERS HOSPITAL Building 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-357
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for FARMERS HOSPITAL Building on May 12, 2020"
 * id = "FHIR-357"
@@ -9449,6 +9651,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for FARMERS HOSPITAL Building 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-36
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLARKE CHILDRENS HOSPITAL Building on May 13, 2020"
 * id = "FHIR-36"
@@ -9526,6 +9729,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLARKE CHILDRENS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-360
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for FARMERS HOSPITAL Building on May 13, 2020"
 * id = "FHIR-360"
@@ -9603,6 +9807,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for FARMERS HOSPITAL Building 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-363
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILSON HOSPITAL Building on May 11, 2020"
 * id = "FHIR-363"
@@ -9680,6 +9885,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILSON HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-366
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILSON HOSPITAL Building on May 12, 2020"
 * id = "FHIR-366"
@@ -9757,6 +9963,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILSON HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-369
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILSON HOSPITAL Building on May 13, 2020"
 * id = "FHIR-369"
@@ -9834,6 +10041,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILSON HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-372
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ZELAZNY MEMORIAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-372"
@@ -9911,6 +10119,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ZELAZNY MEMORIAL HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-375
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ZELAZNY MEMORIAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-375"
@@ -9988,6 +10197,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ZELAZNY MEMORIAL HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-378
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ZELAZNY MEMORIAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-378"
@@ -10065,6 +10275,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ZELAZNY MEMORIAL HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-381
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLARKE MEMORIAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-381"
@@ -10142,6 +10353,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLARKE MEMORIAL HOSPITAL B
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-384
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLARKE MEMORIAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-384"
@@ -10219,6 +10431,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLARKE MEMORIAL HOSPITAL B
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-387
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for CLARKE MEMORIAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-387"
@@ -10296,6 +10509,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for CLARKE MEMORIAL HOSPITAL B
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-39
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for INNSMOUTH HOSPITAL Building on May 11, 2020"
 * id = "FHIR-39"
@@ -10373,6 +10587,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for INNSMOUTH HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-390
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for URSULA KROEBER HOSPITAL Building on May 11, 2020"
 * id = "FHIR-390"
@@ -10450,6 +10665,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for URSULA KROEBER HOSPITAL Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-393
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for URSULA KROEBER HOSPITAL Building on May 12, 2020"
 * id = "FHIR-393"
@@ -10527,6 +10743,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for URSULA KROEBER HOSPITAL Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-396
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for URSULA KROEBER HOSPITAL Building on May 13, 2020"
 * id = "FHIR-396"
@@ -10604,6 +10821,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for URSULA KROEBER HOSPITAL Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-399
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LAKESIDE MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-399"
@@ -10681,6 +10899,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LAKESIDE MEDICAL CENTER Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-402
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LAKESIDE MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-402"
@@ -10758,6 +10977,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LAKESIDE MEDICAL CENTER Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-405
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for LAKESIDE MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-405"
@@ -10835,6 +11055,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for LAKESIDE MEDICAL CENTER Bu
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-408
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ST ROBERT HOSPITAL Building on May 11, 2020"
 * id = "FHIR-408"
@@ -10912,6 +11133,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ST ROBERT HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-411
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ST ROBERT HOSPITAL Building on May 12, 2020"
 * id = "FHIR-411"
@@ -10989,6 +11211,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ST ROBERT HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-414
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ST ROBERT HOSPITAL Building on May 13, 2020"
 * id = "FHIR-414"
@@ -11066,6 +11289,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ST ROBERT HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-417
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for KOWEL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-417"
@@ -11143,6 +11367,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for KOWEL HOSPITAL Building on
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-42
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for INNSMOUTH HOSPITAL Building on May 12, 2020"
 * id = "FHIR-42"
@@ -11220,6 +11445,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for INNSMOUTH HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-420
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for KOWEL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-420"
@@ -11297,6 +11523,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for KOWEL HOSPITAL Building on
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-423
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for KOWEL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-423"
@@ -11374,6 +11601,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for KOWEL HOSPITAL Building on
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-426
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SELENE HOSPITAL Building on May 11, 2020"
 * id = "FHIR-426"
@@ -11451,6 +11679,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SELENE HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-429
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SELENE HOSPITAL Building on May 12, 2020"
 * id = "FHIR-429"
@@ -11528,6 +11757,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SELENE HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-432
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SELENE HOSPITAL Building on May 13, 2020"
 * id = "FHIR-432"
@@ -11605,6 +11835,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SELENE HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-435
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BESTER MEMORIAL HOSPITAL Building on May 11, 2020"
 * id = "FHIR-435"
@@ -11682,6 +11913,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BESTER MEMORIAL HOSPITAL B
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-438
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BESTER MEMORIAL HOSPITAL Building on May 12, 2020"
 * id = "FHIR-438"
@@ -11759,6 +11991,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BESTER MEMORIAL HOSPITAL B
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-441
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BESTER MEMORIAL HOSPITAL Building on May 13, 2020"
 * id = "FHIR-441"
@@ -11836,6 +12069,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BESTER MEMORIAL HOSPITAL B
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-444
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for DUNWICH MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-444"
@@ -11913,6 +12147,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for DUNWICH MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-447
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for DUNWICH MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-447"
@@ -11990,6 +12225,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for DUNWICH MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-45
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for INNSMOUTH HOSPITAL Building on May 13, 2020"
 * id = "FHIR-45"
@@ -12067,6 +12303,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for INNSMOUTH HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-450
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for DUNWICH MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-450"
@@ -12144,6 +12381,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for DUNWICH MEDICAL CENTER Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-453
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for GENERAL PRODUCTS HOSPITAL Building on May 11, 2020"
 * id = "FHIR-453"
@@ -12221,6 +12459,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for GENERAL PRODUCTS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-456
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for GENERAL PRODUCTS HOSPITAL Building on May 12, 2020"
 * id = "FHIR-456"
@@ -12298,6 +12537,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for GENERAL PRODUCTS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-459
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for GENERAL PRODUCTS HOSPITAL Building on May 13, 2020"
 * id = "FHIR-459"
@@ -12375,6 +12615,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for GENERAL PRODUCTS HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-462
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for VALENTINE HOSPITAL Building on May 11, 2020"
 * id = "FHIR-462"
@@ -12452,6 +12693,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for VALENTINE HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-465
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for VALENTINE HOSPITAL Building on May 12, 2020"
 * id = "FHIR-465"
@@ -12529,6 +12771,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for VALENTINE HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-468
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for VALENTINE HOSPITAL Building on May 13, 2020"
 * id = "FHIR-468"
@@ -12606,6 +12849,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for VALENTINE HOSPITAL Buildin
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-471
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WALTON HOSPITAL Building on May 11, 2020"
 * id = "FHIR-471"
@@ -12683,6 +12927,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WALTON HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-474
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WALTON HOSPITAL Building on May 12, 2020"
 * id = "FHIR-474"
@@ -12760,6 +13005,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WALTON HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-477
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WALTON HOSPITAL Building on May 13, 2020"
 * id = "FHIR-477"
@@ -12837,6 +13083,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WALTON HOSPITAL Building o
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-48
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILHELM HOSPITAL Building on May 11, 2020"
 * id = "FHIR-48"
@@ -12914,6 +13161,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILHELM HOSPITAL Building 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-480
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BRUNNER GROVE HOSPITAL Building on May 11, 2020"
 * id = "FHIR-480"
@@ -12991,6 +13239,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BRUNNER GROVE HOSPITAL Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-483
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BRUNNER GROVE HOSPITAL Building on May 12, 2020"
 * id = "FHIR-483"
@@ -13068,6 +13317,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BRUNNER GROVE HOSPITAL Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-486
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for BRUNNER GROVE HOSPITAL Building on May 13, 2020"
 * id = "FHIR-486"
@@ -13145,6 +13395,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for BRUNNER GROVE HOSPITAL Bui
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-489
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ROBERT GALBRAITH HOSPITAL Building on May 11, 2020"
 * id = "FHIR-489"
@@ -13222,6 +13473,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ROBERT GALBRAITH HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-492
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ROBERT GALBRAITH HOSPITAL Building on May 12, 2020"
 * id = "FHIR-492"
@@ -13299,6 +13551,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ROBERT GALBRAITH HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-495
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for ROBERT GALBRAITH HOSPITAL Building on May 13, 2020"
 * id = "FHIR-495"
@@ -13376,6 +13629,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for ROBERT GALBRAITH HOSPITAL 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-51
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILHELM HOSPITAL Building on May 12, 2020"
 * id = "FHIR-51"
@@ -13453,6 +13707,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILHELM HOSPITAL Building 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-54
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for WILHELM HOSPITAL Building on May 13, 2020"
 * id = "FHIR-54"
@@ -13530,6 +13785,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for WILHELM HOSPITAL Building 
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-57
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for NEW CYPRUS HOSPITAL Building on May 11, 2020"
 * id = "FHIR-57"
@@ -13607,6 +13863,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for NEW CYPRUS HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-60
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for NEW CYPRUS HOSPITAL Building on May 12, 2020"
 * id = "FHIR-60"
@@ -13684,6 +13941,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for NEW CYPRUS HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-63
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for NEW CYPRUS HOSPITAL Building on May 13, 2020"
 * id = "FHIR-63"
@@ -13761,6 +14019,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for NEW CYPRUS HOSPITAL Buildi
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-66
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SITKA MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-66"
@@ -13838,6 +14097,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SITKA MEDICAL CENTER Build
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-69
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SITKA MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-69"
@@ -13915,6 +14175,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SITKA MEDICAL CENTER Build
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-72
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SITKA MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-72"
@@ -13992,6 +14253,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SITKA MEDICAL CENTER Build
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-75
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for STEPHENSON HOSPITAL OF CHEF COUNTY Building on May 11, 2020"
 * id = "FHIR-75"
@@ -14069,6 +14331,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for STEPHENSON HOSPITAL OF CHE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-78
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for STEPHENSON HOSPITAL OF CHEF COUNTY Building on May 12, 2020"
 * id = "FHIR-78"
@@ -14146,6 +14409,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for STEPHENSON HOSPITAL OF CHE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-81
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for STEPHENSON HOSPITAL OF CHEF COUNTY Building on May 13, 2020"
 * id = "FHIR-81"
@@ -14223,6 +14487,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for STEPHENSON HOSPITAL OF CHE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-84
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for HALDEMAN UNIVERSITY MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-84"
@@ -14300,6 +14565,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for HALDEMAN UNIVERSITY MEDICA
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-87
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for HALDEMAN UNIVERSITY MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-87"
@@ -14377,6 +14643,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for HALDEMAN UNIVERSITY MEDICA
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-90
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for HALDEMAN UNIVERSITY MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-90"
@@ -14454,6 +14721,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for HALDEMAN UNIVERSITY MEDICA
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-93
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SIMAK FAMILY MEDICAL CENTER Building on May 11, 2020"
 * id = "FHIR-93"
@@ -14531,6 +14799,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SIMAK FAMILY MEDICAL CENTE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-96
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SIMAK FAMILY MEDICAL CENTER Building on May 12, 2020"
 * id = "FHIR-96"
@@ -14608,6 +14877,7 @@ Description: "CDCPatientImpactAndHospitalCapacity for SIMAK FAMILY MEDICAL CENTE
 * group[2].population[7].count.extension.valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unsupported
 
 Instance: FHIR-99
+Usage: #example
 InstanceOf: MeasureReport
 Description: "CDCPatientImpactAndHospitalCapacity for SIMAK FAMILY MEDICAL CENTER Building on May 13, 2020"
 * id = "FHIR-99"

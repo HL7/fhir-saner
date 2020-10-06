@@ -140,9 +140,9 @@ RuleSet: PublicHealthMeasureMetadata
 * relatedArtifact 1..*
 * relatedArtifact ^short = "There must be at least one artifact describing the measure in human readable form."
 
-Profile:        PublicHealthMeasureMetadataAttachments
+Profile:        PublicHealthMeasureMetadataAttachment
 Parent:         Attachment
-Title:          "PublicHealthMeasureMetadataAttachments"
+Title:          "PublicHealthMeasureMetadataAttachment"
 Description:    "Attachments providing resources containing essential content supporting a measure definition"
 * id 1..1   // ID is required to support references
 * contentType 1..1
@@ -171,15 +171,15 @@ NamingSystem, SearchParameter, CQL definitions or other resources for measure ev
 """
 * insert SanerStructureDefinitionContent
 * insert PublicHealthMeasureMetadata
-* content only PublicHealthMeasureMetadataAttachments
+* content only PublicHealthMeasureMetadataAttachment
 * content 1..*
 
 Profile:        PublicHealthMeasure
 Parent:         Measure
-Title:          "Saner Public Health Measure"
-Description:    """Profile Saner Public Health Measure
+Title:          "Public Health Measure"
+Description:    """Profile Public Health Measure
 The Public Health Measure Profile ensures that Measures are very well defined as an aid to automation
-of measures.  These are developed by The Saner Project team to ensure that the measure is well understood
+of measures.  These are developed for this guide to ensure that a measure is well understood
 and computation of it can be automated from systems that have the measure data.
 """
 * insert SanerStructureDefinitionContent
@@ -195,7 +195,22 @@ and computation of it can be automated from systems that have the measure data.
 * group.extension[groupAtts] ^short = "Describes the attributes of one or more sections of the measure (form) being reported"
 
 * group.extension[MeasureGroupAttributes].extension[scoring].valueCodeableConcept 1..1
-* group.extension[MeasureGroupAttributes].extension[scoring].valueCodeableConcept ^comment = """continuous-variable
+* group.extension[MeasureGroupAttributes].extension[scoring].valueCodeableConcept ^comment = """availability
+: Use availability to measure the point-in-time availability of a resource (e.g., protective equipment, medications, supplies).
+
+capacity
+: Use capacity to measure point-in-time capacity or utilization for a resource (e.g., beds, ventilators).
+
+event-growth
+: Use event-growth to count current and cumulative totals of events.
+
+queue-length
+: Use queue-length to measure the numbers of people, organizations or other entities awaiting service.
+
+service-time
+: Use service-time to measure the average time it takes to provide service (e.g., length of stay, time to report a lab result).
+
+continuous-variable
 : Use continuous-variable when reporting a group of counts of the same type of resource, with different constraints on when to count it.
 Also use continuous variable to report measures with computations over measure-observation values (e.g., average length of stay).
 
@@ -254,7 +269,6 @@ point-in-time
 cumulative
 : Use this when the value being reported is a point-in-time cumulative value over all reports"""
 
- * group.population.code from MeasurePopulations
  * group.population.code.coding 1..*
  * group.population.code.coding ^short = "The coding gives a 'name' for this population and must be supplied"
  * group.population.code.text ^short = "A human readable description of what this population is"

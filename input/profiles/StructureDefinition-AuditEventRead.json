@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "audit-event-search",
+  "id": "AuditEventRead",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,18 +11,18 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/audit-event-search",
+  "url": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventRead",
   "version": "0.1.0",
-  "name": "AuditEventSearch",
-  "title": "Audit Event Search",
+  "name": "AuditEventRead",
+  "title": "Audit Event Read",
   "status": "active",
-  "description": "Defines constraints on the AuditEvent Resource to record when a record has been queried.",
+  "description": "Defines constraints on the AuditEvent Resource to record when a record has been Read.",
   "jurisdiction": [
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }
@@ -63,7 +63,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "AuditEvent",
-  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/audit-event",
+  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -71,60 +71,46 @@
         "id": "AuditEvent.type",
         "path": "AuditEvent.type",
         "patternCoding": {
-          "code": "110112",
+          "code": "110106",
           "system": "http://dicom.nema.org/resources/ontology/DCM"
         }
       },
       {
         "id": "AuditEvent.type.display",
         "path": "AuditEvent.type.display",
-        "patternString": "Query"
+        "patternString": "Export"
       },
       {
         "id": "AuditEvent.subtype",
         "path": "AuditEvent.subtype",
         "patternCoding": {
-          "code": "search-type",
+          "code": "read",
           "system": "http://hl7.org/fhir/restful-interaction"
         }
       },
       {
         "id": "AuditEvent.subtype.display",
         "path": "AuditEvent.subtype.display",
-        "patternString": "Search"
+        "patternString": "Read"
       },
       {
         "id": "AuditEvent.action",
         "path": "AuditEvent.action",
-        "patternCode": "E"
+        "patternCode": "R"
       },
       {
-        "id": "AuditEvent.entity.type",
-        "path": "AuditEvent.entity.type",
-        "patternCoding": {
-          "code": "2",
-          "system": "http://terminology.hl7.org/CodeSystem/audit-entity-type",
-          "display": "System Object"
-        }
+        "id": "AuditEvent.entity.what",
+        "path": "AuditEvent.entity.what",
+        "min": 1
       },
       {
         "id": "AuditEvent.entity.role",
         "path": "AuditEvent.entity.role",
         "patternCoding": {
-          "code": "24",
+          "code": "3",
           "system": "http://terminology.hl7.org/CodeSystem/object-role",
-          "display": "Query"
+          "display": "Report"
         }
-      },
-      {
-        "id": "AuditEvent.entity.query",
-        "path": "AuditEvent.entity.query",
-        "min": 1
-      },
-      {
-        "id": "AuditEvent.entity.detail",
-        "path": "AuditEvent.entity.detail",
-        "min": 1
       }
     ]
   }

@@ -5,7 +5,7 @@
   "name": "MeasuredValues",
   "id": "MeasuredValues",
   "title": "Measured Values in Sample Measures",
-  "description": "A Code System for Populations in Sample Measures defined by The SANER Project",
+  "description": "A Code System for Populations in Sample Measures",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
   "concept": [

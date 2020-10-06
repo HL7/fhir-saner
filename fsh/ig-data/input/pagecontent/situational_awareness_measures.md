@@ -1,18 +1,99 @@
+The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
+of high level situational awareness information from inpatient facilities to centralized data repositories
+to support the treatment of novel influenza-like illness.
+
 The focus of this guide is to inform developers on how to create and use the essential FHIR
 Resources necessary to support national and regional reporting efforts on COVID-19 to
 public health officials.  It describes how to exchange measures supporting situation
 awareness to enable appropriate response to healthcare emergencies affecting a population.  While the
-immediate focus of this guide is in support of efforts to manage challenges reelated to the novel Coronavirus, the
+immediate focus of this guide is in support of efforts to manage challenges related to the novel Coronavirus, the
 guide is informed by prior efforts supporting the exchange of situation awareness data in support of other
 emergencies (e.g., huricanes, wild fires, mass injury events, et cetera).
 
-Situation awareness represents an understanding of what resources are available or needed,
+### Situational Awareness for Novel Epidemic Response
+Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially
+pandemic flu strains during the early formation of the Office of the National Coordinator in 2005.
+
+2006
+: Bird Flu (H5N1)
+
+2009
+: Swine Flu (H1N1)
+
+2012
+: Middle East Respiratory Syndrome (MERS)
+
+2013
+: Another form of Bird Flu (H7N9)
+
+2019
+: COVID-19 (SARS-Cov-2)
+
+Situational Data Needs of Public Health
+Key situational data needed by public health has remained relatively consistent and well established over this time, and is to support awareness of:
+
+1.  Local, Regional and National case rates and trends
+2.  Bed availability for treatment
+3.  Other resources availability for treatment
+  * Staff
+  * Medications
+  * Immunizations
+  * Medical Equipment (e.g., Respirators, N95 Masks)
+  * Supplies (e.g., Cleaning Supplies, Facemasks)
+
+### Situational Awareness
+Situational awareness represents an understanding of what resources are available or needed,
 where, and when, so that decisions can be made about allocating resources where needed, or moving resources
 or those in need of them to the appropriate locations so that those resources can be used to support emergency
 response efforts.  Resources can include just about anything that can be used to support the effort, food,
 medicine, supplies, people (with appropriate skills), equipment, utilities like water, power, et cetera. The key
 mechanism by which this guide supports situation awareness is through communication of measures related to
 essential elements of information needed to support emergency response activities.
+
+#### Essential Elements of Information
+The purpose of situation awareness measures is to collect these essential elements of information (EEI) used to support emergency
+response. Briefly, EEIs are the data elements emergency response officials need in order to critical support decision making during
+an emergency.  In the US, the Office of the Assistant Secretary of Preparedness and Response
+[defines EEIs](https://www.phe.gov/Preparedness/planning/hpp/reports/Documents/hpp-pmi-guidance-2017.pdf#page=54) as:
+
+> Essential Elements of Information (EEI)
+> : Essential elements of information are discrete types of reportable public health or healthcare-related incident-specific knowledge communicated or received
+> concerning a particular fact or circumstance, preferably reported in a standardized manner or format, which assists in generating situational awareness for
+> decision-making purposes. EEI are often coordinated and agreed upon pre-incident (and communicated to local partners) as part of information collection request
+> templates and emergency response playbooks.
+
+This is a healthcare focused definition of EEIs, rather than a more general definition of the term, but the term EEEI is also used in other domains.  A more detailed
+discussion of Essential Elements of Information addressing broader domain needs (including healthcare) can be found in
+[Essential Elements of Information Publication Guidance](https://www.nisconsortium.org/portal/resources/bin/NISC_EEI_Publication_1426695387.pdf)
+published by the National Information Sharing Consortium.
+
+In the ideal world:
+
+1. EEIs will be well defined and understood before a crisis occurs, but may need to evolve as a crisis evolves and more is understood about the emerging
+situation.
+2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response.
+Time spent manually collecting and reporting data that is not automated often suffers in quality[^1].
+3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
+
+
+### Measure Reporting for Situational Awareness
+This implementation guide expands the uses for [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
+resource to report measures of situational awareness to regional and national agencies, including regional agencies
+supporting public health or emergency preparedness and response, or national agencies such as the Centers for Disease Control (CDC)
+and the Federal Emergency Management Agency in the US.
+
+Measures developed using this profile need not be confined to a health system, they might also be applied to other kinds of facilities required to report
+EEIs in support of emergency response (e.g., measures about essential workforce members, or the food distribution, or even different forms of housing).
+Many of the principles of measurement will still apply even though the measurement is performed outside of the healthcare domain.
+
+#### Measurement in HL7
+For more than the last decade, HL7 and its members have been deeply involved in the evolution
+of measurement standards for clinical quality reporting, from early efforts in developing the
+[HL7 Version 3 Health Quality Measure Format](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=97)
+specification, to more recent efforts in the publication of the [HL7 FHIR Quality Measure (QM)](http://hl7.org/fhir/us/cqfmeasures/),
+and the [DaVinci Data Exchange For Quality Measures (DEQM)](http://hl7.org/fhir/us/davinci-deqm/)
+implementation guides. These guides provide excellent reference and background materials
+for those interested in learning more about the terminology used in measurement.
 
 According to The American Heritage® Stedman's Medical Dictionary:
 <blockquote>
@@ -30,24 +111,17 @@ To mark, lay out, or establish dimensions for by measuring.
 </blockquote>
 
 At its simplest, measurement is counting in units, and then doing some math with
-the resulting count or to obtain a value that lets you do something useful.
+the resulting count or to obtain a value that lets you do something useful.  The approach
+used in this guide is the counting of HL7 FHIR resources matching criteria associated
+to identify **populations** (of resources), and relate these populations in various ways
+to express a measurement.  These measurements describe the capacity, availablity, average
+service times, et cetera.
 
-For more than the last decade, HL7 and its members have been deeply involved in the evolution
-of measurement standards for clinical quality reporting, from early efforts in developing the
-[HL7 Version 3 Health Quality Measure Format](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=97)
-specification, to more recent efforts in the publication of the [HL7 FHIR Quality Measure (QM)](http://hl7.org/fhir/us/cqfmeasures/),
-and the [DaVinci Data Exchange For Quality Measures (DEQM)](http://hl7.org/fhir/us/davinci-deqm/)
-implementation guides. These guides provide excellent reference and background materials
-for those interested in learning more about the terminology used in measurement.
-
-This implementation guide uses the [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
-resource to report measures to regional and federal agencies, including state departments
-of public health, the Centers for Disease Control (CDC) and the Federal Emergency Management
-Agency.  In late March of this year, the CDC [published a form](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-covid19-pimhc-blank-p.pdf)
+#### Example Situational Awareness Measures used in the US
+In late March of 2020, the CDC [published a form](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-covid19-pimhc-blank-p.pdf)
 and [instructions](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf) for hospital reporting of
 bed and ventilator utilization, and FEMA [provided a spreadsheet](Template for Daily Hospital COVID-19 Reporting.xlsx) it expects to be
-emailed on a daily basis from in-hospital laboratory testing facilities.  Examples of
-these documents are provided below.
+emailed on a daily basis from in-hospital laboratory testing facilities.  Examples of these documents are provided below.
 
 <table><caption>Samples of requested data. Show for illustration, please use
 official sources for reporting.</caption>
@@ -59,6 +133,8 @@ official sources for reporting.</caption>
 </tbody>
 </table>
 
+
+#### Conceptual Model
 Each of the entries in these spreadsheets or forms is measure or count of groups
 of things such as available beds, ventilators, tests ordered, et cetera.  The completed
 spreadsheet or form is a Measure Report.  Accompanying instructions describe (to a human)
@@ -71,16 +147,16 @@ A more detailed model about how these are related follows.
 * [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
 * [Measure](https://hl7.org/fhir/R4/Measure)
 
-
 ![Model](Model.svg)
 
 ### Measurement Reporting Approach
 The approach of this IG to measurement is to capture all measurements reported to a single
-agency in a single Measure Report, using multiple groups in the measure for each kind of
-measurement.  This is very much treating MeasureReport as if it were a report card (as one
-might receive from a school) reporting how a location is doing on all measured criteria,
-with each group within the MeasureReport reflecting one of the "subject areas" being measured,
-much like a report card reports on a student's progress in different subjects.
+agency in a single FHIR MeasureReport resource, using multiple groups in the report for
+each kind of measurement reported.  This approach is aligned with existing workflows associated with
+automated systems for **recieving** measure data. The approach very much treats the MeasureReport
+as if it were a report card (as one might receive from a school) deescribing how a location is doing
+on all measured criteria, with each group within the MeasureReport reflecting one of the
+"subject areas" being measured.
 
 Unlike a report card, a Measure Report is not necessarily a grade or an evaluation of
 how well a location is performing its function. The number of patients in the hospital due
@@ -90,53 +166,22 @@ responses to contain the pandemic that are outside the control of the location t
 being measured. These MeasureReport resources should be viewed not as a critique of a given
 facility, rather, as an evaluation of the impact the pandemic is having upon a facility.
 
-Combining reporting into a single MeasureReport would result in data loss on the Measure
-Resource without the ability to express attributes of each Measured item at the group
-level.  That issue is addressed by this Implementation Guide by creating an extension (see [Measure
-Group Attributes](#supporting-profiles) below) to allow topic, scoring and type to be shifted from Measure to
-Measure.group. To simplify interpretation of Measure by consumers, Measures created
-in this guide always include these extensions on Measure.group, even if they are not strictly
-needed.
+This is unlike typical workflows for clinical quality measurement, where measures are assessed
+one measure at a time, and is reflected in the current structure of the MeasureReport resource.
+There is some support in the MeasureReport to support composite measures reporting results
+from more than one measure.  However, combining these subject areas into a single MeasureReport
+results in data loss when the separate measures in the composite use a different measure approach.
+This is due to the lack of an ability to express attributes of each Measured item at the group
+level within the Measure. That issue is addressed by this guide by creating an extension (see [Measure
+Group Attributes](profiles_and_extensions.html#supporting-datatype-profiles)) to allow topic,
+scoring and type to be shifted from Measure to Measure.group. To simplify interpretation of Measure
+by consumers, Measures created in this guide always include these extensions on Measure.group, even
+if they are not strictly needed.
 
 ### Measures for Situational Awareness
 Just as [quality reporting](https://www.hl7.org/fhir/clinicalreasoning-quality-reporting.html) defines
-several types of measures, situational awareness measures also follow several common patterns.
-
-The purpose of situation awareness measures is to collect essential elements of information (EEI) used to support emergency response. Briefly, EEIs are the data elements
-emergency response officials need in order to critical support decision making during an emergency.  In the US, the Office of the Assistant Secretary of
-Preparedness and Response [defines EEIs](https://www.phe.gov/Preparedness/planning/hpp/reports/Documents/hpp-pmi-guidance-2017.pdf#page=54) as:
-
-> Essential Elements of Information (EEI)
-> : Essential elements of information are discrete types of reportable public health or healthcare-related incident-specific knowledge communicated or received
-> concerning a particular fact or circumstance, preferably reported in a standardized manner or format, which assists in generating situational awareness for
-> decision-making purposes. EEI are often coordinated and agreed upon pre-incident (and communicated to local partners) as part of information collection request
-> templates and emergency response playbooks.
-
-This is a healthcare focused definition of EEIs, rather than a more general definition of the term, but the term EEEI is also used in other domains.  A more detailed
-discussion of Essential Elements of Information addressing broader domain needs (including healthcare) can be found in
-[Essential Elements of Information Publication Guidance](https://www.nisconsortium.org/portal/resources/bin/NISC_EEI_Publication_1426695387.pdf)
-published by the National Information Sharing Consortium.
-
-Measures developed using this profile need not be confined to a health system, they might also be applied to other kinds of facilities required to report
-EEIs in support of emergency response (e.g., measures about essential workforce members, or the food distribution, or even different forms of housing).
-Many of the principles of measurement will still apply even though the measurement is performed outside of the healthcare domain.
-
-In the ideal world:
-
-1. EEIs will be well defined and understood before a crisis occurs, but may need to evolve as a crisis evolves and more is understood about the emerging
-situation.
-2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response.
-Time spent manually collecting and reporting data that is not automated often suffers in quality[^1].
-3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
-
-A discussion of automating measure collection can be found at [Computing Meassures](measure_automation.html).
-
-[^1]: Overhage JM, Grannis S, McDonald CJ. A comparison of the completeness and timeliness of automated electronic
-laboratory reporting and spontaneous reporting of notifiable conditions. Am J Public Health. 2008 Feb;98(2):344-50.
-doi: 10.2105/AJPH.2006.092700. Epub 2008 Jan 2. PMID: 18172157; PMCID: PMC2376898.
-Available on the web at <https://pubmed.ncbi.nlm.nih.gov/18172157/>
-
-Examing the data being captured for Situational Awareness during the COVID-19 crisis, this guide has identified the following types
+several types of measures, situational awareness measures also follow several common patterns. Examing the data being captured
+for Situational Awareness during the COVID-19 crisis, this guide has identified the following types
 of measures:
 
 * Capacity or Utilization
@@ -148,7 +193,7 @@ of measures:
 These categories describe different ways of scoring of a measure and are included in the
 [Public Health Measure Scoring](CodeSystem-PublicHealthMeasureScoring.html) coding system established by this guide.
 
-### Capacity and Utilization
+#### Capacity and Utilization
 A Capacity and Utilitization measure describes the current capacity and utilization of fixed assets for treatment,
 and provides scores showing used and available capacity. It is a specialization of a
 [Proportion Measure](https://www.hl7.org/fhir/R4/codesystem-measure-scoring.html#measure-scoring-proportion).
@@ -167,7 +212,7 @@ In this way, the MeasureReport resource reporting utilization can be directly qu
 available capacity to find a location capable of treating or caring for some number of patients (e.g., by available beds
 or ventilators at a facility or within a region).
 
-### Event Growth
+#### Event Growth
 An event growth measure reports the number of events occuring during a time period (e.g., tests performed,
 positive test results, new cases) over the cumulative total of events (e.g., total tests performed, total
 positive results, or total cases) from some defined starting point.  The numerator is the number events occuring
@@ -190,7 +235,7 @@ in events with exponential rates of growth. An example plot is shown below:
 
 ![Graph of Covid Trends in the World as of July 25, 2020](CovidTrends.png)
 
-### Queue Length
+#### Queue Length
 A Queue Length measure is a cohort measure which reports the number of activities awaiting completion (e.g., patients in an overflow
 area waiting for a bed, tests awaiting to be resulted, patients in a hospital awaiting discharge). Queue length usually represents
 a measure of an unmet need. Queue length measures can be improved to become service time measures by capturing the total time waiting
@@ -198,7 +243,7 @@ for an completion of an activity, but this time may not be readily tracked, or q
 that needs to be addressed. The benefit of service time measures is that they can be compared betweeen facilities, whereas queue length
 is not readily comparable but may be more readily computable.
 
-### Service Time
+#### Service Time
 A Service Time measure is a specialization of the ratio meausure which reports the total time taken to provide a service
 (e.g., wait times, length of stay, time to report a lab test result) for all events in the numerator, and the total number
 of events (e.g., services such as inpatient stays, tests performed) provided in the denominator. This is a ratio measure because
@@ -363,53 +408,5 @@ this IG defines the [Measure Expectation](StructureDefinition-measure-expectatio
 extension operates identically to the https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html
 extension, but can be applied to Measure resources.
 
-### Profiles
-* [Public Health Measure](StructureDefinition-PublicHealthMeasure.html) profiles the
-  Measure resource to support Public Health and Emergency Response surveillance requirements.
-
-* [Public Health Measure Report](StructureDefinition-PublicHealthMeasureReport.html)
-  profiles the MeasureReport Resource to align it with resources adopting the Public
-  Health Measure profile.
-
-### Supporting Profiles
-* [Measure Criteria](StructureDefinition-MeasureCriteria.html) profiles the
-  [Expression](https://www.hl7.org/fhir/R4/metadatatypes.html#Expression) data type
-  to enforce requirements essential for the creation of measures supporting automatic
-  evaluation and reporting.
-
-* [Measured Item Description](StructureDefinition-MeasuredItemDescription.html) provides
-  how to code what is to be counted to identify:
-
-  1. The FHIR Resource to be used for counting.
-  2. A code or ValueSet describing the subtypes of that resource to include in the count.
-
-### Supporting Extensions
-* [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html)
-  defines an extension that allows alternate criteria for evaluation to be defined for
-  a Measure.  In this way, multiple implementations for counting can be supported based
-  on the capabilities of the system available.
-
-* [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) defines
-  an extension that enables interpretation the structure of a group as a collection
-  of populations that evaluate to a single measured item.
-
-### Predefined Measures
-This implementation guide includes predefined measures describing the measurements
-that were previously required to be reported to CDC/NHSN and FEMA.
-
-* [Computable CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html)
-  defines a computable measure that is aligned with the reporting previously required by the
-  [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
-  Hospital Capacity module, and
-
-* [CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-CDCPatientImpactAndHospitalCapacity.html)
-  defines a measure that is aligned with the reporting previously required by the
-  [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
-  Hospital Capacity module, and
-
-* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMADailyHospitalCOVID19Reporting.html)
-  defines a measure that is aligned with the reporting required by the [Federal Emergency Management Agency (FEMA)](https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19)
-  for reporting COVID-19 test results from Hospital in-house laboratories.
-
-These measures are only provided as examples to illustrate measure development and reporting.
-Official reporting requirements are established by HHS and other US Federal agencies and not by this guide.
+The [Profiles and Extensions](profiles_and_extensions.html) page enumerates the various profiles and extensions
+created for this guide.

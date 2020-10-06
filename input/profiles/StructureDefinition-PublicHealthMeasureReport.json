@@ -14,7 +14,7 @@
   "url": "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport",
   "version": "0.1.0",
   "name": "PublicHealthMeasureReport",
-  "title": "Saner Public Health Measure Report",
+  "title": "Public Health Measure Report",
   "status": "draft",
   "experimental": true,
   "publisher": "HL7 International",
@@ -38,7 +38,7 @@
       ]
     }
   ],
-  "description": "Profile Saner Public Health Measure Report\n\nThe Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret\na report of a Public Health Measure.",
+  "description": "Profile Public Health Measure Report\n\nThe Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret\na report of a Public Health Measure.",
   "jurisdiction": [
     {
       "coding": [
@@ -177,7 +177,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+              "http://hl7.org/fhir/StructureDefinition/Location"
             ]
           }
         ]
@@ -240,11 +240,7 @@
         "id": "MeasureReport.group.code",
         "path": "MeasureReport.group.code",
         "short": "The code for each group must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure",
-        "min": 1,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/saner/ValueSet/MeasureGroups"
-        }
+        "min": 1
       },
       {
         "id": "MeasureReport.group.population",
@@ -272,11 +268,7 @@
         "id": "MeasureReport.group.population.code",
         "path": "MeasureReport.group.population.code",
         "short": "The code for each population must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure",
-        "min": 1,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/saner/ValueSet/MeasurePopulations"
-        }
+        "min": 1
       },
       {
         "id": "MeasureReport.group.population.count",

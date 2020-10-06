@@ -18,8 +18,8 @@ Description: "A code system describing types of measure scoring used for situati
 * #availability "Availability" "Measures the point in time availability of resources"
 
 CodeSystem: MeasurePopulationSystem
-Title: "Situationa Awareness Measure Populations"
-Description: "A Code System for Situation Awareness Measure Populations defined by The SANER Project"
+Title: "Situational Awareness Measure Populations"
+Description: "A Code System for Situation Awareness Measure Populations"
 * #numerator-complement "Numerator Complement"  "Like a numerator, but expresses that part of the Denominator not present in the Numerator"
 * #duration             "Duration"              "A Time Duration"
 * #duration-squared     "Duration Squared"      "The square of the time duration, useful for identifying variance"
@@ -27,7 +27,7 @@ Description: "A Code System for Situation Awareness Measure Populations defined 
 
 CodeSystem: MeasuredValues
 Title: "Measured Values in Sample Measures"
-Description: "A Code System for Populations in Sample Measures defined by The SANER Project"
+Description: "A Code System for Populations in Sample Measures"
 * #numTotBeds                   "All Hospital Beds" "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
 * #numTotBedsOcc                "Hospital Beds Occupied" "Total number of all Inpatient and outpatient beds that are occupied"
 * #numTotBedsAvail              "Hospital Beds Available" "Total number of all Inpatient and outpatient beds that are available"
@@ -115,7 +115,7 @@ Description: "A Code System for Populations in Sample Measures defined by The SA
 
 CodeSystem: MeasureGroupSystem
 Title: "Measure Group System"
-Description: "A Code System for Groups defined by The SANER Project"
+Description: "A Code System for Groups"
 * #Beds             "Beds" "This group reports on Bed availability"
 * #Ventilators      "Ventilators" "This group reports on Ventilator availability"
 * #Encounters       "Encounters" "This group reports on COVID-19 Patient Encounters"
@@ -134,12 +134,12 @@ Description: "A Code System for Groups defined by The SANER Project"
 
 ValueSet: MeasureGroups
 Title: "Measure Groups"
-Description: "Measure Groups defined by the SANER Project"
+Description: "Measure Groups illustrating measures for the FHIR SANER IG"
 * codes from system MeasureGroupSystem
 
 ValueSet: MeasurePopulations
 Title: "Measure Populations"
-Description: "Measure Populations defined by The SANER Project"
+Description: "Measure Populations illustrating measures for the FHIR SANER IG"
 * codes from system MeasuredValues
 * codes from system MeasurePopulationSystem
 * codes from system http://terminology.hl7.org/CodeSystem/special-values
@@ -453,7 +453,7 @@ Description: "Codes for COVID-19 Diagnostic Tests"
  * LOINC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"
 
 ValueSet:    PositiveResults
-Title:       "Confirmed COVID-19 Diagnosis"
+Title:       "COVID-19 Detected"
 Description: "Codes for a positive COVID-19 Diagnostic Test Result"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#10828004  "Positive"

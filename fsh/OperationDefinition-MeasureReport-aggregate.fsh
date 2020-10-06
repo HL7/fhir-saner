@@ -2,11 +2,7 @@
 Instance: MeasureReport-aggregate
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.
-The MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by
-specifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources
-being aggregated must reference the same Measure resource defining the MeasureReport to generate.
-                        "
+Description: "Aggregate two or more more Messure Report resources into a single MeasureReport."
 * insert SanerDefinitionContent
  
 * status = #draft
@@ -16,13 +12,9 @@ being aggregated must reference the same Measure resource defining the MeasureRe
 * system = false
 * type = false
 * instance = true
-* name = "AggregatetwoormoremoreMessureReportresourcesintoasingleMeasureReport."
-* title = "Aggregate two or more more Messure Report resources into a single MeasureReport."
-* description = """This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.
-The MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by
-specifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources
-being aggregated must reference the same Measure resource defining the MeasureReport to generate.
-                        """
+* name = "Aggregate"
+* title = "Aggregate"
+* description = "Aggregate two or more more Messure Report resources into a single MeasureReport."
 * url = "http://hl7.org/fhir/saner/OperationDefinition/MeasureReport-aggregate"
 
 * parameter[0].name = #_id

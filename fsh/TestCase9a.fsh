@@ -44,7 +44,7 @@ Description: "Immunization for Immunization1-9a"
 * identifier.system = "http://sanerproject.org/test/Immunization"
 * identifier.value = "556677"
 * status = #completed
-* vaccineCode = http://SCT#346524008
+* vaccineCode = SCT#346524008
 * patient = Reference(Patient9c)
 * occurrenceDateTime = "2020-09-09"
 

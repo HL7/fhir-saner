@@ -3,7 +3,7 @@
   "status": "active",
   "name": "PositiveResults",
   "id": "PositiveResults",
-  "title": "Confirmed COVID-19 Diagnosis",
+  "title": "COVID-19 Detected",
   "description": "Codes for a positive COVID-19 Diagnostic Test Result",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/saner/ValueSet/PositiveResults",

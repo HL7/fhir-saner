@@ -29,14 +29,14 @@
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }
   ],
   "url": "http://hl7.org/fhir/saner/SearchParameter/SearchParameter-definition-text",
-  "description": "This SearchParameter enables definition resources used in The SANER Project to be discovered from text used in the resource definition.",
+  "description": "This SearchParameter enables definition resources to be discovered from text used in the resource definition.",
   "name": "definition-text",
   "code": "definition-text",
   "base": [

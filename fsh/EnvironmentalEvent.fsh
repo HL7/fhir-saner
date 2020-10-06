@@ -9,7 +9,6 @@ Description: "This Value Set enables classification of environmental events for 
 * http://snomed.info/sct#20936008     "Fire storm"
 * http://snomed.info/sct#111056004    "Flood"
 * http://snomed.info/sct#256236005    "Fog"
-* http://snomed.info/sct#461861000124101 "Ice storm"
 * http://snomed.info/sct#49061008     "Landslide"
 * http://snomed.info/sct#5193003      "Lightning"
 * http://snomed.info/sct#102410009    "Pollution"

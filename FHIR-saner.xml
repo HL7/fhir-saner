@@ -10,17 +10,17 @@
 <artifact id="CodeSystem/IHE-ADX-agerange" key="CodeSystem-IHE-ADX-agerange" name="Age Range Coding System"/>
 <artifact id="StructureDefinition/MeasurePopulationAlternateCriteria" key="StructureDefinition-MeasurePopulationAlternateCriteria" name="Alternate criteria for performing a measure"/>
 <artifact id="StructureDefinition/MeasureGroupAttributes" key="StructureDefinition-MeasureGroupAttributes" name="Attributes describing a group of measures"/>
-<artifact id="StructureDefinition/audit-event-delete" key="StructureDefinition-audit-event-delete" name="Audit Event Delete Profile"/>
-<artifact id="StructureDefinition/audit-event-read" key="StructureDefinition-audit-event-read" name="Audit Event Read"/>
-<artifact id="StructureDefinition/audit-event-search" key="StructureDefinition-audit-event-search" name="Audit Event Search"/>
-<artifact id="StructureDefinition/audit-event-update" key="StructureDefinition-audit-event-update" name="Audit Event Update Profile"/>
-<artifact id="StructureDefinition/audit-event-write" key="StructureDefinition-audit-event-write" name="Audit Event Write Profile"/>
-<artifact deprecated="true" id="StructureDefinition/audit-event-read" key="AuditEventRead" name="AuditEventRead"/>
+<artifact id="StructureDefinition/AuditEventCreate" key="StructureDefinition-AuditEventCreate" name="Audit Event Create Profile"/>
+<artifact id="StructureDefinition/AuditEventDelete" key="StructureDefinition-AuditEventDelete" name="Audit Event Delete Profile"/>
+<artifact id="StructureDefinition/AuditEventRead" key="StructureDefinition-AuditEventRead" name="Audit Event Read"/>
+<artifact id="StructureDefinition/AuditEventSearch" key="StructureDefinition-AuditEventSearch" name="Audit Event Search"/>
+<artifact id="StructureDefinition/AuditEventUpdate" key="StructureDefinition-AuditEventUpdate" name="Audit Event Update Profile"/>
 <artifact deprecated="true" id="StructureDefinition/Audit-event-write" key="AuditEventWrite" name="AuditEventWrite"/>
 <artifact id="ValueSet/BedLocationOperationalStatus" key="ValueSet-BedLocationOperationalStatus" name="Bed Location Operational Status"/>
 <artifact id="Measure/CDCHealthcareSupplyPathway" key="Measure-CDCHealthcareSupplyPathway" name="CDC Healthcare Supply Pathway"/>
 <artifact id="Measure/CDCPatientImpactAndHospitalCapacity" key="Measure-CDCPatientImpactAndHospitalCapacity" name="CDC Patient Impact and Hospital Capacity"/>
 <artifact id="Measure/CDCHealthcareWorkerStaffingPathway" key="Measure-CDCHealthcareWorkerStaffingPathway" name="CDCHealthcareWorkerStaffingPathway"/>
+<artifact id="ValueSet/PositiveResults" key="ValueSet-PositiveResults" name="COVID-19 Detected"/>
 <artifact id="ValueSet/Covid19Labs" key="ValueSet-Covid19Labs" name="COVID-19 Diagnostic Test"/>
 <artifact id="ValueSet/NegativeResults" key="ValueSet-NegativeResults" name="COVID-19 Not Detected"/>
 <artifact id="ValueSet/COVID19Antibody" key="ValueSet-COVID19Antibody" name="COVID19Antibody"/>
@@ -51,7 +51,6 @@
 <artifact id="Condition/Condition9a" key="Condition-Condition9a" name="Condition9a"/>
 <artifact id="Condition/Condition9b" key="Condition-Condition9b" name="Condition9b"/>
 <artifact id="Condition/Condition9c" key="Condition-Condition9c" name="Condition9c"/>
-<artifact id="ValueSet/PositiveResults" key="ValueSet-PositiveResults" name="Confirmed COVID-19 Diagnosis"/>
 <artifact id="ValueSet/ConfirmedCOVID19Diagnoses" key="ValueSet-ConfirmedCOVID19Diagnoses" name="Confirmed COVID-19 Diagnosis Values"/>
 <artifact id="StructureDefinition/ReportingPeriod" key="StructureDefinition-ReportingPeriod" name="Enables specification of proposed measure reporting"/>
 <artifact id="Encounter/Encounter1a" key="Encounter-Encounter1a" name="Encounter1a"/>
@@ -288,7 +287,7 @@
 <artifact id="MeasureReport/FHIR-93" key="MeasureReport-FHIR-93" name="FHIR-93"/>
 <artifact id="MeasureReport/FHIR-96" key="MeasureReport-FHIR-96" name="FHIR-96"/>
 <artifact id="MeasureReport/FHIR-99" key="MeasureReport-FHIR-99" name="FHIR-99"/>
-<artifact id="StructureDefinition/audit-event" key="StructureDefinition-audit-event" name="General Audit Event Requirements"/>
+<artifact id="StructureDefinition/AuditEventBase" key="StructureDefinition-AuditEventBase" name="General Audit Event Requirements"/>
 <artifact deprecated="true" id="StructureDefinition/GeoLocation" key="GeoLocation" name="GeoLocation"/>
 <artifact id="ConceptMap/HAvBED2toFHIR" key="ConceptMap-HAvBED2toFHIR" name="HAvBED2 to FHIR Concept Map"/>
 <artifact id="ValueSet/HealthcareServiceLocation" key="ValueSet-HealthcareServiceLocation" name="HealthcareServiceLocation"/>
@@ -514,25 +513,23 @@
 <artifact id="Patient/Patient9b" key="Patient-Patient9b" name="Patient9b"/>
 <artifact id="Patient/Patient9c" key="Patient-Patient9c" name="Patient9c"/>
 <artifact id="StructureDefinition/PreciseDateTime" key="StructureDefinition-PreciseDateTime" name="Precise Date Time"/>
+<artifact id="StructureDefinition/PublicHealthMeasure" key="StructureDefinition-PublicHealthMeasure" name="Public Health Measure"/>
 <artifact id="ValueSet/PublicHealthMeasureAttachmentTypes" key="ValueSet-PublicHealthMeasureAttachmentTypes" name="Public Health Measure Attachment Types"/>
 <artifact id="StructureDefinition/PublicHealthMeasureLibrary" key="StructureDefinition-PublicHealthMeasureLibrary" name="Public Health Measure Library"/>
+<artifact id="StructureDefinition/PublicHealthMeasureReport" key="StructureDefinition-PublicHealthMeasureReport" name="Public Health Measure Report"/>
 <artifact id="CodeSystem/PublicHealthMeasureScoring" key="CodeSystem-PublicHealthMeasureScoring" name="Public Health Measure Scoring"/>
-<artifact id="StructureDefinition/PublicHealthMeasureMetadataAttachments" key="StructureDefinition-PublicHealthMeasureMetadataAttachments" name="PublicHealthMeasureMetadataAttachments"/>
+<artifact id="StructureDefinition/PublicHealthMeasureMetadataAttachment" key="StructureDefinition-PublicHealthMeasureMetadataAttachment" name="PublicHealthMeasureMetadataAttachment"/>
 <artifact deprecated="true" id="StructureDefinition/PublicHealthMeasureStratifier" key="PublicHealthMeasureStratifier" name="PublicHealthMeasureStratifier"/>
 <artifact id="StructureDefinition/MeasureReportingTiming" key="StructureDefinition-MeasureReportingTiming" name="Recommended Measure Reporting Times"/>
 <artifact id="ValueSet/Remdesivir" key="ValueSet-Remdesivir" name="Remdesivir"/>
-<artifact id="StructureDefinition/saner-resource-location" key="StructureDefinition-saner-resource-location" name="Resource Location Profile"/>
 <artifact deprecated="true" id="StructureDefinition/saner-resource-location" key="ResourceLocation" name="ResourceLocation"/>
 <artifact id="ValueSet/SARSCoV2GeneticLabs" key="ValueSet-SARSCoV2GeneticLabs" name="SARSCoV2 Genetic Labs"/>
 <artifact id="ValueSet/SARSCoV2Labs" key="ValueSet-SARSCoV2Labs" name="SARSCoV2Labs"/>
 <artifact id="StructureDefinition/MeasuredItemDescription" key="StructureDefinition-MeasuredItemDescription" name="Saner Measured Item Description"/>
-<artifact id="StructureDefinition/PublicHealthMeasure" key="StructureDefinition-PublicHealthMeasure" name="Saner Public Health Measure"/>
-<artifact id="StructureDefinition/PublicHealthMeasureReport" key="StructureDefinition-PublicHealthMeasureReport" name="Saner Public Health Measure Report"/>
 <artifact id="SearchParameter/SearchParameter-code" key="SearchParameter-SearchParameter-code" name="Search by Code in Definitions and Instances"/>
 <artifact id="SearchParameter/SearchParameter-definition-text" key="SearchParameter-SearchParameter-definition-text" name="Search by Text in Definitions"/>
 <artifact id="SearchParameter/SearchParameter-disposition" key="SearchParameter-SearchParameter-disposition" name="Search by hospitalization.dispositionCode in Encounters"/>
-<artifact id="CodeSystem/MeasurePopulationSystem" key="CodeSystem-MeasurePopulationSystem" name="Situationa Awareness Measure Populations"/>
-<artifact id="StructureDefinition/saner-supporting-device" key="StructureDefinition-saner-supporting-device" name="Supporting Device Profile"/>
+<artifact id="CodeSystem/MeasurePopulationSystem" key="CodeSystem-MeasurePopulationSystem" name="Situational Awareness Measure Populations"/>
 <artifact deprecated="true" id="StructureDefinition/saner-supporting-device" key="SupportingDevice" name="SupportingDevice"/>
 <artifact id="ValueSet/SuspectedOrConfirmedCOVID19Diagnoses" key="ValueSet-SuspectedOrConfirmedCOVID19Diagnoses" name="Suspected Or Diagnosed COVID-19"/>
 <artifact id="ValueSet/SuspectedCOVID19Diagnoses" key="ValueSet-SuspectedCOVID19Diagnoses" name="SuspectedCOVID19Diagnoses"/>
@@ -600,40 +597,52 @@
 <page key="actors" name="Actors"/>
 <page deprecated="true" key="ActorsandTransactions" name="Actors and Transactions"/>
 <page key="measure_aggregation" name="Aggregatating Measure Reports"/>
-<page key="Architecture" name="Architecture"/>
+<page deprecated="true" key="Architecture" name="Architecture"/>
+<page key="architecture" name="Architecture and Implementation"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="background" name="Background"/>
-<page key="CSV_Conversion" name="CSV Conversion"/>
+<page key="automation_testing_examples" name="Automation Testing Examples"/>
 <page key="transaction-5" name="Communicate Results"/>
 <page key="transaction-4" name="Compute Measure"/>
 <page key="measure_automation" name="Computing Measures"/>
-<page key="measure_creation" name="Creating an Example Measure"/>
 <page key="measure_group_beds" name="Creating the Bed Avaiability Group"/>
 <page key="measure_group_covid19_deaths" name="Creating the COVID 19 Deaths Group"/>
 <page key="measure_group_hospital_acquired_covid19_patients" name="Creating the Hospital Acquired COVID 19 Group"/>
 <page key="measure_group_covid19_patients" name="Creating the Patients with COVID 19 Group"/>
 <page key="measure_group_ventilators" name="Creating the Ventilator Avaiability Group"/>
+<page key="measure_creation" name="Defining a Measure from Essential Elements of Information"/>
 <page deprecated="true" key="Definitions" name="Definitions"/>
 <page key="Examples" name="Examples"/>
+<page key="CSV_Conversion" name="Exchanging data via CSV Files"/>
+<page key="fluent_query" name="Fluent Query"/>
 <page key="Home" name="Home"/>
+<page key="hospital_capacity_examples" name="Hospital Capacity Measures and Reports"/>
+<page key="integration" name="Integration with Existing Systems"/>
+<page key="introduction" name="Introduction"/>
+<page key="intro" name="Introduction and Overview"/>
+<page key="laboratory_reporting_examples" name="Laboratory Reporting Examples"/>
 <page deprecated="true" key="Measures" name="Measures"/>
 <page deprecated="true" key="Overview" name="Overview"/>
 <page key="transaction-2" name="Produce Measure"/>
 <page deprecated="true" key="Profiles" name="Profiles"/>
+<page key="profiles_and_extensions" name="Profiles and Extensions"/>
 <page key="profiles" name="Profiles and Extensions"/>
 <page key="transaction-1" name="Query Measure"/>
 <page key="transaction-3" name="Query Measure Definition"/>
 <page key="measure_library" name="Sample Measure Library"/>
 <page key="SecurityConsiderations" name="Security Considerations"/>
 <page key="situational_awareness_measures" name="Situational Awareness Measures"/>
+<page key="spec" name="Specification Details"/>
+<page key="supporting_vocabulary" name="Supporting Vocabulary"/>
 <page key="toc" name="Table of Contents"/>
 <page key="TechnologyEnvironment" name="Technology Environment"/>
+<page key="vocabulary" name="Terminology Resources"/>
 <page key="test_plan" name="Test Plan"/>
+<page key="conformance" name="Testing and Conformance"/>
 <page deprecated="true" key="Testplan" name="Testplan"/>
 <page deprecated="true" key="Transaction1" name="Transaction 1"/>
 <page deprecated="true" key="Transaction2" name="Transaction 2"/>
 <page deprecated="true" key="Transaction3" name="Transaction 3"/>
 <page key="Transactions" name="Transactions"/>
 <page key="UseCases" name="Use Cases"/>
-<page key="Vocabulary" name="Vocabulary"/>
+<page deprecated="true" key="Vocabulary" name="Vocabulary"/>
 </specification>

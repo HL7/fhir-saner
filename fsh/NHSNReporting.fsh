@@ -18,6 +18,7 @@ RuleSet: NHSNArtifacts
 
 Instance: NHSNMeasureLibrary
 InstanceOf: PublicHealthMeasureLibrary
+Description: "This Library contains value sets for the example NHSN Measure"
 // We aren't automating anything other than patient impact and hospital capacity, this library
 // will be referenced by other NHSN inspired measures but will not be used by them.
 
@@ -73,16 +74,7 @@ InstanceOf: PublicHealthMeasureLibrary
  * content[7].title = "Patients on a Ventilator"
  * content[7].url = Canonical(PatientsOnVentilator)
 
-/* PLACEHOLDERS for the next two
 
- * content[8].contentType = #application/fhir+xml
- * content[8].title = "COVID_19 (Disorders)"
- * content[8].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
-
- * content[9].contentType = #application/fhir+xml
- * content[9].title = "COVID_19 (Disorders)"
- * content[9].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
-*/
 
 // This sheet convert output to FHIR Shorthand for generating measures.
 Instance: CDCPatientImpactAndHospitalCapacity

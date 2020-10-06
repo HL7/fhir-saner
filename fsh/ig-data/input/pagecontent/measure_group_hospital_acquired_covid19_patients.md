@@ -49,8 +49,8 @@ It is meant to convey information to an implementor, rather than to automated sy
 ```
  ** with extension[subject] do
  *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
- *** valueCodeableConcept.coding[Snomed] = #"116154003|Patient|: 20401003|With| = (840539006|COVID-19| 246512002|Timing| = 277056009|Hospital Acquired|)"
- *** valueCodeableConcept.coding[Snomed].display = "Patient: With = COVID-19: Timing = Hospital Acquired"
+ *** valueCodeableConcept.coding[Snomed] = #"116154003|Patient|: 20401003|With| = (840539006|Disease caused by 2019 novel coronavirus|: 246512002|Timing| = 277056009|Hospital Acquired|)"
+ *** valueCodeableConcept.coding[Snomed].display = "Patient where With = Disease caused by 2019 novel coronavirus where Timing = Hospital acquired"
  *** valueCodeableConcept.text = "Hospital Acquired COVID-19"
 ```
 NOTE: This measure counts Patients having hospital acquired COVID-19, thus Patient is the right code for ResourceType,

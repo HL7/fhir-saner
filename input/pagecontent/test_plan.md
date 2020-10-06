@@ -13,6 +13,8 @@ The overall SANER is an API between [multiple actors](actors.html#actor-options)
 of the system-under-test (SUT), and the transaction type it implements. Where that SUT has a specific
 function, it can be tested.
 
+[Update this from Confluence](#todo)
+
 ### Test Plan
 
 The following is the overall test plan for SANER alone:
@@ -101,10 +103,8 @@ this SUT can test, to determine that failure-modes are handled properly by both 
 ### Test scripts
 
 #### Using Cucumber
-TODO: Write specific Cucumber statements, might use external tooling?
 
 #### Using FHIR TestScript and ExampleScenario
-TODO:
 
 
 

@@ -25,8 +25,8 @@ Severity: #error
 
 Profile:        PublicHealthMeasureReport
 Parent:         MeasureReport
-Title:          "Saner Public Health Measure Report"
-Description:    """Profile Saner Public Health Measure Report
+Title:          "Public Health Measure Report"
+Description:    """Profile Public Health Measure Report
 
 The Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret
 a report of a Public Health Measure.
@@ -48,7 +48,7 @@ error - MeasureReport was determined to be in error."""
 * type ^short = "MeasureReports generated conforming to this profile are always summary reports"
 * type ^comment = "Other profiles may support collection of subject-list data (e.g., for contact tracing)"
 
-* subject only Reference(http://hl7.org/fhir/us/core/StructureDefinition/us-core-location)
+* subject only Reference(Location)
 * subject ^short = "The subject of a report is a location, e.g., a facility, region, service area, state or other geographic region"
 * subject ^comment = "The report is about a site or larger geographic region.  Individual measures within the report may be related to other subjects, but the report itself describes information about a location."
 * subject.identifier 1..1
@@ -70,11 +70,9 @@ error - MeasureReport was determined to be in error."""
 * period.end only PreciseDateTime
 
 * group.code 1..1
-* group.code from MeasureGroups (required)
 * group.code ^short = "The code for each group must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure"
 
 * group.population.code 1..1
-* group.population.code from MeasurePopulations (required)
 * group.population.code ^short = "The code for each population must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure"
 * group.population obeys HasValueOrDataAbsentReason
 * group.population.count ^short = "A count must be present for each population. Unknown values may be reported using the http://hl7.org/fhir/StructureDefinition/data-absent-reason extension."

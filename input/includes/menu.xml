@@ -17,15 +17,68 @@
     <a href="toc.html">Table of Contents</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SANER IG Content
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="background.html">Overview</a>
+        <a href="introduction.html">Scope</a>
       </li>
       <li>
         <a href="situational_awareness_measures.html">Situational Awareness Measures</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Architecture and Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="architecture.html">Architecture</a>
+      </li>
+      <li>
+        <a href="security_considerations.html">Security Considerations</a>
+      </li>
+      <li>
+        <a href="actors.html">Actors</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="transaction-1.html">Query Measure</a>
+      </li>
+      <li>
+        <a href="transaction-2.html">Produce Measure</a>
+      </li>
+      <li>
+        <a href="transaction-3.html">Query Measure Definition</a>
+      </li>
+      <li>
+        <a href="transaction-4.html">Compute Measure</a>
+      </li>
+      <li>
+        <a href="transaction-5.html">Communicate Results</a>
+      </li>
+      <li>
+        <a href="profiles_and_extensions.html">Profiles and Extensions</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integration with Existing Systems
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="technology_environment.html">Technology Environment</a>
+      </li>
+      <li>
+        <a href="CSV_Conversion.html">Exchanging data via CSV Files</a>
       </li>
       <li>
         <a href="measure_aggregation.html">Aggregatating Measure Reports</a>
@@ -33,18 +86,43 @@
       <li>
         <a href="measure_automation.html">Computing Measures</a>
       </li>
-      <li>
-        <a href="phrase_book.html">Phrase Book for Measure Creation</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Creating an Example Measure
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing and Conformance
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="measure_creation.html">Measure Creation</a>
+        <a href="profiles_and_extensions.html">Profiles and Extensions</a>
+      </li>
+      <li>
+        <a href="vocabulary.html">Terminology Resources</a>
+      </li>
+      <li>
+        <a href="test_plan.html">Test Plan</a>
+      </li>
+      <li>
+        <a href="hospital_capacity_examples.html">Hospital Capacity Measure and Report Examples</a>
+      </li>
+      <li>
+        <a href="laboratory_reporting_examples.html">Laboratory Reporting Measure and Report Examples</a>
+      </li>
+      <li>
+        <a href="automation_testing_examples.html">Automation Testing Data</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Defining a Measure
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="measure_creation.html">Defining a Measure from Essential Elements of Information</a>
+      </li>
+      <li>
+        <a href="phrase_book.html">A Phrase Book for Measures Supporting Automation</a>
       </li>
       <li>
         <a href="measure_group_covid19_patients.html">Creating the Patients with COVID 19 Group</a>
@@ -59,76 +137,13 @@
         <a href="measure_group_ventilators.html">Creating the Ventilator Avaiability Group</a>
       </li>
       <li>
-        <a href="measure_group_beds.html">Creating the Bed Avaiability Group</a>
+        <a href="measure_group_beds.html">Creating the Bed Availability Group</a>
       </li>
       <li>
-        <a href="measure_library.html">Sample Measure Library</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technology
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="architecture.html">Architecture</a>
+        <a href="measure_library.html">Creating the Measure Library</a>
       </li>
       <li>
-        <a href="use_cases.html">Use Cases</a>
-      </li>
-      <li>
-        <a href="technology_environment.html">Technology Environment</a>
-      </li>
-      <li>
-        <a href="security_considerations.html">Security Considerations</a>
-      </li>
-      <li>
-        <a href="actors.html">Actors</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Transactions
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="transactions.html">Transaction Overview</a>
-      </li>
-      <li>
-        <a href="transaction-1.html">Query Measure</a>
-      </li>
-      <li>
-        <a href="transaction-2.html">Produce Measure</a>
-      </li>
-      <li>
-        <a href="transaction-3.html">Report Measure</a>
-      </li>
-      <li>
-        <a href="transaction-4.html">Compute Measure</a>
-      </li>
-      <li>
-        <a href="transaction-5.html">Communicate Results</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance and Testing
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="profiles.html">Profiles and Extensions</a>
-      </li>
-      <li>
-        <a href="vocabulary.html">Vocabulary</a>
-      </li>
-      <li>
-        <a href="test_plan.html">Testing</a>
-      </li>
-      <li>
-        <a href="examples.html">Examples</a>
+        <a href="supporting_vocabulary.html">Supporting Vocabulary</a>
       </li>
     </ul>
   </li>

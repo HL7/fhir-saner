@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Title: "Search by Text in Definitions"
  * insert SanerDefinitionContent
  * url = "http://hl7.org/fhir/saner/SearchParameter/SearchParameter-definition-text"
- * description = "This SearchParameter enables definition resources used in The SANER Project to be discovered from text used in the resource definition."
+ * description = "This SearchParameter enables definition resources to be discovered from text used in the resource definition."
  * name = "definition-text"
  * code = #definition-text
  * base[0] = #Measure
@@ -52,7 +52,7 @@ InstanceOf: SearchParameter
 Title: "Search by Code in Definitions and Instances"
  * insert SanerDefinitionContent
  * url = "http://hl7.org/fhir/saner/SearchParameter/SearchParameter-code"
- * description = "This SearchParameter enables resources used in The SANER Project to be discovered by codes or valueSets used in the resource including those in any extensions."
+ * description = "This SearchParameter enables resources to be discovered by codes or valueSets used in the resource including those in any extensions."
  * name = "code"
  * purpose = """
  """

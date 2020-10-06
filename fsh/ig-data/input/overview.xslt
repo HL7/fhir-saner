@@ -26,8 +26,17 @@
 
 <xsl:if test="/ig:profile/ig:usecase">
 <xsl:result-document href="pagecontent/use_cases.md">
-The sections below describe the use cases supported by the
-<xsl:value-of select="string-join(($org, /ig:profile/@id),' ')"/> Implementation Guide.
+The following use cases were used to identify the requirements addressed by this guide:
+
+<xsl:for-each select="/ig:profile/ig:usecase">
+    <xsl:text>* [</xsl:text>
+    <xsl:value-of select='ig:name'/>
+    <xsl:text>](#</xsl:text>
+    <xsl:value-of select='translate(lower-case(ig:name)," ", "-")'/>
+    <xsl:text>)&#xA;</xsl:text>
+</xsl:for-each>
+
+These are described in more detail in the sections that follow.
 
 <xsl:apply-templates select="/ig:profile/ig:usecase" mode="overview"/>
 <xsl:apply-templates select="/ig:profile/ig:usecase" mode="process-flow-diagram"/>
@@ -39,7 +48,7 @@ The sections below describe the use cases supported by the
     </xsl:template>
 
     <xsl:template match="ig:usecase" mode="overview">
-        <xsl:variable name="title">Use Case <xsl:value-of select="position()"/>: <xsl:value-of select="ig:name"/></xsl:variable>
+        <xsl:variable name="title"><xsl:value-of select="ig:name"/></xsl:variable>
 
         <xsl:text>&#xA;### </xsl:text><xsl:value-of select="$title"/><xsl:text>&#xA;</xsl:text>
         <xsl:apply-templates select="ig:description"/>
