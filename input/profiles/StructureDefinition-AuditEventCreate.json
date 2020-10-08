@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "audit-event-delete",
+  "id": "AuditEventCreate",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,18 +11,18 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/audit-event-delete",
+  "url": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventCreate",
   "version": "0.1.0",
-  "name": "AuditEventDelete",
-  "title": "Audit Event Delete Profile",
+  "name": "AuditEventCreate",
+  "title": "Audit Event Create Profile",
   "status": "active",
-  "description": "Defines constraints on the AuditEvent Resource to record when a resource has been deleted.",
+  "description": "Defines constraints on the AuditEvent Resource to record when a resource has been written.",
   "jurisdiction": [
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }
@@ -63,7 +63,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "AuditEvent",
-  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/audit-event",
+  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -71,32 +71,32 @@
         "id": "AuditEvent.type",
         "path": "AuditEvent.type",
         "patternCoding": {
-          "code": "110105",
+          "code": "110107",
           "system": "http://dicom.nema.org/resources/ontology/DCM"
         }
       },
       {
         "id": "AuditEvent.type.display",
         "path": "AuditEvent.type.display",
-        "patternString": "DICOM Study Deleted"
+        "patternString": "Import"
       },
       {
         "id": "AuditEvent.subtype",
         "path": "AuditEvent.subtype",
         "patternCoding": {
-          "code": "delete",
+          "code": "create",
           "system": "http://hl7.org/fhir/restful-interaction"
         }
       },
       {
         "id": "AuditEvent.subtype.display",
         "path": "AuditEvent.subtype.display",
-        "patternString": "Delete"
+        "patternString": "Create"
       },
       {
         "id": "AuditEvent.action",
         "path": "AuditEvent.action",
-        "patternCode": "D"
+        "patternCode": "C"
       },
       {
         "id": "AuditEvent.entity.what",

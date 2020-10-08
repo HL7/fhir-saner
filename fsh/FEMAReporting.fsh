@@ -1,5 +1,6 @@
 Instance: FEMAMeasureLibrary
 InstanceOf: PublicHealthMeasureLibrary
+Description: "Example Library for the FEMA Measure"
  * insert SanerDefinitionContent
  * id = "FEMAMeasureLibrary"
  * name = "FEMAMeasureLibrary"

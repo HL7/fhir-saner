@@ -6,11 +6,7 @@
   <artifactPageExtension value="-mappings"/>
   <artifact name="AuditEventRead" key="AuditEventRead" id="StructureDefinition/audit-event-read"/>
   <artifact name="AuditEventWrite" key="AuditEventWrite" id="StructureDefinition/Audit-event-write"/>
-  <artifact name="ResourceLocation" key="ResourceLocation" id="StructureDefinition/saner-resource-location"/>
   <artifact name="PublicHealthMeasure" key="PublicHealthMeasure" id="StructureDefinition/PublicHealthMeasure"/>
-  <artifact name="PublicHealthMeasureStratifier" key="PublicHealthMeasureStratifier" id="StructureDefinition/PublicHealthMeasureStratifier"/>
-  <artifact name="SupportingDevice" key="SupportingDevice" id="StructureDefinition/saner-supporting-device"/>
-  <artifact name="GeoLocation" key="GeoLocation" id="StructureDefinition/GeoLocation"/>
   <artifact name="MeasureGroupAttributes" key="MeasureGroupAttributes" id="StructureDefinition/MeasureGroupAttributes"/>
   <artifact name="MeasurePopulationAlternateCriteria" key="MeasurePopulationAlternateCriteria" id="StructureDefinition/MeasurePopulationAlternateCriteria"/>
   <page name="(NA)" key="NA"/>

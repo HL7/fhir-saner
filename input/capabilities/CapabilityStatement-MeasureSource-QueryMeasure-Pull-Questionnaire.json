@@ -560,15 +560,15 @@
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }
   ],
   "name": "MeasureSource_QueryMeasure_Pull_Questionnaire",
   "title": "Measure Source implementing the Query Measure transaction with the Pull Option and the Questionnaire Option.",
-  "date": "2020-10-01T02:36:53.144341-04:00",
+  "date": "2020-10-08T15:21:43.603405-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the Pull Option and the Questionnaire Option.",
   "format": [

@@ -191,7 +191,7 @@ that have communicated them, putting together a complete MeasureReport for later
         </step>
     </usecase>
     <usecase id="VIEWREPORTS" actors="MeasureConsumer MeasureIntermediary" transactions="REPORT-TX" content="">
-        <name>Reporting on A Measure</name>
+        <name>Accessing Measure Reports</name>
         <description>A public health user queries a reporting system to report on a measure for a region.</description>
         <!-- overview is optional -->
         <overview>In this use case, we see the classic "dashboard" panel, where a public health user
@@ -231,6 +231,46 @@ focus (e.g., wider or smaller region).</description>
             </return>
         </step>
     </usecase>
+
+    <usecase id="MEASUREDIST" actors="MeasureDefinitionConsumer MeasureDefinitionSource" transactions="PULL-MX" content="PublicHealthMeasure PublicHealthMeasureLibrary">
+        <name>Distributing Measure Definitions</name>
+        <description>A public health or emergency response agency distributes updated Measure definitions, a hospital or intermediary retrieves these definitions for reporting.</description>
+        <overview>Measures created for tracking a public health emergency may be revised periodically to support changing needs. This use case supports the need
+to distribute updated measure definitions to organizations who report on these measures.</overview>
+        <step id="Search for updated Measures" from="MeasureDefinitionConsumer" to="MeasureDefinitionSource" returns="now">
+            <name>Query for New or Updated Measures</name>
+            <description>An organization required to report queries for for updated from one or public health or emergency response agencies to identify reporting requirements.</description>
+            <overview></overview>
+            <return id="BED-STEP5" returns="now">
+                <name>Return matching measure specifications</name>
+                <description>The agency sends the new or updated definitions to the requesting reporting organization.</description>
+            </return>
+        </step>
+    </usecase>
+
+    <usecase id="AUTOMATION" actors="MeasureDefinitionConsumer MeasureComputer MeasureSource" transactions="COMPUTE-MX" content="PublicHealthMeasureReport PublicHealthMeasure PublicHealthMeasureLibrary">
+        <name>Automating Measure Computation</name>
+        <description>A reporting organization (e.g., a hospital) automatically computes and reports measure data.</description>
+        <overview>Automating measure reporting reduces the burden on users for manual data collection. When a measure has been automated, it
+        can be computed using FHIR APIs from supporting information systems provided by the organization.</overview>
+        <step id="Check for New or Updated Measures" from="MeasureDefinitionConsumer" to="MeasureDefinitionSource" returns="now">
+            <name>Query for New or Updated Measures</name>
+            <description>The reporting organization checks for new measures see [Distributing Measure Definitions](#distributing-measure-definitions) above.</description>
+        </step>
+        <step id="ComputeMeasures" from="MeasureComputer" to="MeasureComputer" returns="now">
+            <name>Compute Measure</name>
+            <description>The hospital information system collects data and computes the measures, returing a completed report.</description>
+            <step id="GatherData" from="MeaasureComputer" to="EHR or FHIR Server" returns="now">
+                <name>Gather Data</name>
+                <description>The hospital information system queries the local EHR or FHIR Server for applicable FHIR resources used in measure computation.</description>
+                <return id="FHIRData" returns="now">
+                    <name>Returns Matching FHIR Resources</name>
+                    <description>The local EHR or FHIR Server returns the requested data and included resources.</description>
+                </return>
+            </step>
+        </step>
+    </usecase>
+
     <!--  Other Use Cases can describe options -->
     <actor id="MeasureSource">
         <name>Measure Source</name>
@@ -690,9 +730,7 @@ MeasureReport, Location or Organization described elsewhere in this Implementati
                         <description>The Measure Source will return the selected resources and
                             an appropriate success response in a FHIR resource following the protocol for the read or search operation requested.
                         </description>
-                        <content profiles='PublicHealthMeasure PublicHealthMeasureReport
-                            http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-                            http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' expect='shall'/>
+                        <content profiles='PublicHealthMeasure PublicHealthMeasureReport' expect='shall'/>
                     </interaction>
                 </semantics>
                 <action by="MeasureSource">
@@ -780,12 +818,12 @@ operation on the MeasureReport resource at a Measure Consumer.
             <action by="MeasureIntermediary">
                 <name>Aggregate MeasureReport Resources</name>
                 <operation options='Aggregate' name='$aggregate' invoke='instance' resources="MeasureReport" expect="shall" client='shall'>
-                        <name>Aggregate two or more more Messure Report resources into a single MeasureReport.</name>
-                        <description>This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.
+                        <name>Aggregate</name>
+                        <description>Aggregate two or more more Messure Report resources into a single MeasureReport.</description>
+                        <overview>This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.
 The MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by
 specifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources
-being aggregated must reference the same Measure resource defining the MeasureReport to generate.
-                        </description>
+being aggregated must reference the same Measure resource defining the MeasureReport to generate.</overview>
                         <group>
                             <name>Aggregate one or more MeasureReport reesources into a single MeasureReport resource</name>
                             <parameter name='measure-report' use='in' type='MeasureReport' min="0" max="*">
@@ -902,7 +940,7 @@ selected resource. This can be accomplished by using a search with an _id parame
                         <group>
                             <name>Search by _url</name>
                             <description>A client must be able to read individual resources that are returned or referenced within a measure
-                                by the canonical url that is used to identify them.  Client systems may save resource references for future use, 
+                                by the canonical url that is used to identify them.  Client systems may save resource references for future use,
                                 retrieving them later as needed.</description>
                             <parameter name='url' min='1' max='*' type='uri' expect='shall'/>
                         </group>

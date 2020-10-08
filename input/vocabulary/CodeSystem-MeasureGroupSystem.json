@@ -5,7 +5,7 @@
   "name": "MeasureGroupSystem",
   "id": "MeasureGroupSystem",
   "title": "Measure Group System",
-  "description": "A Code System for Groups defined by The SANER Project",
+  "description": "A Code System for Groups",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
   "concept": [

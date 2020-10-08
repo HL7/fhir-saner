@@ -1,4 +1,3 @@
-### Overview
 Some Health IT systems in a facility may not yet support HL7 FHIR.  To incorporate data from these systems, this guide enables reports to be
 provided in CSV format through a simplified interface.
 
@@ -14,13 +13,10 @@ This canonical representation makes the following assumptions.
 4. Order is preserved in transmission of CodeableConcept values between systems using FHIR, so that the order of codes in a coding are not changed.
 5. MeasureReport.group.stratifier.stratum.population.code and MeasureReport.group.population.code are bound to the same value set within any Measure.
 
-#### Conversion Process
-
-##### Conversion from MeasureReport to CSV Format
+### Conversion from MeasureReport to CSV Format
 The process described below can be used to convert a MeasureReport to its canonical CSV Format. If the canonical format is sufficient for conversion operations
 then only this process need be followed.  However, the CSV report may need to be modified to remap and/or reorder column values using the map argument in operations
 supporting CSV conversion.  See the section on [Remapping](#remapping) below for details on this step.
-
 
 Given a collection of MeasureReport resources using the same Measure Resource, and a value set of codes used for conversion
 
@@ -72,7 +68,7 @@ Given a collection of MeasureReport resources using the same Measure Resource, a
                6. The count of the number in the stratum for each population (stratum.population.code.coding[0].code)
                7. The measure score for the stratum for each population (stratum.measureScore)
 
-#### Conversion from CSV format to MeasureReport
+### Conversion from CSV format to MeasureReport
 The process described below can be used to convert from the canonical CSV Format to a MeasureReport.  If the canonical format is sufficient for conversion operations
 then only this process need be followed.  However, the CSV report may need to be modified prior to conversion to remap and/or reorder column values using the
 map argument in operations supporting CSV conversion.  See the section on [Remapping](#remapping) below for details on this step.

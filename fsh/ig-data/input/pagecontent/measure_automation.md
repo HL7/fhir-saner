@@ -391,7 +391,7 @@ large amounts of data. Depending on the implementation, it may be more efficient
 more than what the measure is looking for, and then filter the results after they have been returned to the Measure Computer.
 
 Measure developers should consider writing evaluation criteria in ways that simplify implementation. For example, when using FHIRPath,
-the first part of the expression should be of the form:
+the first part of the expression can be of the form:
 ```
      (%Base + '/Resource?_include=Resource:*'
             + '&status=allowed-status-values'
@@ -401,10 +401,10 @@ the first part of the expression should be of the form:
 
      ).resolve().select(resource)
 ```
-This enables the Measure Computer to kick start their evaluations with .  The _Resource_ should name the type of resource
-to query for, and _search criteria_ should be a widely supported search that limits the resources being returned for
-subsequent filtering by the remainder of thee FHIRPath expression. Consider the use of date and/or _lastUpdated
-parameters to restrict the data to the time period relevant to the search.
+This enables the Measure Computer to start evaluations with data automatically extracted via a FHIR Search.  The _Resource_
+should name the type of resource to query for, and _search criteria_ should be a widely supported search that limits the
+resources being returned for subsequent filtering by the remainder of thee FHIRPath expression. Consider the use of date
+and/or _lastUpdated parameters to restrict the data to the time period relevant to the search.
 
 The second part of the expression should be a [where() or select()](http://hl7.org/fhirpath/#filtering-and-projection)
 clause which filters out or projects to other relevant content. This where clause can make use of the FHIRPath

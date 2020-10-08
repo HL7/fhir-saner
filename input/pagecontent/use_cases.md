@@ -9,11 +9,18 @@
 *****************************************************************************************
 {% endcomment %} -->
 <?xml version="1.0" encoding="UTF-8"?>
-The sections below describe the use cases supported by the
-HL7 SANER Implementation Guide.
+The following use cases were used to identify the requirements addressed by this guide:
+
+* [Collecting Hospital and Ventilator Measures](#collecting-hospital-and-ventilator-measures)
+* [Accessing Measure Reports](#accessing-measure-reports)
+* [Distributing Measure Definitions](#distributing-measure-definitions)
+* [Automating Measure Computation](#automating-measure-computation)
 
 
-### Use Case 1: Collecting Hospital and Ventilator Measures
+These are described in more detail in the sections that follow.
+
+
+### Collecting Hospital and Ventilator Measures
 
 This use case addresses the collection and exchange of data from several information systems in a Facility
 to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
@@ -35,7 +42,7 @@ This use case is supported by the following
 
   - [Produce Measure](transaction-2.html)
 
-#### Use Case 1: Collecting Hospital and Ventilator Measures Process Flow 
+#### Collecting Hospital and Ventilator Measures Process Flow 
 
 Measure report data can come from multiple systems within a facility.  For example, the CDC/NHSN Patient Impact
 and Hospital Capacity Module asks for the following data elements:
@@ -70,9 +77,9 @@ available to accept partial reports for data.  This data can then be aggregated 
 information systems, and forwarded to a public endpoint for reporting.
 
 
-![Figure 2.3.1.1-1: Use Case 1: Collecting Hospital and Ventilator Measures Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Use Case 1: Collecting Hospital and Ventilator Measures Process Flow")
+![Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow")
 
-**Figure 2.3.1.1-1: Use Case 1: Collecting Hospital and Ventilator Measures Process Flow**
+**Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GETVALUES">ICU/Central Monitoring System collects data</html:span>
@@ -163,7 +170,7 @@ for the most recent reports.</html:span>
    The Measure Collector sends the aggregated MeasureReports to the requesting Public Health Agency.
 
 
-### Use Case 2: Reporting on A Measure
+### Accessing Measure Reports
 
 A public health user queries a reporting system to report on a measure for a region.
 
@@ -180,16 +187,16 @@ This use case is supported by the following
 
   - [Communicate Results](transaction-1.html)
 
-#### Use Case 2: Reporting on A Measure Process Flow 
+#### Accessing Measure Reports Process Flow 
 
 In this use case, we see the classic "dashboard" panel, where a public health user
 selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
 to them in an easy to view format.
 
 
-![Figure 2.3.1.2-1: Use Case 2: Reporting on A Measure Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Use Case 2: Reporting on A Measure Process Flow")
+![Figure 2.3.1.2-1: Accessing Measure Reports Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Accessing Measure Reports Process Flow")
 
-**Figure 2.3.1.2-1: Use Case 2: Reporting on A Measure Process Flow**
+**Figure 2.3.1.2-1: Accessing Measure Reports Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</html:span>
@@ -234,4 +241,97 @@ focus (e.g., wider or smaller region).
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Refined Results</html:span>
 
    The Measure Repository modifies the users focus and reporting format
+
+
+### Distributing Measure Definitions
+
+A public health or emergency response agency distributes updated Measure definitions, a hospital or intermediary retrieves these definitions for reporting.
+
+
+This use case is supported by the following
+
+* Actors
+
+  - [Measure Definition Source](actors.html#measure-definition-source)
+
+  - [Measure Definition Consumer](actors.html#measure-definition-consumer)
+
+* Transactions
+
+  - [Query Measure Definition](transaction-1.html)
+
+#### Distributing Measure Definitions Process Flow 
+
+Measures created for tracking a public health emergency may be revised periodically to support changing needs. This use case supports the need
+to distribute updated measure definitions to organizations who report on these measures.
+
+
+![Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow](usecase3-processflow.svg "Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow")
+
+**Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow**
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
+
+   An organization required to report queries for for updated from one or public health or emergency response agencies to identify reporting requirements.
+
+
+   
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP5">Return matching measure specifications</html:span>
+
+   The agency sends the new or updated definitions to the requesting reporting organization.
+
+
+### Automating Measure Computation
+
+A reporting organization (e.g., a hospital) automatically computes and reports measure data.
+
+
+This use case is supported by the following
+
+* Actors
+
+  - [Measure Source](actors.html#measure-source)
+
+  - [Measure Consumer](actors.html#measure-consumer)
+
+  - [Measure Definition Consumer](actors.html#measure-definition-consumer)
+
+  - [Measure Computer](actors.html#measure-computer)
+
+* Transactions
+
+  - [Compute Measure](transaction-1.html)
+
+#### Automating Measure Computation Process Flow 
+
+Automating measure reporting reduces the burden on users for manual data collection. When a measure has been automated, it
+        can be computed using FHIR APIs from supporting information systems provided by the organization.
+
+
+![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow")
+
+**Figure 2.3.1.4-1: Automating Measure Computation Process Flow**
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Check for New or Updated Measures">Query for New or Updated Measures</html:span>
+
+   The reporting organization checks for new measures see [Distributing Measure Definitions](#distributing-measure-definitions) above.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
+
+   The hospital information system collects data and computes the measures, returing a completed report.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherData">Gather Data</html:span>
+
+   The hospital information system queries the local EHR or FHIR Server for applicable FHIR resources used in measure computation.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRData">Returns Matching FHIR Resources</html:span>
+
+   The local EHR or FHIR Server returns the requested data and included resources.
 

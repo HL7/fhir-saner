@@ -10,7 +10,7 @@ RuleSet: SanerDefinitionContent
  * contact[1].name = "Keith W. Boone"
  * contact[1].telecom.system = #email
  * contact[1].telecom.value = "mailto:kboone@ainq.com"
- * jurisdiction.coding = urn:iso:std:iso:3166#US
+ * jurisdiction.coding = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
 // Define a rule set for commonly used rules for definition resources using other Sushi features
 RuleSet: SanerStructureDefinitionContent
@@ -24,7 +24,7 @@ RuleSet: SanerStructureDefinitionContent
  * ^contact[1].name = "Keith W. Boone"
  * ^contact[1].telecom.system = #email
  * ^contact[1].telecom.value = "mailto:kboone@ainq.com"
- * ^jurisdiction.coding = urn:iso:std:iso:3166#US
+ * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
 RuleSet: SanerExample
  * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST "test health data"

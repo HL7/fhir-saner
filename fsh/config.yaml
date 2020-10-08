@@ -39,7 +39,7 @@ jurisdiction: "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.0
+# hl7.fhir.us.core: 3.1.0
 parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true
@@ -69,50 +69,23 @@ pages:
   index.md:
     title: Home
     generation: markdown
-    background.md:
-      title: Background
+  intro.md:
+    title: Introduction and Overview
+    generation: markdown
+    introduction.md:
+      title: Introduction
       generation: markdown
     situational_awareness_measures.md:
       title: Situational Awareness Measures
       generation: markdown
-    measure_aggregation.md:
-      title: Aggregatating Measure Reports
-      generation: markdown
-    measure_automation.md:
-      title: Computing Measures
-      generation: markdown
-    phrase_book.md:
-      title: A Phrase Book for Measures Supporting Automation
-      generation: markdown
-    measure_creation.md:
-      title: Creating an Example Measure
-      generation: markdown
-      measure_group_covid19_patients.md:
-        title: Creating the Patients with COVID 19 Group
-        generation: markdown
-      measure_group_hospital_acquired_covid19_patients.md:
-        title: Creating the Hospital Acquired COVID 19 Group
-        generation: markdown
-      measure_group_covid19_deaths.md:
-        title: Creating the COVID 19 Deaths Group
-        generation: markdown
-      measure_group_ventilators.md:
-        title: Creating the Ventilator Avaiability Group
-        generation: markdown
-      measure_group_beds.md:
-        title: Creating the Bed Avaiability Group
-        generation: markdown
-      measure_library.md:
-        title: Sample Measure Library
-        generation: markdown
-  architecture.md:
-    title: Architecture
-    generation: markdown
     use_cases.md:
       title: Use Cases
       generation: markdown
-    technology_environment.md:
-      title: Technology Environment
+  spec.md:
+    title: Specification Details
+    generation: markdown
+    architecture.md:
+      title: Architecture and Implementation
       generation: markdown
     security_considerations.md:
       title: Security Considerations
@@ -138,21 +111,78 @@ pages:
     transaction-5.md:
       title: Communicate Results
       generation: markdown
+  integration.md:
+    title: Integration with Existing Systems
+    generation: markdown
+    technology_environment.md:
+      title: Technology Environment
+      generation: markdown
     CSV_Conversion.md:
-      title: CSV Conversion
+      title: Exchanging data via CSV Files
+      generation: markdown
+    measure_aggregation.md:
+      title: Aggregatating Measure Reports
+      generation: markdown
+    measure_automation.md:
+        title: Computing Measures
+        generation: markdown
+  conformance.md:
+    title:  Testing and Conformance
+    generation: markdown
+    profiles_and_extensions.md:
+      title: Profiles and Extensions
+      generation: markdown
+    vocabulary.md:
+      title: Terminology Resources
+      generation: markdown
+    test_plan.md:
+      title: Test Plan
+      generation: markdown
+    examples.md:
+      title: Examples
+      generation: markdown
+      hospital_capacity_examples.md:
+        title: Hospital Capacity Measures and Reports
+        generation: markdown
+      laboratory_reporting_examples.md:
+        title: Laboratory Reporting Examples
+        generation: markdown
+      automation_testing_examples.md:
+        title: Automation Testing Examples
+        generation: markdown
+  measure_creation.md:
+    title: Defining a Measure from Essential Elements of Information
+    generation: markdown
+    phrase_book.md:
+      title: A Phrase Book for Measures Supporting Automation
+      generation: markdown
+    measure_group_covid19_patients.md:
+      title: Creating the Patients with COVID 19 Group
+      generation: markdown
+    measure_group_hospital_acquired_covid19_patients.md:
+      title: Creating the Hospital Acquired COVID 19 Group
+      generation: markdown
+    measure_group_covid19_deaths.md:
+      title: Creating the COVID 19 Deaths Group
+      generation: markdown
+    measure_group_ventilators.md:
+      title: Creating the Ventilator Avaiability Group
+      generation: markdown
+    measure_group_beds.md:
+      title: Creating the Bed Avaiability Group
+      generation: markdown
+    measure_library.md:
+      title: Sample Measure Library
       generation: markdown
   profiles.md:
     title: Profiles and Extensions
     generation: markdown
-  vocabulary.md:
-    title: Vocabulary
+  supporting_vocabulary.md:
+    title: Supporting Vocabulary
     generation: markdown
-  test_plan.md:
-    title: Test Plan
+  fluent_query.md:
+    title: Fluent Query
     generation: markdown
-    examples.md:
-      title: Examples
-      generation: markdown
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
@@ -160,39 +190,47 @@ pages:
 menu:
   IG Home: index.html
   Table of Contents: toc.html
-  SANER IG Content:
-    Overview: background.html
+
+  Introduction:
+    Scope: introduction.html
     Situational Awareness Measures: situational_awareness_measures.html
+    Use Cases: use_cases.html
+
+  Architecture and Implementation:
+    Architecture: architecture.html
+    Security Considerations: security_considerations.html
+    Actors: actors.html
+    Transactions: transactions.html
+    Query Measure: transaction-1.html
+    Produce Measure: transaction-2.html
+    Query Measure Definition: transaction-3.html
+    Compute Measure: transaction-4.html
+    Communicate Results: transaction-5.html
+    Profiles and Extensions: profiles_and_extensions.html
+
+  Integration with Existing Systems:
+    Technology Environment: technology_environment.html
+    Exchanging data via CSV Files: CSV_Conversion.html
     Aggregatating Measure Reports: measure_aggregation.html
     Computing Measures: measure_automation.html
-    Phrase Book for Measure Creation: phrase_book.html
-  Creating an Example Measure:
-    Measure Creation: measure_creation.html
+
+  Testing and Conformance:
+    Profiles and Extensions: profiles_and_extensions.html
+    Terminology Resources: vocabulary.html
+    Test Plan: test_plan.html
+    Hospital Capacity Measure and Report Examples: hospital_capacity_examples.html
+    Laboratory Reporting Measure and Report Examples: laboratory_reporting_examples.html
+    Automation Testing Data: automation_testing_examples.html
+
+  Defining a Measure:
+    Defining a Measure from Essential Elements of Information: measure_creation.html
+    A Phrase Book for Measures Supporting Automation: phrase_book.html
     Creating the Patients with COVID 19 Group: measure_group_covid19_patients.html
     Creating the Hospital Acquired COVID 19 Group: measure_group_hospital_acquired_covid19_patients.html
     Creating the COVID 19 Deaths Group: measure_group_covid19_deaths.html
     Creating the Ventilator Avaiability Group: measure_group_ventilators.html
-    Creating the Bed Avaiability Group: measure_group_beds.html
-    Sample Measure Library: measure_library.html
-  Technology:
-    Architecture: architecture.html
-    Use Cases: use_cases.html
-    Technology Environment: technology_environment.html
-    Security Considerations: security_considerations.html
-    Actors: actors.html
-
-  Transactions:
-    Transaction Overview: transactions.html
-    Query Measure: transaction-1.html
-    Produce Measure: transaction-2.html
-    Report Measure: transaction-3.html
-    Compute Measure: transaction-4.html
-    Communicate Results: transaction-5.html
-
-  Conformance and Testing:
-    Profiles and Extensions: profiles.html
-    Vocabulary: vocabulary.html
-    Testing: test_plan.html
-    Examples: examples.html
+    Creating the Bed Availability Group: measure_group_beds.html
+    Creating the Measure Library: measure_library.html
+    Supporting Vocabulary: supporting_vocabulary.html
 
   Artifact Index: artifacts.html

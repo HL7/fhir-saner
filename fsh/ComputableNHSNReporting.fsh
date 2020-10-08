@@ -79,8 +79,8 @@ where a positive lab test from the Covid19Labs valueset, or where the patient ha
 in the prior two weeks.
 """
  * group[0].population[0].criteria.language = #text/fhirpath
- * group[0].population[0].criteria.expression = """
-     ( %Base + 'Encounter?' +
+ * group[0].population[0].criteria.expression =
+  """( %Base + 'Encounter?' +
         '_include=Encounter:subject&_include=Encounter:condition&' +
         '_include=Encounter:reasonReference' +
         '&status=in-progress,finished' +
@@ -115,8 +115,7 @@ in the prior two weeks.
       iif($total.subject contains $this.subject,
           $total, $total | $this
       )
-    )
-    """
+    )"""
 
 // Technically, this should be done by stratifier.component
  * group[0].stratifier[0].code.text = "By Location and Ventilator Status"
@@ -136,8 +135,8 @@ in the prior two weeks.
  * group[1].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#outcome
  * group[1].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
- * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = #"116154003|Patient|: 20401003|With| = (840539006|COVID-19|: 246512002|Timing| = 277056009|Hospital Acquired|)"
- * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient: With = COVID-19: Timing = Hospital Acquired"
+ * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = #"116154003|Patient|: 20401003|With| = (840539006|Disease caused by 2019 novel coronavirus|: 246512002|Timing| = 277056009|Hospital Acquired|)"
+ * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient where With = Disease caused by 2019 novel coronavirus where Timing = Hospital acquired"
  * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Hospital Acquired COVID-19"
  * group[1].extension[groupAtts].extension[rateAggregation].valueString = "cumulative"
 
@@ -275,8 +274,8 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[2].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  //** with extension[subject] do
  * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
- * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = #419620001 "Death"
- * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient Deaths"
+ * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#419620001 "Death"
+ * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Death"
  * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Patients with conformed or suspected COVID-19 who have died"
  * group[2].extension[groupAtts].extension[rateAggregation].valueString = "cumulative"
 

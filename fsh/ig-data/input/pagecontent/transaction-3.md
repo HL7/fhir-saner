@@ -424,7 +424,7 @@ Search by _url
 <div>
 
 A client must be able to read individual resources that are returned or referenced within a measure
-                                by the canonical url that is used to identify them.  Client systems may save resource references for future use, 
+                                by the canonical url that is used to identify them.  Client systems may save resource references for future use,
                                 retrieving them later as needed.
 
 

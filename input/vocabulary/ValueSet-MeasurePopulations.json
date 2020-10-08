@@ -4,7 +4,7 @@
   "name": "MeasurePopulations",
   "id": "MeasurePopulations",
   "title": "Measure Populations",
-  "description": "Measure Populations defined by The SANER Project",
+  "description": "Measure Populations illustrating measures for the FHIR SANER IG",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/saner/ValueSet/MeasurePopulations",
   "compose": {

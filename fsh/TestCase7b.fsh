@@ -60,7 +60,7 @@ Description: "MedicationRequest for Test Case 7b: Yes w/ outcome = Yes"
 * identifier.value = "Med223344"
 * status = #active
 * intent = #order
-* medicationCodeableConcept = #Remdesivir
+* medicationCodeableConcept = http://www.nlm.nih.gov/research/umls/rxnorm#2367757
 * subject = Reference(Patient7b)
 * dosageInstruction.timing.repeat.boundsPeriod.start =  "2020-09-08"
 

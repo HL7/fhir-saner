@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "audit-event",
+  "id": "AuditEventBase",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,9 +11,9 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/audit-event",
+  "url": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase",
   "version": "0.1.0",
-  "name": "SanerAuditEvent",
+  "name": "AuditEventBase",
   "title": "General Audit Event Requirements",
   "status": "active",
   "description": "Defines general constraints on the AuditEvent Resource.",
@@ -21,8 +21,8 @@
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }

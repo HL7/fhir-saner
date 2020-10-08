@@ -1,5 +1,6 @@
 Instance: ComputableNHSNMeasureLibrary
 InstanceOf: PublicHealthMeasureLibrary
+Description: "This library contains references to the value sets used for the Computable NHSN Measure"
 // We aren't automating anything other than patient impact and hospital capacity, this library
 // will be referenced by other NHSN inspired measures but will not be used by them.
 

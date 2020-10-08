@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureSource_QueryMeasure_Pull"
 * title = "Measure Source implementing the Query Measure transaction with the Pull Option."
-* date = "2020-10-01T02:36:53.144341-04:00"
+* date = "2020-10-08T15:21:43.603405-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the Pull Option."
 * format[0] = #xml
@@ -16,7 +16,6 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * rest[serverSlice].mode = #server
 
 * rest[serverSlice].resource[LocationSlice].type = #Location
-* rest[serverSlice].resource[LocationSlice].supportedProfile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
 
 * rest[serverSlice].resource[LocationSlice].interaction[0].code = #read
 * rest[serverSlice].resource[LocationSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -245,7 +244,6 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * rest[serverSlice].resource[MeasureSlice].extension[5].extension[0].valueString = "code:in"
 
 * rest[serverSlice].resource[OrganizationSlice].type = #Organization
-* rest[serverSlice].resource[OrganizationSlice].supportedProfile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 
 * rest[serverSlice].resource[OrganizationSlice].interaction[0].code = #read
 * rest[serverSlice].resource[OrganizationSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

@@ -569,15 +569,15 @@
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }
   ],
   "name": "MeasureDefinitionSource_QueryMeasureDefinition",
   "title": "Measure Definition Source implementing the Query Measure Definition transaction.",
-  "date": "2020-10-01T02:36:53.144341-04:00",
+  "date": "2020-10-08T15:21:43.603405-04:00",
   "kind": "requirements",
   "description": "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction.",
   "format": [

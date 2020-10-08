@@ -1,7 +1,20 @@
 == suppressed messages ==
 # The Terminology Server doesn't know about these codes, but SNOMED and ICD10 do.
-ERROR: Condition/Condition12c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
+ERROR: C:\Users\kboone\git\fhir-saner\output\test_plan.html#/html/body/div/div/div/div/div/p/a at Line 294, column 5: The link '#todo' for "Update this from Confluence" cannot be resolved (valid targets: 35 targets)
+ERROR: C:\Users\kboone\git\fhir-saner\output\security_considerations.html#/html/body/div/div/div/div/div/p/a at Line 301, column 5: The link '#todo' for "TODO: add auditEvent pattern for client and server for each transaction or processing event." cannot be resolved (valid targets: 24 targets)
+ERROR: Encounter/Encounter1a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter2b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter2c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter3b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter4c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter5a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter6a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter7a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter7b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter9a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+ERROR: Encounter/Encounter9c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
 ERROR: Condition/Condition1a: Condition.code.coding[0]: Unable to find code 870590002 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "870590002" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#870590002) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#870590002'
+ERROR: Condition/Condition12c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
 ERROR: Condition/Condition1c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
 ERROR: Condition/Condition22c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
 ERROR: Condition/Condition2a: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
@@ -14,14 +27,166 @@ ERROR: Condition/Condition6c: Condition.code.coding[0]: Unable to find code 8827
 ERROR: Condition/Condition7a: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
 ERROR: Condition/Condition7b: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
 ERROR: Condition/Condition9c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Encounter/Encounter1a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter2b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter2c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter3b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter4c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter5a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter6a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter7a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter7b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter9a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter9c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
+
+# Bugs due to recent changes to support searchform.html
+ERROR: C:\Users\kboone\git\fhir-saner\output\searchform.html#/html/body/div/div/a/img/div/div/nav/div/div/ul/li/a at Line 64, column 21: The link 'history.html' for "History" cannot be resolved
+ERROR: C:\Users\kboone\git\fhir-saner\output\searchform.html: The html source does not contain the publish box <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader--> (see note at http://wiki.hl7.org/index.php?title=FHIR_Implementation_Guide_Publishing_Requirements#HL7_HTML_Standards_considerations)
+
+# Manually Verified that it is
+WARNING: PublicHealthMeasureMetadataAttachment.Attachment.contentType: Unable to check if http://hl7.org/fhir/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
+
+# Following FHIR Conventions for OperationDefinition and SearchParameter identifiers
+WARNING: OperationDefinition/MeasureReport-aggregate: OperationDefinition: opd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+WARNING: SearchParameter/SearchParameter-code: SearchParameter: spd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+WARNING: SearchParameter/SearchParameter-definition-text: SearchParameter: spd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+WARNING: SearchParameter/SearchParameter-disposition: SearchParameter: spd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+
+
+# These were drawn from SNOMED CT
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[3]: The code 870518005 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[1]: The code 870519002 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[5]: The code 870520008 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[4]: The code 870521007 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[6]: The code 870522000 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[0]: The code 870592005 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[2]: The code 870600003 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[3]: The code 882784691000119100 is not valid in the system http://snomed.info/sct
+
+# These are all legal ICD-10-CM Codes
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[0]: The code A41.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[4]: The code A41.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[0]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[0]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[1]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[0]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[5]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[1]: The code B97.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[1]: The code B97.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[1]: The code B97.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[2]: The code B97.29 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[2]: The code B97.29 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[2]: The code B97.29 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[2]: The code J12.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[6]: The code J12.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[3]: The code J12.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[7]: The code J12.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[4]: The code J20.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[8]: The code J20.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[5]: The code J22 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[9]: The code J22 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[6]: The code J40 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[10]: The code J40 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[7]: The code J80 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[11]: The code J80 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[8]: The code J98.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[12]: The code J98.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[9]: The code R05 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[13]: The code R05 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[10]: The code R06.0 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[14]: The code R06.0 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[11]: The code R06.02 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[15]: The code R06.02 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[12]: The code R50.9 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[16]: The code R50.9 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[3]: The code U07.1 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[3]: The code U07.1 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[3]: The code U07.1 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
+
+
+# These were seperately parsed during connectathon
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[0].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[1].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[1].stratifier[1].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[1].stratifier[2].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[1].stratifier[3].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2].stratifier[1].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2].stratifier[2].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2].stratifier[3].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[4].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
+
+# It is
+WARNING: StructureDefinition/PublicHealthMeasureMetadataAttachment: StructureDefinition: Unable to check if http://hl7.org/fhir/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
+
+# NHSN HSLOC Not Yet Supported by tx
+WARNING: ValueSet.where(id = 'HealthcareServiceLocation'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet.where(id = 'ICULocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet.where(id = 'InpatientLocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+
+# NHSN HSLOC Not Yet Supported by tx
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+
+# Fix these
+WARNING: StructureDefinition/CapabilityStatementWithSlices: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
+
+# But yet it exists
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[0].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[1].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[1].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[1].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[2].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[2].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[2].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[3].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[3].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[3].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[4].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[4].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[4].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[5].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[5].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[5].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[6].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[6].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[6].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[1].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[1].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[10].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[10].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[11].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[11].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[12].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[12].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[13].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[13].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[14].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[14].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[15].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[15].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[2].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[2].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[3].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[3].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[4].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[4].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[5].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[5].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[6].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[6].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[7].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[7].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[8].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[8].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[9].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[9].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+
+# Provide Examples
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventCreate'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventDelete'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventRead'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventSearch'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventUpdate'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/measure-expectation'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/MeasurePopulationAlternateCriteria'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/MeasureReportingTiming'): The Implementation Guide contains no examples for this data type profile
+
+# How to fix?
+WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jiraspec.tmp.xml' (currently in Github) and 'jira.xml' (reflects current IG content)
+

@@ -8,6 +8,8 @@
 * ig-data\input\pagecontent\definitions.md                                              *
 *****************************************************************************************
 {% endcomment %} -->
+[Delete this content or figure out where to put it](#todo)
+
 Definitions are critical during times of crisis. Knowing and understanding these definitions
 enables the implementors of this specification to operate from a common understanding
 of meaning, and those using the data produced from those implementations to respond

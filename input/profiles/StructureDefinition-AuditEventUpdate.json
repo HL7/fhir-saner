@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "audit-event-update",
+  "id": "AuditEventUpdate",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,7 +11,7 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/audit-event-update",
+  "url": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventUpdate",
   "version": "0.1.0",
   "name": "AuditEventUpdate",
   "title": "Audit Event Update Profile",
@@ -21,8 +21,8 @@
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }
@@ -63,7 +63,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "AuditEvent",
-  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/audit-event",
+  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase",
   "derivation": "constraint",
   "differential": {
     "element": [

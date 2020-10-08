@@ -112,7 +112,7 @@
             "name": "NumC19Pats",
             "description": "This expression finds encounters that were active or finished in the reporting period, and their referenced Patient, Condition and Observation resources.\nIt filters these based on cases where Encounter reports a reason or condition in the SuspectedOrConfirmedCOVID19Diagnoses value set, or\nwhere a positive lab test from the Covid19Labs valueset, or where the patient has any such associated Condition or Observation resources\nin the prior two weeks.",
             "language": "text/fhirpath",
-            "expression": " ( %Base + 'Encounter?' +\n    '_include=Encounter:subject&_include=Encounter:condition&' +\n    '_include=Encounter:reasonReference' +\n    '&status=in-progress,finished' +\n    '&date=ge' + %ReportingPeriod.start.toString() +\n    '&date=lt' + %ReportingPeriod.end.toString()\n ).resolve().select(entry.resource).\n where(\n   iif(myMemberOf((Encounter.reasonCode | Condition.code), %SuspectedOrConfirmedCOVID19Diagnoses.url) |\n       Observation.where((myMemberOf(code, %Covid19Labs.url) and myMemberOf(value, %PositiveResults.url))\n     ), true,\n     iif(\n       Patient.distinct().where(\n         %Base + 'Observation?_count=1' +\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +\n         '&code:in=' + %Covid19Labs.url +\n         '&value-concept:in=' + %PositiveResults.url\n       ).resolve().select(entry.resource as Observation).exists(), true,\n       Patient.distinct().where(\n         %Base + 'Condition?_count=1'+\n         '&patient=' + $this.id +\n         '&verification-status:not=refuted,entered-in-error' +\n         '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +\n         '&code:in=' + SuspectedOrConfirmedCOVID19Diagnoses.url\n       ).resolve().select(entry.resource as Condition).exists()\n     )\n  )\n)\n.distinct()\n.aggregate(\n  iif($total.subject contains $this.subject,\n      $total, $total | $this\n  )\n)"
+            "expression": "ase + 'Encounter?' +\n    '_include=Encounter:subject&_include=Encounter:condition&' +\n    '_include=Encounter:reasonReference' +\n    '&status=in-progress,finished' +\n    '&date=ge' + %ReportingPeriod.start.toString() +\n    '&date=lt' + %ReportingPeriod.end.toString()\n ).resolve().select(entry.resource).\n where(\n   iif(myMemberOf((Encounter.reasonCode | Condition.code), %SuspectedOrConfirmedCOVID19Diagnoses.url) |\n       Observation.where((myMemberOf(code, %Covid19Labs.url) and myMemberOf(value, %PositiveResults.url))\n     ), true,\n     iif(\n       Patient.distinct().where(\n         %Base + 'Observation?_count=1' +\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +\n         '&code:in=' + %Covid19Labs.url +\n         '&value-concept:in=' + %PositiveResults.url\n       ).resolve().select(entry.resource as Observation).exists(), true,\n       Patient.distinct().where(\n         %Base + 'Condition?_count=1'+\n         '&patient=' + $this.id +\n         '&verification-status:not=refuted,entered-in-error' +\n         '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +\n         '&code:in=' + SuspectedOrConfirmedCOVID19Diagnoses.url\n       ).resolve().select(entry.resource as Condition).exists()\n     )\n  )\n)\n.distinct()\n.aggregate(\n  iif($total.subject contains $this.subject,\n      $total, $total | $this\n  )\n)"
           }
         }
       ],
@@ -144,8 +144,8 @@
                   },
                   {
                     "system": "http://snomed.info/sct",
-                    "code": "116154003|Patient|: 20401003|With| = (840539006|COVID-19|: 246512002|Timing| = 277056009|Hospital Acquired|)",
-                    "display": "Patient: With = COVID-19: Timing = Hospital Acquired"
+                    "code": "116154003|Patient|: 20401003|With| = (840539006|Disease caused by 2019 novel coronavirus|: 246512002|Timing| = 277056009|Hospital Acquired|)",
+                    "display": "Patient where With = Disease caused by 2019 novel coronavirus where Timing = Hospital acquired"
                   }
                 ],
                 "text": "Hospital Acquired COVID-19"
@@ -331,7 +331,7 @@
                   {
                     "system": "http://snomed.info/sct",
                     "code": "419620001",
-                    "display": "Patient Deaths"
+                    "display": "Death"
                   }
                 ],
                 "text": "Patients with conformed or suspected COVID-19 who have died"
@@ -830,8 +830,8 @@
     {
       "coding": [
         {
-          "code": "US",
-          "system": "urn:iso:std:iso:3166"
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
         }
       ]
     }

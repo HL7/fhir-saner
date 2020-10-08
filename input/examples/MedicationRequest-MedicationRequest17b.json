@@ -12,7 +12,8 @@
   "medicationCodeableConcept": {
     "coding": [
       {
-        "code": "Remdesivir"
+        "code": "2367757",
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
       }
     ]
   },

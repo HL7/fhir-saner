@@ -51,19 +51,27 @@
   "fhirVersion": [
     "4.0.1"
   ],
-  "dependsOn": [
-    {
-      "packageId": "hl7.fhir.us.core",
-      "version": "3.1.0",
-      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-      "id": "hl7_fhir_us_core"
-    }
-  ],
   "definition": {
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/audit-event-delete"
+          "reference": "StructureDefinition/AuditEventBase"
+        },
+        "name": "General Audit Event Requirements",
+        "description": "Defines general constraints on the AuditEvent Resource.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AuditEventCreate"
+        },
+        "name": "Audit Event Create Profile",
+        "description": "Defines constraints on the AuditEvent Resource to record when a resource has been written.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AuditEventDelete"
         },
         "name": "Audit Event Delete Profile",
         "description": "Defines constraints on the AuditEvent Resource to record when a resource has been deleted.",
@@ -71,7 +79,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/audit-event-read"
+          "reference": "StructureDefinition/AuditEventRead"
         },
         "name": "Audit Event Read",
         "description": "Defines constraints on the AuditEvent Resource to record when a record has been Read.",
@@ -79,7 +87,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/audit-event-search"
+          "reference": "StructureDefinition/AuditEventSearch"
         },
         "name": "Audit Event Search",
         "description": "Defines constraints on the AuditEvent Resource to record when a record has been queried.",
@@ -87,18 +95,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/audit-event-update"
+          "reference": "StructureDefinition/AuditEventUpdate"
         },
         "name": "Audit Event Update Profile",
         "description": "Defines constraints on the AuditEvent Resource to record when a resource has been updated.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/audit-event-write"
-        },
-        "name": "Audit Event Write Profile",
-        "description": "Defines constraints on the AuditEvent Resource to record when a resource has been written.",
         "exampleBoolean": false
       },
       {
@@ -145,8 +145,8 @@
         "reference": {
           "reference": "StructureDefinition/PublicHealthMeasure"
         },
-        "name": "Saner Public Health Measure",
-        "description": "Profile Saner Public Health Measure\nThe Public Health Measure Profile ensures that Measures are very well defined as an aid to automation\nof measures.  These are developed by The Saner Project team to ensure that the measure is well understood\nand computation of it can be automated from systems that have the measure data.",
+        "name": "Public Health Measure",
+        "description": "Profile Public Health Measure\nThe Public Health Measure Profile ensures that Measures are very well defined as an aid to automation\nof measures.  These are developed for this guide to ensure that a measure is well understood\nand computation of it can be automated from systems that have the measure data.",
         "exampleBoolean": false
       },
       {
@@ -159,9 +159,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/PublicHealthMeasureMetadataAttachments"
+          "reference": "StructureDefinition/PublicHealthMeasureMetadataAttachment"
         },
-        "name": "PublicHealthMeasureMetadataAttachments",
+        "name": "PublicHealthMeasureMetadataAttachment",
         "description": "Attachments providing resources containing essential content supporting a measure definition",
         "exampleBoolean": false
       },
@@ -169,32 +169,8 @@
         "reference": {
           "reference": "StructureDefinition/PublicHealthMeasureReport"
         },
-        "name": "Saner Public Health Measure Report",
-        "description": "Profile Saner Public Health Measure Report\n\nThe Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret\na report of a Public Health Measure.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/saner-resource-location"
-        },
-        "name": "Resource Location Profile",
-        "description": "Defines constraints on the Location Resource describing the location of resources (Beds and Devices).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/audit-event"
-        },
-        "name": "General Audit Event Requirements",
-        "description": "Defines general constraints on the AuditEvent Resource.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/saner-supporting-device"
-        },
-        "name": "Supporting Device Profile",
-        "description": "Defines constraints on the Device Resource for data communicating about supporting devices.",
+        "name": "Public Health Measure Report",
+        "description": "Profile Public Health Measure Report\n\nThe Public Health Measure Report Profile ensures that MeasureReports conforms to the minimal content required to properly interpret\na report of a Public Health Measure.",
         "exampleBoolean": false
       },
       {
@@ -338,7 +314,7 @@
           "reference": "ValueSet/MeasureGroups"
         },
         "name": "Measure Groups",
-        "description": "Measure Groups defined by the SANER Project",
+        "description": "Measure Groups illustrating measures for the FHIR SANER IG",
         "exampleBoolean": false
       },
       {
@@ -346,7 +322,7 @@
           "reference": "ValueSet/MeasurePopulations"
         },
         "name": "Measure Populations",
-        "description": "Measure Populations defined by The SANER Project",
+        "description": "Measure Populations illustrating measures for the FHIR SANER IG",
         "exampleBoolean": false
       },
       {
@@ -401,7 +377,7 @@
         "reference": {
           "reference": "ValueSet/PositiveResults"
         },
-        "name": "Confirmed COVID-19 Diagnosis",
+        "name": "COVID-19 Detected",
         "description": "Codes for a positive COVID-19 Diagnostic Test Result",
         "exampleBoolean": false
       },
@@ -498,15 +474,15 @@
           "reference": "CodeSystem/MeasureGroupSystem"
         },
         "name": "Measure Group System",
-        "description": "A Code System for Groups defined by The SANER Project",
+        "description": "A Code System for Groups",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "CodeSystem/MeasurePopulationSystem"
         },
-        "name": "Situationa Awareness Measure Populations",
-        "description": "A Code System for Situation Awareness Measure Populations defined by The SANER Project",
+        "name": "Situational Awareness Measure Populations",
+        "description": "A Code System for Situation Awareness Measure Populations",
         "exampleBoolean": false
       },
       {
@@ -522,7 +498,7 @@
           "reference": "CodeSystem/MeasuredValues"
         },
         "name": "Measured Values in Sample Measures",
-        "description": "A Code System for Populations in Sample Measures defined by The SANER Project",
+        "description": "A Code System for Populations in Sample Measures",
         "exampleBoolean": false
       },
       {
@@ -568,6 +544,7 @@
           "reference": "Library/ComputableNHSNMeasureLibrary"
         },
         "name": "ComputableNHSNMeasureLibrary",
+        "description": "This library contains references to the value sets used for the Computable NHSN Measure",
         "exampleCanonical": "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureLibrary"
       },
       {
@@ -1295,6 +1272,7 @@
           "reference": "Library/FEMAMeasureLibrary"
         },
         "name": "FEMAMeasureLibrary",
+        "description": "Example Library for the FEMA Measure",
         "exampleCanonical": "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureLibrary"
       },
       {
@@ -3445,7 +3423,7 @@
           "reference": "OperationDefinition/MeasureReport-aggregate"
         },
         "name": "MeasureReport-aggregate",
-        "description": "This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple measure reports.\nThe MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures **should** be aggregated by\nspecifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate.  In all cases, the MeasureReport resources\nbeing aggregated must reference the same Measure resource defining the MeasureReport to generate.\n                        ",
+        "description": "Aggregate two or more more Messure Report resources into a single MeasureReport.",
         "exampleBoolean": false
       },
       {
@@ -3693,6 +3671,7 @@
           "reference": "Library/NHSNMeasureLibrary"
         },
         "name": "NHSNMeasureLibrary",
+        "description": "This Library contains value sets for the example NHSN Measure",
         "exampleCanonical": "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureLibrary"
       },
       {
@@ -4725,11 +4704,16 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "intro.html",
+          "title": "Introduction and Overview",
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "background.html",
-              "title": "Background",
+              "nameUrl": "introduction.html",
+              "title": "Introduction",
               "generation": "markdown"
             },
             {
@@ -4738,72 +4722,20 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "measure_aggregation.html",
-              "title": "Aggregatating Measure Reports",
+              "nameUrl": "use_cases.html",
+              "title": "Use Cases",
               "generation": "markdown"
-            },
-            {
-              "nameUrl": "measure_automation.html",
-              "title": "Computing Measures",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "phrase_book.html",
-              "title": "A Phrase Book for Measures Supporting Automation",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "measure_creation.html",
-              "title": "Creating an Example Measure",
-              "generation": "markdown",
-              "page": [
-                {
-                  "nameUrl": "measure_group_covid19_patients.html",
-                  "title": "Creating the Patients with COVID 19 Group",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "measure_group_hospital_acquired_covid19_patients.html",
-                  "title": "Creating the Hospital Acquired COVID 19 Group",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "measure_group_covid19_deaths.html",
-                  "title": "Creating the COVID 19 Deaths Group",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "measure_group_ventilators.html",
-                  "title": "Creating the Ventilator Avaiability Group",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "measure_group_beds.html",
-                  "title": "Creating the Bed Avaiability Group",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "measure_library.html",
-                  "title": "Sample Measure Library",
-                  "generation": "markdown"
-                }
-              ]
             }
           ]
         },
         {
-          "nameUrl": "architecture.html",
-          "title": "Architecture",
+          "nameUrl": "spec.html",
+          "title": "Specification Details",
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "use_cases.html",
-              "title": "Use Cases",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "technology_environment.html",
-              "title": "Technology Environment",
+              "nameUrl": "architecture.html",
+              "title": "Architecture and Implementation",
               "generation": "markdown"
             },
             {
@@ -4847,10 +4779,118 @@
               "nameUrl": "transaction-5.html",
               "title": "Communicate Results",
               "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "integration.html",
+          "title": "Integration with Existing Systems",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "technology_environment.html",
+              "title": "Technology Environment",
+              "generation": "markdown"
             },
             {
               "nameUrl": "CSV_Conversion.html",
-              "title": "CSV Conversion",
+              "title": "Exchanging data via CSV Files",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_aggregation.html",
+              "title": "Aggregatating Measure Reports",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_automation.html",
+              "title": "Computing Measures",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "conformance.html",
+          "title": "Testing and Conformance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "profiles_and_extensions.html",
+              "title": "Profiles and Extensions",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "vocabulary.html",
+              "title": "Terminology Resources",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "test_plan.html",
+              "title": "Test Plan",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "examples.html",
+              "title": "Examples",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "hospital_capacity_examples.html",
+                  "title": "Hospital Capacity Measures and Reports",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "laboratory_reporting_examples.html",
+                  "title": "Laboratory Reporting Examples",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "automation_testing_examples.html",
+                  "title": "Automation Testing Examples",
+                  "generation": "markdown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nameUrl": "measure_creation.html",
+          "title": "Defining a Measure from Essential Elements of Information",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "phrase_book.html",
+              "title": "A Phrase Book for Measures Supporting Automation",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_group_covid19_patients.html",
+              "title": "Creating the Patients with COVID 19 Group",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_group_hospital_acquired_covid19_patients.html",
+              "title": "Creating the Hospital Acquired COVID 19 Group",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_group_covid19_deaths.html",
+              "title": "Creating the COVID 19 Deaths Group",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_group_ventilators.html",
+              "title": "Creating the Ventilator Avaiability Group",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_group_beds.html",
+              "title": "Creating the Bed Avaiability Group",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "measure_library.html",
+              "title": "Sample Measure Library",
               "generation": "markdown"
             }
           ]
@@ -4861,21 +4901,14 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "vocabulary.html",
-          "title": "Vocabulary",
+          "nameUrl": "supporting_vocabulary.html",
+          "title": "Supporting Vocabulary",
           "generation": "markdown"
         },
         {
-          "nameUrl": "test_plan.html",
-          "title": "Test Plan",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "examples.html",
-              "title": "Examples",
-              "generation": "markdown"
-            }
-          ]
+          "nameUrl": "fluent_query.html",
+          "title": "Fluent Query",
+          "generation": "markdown"
         }
       ]
     },
