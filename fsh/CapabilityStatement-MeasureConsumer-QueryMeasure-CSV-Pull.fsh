@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_QueryMeasure_CSV_Pull"
 * title = "Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option."
-* date = "2020-10-06T01:26:18.27027-04:00"
+* date = "2020-10-08T15:21:43.603405-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option."
 * format[0] = #xml

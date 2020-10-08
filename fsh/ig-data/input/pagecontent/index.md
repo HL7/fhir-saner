@@ -46,10 +46,10 @@ This guide is organized into five main sections:
     <li><a href='profiles_and_extensions.html'>Profiles and Extensions</a></li>
     <li><a href='vocabulary.html'>Terminology Resources</a></li>
     <li><a href='test_plan.html'>Test Plan</a></li>
-    <li><details><summary>Test Data Sets</summary><ol>
+    <li><details><summary id='test-data'>Test Data Sets</summary><ol>
         <li><a href='hospital_capacity_examples.html'>Hospital Capacity Measure and Report Examples</a></li>
         <li><a href='laboratory_reporting_examples.html'>Laboratory Reporting Measure and Report Examples</a></li>
-        <li><a href='automation_testing_examples.html'>Automation Testing Data</a></li>
+        <li id='automation-data'><a href='automation_testing_examples.html'>Automation Testing Data</a></li>
         </ol></details>
     </li>
 </ol>

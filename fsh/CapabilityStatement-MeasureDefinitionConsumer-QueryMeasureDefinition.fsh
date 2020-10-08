@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Definition Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer_QueryMeasureDefinition"
 * title = "Measure Definition Consumer implementing the Query Measure Definition transaction."
-* date = "2020-10-06T01:26:18.27027-04:00"
+* date = "2020-10-08T15:21:43.603405-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction."
 * format[0] = #xml

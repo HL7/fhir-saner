@@ -1,0 +1,1 @@
+[Enumerate hospital capacity testing examples](#todo)

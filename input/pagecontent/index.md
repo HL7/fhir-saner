@@ -40,30 +40,26 @@ This guide is organized into five main sections:
         </ol></details>
     </li>
     <li><details><summary>Operations</summary><ol>
-
-1. [Measure/$evaluate-measure](OperationDefinition-Measure-evaluate-measure.html) Evaluate the Measure
-2. [Measure/$report-csv](OperationDefinition-Measure-report-csv.html) Create or update a MeasureReport from CSV Format
-3. [MeasureReport/$aggregate](OperationDefinition-MeasureReport-aggregate.html) Aggregate MeeasureReport resources
-4. [MeasureReport/$read-csv](OperationDefinition-MeasureReport-read-csv.html) Read in CSV Format
-5. [MeasureReport/$search-csv](OperationDefinition-MeasureReport-search-csv.html) Search in CSV Format
-
+        <li><a href='OperationDefinition-Measure-evaluate-measure.html'>Measure/$evaluate-measure</a> Evaluate the Measure</li>
+        <li><a href='OperationDefinition-Measure-report-csv.html'>Measure/$report-csv</a> Create or update a MeasureReport from CSV Format</li>
+        <li><a href='OperationDefinition-MeasureReport-aggregate.html'>MeasureReport/$aggregate</a> Aggregate MeeasureReport resources</li>
+        <li><a href='OperationDefinition-MeasureReport-read-csv.html'>MeasureReport/$read-csv</a> Read in CSV Format</li>
+        <li><a href='OperationDefinition-MeasureReport-search-csv.html'>MeasureReport/$search-csv</a> Search in CSV Format</li>
         </ol></details>
     </li>
     <li><details><summary>Search Parameters</summary><ol>
-
-1. [code](SearchParameter-SearchParameter-code.html) Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource.
-2. [definition-text](SearchParameter-SearchParameter-definition-text.html) Enables definition resources to be discovered from text used in the resource definition.
-3. [disposition](SearchParameter-SearchParameter-disposition.html) Enables query of encounters by discharge disposition.
-
+        <li><a href='SearchParameter-SearchParameter-code.html'>code</a> Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
+        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a> Enables definition resources to be discovered from text used in the resource definition</li>
+        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a> Enables query of encounters by discharge disposition</li>
         </ol></details>
     </li>
     <li><a href='profiles_and_extensions.html'>Profiles and Extensions</a></li>
     <li><a href='vocabulary.html'>Terminology Resources</a></li>
     <li><a href='test_plan.html'>Test Plan</a></li>
-    <li><details><summary>Test Data Sets</summary><ol>
+    <li><details><summary id='test-data'>Test Data Sets</summary><ol>
         <li><a href='hospital_capacity_examples.html'>Hospital Capacity Measure and Report Examples</a></li>
         <li><a href='laboratory_reporting_examples.html'>Laboratory Reporting Measure and Report Examples</a></li>
-        <li><a href='automation_testing_examples.html'>Automation Testing Data</a></li>
+        <li id='automation-data'><a href='automation_testing_examples.html'>Automation Testing Data</a></li>
         </ol></details>
     </li>
 </ol>
