@@ -8,3 +8,4 @@
 * ig-data\input\pagecontent\laboratory_reporting_examples.md                            *
 *****************************************************************************************
 {% endcomment %} -->
+[Enumerate laboratory reporting testing examples](#todo)

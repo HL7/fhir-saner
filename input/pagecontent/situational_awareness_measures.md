@@ -22,7 +22,8 @@ emergencies (e.g., huricanes, wild fires, mass injury events, et cetera).
 
 ### Situational Awareness for Novel Epidemic Response
 Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially
-pandemic flu strains during the early formation of the Office of the National Coordinator in 2005.
+pandemic flu strains in 2005.  Since then, a number of pandemics have emerged requiring some level of situational
+awareness to support responses by public health agencies.
 
 2006
 : Bird Flu (H5N1)

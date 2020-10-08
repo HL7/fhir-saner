@@ -8,3 +8,4 @@
 * ig-data\input\pagecontent\hospital_capacity_examples.md                               *
 *****************************************************************************************
 {% endcomment %} -->
+[Enumerate automation testing examples](#todo)
