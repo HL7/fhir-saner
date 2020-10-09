@@ -36,21 +36,21 @@
 <polygon fill="none" stroke="black" points="913,-96 913,-171 1069,-171 1069,-96 913,-96"/>
 <text text-anchor="middle" x="991" y="-155.8" font-family="SansSerif" font-size="14.00">ICU</text>
 </g>
-<g id="clust11" class="cluster"><title>cluster_LDD</title>
-<polygon fill="none" stroke="black" points="731,-96 731,-171 905,-171 905,-96 731,-96"/>
-<text text-anchor="middle" x="818" y="-155.8" font-family="SansSerif" font-size="14.00">Labor and Delivery</text>
-</g>
 <g id="clust13" class="cluster"><title>cluster_ED</title>
-<polygon fill="none" stroke="black" points="556,-96 556,-171 723,-171 723,-96 556,-96"/>
-<text text-anchor="middle" x="639.5" y="-155.8" font-family="SansSerif" font-size="14.00">Emergency Department</text>
+<polygon fill="none" stroke="black" points="738,-96 738,-171 905,-171 905,-96 738,-96"/>
+<text text-anchor="middle" x="821.5" y="-155.8" font-family="SansSerif" font-size="14.00">Emergency Department</text>
 </g>
-<g id="clust10" class="cluster"><title>cluster_Laboratory</title>
-<polygon fill="none" stroke="black" points="350,-96 350,-171 548,-171 548,-96 350,-96"/>
-<text text-anchor="middle" x="449" y="-155.8" font-family="SansSerif" font-size="14.00">Laboratory</text>
+<g id="clust11" class="cluster"><title>cluster_LDD</title>
+<polygon fill="none" stroke="black" points="556,-96 556,-171 730,-171 730,-96 556,-96"/>
+<text text-anchor="middle" x="643" y="-155.8" font-family="SansSerif" font-size="14.00">Labor and Delivery</text>
 </g>
 <g id="clust12" class="cluster"><title>cluster_Imaging</title>
-<polygon fill="none" stroke="black" points="24,-24 24,-171 342,-171 342,-24 24,-24"/>
-<text text-anchor="middle" x="183" y="-155.8" font-family="SansSerif" font-size="14.00">Imaging</text>
+<polygon fill="none" stroke="black" points="230,-24 230,-171 548,-171 548,-24 230,-24"/>
+<text text-anchor="middle" x="389" y="-155.8" font-family="SansSerif" font-size="14.00">Imaging</text>
+</g>
+<g id="clust10" class="cluster"><title>cluster_Laboratory</title>
+<polygon fill="none" stroke="black" points="24,-96 24,-171 222,-171 222,-96 24,-96"/>
+<text text-anchor="middle" x="123" y="-155.8" font-family="SansSerif" font-size="14.00">Laboratory</text>
 </g>
 <!-- SEC -->
 <g id="node1" class="node"><title>SEC</title>
@@ -141,22 +141,22 @@
 <!-- EHR -->
 <g id="node10" class="node"><title>EHR</title>
 <g id="a_node10"><a xlink:href="technology_environment.html#ehr-systems" xlink:title="EHR Systems" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="682,-290 596,-290 596,-254 682,-254 682,-290"/>
-<text text-anchor="middle" x="639" y="-268.9" font-family="SansSerif" font-size="12.00">EHR Systems</text>
+<polygon fill="#fefece" stroke="#a80036" points="686,-290 600,-290 600,-254 686,-254 686,-290"/>
+<text text-anchor="middle" x="643" y="-268.9" font-family="SansSerif" font-size="12.00">EHR Systems</text>
 </a>
 </g>
 </g>
 <!-- DS -->
 <g id="node11" class="node"><title>DS</title>
 <g id="a_node11"><a xlink:href="technology_environment.html#departmental-systems" xlink:title="Departmental System" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="704,-215 574,-215 574,-179 704,-179 704,-215"/>
-<text text-anchor="middle" x="639" y="-193.9" font-family="SansSerif" font-size="12.00">Departmental System</text>
+<polygon fill="#fefece" stroke="#a80036" points="708,-215 578,-215 578,-179 708,-179 708,-215"/>
+<text text-anchor="middle" x="643" y="-193.9" font-family="SansSerif" font-size="12.00">Departmental System</text>
 </a>
 </g>
 </g>
 <!-- DS&#45;&gt;EHR -->
 <g id="edge6" class="edge"><title>DS&#45;&gt;EHR</title>
-<path fill="none" stroke="#a80036" d="M639,-215.3C639,-226.937 639,-242.213 639,-253.824"/>
+<path fill="none" stroke="#a80036" d="M643,-215.3C643,-226.937 643,-242.213 643,-253.824"/>
 </g>
 <!-- ICM -->
 <g id="node12" class="node"><title>ICM</title>
@@ -168,72 +168,72 @@
 </g>
 <!-- ICM&#45;&gt;DS -->
 <g id="edge4" class="edge"><title>ICM&#45;&gt;DS</title>
-<path fill="none" stroke="#a80036" d="M967.918,-140.228C952.166,-151.018 930.358,-164.136 909,-171 873.991,-182.252 781.155,-189.081 714.111,-192.695"/>
-<polygon fill="none" stroke="#a80036" points="713.804,-189.206 704.001,-193.226 714.171,-196.197 713.804,-189.206"/>
+<path fill="none" stroke="#a80036" d="M967.915,-140.218C952.162,-151.004 930.354,-164.121 909,-171 874.793,-182.02 784.534,-188.859 718.616,-192.541"/>
+<polygon fill="none" stroke="#a80036" points="718.052,-189.066 708.257,-193.105 718.433,-196.056 718.052,-189.066"/>
 </g>
 <!-- LIS -->
 <g id="node13" class="node"><title>LIS</title>
 <g id="a_node13"><a xlink:href="technology_environment.html#laboratory-information-systems-lis" xlink:title="Laboratory Information System" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="540,-140 358,-140 358,-104 540,-104 540,-140"/>
-<text text-anchor="middle" x="449" y="-118.9" font-family="SansSerif" font-size="12.00">Laboratory Information System</text>
+<polygon fill="#fefece" stroke="#a80036" points="214,-140 32,-140 32,-104 214,-104 214,-140"/>
+<text text-anchor="middle" x="123" y="-118.9" font-family="SansSerif" font-size="12.00">Laboratory Information System</text>
 </a>
 </g>
 </g>
 <!-- LIS&#45;&gt;DS -->
 <g id="edge2" class="edge"><title>LIS&#45;&gt;DS</title>
-<path fill="none" stroke="#a80036" d="M482.297,-140.135C502.196,-149.965 528.164,-162.083 552,-171 556.457,-172.667 561.077,-174.29 565.759,-175.855"/>
-<polygon fill="none" stroke="#a80036" points="564.832,-179.234 575.424,-178.983 566.988,-172.574 564.832,-179.234"/>
+<path fill="none" stroke="#a80036" d="M152.093,-140.172C172.143,-151.086 199.799,-164.366 226,-171 288.535,-186.834 465.516,-192.734 567.693,-194.86"/>
+<polygon fill="none" stroke="#a80036" points="567.879,-198.365 577.948,-195.066 568.02,-191.366 567.879,-198.365"/>
 </g>
 <!-- LnD -->
 <g id="node14" class="node"><title>LnD</title>
 <g id="a_node14"><a xlink:href="technology_environment.html#labor-and-delivery-systems" xlink:title="Labor and Delivery System" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="897,-140 739,-140 739,-104 897,-104 897,-140"/>
-<text text-anchor="middle" x="818" y="-118.9" font-family="SansSerif" font-size="12.00">Labor and Delivery System</text>
+<polygon fill="#fefece" stroke="#a80036" points="722,-140 564,-140 564,-104 722,-104 722,-140"/>
+<text text-anchor="middle" x="643" y="-118.9" font-family="SansSerif" font-size="12.00">Labor and Delivery System</text>
 </a>
 </g>
 </g>
 <!-- LnD&#45;&gt;DS -->
 <g id="edge3" class="edge"><title>LnD&#45;&gt;DS</title>
-<path fill="none" stroke="#a80036" d="M789.231,-140.161C771.684,-150.121 748.554,-162.364 727,-171 722.824,-172.673 718.494,-174.283 714.096,-175.821"/>
-<polygon fill="none" stroke="#a80036" points="712.761,-172.577 704.392,-179.075 714.986,-179.214 712.761,-172.577"/>
+<path fill="none" stroke="#a80036" d="M643,-140.3C643,-148.755 643,-159.131 643,-168.627"/>
+<polygon fill="none" stroke="#a80036" points="639.5,-168.824 643,-178.824 646.5,-168.824 639.5,-168.824"/>
 </g>
 <!-- PACS -->
 <g id="node15" class="node"><title>PACS</title>
 <g id="a_node15"><a xlink:href="technology_environment.html#picture-archival-and-communication-systems-pacs" xlink:title="Picture Archiving and Communication System (PACS)" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="333.5,-68 32.5,-68 32.5,-32 333.5,-32 333.5,-68"/>
-<text text-anchor="middle" x="183" y="-46.9" font-family="SansSerif" font-size="12.00">Picture Archiving and Communication System (PACS)</text>
+<polygon fill="#fefece" stroke="#a80036" points="539.5,-68 238.5,-68 238.5,-32 539.5,-32 539.5,-68"/>
+<text text-anchor="middle" x="389" y="-46.9" font-family="SansSerif" font-size="12.00">Picture Archiving and Communication System (PACS)</text>
 </a>
 </g>
 </g>
 <!-- RIS -->
 <g id="node16" class="node"><title>RIS</title>
 <g id="a_node16"><a xlink:href="technology_environment.html#radiology-information-systems-ris" xlink:title="Radiology Information System (RIS)" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="310.5,-140 101.5,-140 101.5,-104 310.5,-104 310.5,-140"/>
-<text text-anchor="middle" x="206" y="-118.9" font-family="SansSerif" font-size="12.00">Radiology Information System (RIS)</text>
+<polygon fill="#fefece" stroke="#a80036" points="516.5,-140 307.5,-140 307.5,-104 516.5,-104 516.5,-140"/>
+<text text-anchor="middle" x="412" y="-118.9" font-family="SansSerif" font-size="12.00">Radiology Information System (RIS)</text>
 </a>
 </g>
 </g>
 <!-- PACS&#45;&gt;RIS -->
 <g id="edge7" class="edge"><title>PACS&#45;&gt;RIS</title>
-<path fill="none" stroke="#a80036" d="M188.685,-68.3034C192.251,-79.1537 196.827,-93.0833 200.38,-103.896"/>
+<path fill="none" stroke="#a80036" d="M394.685,-68.3034C398.251,-79.1537 402.827,-93.0833 406.38,-103.896"/>
 </g>
 <!-- RIS&#45;&gt;DS -->
 <g id="edge1" class="edge"><title>RIS&#45;&gt;DS</title>
-<path fill="none" stroke="#a80036" d="M246.906,-140.003C274.432,-150.697 311.807,-163.794 346,-171 418.96,-186.376 504.038,-192.345 563.659,-194.636"/>
-<polygon fill="none" stroke="#a80036" points="563.625,-198.136 573.744,-194.997 563.876,-191.141 563.625,-198.136"/>
+<path fill="none" stroke="#a80036" d="M459.387,-140.067C486.392,-149.587 520.941,-161.419 552,-171 557.516,-172.702 563.238,-174.408 569.004,-176.087"/>
+<polygon fill="none" stroke="#a80036" points="568.144,-179.481 578.721,-178.878 570.076,-172.753 568.144,-179.481"/>
 </g>
 <!-- ED -->
 <g id="node17" class="node"><title>ED</title>
 <g id="a_node17"><a xlink:href="technology_environment.html#emergency-department-systems" xlink:title="ED System" target="parent">
-<polygon fill="#fefece" stroke="#a80036" points="676,-140 602,-140 602,-104 676,-104 676,-140"/>
-<text text-anchor="middle" x="639" y="-118.9" font-family="SansSerif" font-size="12.00">ED System</text>
+<polygon fill="#fefece" stroke="#a80036" points="820,-140 746,-140 746,-104 820,-104 820,-140"/>
+<text text-anchor="middle" x="783" y="-118.9" font-family="SansSerif" font-size="12.00">ED System</text>
 </a>
 </g>
 </g>
 <!-- ED&#45;&gt;DS -->
 <g id="edge5" class="edge"><title>ED&#45;&gt;DS</title>
-<path fill="none" stroke="#a80036" d="M639,-140.3C639,-148.755 639,-159.131 639,-168.627"/>
-<polygon fill="none" stroke="#a80036" points="635.5,-168.824 639,-178.824 642.5,-168.824 635.5,-168.824"/>
+<path fill="none" stroke="#a80036" d="M769.241,-140.362C760.231,-150.651 747.629,-163.168 734,-171 728.904,-173.929 723.449,-176.528 717.836,-178.831"/>
+<polygon fill="none" stroke="#a80036" points="716.398,-175.633 708.276,-182.436 718.867,-182.183 716.398,-175.633"/>
 </g>
 </g>
 </svg>

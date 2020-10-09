@@ -29,6 +29,10 @@
           {
             "code": "840544004",
             "display": "Suspected disease caused by severe acute respiratory coronavirus 2 (situation)"
+          },
+          {
+            "code": "882784691000119100",
+            "display": "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
           }
         ]
       }

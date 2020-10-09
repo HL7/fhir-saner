@@ -14,7 +14,7 @@
     <a href="index.html">IG Home</a>
   </li>
   <li>
-    <a href="toc.html">Table of Contents</a>
+    <a href="toc.html">Contents</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
@@ -33,7 +33,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Architecture and Implementation
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Architecture & Implementation
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -70,7 +70,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integration with Existing Systems
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integrating with Existing Systems
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -89,7 +89,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing and Conformance
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing & Conformance
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -114,7 +114,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Defining a Measure
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Defining Measures
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">

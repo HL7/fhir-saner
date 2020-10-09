@@ -157,19 +157,6 @@ This scenario is planned for the second cycle of testing and involves the Measur
 available for use. The new Computable Measure Definition will result in at least one different calculated result in a Measure Report based on the
 provided test data.  This scenario otherwise follows the Automated Measure Computation and Reporting scenario
 
-#### Automation Test Data
-
-The [test data](index.html#automation-data) were developed with the following questions in mind.  Using data gathered electronically from an EHR:
-
-* Can it accurately and consistently be discerned that an inpatient with COVID-19 was admitted on the previous day?
-* Can it accurately and consistently be discerned that an inpatient had a positive viral laboratory result for SARS-Co-V-2, the organisms causing COVID-19? Likewise can it accurately and consistently be discerned when they did not?
-* Can it accurately and consistently be discerned if a patient is suspected of COVID-19 by ICD-10-CM / SNOMED CT diagnosis or problem list codes in the absence of a positive laboratory test for SARS-Co-V-2, the organisms causing COVID-19? Likewise can it accurately and consistently be discerned when they did not?
-* Can it accurately and consistently be determined that a patient has had a specimen collected in the previous 14 days that was positive for SARS-Co-V-2, the organisms causing COVID-19? The scenarios tested will include those where specimens were collected prior to admission. Likewise can it accurately and consistently be discerned when they did not?
-* Can it accurately and consistently be determined that the only prior positive viral laboratory result for SARS-Co-V-2, the organisms causing COVID-19 was collected on the day of Connectathon?
-* Can it be identified accurately and consistently that an inpatient’s location is or is not an intensive care unit?
-* Can it accurately and consistently be determined that a patient is located in the Emergency Department at the time of Connectathon, or that patient is not?
-* Can it accurately and consistently be determined that a patient was on a mechanical ventilator on the day of Connectathon, or that he was not?
-
 ### Reporting in CSV Format
 Send CSV Data to a system for reporting.
 
