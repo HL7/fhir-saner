@@ -189,14 +189,14 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
-  Table of Contents: toc.html
+  Contents: toc.html
 
   Introduction:
     Scope: introduction.html
     Situational Awareness Measures: situational_awareness_measures.html
     Use Cases: use_cases.html
 
-  Architecture and Implementation:
+  Architecture & Implementation:
     Architecture: architecture.html
     Security Considerations: security_considerations.html
     Actors: actors.html
@@ -208,13 +208,13 @@ menu:
     Communicate Results: transaction-5.html
     Profiles and Extensions: profiles_and_extensions.html
 
-  Integration with Existing Systems:
+  Integrating with Existing Systems:
     Technology Environment: technology_environment.html
     Exchanging data via CSV Files: CSV_Conversion.html
     Aggregatating Measure Reports: measure_aggregation.html
     Computing Measures: measure_automation.html
 
-  Testing and Conformance:
+  Testing & Conformance:
     Profiles and Extensions: profiles_and_extensions.html
     Terminology Resources: vocabulary.html
     Test Plan: test_plan.html
@@ -222,7 +222,7 @@ menu:
     Laboratory Reporting Measure and Report Examples: laboratory_reporting_examples.html
     Automation Testing Data: automation_testing_examples.html
 
-  Defining a Measure:
+  Defining Measures:
     Defining a Measure from Essential Elements of Information: measure_creation.html
     A Phrase Book for Measures Supporting Automation: phrase_book.html
     Creating the Patients with COVID 19 Group: measure_group_covid19_patients.html
