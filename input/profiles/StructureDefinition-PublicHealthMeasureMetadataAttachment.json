@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "PublicHealthMeasureMetadataAttachment",
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureMetadataAttachment",
+  "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureMetadataAttachment",
   "version": "0.1.0",
   "name": "PublicHealthMeasureMetadataAttachment",
   "title": "PublicHealthMeasureMetadataAttachment",
@@ -40,7 +40,7 @@
         "min": 1,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/saner/ValueSet/PublicHealthMeasureAttachmentTypes"
+          "valueSet": "http://hl7.org/fhir/uv/fhir-saner/ValueSet/PublicHealthMeasureAttachmentTypes"
         }
       },
       {

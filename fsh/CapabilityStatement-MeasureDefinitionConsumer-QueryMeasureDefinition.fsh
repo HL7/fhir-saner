@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Definition Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer_QueryMeasureDefinition"
 * title = "Measure Definition Consumer implementing the Query Measure Definition transaction."
-* date = "2020-10-08T20:44:38.564608-04:00"
+* date = "2020-10-11T14:21:45.012146-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction."
 * format[0] = #xml
@@ -16,7 +16,7 @@ Description: "Defines the requirements for the Measure Definition Consumer imple
 * rest[clientSlice].mode = #client
 
 * rest[clientSlice].resource[MeasureSlice].type = #Measure
-* rest[clientSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+* rest[clientSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure"
 
 * rest[clientSlice].resource[MeasureSlice].interaction[0].code = #read
 * rest[clientSlice].resource[MeasureSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

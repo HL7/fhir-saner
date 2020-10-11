@@ -11,7 +11,7 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventCreate",
+  "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/AuditEventCreate",
   "version": "0.1.0",
   "name": "AuditEventCreate",
   "title": "Audit Event Create Profile",
@@ -63,7 +63,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "AuditEvent",
-  "baseDefinition": "http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase",
+  "baseDefinition": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/AuditEventBase",
   "derivation": "constraint",
   "differential": {
     "element": [

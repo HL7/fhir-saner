@@ -11,7 +11,7 @@
       "valueCode": "anonymous"
     }
   ],
-  "url": "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure",
+  "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure",
   "version": "0.1.0",
   "name": "PublicHealthMeasure",
   "title": "Public Health Measure",
@@ -104,7 +104,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/saner/StructureDefinition/ReportingPeriod"
+              "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/ReportingPeriod"
             ]
           }
         ]
@@ -136,7 +136,7 @@
         "comment": "draft - The resource is still in development. active - The resource is ready for piloting or normal use.  retired - resource has been deprecated or replaced.",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/saner/ValueSet/MeasureStatus"
+          "valueSet": "http://hl7.org/fhir/uv/fhir-saner/ValueSet/MeasureStatus"
         }
       },
       {
@@ -232,7 +232,7 @@
           {
             "code": "canonical",
             "targetProfile": [
-              "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureLibrary"
+              "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureLibrary"
             ]
           }
         ]
@@ -263,7 +263,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/saner/StructureDefinition/MeasureGroupAttributes"
+              "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes"
             ]
           }
         ]
@@ -315,7 +315,7 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/saner/ValueSet/MeasureRateAggregationValues"
+          "valueSet": "http://hl7.org/fhir/uv/fhir-saner/ValueSet/MeasureRateAggregationValues"
         }
       },
       {
@@ -368,7 +368,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/saner/StructureDefinition/MeasurePopulationAlternateCriteria"
+              "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasurePopulationAlternateCriteria"
             ]
           }
         ]
@@ -397,7 +397,7 @@
           {
             "code": "Expression",
             "profile": [
-              "http://hl7.org/fhir/saner/StructureDefinition/MeasureCriteria"
+              "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureCriteria"
             ]
           }
         ]

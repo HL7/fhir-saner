@@ -21,7 +21,7 @@ further describe the measure group content.
 The first step in describing these attributes is to indicate how the measure is scored.
 ```
  * with group[0].extension[groupAtts] do
- ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#queue-length
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring#queue-length
 ```
 
 Next, the measure describes the type of measure (e.g., structure, process or outcome). This measure is a structural measure,
@@ -77,7 +77,7 @@ Provide a code describing the initial population.
 ```
  * with group[0].population[0] do
  ** with code do
- *** coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Pats
+ *** coding = http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19Pats
  *** coding.display = "All COVID-19 Confirmed or Suspected Patients"
  *** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  *** text = "Patients with suspected or confirmed COVID-19 in any location."
@@ -111,11 +111,11 @@ The computable content "implements" the automated computation of the measure.
  *** expression = """
      // Start with encounters that were active during the reporting period. Note, this may find the same patient twice
      // because they may have had an ED encounter followed by an inpatient encounter both within the reporting period.
-     (%Base + '/Encounter?_include=Encounter:*&status=in-progress,finished'
-            + '&date=ge' + %ReportingPeriod.start +
-            + '&date=lt' + %ReportingPeriod.end
-     ).resolve().select(resource).
-     where(
+     findAll('Encounter',
+        including('subject','condition','reasonReference'),
+        with('status').equalTo('in-progress'|'finished'),
+        with('date').within(%ReportingPeriod)
+     ).onServers(%Base).where(
        iif(
          // The reason is a positive lab test result
          Observation.where(code.memberOf(%Covid19Labs.url) and value.memberOf(%PositiveResults.url)) or
@@ -124,25 +124,22 @@ The computable content "implements" the automated computation of the measure.
          ( Encounter.reasonCode | Condition.code ).memberOf(%SuspectedOrConfirmedCOVID19Diagnoses.url),
 
          iif(
-           // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days
-           Patient.distinct().where(
-             %Base + '/Observation?_count=1' +
-             '&status=registered,preliminary,final,amended,corrected' +
-             '&patient=' + $this.id +
-             '&date=gt' + (%ReportingPeriod.start - 14 days) +
-             '&code:in=' + %Covid19Labs.url +
-             '&value-concept:in=' + %PositiveResults.url
-           ).resolve().select(resource as Observation).exists(),
-
-           // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days
-           Patient.distinct().where(
-             %Base + '/Condition?_count=1'+
-             '&status:not=refuted&status:not=entered-in-error' +
-             '&patient=' + $this.id +
-             '&verificationStatus:not=refuted,entered-in-error' +
-             '&date=gt' + (%ReportingPeriod.start - 14 days) +
-             '&code:in=' + %SuspectedOrDiagnosedCOVID19.url,
-           ).resolve().select(resource as Condition).exists()
+           Patient.distinct()
+              .whereExists('Observation',
+                for('patient', $this),
+                with('status').equalTo(
+                    'registered' | 'preliminary' | 'final' | 'amended' | 'corrected'),
+                with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
+                with('code').in(%CovidLabs),
+                with('value-concept).in(%PositiveResults)
+           ).onServers(%Base), true,
+           Patient.distinct()
+              .whereExists('Condition',
+                for('patient', $this),
+                with('verification-status').notEqualTo('refuted'|'entered-in-error').
+                with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
+                with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)
+           ).exists()
          )
       )
     )
@@ -165,21 +162,18 @@ The computable content "implements" the automated computation of the measure.
 #### The Initial Query
 The first part of the computable content creates a query that will be resolved by the FHIRPath engine.
 ```
-     (%Base + '/Encounter?_include=Encounter:*&status=in-progress,finished'
-            + '&date=ge' + %ReportingPeriod.start +
-            + '&date=lt' + %ReportingPeriod.end
-     ).resolve().select(resource).
+     findAll('Encounter',
+        including('subject','condition','reasonReference'),
+        with('status').equalTo('in-progress'|'finished'),
+        with('date').within(%ReportingPeriod)
+     ).onServers(%Base).
 ```
-The `resolve()` function is used to resolve the query into a Resource (the Bundle returned from the
-query).  The `select(resource)` call is used to select resources in the returned Bundle.
-This query is designed to extract most of the essential data from Encounters during the reporting
-period. This is the exact kind of query that [FHIR Bulk Data Access](https://hl7.org/fhir/uv/bulkdata/)
-is intended to support. It uses _include=Encounter:* to ensure that referenced resources are also
-returned.  While the remainder of the query only uses Patient, Condition and Observation, the use of
-Encounter:* is written to:
-
-1. Simplify future maintenance which might reference other resources.
-2. Address the fact that Encounter:* is simpler and more widely implemented.
+The [`findAll()`](fluent_query.html#findAll) function is used to resolve the query into a Resource
+(the Bundle returned from the query).  This query is designed to extract most of the essential data from
+Encounters during the reporting period. This is the exact kind of query that
+[FHIR Bulk Data Access](https://hl7.org/fhir/uv/bulkdata/) is intended to support. It uses
+[`including('subject','condition','reasonReference')`](fluent_query.html#including) to ensure that referenced resources are also
+returned.
 
 #### Filtering Criteria by included resources
 The next part of the query is a where() clause which filters the resources returned by the first query.
@@ -225,14 +219,15 @@ diagnostic test for COVID-19 in the past two weeks.
 ```
       iif(
          // The patient has at least one laboratory diagnostic test confirming COVID-19 in the past 14 days
-         Patient.distinct().where(
-           %Base + '/Observation?_count=1' +
-           '&status=registered,preliminary,final,amended,corrected' +
-           '&patient=' + $this.id +
-           '&date=gt' + (%ReportingPeriod.start - 14 days) +
-           '&code:in=' + %Covid19Labs.url +
-           '&value-concept:in=' + %PositiveResults.url
-         ).resolve().select(resource as Observation).exists(),
+          Patient.distinct()
+              .whereExists('Observation',
+                for('patient', $this),
+                with('status').equalTo(
+                    'registered' | 'preliminary' | 'final' | 'amended' | 'corrected'),
+                with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
+                with('code').in(%CovidLabs),
+                with('value-concept).in(%PositiveResults)
+           ).onServers(%Base),
 ```
 
 The use of Patient.distinct() ensures that the query is performed ONLY once for each patient for whom their
@@ -240,16 +235,16 @@ is an encounter, given that a patient may have multiple encounters on the same d
 can be confirmed to be unneccessary.  However, a single skipped round-trip to perform a query is enough
 to make up for the use of the distinct() method.
 
-The query first establishes a limit on the number of results return to 1 using `_count=1` in the query above. This is because
-any matching result is sufficient to include the patient in the cohort, and limits the work of the server performing
-the query. This is an optimization that functions in some way similar to an EXISTS clause in SQL.
+The `whereExists()` function establishes a limit on the number of results return to 1 using `_count=1` in the
+query above. This is because any matching result is sufficient to include the patient in the cohort, and limits the work
+of the server performing the query. This is an optimization that functions in some way similar to an EXISTS clause in SQL.
 
 The query next ensures that only Observations with valid status values are returned (e.g., avoiding cancelled or entered-in-error
 test results).  This ensures that entered-in-error results aren't counted as positive.
 
-The query is performed on a per patient basis using `"&patient=" + $this.id`, and restricts the Observations to be only those for the selected the patient
-resource.  Some FHIR Servers limit the results that can be returned by a query to ensure that they are only for the given
-patient. Including this parameter
+The query is performed on a per patient basis using  [`for('patient', $this)`](fluent_query.html#for), and restricts the
+Observations to be only those for the selected the patient resource.  Some FHIR Servers limit the results that can be
+returned by a query to ensure that they are only for the given patient. Including this parameter
 1. Ensures compatibility with this server restriction criteria, and
 2. also ensures that the query does not include the patient when there is a positive result for a different patient.
 
@@ -262,15 +257,12 @@ Finally, the query restricts observations to only those matching codes in the [C
 where the resulting value is positive using the [Positive Results](ValueSet-PositiveResults.html) value set.
 ```
          // The patient has at least one condition with confirmed or suspected COVID-19 in the past 14 days
-         Patient.distinct().where(
-           %Base + '/Condition?_count=1'+
-           '&status:not=refuted&status:not=entered-in-error' +
-           '&patient=' + $this.id +
-           '&verificationStatus:not=refuted,entered-in-error' +
-           '&date=gt' + (%ReportingPeriod.start - 14 days) +
-           '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url
-         )
-       ).resolve().select(resource as Condition).exists()
+         Patient.distinct().whereExists('Condition',
+            for('patient', $this),
+            with('verification-status').notEqualTo('refuted'|'entered-in-error').
+            with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
+            with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)
+         ).exists()
      )
 ```
 NOTE: Some lab results may be reported in a panel form using observation.component.code and observation.component.value. To query for lab

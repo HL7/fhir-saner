@@ -3,7 +3,7 @@
   "id": "MeasureConsumer-Pull-Questionnaire",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/CapabilityStatementWithSlices"
+      "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/CapabilityStatementWithSlices"
     ]
   },
   "rest": [
@@ -568,7 +568,7 @@
   ],
   "name": "MeasureConsumer_Pull_Questionnaire",
   "title": "Measure Consumer implementing the Pull Option and the Questionnaire Option.",
-  "date": "2020-10-08T20:44:38.564608-04:00",
+  "date": "2020-10-11T14:21:45.012146-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Consumer implementing the Pull Option and the Questionnaire Option.",
   "format": [

@@ -37,7 +37,7 @@ Description: "Condition for Test Case 5a: Only positive collected today w/ outco
 * identifier.system = "http://sanerproject.org/test/Condition"
 * identifier.value = "Con456789"
 * subject = Reference(Patient5a)
-* code = SCT#882784691000119100 "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+* code = SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 * onsetDateTime = 2020-09-09
 
 

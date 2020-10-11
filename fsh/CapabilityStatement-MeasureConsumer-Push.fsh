@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Push"
 * title = "Measure Consumer implementing the Push Option."
-* date = "2020-10-08T20:44:38.564608-04:00"
+* date = "2020-10-11T14:21:45.012146-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Push Option."
 * format[0] = #xml
@@ -16,7 +16,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * rest[serverSlice].mode = #server
 
 * rest[serverSlice].resource[MeasureReportSlice].type = #MeasureReport
-* rest[serverSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport"
+* rest[serverSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureReport"
 
 * rest[serverSlice].resource[MeasureReportSlice].interaction[0].code = #create
 * rest[serverSlice].resource[MeasureReportSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

@@ -3,7 +3,7 @@
   "id": "MeasureDefinitionSource-QueryMeasureDefinition",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/CapabilityStatementWithSlices"
+      "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/CapabilityStatementWithSlices"
     ]
   },
   "rest": [
@@ -13,7 +13,7 @@
         {
           "type": "Measure",
           "supportedProfile": [
-            "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+            "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure"
           ],
           "interaction": [
             {
@@ -577,7 +577,7 @@
   ],
   "name": "MeasureDefinitionSource_QueryMeasureDefinition",
   "title": "Measure Definition Source implementing the Query Measure Definition transaction.",
-  "date": "2020-10-08T20:44:38.564608-04:00",
+  "date": "2020-10-11T14:21:45.012146-04:00",
   "kind": "requirements",
   "description": "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction.",
   "format": [

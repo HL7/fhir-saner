@@ -3,7 +3,7 @@
   "id": "MeasureSource-Aggregate",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/CapabilityStatementWithSlices"
+      "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/CapabilityStatementWithSlices"
     ]
   },
   "rest": [
@@ -13,12 +13,12 @@
         {
           "type": "MeasureReport",
           "supportedProfile": [
-            "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport"
+            "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureReport"
           ],
           "operation": [
             {
               "name": "aggregate",
-              "definition": "http://hl7.org/fhir/saner/OperationDefinition/MeasureReport-aggregate",
+              "definition": "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/MeasureReport-aggregate",
               "documentation": "Aggregate"
             }
           ]
@@ -62,7 +62,7 @@
   ],
   "name": "MeasureSource_Aggregate",
   "title": "Measure Source implementing the Aggregate Option.",
-  "date": "2020-10-08T20:44:38.564608-04:00",
+  "date": "2020-10-11T14:21:45.012146-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the Aggregate Option.",
   "format": [

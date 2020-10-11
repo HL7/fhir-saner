@@ -3,7 +3,7 @@ of a measure.
 
 ### Conventions in this Section
 The definitions for these proposed groupings appear below.  For simplicity and brevity, the definitions below are provided in a
-slightly modified version of the [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) notation.  The modification
+slightly modified version of the [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/2020May/HL7/fhir-shorthand/) notation.  The modification
 introduces "with _fieldparts_ do" keyword to shorten repetitions.
 
 For example:
@@ -19,6 +19,9 @@ Would be the same as
 *   name.given[1] = "Rob"
 *   name.last = "Williams"
 ```
+
+FHIRPath Expressions used for this measure will use the functions defined by [FluentQuery](fluent_query.html) defined
+in Appendix B of this guide to make the expressions more readable.
 
 NOTE: The the [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html) may vary slightly from the
 text in this section.
@@ -61,7 +64,7 @@ it.
 
 ```
  * name = "ComputableCDCPatientImpactAndHospitalCapacity"
- * url = "http://hl7.org/fhir/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
+ * url = "http://hl7.org/fhir/uv/fhir-saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
  * title = "Patient Impact and Hospital Capacity"
 ```
 
@@ -85,7 +88,7 @@ Details about the measure library for this sample measure can be found in the
 [Sample Measure Library](measure_library.html) page.
 
 ```
- * library = "http://hl7.org/fhir/saner/Library/ComputableNHSNMeasureLibrary"
+ * library = "http://hl7.org/fhir/uv/fhir-saner/Library/ComputableNHSNMeasureLibrary"
 ```
 
 ### Patient Impact Data Elements

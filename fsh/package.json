@@ -26,12 +26,8 @@
   "author": "HL7 International",
   "maintainers": [
     {
-      "name": "HL7 Patient Administration Workgroup",
-      "url": "http://hl7.org/Special/committees/pafm/index.cfm"
-    },
-    {
-      "name": "Audacious Inquiry",
-      "url": "http://ainq.com"
+      "name": "HL7 Public Health Workgroup",
+      "url": "http://hl7.org/Special/committees/pher/index.cfm"
     },
     {
       "name": "Keith W. Boone",

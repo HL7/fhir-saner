@@ -60,18 +60,21 @@ The functions supporting FluentQuery are defined below.
 
 ####Search Functions
 ##### `findAll(ResourceType [, QueryFunctionExpression]*)`
+<span id='findAll'> </span>
 The `findAll` function constructs a relative search URL for the specified resource type, appending
 the queries specified by any of the QueryFunctionExpression values separated by an `&`, and returns
 this in a string.  When executed, this query will return all results including those returned via
 pagination.
 
 ##### `whereExists(ResourceType [, QueryFunctionExpression]*)`
+<span id='whereExists'> </span>
 The `whereExists` function constructs a relative search URL for the specified resource type, adds
 `_count=1` to it, and appends the queries specified by any of the QueryFunctionExpression values
 separated by an `&`, and returns this in a string.  This query is used for existence tests.
 
 #### Query Execution Functions
 ##### `onServers([reliability, ] Servers*)`
+<span id='onServers'> </span>
 The onServers function executes a search on the specified servers.  Servers is a list of fully qualified
 base URLs.  findAll queries resolve the data on all servers (including all pages from each server), and
 then selects entry.resource from all returned Bundle resources.  The `whereExists` query returns the first
@@ -99,10 +102,12 @@ The query parameter name functions start the first half of a query parameter to 
 simply return the name as a string
 
 ##### `with(Name)`
+<span id='with'> </span>
 The with function constructs the first half of a named query parameter.  It should be followed by a Query
 Parameter Value Function to construct the second half (the part containing the equals sign).
 
 ##### `for(Name, Reference|Resource|Identifier)`
+<span id='for'> </span>
 The for function constructs a complete query parameter that matches a resource or identifier.
 
 If the first parameter is a reference or resource id, the query parameter is written as Name=Reference.
@@ -114,11 +119,13 @@ If the second parameter is an identifier, this is converted to a reference by id
 written as `Name:identifer=Identifier`.
 
 ##### `including(Names)`
+<span id='including'> </span>
 The including function specifies what other resources should be included.  If any value in `Names` doesn't
 start with a resource type, it is prepended with the `ResourceType` value(s) specified in `findAll` or
 `whereExists` above.
 
 ##### `has(Name)`
+<span id='has'> </span>
 The `has` function constructs the first half of a named query parameter supporting
 [_has](https://www.hl7.org/fhir/search.html#has) searches.  The value will be `_has:Name`.  Chained
 has are possible. It should be followed by a Query Parameter Value function to construct the second
@@ -140,6 +147,7 @@ Period parameter values work with Date, DateTime, Instant and Period data types.
 appropriate Period in these cases.
 
 ##### `equalTo(Values*)`
+<span id='equalTo'> </span>
 Appends =Values[1],Values[2],...,Values[n] to the query parameter.  Note that Values can repeat, or be a
 list, or both.  The following three expressions are equivalent:
 ```
@@ -148,9 +156,11 @@ equalTo('in-progress'|'finished')
 equalTo('in-progress,finished')
 ```
 ##### `equalToComposite(Value1, Value2)`
+<span id='equalToComposite'> </span>
 Appends =Value1$Value2 to the query.
 
 ##### `notEqualTo(Values*)`
+<span id='notEqualTo'> </span>
 Appends =neValues[1],Values[2],...,Values[n] to the query parameter. Note that Values can repeat, or be a
 list, or both. The following three expressions are equivalent:
 ```
@@ -160,21 +170,35 @@ notEqualTo('in-progress,finished')
 ```
 
 ##### `greaterThan(Value)`, `greaterThanOrEqualTo(Value)`, `lessThan(Value)`, `lessThanOrEqualTo(Value)`, `approximately(Value)`
+<span id='greaterThan'> </span>
+<span id='greaterThanOrEqualTo'> </span>
+<span id='lessThan'> </span>
+<span id='lessThanOrEqualTo'> </span>
+<span id='approximately'> </span>
 Appends =prefixValue to the query parameter, where prefix is gt, ge, lt, le, or ap appropriately.  Value
 must be a singular value.
 
 ##### `startsAfter(Period)`, `endsBefore(Period)`
+<span id='startsAfter'> </span>
+<span id='endsBefore'> </span>
 If Period is any date type, promotes that to a Period first.
 Appends `=prefixValue` to the query parameter, where prefix is sa or eb respectively, and Value is `Period.start`
 or `Period.end` respectively.
 
 ##### `within(Period)`
+<span id='within'> </span>
 If Period is any date type, promotes that to a Period first.
 Given name is the Query Parameter name, appends `=gtPeriod.start&name=ltPeriod.end` to the query parameter.  If end is not present
 (an open period at the end), then it only appends =gtPeriod.start to the query parameter (this is one of the functions that
 needs access to the focus)
 
 ##### `not(token)`, `text(token)`, `above(token|uri)`, `below(token|uri)`, `in(uri)`, `notIn(uri)`
+<span id='not'> </span>
+<span id='text'> </span>
+<span id='above'> </span>
+<span id='below'> </span>
+<span id='in'> </span>
+<span id='notIn'> </span>
 Appends `:modifier=token|uri` to the query parameter, where modifier is `not`, `text`, `above`, `below`, `in`,
 or `not-in` appropriately.
 

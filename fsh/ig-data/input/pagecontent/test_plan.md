@@ -103,7 +103,7 @@ The CSV Measure Consumer provides access to aggregated or fine-grained data gath
 
 #### CSV Measure Consumer Preparation
 1. Be able to parse a MeasureReport resource for the CDC Measure and store it in your system.
-2. Download example resources here: http://build.fhir.org/ig/HL7/fhir-saner/examples.json.zip
+2. Download example resources from this guide.
 3. If you're doing the publication scenario, have a server that supports the [Measure/$report-csv](OperationDefinition-Measure-report-csv.html) operation.
 4. Respond to the the MeasureReport/$convert Operation to convert a CSV file to convert from the CSV format to one or more MeasureReport resources .
 5. Respond to the the MeasureReport/$report Operation to submit a CSV file to create from the CSV format one or more MeasureReport resources.
@@ -299,10 +299,10 @@ handled gracefully in a way appropriate to the SUT functionality.
 * Submit a non-FHIR data (random data)
   * The receiver should fail (except in the case where allowances have been made for CSV conversion).
 * Submit a valid FHIR Observation (from fhir core one of the examples)
-  * e.g., http://build.fhir.org/observation-example-f001-glucose.html
+  * e.g., http://hl7.org/fhir/R4/observation-example-f001-glucose.html
   * The receiver should fail, as the resource does not meet the expectations from the API.
 * Submit a valid FHIR Measure that is not SANER compliant (e.g. one of the Measure examples in the Core FHIR specification).
-  * e.g., http://build.fhir.org/measurereport-cms146-cat3-example.html
+  * e.g., http://hl7.org/fhir/R4/measurereport-cms146-cat3-example.html
   * The reciever may succeed or fail.  If the receiver as a FHIR Server, it would generally accept resources for a wide variety of use
     cases.  A receiver designed specifically to support only those capabilities defined by this guide may reject the submission because
     it does not meet the business rules associated with the use of this endpoint.

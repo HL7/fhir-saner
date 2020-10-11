@@ -3,7 +3,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
    <h3>Patient Impact and Hospital Capacity</h3>
-   <p>The url for this measure is <code>http://hl7.org/fhir/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity</code>.
+   <p>The url for this measure is <code>http://hl7.org/fhir/uv/fhir-saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity</code>.
    </p>
    <p>This measure demonstrates automated reporting on bed availability and use at a facility
       location based on CDC/NHSN reporting requirements. It is used to illustrate automation
@@ -38,7 +38,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem#Encounters Encounters</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem#Encounters Encounters</li>
          </ul>
       </dd>
    </dl>
@@ -67,7 +67,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Pats All COVID-19 Confirmed or Suspected Patients</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19Pats All COVID-19 Confirmed or Suspected Patients</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#initial-population </li>
@@ -99,7 +99,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem#AcquiredCovid Acquired COVID-19 in Hospital</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem#AcquiredCovid Acquired COVID-19 in Hospital</li>
          </ul>
       </dd>
    </dl>
@@ -119,7 +119,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19HospPats Hospitalized COVID-19 Patients</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19HospPats Hospitalized COVID-19 Patients</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#initial-population </li>
@@ -137,7 +137,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19HOPats Hospital Onset COVID-19 Patients</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19HOPats Hospital Onset COVID-19 Patients</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#numerator </li>
@@ -157,7 +157,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#cumC19HOPats Cumulative Hospital Onset COVID-19 Patients</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#cumC19HOPats Cumulative Hospital Onset COVID-19 Patients</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#denominator </li>
@@ -201,7 +201,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem#CovidDeaths COVID-19 Deaths</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem#CovidDeaths COVID-19 Deaths</li>
          </ul>
       </dd>
    </dl>
@@ -221,7 +221,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Pats All COVID-19 Confirmed or Suspected Patients</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19Pats All COVID-19 Confirmed or Suspected Patients</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#initial-population </li>
@@ -243,7 +243,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Died COVID-19 Patient Deaths</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19Died COVID-19 Patient Deaths</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#numerator </li>
@@ -265,7 +265,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#cumC19Died Cumulative COVID-19 Patient Deaths</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#cumC19Died Cumulative COVID-19 Patient Deaths</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#denominator </li>
@@ -309,7 +309,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem#Ventilators Ventilators</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem#Ventilators Ventilators</li>
          </ul>
       </dd>
    </dl>
@@ -331,7 +331,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVent Mechanical Ventilators</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numVent Mechanical Ventilators</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#denominator </li>
@@ -349,7 +349,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVentUse Mechanical Ventilators in Use</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numVentUse Mechanical Ventilators in Use</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#numerator </li>
@@ -369,10 +369,10 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVentAvail Mechanical Ventilators Available</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numVentAvail Mechanical Ventilators Available</li>
          </ul>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem#numerator-complement </li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem#numerator-complement </li>
          </ul>
       </dd>
    </dl>
@@ -390,7 +390,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem#Beds Beds</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem#Beds Beds</li>
          </ul>
       </dd>
    </dl>
@@ -412,7 +412,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBeds All Hospital Beds</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numTotBeds All Hospital Beds</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#denominator </li>
@@ -430,7 +430,7 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBedsOcc Hospital Beds Occupied</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numTotBedsOcc Hospital Beds Occupied</li>
          </ul>
          <ul>
             <li>http://terminology.hl7.org/CodeSystem/measure-population#numerator </li>
@@ -450,10 +450,10 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
       <dt>Codes</dt>
       <dd>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBedsAvail Hospital Beds Available</li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numTotBedsAvail Hospital Beds Available</li>
          </ul>
          <ul>
-            <li>http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem#numerator-complement </li>
+            <li>http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem#numerator-complement </li>
          </ul>
       </dd>
    </dl>

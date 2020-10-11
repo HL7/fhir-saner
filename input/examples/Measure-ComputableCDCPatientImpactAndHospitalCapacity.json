@@ -3,12 +3,12 @@
   "id": "ComputableCDCPatientImpactAndHospitalCapacity",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+      "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure"
     ]
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/saner/StructureDefinition/ReportingPeriod",
+      "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/ReportingPeriod",
       "valueTiming": {
         "repeat": {
           "frequency": 1,
@@ -22,7 +22,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -47,7 +47,7 @@
                 "coding": [
                   {
                     "code": "queue-length",
-                    "system": "http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -85,7 +85,7 @@
         "coding": [
           {
             "code": "Encounters",
-            "system": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
             "display": "Encounters"
           }
         ],
@@ -97,7 +97,7 @@
             "coding": [
               {
                 "code": "numC19Pats",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "All COVID-19 Confirmed or Suspected Patients"
               },
               {
@@ -112,7 +112,7 @@
             "name": "NumC19Pats",
             "description": "This expression finds encounters that were active or finished in the reporting period, and their referenced Patient, Condition and Observation resources.\nIt filters these based on cases where Encounter reports a reason or condition in the SuspectedOrConfirmedCOVID19Diagnoses value set, or\nwhere a positive lab test from the Covid19Labs valueset, or where the patient has any such associated Condition or Observation resources\nin the prior two weeks.",
             "language": "text/fhirpath",
-            "expression": "ase + 'Encounter?' +\n    '_include=Encounter:subject&_include=Encounter:condition&' +\n    '_include=Encounter:reasonReference' +\n    '&status=in-progress,finished' +\n    '&date=ge' + %ReportingPeriod.start.toString() +\n    '&date=lt' + %ReportingPeriod.end.toString()\n ).resolve().select(entry.resource).\n where(\n   iif(myMemberOf((Encounter.reasonCode | Condition.code), %SuspectedOrConfirmedCOVID19Diagnoses.url) |\n       Observation.where((myMemberOf(code, %Covid19Labs.url) and myMemberOf(value, %PositiveResults.url))\n     ), true,\n     iif(\n       Patient.distinct().where(\n         %Base + 'Observation?_count=1' +\n         '&status=registered,preliminary,final,amended,corrected' +\n         '&patient=' + $this.id +\n         '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +\n         '&code:in=' + %Covid19Labs.url +\n         '&value-concept:in=' + %PositiveResults.url\n       ).resolve().select(entry.resource as Observation).exists(), true,\n       Patient.distinct().where(\n         %Base + 'Condition?_count=1'+\n         '&patient=' + $this.id +\n         '&verification-status:not=refuted,entered-in-error' +\n         '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +\n         '&code:in=' + SuspectedOrConfirmedCOVID19Diagnoses.url\n       ).resolve().select(entry.resource as Condition).exists()\n     )\n  )\n)\n.distinct()\n.aggregate(\n  iif($total.subject contains $this.subject,\n      $total, $total | $this\n  )\n)"
+            "expression": "All('Encounter',\n    including('subject','condition','reasonReference'),\n    with('status').equalTo('in-progress'|'finished'),\n    with('date').within(%ReportingPeriod)\n ).onServers(%Base).\n where(\n   iif(myMemberOf((Encounter.reasonCode | Condition.code), %SuspectedOrConfirmedCOVID19Diagnoses.url) |\n       Observation.where((myMemberOf(code, %Covid19Labs.url) and myMemberOf(value, %PositiveResults.url))\n     ), true,\n     iif(\n       Patient.distinct()\n          .whereExists('Observation',\n            for('patient', $this),\n            with('status').equalTo(\n                'registered' | 'preliminary' | 'final' | 'amended' | 'corrected'),\n            with('date').greaterThan(%ReportingPeriod.start - 14 'days'),\n            with('code').in(%CovidLabs),\n            with('value-concept).in(%PositiveResults)\n       ).onServers(%Base), true,\n       Patient.distinct()\n          .whereExists('Condition',\n            for('patient', $this),\n            with('verification-status').notEqualTo('refuted'|'entered-in-error').\n            with('date').greaterThan(%ReportingPeriod.start - 14 'days'),\n            with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)\n       ).exists()\n     )\n  )\n)\n.distinct()\n.aggregate(\n  iif($total.subject contains $this.subject,\n      $total, $total | $this\n  )\n)"
           }
         }
       ],
@@ -132,7 +132,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -157,7 +157,7 @@
                 "coding": [
                   {
                     "code": "event-growth",
-                    "system": "http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -195,7 +195,7 @@
         "coding": [
           {
             "code": "AcquiredCovid",
-            "system": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
             "display": "Acquired COVID-19 in Hospital"
           }
         ],
@@ -207,7 +207,7 @@
             "coding": [
               {
                 "code": "numC19HospPats",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Hospitalized COVID-19 Patients"
               },
               {
@@ -230,7 +230,7 @@
             "coding": [
               {
                 "code": "numC19HOPats",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Onset COVID-19 Patients"
               },
               {
@@ -245,7 +245,7 @@
             "name": "NumC19HOPats",
             "description": "Filters the initial population by ruling out those patients whose first suspected or\nconfirmed diagnosis or lab result appears less than 14 days from admission.",
             "language": "text/fhirpath",
-            "expression": "Encounter.where(\n  iif(dateAdd(period.start,14 'days') > today(),\n    false,\n    iif( (%Base + 'Condition?_count=1'+\n       '&status:not=refuted&status:not=entered-in-error' +\n       '&patient=' + $this.subject +\n       '&verificationStatus:not=refuted,entered-in-error' +\n       '&date=gt' + (dateAdd($this.period.start,14 'days')).toString() +\n       '&date=le' + (dateSubtract($this.period.start,14 'days')).toString() +\n       '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url\n      ).resolve().select(entry.resource as Condition).exists(),\n      false,\n      (%Base + 'Observation?_count=1' +\n       '&status=registered,preliminary,final,amended,corrected' +\n       '&patient=' + $this.subject +\n       '&date=gt' + (dateSubtract($this.period.start, 14 'days')).toString() +\n       '&date=le' + (dateAdd($this.period.start,14 'days')).toString() +\n       '&code:in=' + %Covid19Labs.url +\n       '&value-concept:in=' + %PositiveResults.url\n      ).resolve().select(entry.resource as Observation)\n     .empty()\n    )\n  )\n).select(patient).resolve().trace('patients', id)"
+            "expression": "Encounter.where(\n  iif(dateAdd(period.start,14 'days') > today(),\n    false,\n    iif(\n      whereExists('Condition',\n        with('status').notEqualTo('refuted'|'entered-in-error'),\n        with('patient').equalTo($this.subject),\n        with('verificationStatus').notEqualTo('refuted'|'entered-in-error'),\n        with('date').greaterThan($this.period.start - 14 'days'),\n        with('date').lessThanOrEqualTo($this.period.start - 14 'days'),\n        with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)\n      ).onServers(%Base),\n      false,\n      whereExists('Observation',\n        with('status').equalTo('registered'|'preliminary'|'final'|'amended'|'corrected'),\n        with('patient').equalTo($this.subject),\n        with('date').greaterThan($this.period.start - 14 'days'),\n        with('date').lessThanOrEqualTo($this.period.start - 14 'days'),\n        with('code').in(%Covid19Labs.url)\n        with('value-concept').in(%PositiveResults.url)\n      ).onServers(%Base).not()\n    )\n  )\n).select(patient).resolve().trace('patients', id)"
           }
         },
         {
@@ -253,7 +253,7 @@
             "coding": [
               {
                 "code": "cumC19HOPats",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative Hospital Onset COVID-19 Patients"
               },
               {
@@ -318,7 +318,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -343,7 +343,7 @@
                 "coding": [
                   {
                     "code": "event-growth",
-                    "system": "http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -381,7 +381,7 @@
         "coding": [
           {
             "code": "CovidDeaths",
-            "system": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
             "display": "COVID-19 Deaths"
           }
         ],
@@ -393,7 +393,7 @@
             "coding": [
               {
                 "code": "numC19Pats",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "All COVID-19 Confirmed or Suspected Patients"
               },
               {
@@ -415,7 +415,7 @@
             "coding": [
               {
                 "code": "numC19Died",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "COVID-19 Patient Deaths"
               },
               {
@@ -438,7 +438,7 @@
             "coding": [
               {
                 "code": "cumC19Died",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative COVID-19 Patient Deaths"
               },
               {
@@ -503,7 +503,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -528,7 +528,7 @@
                 "coding": [
                   {
                     "code": "capacity",
-                    "system": "http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -566,7 +566,7 @@
         "coding": [
           {
             "code": "Ventilators",
-            "system": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
             "display": "Ventilators"
           }
         ],
@@ -578,7 +578,7 @@
             "coding": [
               {
                 "code": "numVent",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators"
               },
               {
@@ -601,7 +601,7 @@
             "coding": [
               {
                 "code": "numVentUse",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators in Use"
               },
               {
@@ -616,7 +616,7 @@
             "name": "NumVentUse",
             "description": "dentifies the number of ventilators in use by counting Patient with an Observation\nor Procedure resource from an appropriate value set indicating ventilator use.",
             "language": "text/fhirpath",
-            "expression": "( %Base + 'Encounter?' +\n  'status=in-progress,finished' +\n  '&_include=Encounter:subject' +\n  '&date=ge' + %ReportingPeriod.start.toString() +\n  '&date=lt' + %ReportingPeriod.end.toString()\n).resolve()\n.select(entry.resource as Patient)\n.where(\n  iif(\n    ( %Base + 'Observation?_count=1'+\n      '&status=registered,preliminary,final,amended,corrected' +\n      '&patient=' + $this.id +\n      '&verificationStatus:not=refuted,entered-in-error' +\n      '&date=gt' + %ReportingPeriod.start.toString()  +\n      '&date=le' + %ReportingPeriod.end.toString() +\n      '&code:in=' + %VentilatorObservations.url\n    ).resolve().select(entry.resource as Observation).exists(),\n    true,\n    ( %Base + 'Procedure?_count=1'+\n      '&status=in-progress,competed' +\n      '&patient=' + $this.id +\n      '&date=gt' + %ReportingPeriod.start.toString()  +\n      '&date=le' + %ReportingPeriod.end.toString()  +\n      '&code:in=' + %VentilatorProcedures.url\n    ).resolve().select(entry.resource as Procedure).exists()\n  )\n)"
+            "expression": "findAll('Encounter',\n including('subject'),\n with('status').equalTo('in-progress'|'finished'),\n with('date').within(%ReportingPeriod)\n).onServers(%Base)\n.select(entry.resource as Patient)\n.where(\n  iif(\n    whereExists('Observation',\n      with('status').equalTo('registered'|'preliminary'|'final'|'amended'|'corrected'),\n      with('patient').equalTo($this.id),\n      with('verificationStatus').notEqualTo('refuted'|'entered-in-error'),\n      with('date').within(%ReportingPeriod),\n      with('code').in(%VentilatorObservations.url)\n    ).onServers(%Base)\n    true,\n    whereExists('Procedure',\n      with('status').equalTo('in-progress'|'completed'),\n      with('patient').equalTo($this.id),\n      with('date').within(%ReportingPeriod),\n      with('code').in(%VentilatorProcedures.url)\n    ).onServers(%Base)\n  )\n)"
           }
         },
         {
@@ -624,12 +624,12 @@
             "coding": [
               {
                 "code": "numVentAvail",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators Available"
               },
               {
                 "code": "numerator-complement",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem"
               }
             ],
             "text": "Total number of ventilators not presently in use."
@@ -647,7 +647,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -672,7 +672,7 @@
                 "coding": [
                   {
                     "code": "capacity",
-                    "system": "http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -710,7 +710,7 @@
         "coding": [
           {
             "code": "Beds",
-            "system": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
             "display": "Beds"
           }
         ],
@@ -722,7 +722,7 @@
             "coding": [
               {
                 "code": "numTotBeds",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "All Hospital Beds"
               },
               {
@@ -745,7 +745,7 @@
             "coding": [
               {
                 "code": "numTotBedsOcc",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Beds Occupied"
               },
               {
@@ -760,7 +760,7 @@
             "name": "NumTotBedsOcc",
             "description": "Identifies the number of beds in use by counting the most recent Encounter for each patient where the encounter\nwas in-progress or finished within the period.",
             "language": "text/fhirpath",
-            "expression": "( %Base + 'Encounter?' +\n  'status=in-progress' +\n  '&date=ge' + %ReportingPeriod.start.toString() +\n  '&date=lt' + %ReportingPeriod.end.toString()\n).resolve().select(entry.resource as Encounter)\n.aggregate(\n   iif($total.select(location[0]).location contains $this.location.location.first(),\n       $total,\n       $total | $this\n   )\n)"
+            "expression": "findAll('Encounter',\n  with('status').equalTo('in-progress'),\n  with('date').within(%ReportingPeriod)\n).onServers(%Base)\n.aggregate(\n   iif($total.select(location[0]).location contains $this.location.location.first(),\n       $total,\n       $total | $this\n   )\n)"
           }
         },
         {
@@ -768,12 +768,12 @@
             "coding": [
               {
                 "code": "numTotBedsAvail",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Beds Available"
               },
               {
                 "code": "numerator-complement",
-                "system": "http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem"
               }
             ],
             "text": "Total number of hospital beds available"
@@ -869,7 +869,7 @@
     }
   ],
   "name": "ComputableCDCPatientImpactAndHospitalCapacity",
-  "url": "http://hl7.org/fhir/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity",
+  "url": "http://hl7.org/fhir/uv/fhir-saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity",
   "title": "Patient Impact and Hospital Capacity",
   "relatedArtifact": [
     {
@@ -898,6 +898,6 @@
     }
   ],
   "library": [
-    "http://hl7.org/fhir/saner/Library/ComputableNHSNMeasureLibrary"
+    "http://hl7.org/fhir/uv/fhir-saner/Library/ComputableNHSNMeasureLibrary"
   ]
 }

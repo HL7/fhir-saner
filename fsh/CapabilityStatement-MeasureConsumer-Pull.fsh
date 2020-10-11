@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Pull"
 * title = "Measure Consumer implementing the Pull Option."
-* date = "2020-10-08T20:44:38.564608-04:00"
+* date = "2020-10-11T14:21:45.012146-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Pull Option."
 * format[0] = #xml
@@ -59,7 +59,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * rest[clientSlice].resource[LocationSlice].extension[2].extension[0].valueString = "identifier"
 
 * rest[clientSlice].resource[MeasureReportSlice].type = #MeasureReport
-* rest[clientSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport"
+* rest[clientSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureReport"
 
 * rest[clientSlice].resource[MeasureReportSlice].interaction[0].code = #read
 * rest[clientSlice].resource[MeasureReportSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -155,7 +155,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * rest[clientSlice].resource[MeasureReportSlice].extension[1].extension[9].valueString = "reporter:identifier"
 
 * rest[clientSlice].resource[MeasureSlice].type = #Measure
-* rest[clientSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+* rest[clientSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure"
 
 * rest[clientSlice].resource[MeasureSlice].interaction[0].code = #read
 * rest[clientSlice].resource[MeasureSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureSource_Aggregate"
 * title = "Measure Source implementing the Aggregate Option."
-* date = "2020-10-08T20:44:38.564608-04:00"
+* date = "2020-10-11T14:21:45.012146-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Aggregate Option."
 * format[0] = #xml
@@ -16,8 +16,8 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * rest[clientSlice].mode = #client
 
 * rest[clientSlice].resource[MeasureReportSlice].type = #MeasureReport
-* rest[clientSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport"
+* rest[clientSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureReport"
 
 * rest[clientSlice].resource[MeasureReportSlice].operation[0].name = "aggregate"
-* rest[clientSlice].resource[MeasureReportSlice].operation[0].definition = "http://hl7.org/fhir/saner/OperationDefinition/MeasureReport-aggregate"
+* rest[clientSlice].resource[MeasureReportSlice].operation[0].definition = "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/MeasureReport-aggregate"
 * rest[clientSlice].resource[MeasureReportSlice].operation[0].documentation = "Aggregate"

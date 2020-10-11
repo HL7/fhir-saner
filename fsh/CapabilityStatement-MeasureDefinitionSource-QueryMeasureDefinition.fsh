@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Definition Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionSource_QueryMeasureDefinition"
 * title = "Measure Definition Source implementing the Query Measure Definition transaction."
-* date = "2020-10-08T20:44:38.564608-04:00"
+* date = "2020-10-11T14:21:45.012146-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction."
 * format[0] = #xml
@@ -16,7 +16,7 @@ Description: "Defines the requirements for the Measure Definition Source impleme
 * rest[serverSlice].mode = #server
 
 * rest[serverSlice].resource[MeasureSlice].type = #Measure
-* rest[serverSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+* rest[serverSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure"
 
 * rest[serverSlice].resource[MeasureSlice].interaction[0].code = #read
 * rest[serverSlice].resource[MeasureSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

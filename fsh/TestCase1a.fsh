@@ -38,7 +38,7 @@ Description: "Condition for Test Case 1a: Admission date =Today (T) w/ outcome =
 * identifier.system = "http://sanerproject.org/test/Condition"
 * identifier.value = "Con111111"
 * subject = Reference(Patient1a)
-* code = SCT#870590002 "Acute hypoxemic respiratory failure due to disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+* code = SCT#713084008 "Pneumonia caused by Human coronavirus (disorder)"
 * onsetDateTime = 2020-09-09
 
 Instance: Observation11a

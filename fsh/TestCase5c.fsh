@@ -35,7 +35,7 @@ Description: "Condition for Test Case 5c: Positives collected T-13 and T w/ outc
 * identifier.system = "http://sanerproject.org/test/Condition"
 * identifier.value = "Con876543"
 * subject = Reference(Patient5c)
-* code = SCT#882784691000119100 "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"* onsetDateTime = 2020-09-08
+* code = SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"* onsetDateTime = 2020-09-08
 
 Instance: Observation15c
 InstanceOf: Observation

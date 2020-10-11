@@ -7,7 +7,7 @@
   "title": "Measure Group System",
   "description": "A Code System for Groups",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/saner/CodeSystem/MeasureGroupSystem",
+  "url": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
   "concept": [
     {
       "code": "Beds",

@@ -33,7 +33,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Architecture & Implementation
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Architecture &amp; Implementation
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -89,7 +89,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing & Conformance
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Testing &amp; Conformance
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">

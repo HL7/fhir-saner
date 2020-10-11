@@ -7,7 +7,7 @@ Description: "This library contains references to the value sets used for the Co
  * insert SanerDefinitionContent
  * id = "ComputableNHSNMeasureLibrary"
  * name = "ComputableNHSNMeasureLibrary"
- * url = "http://hl7.org/fhir/saner/Library/ComputableNHSNMeasureLibrary"
+ * url = "http://hl7.org/fhir/uv/fhir-saner/Library/ComputableNHSNMeasureLibrary"
  * title = "Computable NHSN Patient Impact and Hospital Capacity Measure Library"
  * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
  * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus

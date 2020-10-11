@@ -11,7 +11,7 @@ lists those files generated from project configs or the contents in the ig-data 
 
 | SUSHI-GENERATED FILE                                                                            | ACTION    | INPUT FILE(S)                                                                                               |
 | ----------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------- |
-| input\ImplementationGuide-hl7.fhir.uv.saner.json                                                | generated | fsh\config.yaml, {all input resources and pages}                                                            |
+| input\ImplementationGuide-hl7.fhir.uv.fhir-saner.json                                           | generated | fsh\config.yaml, {all input resources and pages}                                                            |
 | input\includes\menu.xml                                                                         | generated | fsh\config.yaml                                                                                             |
 | package-list.json                                                                               | generated | fsh\config.yaml                                                                                             |
 | ig.ini                                                                                          | copied    | fsh\ig-data\ig.ini                                                                                          |

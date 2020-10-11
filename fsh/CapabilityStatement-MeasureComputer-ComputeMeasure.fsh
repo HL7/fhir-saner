@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Computer implementing the
 * insert SanerDefinitionContent
 * name = "MeasureComputer_ComputeMeasure"
 * title = "Measure Computer implementing the Compute Measure transaction."
-* date = "2020-10-08T20:44:38.564608-04:00"
+* date = "2020-10-11T14:21:45.012146-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Computer implementing the Compute Measure transaction."
 * format[0] = #xml
@@ -18,7 +18,7 @@ Description: "Defines the requirements for the Measure Computer implementing the
 * rest[clientSlice].resource[MeasureSlice].type = #Measure
 
 * rest[clientSlice].resource[MeasureSlice].operation[0].name = "evaluate-measure"
-* rest[clientSlice].resource[MeasureSlice].operation[0].definition = "http://hl7.org/fhir/saner/OperationDefinition/Measure-evaluate-measure"
+* rest[clientSlice].resource[MeasureSlice].operation[0].definition = "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/Measure-evaluate-measure"
 * rest[clientSlice].resource[MeasureSlice].operation[0].documentation = "Evaluate the measure"
 
 * rest[serverSlice].mode = #server
@@ -26,5 +26,5 @@ Description: "Defines the requirements for the Measure Computer implementing the
 * rest[serverSlice].resource[MeasureSlice].type = #Measure
 
 * rest[serverSlice].resource[MeasureSlice].operation[0].name = "evaluate-measure"
-* rest[serverSlice].resource[MeasureSlice].operation[0].definition = "http://hl7.org/fhir/saner/OperationDefinition/Measure-evaluate-measure"
+* rest[serverSlice].resource[MeasureSlice].operation[0].definition = "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/Measure-evaluate-measure"
 * rest[serverSlice].resource[MeasureSlice].operation[0].documentation = "Evaluate the measure"

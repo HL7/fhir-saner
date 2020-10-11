@@ -13,9 +13,9 @@
   "code": {
     "coding": [
       {
-        "code": "882784691000119100",
+        "code": "840539006",
         "system": "http://snomed.info/sct",
-        "display": "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+        "display": "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
       }
     ]
   },
