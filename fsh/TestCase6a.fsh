@@ -37,7 +37,7 @@ Description: "Condition for Test Case 6a: Ventilator (intubation) start date = T
 * identifier.system = "http://sanerproject.org/test/Condition"
 * identifier.value = "Con765432"
 * subject = Reference(Patient6a)
-* code = SCT#882784691000119100 "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+* code = SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 * onsetDateTime = 2020-09-09
 
 Instance: Observation16a

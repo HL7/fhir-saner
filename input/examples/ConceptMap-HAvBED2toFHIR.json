@@ -4,14 +4,14 @@
   "status": "draft",
   "experimental": true,
   "version": "0.1.0",
-  "publisher": "HL7 Public Health Workgroup",
+  "publisher": "HL7 International Public Health Workgroup",
   "contact": [
     {
-      "name": "Keith W. Boone",
+      "name": "HL7 Public Health Workgroup",
       "telecom": [
         {
-          "system": "email",
-          "value": "kboone@ainq.com"
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/pher/index.cfm"
         }
       ]
     },
@@ -20,7 +20,7 @@
       "telecom": [
         {
           "system": "email",
-          "value": "mailto:kboone@ainq.com"
+          "value": "kboone@ainq.com"
         }
       ]
     }

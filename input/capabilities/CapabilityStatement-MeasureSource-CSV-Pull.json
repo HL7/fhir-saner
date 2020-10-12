@@ -3,7 +3,7 @@
   "id": "MeasureSource-CSV-Pull",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/CapabilityStatementWithSlices"
+      "http://hl7.org/fhir/uv/saner/StructureDefinition/CapabilityStatementWithSlices"
     ]
   },
   "rest": [
@@ -13,17 +13,17 @@
         {
           "type": "MeasureReport",
           "supportedProfile": [
-            "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport"
+            "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasureReport"
           ],
           "operation": [
             {
               "name": "read-csv",
-              "definition": "http://hl7.org/fhir/saner/OperationDefinition/MeasureReport-read-csv",
+              "definition": "http://hl7.org/fhir/uv/saner/OperationDefinition/MeasureReport-read-csv",
               "documentation": "Read in CSV Format"
             },
             {
               "name": "search-csv",
-              "definition": "http://hl7.org/fhir/saner/OperationDefinition/MeasureReport-search-csv",
+              "definition": "http://hl7.org/fhir/uv/saner/OperationDefinition/MeasureReport-search-csv",
               "documentation": "Search in CSV Format"
             }
           ]
@@ -67,7 +67,7 @@
   ],
   "name": "MeasureSource_CSV_Pull",
   "title": "Measure Source implementing the CSV Option and the Pull Option.",
-  "date": "2020-10-08T15:21:43.603405-04:00",
+  "date": "2020-10-12T09:42:48.454794-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the CSV Option and the Pull Option.",
   "format": [

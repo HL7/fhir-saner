@@ -6,7 +6,7 @@
   "title": "Ventilator Devices",
   "description": "Codes used for Ventilator Devices",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/saner/ValueSet/VentilatorDevices",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/VentilatorDevices",
   "compose": {
     "include": [
       {

@@ -32,7 +32,7 @@ exception of the subject, which is Beds rather than ventilators.
 
 ```
  * with group[4].extension[groupAtts]
- ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#capacity
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#capacity
  ** extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
  ** extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  ** extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
@@ -45,7 +45,7 @@ The next step for the bed capacity measure is to define the denominator, numerat
 
 ```
  * with group[4].population[0]
- ** code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBeds "All Hospital Beds"
+ ** code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBeds "All Hospital Beds"
  ** code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  ** code.text = "Total number of beds"
  ** description = """
@@ -53,14 +53,14 @@ The next step for the bed capacity measure is to define the denominator, numerat
  licensed, and overflow (surge) beds used for inpatients or outpatients"""
 
  * with group[4].population[1]
- ** code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBedsOcc "Hospital Beds Occupied"
+ ** code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBedsOcc "Hospital Beds Occupied"
  ** code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  ** code.text = "Total number of beds in use"
  ** description = "Total number of all Inpatient and outpatient beds that are occupied"
 
  * with group[4].population[2]
- ** code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBedsAvail "Hospital Beds Available"
- ** code.coding[1] = http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
+ ** code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBedsAvail "Hospital Beds Available"
+ ** code.coding[1] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
  ** code.text = "Total number of hospital beds available"
  ** description = "Total number of all hospital inpatient and outpatient beds that are available"
 ```
@@ -85,15 +85,11 @@ Name the criteria and give a description for what qualifies to to be included.
  * criteria.language = #text/fhirpath
  * criteria.expression = """
        // Find all active encounters
-       (
-         %Base + '/Encounter?' +
-         // Get only those encounters which are in-progress during the reporting period
-         // because if an encounter finished during the reporting period, the bed is now
-         // available.
-         'status=in-progress' +
-         '&date=ge' + %ReportingPeriod.start +
-         '&date=lt' + %ReportingPeriod.end
-       ).resolve().select(resource as Encounter)
+       findAll('Encounter',
+        including('subject','condition','reasonReference'),
+        with('status').equalTo('in-progress'),
+        with('date').within(%ReportingPeriod)
+       ).onServers(%Base)
        // Select the most recent encounter for each location
        // Assumes that encounters are returned in reverse chonological order
        // and that the most recent location is reported first in the list

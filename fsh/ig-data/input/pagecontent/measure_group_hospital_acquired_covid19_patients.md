@@ -25,7 +25,7 @@ onset infections within a facility or region.
 
 ```
  * with group[1].extension[groupAtts] do
- ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
 ```
 
 Next, the measure describes the type of measure (e.g., structure, process or outcome). This measure is an outcome measure,
@@ -71,19 +71,19 @@ the Initial Population, a Numerator (the new infections), and a Denominator (the
 Provide a code describing each population.
 ```
  * with group[1].population[1].code do
- ** coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19HospPats
+ ** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HospPats
  ** coding.display = "Hospitalized COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  ** text = "Patients with suspected or confirmed COVID-19 in an inpatient location"
 
  * with group[1].population[2].code do
- ** coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19HOPats
+ ** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HOPats
  ** coding.display = "Hospital Onset COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  ** text = "Hospital Onset COVID-19 Patients"
 
  * with group[1].population[3].code do
- ** coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#cumC19HOPats
+ ** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#cumC19HOPats
  ** coding.display = "Cumulative Hospital Onset COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  ** text = "Cumulative Hospital Onset COVID-19 Patients"
@@ -146,29 +146,26 @@ this latter two week period in the discussion for the prior measure group.
         iif(
           // Rule out patients who have a diagnosis of suspected or confirmed
           // Covid prior between period.start - 14 days and period.start + 14 days
-          (%Base + '/Condition?_count=1'+
-           '&status:not=refuted&status:not=entered-in-error' +
-           '&patient=' + $this.subject +
-           '&verificationStatus:not=refuted,entered-in-error' +
-           '&date=gt' + ($this.period.start - 14 days) +
-           '&date=le' + ($this.period.start + 14 days) +
-           '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url
-          ).resolve().select(resource as Condition).exists(),
+          whereExists('Condition',
+            with('status').notEqualTo('refuted'|'entered-in-error'),
+            with('patient').equalTo($this.subject),
+            with('verificationStatus').notEqualTo('refuted'|'entered-in-error'),
+            with('date').greaterThan($this.period.start - 14 'days'),
+            with('date').lessThanOrEqualTo($this.period.start - 14 'days'),
+            with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)
+          ).onServers(%Base),
           // return false to rule out this encounter
           false,
           // Rule out remaining patients who have a positive lab result between
           // period.start - 14 days and period.start + 14 days
-          (%Base + '/Observation?_count=1' +
-           '&status=registered,preliminary,final,amended,corrected' +
-           '&patient=' + $this.subject +
-           '&date=gt' + ($this.period.start - 14 days) +
-           '&date=le' + ($this.period.start + 14 days) +
-           '&code:in=' + %Covid19Labs.url +
-           '&value-concept:in=' + %PositiveResults.url
-          ).resolve().select(resource as Observation)
-          // If the query returned an observations, then empty() will return false, ruling
-          // out this encounter.
-          .empty()
+          whereExists('Observation',
+            with('status').equalTo('registered'|'preliminary'|'final'|'amended'|'corrected'),
+            with('patient').equalTo($this.subject),
+            with('date').greaterThan($this.period.start - 14 'days'),
+            with('date').lessThanOrEqualTo($this.period.start - 14 'days'),
+            with('code').in(%Covid19Labs.url)
+            with('value-concept').in(%PositiveResults.url)
+          ).onServers(%Base).not()
         )
       )
     )

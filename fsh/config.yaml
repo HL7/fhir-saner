@@ -11,21 +11,20 @@
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.saner
-canonical: http://hl7.org/fhir/saner
+canonical: http://hl7.org/fhir/uv/saner
 version: 0.1.0
 name: SituationalAwarenessforNovelEpidemicResponse
 title: Situational Awareness for Novel Epidemic Response
 status: active
-publisher: HL7 International
+publisher:
+  - name: HL7 International Public Health Workgroup
+  - url: http://hl7.org/Special/committees/pher/index.cfm
+  - email: pher@lists.hl7.org
 contact:
-  - name: HL7 Patient Administration Workgroup
+  - name: HL7 Public Health Workgroup
     telecom:
       - system: url
-        value: http://hl7.org/Special/committees/pafm/index.cfm
-  - name: Audacious Inquiry
-    telecom:
-      - system: url
-        value: http://ainq.com
+        value: http://hl7.org/Special/committees/pher/index.cfm
   - name: Keith W. Boone
     telecom:
       - system: email
@@ -50,12 +49,12 @@ releaseLabel: CI Build
 # │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 history:
-  current: http://build.fhir.org/ig/example/example-ig
+  current: http://build.fhir.org/ig/fhir-saner
   0.0.1:
     fhirversion: 4.0.1
-    date: 2099-01-01
-    desc: Initial STU ballot (Mmm yyyy Ballot)
-    path: http://example.org/fhir/STU1
+    date: 2020-10-19
+    desc: Initial STU ballot (Oct 2020 Ballot)
+    path: http://hl7.org/fhir/uv/saner
     status: ballot
     sequence: STU 1
     current: true
@@ -174,9 +173,6 @@ pages:
     measure_library.md:
       title: Sample Measure Library
       generation: markdown
-  profiles.md:
-    title: Profiles and Extensions
-    generation: markdown
   supporting_vocabulary.md:
     title: Supporting Vocabulary
     generation: markdown
@@ -189,14 +185,14 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
-  Table of Contents: toc.html
+  Contents: toc.html
 
   Introduction:
     Scope: introduction.html
     Situational Awareness Measures: situational_awareness_measures.html
     Use Cases: use_cases.html
 
-  Architecture and Implementation:
+  Architecture &amp; Implementation:
     Architecture: architecture.html
     Security Considerations: security_considerations.html
     Actors: actors.html
@@ -208,13 +204,13 @@ menu:
     Communicate Results: transaction-5.html
     Profiles and Extensions: profiles_and_extensions.html
 
-  Integration with Existing Systems:
+  Integrating with Existing Systems:
     Technology Environment: technology_environment.html
     Exchanging data via CSV Files: CSV_Conversion.html
     Aggregatating Measure Reports: measure_aggregation.html
     Computing Measures: measure_automation.html
 
-  Testing and Conformance:
+  Testing &amp; Conformance:
     Profiles and Extensions: profiles_and_extensions.html
     Terminology Resources: vocabulary.html
     Test Plan: test_plan.html
@@ -222,7 +218,7 @@ menu:
     Laboratory Reporting Measure and Report Examples: laboratory_reporting_examples.html
     Automation Testing Data: automation_testing_examples.html
 
-  Defining a Measure:
+  Defining Measures:
     Defining a Measure from Essential Elements of Information: measure_creation.html
     A Phrase Book for Measures Supporting Automation: phrase_book.html
     Creating the Patients with COVID 19 Group: measure_group_covid19_patients.html

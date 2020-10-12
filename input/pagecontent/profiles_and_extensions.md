@@ -85,23 +85,3 @@ described by this guide.
   an extension that enables interpretation the structure of a group as a collection
   of populations that evaluate to a single measured item.
 
-### Predefined Measures
-This implementation guide includes predefined measures describing the measurements
-that were previously required to be reported to CDC/NHSN and FEMA.
-
-* [Computable CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html)
-  defines a computable measure that is aligned with the reporting previously required by the
-  [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
-  Hospital Capacity module, and
-
-* [CDC/NHSN Patient Impact and Hospital Capacity Reporting Measures](Measure-CDCPatientImpactAndHospitalCapacity.html)
-  defines a measure that is aligned with the reporting previously required by the
-  [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
-  Hospital Capacity module, and
-
-* [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMADailyHospitalCOVID19Reporting.html)
-  defines a measure that is aligned with the reporting required by the [Federal Emergency Management Agency (FEMA)](https://www.aha.org/advisory/2020-03-30-coronavirus-update-administration-requests-hospitals-report-daily-covid-19)
-  for reporting COVID-19 test results from Hospital in-house laboratories.
-
-These measures are only provided as examples to illustrate measure development and reporting.
-Official reporting requirements are established by HHS and other US Federal agencies and not by this guide.

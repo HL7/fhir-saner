@@ -34,7 +34,7 @@ Description: "Condition for Test Case 7a: No w/ outcome = No"
 * identifier.system = "http://sanerproject.org/test/Condition"
 * identifier.value = "Con112233"
 * subject = Reference(Patient7a)
-* code = SCT#882784691000119100 "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+* code = SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 * onsetDateTime = 2020-09-09
 
 Instance: Observation17a

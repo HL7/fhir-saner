@@ -33,7 +33,7 @@ Total includes all beds, even if with surge beds it exceeds licensed beds.
  * author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
  * insert DailyReporting
  * name = "ComputableCDCPatientImpactAndHospitalCapacity"
- * url = "http://hl7.org/fhir/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
+ * url = "http://hl7.org/fhir/uv/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
  * title = "Patient Impact and Hospital Capacity"  // Official name of measure being represented as given by the author
  * insert NHSNArtifacts
  * library = Canonical(ComputableNHSNMeasureLibrary)
@@ -43,7 +43,7 @@ Total includes all beds, even if with surge beds it exceeds licensed beds.
  * group[0].code.coding.display = "Encounters"
  * group[0].code.text = "Hospital COVID-19 Patient Encounters Reporting"
  //* with group[0].extension[groupAtts] do
- * group[0].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#queue-length
+ * group[0].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#queue-length
  * group[0].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
  * group[0].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  //** with extension[subject] do
@@ -54,7 +54,7 @@ Total includes all beds, even if with surge beds it exceeds licensed beds.
  * group[0].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
  //* with group[0].population[0] do
  //** with code do
- * group[0].population[0].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Pats
+ * group[0].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Pats
  * group[0].population[0].code.coding.display = "All COVID-19 Confirmed or Suspected Patients"
  * group[0].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[0].population[0].code.text = "Patients with suspected or confirmed COVID-19 in any location."
@@ -80,33 +80,32 @@ in the prior two weeks.
 """
  * group[0].population[0].criteria.language = #text/fhirpath
  * group[0].population[0].criteria.expression =
-  """( %Base + 'Encounter?' +
-        '_include=Encounter:subject&_include=Encounter:condition&' +
-        '_include=Encounter:reasonReference' +
-        '&status=in-progress,finished' +
-        '&date=ge' + %ReportingPeriod.start.toString() +
-        '&date=lt' + %ReportingPeriod.end.toString()
-     ).resolve().select(entry.resource).
+  """findAll('Encounter',
+        including('subject','condition','reasonReference'),
+        with('status').equalTo('in-progress'|'finished'),
+        with('date').within(%ReportingPeriod)
+     ).onServers(%Base).
      where(
        iif(myMemberOf((Encounter.reasonCode | Condition.code), %SuspectedOrConfirmedCOVID19Diagnoses.url) |
            Observation.where((myMemberOf(code, %Covid19Labs.url) and myMemberOf(value, %PositiveResults.url))
          ), true,
          iif(
-           Patient.distinct().where(
-             %Base + 'Observation?_count=1' +
-             '&status=registered,preliminary,final,amended,corrected' +
-             '&patient=' + $this.id +
-             '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +
-             '&code:in=' + %Covid19Labs.url +
-             '&value-concept:in=' + %PositiveResults.url
-           ).resolve().select(entry.resource as Observation).exists(), true,
-           Patient.distinct().where(
-             %Base + 'Condition?_count=1'+
-             '&patient=' + $this.id +
-             '&verification-status:not=refuted,entered-in-error' +
-             '&date=gt' + (dateSubtract(%ReportingPeriod.start, 14 'days')).toString() +
-             '&code:in=' + SuspectedOrConfirmedCOVID19Diagnoses.url
-           ).resolve().select(entry.resource as Condition).exists()
+           Patient.distinct()
+              .whereExists('Observation',
+                for('patient', $this),
+                with('status').equalTo(
+                    'registered' | 'preliminary' | 'final' | 'amended' | 'corrected'),
+                with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
+                with('code').in(%CovidLabs),
+                with('value-concept).in(%PositiveResults)
+           ).onServers(%Base), true,
+           Patient.distinct()
+              .whereExists('Condition',
+                for('patient', $this),
+                with('verification-status').notEqualTo('refuted'|'entered-in-error').
+                with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
+                with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)
+           ).exists()
          )
       )
     )
@@ -131,7 +130,7 @@ in the prior two weeks.
  * group[1].code.coding = MeasureGroupSystem#AcquiredCovid
  * group[1].code.coding.display = "Acquired COVID-19 in Hospital"
  * group[1].code.text = "Hospital Onset COVID-19 Patient Encounters Reporting"
- * group[1].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
+ * group[1].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
  * group[1].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#outcome
  * group[1].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
@@ -140,7 +139,7 @@ in the prior two weeks.
  * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Hospital Acquired COVID-19"
  * group[1].extension[groupAtts].extension[rateAggregation].valueString = "cumulative"
 
- * group[1].population[0].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19HospPats
+ * group[1].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HospPats
  * group[1].population[0].code.coding.display = "Hospitalized COVID-19 Patients"
  * group[1].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[1].population[0].code.text = "Patients with suspected or confirmed COVID-19 in an inpatient location"
@@ -153,7 +152,7 @@ in the prior two weeks.
  """
 
  //* with group[1].population[1].code do
- * group[1].population[1].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19HOPats
+ * group[1].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HOPats
  * group[1].population[1].code.coding.display = "Hospital Onset COVID-19 Patients"
  * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  * group[1].population[1].code.text = "Hospital Onset COVID-19 Patients"
@@ -169,24 +168,24 @@ confirmed diagnosis or lab result appears less than 14 days from admission."""
     Encounter.where(
       iif(dateAdd(period.start,14 'days') > today(),
         false,
-        iif( (%Base + 'Condition?_count=1'+
-           '&status:not=refuted&status:not=entered-in-error' +
-           '&patient=' + $this.subject +
-           '&verificationStatus:not=refuted,entered-in-error' +
-           '&date=gt' + (dateAdd($this.period.start,14 'days')).toString() +
-           '&date=le' + (dateSubtract($this.period.start,14 'days')).toString() +
-           '&code:in=' + %SuspectedOrConfirmedCOVID19Diagnoses.url
-          ).resolve().select(entry.resource as Condition).exists(),
+        iif(
+          whereExists('Condition',
+            with('status').notEqualTo('refuted'|'entered-in-error'),
+            with('patient').equalTo($this.subject),
+            with('verificationStatus').notEqualTo('refuted'|'entered-in-error'),
+            with('date').greaterThan($this.period.start - 14 'days'),
+            with('date').lessThanOrEqualTo($this.period.start - 14 'days'),
+            with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)
+          ).onServers(%Base),
           false,
-          (%Base + 'Observation?_count=1' +
-           '&status=registered,preliminary,final,amended,corrected' +
-           '&patient=' + $this.subject +
-           '&date=gt' + (dateSubtract($this.period.start, 14 'days')).toString() +
-           '&date=le' + (dateAdd($this.period.start,14 'days')).toString() +
-           '&code:in=' + %Covid19Labs.url +
-           '&value-concept:in=' + %PositiveResults.url
-          ).resolve().select(entry.resource as Observation)
-         .empty()
+          whereExists('Observation',
+            with('status').equalTo('registered'|'preliminary'|'final'|'amended'|'corrected'),
+            with('patient').equalTo($this.subject),
+            with('date').greaterThan($this.period.start - 14 'days'),
+            with('date').lessThanOrEqualTo($this.period.start - 14 'days'),
+            with('code').in(%Covid19Labs.url)
+            with('value-concept').in(%PositiveResults.url)
+          ).onServers(%Base).not()
         )
       )
     ).select(patient).resolve().trace('patients', id)
@@ -194,7 +193,7 @@ confirmed diagnosis or lab result appears less than 14 days from admission."""
 
 
  //* with group[1].population[2].code do
- * group[1].population[2].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#cumC19HOPats
+ * group[1].population[2].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#cumC19HOPats
  * group[1].population[2].code.coding.display = "Cumulative Hospital Onset COVID-19 Patients"
  * group[1].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  * group[1].population[2].code.text = "Cumulative Hospital Onset COVID-19 Patients"
@@ -269,7 +268,7 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[2].code.coding.display = "COVID-19 Deaths"
  * group[2].code.text =  "COVID-19 Patient Death Reporting"
  //* with group[2].extension[groupAtts] do
- * group[2].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
+ * group[2].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
  * group[2].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#outcome
  * group[2].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  //** with extension[subject] do
@@ -280,7 +279,7 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[2].extension[groupAtts].extension[rateAggregation].valueString = "cumulative"
 
  //* with group[2].population[0].code do
- * group[2].population[0].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Pats
+ * group[2].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Pats
  * group[2].population[0].code.coding.display = "All COVID-19 Confirmed or Suspected Patients"
  * group[2].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[2].population[0].code.text = "Patients with suspected or confirmed COVID-19 in any location."
@@ -292,7 +291,7 @@ COVID-19 Patients in an inpatient setting"""
  * group[2].population[0].criteria.expression = "%NumC19Pats.entry.resource"
 
  //* with group[2].population[1].code do
- * group[2].population[1].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numC19Died
+ * group[2].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Died
  * group[2].population[1].code.coding.display = "COVID-19 Patient Deaths"
  * group[2].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  * group[2].population[1].code.text = "Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location"
@@ -314,7 +313,7 @@ Filters the initial population by selecting those who have died."""
  """
 
  //* with group[2].population[2].code do
- * group[2].population[2].code.coding = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#cumC19Died
+ * group[2].population[2].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#cumC19Died
  * group[2].population[2].code.coding.display = "Cumulative COVID-19 Patient Deaths"
  * group[2].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  * group[2].population[2].code.text = "Cumulative total of Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location"
@@ -383,7 +382,7 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[3].code.coding = MeasureGroupSystem#Ventilators
  * group[3].code.coding.display = "Ventilators"
  * group[3].code.text = "Ventilator Reporting"
- * group[3].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#capacity
+ * group[3].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#capacity
  * group[3].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
  * group[3].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  * group[3].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
@@ -391,7 +390,7 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[3].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Ventilator capacity"
  * group[3].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
 
- * group[3].population[0].code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVent "Mechanical Ventilators"
+ * group[3].population[0].code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVent "Mechanical Ventilators"
  * group[3].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  * group[3].population[0].code.text = "Total number of ventilators"
  * group[3].population[0].description = "Count of all ventilators that can support patient care, whether or not they are presently in use."
@@ -401,7 +400,7 @@ Computes the total number of ventilators from the previously reported MeasureRep
  * group[3].population[0].criteria.language = #text/fhirpath
  * group[3].population[0].criteria.expression = "iif(trace('PriorReport exists:', %PriorReport.exists()), %PriorReport.group[3].population[0].count, 0)"
 
- * group[3].population[1].code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVentUse "Mechanical Ventilators in Use"
+ * group[3].population[1].code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVentUse "Mechanical Ventilators in Use"
  * group[3].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  * group[3].population[1].code.text = "Total number of ventilators in use"
  * group[3].population[1].description = "Count of all ventilators in use."
@@ -411,37 +410,34 @@ Identifies the number of ventilators in use by counting Patient with an Observat
  or Procedure resource from an appropriate value set indicating ventilator use."""
  * group[3].population[1].criteria.language = #text/fhirpath
  * group[3].population[1].criteria.expression = """
-       ( %Base + 'Encounter?' +
-         'status=in-progress,finished' +
-         '&_include=Encounter:subject' +
-         '&date=ge' + %ReportingPeriod.start.toString() +
-         '&date=lt' + %ReportingPeriod.end.toString()
-       ).resolve()
+       findAll('Encounter',
+        including('subject'),
+        with('status').equalTo('in-progress'|'finished'),
+        with('date').within(%ReportingPeriod)
+       ).onServers(%Base)
        .select(entry.resource as Patient)
        .where(
          iif(
-           ( %Base + 'Observation?_count=1'+
-             '&status=registered,preliminary,final,amended,corrected' +
-             '&patient=' + $this.id +
-             '&verificationStatus:not=refuted,entered-in-error' +
-             '&date=gt' + %ReportingPeriod.start.toString()  +
-             '&date=le' + %ReportingPeriod.end.toString() +
-             '&code:in=' + %VentilatorObservations.url
-           ).resolve().select(entry.resource as Observation).exists(),
+           whereExists('Observation',
+             with('status').equalTo('registered'|'preliminary'|'final'|'amended'|'corrected'),
+             with('patient').equalTo($this.id),
+             with('verificationStatus').notEqualTo('refuted'|'entered-in-error'),
+             with('date').within(%ReportingPeriod),
+             with('code').in(%VentilatorObservations.url)
+           ).onServers(%Base)
            true,
-           ( %Base + 'Procedure?_count=1'+
-             '&status=in-progress,competed' +
-             '&patient=' + $this.id +
-             '&date=gt' + %ReportingPeriod.start.toString()  +
-             '&date=le' + %ReportingPeriod.end.toString()  +
-             '&code:in=' + %VentilatorProcedures.url
-           ).resolve().select(entry.resource as Procedure).exists()
+           whereExists('Procedure',
+             with('status').equalTo('in-progress'|'completed'),
+             with('patient').equalTo($this.id),
+             with('date').within(%ReportingPeriod),
+             with('code').in(%VentilatorProcedures.url)
+           ).onServers(%Base)
          )
        )
  """
 
- * group[3].population[2].code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVentAvail "Mechanical Ventilators Available"
- * group[3].population[2].code.coding[1] = http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
+ * group[3].population[2].code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVentAvail "Mechanical Ventilators Available"
+ * group[3].population[2].code.coding[1] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
  * group[3].population[2].code.text = "Total number of ventilators not presently in use."
  * group[3].population[2].description = "Count of all ventilators not presently in use."
  * group[3].population[2].criteria.name = "NumVentAvail"
@@ -456,7 +452,7 @@ Computes the number of ventilators available by substracting the number of venti
  * group[4].code.coding = MeasureGroupSystem#Beds
  * group[4].code.coding.display = "Beds"
  * group[4].code.text = "Bed Reporting"
- * group[4].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#capacity
+ * group[4].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#capacity
  * group[4].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
  * group[4].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  * group[4].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
@@ -464,7 +460,7 @@ Computes the number of ventilators available by substracting the number of venti
  * group[4].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Bed capacity"
  * group[4].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
 
- * group[4].population[0].code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBeds "All Hospital Beds"
+ * group[4].population[0].code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBeds "All Hospital Beds"
  * group[4].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  * group[4].population[0].code.text = "Total number of beds"
  * group[4].population[0].description = """
@@ -477,7 +473,7 @@ Computes the total number of beds from the previously reported MeasureReport"""
  * group[4].population[0].criteria.expression = "iif(%PriorReport.exists(),%PriorReport.group[3].population[0].count,0)"
 
 
- * group[4].population[1].code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBedsOcc "Hospital Beds Occupied"
+ * group[4].population[1].code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBedsOcc "Hospital Beds Occupied"
  * group[4].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  * group[4].population[1].code.text = "Total number of beds in use"
  * group[4].population[1].description = "Total number of all Inpatient and outpatient beds that are occupied"
@@ -488,11 +484,10 @@ Computes the total number of beds from the previously reported MeasureReport"""
    """
  * group[4].population[1].criteria.language = #text/fhirpath
  * group[4].population[1].criteria.expression = """
-       ( %Base + 'Encounter?' +
-         'status=in-progress' +
-         '&date=ge' + %ReportingPeriod.start.toString() +
-         '&date=lt' + %ReportingPeriod.end.toString()
-       ).resolve().select(entry.resource as Encounter)
+       findAll('Encounter',
+         with('status').equalTo('in-progress'),
+         with('date').within(%ReportingPeriod)
+       ).onServers(%Base)
        .aggregate(
           iif($total.select(location[0]).location contains $this.location.location.first(),
               $total,
@@ -501,8 +496,8 @@ Computes the total number of beds from the previously reported MeasureReport"""
        )
  """
 
- * group[4].population[2].code.coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numTotBedsAvail "Hospital Beds Available"
- * group[4].population[2].code.coding[1] = http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
+ * group[4].population[2].code.coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBedsAvail "Hospital Beds Available"
+ * group[4].population[2].code.coding[1] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
  * group[4].population[2].code.text = "Total number of hospital beds available"
  * group[4].population[2].description = "Total number of all hospital inpatient and outpatient beds that are available"
  * group[4].population[2].criteria.name = "NumTotBedsAvail"

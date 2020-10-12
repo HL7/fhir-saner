@@ -3,7 +3,7 @@
   "id": "MeasureSource-Push",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/CapabilityStatementWithSlices"
+      "http://hl7.org/fhir/uv/saner/StructureDefinition/CapabilityStatementWithSlices"
     ]
   },
   "rest": [
@@ -13,7 +13,7 @@
         {
           "type": "MeasureReport",
           "supportedProfile": [
-            "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasureReport"
+            "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasureReport"
           ],
           "interaction": [
             {
@@ -75,7 +75,7 @@
   ],
   "name": "MeasureSource_Push",
   "title": "Measure Source implementing the Push Option.",
-  "date": "2020-10-08T15:21:43.603405-04:00",
+  "date": "2020-10-12T09:42:48.454794-04:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the Push Option.",
   "format": [

@@ -34,7 +34,7 @@ The first step in describing these attributes is to indicate how the measure is 
 a measure of available and utilized capacity, so the capacity scoring is used.
 ```
  * with group[3].extension[groupAtts] do
- ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/saner/CodeSystem/PublicHealthMeasureScoring#capacity
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#capacity
 ```
 
 Next, the measure describes the type of measure (e.g., structure, process or outcome). This measure is a structural measure,
@@ -88,22 +88,22 @@ so the measure starts with the denominator.
 ```
  * with group[3].population[0] do
  ** with code do
- *** coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVent "Mechanical Ventilators"
+ *** coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVent "Mechanical Ventilators"
  *** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  *** text = "Total number of ventilators"
  ** description = "Count of all ventilators that can support patient care, whether or not they are presently in use."
 
  * with group[3].population[1] do
  ** with code do
- *** coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVentUse "Mechanical Ventilators in Use"
+ *** coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVentUse "Mechanical Ventilators in Use"
  *** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  *** text = "Total number of ventilators in use"
  ** description = "Count of all ventilators in use."
 
  * with group[3].population[2] do
  ** with code do
- *** coding[0] = http://hl7.org/fhir/saner/CodeSystem/MeasuredValues#numVentAvail "Mechanical Ventilators Available"
- *** coding[1] = http://hl7.org/fhir/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
+ *** coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVentAvail "Mechanical Ventilators Available"
+ *** coding[1] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem#numerator-complement
  *** text = "Total number of ventilators not presently in use."
  ** description = "Count of all ventilators not presently in use."
 ```
@@ -144,35 +144,29 @@ The computable content "implements" the automated computation of the measure.
  ** language = #text/fhirpath
  ** expression = """
        // Find all active encounters
-       (
-         %Base + '/Encounter?' +
-         // Get only those encounters which were in-progress or finished during the reporting period
-         'status= in-progress,finished' +
-         // Include the patient in the results
-         '&_include=Encounter:subject'+
-         '&date=ge' + %ReportingPeriod.start +
-         '&date=lt' + %ReportingPeriod.end
-       ).resolve()
+       findAll('Encounter',
+        including('subject'),
+        with('status').equalTo('in-progress'|'finished'),
+        with('date').within(%ReportingPeriod)
+       ).onServers(%Base)
        // Filter to patients
        .select(resource as Patient)
        .where(
          iif(
-           ( %Base + '/Observation?_count=1'+
-             '&status=registered,preliminary,final,amended,corrected' +
-             '&patient=' + $this.id +
-             '&verificationStatus:not=refuted,entered-in-error' +
-             '&date=gt' + %ReportingPeriod.start  +
-             '&date=le' + %ReportingPeriod.end  +
-             '&code:in=' + %VentilatorObservations.url
-           ).resolve().select(resource as Observation).exists(),
+           whereExists('Observation',
+             with('status').equalTo('registered'|'preliminary'|'final'|'amended'|'corrected'),
+             with('patient').equalTo($this.id),
+             with('verificationStatus').notEqualTo('refuted'|'entered-in-error'),
+             with('date').within(%ReportingPeriod),
+             with('code').in(%VentilatorObservations.url)
+           ).onServers(%Base),
            true,
-           ( %Base + '/Procedure?_count=1'+
-             '&status=in-progress,competed' +
-             '&patient=' + $this.id +
-             '&date=gt' + %ReportingPeriod.start  +
-             '&date=le' + %ReportingPeriod.end  +
-             '&code:in=' + %VentilatorProcedures.url
-           ).resolve().select(resource as Procedure).exists()
+           whereExists('Procedure',
+             with('status').equalTo('in-progress'|'completed'),
+             with('patient').equalTo($this.id),
+             with('date').within(%ReportingPeriod),
+             with('code').in(%VentilatorProcedures.url)
+           ).onServers(%Base)
          )
        )
  """

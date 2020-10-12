@@ -36,7 +36,7 @@ Description: "Condition for Test Case 9c: Diagnosis of Suspected COVID-19 AND AL
 * identifier.system = "http://sanerproject.org/test/Condition"
 * identifier.value = "Con778899"
 * subject = Reference(Patient9c)
-* code = SCT#882784691000119100 "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+* code = SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 * onsetDateTime = 2020-09-08
 
 Instance: Observation19c

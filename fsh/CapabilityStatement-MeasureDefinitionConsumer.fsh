@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Definition Consumer."
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer"
 * title = "Measure Definition Consumer."
-* date = "2020-10-08T15:21:43.603405-04:00"
+* date = "2020-10-12T09:42:48.454794-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer."
 * format[0] = #xml
@@ -16,7 +16,7 @@ Description: "Defines the requirements for the Measure Definition Consumer."
 * rest[clientSlice].mode = #client
 
 * rest[clientSlice].resource[MeasureSlice].type = #Measure
-* rest[clientSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+* rest[clientSlice].resource[MeasureSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure"
 
 * rest[clientSlice].resource[MeasureSlice].interaction[0].code = #read
 * rest[clientSlice].resource[MeasureSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

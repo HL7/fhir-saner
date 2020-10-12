@@ -3,7 +3,7 @@
   "id": "MeasureDefinitionSource",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/saner/StructureDefinition/CapabilityStatementWithSlices"
+      "http://hl7.org/fhir/uv/saner/StructureDefinition/CapabilityStatementWithSlices"
     ]
   },
   "rest": [
@@ -13,7 +13,7 @@
         {
           "type": "Measure",
           "supportedProfile": [
-            "http://hl7.org/fhir/saner/StructureDefinition/PublicHealthMeasure"
+            "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure"
           ],
           "interaction": [
             {
@@ -577,7 +577,7 @@
   ],
   "name": "MeasureDefinitionSource",
   "title": "Measure Definition Source.",
-  "date": "2020-10-08T15:21:43.603405-04:00",
+  "date": "2020-10-12T09:42:48.454794-04:00",
   "kind": "requirements",
   "description": "Defines the requirements for the Measure Definition Source.",
   "format": [

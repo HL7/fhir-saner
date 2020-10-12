@@ -113,7 +113,7 @@ The CSV Measure Consumer provides access to aggregated or fine-grained data gath
 
 #### CSV Measure Consumer Preparation
 1. Be able to parse a MeasureReport resource for the CDC Measure and store it in your system.
-2. Download example resources here: http://build.fhir.org/ig/HL7/fhir-saner/examples.json.zip
+2. Download example resources from this guide.
 3. If you're doing the publication scenario, have a server that supports the [Measure/$report-csv](OperationDefinition-Measure-report-csv.html) operation.
 4. Respond to the the MeasureReport/$convert Operation to convert a CSV file to convert from the CSV format to one or more MeasureReport resources .
 5. Respond to the the MeasureReport/$report Operation to submit a CSV file to create from the CSV format one or more MeasureReport resources.
@@ -156,19 +156,6 @@ For example, identify the FHIR Patient resources in the measure report that were
 This scenario is planned for the second cycle of testing and involves the Measure Definition Source making a new Computable Measure Definition
 available for use. The new Computable Measure Definition will result in at least one different calculated result in a Measure Report based on the
 provided test data.  This scenario otherwise follows the Automated Measure Computation and Reporting scenario
-
-#### Automation Test Data
-
-The [test data](index.html#automation-data) were developed with the following questions in mind.  Using data gathered electronically from an EHR:
-
-* Can it accurately and consistently be discerned that an inpatient with COVID-19 was admitted on the previous day?
-* Can it accurately and consistently be discerned that an inpatient had a positive viral laboratory result for SARS-Co-V-2, the organisms causing COVID-19? Likewise can it accurately and consistently be discerned when they did not?
-* Can it accurately and consistently be discerned if a patient is suspected of COVID-19 by ICD-10-CM / SNOMED CT diagnosis or problem list codes in the absence of a positive laboratory test for SARS-Co-V-2, the organisms causing COVID-19? Likewise can it accurately and consistently be discerned when they did not?
-* Can it accurately and consistently be determined that a patient has had a specimen collected in the previous 14 days that was positive for SARS-Co-V-2, the organisms causing COVID-19? The scenarios tested will include those where specimens were collected prior to admission. Likewise can it accurately and consistently be discerned when they did not?
-* Can it accurately and consistently be determined that the only prior positive viral laboratory result for SARS-Co-V-2, the organisms causing COVID-19 was collected on the day of Connectathon?
-* Can it be identified accurately and consistently that an inpatient’s location is or is not an intensive care unit?
-* Can it accurately and consistently be determined that a patient is located in the Emergency Department at the time of Connectathon, or that patient is not?
-* Can it accurately and consistently be determined that a patient was on a mechanical ventilator on the day of Connectathon, or that he was not?
 
 ### Reporting in CSV Format
 Send CSV Data to a system for reporting.
@@ -322,10 +309,10 @@ handled gracefully in a way appropriate to the SUT functionality.
 * Submit a non-FHIR data (random data)
   * The receiver should fail (except in the case where allowances have been made for CSV conversion).
 * Submit a valid FHIR Observation (from fhir core one of the examples)
-  * e.g., http://build.fhir.org/observation-example-f001-glucose.html
+  * e.g., http://hl7.org/fhir/R4/observation-example-f001-glucose.html
   * The receiver should fail, as the resource does not meet the expectations from the API.
 * Submit a valid FHIR Measure that is not SANER compliant (e.g. one of the Measure examples in the Core FHIR specification).
-  * e.g., http://build.fhir.org/measurereport-cms146-cat3-example.html
+  * e.g., http://hl7.org/fhir/R4/measurereport-cms146-cat3-example.html
   * The reciever may succeed or fail.  If the receiver as a FHIR Server, it would generally accept resources for a wide variety of use
     cases.  A receiver designed specifically to support only those capabilities defined by this guide may reject the submission because
     it does not meet the business rules associated with the use of this endpoint.

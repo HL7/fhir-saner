@@ -1,5 +1,5 @@
 // This sheet convert output to FHIR Shorthand for generating measures.
-Alias: $Base = http://hl7.org/fhir/saner
+Alias: $Base = http://hl7.org/fhir/uv/saner
 Alias: HSLOC = https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 Alias: ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias: SCT = http://snomed.info/sct
@@ -364,7 +364,7 @@ Description: "Codes confirming a COVID-19 diagnosis"
  * SCT#186747009 "Coronavirus infection (disorder)"
  * SCT#713084008 "Pneumonia caused by Human coronavirus (disorder)"
  * SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
- * SCT#882784691000119100 "Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
+ * SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 
 ValueSet:    SuspectedCOVID19Diagnoses
 Description: "This Value Set identifies conditions that may be related to COVID-19"

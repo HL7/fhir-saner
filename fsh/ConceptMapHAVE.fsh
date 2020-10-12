@@ -7,10 +7,13 @@ InstanceOf: http://hl7.org/fhir/StructureDefinition/ConceptMap
  * status = #draft
  * experimental = true
  * date = "2020-03-24"
- * publisher = "HL7 Public Health Workgroup"
- * contact.name = "Keith W. Boone"
- * contact.telecom.system = #email
- * contact.telecom.value = "kboone@ainq.com"
+ * publisher = "HL7 International Public Health Workgroup"
+ * contact.name = "HL7 Public Health Workgroup"
+ * contact.telecom.system = #url
+ * contact.telecom.value = "http://hl7.org/Special/committees/pher/index.cfm"
+ * contact[1].name = "Keith W. Boone"
+ * contact[1].telecom.system = #email
+ * contact[1].telecom.value = "kboone@ainq.com"
  * sourceUri = "https://archive.ahrq.gov/prep/havbed2/"
  * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
  * group[0].element[0].code = #AdultICU

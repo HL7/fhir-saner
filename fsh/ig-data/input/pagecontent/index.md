@@ -61,19 +61,14 @@ This guide is organized into five main sections:
 
 * [Appendix A: Supporting Terminology](supporting_vocabulary.html)
 * [Appendix B: Fluent Query](fluent_query.html)
+* Downloads
+  * [this entire guide](full-ig.zip),
+  * the definition resources in [json](definitions.json.zip), [xml](definitions.xml.zip), [ttl](definitions.ttl.zip), or [csv](csvs.zip) format, or
+  * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
+  * The source code for this Implementation Guide can be found on [https://github.com/HL7/fhir-saner](https://github.com/HL7/fhir-saner).
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
-
-You can also download:
-
-* [this entire guide](full-ig.zip),
-* the definition resources in [json](definitions.json.zip), [xml](definitions.xml.zip), [ttl](definitions.ttl.zip), or [csv](csvs.zip) format, or
-* the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
-
-The source code for this Implementation Guide can be found on
-[https://github.com/AudaciousInquiry/fhir-saner](https://github.com/AudaciousInquiry/fhir-saner).
-
 
 ![The SANER Project Logo](SANERLogo.png)
 <div style='float: clear'/>
