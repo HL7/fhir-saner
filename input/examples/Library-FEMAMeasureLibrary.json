@@ -3,7 +3,7 @@
   "id": "FEMAMeasureLibrary",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureLibrary"
+      "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasureLibrary"
     ]
   },
   "status": "draft",
@@ -41,7 +41,7 @@
     }
   ],
   "name": "FEMAMeasureLibrary",
-  "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/FEMAMeasureLibrary",
+  "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/FEMAMeasureLibrary",
   "title": "FEMA Measure Library",
   "type": {
     "coding": [

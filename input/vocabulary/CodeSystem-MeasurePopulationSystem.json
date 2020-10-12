@@ -7,7 +7,7 @@
   "title": "Situational Awareness Measure Populations",
   "description": "A Code System for Situation Awareness Measure Populations",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem",
+  "url": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem",
   "concept": [
     {
       "code": "numerator-complement",

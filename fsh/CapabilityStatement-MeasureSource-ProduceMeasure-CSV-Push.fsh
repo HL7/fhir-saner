@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureSource_ProduceMeasure_CSV_Push"
 * title = "Measure Source implementing the Produce Measure transaction with the CSV Option and the Push Option."
-* date = "2020-10-11T14:21:45.012146-04:00"
+* date = "2020-10-12T09:42:48.454794-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the CSV Option and the Push Option."
 * format[0] = #xml
@@ -18,5 +18,5 @@ Description: "Defines the additional requirements for the Measure Source impleme
 * rest[clientSlice].resource[MeasureSlice].type = #Measure
 
 * rest[clientSlice].resource[MeasureSlice].operation[0].name = "report-csv"
-* rest[clientSlice].resource[MeasureSlice].operation[0].definition = "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/Measure-report-csv"
+* rest[clientSlice].resource[MeasureSlice].operation[0].definition = "http://hl7.org/fhir/uv/saner/OperationDefinition/Measure-report-csv"
 * rest[clientSlice].resource[MeasureSlice].operation[0].documentation = "Create or update a MeasureReport from CSV Format"

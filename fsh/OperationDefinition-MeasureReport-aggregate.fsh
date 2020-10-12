@@ -15,7 +15,7 @@ Description: "Aggregate two or more more Messure Report resources into a single 
 * name = "Aggregate"
 * title = "Aggregate"
 * description = "Aggregate two or more more Messure Report resources into a single MeasureReport."
-* url = "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/MeasureReport-aggregate"
+* url = "http://hl7.org/fhir/uv/saner/OperationDefinition/MeasureReport-aggregate"
 
 * parameter[0].name = #_id
 * parameter[0].use = #in

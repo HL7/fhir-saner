@@ -64,7 +64,7 @@ it.
 
 ```
  * name = "ComputableCDCPatientImpactAndHospitalCapacity"
- * url = "http://hl7.org/fhir/uv/fhir-saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
+ * url = "http://hl7.org/fhir/uv/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity"
  * title = "Patient Impact and Hospital Capacity"
 ```
 
@@ -88,7 +88,7 @@ Details about the measure library for this sample measure can be found in the
 [Sample Measure Library](measure_library.html) page.
 
 ```
- * library = "http://hl7.org/fhir/uv/fhir-saner/Library/ComputableNHSNMeasureLibrary"
+ * library = "http://hl7.org/fhir/uv/saner/Library/ComputableNHSNMeasureLibrary"
 ```
 
 ### Patient Impact Data Elements

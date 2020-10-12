@@ -1,4 +1,4 @@
-<profile xmlns="http://ainq.com/ig-definition" id="SANER" chapter='1' base='http://hl7.org/fhir/uv/fhir-saner' codingsystems="SanerBedType" valuesets="BedLocationOperationalStatus BedProperty BedType">
+<profile xmlns="http://ainq.com/ig-definition" id="SANER" chapter='1' base='http://hl7.org/fhir/uv/saner' codingsystems="SanerBedType" valuesets="BedLocationOperationalStatus BedProperty BedType">
 	<domain id="PH">
 	    <org>HL7</org>
 	    <name>Situational Awareness for Novel Epidemic Response</name>

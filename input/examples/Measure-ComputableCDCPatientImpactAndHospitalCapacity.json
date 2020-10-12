@@ -3,12 +3,12 @@
   "id": "ComputableCDCPatientImpactAndHospitalCapacity",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasure"
+      "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure"
     ]
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/ReportingPeriod",
+      "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/ReportingPeriod",
       "valueTiming": {
         "repeat": {
           "frequency": 1,
@@ -22,7 +22,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -47,7 +47,7 @@
                 "coding": [
                   {
                     "code": "queue-length",
-                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -85,7 +85,7 @@
         "coding": [
           {
             "code": "Encounters",
-            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
             "display": "Encounters"
           }
         ],
@@ -97,7 +97,7 @@
             "coding": [
               {
                 "code": "numC19Pats",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "All COVID-19 Confirmed or Suspected Patients"
               },
               {
@@ -132,7 +132,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -157,7 +157,7 @@
                 "coding": [
                   {
                     "code": "event-growth",
-                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -195,7 +195,7 @@
         "coding": [
           {
             "code": "AcquiredCovid",
-            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
             "display": "Acquired COVID-19 in Hospital"
           }
         ],
@@ -207,7 +207,7 @@
             "coding": [
               {
                 "code": "numC19HospPats",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Hospitalized COVID-19 Patients"
               },
               {
@@ -230,7 +230,7 @@
             "coding": [
               {
                 "code": "numC19HOPats",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Onset COVID-19 Patients"
               },
               {
@@ -253,7 +253,7 @@
             "coding": [
               {
                 "code": "cumC19HOPats",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative Hospital Onset COVID-19 Patients"
               },
               {
@@ -318,7 +318,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -343,7 +343,7 @@
                 "coding": [
                   {
                     "code": "event-growth",
-                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -381,7 +381,7 @@
         "coding": [
           {
             "code": "CovidDeaths",
-            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
             "display": "COVID-19 Deaths"
           }
         ],
@@ -393,7 +393,7 @@
             "coding": [
               {
                 "code": "numC19Pats",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "All COVID-19 Confirmed or Suspected Patients"
               },
               {
@@ -415,7 +415,7 @@
             "coding": [
               {
                 "code": "numC19Died",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "COVID-19 Patient Deaths"
               },
               {
@@ -438,7 +438,7 @@
             "coding": [
               {
                 "code": "cumC19Died",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Cumulative COVID-19 Patient Deaths"
               },
               {
@@ -503,7 +503,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -528,7 +528,7 @@
                 "coding": [
                   {
                     "code": "capacity",
-                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -566,7 +566,7 @@
         "coding": [
           {
             "code": "Ventilators",
-            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
             "display": "Ventilators"
           }
         ],
@@ -578,7 +578,7 @@
             "coding": [
               {
                 "code": "numVent",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators"
               },
               {
@@ -601,7 +601,7 @@
             "coding": [
               {
                 "code": "numVentUse",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators in Use"
               },
               {
@@ -624,12 +624,12 @@
             "coding": [
               {
                 "code": "numVentAvail",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Mechanical Ventilators Available"
               },
               {
                 "code": "numerator-complement",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem"
               }
             ],
             "text": "Total number of ventilators not presently in use."
@@ -647,7 +647,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "subject",
@@ -672,7 +672,7 @@
                 "coding": [
                   {
                     "code": "capacity",
-                    "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring"
+                    "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring"
                   }
                 ]
               }
@@ -710,7 +710,7 @@
         "coding": [
           {
             "code": "Beds",
-            "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasureGroupSystem",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
             "display": "Beds"
           }
         ],
@@ -722,7 +722,7 @@
             "coding": [
               {
                 "code": "numTotBeds",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "All Hospital Beds"
               },
               {
@@ -745,7 +745,7 @@
             "coding": [
               {
                 "code": "numTotBedsOcc",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Beds Occupied"
               },
               {
@@ -768,12 +768,12 @@
             "coding": [
               {
                 "code": "numTotBedsAvail",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "Hospital Beds Available"
               },
               {
                 "code": "numerator-complement",
-                "system": "http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasurePopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasurePopulationSystem"
               }
             ],
             "text": "Total number of hospital beds available"
@@ -869,7 +869,7 @@
     }
   ],
   "name": "ComputableCDCPatientImpactAndHospitalCapacity",
-  "url": "http://hl7.org/fhir/uv/fhir-saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity",
+  "url": "http://hl7.org/fhir/uv/saner/Measure/ComputableCDCPatientImpactAndHospitalCapacity",
   "title": "Patient Impact and Hospital Capacity",
   "relatedArtifact": [
     {
@@ -898,6 +898,6 @@
     }
   ],
   "library": [
-    "http://hl7.org/fhir/uv/fhir-saner/Library/ComputableNHSNMeasureLibrary"
+    "http://hl7.org/fhir/uv/saner/Library/ComputableNHSNMeasureLibrary"
   ]
 }

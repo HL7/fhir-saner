@@ -11,7 +11,7 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/AuditEventBase",
+  "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/AuditEventBase",
   "version": "0.1.0",
   "name": "AuditEventBase",
   "title": "General Audit Event Requirements",

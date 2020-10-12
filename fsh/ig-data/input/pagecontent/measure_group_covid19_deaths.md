@@ -32,7 +32,7 @@ deaths within a facility or region.
 
 ```
  * with group[2].extension[groupAtts] do
- ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/fhir-saner/CodeSystem/PublicHealthMeasureScoring#event-growth
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#event-growth
 ```
 
 Next, the measure describes the type of measure (e.g., structure, process or outcome). This measure is an outcome measure,
@@ -76,19 +76,19 @@ the Initial Population, a Numerator (the new infections), and a Denominator (the
 Provide a code describing each population.
 ```
  * with group[2].population[0].code do
- ** coding = http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19Pats
+ ** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Pats
  ** coding.display = "All COVID-19 Confirmed or Suspected Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  ** text = "Patients with suspected or confirmed COVID-19 in any location."
 
  * with group[2].population[1].code do
- ** coding = http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#numC19HOPats
+ ** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HOPats
  ** coding.display = "Hospital Onset COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#numerator
  ** text = "Hospital Onset COVID-19 Patients"
 
  * with group[2].population[2].code do
- ** coding = http://hl7.org/fhir/uv/fhir-saner/CodeSystem/MeasuredValues#cumC19HOPats
+ ** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#cumC19HOPats
  ** coding.display = "Cumulative Hospital Onset COVID-19 Patients"
  ** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
  ** text = "Cumulative Hospital Onset COVID-19 Patients"

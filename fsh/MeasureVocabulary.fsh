@@ -1,5 +1,5 @@
 // This sheet convert output to FHIR Shorthand for generating measures.
-Alias: $Base = http://hl7.org/fhir/uv/fhir-saner
+Alias: $Base = http://hl7.org/fhir/uv/saner
 Alias: HSLOC = https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 Alias: ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias: SCT = http://snomed.info/sct

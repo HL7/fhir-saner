@@ -6,7 +6,7 @@
   "title": "Patient Died",
   "description": "Codes used to identify that a patient has died",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/uv/fhir-saner/ValueSet/PatientDeaths",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/PatientDeaths",
   "compose": {
     "include": [
       {

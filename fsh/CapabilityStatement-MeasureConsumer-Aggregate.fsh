@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Aggregate"
 * title = "Measure Consumer implementing the Aggregate Option."
-* date = "2020-10-11T14:21:45.012146-04:00"
+* date = "2020-10-12T09:42:48.454794-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Aggregate Option."
 * format[0] = #xml
@@ -16,8 +16,8 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * rest[serverSlice].mode = #server
 
 * rest[serverSlice].resource[MeasureReportSlice].type = #MeasureReport
-* rest[serverSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/fhir-saner/StructureDefinition/PublicHealthMeasureReport"
+* rest[serverSlice].resource[MeasureReportSlice].supportedProfile[0] = "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasureReport"
 
 * rest[serverSlice].resource[MeasureReportSlice].operation[0].name = "aggregate"
-* rest[serverSlice].resource[MeasureReportSlice].operation[0].definition = "http://hl7.org/fhir/uv/fhir-saner/OperationDefinition/MeasureReport-aggregate"
+* rest[serverSlice].resource[MeasureReportSlice].operation[0].definition = "http://hl7.org/fhir/uv/saner/OperationDefinition/MeasureReport-aggregate"
 * rest[serverSlice].resource[MeasureReportSlice].operation[0].documentation = "Aggregate"
