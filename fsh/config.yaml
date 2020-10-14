@@ -48,19 +48,19 @@ releaseLabel: CI Build
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-history:
-  current: http://build.fhir.org/ig/fhir-saner
-  0.1.0:
-    fhirversion: 4.0.1
-    date: 2020-10-19
-    desc: Initial STU ballot (Oct 2020 Ballot)
-    path: http://hl7.org/fhir/uv/saner
-    status: ballot
-    sequence: STU 1
-    current: true
-    keywords:
-      - Public Health
-      - Public Health Reporting
+# history:
+#   current: http://build.fhir.org/ig/fhir-saner
+#   0.1.0:
+#    fhirversion: 4.0.1
+#    date: 2020-10-19
+#    desc: Initial STU ballot (Oct 2020 Ballot)
+#    path: http://hl7.org/fhir/uv/saner
+#    status: ballot
+#    sequence: STU 1
+#    current: true
+#    categories:
+#      - Public Health
+#      - Public Health Reporting
 
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To control the ig.ini using this config, uncomment and set the "template" property.           │

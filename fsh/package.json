@@ -6,10 +6,8 @@
   "title": "Situational Awareness for Novel Epidemic Response",
   "description": "The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of high level situational awareness information from inpatient facilities to centralized data repositories to support the treatment of novel influenza-like illness.",
   "dependencies": {
-    "hl7.fhir.r4.core": "4.0.1",
-    "hl7.fhir.us.core": "3.1.0"
+    "hl7.fhir.r4.core": "4.0.1"
   },
-  "fhir.argonaut.questionnaire": "1.0.0",
   "keywords": [
     "COVID",
     "Coronovirus",

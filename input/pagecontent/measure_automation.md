@@ -69,7 +69,7 @@ JSON) originally designed for use with FHIR.  It is similar in form and capabili
 to more general models than those represented by an XML document. When [FHIRPath is used within a FHIR Server](https://www.hl7.org/fhir/fhirpath.html)
 context, the language includes capabilities which support automation of queries, and resolution of resources matching the specified path.
 
-3. [Clinical Quality Language] (https://cql.hl7.org/) is an language designed to automate the computation of measures from FHIR and other data models. It enables
+3. [Clinical Quality Language](https://cql.hl7.org/) is an language designed to automate the computation of measures from FHIR and other data models. It enables
 localization of models to support variations in organizational workflows and data models.  Several open source implementations of CQL interpreters
 are available, but this technology has not yet reached the maturity of other sorts of systems, and it is not always widely available for users
 of systems supporting FHIR.

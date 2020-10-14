@@ -3,7 +3,6 @@
   "canonical": "http://hl7.org/fhir/uv/saner",
   "title": "Situational Awareness for Novel Epidemic Response",
   "introduction": "The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of high level situational awareness information from healthcare facilities to centralized data repositories to support the treatment of the novel coronavirus illness.",
-  "category": "Public Health",
   "list": [
     {
       "version": "current",
@@ -17,6 +16,7 @@
       "date": "2020-10-19",
       "desc": "Initial STU ballot (Oct 2020 Ballot)",
       "path": "http://hl7.org/fhir/uv/saner",
+      "category": "Public Health",
       "status": "ballot",
       "sequence": "STU 1",
       "fhirversion": "4.0.1",
