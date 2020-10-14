@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner" ciUrl="http://build.fhir.org/ig/fhir-saner" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-saner" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/uv/saner"><version code="current" url="http://build.fhir.org/ig/fhir-saner"/>
-<version code="0.0.1" url="http://hl7.org/fhir/uv/saner"/>
+<version code="0.1.0" url="http://hl7.org/fhir/uv/saner"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -8,8 +8,6 @@
 <artifact id="ValueSet/DecadeAgeBrackets" key="ValueSet-DecadeAgeBrackets" name="Age Brackets By Decade"/>
 <artifact id="ValueSet/ScoreAgeBrackets" key="ValueSet-ScoreAgeBrackets" name="Age Brackets By Score (20)"/>
 <artifact id="CodeSystem/IHE-ADX-agerange" key="CodeSystem-IHE-ADX-agerange" name="Age Range Coding System"/>
-<artifact id="StructureDefinition/MeasurePopulationAlternateCriteria" key="StructureDefinition-MeasurePopulationAlternateCriteria" name="Alternate criteria for performing a measure"/>
-<artifact id="StructureDefinition/MeasureGroupAttributes" key="StructureDefinition-MeasureGroupAttributes" name="Attributes describing a group of measures"/>
 <artifact id="StructureDefinition/AuditEventCreate" key="StructureDefinition-AuditEventCreate" name="Audit Event Create Profile"/>
 <artifact id="StructureDefinition/AuditEventDelete" key="StructureDefinition-AuditEventDelete" name="Audit Event Delete Profile"/>
 <artifact id="StructureDefinition/AuditEventRead" key="StructureDefinition-AuditEventRead" name="Audit Event Read"/>
@@ -406,6 +404,8 @@
 <artifact id="CapabilityStatement/MeasureDefinitionSource" key="CapabilityStatement-MeasureDefinitionSource" name="MeasureDefinitionSource"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionSource-QueryMeasureDefinition" name="MeasureDefinitionSource-QueryMeasureDefinition"/>
 <artifact id="StructureDefinition/measure-expectation" key="StructureDefinition-measure-expectation" name="MeasureExpection"/>
+<artifact deprecated="true" id="StructureDefinition/MeasureGroupAttributes" key="MeasureGroupAttributes" name="MeasureGroupAttributes"/>
+<artifact deprecated="true" id="StructureDefinition/MeasurePopulationAlternateCriteria" key="MeasurePopulationAlternateCriteria" name="MeasurePopulationAlternateCriteria"/>
 <artifact id="OperationDefinition/MeasureReport-aggregate" key="OperationDefinition-MeasureReport-aggregate" name="MeasureReport-aggregate"/>
 <artifact id="OperationDefinition/MeasureReport-read-csv" key="OperationDefinition-MeasureReport-read-csv" name="MeasureReport-read-csv"/>
 <artifact id="OperationDefinition/MeasureReport-search-csv" key="OperationDefinition-MeasureReport-search-csv" name="MeasureReport-search-csv"/>
@@ -513,11 +513,11 @@
 <artifact id="Patient/Patient9b" key="Patient-Patient9b" name="Patient9b"/>
 <artifact id="Patient/Patient9c" key="Patient-Patient9c" name="Patient9c"/>
 <artifact id="StructureDefinition/PreciseDateTime" key="StructureDefinition-PreciseDateTime" name="Precise Date Time"/>
-<artifact id="StructureDefinition/PublicHealthMeasure" key="StructureDefinition-PublicHealthMeasure" name="Public Health Measure"/>
 <artifact id="ValueSet/PublicHealthMeasureAttachmentTypes" key="ValueSet-PublicHealthMeasureAttachmentTypes" name="Public Health Measure Attachment Types"/>
 <artifact id="StructureDefinition/PublicHealthMeasureLibrary" key="StructureDefinition-PublicHealthMeasureLibrary" name="Public Health Measure Library"/>
 <artifact id="StructureDefinition/PublicHealthMeasureReport" key="StructureDefinition-PublicHealthMeasureReport" name="Public Health Measure Report"/>
 <artifact id="CodeSystem/PublicHealthMeasureScoring" key="CodeSystem-PublicHealthMeasureScoring" name="Public Health Measure Scoring"/>
+<artifact deprecated="true" id="StructureDefinition/PublicHealthMeasure" key="PublicHealthMeasure" name="PublicHealthMeasure"/>
 <artifact id="StructureDefinition/PublicHealthMeasureMetadataAttachment" key="StructureDefinition-PublicHealthMeasureMetadataAttachment" name="PublicHealthMeasureMetadataAttachment"/>
 <artifact deprecated="true" id="StructureDefinition/PublicHealthMeasureStratifier" key="PublicHealthMeasureStratifier" name="PublicHealthMeasureStratifier"/>
 <artifact id="StructureDefinition/MeasureReportingTiming" key="StructureDefinition-MeasureReportingTiming" name="Recommended Measure Reporting Times"/>
