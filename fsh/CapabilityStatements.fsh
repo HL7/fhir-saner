@@ -37,4 +37,9 @@ Description:    "A Capability Statement with slicing defined"
 * rest.resource[QuestionnaireSlice].type = #Questionnaire (exactly)
 * rest.resource[QuestionnaireResponseSlice].type = #QuestionnaireResponse (exactly)
 * rest.resource[LibrarySlice].type = #Library (exactly)
+* rest.resource[ConceptMapSlice].type = #ConceptMap (exactly)
+* rest.resource[ValueSetSlice].type = #ValueSet (exactly)
+* rest.resource[CodeSystemSlice].type = #CodeSystem (exactly)
+* rest.resource[ParametersSlice].type = #Parameters (exactly)
+
 
