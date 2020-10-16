@@ -43,7 +43,7 @@ parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true
 copyrightYear: 2020+
-releaseLabel: STU Release
+releaseLabel: STU Ballot
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
