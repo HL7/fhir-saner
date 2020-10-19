@@ -6,17 +6,10 @@
   "category": "Public Health",
   "list": [
     {
-      "version": "current",
-      "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/fhir-saner",
-      "status": "ci-build",
-      "current": true
-    },
-    {
       "version": "0.1.0",
       "date": "2020-10-19",
       "desc": "Initial STU ballot (Oct 2020 Ballot)",
-      "path": "http://hl7.org/fhir/uv/saner",
+      "path": "http://hl7.org/fhir/uv/saner/2021Jan",
       "status": "ballot",
       "sequence": "STU 1",
       "fhirversion": "4.0.1",
