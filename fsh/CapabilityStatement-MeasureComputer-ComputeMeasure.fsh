@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Computer implementing the
 * insert SanerDefinitionContent
 * name = "MeasureComputer_ComputeMeasure"
 * title = "Measure Computer implementing the Compute Measure transaction."
-* date = "2020-10-14T11:27:23.288495-04:00"
+* date = "2020-12-16T23:05:11.023491-05:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Computer implementing the Compute Measure transaction."
 * format[0] = #xml

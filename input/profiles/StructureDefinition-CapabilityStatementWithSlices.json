@@ -199,11 +199,21 @@
         "max": "*"
       },
       {
+        "id": "CapabilityStatement.rest.resource:ConceptMapSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "ConceptMap"
+      },
+      {
         "id": "CapabilityStatement.rest.resource:ValueSetSlice",
         "path": "CapabilityStatement.rest.resource",
         "sliceName": "ValueSetSlice",
         "min": 0,
         "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ValueSetSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "ValueSet"
       },
       {
         "id": "CapabilityStatement.rest.resource:CodeSystemSlice",
@@ -213,11 +223,21 @@
         "max": "*"
       },
       {
+        "id": "CapabilityStatement.rest.resource:CodeSystemSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "CodeSystem"
+      },
+      {
         "id": "CapabilityStatement.rest.resource:ParametersSlice",
         "path": "CapabilityStatement.rest.resource",
         "sliceName": "ParametersSlice",
         "min": 0,
         "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ParametersSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Parameters"
       },
       {
         "id": "CapabilityStatement.rest:clientSlice",

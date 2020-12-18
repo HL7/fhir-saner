@@ -215,6 +215,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/AllCOVID19RiskFactors"
+        },
+        "name": "All COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/BedLocationOperationalStatus"
         },
         "name": "Bed Location Operational Status",
@@ -223,10 +231,26 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/COPDCOVID19RiskFactors"
+        },
+        "name": "COPD COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to COPD",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/COVID19Antibody"
         },
         "name": "COVID19Antibody",
         "description": "This Value Set includes codes describing SARS COV-2 antibodies detected during testing",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/COVID19Complications"
+        },
+        "name": "COVID-19 Complications",
+        "description": "Codes identifying Complications associated with COVID-19",
         "exampleBoolean": false
       },
       {
@@ -263,6 +287,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/CardiovascularCOVID19RiskFactors"
+        },
+        "name": "Cardiovascular COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Cardiovascular disease",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/ConfirmedCOVID19Diagnoses"
         },
         "name": "Confirmed COVID-19 Diagnosis Values",
@@ -287,6 +319,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/DiabetesCOVID19RiskFactors"
+        },
+        "name": "Diabetes COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Diabetes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/EventContext"
         },
         "name": "Event Context",
@@ -303,6 +343,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/HypertensionCOVID19RiskFactors"
+        },
+        "name": "Hypertension COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Hypertension",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/ICULocations"
         },
         "name": "ICU Locations",
@@ -315,6 +363,22 @@
         },
         "name": "Inpatient Locations",
         "description": "Codes used for inpatient locations",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/IsolationPrecautions"
+        },
+        "name": "COVID-19 Isolation Precautions",
+        "description": "Codes identifying Isolation Precaution Orders or Procedures",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/KidneyDiseaseCOVID19RiskFactors"
+        },
+        "name": "Kidney Disease COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Chronic Kidney Disease",
         "exampleBoolean": false
       },
       {
@@ -367,6 +431,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/NeoplasticCOVID19RiskFactors"
+        },
+        "name": "Neoplastic COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Neoplastic Diseases",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ObesityCOVID19RiskFactors"
+        },
+        "name": "Obesity COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Obesity",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/PatientDeaths"
         },
         "name": "Patient Died",
@@ -387,6 +467,14 @@
         },
         "name": "COVID-19 Detected",
         "description": "Codes for a positive COVID-19 Diagnostic Test Result",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PregnancyCOVID19RiskFactors"
+        },
+        "name": "Pregnancy COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Pregnancy",
         "exampleBoolean": false
       },
       {
@@ -431,6 +519,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/SickleCellCOVID19RiskFactors"
+        },
+        "name": "Sickle Cell COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Sickle Cell Disease",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/SuspectedCOVID19Diagnoses"
         },
         "name": "SuspectedCOVID19Diagnoses",
@@ -443,6 +539,22 @@
         },
         "name": "Suspected Or Diagnosed COVID-19",
         "description": "Codes identifying suspected or confirmed COVID-19",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/TobaccoCOVID19RiskFactors"
+        },
+        "name": "Tobacco COVID-19 Risk Factors",
+        "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Tobacco Use",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VTEReports"
+        },
+        "name": "Codes for reports about VTE Diagnosics",
+        "description": "Codes identifying Diagnostics tests or results for VTE",
         "exampleBoolean": false
       },
       {
@@ -4922,7 +5034,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "CI Build"
+        "value": "STU Ballot"
       },
       {
         "code": "show-inherited-invariants",

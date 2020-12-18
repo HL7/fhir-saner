@@ -152,4 +152,72 @@ Description: "This library contains references to the value sets used for the Co
 * content[26].title = "Ventilator Procedures"
 * content[26].contentType = #application/fhir+xml
 
+* content[27].id = "VTEReports"
+* content[27].url = Canonical(VTEReports)
+* content[27].title = "Codes for reports about VTE Diagnosics"
+* content[27].contentType = #application/fhir+xml
 
+* content[28].id = "AllCOVID19RiskFactors"
+* content[28].url = Canonical(AllCOVID19RiskFactors)
+* content[28].title = "All COVID-19 Risk Factors"
+* content[28].contentType = #application/fhir+xml
+
+* content[29].id = "NeoplasticCOVID19RiskFactors"
+* content[29].url = Canonical(NeoplasticCOVID19RiskFactors)
+* content[29].title = "Neoplastic COVID-19 Risk Factors"
+* content[29].contentType = #application/fhir+xml
+
+* content[30].id = "COPDCOVID19RiskFactors"
+* content[30].url = Canonical(COPDCOVID19RiskFactors)
+* content[30].title = "COPD COVID-19 Risk Factors"
+* content[30].contentType = #application/fhir+xml
+
+* content[31].id = "TobaccoCOVID19RiskFactors"
+* content[31].url = Canonical(TobaccoCOVID19RiskFactors)
+* content[31].title = "Tobacco COVID-19 Risk Factors"
+* content[31].contentType = #application/fhir+xml
+
+* content[32].id = "HypertensionCOVID19RiskFactors"
+* content[32].url = Canonical(HypertensionCOVID19RiskFactors)
+* content[32].title = "Hypertension COVID-19 Risk Factors"
+* content[32].contentType = #application/fhir+xml
+
+* content[33].id = "CardiovascularCOVID19RiskFactors"
+* content[33].url = Canonical(CardiovascularCOVID19RiskFactors)
+* content[33].title = "Cardiovascular COVID-19 Risk Factors"
+* content[33].contentType = #application/fhir+xml
+
+* content[34].id = "ObesityCOVID19RiskFactors"
+* content[34].url = Canonical(ObesityCOVID19RiskFactors)
+* content[34].title = "Obesity COVID-19 Risk Factors"
+* content[34].contentType = #application/fhir+xml
+
+* content[35].id = "SickleCellCOVID19RiskFactors"
+* content[35].url = Canonical(SickleCellCOVID19RiskFactors)
+* content[35].title = "Sickle Cell COVID-19 Risk Factors"
+* content[35].contentType = #application/fhir+xml
+
+* content[36].id = "KidneyDiseaseCOVID19RiskFactors"
+* content[36].url = Canonical(KidneyDiseaseCOVID19RiskFactors)
+* content[36].title = "Kidney Disease COVID-19 Risk Factors"
+* content[36].contentType = #application/fhir+xml
+
+* content[37].id = "PregnancyCOVID19RiskFactors"
+* content[37].url = Canonical(PregnancyCOVID19RiskFactors)
+* content[37].title = "Pregnancy COVID-19 Risk Factors"
+* content[37].contentType = #application/fhir+xml
+
+* content[38].id = "DiabetesCOVID19RiskFactors"
+* content[38].url = Canonical(DiabetesCOVID19RiskFactors)
+* content[38].title = "Diabetes COVID-19 Risk Factors"
+* content[38].contentType = #application/fhir+xml
+
+* content[39].id = "IsolationPrecautions"
+* content[39].url = Canonical(IsolationPrecautions)
+* content[39].title = "COVID-19 Isolation Precautions"
+* content[39].contentType = #application/fhir+xml
+
+* content[40].id = "COVID19Complications"
+* content[40].url = Canonical(COVID19Complications)
+* content[40].title = "COVID-19 Complications"
+* content[40].contentType = #application/fhir+xml

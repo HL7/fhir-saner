@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner" ciUrl="http://build.fhir.org/ig/fhir-saner" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-saner" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/uv/saner"><version code="current" url="http://build.fhir.org/ig/fhir-saner"/>
-<version code="0.1.0" url="http://hl7.org/fhir/uv/saner"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner/2021Jan" ciUrl="" defaultVersion="0.1.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-saner" url="http://hl7.org/fhir/uv/saner">
+<version code="0.1.0" url="http://hl7.org/fhir/uv/saner/2021Jan"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -8,6 +8,7 @@
 <artifact id="ValueSet/DecadeAgeBrackets" key="ValueSet-DecadeAgeBrackets" name="Age Brackets By Decade"/>
 <artifact id="ValueSet/ScoreAgeBrackets" key="ValueSet-ScoreAgeBrackets" name="Age Brackets By Score (20)"/>
 <artifact id="CodeSystem/IHE-ADX-agerange" key="CodeSystem-IHE-ADX-agerange" name="Age Range Coding System"/>
+<artifact id="ValueSet/AllCOVID19RiskFactors" key="ValueSet-AllCOVID19RiskFactors" name="All COVID-19 Risk Factors"/>
 <artifact id="StructureDefinition/AuditEventCreate" key="StructureDefinition-AuditEventCreate" name="Audit Event Create Profile"/>
 <artifact id="StructureDefinition/AuditEventDelete" key="StructureDefinition-AuditEventDelete" name="Audit Event Delete Profile"/>
 <artifact id="StructureDefinition/AuditEventRead" key="StructureDefinition-AuditEventRead" name="Audit Event Read"/>
@@ -18,8 +19,11 @@
 <artifact id="Measure/CDCHealthcareSupplyPathway" key="Measure-CDCHealthcareSupplyPathway" name="CDC Healthcare Supply Pathway"/>
 <artifact id="Measure/CDCPatientImpactAndHospitalCapacity" key="Measure-CDCPatientImpactAndHospitalCapacity" name="CDC Patient Impact and Hospital Capacity"/>
 <artifact id="Measure/CDCHealthcareWorkerStaffingPathway" key="Measure-CDCHealthcareWorkerStaffingPathway" name="CDCHealthcareWorkerStaffingPathway"/>
+<artifact id="ValueSet/COPDCOVID19RiskFactors" key="ValueSet-COPDCOVID19RiskFactors" name="COPD COVID-19 Risk Factors"/>
+<artifact id="ValueSet/COVID19Complications" key="ValueSet-COVID19Complications" name="COVID-19 Complications"/>
 <artifact id="ValueSet/PositiveResults" key="ValueSet-PositiveResults" name="COVID-19 Detected"/>
 <artifact id="ValueSet/Covid19Labs" key="ValueSet-Covid19Labs" name="COVID-19 Diagnostic Test"/>
+<artifact id="ValueSet/IsolationPrecautions" key="ValueSet-IsolationPrecautions" name="COVID-19 Isolation Precautions"/>
 <artifact id="ValueSet/NegativeResults" key="ValueSet-NegativeResults" name="COVID-19 Not Detected"/>
 <artifact id="ValueSet/COVID19Antibody" key="ValueSet-COVID19Antibody" name="COVID19Antibody"/>
 <artifact id="ValueSet/COVID19DXICD10" key="ValueSet-COVID19DXICD10" name="COVID19DXICD10"/>
@@ -27,6 +31,8 @@
 <artifact id="ValueSet/COVID19Exposures" key="ValueSet-COVID19Exposures" name="COVID19Exposures"/>
 <artifact id="ValueSet/COVID19Organism" key="ValueSet-COVID19Organism" name="COVID19Organism"/>
 <artifact id="StructureDefinition/CapabilityStatementWithSlices" key="StructureDefinition-CapabilityStatementWithSlices" name="Capability Statements with Slices"/>
+<artifact id="ValueSet/CardiovascularCOVID19RiskFactors" key="ValueSet-CardiovascularCOVID19RiskFactors" name="Cardiovascular COVID-19 Risk Factors"/>
+<artifact id="ValueSet/VTEReports" key="ValueSet-VTEReports" name="Codes for reports about VTE Diagnosics"/>
 <artifact id="Measure/ComputableCDCPatientImpactAndHospitalCapacity" key="Measure-ComputableCDCPatientImpactAndHospitalCapacity" name="Computable CDC Patient Impact and Hospital Capacity"/>
 <artifact id="Library/ComputableNHSNMeasureLibrary" key="Library-ComputableNHSNMeasureLibrary" name="ComputableNHSNMeasureLibrary"/>
 <artifact id="Condition/Condition12c" key="Condition-Condition12c" name="Condition12c"/>
@@ -50,6 +56,7 @@
 <artifact id="Condition/Condition9b" key="Condition-Condition9b" name="Condition9b"/>
 <artifact id="Condition/Condition9c" key="Condition-Condition9c" name="Condition9c"/>
 <artifact id="ValueSet/ConfirmedCOVID19Diagnoses" key="ValueSet-ConfirmedCOVID19Diagnoses" name="Confirmed COVID-19 Diagnosis Values"/>
+<artifact id="ValueSet/DiabetesCOVID19RiskFactors" key="ValueSet-DiabetesCOVID19RiskFactors" name="Diabetes COVID-19 Risk Factors"/>
 <artifact id="StructureDefinition/ReportingPeriod" key="StructureDefinition-ReportingPeriod" name="Enables specification of proposed measure reporting"/>
 <artifact id="Encounter/Encounter1a" key="Encounter-Encounter1a" name="Encounter1a"/>
 <artifact id="Encounter/Encounter1b" key="Encounter-Encounter1b" name="Encounter1b"/>
@@ -289,6 +296,7 @@
 <artifact deprecated="true" id="StructureDefinition/GeoLocation" key="GeoLocation" name="GeoLocation"/>
 <artifact id="ConceptMap/HAvBED2toFHIR" key="ConceptMap-HAvBED2toFHIR" name="HAvBED2 to FHIR Concept Map"/>
 <artifact id="ValueSet/HealthcareServiceLocation" key="ValueSet-HealthcareServiceLocation" name="HealthcareServiceLocation"/>
+<artifact id="ValueSet/HypertensionCOVID19RiskFactors" key="ValueSet-HypertensionCOVID19RiskFactors" name="Hypertension COVID-19 Risk Factors"/>
 <artifact id="ValueSet/ICULocations" key="ValueSet-ICULocations" name="ICU Locations"/>
 <artifact id="Immunization/Immunization11c" key="Immunization-Immunization11c" name="Immunization11c"/>
 <artifact id="Immunization/Immunization12a" key="Immunization-Immunization12a" name="Immunization12a"/>
@@ -298,6 +306,7 @@
 <artifact id="Immunization/Immunization19a" key="Immunization-Immunization19a" name="Immunization19a"/>
 <artifact id="Immunization/Immunization19b" key="Immunization-Immunization19b" name="Immunization19b"/>
 <artifact id="ValueSet/InpatientLocations" key="ValueSet-InpatientLocations" name="Inpatient Locations"/>
+<artifact id="ValueSet/KidneyDiseaseCOVID19RiskFactors" key="ValueSet-KidneyDiseaseCOVID19RiskFactors" name="Kidney Disease COVID-19 Risk Factors"/>
 <artifact id="Location/Loc-X140008" key="Location-Loc-X140008" name="Loc-X140008"/>
 <artifact id="Location/Loc-X140010" key="Location-Loc-X140010" name="Loc-X140010"/>
 <artifact id="Location/Loc-X140048" key="Location-Loc-X140048" name="Loc-X140048"/>
@@ -441,6 +450,8 @@
 <artifact id="MedicationRequest/MedicationRequest19c" key="MedicationRequest-MedicationRequest19c" name="MedicationRequest19c"/>
 <artifact id="Library/NHSNMeasureLibrary" key="Library-NHSNMeasureLibrary" name="NHSNMeasureLibrary"/>
 <artifact id="Organization/NJ-DPH" key="Organization-NJ-DPH" name="NJ-DPH"/>
+<artifact id="ValueSet/NeoplasticCOVID19RiskFactors" key="ValueSet-NeoplasticCOVID19RiskFactors" name="Neoplastic COVID-19 Risk Factors"/>
+<artifact id="ValueSet/ObesityCOVID19RiskFactors" key="ValueSet-ObesityCOVID19RiskFactors" name="Obesity COVID-19 Risk Factors"/>
 <artifact id="Observation/Observation11a" key="Observation-Observation11a" name="Observation11a"/>
 <artifact id="Observation/Observation11b" key="Observation-Observation11b" name="Observation11b"/>
 <artifact id="Observation/Observation11c" key="Observation-Observation11c" name="Observation11c"/>
@@ -513,6 +524,7 @@
 <artifact id="Patient/Patient9b" key="Patient-Patient9b" name="Patient9b"/>
 <artifact id="Patient/Patient9c" key="Patient-Patient9c" name="Patient9c"/>
 <artifact id="StructureDefinition/PreciseDateTime" key="StructureDefinition-PreciseDateTime" name="Precise Date Time"/>
+<artifact id="ValueSet/PregnancyCOVID19RiskFactors" key="ValueSet-PregnancyCOVID19RiskFactors" name="Pregnancy COVID-19 Risk Factors"/>
 <artifact id="ValueSet/PublicHealthMeasureAttachmentTypes" key="ValueSet-PublicHealthMeasureAttachmentTypes" name="Public Health Measure Attachment Types"/>
 <artifact id="StructureDefinition/PublicHealthMeasureLibrary" key="StructureDefinition-PublicHealthMeasureLibrary" name="Public Health Measure Library"/>
 <artifact id="StructureDefinition/PublicHealthMeasureReport" key="StructureDefinition-PublicHealthMeasureReport" name="Public Health Measure Report"/>
@@ -529,10 +541,12 @@
 <artifact id="SearchParameter/SearchParameter-code" key="SearchParameter-SearchParameter-code" name="Search by Code in Definitions and Instances"/>
 <artifact id="SearchParameter/SearchParameter-definition-text" key="SearchParameter-SearchParameter-definition-text" name="Search by Text in Definitions"/>
 <artifact id="SearchParameter/SearchParameter-disposition" key="SearchParameter-SearchParameter-disposition" name="Search by hospitalization.dispositionCode in Encounters"/>
+<artifact id="ValueSet/SickleCellCOVID19RiskFactors" key="ValueSet-SickleCellCOVID19RiskFactors" name="Sickle Cell COVID-19 Risk Factors"/>
 <artifact id="CodeSystem/MeasurePopulationSystem" key="CodeSystem-MeasurePopulationSystem" name="Situational Awareness Measure Populations"/>
 <artifact deprecated="true" id="StructureDefinition/saner-supporting-device" key="SupportingDevice" name="SupportingDevice"/>
 <artifact id="ValueSet/SuspectedOrConfirmedCOVID19Diagnoses" key="ValueSet-SuspectedOrConfirmedCOVID19Diagnoses" name="Suspected Or Diagnosed COVID-19"/>
 <artifact id="ValueSet/SuspectedCOVID19Diagnoses" key="ValueSet-SuspectedCOVID19Diagnoses" name="SuspectedCOVID19Diagnoses"/>
+<artifact id="ValueSet/TobaccoCOVID19RiskFactors" key="ValueSet-TobaccoCOVID19RiskFactors" name="Tobacco COVID-19 Risk Factors"/>
 <artifact id="ValueSet/VentilatorDevices" key="ValueSet-VentilatorDevices" name="Ventilator Devices"/>
 <artifact id="ValueSet/VentilatorObservations" key="ValueSet-VentilatorObservations" name="Ventilator Observations"/>
 <artifact id="ValueSet/VentilatorProcedures" key="ValueSet-VentilatorProcedures" name="Ventilator Procedures"/>

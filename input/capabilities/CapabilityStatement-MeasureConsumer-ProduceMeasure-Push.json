@@ -72,7 +72,7 @@
   ],
   "name": "MeasureConsumer_ProduceMeasure_Push",
   "title": "Measure Consumer implementing the Produce Measure transaction with the Push Option.",
-  "date": "2020-10-14T11:27:23.288495-04:00",
+  "date": "2020-12-16T23:05:11.023491-05:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the Push Option.",
   "format": [
