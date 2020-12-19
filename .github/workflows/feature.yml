@@ -22,9 +22,9 @@ jobs:
       - name: Generate Content and images
         working-directory: $GITHUB_WORKSPACE/fsh/ig-data/input
         run: |
-          java -classpath $GITHUB_WORKSPACE/lib/saxon9he.jar net.sf.saxon.Transform -s:SANER.xml -xsl:overview.xslt
-          java -classpath $GITHUB_WORKSPACE/lib/saxon9he.jar net.sf.saxon.Transform -s:SANER.xml -xsl:actorsandtransactions.xslt
-          java -jar $GITHUB_WORKSPACE/lib/plantuml.jar -tsvg images-source/*.txt -o ../images
+          $JAVA_HOME/java -classpath $GITHUB_WORKSPACE/lib/saxon9he.jar net.sf.saxon.Transform -s:SANER.xml -xsl:overview.xslt
+          $JAVA_HOME/java -classpath $GITHUB_WORKSPACE/lib/saxon9he.jar net.sf.saxon.Transform -s:SANER.xml -xsl:actorsandtransactions.xslt
+          $JAVA_HOME/java -jar $GITHUB_WORKSPACE/lib/plantuml.jar -tsvg images-source/*.txt -o ../images
 #      - uses: actions/cache@v1
 #        with:
 #          path: ~/.m2/repository
