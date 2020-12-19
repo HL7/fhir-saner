@@ -31,7 +31,6 @@ jobs:
         run: mvn -B clean test package        
 
       - name: Checkin Generated Inputs 
-        uses: actions/checkout@v2
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
