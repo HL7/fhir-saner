@@ -17,29 +17,29 @@
 			<artifactId>hapi-fhir-structures-r4</artifactId>
 			<version>${hapi.fhir.version}</version>
 		</dependency>
-        <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>4.5</version>
-        </dependency>
-        <!--  Used for Narrative Generation -->
-        <dependency>
-		    <groupId>com.atlassian.commonmark</groupId>
-		    <artifactId>commonmark</artifactId>
-		    <version>0.15.2</version>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.5</version>
+		</dependency>
+		<!-- Used for Narrative Generation -->
+		<dependency>
+			<groupId>com.atlassian.commonmark</groupId>
+			<artifactId>commonmark</artifactId>
+			<version>0.15.2</version>
 		</dependency>
 
 		<!-- Logging -->
 		<dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -75,6 +75,102 @@
 						</manifest>
 					</archive>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>xml-maven-plugin</artifactId>
+				<version>1.0.2</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>transform</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<forceCreation>true</forceCreation>
+					<transformationSets>
+						<transformationSet>
+							<dir>${project.basedir}/fsh/ig-data/input</dir>
+							<includes>SANER.xml</includes>
+							<stylesheet>file:///${project.basedir}/fsh/ig-data/input/overview.xslt</stylesheet>
+							<parameters>
+								<parameter>
+									<name>dir</name>
+									<value>file:///${project.basedir}/fsh/ig-data/input/</value>
+								</parameter>
+							</parameters>
+						</transformationSet>
+						<transformationSet>
+							<dir>${project.basedir}/fsh/ig-data/input</dir>
+							<includes>SANER.xml</includes>
+							<stylesheet>file:///${project.basedir}/fsh/ig-data/input/actorsandtransactions.xslt</stylesheet>
+							<parameters>
+								<parameter>
+									<name>dir</name>
+									<value>file:///${project.basedir}/fsh/ig-data/input/</value>
+								</parameter>
+							</parameters>
+						</transformationSet>
+					</transformationSets>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.sf.saxon</groupId>
+						<artifactId>Saxon-HE</artifactId>
+						<version>10.3</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>com.github.jeluard</groupId>
+				<artifactId>plantuml-maven-plugin</artifactId>
+				<version>7941</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<outputDirectory>${project.basedir}/fsh/ig-data/input/images</outputDirectory>
+					<sourceFiles>
+						<directory>${project.basedir}</directory>
+						<includes>
+							<include>/fsh/ig-data/input/images-source/*.txt</include>
+						</includes>
+					</sourceFiles>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.sourceforge.plantuml</groupId>
+						<artifactId>plantuml</artifactId>
+						<version>7976</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<executions>
+					<execution>
+						<phase>site</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>java</executable>
+							<arguments>
+								<argument>-Xmx2G</argument>
+								<argument>-jar</argument>
+								<argument>../publisher.jar</argument>
+								<argument>-ig</argument>
+								<argument>ig.ini</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

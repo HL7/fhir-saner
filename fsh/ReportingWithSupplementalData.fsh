@@ -222,7 +222,7 @@ has any such associated Condition or Observation resources in the prior two week
 * supplementalData[7].usage = #supplemental-data
 * supplementalData[7].description = "Isolation Precautions"
 * supplementalData[7].criteria.description = "Retrieves orders or procedures associated with Isolation Precautions"
-* supplementalData[7].criteria.name = "Isolation Precautions"
+* supplementalData[7].criteria.name = "IsolationPrecautions"
 * supplementalData[7].criteria.language = #text/fhirpath
 * supplementalData[7].criteria.expression = """
 	findAll('ServiceRequest',
