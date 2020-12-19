@@ -22,6 +22,11 @@
 			<artifactId>opencsv</artifactId>
 			<version>4.5</version>
 		</dependency>
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>10.3</version>
+		</dependency>
 		<!-- Used for Narrative Generation -->
 		<dependency>
 			<groupId>com.atlassian.commonmark</groupId>
@@ -89,7 +94,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<forceCreation>true</forceCreation>
 					<transformationSets>
 						<transformationSet>
 							<dir>${project.basedir}/fsh/ig-data/input</dir>

@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Definition Source."
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionSource"
 * title = "Measure Definition Source."
-* date = "2020-12-19T12:13:44.8803097-05:00"
+* date = "2020-12-19T13:32:33.0616715-05:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Source."
 * format[0] = #xml
