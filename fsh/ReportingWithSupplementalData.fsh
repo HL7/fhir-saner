@@ -1,4 +1,4 @@
-Instance: ComputableCDCPatientImpactAndHospitalCapacity
+Instance: PatientsByRiskFactorWithSupplementalData
 InstanceOf: PublicHealthMeasure
 Title: "Patients By Risk Factor"
 Description: "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data"
@@ -234,26 +234,6 @@ has any such associated Condition or Observation resources in the prior two week
 		for('patient', $this.subject),
 		for('encounter', $this.id),
 		with('code').in(%IsolationPrecautions.url)
-	)"""
-
-// Reportability Response and EICR
-* supplementalData[8].code.coding[0] = http://hl7.org/fhir/resource-types#Communication
-* supplementalData[8].usage = #supplemental-data
-* supplementalData[8].description = "Reportability Response and EICR"
-* supplementalData[8].criteria.description = "Retrieves Reportability Response and EICR"
-* supplementalData[8].criteria.name = "Reportability Response and EICR"
-* supplementalData[8].criteria.language = #text/fhirpath
-* supplementalData[8].criteria.expression = """
-	findAll('Communication',
-		for('patient', $this.subject),
-		with('date').greaterThan(%ReportingPeriod.start - 1 'year')
-		// Would that reasonCode be searchable.
-		// , with('reasonCode').equalTo(%ConfirmedCOVID19Diagnoses.url)
-	) |
-	findAll('DocumentReference',
-		for('patient', $this.subject),
-		with('date').greaterThan(%ReportingPeriod.start - 1 'year'),
-		with('type', 'http://loinc.org|55751-2'),
 	)"""
 
 
