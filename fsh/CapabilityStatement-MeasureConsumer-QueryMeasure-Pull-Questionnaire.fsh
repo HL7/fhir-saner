@@ -6,7 +6,7 @@ Description: "Defines the additional requirements for the Measure Consumer imple
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_QueryMeasure_Pull_Questionnaire"
 * title = "Measure Consumer implementing the Query Measure transaction with the Pull Option and the Questionnaire Option."
-* date = "2020-12-22T09:44:16.8331747-05:00"
+* date = "2020-12-22T17:33:12.732948Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option and the Questionnaire Option."
 * format[0] = #xml

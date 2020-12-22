@@ -6,7 +6,7 @@ Description: "Defines the requirements for the Measure Definition Source impleme
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionSource_QueryMeasureDefinition"
 * title = "Measure Definition Source implementing the Query Measure Definition transaction."
-* date = "2020-12-22T09:44:16.8331747-05:00"
+* date = "2020-12-22T17:33:12.732948Z"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction."
 * format[0] = #xml
