@@ -8,14 +8,16 @@
 * ig-data\input\pagecontent\transaction-4.md                                            *
 *****************************************************************************************
 {% endcomment %} -->
-This section describes the COMPUTE-MX of this guide. This transaction is used by the Measure Source, Measure Consumer and Measure Computer actors.
+This section describes the COMPUTE-MX of this guide. This transaction is used by the Measure Source, Measure Consumer, Measure Computer and Data Source actors.
 
 ### Scope
 
-The Compute Measure transaction describes the behavior of the Measure Computer actor in periodically computing and reporting on measures.
+The Compute Measure transaction describes the behavior of the Measure Computer actor in periodically computing
+and reporting on measures.
 
 
-This transaction enables automatic computing of measure reports and manual retriggering of report generation for diagnostics or error recovery.
+This transaction enables automatic computing of measure reports and manual retriggering of report generation for
+diagnostics or error recovery.
 
 
 ### Actors Roles
@@ -34,7 +36,10 @@ This transaction enables automatic computing of measure reports and manual retri
 <td></td>
 </tr>
         <tr><td><a href="actors.html#measure-computer">Measure Computer</a></td>
-<td>Computes and reports a measure.</td>
+<td>Pull data for, computes and reports a measure.</td>
+</tr>
+        <tr><td><a href="actors.html#data-source">Data Source</a></td>
+<td>Responds to queries for data used to compute measures or collect supplemental data.</td>
 </tr>
         
 </tbody>
@@ -70,10 +75,11 @@ The Measure Computer computes the measure report for the current reporting perio
 
 ##### Trigger Event - Reporting Period Elapsed
 
-The current reporting period has elapsed, or the operation is triggered by automation (e.g. for manual testing, diagnostics or error recovery).
+The current reporting period has elapsed, or the operation is triggered by automation (e.g. for manual testing,
+diagnostics or error recovery).
 
 
-See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension
+See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension.
 
 
 ##### Message Semantics
@@ -86,8 +92,58 @@ The Measure Computer prepares a Measure Report.
 ###### Compute Measure
 
 When the reporting period has elapsed, or the operation is externally triggered, a MeasureReport for the
-specified Measure is computed from available data and the grouped MeasureSource is invoked below to store the created or updated
-MeasureReport resource
+specified Measure is computed from available data and the grouped MeasureSource is invoked below to store the created or
+updated MeasureReport resource
+
+
+#### Search FHIR Resources
+
+
+
+
+##### Trigger Event - Data Query
+
+Data is needed to compute a measure.
+
+
+##### Message Semantics
+
+The Measure Computer sends a query using an HTTP GET or POST to a Data Source supporting the
+[FHIR Search](https://www.hl7.org/fhir/search.html) capabilities using an appropriate national implementation guide.
+
+
+##### Expected Actions
+
+###### Search for Data
+
+Measure Computer requests data from a Data Source.
+
+
+The Measure Computer performs a FHIR Search operation
+to retrieve the selected resources.
+
+
+#### Search Response
+
+
+The Data Source returns the requested data.
+
+
+##### Trigger Event - Resources have been requested by a Measure Computer.
+
+##### Message Semantics
+
+The Data Source responds with requested resources.
+
+
+The resources will conform to the profiles specified in a national or regional Implementation Guide
+
+
+##### Expected Actions
+
+###### Returns Matching Resources
+
+The Data Source returns the requested resources.
 
 
 #### Report Measure
@@ -121,7 +177,8 @@ The MeasureConsumer processes the MeasureReport given in the create/update inter
 #### Query Measure
 
 
-The Measure Computer responds to a query for a Measure Report with the newly computed report for the current reporting period.
+The Measure Computer responds to a query for a Measure Report with the newly computed report for the current
+reporting period.
 
 
 ##### Trigger Event - MeasureReport Requested
@@ -138,7 +195,8 @@ The Measure Computer reports the computed result via the grouped MeasureSource a
 
 ###### Store MeasureReport Resource
 
-The MeasureSource stores the MeasureReport and is prepared to respond to queries for the MeasureReport resource by the MeasureConsumer
+The MeasureSource stores the MeasureReport and is prepared to respond to queries for the MeasureReport resource
+by the MeasureConsumer
 
 
 ###### Query for MeasureReport Resource

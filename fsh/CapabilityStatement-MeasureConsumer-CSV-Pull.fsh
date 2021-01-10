@@ -2,11 +2,12 @@
 Instance: MeasureConsumer-CSV-Pull
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Pull Option."
+Description: """
+Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Pull Option."""
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_CSV_Pull"
 * title = "Measure Consumer implementing the CSV Option and the Pull Option."
-* date = "2020-12-22T09:44:16.8331747-05:00"
+* date = "2021-01-10T17:18:29.69095-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Pull Option."
 * format[0] = #xml

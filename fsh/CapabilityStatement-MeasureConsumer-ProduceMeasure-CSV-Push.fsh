@@ -2,11 +2,12 @@
 Instance: MeasureConsumer-ProduceMeasure-CSV-Push
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option."
+Description: """
+Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option."""
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_ProduceMeasure_CSV_Push"
 * title = "Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option."
-* date = "2020-12-22T09:44:16.8331747-05:00"
+* date = "2021-01-10T17:18:29.69095-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option."
 * format[0] = #xml

@@ -829,6 +829,22 @@
       },
       {
         "reference": {
+          "reference": "CapabilityStatement/DataSource"
+        },
+        "name": "DataSource",
+        "description": "Defines the requirements for the Data Source.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/DataSource-ComputeMeasure"
+        },
+        "name": "DataSource-ComputeMeasure",
+        "description": "Defines the requirements for the Data Source implementing the Compute Measure transaction.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Encounter/Encounter1a"
         },
         "name": "Encounter1a",
@@ -3391,7 +3407,7 @@
           "reference": "OperationDefinition/Measure-evaluate-measure"
         },
         "name": "Measure-evaluate-measure",
-        "description": "Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated.\n                            Otherwise, a new report is created.",
+        "description": "Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated. Otherwise, a new report is created.",
         "exampleBoolean": false
       },
       {
@@ -3399,7 +3415,7 @@
           "reference": "OperationDefinition/Measure-report-csv"
         },
         "name": "Measure-report-csv",
-        "description": "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.\n                            Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
+        "description": "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated. Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
         "exampleBoolean": false
       },
       {
@@ -3460,6 +3476,14 @@
       },
       {
         "reference": {
+          "reference": "CapabilityStatement/MeasureConsumer-ProduceMeasure-SupplementalData"
+        },
+        "name": "MeasureConsumer-ProduceMeasure-SupplementalData",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the Supplemental Data Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/MeasureConsumer-Pull"
         },
         "name": "MeasureConsumer-Pull",
@@ -3504,6 +3528,14 @@
         },
         "name": "MeasureConsumer-QueryMeasure-Pull-Questionnaire",
         "description": "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option and the Questionnaire Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureConsumer-SupplementalData"
+        },
+        "name": "MeasureConsumer-SupplementalData",
+        "description": "Defines the additional requirements for the Measure Consumer implementing the Supplemental Data Option.",
         "exampleBoolean": false
       },
       {
@@ -3604,6 +3636,14 @@
       },
       {
         "reference": {
+          "reference": "CapabilityStatement/MeasureSource-ProduceMeasure-SupplementalData"
+        },
+        "name": "MeasureSource-ProduceMeasure-SupplementalData",
+        "description": "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the Supplemental Data Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/MeasureSource-Pull"
         },
         "name": "MeasureSource-Pull",
@@ -3648,6 +3688,14 @@
         },
         "name": "MeasureSource-QueryMeasure-Pull-Questionnaire",
         "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the Pull Option and the Questionnaire Option.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MeasureSource-SupplementalData"
+        },
+        "name": "MeasureSource-SupplementalData",
+        "description": "Defines the additional requirements for the Measure Source implementing the Supplemental Data Option.",
         "exampleBoolean": false
       },
       {

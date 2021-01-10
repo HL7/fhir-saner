@@ -2,11 +2,12 @@
 Instance: MeasureSource-ProduceMeasure-Push
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the Push Option."
+Description: """
+Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the Push Option."""
 * insert SanerDefinitionContent
 * name = "MeasureSource_ProduceMeasure_Push"
 * title = "Measure Source implementing the Produce Measure transaction with the Push Option."
-* date = "2020-12-22T09:44:16.8331747-05:00"
+* date = "2021-01-10T17:18:29.69095-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the Push Option."
 * format[0] = #xml

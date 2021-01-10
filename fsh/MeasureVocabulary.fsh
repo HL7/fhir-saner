@@ -7,6 +7,7 @@ Alias: LOINC = http://loinc.org
 Alias: RXNORM = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: ROLECODE = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: UCUM = http://unitsofmeasure.com
+Alias: CPT = http://www.ama-assn.org/go/cpt
 
 CodeSystem:   PublicHealthMeasureScoring
 Title: "Public Health Measure Scoring"
@@ -46,6 +47,7 @@ Description: "A Code System for Populations in Sample Measures"
 * #numVentUse                   "Mechanical Ventilators in Use" "Total number of ventilators in use"
 * #numVentAvail                 "Mechanical Ventilators Available" "Total number of ventilators available"
 * #numC19Pats                   "All COVID-19 Confirmed or Suspected Patients" "Patients with suspected or confirmed COVID-19 in any location."
+* #confirmedC19Pats             "All Confirmed COVID-19 Patients" "Patients with confirmed COVID-19 in any location."
 * #numC19HospPats               "Hospitalized COVID-19 Patients" "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
 * #numC19OverflowPats           "ED/Overflow COVID-19 Patients" "Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed"
 * #numC19HOPats                 "Hospital Onset COVID-19 Patients" "Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization"
@@ -349,7 +351,9 @@ Description: "Codes used to report ventilation activity"
 ValueSet:    VentilatorProcedures
 Title:       "Ventilator Procedures"
 Description: "Codes used to report a ventilation procedure"
-// We have none at the momement
+* CPT#94002	"Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing; hospital inpatient/observation, initial day"
+* CPT#94003 "Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing; hospital inpatient/observation, each subsequent day"
+* SCT#26763009 "Controlled ventilation procedure and therapy, initiation and management (procedure)"
 
 ValueSet:    ConfirmedCOVID19Diagnoses
 Title:       "Confirmed COVID-19 Diagnosis Values"

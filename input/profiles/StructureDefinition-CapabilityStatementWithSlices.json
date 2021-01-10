@@ -228,6 +228,174 @@
         "fixedCode": "CodeSystem"
       },
       {
+        "id": "CapabilityStatement.rest.resource:PatientSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "PatientSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:PatientSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Patient"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:AllergyIntoleranceSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "AllergyIntoleranceSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:AllergyIntoleranceSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "AllergyIntolerance"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ConditionSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "ConditionSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ConditionSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Condition"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:DocumentReferenceSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "DocumentReferenceSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:DocumentReferenceSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "DocumentReference"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:DiagnosticReportSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "DiagnosticReportSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:DiagnosticReportSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "DiagnosticReport"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:EncounterSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "EncounterSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:EncounterSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Encounter"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:FamilyMemberHistorySlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "FamilyMemberHistorySlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:FamilyMemberHistorySlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "FamilyMemberHistory"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationAdministrationSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "MedicationAdministrationSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationAdministrationSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "MedicationAdministration"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationDispenseSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "MedicationDispenseSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationDispenseSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "MedicationDispense"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationRequestSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "MedicationRequestSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationRequestSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "MedicationRequest"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationStatementSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "MedicationStatementSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:MedicationStatementSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "MedicationStatement"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ObservationSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "ObservationSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ObservationSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Observation"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ProcedureSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "ProcedureSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ProcedureSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Procedure"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ServiceRequestSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "ServiceRequestSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:ServiceRequestSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "ServiceRequest"
+      },
+      {
         "id": "CapabilityStatement.rest.resource:ParametersSlice",
         "path": "CapabilityStatement.rest.resource",
         "sliceName": "ParametersSlice",
@@ -238,6 +406,18 @@
         "id": "CapabilityStatement.rest.resource:ParametersSlice.type",
         "path": "CapabilityStatement.rest.resource.type",
         "fixedCode": "Parameters"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:BundleSlice",
+        "path": "CapabilityStatement.rest.resource",
+        "sliceName": "BundleSlice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "CapabilityStatement.rest.resource:BundleSlice.type",
+        "path": "CapabilityStatement.rest.resource.type",
+        "fixedCode": "Bundle"
       },
       {
         "id": "CapabilityStatement.rest:clientSlice",

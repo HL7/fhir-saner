@@ -56,6 +56,8 @@
 <artifact id="Condition/Condition9b" key="Condition-Condition9b" name="Condition9b"/>
 <artifact id="Condition/Condition9c" key="Condition-Condition9c" name="Condition9c"/>
 <artifact id="ValueSet/ConfirmedCOVID19Diagnoses" key="ValueSet-ConfirmedCOVID19Diagnoses" name="Confirmed COVID-19 Diagnosis Values"/>
+<artifact id="CapabilityStatement/DataSource" key="CapabilityStatement-DataSource" name="DataSource"/>
+<artifact id="CapabilityStatement/DataSource-ComputeMeasure" key="CapabilityStatement-DataSource-ComputeMeasure" name="DataSource-ComputeMeasure"/>
 <artifact id="ValueSet/DiabetesCOVID19RiskFactors" key="ValueSet-DiabetesCOVID19RiskFactors" name="Diabetes COVID-19 Risk Factors"/>
 <artifact id="StructureDefinition/ReportingPeriod" key="StructureDefinition-ReportingPeriod" name="Enables specification of proposed measure reporting"/>
 <artifact id="Encounter/Encounter1a" key="Encounter-Encounter1a" name="Encounter1a"/>
@@ -401,12 +403,14 @@
 <artifact id="CapabilityStatement/MeasureConsumer-CSV-Push" key="CapabilityStatement-MeasureConsumer-CSV-Push" name="MeasureConsumer-CSV-Push"/>
 <artifact id="CapabilityStatement/MeasureConsumer-ProduceMeasure-CSV-Push" key="CapabilityStatement-MeasureConsumer-ProduceMeasure-CSV-Push" name="MeasureConsumer-ProduceMeasure-CSV-Push"/>
 <artifact id="CapabilityStatement/MeasureConsumer-ProduceMeasure-Push" key="CapabilityStatement-MeasureConsumer-ProduceMeasure-Push" name="MeasureConsumer-ProduceMeasure-Push"/>
+<artifact id="CapabilityStatement/MeasureConsumer-ProduceMeasure-SupplementalData" key="CapabilityStatement-MeasureConsumer-ProduceMeasure-SupplementalData" name="MeasureConsumer-ProduceMeasure-SupplementalData"/>
 <artifact id="CapabilityStatement/MeasureConsumer-Pull" key="CapabilityStatement-MeasureConsumer-Pull" name="MeasureConsumer-Pull"/>
 <artifact id="CapabilityStatement/MeasureConsumer-Pull-Questionnaire" key="CapabilityStatement-MeasureConsumer-Pull-Questionnaire" name="MeasureConsumer-Pull-Questionnaire"/>
 <artifact id="CapabilityStatement/MeasureConsumer-Push" key="CapabilityStatement-MeasureConsumer-Push" name="MeasureConsumer-Push"/>
 <artifact id="CapabilityStatement/MeasureConsumer-QueryMeasure-CSV-Pull" key="CapabilityStatement-MeasureConsumer-QueryMeasure-CSV-Pull" name="MeasureConsumer-QueryMeasure-CSV-Pull"/>
 <artifact id="CapabilityStatement/MeasureConsumer-QueryMeasure-Pull" key="CapabilityStatement-MeasureConsumer-QueryMeasure-Pull" name="MeasureConsumer-QueryMeasure-Pull"/>
 <artifact id="CapabilityStatement/MeasureConsumer-QueryMeasure-Pull-Questionnaire" key="CapabilityStatement-MeasureConsumer-QueryMeasure-Pull-Questionnaire" name="MeasureConsumer-QueryMeasure-Pull-Questionnaire"/>
+<artifact id="CapabilityStatement/MeasureConsumer-SupplementalData" key="CapabilityStatement-MeasureConsumer-SupplementalData" name="MeasureConsumer-SupplementalData"/>
 <artifact id="StructureDefinition/MeasureCriteria" key="StructureDefinition-MeasureCriteria" name="MeasureCriteria"/>
 <artifact id="CapabilityStatement/MeasureDefinitionConsumer" key="CapabilityStatement-MeasureDefinitionConsumer" name="MeasureDefinitionConsumer"/>
 <artifact id="CapabilityStatement/MeasureDefinitionConsumer-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionConsumer-QueryMeasureDefinition" name="MeasureDefinitionConsumer-QueryMeasureDefinition"/>
@@ -424,12 +428,14 @@
 <artifact id="CapabilityStatement/MeasureSource-CSV-Push" key="CapabilityStatement-MeasureSource-CSV-Push" name="MeasureSource-CSV-Push"/>
 <artifact id="CapabilityStatement/MeasureSource-ProduceMeasure-CSV-Push" key="CapabilityStatement-MeasureSource-ProduceMeasure-CSV-Push" name="MeasureSource-ProduceMeasure-CSV-Push"/>
 <artifact id="CapabilityStatement/MeasureSource-ProduceMeasure-Push" key="CapabilityStatement-MeasureSource-ProduceMeasure-Push" name="MeasureSource-ProduceMeasure-Push"/>
+<artifact id="CapabilityStatement/MeasureSource-ProduceMeasure-SupplementalData" key="CapabilityStatement-MeasureSource-ProduceMeasure-SupplementalData" name="MeasureSource-ProduceMeasure-SupplementalData"/>
 <artifact id="CapabilityStatement/MeasureSource-Pull" key="CapabilityStatement-MeasureSource-Pull" name="MeasureSource-Pull"/>
 <artifact id="CapabilityStatement/MeasureSource-Pull-Questionnaire" key="CapabilityStatement-MeasureSource-Pull-Questionnaire" name="MeasureSource-Pull-Questionnaire"/>
 <artifact id="CapabilityStatement/MeasureSource-Push" key="CapabilityStatement-MeasureSource-Push" name="MeasureSource-Push"/>
 <artifact id="CapabilityStatement/MeasureSource-QueryMeasure-CSV-Pull" key="CapabilityStatement-MeasureSource-QueryMeasure-CSV-Pull" name="MeasureSource-QueryMeasure-CSV-Pull"/>
 <artifact id="CapabilityStatement/MeasureSource-QueryMeasure-Pull" key="CapabilityStatement-MeasureSource-QueryMeasure-Pull" name="MeasureSource-QueryMeasure-Pull"/>
 <artifact id="CapabilityStatement/MeasureSource-QueryMeasure-Pull-Questionnaire" key="CapabilityStatement-MeasureSource-QueryMeasure-Pull-Questionnaire" name="MeasureSource-QueryMeasure-Pull-Questionnaire"/>
+<artifact id="CapabilityStatement/MeasureSource-SupplementalData" key="CapabilityStatement-MeasureSource-SupplementalData" name="MeasureSource-SupplementalData"/>
 <artifact id="CodeSystem/MeasuredValues" key="CodeSystem-MeasuredValues" name="Measured Values in Sample Measures"/>
 <artifact id="MedicationRequest/MedicationRequest11a" key="MedicationRequest-MedicationRequest11a" name="MedicationRequest11a"/>
 <artifact id="MedicationRequest/MedicationRequest11b" key="MedicationRequest-MedicationRequest11b" name="MedicationRequest11b"/>
@@ -523,6 +529,7 @@
 <artifact id="Patient/Patient9a" key="Patient-Patient9a" name="Patient9a"/>
 <artifact id="Patient/Patient9b" key="Patient-Patient9b" name="Patient9b"/>
 <artifact id="Patient/Patient9c" key="Patient-Patient9c" name="Patient9c"/>
+<artifact id="Measure/PatientsByRiskFactorWithSupplementalData" key="Measure-PatientsByRiskFactorWithSupplementalData" name="Patients By Risk Factor"/>
 <artifact id="StructureDefinition/PreciseDateTime" key="StructureDefinition-PreciseDateTime" name="Precise Date Time"/>
 <artifact id="ValueSet/PregnancyCOVID19RiskFactors" key="ValueSet-PregnancyCOVID19RiskFactors" name="Pregnancy COVID-19 Risk Factors"/>
 <artifact id="ValueSet/PublicHealthMeasureAttachmentTypes" key="ValueSet-PublicHealthMeasureAttachmentTypes" name="Public Health Measure Attachment Types"/>

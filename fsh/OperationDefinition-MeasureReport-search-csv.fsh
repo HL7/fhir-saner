@@ -2,7 +2,8 @@
 Instance: MeasureReport-search-csv
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details."
+Description: """
+Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details."""
 * insert SanerDefinitionContent
  
 * status = #draft

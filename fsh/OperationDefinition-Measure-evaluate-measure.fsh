@@ -2,8 +2,8 @@
 Instance: Measure-evaluate-measure
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated.
-                            Otherwise, a new report is created."
+Description: """
+Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated. Otherwise, a new report is created."""
 * insert SanerDefinitionContent
  
 * status = #draft
@@ -15,8 +15,10 @@ Description: "Create or update a MeasureReport for the given time period. If a r
 * instance = true
 * name = "Evaluatethemeasure"
 * title = "Evaluate the measure"
-* description = """Create or update a MeasureReport for the given time period. If a report already exists for the subject and reporter for the given time period, it is updated.
-                            Otherwise, a new report is created."""
+* description = """
+Create or update a MeasureReport for the given time period. If a report already exists for the subject and
+							reporter for the given time period, it is updated.
+							Otherwise, a new report is created."""
 * url = "http://hl7.org/fhir/uv/saner/OperationDefinition/Measure-evaluate-measure"
 
 * parameter[0].name = #periodEnd
@@ -39,9 +41,7 @@ Description: "Create or update a MeasureReport for the given time period. If a r
 * parameter[2].use = #in
 * parameter[2].min = 1
 * parameter[2].max = "1"
-* parameter[2].documentation = """If report is true, then the created measure report will be created or updated in the system.
-If report is false or omitted, the computed MeasureReport will simply be returned to the caller.
-                                """
+* parameter[2].documentation = "If report is true, then the created measure report will be created or updated in the system. If report is false or omitted, the computed MeasureReport will simply be returned to the caller."
 * parameter[2].searchType = #string
 * parameter[2].type = #string
 

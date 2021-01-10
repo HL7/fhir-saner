@@ -623,6 +623,7 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="$actor/ig:name"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:apply-templates select="ig:description|ig:overview"/>
+                <xsl:apply-templates select="ig:requires"/>
             </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
@@ -882,7 +883,7 @@ between options when applicable are specified in notes.
     <xsl:function name="s:client">
         <xsl:param name="mode"/>
         <xsl:param name="op"/>
-        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op/@client[1]) else (if ($op/@min = 0) then 'may' else $op/@expect[1])) else ($op/@expect[1])"/>
+        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op[1]/@client) else (if ($op/@min = 0) then 'may' else $op[1]/@expect)) else ($op[1]/@expect)"/>
     </xsl:function>
     <xsl:function name="s:combo">
         <xsl:param name="f"/>
@@ -1061,7 +1062,7 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="s:string(($res,'.supportedProfile[',position()-1,']'),$url)"/>
             </xsl:for-each>
             <!-- Generate interactions -->
-            <xsl:for-each select="distinct-values($operations/@name)[not(starts-with(.,'$'))]">
+            <xsl:for-each select="distinct-values($operations/@name)[not(starts-with(.,'$')) and . != 'batch']">
                 <xsl:variable name='op' select="$operations[@name=current()]"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:code(($res,'.interaction[',position()-1,'].code'),if (. = 'search') then 'search-type' else .,'')"/>
@@ -1076,6 +1077,16 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].documentation'),$op[1]/ig:name)"/>
                 <!-- Expect not supported here, though it should be -->
                 <!-- xsl:value-of select="s:expect(($res,'.operation[',position()-1,']'), s:client($mode, $op[1]))"/ -->
+            </xsl:for-each>
+            <!-- Batch -->
+            <xsl:for-each select="distinct-values($operations/@name)[. = 'batch']">
+                <xsl:variable name='op' select="$operations[@name=current()]"/>
+                <xsl:text>&#xA;</xsl:text>
+                <xsl:value-of select="s:code(('rest[',$index,'].interaction[',position()-1,'].code'),.,'')"/>
+                <xsl:value-of select="s:expect(('rest[',$index,'].interaction[',position()-1,']'), s:client($mode, $op[1]))"/>
+                <xsl:if test='$op/ig:description'>
+                    <xsl:value-of select="s:string(('rest[',$index,'].interaction[',position()-1,'].documentation'), normalize-space($op/ig:description))"/>
+                </xsl:if>
             </xsl:for-each>
             <xsl:if test='$isActor'>
                 <xsl:call-template name="rest-operation-capability">
@@ -1171,7 +1182,7 @@ between options when applicable are specified in notes.
                     <xsl:value-of select="s:name(($param,'.min'), @min)"/>
                     <xsl:value-of select="s:string(($param,'.max'), @max)"/>
                     <xsl:if test='ig:description'>
-                        <xsl:value-of select="s:string(($param,'.documentation'),ig:description)"/>
+                        <xsl:value-of select="s:string(($param,'.documentation'),normalize-space(ig:description))"/>
                     </xsl:if>
                     <xsl:choose>
                         <xsl:when test="lower-case(substring(@type,1))=substring(@type,1)">

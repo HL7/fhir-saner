@@ -2,11 +2,12 @@
 Instance: MeasureDefinitionSource-QueryMeasureDefinition
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction."
+Description: """
+Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction."""
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionSource_QueryMeasureDefinition"
 * title = "Measure Definition Source implementing the Query Measure Definition transaction."
-* date = "2020-12-22T09:44:16.8331747-05:00"
+* date = "2021-01-10T17:18:29.69095-05:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction."
 * format[0] = #xml

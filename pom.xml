@@ -128,33 +128,6 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			<!-- plugin>
-				<groupId>com.github.jeluard</groupId>
-				<artifactId>plantuml-maven-plugin</artifactId>
-				<version>7941</version>
-				<executions>
-					<execution>
-						<phase>generate-resources</phase>
-						<goals><goal>generate</goal></goals>
-					</execution>
-				</executions>
-				<configuration>
-					<outputDirectory>${project.basedir}/fsh/ig-data/input/images</outputDirectory>
-					<sourceFiles>
-						<directory>${project.basedir}</directory>
-						<includes>
-							<include>/fsh/ig-data/input/images-source/*.txt</include>
-						</includes>
-					</sourceFiles>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>net.sourceforge.plantuml</groupId>
-						<artifactId>plantuml</artifactId>
-						<version>7976</version>
-					</dependency>
-				</dependencies>
-			</plugin -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>

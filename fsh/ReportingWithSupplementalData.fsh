@@ -11,7 +11,7 @@ Usage: #example
  * author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
  * insert DailyReporting
  * name = "PatientsByRiskFactor"
- * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactor"
+ * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalData"
  * title = "COVID-19 Patients By Risk Factor"  // Official name of measure being represented as given by the author
  * insert NHSNArtifacts
  * library = Canonical(ComputableNHSNMeasureLibrary)
@@ -32,7 +32,7 @@ Usage: #example
  * group[0].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
  //* with group[0].population[0] do
  //** with code do
- * group[0].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Pats
+ * group[0].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#confirmedC19Pats
  * group[0].population[0].code.coding.display = "All Confirmed COVID-19 Patients"
  * group[0].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
  * group[0].population[0].code.text = "Patients with confirmed COVID-19 in any location."
@@ -107,33 +107,33 @@ has any such associated Condition or Observation resources in the prior two week
     )
  """
 
-* supplementalData[0].code = http://hl7.org/fhir/resource-types#Encounter
+* supplementalData[0].code.coding = http://hl7.org/fhir/resource-types#Encounter
 // Consider adding an extension to support filtering resource elements as per _elements in search.
-* supplementalData[0].usage = #supplemental-data
+* supplementalData[0].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[0].description = "The patient encounter"
 * supplementalData[0].criteria.description = "Encounter dates, reason (e.g., Chief Complaint), discharge disposition"
 * supplementalData[0].criteria.name = "Encounter"
 * supplementalData[0].criteria.language = #text/fhirpath
 * supplementalData[0].criteria.expression = "Encounter"
 
-* supplementalData[1].code = http://hl7.org/fhir/resource-types#Patient
-* supplementalData[1].usage = #supplemental-data
+* supplementalData[1].code.coding = http://hl7.org/fhir/resource-types#Patient
+* supplementalData[1].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[1].description = "The patient"
 * supplementalData[1].criteria.description = "The Patient, including sex, dob, race and ethnicity"
 * supplementalData[1].criteria.name = "Patient"
 * supplementalData[1].criteria.language = #text/fhirpath
 * supplementalData[1].criteria.expression = "Encounter.subject.resolve()"
 
-* supplementalData[2].code = http://hl7.org/fhir/resource-types#Location
-* supplementalData[2].usage = #supplemental-data
+* supplementalData[2].code.coding = http://hl7.org/fhir/resource-types#Location
+* supplementalData[2].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[2].description = "The patient location"
 * supplementalData[2].criteria.description = "The Patient Location"
 * supplementalData[2].criteria.name = "PatientLocation"
 * supplementalData[2].criteria.language = #text/fhirpath
 * supplementalData[2].criteria.expression = "Encounter.location.location.resolve()"
 
-* supplementalData[3].code = http://hl7.org/fhir/resource-types#Condition
-* supplementalData[3].usage = #supplemental-data
+* supplementalData[3].code.coding = http://hl7.org/fhir/resource-types#Condition
+* supplementalData[3].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[3].description = "The encounter and other diagnosis"
 * supplementalData[3].criteria.description = "Retrieves all conditions associated with the encounter"
 * supplementalData[3].criteria.name = "EncounterDiagnosis"
@@ -148,7 +148,7 @@ has any such associated Condition or Observation resources in the prior two week
 * supplementalData[4].code.coding[0] = http://hl7.org/fhir/resource-types#MedicationRequest
 * supplementalData[4].code.coding[1] = http://hl7.org/fhir/resource-types#MedicationAdministration
 * supplementalData[4].code.coding[2] = http://hl7.org/fhir/resource-types#Immunization
-* supplementalData[4].usage = #supplemental-data
+* supplementalData[4].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[4].description = "Medications/Immunizations given during the encounter"
 * supplementalData[4].criteria.description = "Retrieves all medications/immunizations associated with the encounter"
 * supplementalData[4].criteria.name = "EncounterMeds"
@@ -167,8 +167,8 @@ has any such associated Condition or Observation resources in the prior two week
 		with('encounter').equalTo($this.id)
 	)"""
 
-* supplementalData[5].code = http://hl7.org/fhir/resource-types#Observation
-* supplementalData[5].usage = #supplemental-data
+* supplementalData[5].code.coding = http://hl7.org/fhir/resource-types#Observation
+* supplementalData[5].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[5].description = "COVID-19 Lab Results"
 * supplementalData[5].criteria.description = "Retrieves all Observations associated with COVID-19 Labs"
 * supplementalData[5].criteria.name = "COVID19Labs"
@@ -185,7 +185,7 @@ has any such associated Condition or Observation resources in the prior two week
 * supplementalData[6].code.coding[1] = http://hl7.org/fhir/resource-types#DocumentReference
 * supplementalData[6].code.coding[2] = http://hl7.org/fhir/resource-types#Observation
 * supplementalData[6].code.coding[3] = http://hl7.org/fhir/resource-types#ServiceRequest
-* supplementalData[6].usage = #supplemental-data
+* supplementalData[6].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[6].description = "VTE Diagnostic Results"
 * supplementalData[6].criteria.description = "Retrieves diagnostics associated with VTE"
 * supplementalData[6].criteria.name = "VTEDiagnostics"
@@ -219,7 +219,7 @@ has any such associated Condition or Observation resources in the prior two week
 
 * supplementalData[7].code.coding[0] = http://hl7.org/fhir/resource-types#Procedure
 * supplementalData[7].code.coding[1] = http://hl7.org/fhir/resource-types#ServiceRequest
-* supplementalData[7].usage = #supplemental-data
+* supplementalData[7].usage = http://terminology.hl7.org/CodeSystem/measure-data-usage#supplemental-data
 * supplementalData[7].description = "Isolation Precautions"
 * supplementalData[7].criteria.description = "Retrieves orders or procedures associated with Isolation Precautions"
 * supplementalData[7].criteria.name = "IsolationPrecautions"

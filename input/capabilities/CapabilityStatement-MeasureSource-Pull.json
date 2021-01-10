@@ -655,7 +655,7 @@
   ],
   "name": "MeasureSource_Pull",
   "title": "Measure Source implementing the Pull Option.",
-  "date": "2020-12-19T11:56:50.3276551-05:00",
+  "date": "2021-01-10T17:18:29.69095-05:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the Pull Option.",
   "format": [

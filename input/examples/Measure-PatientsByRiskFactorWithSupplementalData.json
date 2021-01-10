@@ -96,7 +96,7 @@
           "code": {
             "coding": [
               {
-                "code": "numC19Pats",
+                "code": "confirmedC19Pats",
                 "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues",
                 "display": "All Confirmed COVID-19 Patients"
               },
@@ -193,7 +193,7 @@
     }
   ],
   "name": "PatientsByRiskFactor",
-  "url": "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactor",
+  "url": "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalData",
   "title": "COVID-19 Patients By Risk Factor",
   "relatedArtifact": [
     {
@@ -238,7 +238,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -264,7 +265,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -290,7 +292,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -316,7 +319,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -350,7 +354,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -376,7 +381,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -414,7 +420,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -444,7 +451,8 @@
         {
           "coding": [
             {
-              "code": "supplemental-data"
+              "code": "supplemental-data",
+              "system": "http://terminology.hl7.org/CodeSystem/measure-data-usage"
             }
           ]
         }
@@ -452,6 +460,7 @@
       "description": "Isolation Precautions",
       "criteria": {
         "description": "Retrieves orders or procedures associated with Isolation Precautions",
+        "name": "IsolationPrecautions",
         "language": "text/fhirpath",
         "expression": "findAll('ServiceRequest',\n\tfor('patient', $this.subject),\n\tfor('encounter', $this.id),\n\twith('code').in(%IsolationPrecautions.url)\n) |\nfindAll('Procedure',\n\tfor('patient', $this.subject),\n\tfor('encounter', $this.id),\n\twith('code').in(%IsolationPrecautions.url)\n)"
       }

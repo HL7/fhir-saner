@@ -2,12 +2,11 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
-    
 
 
 ### About This Guide
 This is a draft implementation guide to promote discussion with leaders in the Health
-IT industry, and very much a work in progress.  All content in this guide is subject
+IT industry, and very much a work in progress. All content in this guide is subject
 to discussion and change.
 
 The goal of publishing this guide is to encourage the creation of a community interested
@@ -35,28 +34,28 @@ Situational Awareness has been the focus of attention in health IT circles well 
 Situational Data Needs of Public Health
 Key situational data needed by public health has remained relatively consistent and well established over this time, and is to support awareness of:
 
-1.  Local, Regional and National case rates and trends
-2.  Bed availability for treatment
-3.  Other resources availability for treatment
-  * Staff
-  * Medications
-  * Immunizations
-  * Medical Equipment (e.g., Respirators, N95 Masks)
-  * Supplies (e.g., Cleaning Supplies, Facemasks)
+1. Local, Regional and National case rates and trends
+2. Bed availability for treatment
+3. Other resources availability for treatment
+* Staff
+* Medications
+* Immunizations
+* Medical Equipment (e.g., Respirators, N95 Masks)
+* Supplies (e.g., Cleaning Supplies, Facemasks)
 
 #### Focusing the Solution Space
 In evaluating solutions for the above challenges, we have established the following principles:
-1.  The solution needs to be focused on providing high ROI.
-2.  The solution should not duplicate existing efforts.
-3.  The solution needs to work with existing Health IT products currently deployed.
-4.  The uplift needed to enable an existing product to support public health information requirements needs to be low enough to effectively deliver quickly.
+1. The solution needs to be focused on providing high ROI.
+2. The solution should not duplicate existing efforts.
+3. The solution needs to work with existing Health IT products currently deployed.
+4. The uplift needed to enable an existing product to support public health information requirements needs to be low enough to effectively deliver quickly.
 
 #### Quick Assessment
-1.  Existing work by [Johns Hopkins University](https://coronavirus.jhu.edu/map.html) in aggregating case data sets and visualizing them addresses national and even regional (at the county level) trends.
-2.  Bed availability is an area where there is a great deal of existing work [^1]<sup>,</sup>[^2]<sup>,</sup>[^3]<sup>,</sup>[^4], but not much prior success, although there are existing Health IT solutions that have this data (not just in the EHR).  If the solution can be interfaced rather than integrated, an
+1. Existing work by [Johns Hopkins University](https://coronavirus.jhu.edu/map.html) in aggregating case data sets and visualizing them addresses national and even regional (at the county level) trends.
+2. Bed availability is an area where there is a great deal of existing work [^1]<sup>,</sup>[^2]<sup>,</sup>[^3]<sup>,</sup>[^4], but not much prior success, although there are existing Health IT solutions that have this data (not just in the EHR). If the solution can be interfaced rather than integrated, an
 implementation can be piloted much faster.
-3.  Other resource utilization is available in inventory control or central monitoring
-solutions, but are not necessarily readily available in the EHR.  This would be a natural
+3. Other resource utilization is available in inventory control or central monitoring
+solutions, but are not necessarily readily available in the EHR. This would be a natural
 evolution from Bed Availability.
 
 [^1]: [HITSP C47: Resource Utilization Message](http://www.hitsp.org/ConstructSet_Details.aspx?&PrefixAlpha=4&PrefixNumeric=47)
@@ -75,19 +74,19 @@ The key data for bed availability is found in Bed Management solutions integrate
 current inpatient EHR Systems, and in departmental ICU and Central Monitoring systems.
 Such solutions support management of bed assignment for admissions and provide direction to
 housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems
-which provide ICU and Nursing central monitoring capabilities.  They are often separate components
+which provide ICU and Nursing central monitoring capabilities. They are often separate components
 or modules, Standalone solutions, or third party solutions which integrate with an
 EHR System (e.g. Forward Advantage with MEDITECH).
 
 #### Prior Solutions and Existing Standards
-Prior standards developed to address these issues have been profiled through past efforts.  These are briefly
+Prior standards developed to address these issues have been profiled through past efforts. These are briefly
 outlined below.
 
 ##### HAvBED and OASIS EDXL/HAVE Standards
 Most notably, the OASIS Emergency Data Exchange Language (EDXL), and the OASIS Hospital Availability Exchange
-were profiled by ANSI/HITSP in response to the AHIC Emergency Responder Use Case.  This work was advanced by
+were profiled by ANSI/HITSP in response to the AHIC Emergency Responder Use Case. This work was advanced by
 AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
-to collect and report bed availability data.  Health and Human Services suspended the HAvBED program in 2016.
+to collect and report bed availability data. Health and Human Services suspended the HAvBED program in 2016.
 Some of the challenges with HAvBED included:
 
 * Manually entered data in many automated bed availability systems is labor-intensive, untimely, resulting in data quality issues.
@@ -109,39 +108,39 @@ specification supporting the communication of bed availability information.
 
 ##### HL7 FHIR
 In HL7 FHIR the [Location](https://hl7.org/fhir/R4/location.html) resource can describe information about
-any bed within a facility.  The [Group](https://hl7.org/fhir/R4/group.html) resource
+any bed within a facility. The [Group](https://hl7.org/fhir/R4/group.html) resource
 can report on specific quantities of groups of resources available that match a specific
-set of characteristics.  The [MeasureReport](https://hl7.org/fhir/R4/measurereport.html)
+set of characteristics. The [MeasureReport](https://hl7.org/fhir/R4/measurereport.html)
 resource can report on measures using counts and other metrics over a variety of resources.
 
 ###### Device Resource
 The Device Resource can report on medical devices, including ventilators, respirators,
-personal protective equipment such as masks, and viral test kits.  Device is not widely
+personal protective equipment such as masks, and viral test kits. Device is not widely
 used by systems reporting on device quantities or status.
 
 ###### Location Resource
 While the Location resource can report on beds, it can also be used to describe buildings, wards,
 geographic area, or any other sort of place, including "mobile" places such as a mobile clinic or
-ambulance.  Given its broad application, would need to be profiled to support use for bed availability.
+ambulance. Given its broad application, would need to be profiled to support use for bed availability.
 
 While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's
-little use of the Location resource to report data about beds.  It is more commonly used to report
+little use of the Location resource to report data about beds. It is more commonly used to report
 Location data associated with the
 [Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (now known as the US Core Data for
 Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification
-regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
+regulations. These uses of Location are found in the Encounter, Procedure and Practitioner resources to
 describe the facility where an encounter occurs, the location where a procedure is performed, or
 the location of a practitioner.
 
 ###### Group Resource
 While the Group resource can be used to support aggregate reporting on beds, as it allows reporting
 of quantities of an item without referencing an individual item, it has not been deployed in this way by
-any knwon system.  This resource can also be used to report on other types of resources, such as
+any knwon system. This resource can also be used to report on other types of resources, such as
 ventilators, respirators, and N95 masks.
 
 NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
 report on any group of things that can be defined by characteristics, it simply cannot
-enumerate those resources.  That is not essential for the use cases in this implementation
+enumerate those resources. That is not essential for the use cases in this implementation
 guide.
 
 The Group resource is more lightly deployed in existing EHR products. It is not
@@ -149,8 +148,8 @@ a requirement of the 2015 Certification program.
 
 ###### Measure Resource
 The MeasureReport resource can be used to support reporting of a variety of measures,
-including simple counts, with measures over different strata.  It is not readily searchable at
-the stratum level.  MeasureReport is beginning to gain traction because of efforts using
+including simple counts, with measures over different strata. It is not readily searchable at
+the stratum level. MeasureReport is beginning to gain traction because of efforts using
 it in the [DaVinci Project](https://www.hl7.org/about/davinci/).
 
 ###### Questionnaire Response
@@ -193,13 +192,13 @@ for `Location.operationalStatus` in the Location resource in FHIR R4.
 ##### Codes used for Stratifying Populations
 Other codes are essential for stratifying populations to determine the impact of disease,
 by age, gender or race and ethnicity, either to determine risk factors, or identify
-disparities in treatment.  Existing code sets are available to support these sorts of
+disparities in treatment. Existing code sets are available to support these sorts of
 stratification efforts.
 
 ##### New Codes
 Until COVID-19 and SARS-Cov-2 were discovered, codes to describe the disease, diagnostic
 tests, antibody tests, or test results did not exist because these concepts did not
-yet exist.  Since then organizations like LOINC, SNOMED and CMS responsible for managing code
+yet exist. Since then organizations like LOINC, SNOMED and CMS responsible for managing code
 systems used by EHR and other Health IT systems have produced codes where needed, and developed value
 sets and guidelines for coding conditions and situations related to COVID-19 including
 diagnosis, evaluation, treatment, procedures, and medications associated with the disease.
