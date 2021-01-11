@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Qu
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_QueryMeasure_Pull"
 * title = "Measure Consumer implementing the Query Measure transaction with the Pull Option."
-* date = "2021-01-10T17:46:00.501551-05:00"
+* date = "2021-01-11T04:18:02.062902Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option."
 * format[0] = #xml

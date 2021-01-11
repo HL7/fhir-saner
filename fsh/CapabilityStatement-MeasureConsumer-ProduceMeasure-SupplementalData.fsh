@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Pr
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_ProduceMeasure_SupplementalData"
 * title = "Measure Consumer implementing the Produce Measure transaction with the Supplemental Data Option."
-* date = "2021-01-10T17:46:00.501551-05:00"
+* date = "2021-01-11T04:18:02.062902Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the Supplemental Data Option."
 * format[0] = #xml

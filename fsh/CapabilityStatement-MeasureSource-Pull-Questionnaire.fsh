@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the Pull
 * insert SanerDefinitionContent
 * name = "MeasureSource_Pull_Questionnaire"
 * title = "Measure Source implementing the Pull Option and the Questionnaire Option."
-* date = "2021-01-10T17:46:00.501551-05:00"
+* date = "2021-01-11T04:18:02.062902Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Pull Option and the Questionnaire Option."
 * format[0] = #xml
