@@ -85,7 +85,8 @@
         "sliceName": "ResourceType",
         "short": "Describe the FHIR resource type that should be counted for the measure",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "CodeableConcept.coding:ResourceType.system",
@@ -98,7 +99,8 @@
         "path": "CodeableConcept.coding",
         "sliceName": "Snomed",
         "min": 1,
-        "max": "*"
+        "max": "*",
+        "mustSupport": true
       },
       {
         "id": "CodeableConcept.coding:Snomed.system",
@@ -111,7 +113,8 @@
         "id": "CodeableConcept.text",
         "path": "CodeableConcept.text",
         "short": "Supply human readable text describing what is enumerated/counted for the measure",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

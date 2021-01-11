@@ -71,7 +71,8 @@
         "id": "AuditEvent.subtype",
         "path": "AuditEvent.subtype",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.subtype.system",
@@ -81,12 +82,19 @@
       {
         "id": "AuditEvent.action",
         "path": "AuditEvent.action",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.period",
         "path": "AuditEvent.period",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "AuditEvent.recorded",
+        "path": "AuditEvent.recorded",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent",
@@ -113,7 +121,8 @@
         "path": "AuditEvent.agent",
         "sliceName": "Source",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:Source.role",
@@ -132,12 +141,14 @@
       {
         "id": "AuditEvent.agent:Source.who",
         "path": "AuditEvent.agent.who",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:Source.name",
         "path": "AuditEvent.agent.name",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:Source.requestor",
@@ -149,23 +160,27 @@
         "path": "AuditEvent.agent",
         "sliceName": "HumanRequestor",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:HumanRequestor.role",
         "path": "AuditEvent.agent.role",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:HumanRequestor.who",
         "path": "AuditEvent.agent.who",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:HumanRequestor.name",
         "path": "AuditEvent.agent.name",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:HumanRequestor.requestor",
@@ -177,7 +192,8 @@
         "path": "AuditEvent.agent",
         "sliceName": "Destination",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:Destination.role",
@@ -196,12 +212,14 @@
       {
         "id": "AuditEvent.agent:Destination.who",
         "path": "AuditEvent.agent.who",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:Destination.name",
         "path": "AuditEvent.agent.name",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.agent:Destination.requestor",
@@ -209,25 +227,34 @@
         "patternBoolean": false
       },
       {
+        "id": "AuditEvent.source",
+        "path": "AuditEvent.source",
+        "mustSupport": true
+      },
+      {
         "id": "AuditEvent.source.site",
         "path": "AuditEvent.source.site",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.source.type",
         "path": "AuditEvent.source.type",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.entity",
         "path": "AuditEvent.entity",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.entity.role",
         "path": "AuditEvent.entity.role",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.entity.role.system",

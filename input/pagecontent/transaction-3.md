@@ -12,12 +12,11 @@ This section describes the PULL-MX of this guide. This transaction is used by th
 
 ### Scope
 
-The Query Measure Definition transaction allows a Measure Definition Consumer to
-            periodically query about the availability of a resource from an Measure Definition Source.
+The Query Measure Definition transaction allows a Measure Definition Consumer to periodically query about the availability of a resource from an Measure Definition Source.
 
 
 This transaction enables a MeasureDefinition Consumer actor to access Measure resources from a MeasureDefinitionSource actor.
-           It defines the query parameters that the actors must and **should** support for search and read operations that must be supported.
+It defines the query parameters that the actors must and **should** support for search and read operations that must be supported.
 
 
 ### Actors Roles
@@ -66,14 +65,11 @@ This transaction enables a MeasureDefinition Consumer actor to access Measure re
 
 
 
-
 ##### Trigger Event - A Query is Initiated by User/System
 
 ##### Message Semantics
 
-The Measure Definition Consumer sends a query
-using an HTTP GET or POST transaction to the Measure Definition Source requesting information on
-available measures.
+The Measure Definition Consumer sends a query using an HTTP GET or POST transaction to the Measure Definition Source requesting information on available measures.
 
 
 The following are general requirements of the interaction.
@@ -92,7 +88,6 @@ specifications, or other formats such as CSV which might be easier for clients t
 should support other commonly used expressions representing JSON or XML outputs without complaint, including
 those specified in prior releases (e.g., the DSTU2 application/xml+fhir or application/json+fhir types that
 have since changed in R4).
-                        
 
 
 </div>
@@ -221,16 +216,15 @@ Include Support
 <div>
 
 To reduce transaction overhead, a client system may wish to retrieve all the resources referenced by the
-                            selected resource when obtaining it. This can be accomplished by using a search with an _id parameter, combined with
-                            _include=*.
-                        
+selected resource when obtaining it. This can be accomplished by using a search with an _id parameter, combined with
+_include=*.
 
 
 This guide does not further specify specify resource includes beyond required support for *.
-                            Systems that support _include gernally handle _include=*, in fact, in some ways it is easier to implement
-                            than more selective _include operations.  Recursive includes can be a source of server loading issues, as
-                            an incorrectly implemented include with recursive includes could wind up retrieving far more data than
-                            the client expected.  Thus, these are not recommended.
+Systems that support _include gernally handle _include=*, in fact, in some ways it is easier to implement
+than more selective _include operations. Recursive includes can be a source of server loading issues, as
+an incorrectly implemented include with recursive includes could wind up retrieving far more data than
+the client expected. Thus, these are not recommended.
 
 
 </div>
@@ -309,7 +303,7 @@ _include:iterate
 <div>
 
 The server must support the _count parameter for queries. Servers **should** use a default
-value for _count if no value is provided to avoid server overloading.  This guide recommends a default value of 100 based on
+value for _count if no value is provided to avoid server overloading. This guide recommends a default value of 100 based on
 existing implementation experience.
 
 
@@ -378,8 +372,8 @@ Search by _id
 <div>
 
 A client must be able to read individual resources that are returned or referenced within resources
-returned by a query.  Client systems may save resource references for future use, retrieving them later as
-needed.  To reduce overhead, a client system may also wish to retrieve the resources referenced by the
+returned by a query. Client systems may save resource references for future use, retrieving them later as
+needed. To reduce overhead, a client system may also wish to retrieve the resources referenced by the
 selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*
 
 
@@ -434,8 +428,8 @@ Search by _url
 <div>
 
 A client must be able to read individual resources that are returned or referenced within a measure
-                                by the canonical url that is used to identify them.  Client systems may save resource references for future use,
-                                retrieving them later as needed.
+by the canonical url that is used to identify them. Client systems may save resource references for future use,
+retrieving them later as needed.
 
 
 </div>
@@ -493,14 +487,15 @@ Systems must be able to retrieve measures needed for automation.
 
 Measures can be identified by codes used in the measure,
 or by the measure title, its canonical URL, or by something easier for a user to recall, such
-as the text of the measure or a code within it.  Multiple measures may report on the same kind of thing (e.g., beds),
-so retrieval by code, or by code within a value set **should** be supported.  There may be
+as the text of the measure or a code within it. Multiple measures may report on the same kind of thing (e.g., beds),
+so retrieval by code, or by code within a value set **should** be supported. There may be
 multiple measures which identify the kind of thing that the client system is interested in
-learning more about.  Search by code **should** be met by implementing the <a href='SearchParameter-SearchParameter-code.html'>SearchParameter-code</a>
+learning more about. Search by code **should** be met by implementing the <a
+href='SearchParameter-SearchParameter-code.html'>SearchParameter-code</a>
 search parameter.
 
 However, search by code is not supported by default by many off-the-shelf systems,
-and so this is not a strict requirement for implementers.  Also, chained searching
+and so this is not a strict requirement for implementers. Also, chained searching
 is also not always readily available, and so search by measure title is also not a hard requirement.
 At the very least, a server must be able to search by measure, and a client must also to ensure
 the greatest interoperability between systems with differing capabilities.
@@ -514,7 +509,8 @@ The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation o
 Search by Text or Code
 <div>
 
-A client system **should** be able to search for Measure definitions.  This requirement can be met through support of the
+A client system **should** be able to search for Measure definitions. This requirement can be met through
+support of the
 <a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters</a>, or by implementation
 of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter</a>.
 

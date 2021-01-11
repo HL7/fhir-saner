@@ -9,6 +9,7 @@
 
     <xsl:include href="utility.xslt"/>
     <xsl:param name="org" select="/ig:profile/ig:domain/ig:org"/>
+    <xsl:param name="dir" select="''"/>
     <!-- Preserve spaces in markdown content elements -->
     <xsl:preserve-space elements="ig:description ig:overview"/>
 
@@ -21,11 +22,11 @@
 
     <xsl:template name="overview" match="/" mode="overview">
         <xsl:param name="dest" select="'pagecontent/overview.md'"/>
-        <xsl:result-document href="pagecontent/overview.md" method="text">
+        <xsl:result-document href="{$dir}pagecontent/overview.md" method="text">
 <xsl:apply-templates select="/ig:profile/ig:description|/ig:profile/ig:overview"/>
 
 <xsl:if test="/ig:profile/ig:usecase">
-<xsl:result-document href="pagecontent/use_cases.md">
+<xsl:result-document href="{$dir}pagecontent/use_cases.md">
 The following use cases were used to identify the requirements addressed by this guide:
 
 <xsl:for-each select="/ig:profile/ig:usecase">
@@ -92,33 +93,9 @@ These are described in more detail in the sections that follow.
 
     <xsl:template match="ig:usecase" mode="process-flow-diagram">
         <!-- This is an ugly hack to work around the limits in Saxon HE implementation of result-document() -->
-        <xsl:choose>
-            <xsl:when test="position()=1">
-                <xsl:result-document href="images-source/usecase1-processflow.txt" method="text">
-                    <xsl:call-template name="process-flow2"/>
-                </xsl:result-document>
-            </xsl:when>
-            <xsl:when test="position()=2">
-                <xsl:result-document href="images-source/usecase2-processflow.txt" method="text">
-                    <xsl:call-template name="process-flow2"/>
-                </xsl:result-document>
-            </xsl:when>
-            <xsl:when test="position()=3">
-                <xsl:result-document href="images-source/usecase3-processflow.txt" method="text">
-                    <xsl:call-template name="process-flow2"/>
-                </xsl:result-document>
-            </xsl:when>
-            <xsl:when test="position()=4">
-                <xsl:result-document href="images-source/usecase4-processflow.txt" method="text">
-                    <xsl:call-template name="process-flow2"/>
-                </xsl:result-document>
-            </xsl:when>
-            <xsl:when test="position()=5">
-                <xsl:result-document href="images-source/usecase5-processflow.txt" method="text">
-                    <xsl:call-template name="process-flow2"/>
-                </xsl:result-document>
-            </xsl:when>
-        </xsl:choose>
+        <xsl:result-document href="{$dir}images-source/usecase{position()}-processflow.txt" method="text">
+            <xsl:call-template name="process-flow2"/>
+        </xsl:result-document>
     </xsl:template>
     <xsl:template name="process-flow2">
         <xsl:variable name="actors" select="/ig:profile/ig:actor"/>

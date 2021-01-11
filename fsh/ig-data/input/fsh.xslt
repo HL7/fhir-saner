@@ -21,7 +21,7 @@
         <xsl:text>* </xsl:text>
         <xsl:value-of select="string-join($f, '')"/>
         <xsl:text> = "</xsl:text>
-        <xsl:if test="contains(string-join($v, ''),'&#xA;')">""</xsl:if>
+        <xsl:if test="contains(string-join($v, ''),'&#xA;')">""&#xA;</xsl:if>
         <xsl:value-of select="string-join($v, '')"/>
         <xsl:if test="contains(string-join($v, ''),'&#xA;')">""</xsl:if>
         <xsl:text>"&#xA;</xsl:text>
@@ -53,7 +53,7 @@
         <xsl:if test='contains($t,"CapabilityStatement") or contains($t,"OperationDefinition") or contains($t,"SearchParameter")'>
             <xsl:value-of select="s:def('Usage','#definition')"/>
         </xsl:if>
-        <xsl:value-of select="concat('Description: &quot;',string-join($d, ''),'&quot;&#xA;')"/>
+        <xsl:value-of select="concat('Description: &quot;&quot;&quot;&#xA;',normalize-space(string-join($d, '')),'&quot;&quot;&quot;&#xA;')"/>
         <xsl:for-each select="$m">
             <xsl:value-of select="concat('* insert ',.,'&#xA;')"/>
         </xsl:for-each>

@@ -109,7 +109,7 @@
       "use": "in",
       "min": 0,
       "max": "1",
-      "documentation": "A reference or identifier of the reporter for the MeasureReport. May be omitted if all MeasureReport resources\nbeing aggregated have a common reporter. A server may determine the reporter based on business rules (e.g., based on the identity of the sender of the request).",
+      "documentation": "A reference or identifier of the reporter for the MeasureReport. May be omitted if all MeasureReport resources being aggregated have a common reporter. A server may determine the reporter based on business rules (e.g., based on the identity of the sender of the request).",
       "searchType": "reference",
       "type": "string"
     },
@@ -118,7 +118,7 @@
       "use": "in",
       "min": 0,
       "max": "1",
-      "documentation": "A reference or identifier of the subject for the MeasureReport. May be omitted if all MeasureReport resources\nbeing aggregated have a common subject.",
+      "documentation": "A reference or identifier of the subject for the MeasureReport. May be omitted if all MeasureReport resources being aggregated have a common subject.",
       "searchType": "reference",
       "type": "string"
     },

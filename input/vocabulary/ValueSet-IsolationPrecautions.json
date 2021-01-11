@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "IsolationPrecautions",
+  "id": "IsolationPrecautions",
+  "title": "COVID-19 Isolation Precautions",
+  "description": "Codes identifying Isolation Precaution Orders or Procedures",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/IsolationPrecautions",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "409524006",
+            "display": "Airborne precautions (procedure)"
+          },
+          {
+            "code": "409525007",
+            "display": "Respiratory secretion precautions (procedure)"
+          },
+          {
+            "code": "409529001",
+            "display": "Contact precautions (procedure)"
+          },
+          {
+            "code": "409583003",
+            "display": "Transmission-based precautions (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

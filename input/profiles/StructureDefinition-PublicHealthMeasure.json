@@ -107,27 +107,31 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/ReportingPeriod"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Measure.url",
         "path": "Measure.url",
         "short": "Each resource must have a url.",
         "comment": "The url for resource defined in The Situation Awareness for Novel Epidemic Response IG will follow IG URL naming conventions.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.version",
         "path": "Measure.version",
         "short": "Resources are versioned like IG's 0.1.0 = first development version, 0.2.0 - first published for review version, 1.0.0 first official version ...",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.name",
         "path": "Measure.name",
         "short": "Each resource must have a name.",
         "comment": "The name should be in PascalCase, and should represent the Author's title of the resource.  Identify the Author to clarify",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.status",
@@ -144,7 +148,8 @@
         "path": "Measure.experimental",
         "short": "A resource must indicate its experimental status",
         "comment": "true - development, testing or pilots, false - production use",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.subject[x]",
@@ -183,46 +188,53 @@
         "id": "Measure.publisher",
         "path": "Measure.publisher",
         "short": "The name of the organization publishing this resource",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.contact",
         "path": "Measure.contact",
         "short": "The contact information for whom to contact about this resource",
         "comment": "At least one contact shall be an email",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.useContext",
         "path": "Measure.useContext",
         "short": "The ISO 3166 code for use context",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.author",
         "path": "Measure.author",
         "short": "The original author of the measure content, may be same as publisher, when otherwise, must include a relatedArtifact for the original author's publication",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Measure.author.name",
         "path": "Measure.author.name",
         "short": "The author must be identified by name. Can be the name of an individual or an organization.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.author.telecom",
         "path": "Measure.author.telecom",
         "short": "There must be contact information for the author.",
         "comment": "At least on author contact should be an email address.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.relatedArtifact",
         "path": "Measure.relatedArtifact",
         "short": "There must be at least one artifact describing the measure in human readable form.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.library",
@@ -235,7 +247,13 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasureLibrary"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Measure.group",
+        "path": "Measure.group",
+        "mustSupport": true
       },
       {
         "id": "Measure.group.extension",
@@ -266,7 +284,8 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Measure.group.extension:groupAtts.extension:scoring",
@@ -283,7 +302,8 @@
         "path": "Measure.group.extension.extension.valueCodeableConcept",
         "short": "Measure must have a scoring",
         "comment": "availability\n: Use availability to measure the point-in-time availability of a resource (e.g., protective equipment, medications, supplies).\n\ncapacity\n: Use capacity to measure point-in-time capacity or utilization for a resource (e.g., beds, ventilators).\n\nevent-growth\n: Use event-growth to count current and cumulative totals of events.\n\nqueue-length\n: Use queue-length to measure the numbers of people, organizations or other entities awaiting service.\n\nservice-time\n: Use service-time to measure the average time it takes to provide service (e.g., length of stay, time to report a lab result).\n\ncontinuous-variable\n: Use continuous-variable when reporting a group of counts of the same type of resource, with different constraints on when to count it.\nAlso use continuous variable to report measures with computations over measure-observation values (e.g., average length of stay).\n\nproportion\n: Use proportion to report percentages, or ratios from the (generally) same initial population.\n\nratio\n: Use ratio to report ratios from different initial populations.\n\ncohort:\n: Use cohort to report counts of unrelated or orthogonal categories (e.g., masks, gowns, gloves) within a group, where proportions aren't of significance.\nAlso use cohort to count answers to categorical questions, where each question is one cohort, and is stratified by possible answers (e.g., Yes/No, 0 days/1-3 days/4-6 days/7-9 days/more than 9 days supply).",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.extension:groupAtts.extension:type",
@@ -299,7 +319,8 @@
         "id": "Measure.group.extension:groupAtts.extension:type.valueCodeableConcept",
         "path": "Measure.group.extension.extension.valueCodeableConcept",
         "comment": "structure\n: Use when the measure is about capacity of a facility or organization to provide services, e.g., quantities of resources, staff, expendibles, et cetera.\n\nprocess\n: Use when the measure is about the execution of a process, things that are done, in process, et cetera.\n\noutcome\n: Use when the measure describes the outcome or result.  If by the measure you know a patient is getting better or worse, it's an outcome measure.\n\npatient-reported-outcome\n: Use when the outcome is reported by a patient or their authorized representative (usually used with \"satisfaction scores\", but could be used with other outcomes).\n\ncomposite\n: Use when two or more of the above are appropriate. Consider subdividing the group further.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.extension:groupAtts.extension:rateAggregation",
@@ -344,6 +365,11 @@
         "comment": "Describe the subject being enumerated\nthat is associated with the measure.  The first code should identify the FHIR Resource type. The second should further describe\nit using SNOMED CT. Subsequent codes may describe it using other coding systems."
       },
       {
+        "id": "Measure.group.population",
+        "path": "Measure.group.population",
+        "mustSupport": true
+      },
+      {
         "id": "Measure.group.population.extension",
         "path": "Measure.group.population.extension",
         "slicing": {
@@ -374,10 +400,17 @@
         ]
       },
       {
+        "id": "Measure.group.population.code",
+        "path": "Measure.group.population.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Measure.group.population.code.coding",
         "path": "Measure.group.population.code.coding",
         "short": "The coding gives a 'name' for this population and must be supplied",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.population.code.text",
@@ -388,7 +421,8 @@
         "id": "Measure.group.population.description",
         "path": "Measure.group.population.description",
         "short": "Human readable instructions for counting or measuring this population",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.population.criteria",
@@ -405,46 +439,59 @@
       {
         "id": "Measure.group.stratifier",
         "path": "Measure.group.stratifier",
-        "short": "A group may have none, some or many strata"
+        "short": "A group may have none, some or many strata",
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.code",
         "path": "Measure.group.stratifier.code",
         "short": "Describes the purpose of this stratifier",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.code.coding",
         "path": "Measure.group.stratifier.code.coding",
-        "short": "Optional code uniquely identifying the strata"
+        "short": "Optional code uniquely identifying the strata",
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.code.coding.display",
         "path": "Measure.group.stratifier.code.coding.display",
         "short": "Provides a human readable name for the strata",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.code.text",
         "path": "Measure.group.stratifier.code.text",
         "short": "Describes the function of the stratifier.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.description",
         "path": "Measure.group.stratifier.description",
         "short": "Describes the overall function of the strata.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.criteria",
         "path": "Measure.group.stratifier.criteria",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Measure.group.stratifier.criteria.language",
+        "path": "Measure.group.stratifier.criteria.language",
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.criteria.expression",
         "path": "Measure.group.stratifier.criteria.expression",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Measure.group.stratifier.component",

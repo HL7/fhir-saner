@@ -2,12 +2,10 @@ This section describes the PUSH-TX of this guide. This transaction is used by th
 
 ### Scope
 
-The Produce Measure transaction allows an Measure Source to
-periodically report on availability of resources to a Measure Consumer.
+The Produce Measure transaction allows an Measure Source to periodically report on availability of resources to a Measure Consumer.
 
 
-This transaction defines the create and update operations that a MeasureConsumer and
-MeasureSource actor must support.
+This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor must support.
 
 
 ### Actors Roles
@@ -56,10 +54,10 @@ MeasureSource actor must support.
 
 
 
-
 ##### Trigger Event - Reporting Period Elapsed
 
-The current reporting period has elapsed, or the operation is triggered by automation (e.g. for manual testing, diagnostics or error recovery).
+The current reporting period has elapsed, or the operation is triggered by automation (e.g. for manual testing,
+diagnostics or error recovery).
 
 
 See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension.
@@ -73,7 +71,6 @@ A MeasureReport is created or updated by the MeasureSource on the MeasureConsume
 The MeasureReport sends a MeasureReport to the MeasureConsumer using the FHIR
 [create](https://www.hl7.org/fhir/http.html#create) or [update](https://www.hl7.org/fhir/http.html#update) interactions.
 A MeasureSource supporting the CSV option sends the CSV file to the MeasureConsumer using the $report-csv operation.
-                
 
 
 ##### Expected Actions
@@ -87,15 +84,11 @@ The Measure Source performs the FHIR create
 operation on the MeasureReport resource at a Measure Consumer.
 
 
-
 ###### Aggregate MeasureReport Resources
 
 ###### Accept Resource
 
-The Measure Consumer reports
-success using 200 OK, 201 Created, or 204 No Content to indicate a successful update.
-                
-
+The Measure Consumer reports success using 200 OK, 201 Created, or 204 No Content to indicate a successful update.
 
 
 

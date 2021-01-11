@@ -13,6 +13,7 @@
     <xsl:include href="fsh.xslt"/>
 
     <xsl:param name="org" select="/ig:profile/ig:domain/ig:org"/>
+    <xsl:param name="dir" select="''"/>
     <xsl:variable name='base' select='/ig:profile/@base'/>
 
     <!-- Preserve spaces in markdown content elements -->
@@ -27,7 +28,7 @@
 
     <xsl:template name="actorsandtransactions" match="/" mode="actorsandtransactions">
         <xsl:param name="dest" select="'pagecontent/actors.md'"/>
-        <xsl:result-document href="pagecontent/actors.md" method="text">
+        <xsl:result-document href="{$dir}pagecontent/actors.md" method="text">
 This section defines the actors in this implementation guide.
 
 Figure <xsl:value-of select="/ig:profile/@chapter"/>.1-1 below shows the actors directly
@@ -50,7 +51,7 @@ Profile and the relevant transactions between them.&#xA;
             <xsl:call-template name="actor-options"/>
 
         </xsl:result-document>
-        <xsl:result-document href="pagecontent/transactions.md" method="text">
+        <xsl:result-document href="{$dir}pagecontent/transactions.md" method="text">
             <xsl:call-template name="transaction-descriptions"/>
         </xsl:result-document>
         <xsl:apply-templates select="/ig:profile/ig:transaction" mode="transaction">
@@ -70,15 +71,15 @@ Profile and the relevant transactions between them.&#xA;
 
     <xsl:template match="ig:transaction" mode="transaction">
         <xsl:param name='document' required="yes"/>
-        <xsl:result-document href="pagecontent/transaction-{position()}.md" method="text">
+        <xsl:result-document href="{$dir}pagecontent/transaction-{position()}.md" method="text">
             <xsl:call-template name="transaction2">
                 <xsl:with-param name="document" select="concat('transaction-',position(),'.md')"></xsl:with-param>
             </xsl:call-template>
         </xsl:result-document>
-        <xsl:result-document href="images-source/transaction-{position()}-uc.txt" method="text">
+        <xsl:result-document href="{$dir}images-source/transaction-{position()}-uc.txt" method="text">
             <xsl:call-template name="transaction-uc"/>
         </xsl:result-document>
-        <xsl:result-document href="images-source/transaction-{position()}-seq.txt" method="text">
+        <xsl:result-document href="{$dir}images-source/transaction-{position()}-seq.txt" method="text">
             <xsl:call-template name="transaction-seq"/>
         </xsl:result-document>
         <xsl:call-template name="transaction-capability">
@@ -360,7 +361,7 @@ See the following CapabilityStatement resources for conformance requirements:
     <xsl:template match="text()" mode="interaction-diagram"/>
 
     <xsl:template name="actor-transaction-diagram">
-        <xsl:result-document href="images-source/ActorsAndTransactions.txt" method="text">
+        <xsl:result-document href="{$dir}images-source/ActorsAndTransactions.txt" method="text">
             <xsl:text>@startuml
 skinparam FolderBorderColor white
 skinparam FolderFontColor white
@@ -622,6 +623,7 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="$actor/ig:name"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:apply-templates select="ig:description|ig:overview"/>
+                <xsl:apply-templates select="ig:requires"/>
             </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
@@ -693,7 +695,7 @@ between options when applicable are specified in notes.
     </xsl:template>
 
     <xsl:template name="generate-gherkin">
-        <xsl:result-document href="feature/actor-{@id}.feature" method="text">
+        <xsl:result-document href="{$dir}feature/actor-{@id}.feature" method="text">
             <xsl:text>&#xA;# </xsl:text>
             <xsl:value-of select="/ig:profile/@id"/>
             <xsl:text> </xsl:text>
@@ -881,7 +883,7 @@ between options when applicable are specified in notes.
     <xsl:function name="s:client">
         <xsl:param name="mode"/>
         <xsl:param name="op"/>
-        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op/@client[1]) else (if ($op/@min = 0) then 'may' else $op/@expect[1])) else ($op/@expect[1])"/>
+        <xsl:value-of select="if ($mode='client') then (if ($op/@client) then ($op[1]/@client) else (if ($op/@min = 0) then 'may' else $op[1]/@expect)) else ($op[1]/@expect)"/>
     </xsl:function>
     <xsl:function name="s:combo">
         <xsl:param name="f"/>
@@ -992,7 +994,7 @@ between options when applicable are specified in notes.
 
             <xsl:if test='$tx//ig:message[$actor/@id=(@from, @to)]//ig:operation/@resources'>
                 <!--xsl:message>CapabilityStatement-<xsl:value-of select="$name"/></xsl:message-->
-	            <xsl:result-document href="../../CapabilityStatement-{$name}.fsh" method="text">
+	            <xsl:result-document href="{$dir}../../CapabilityStatement-{$name}.fsh" method="text">
 	                <xsl:value-of select="s:instance($name, 'CapabilityStatementWithSlices',$desc, 'SanerDefinitionContent', null)"/>
 	                <xsl:value-of select="s:string('name',translate($name,'-','_'))"/>
 	                <xsl:value-of select="s:string('title', substring-after($desc, 'for the '))"/>
@@ -1060,7 +1062,7 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="s:string(($res,'.supportedProfile[',position()-1,']'),$url)"/>
             </xsl:for-each>
             <!-- Generate interactions -->
-            <xsl:for-each select="distinct-values($operations/@name)[not(starts-with(.,'$'))]">
+            <xsl:for-each select="distinct-values($operations/@name)[not(starts-with(.,'$')) and . != 'batch']">
                 <xsl:variable name='op' select="$operations[@name=current()]"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:code(($res,'.interaction[',position()-1,'].code'),if (. = 'search') then 'search-type' else .,'')"/>
@@ -1075,6 +1077,16 @@ between options when applicable are specified in notes.
                 <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].documentation'),$op[1]/ig:name)"/>
                 <!-- Expect not supported here, though it should be -->
                 <!-- xsl:value-of select="s:expect(($res,'.operation[',position()-1,']'), s:client($mode, $op[1]))"/ -->
+            </xsl:for-each>
+            <!-- Batch -->
+            <xsl:for-each select="distinct-values($operations/@name)[. = 'batch']">
+                <xsl:variable name='op' select="$operations[@name=current()]"/>
+                <xsl:text>&#xA;</xsl:text>
+                <xsl:value-of select="s:code(('rest[',$index,'].interaction[',position()-1,'].code'),.,'')"/>
+                <xsl:value-of select="s:expect(('rest[',$index,'].interaction[',position()-1,']'), s:client($mode, $op[1]))"/>
+                <xsl:if test='$op/ig:description'>
+                    <xsl:value-of select="s:string(('rest[',$index,'].interaction[',position()-1,'].documentation'), normalize-space($op/ig:description))"/>
+                </xsl:if>
             </xsl:for-each>
             <xsl:if test='$isActor'>
                 <xsl:call-template name="rest-operation-capability">
@@ -1144,7 +1156,7 @@ between options when applicable are specified in notes.
         <xsl:param name='mode'/>
         <xsl:for-each select="$operations[starts-with(@name,'$') and $mode='server']">
             <xsl:variable name='op' select="."/>
-            <xsl:result-document href="../../OperationDefinition-{s:opName($op)}.fsh" method="text">
+            <xsl:result-document href="{$dir}../../OperationDefinition-{s:opName($op)}.fsh" method="text">
                 <xsl:value-of select="s:instance(s:opName($op), 'OperationDefinition', $op/ig:description, 'SanerDefinitionContent', '')"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:code('status','draft','')"/>
@@ -1170,7 +1182,7 @@ between options when applicable are specified in notes.
                     <xsl:value-of select="s:name(($param,'.min'), @min)"/>
                     <xsl:value-of select="s:string(($param,'.max'), @max)"/>
                     <xsl:if test='ig:description'>
-                        <xsl:value-of select="s:string(($param,'.documentation'),ig:description)"/>
+                        <xsl:value-of select="s:string(($param,'.documentation'),normalize-space(ig:description))"/>
                     </xsl:if>
                     <xsl:choose>
                         <xsl:when test="lower-case(substring(@type,1))=substring(@type,1)">

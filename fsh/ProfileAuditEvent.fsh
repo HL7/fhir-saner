@@ -4,11 +4,11 @@ Title: "General Audit Event Requirements"
 Description: "Defines general constraints on the AuditEvent Resource."
 
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* subtype 1..1
+* subtype 1..1 MS
 * subtype.system = "http://hl7.org/fhir/restful-interaction"
-* action 1..1
-* period 1..1
-* recorded 1..1
+* action 1..1 MS
+* period 1..1 MS
+* recorded 1..1 MS
 
 * agent ^slicing.discriminator[0].type = #pattern
 * agent ^slicing.discriminator[0].path = "role"
@@ -18,36 +18,36 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * agent ^slicing.ordered = false   // can be omitted, since false is the default
 * agent ^slicing.description = "Slice based on the component.code pattern"
 
-* agent contains Source 1..1 and
-           HumanRequestor 0..* and
-           Destination 1..1
+* agent contains Source 1..1 MS and
+           HumanRequestor 0..* MS and
+           Destination 1..1 MS
 
-* agent[Source].role =  http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
-* agent[Source].who 1..1
-* agent[Source].name 1..1
+* agent[Source].role = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
+* agent[Source].who 1..1 MS
+* agent[Source].name 1..1 MS
 * agent[Source].requestor = false
 
-* agent[HumanRequestor].role 1..1
-* agent[HumanRequestor].who 1..1
-* agent[HumanRequestor].name 1..1
+* agent[HumanRequestor].role 1..1 MS
+* agent[HumanRequestor].who 1..1 MS
+* agent[HumanRequestor].name 1..1 MS
 * agent[HumanRequestor].requestor = true
 
 * agent[Destination].role =  http://dicom.nema.org/resources/ontology/DCM#110152 "Destination Role ID"
-* agent[Destination].who 1..1
-* agent[Destination].name 1..1
+* agent[Destination].who 1..1 MS
+* agent[Destination].name 1..1 MS
 * agent[Destination].requestor = false
 
-* entity 1..*
-* entity.role 1..1
+* entity 1..* MS
+* entity.role 1..1 MS
 * entity.role.system = "http://terminology.hl7.org/CodeSystem/object-role"
 
 /*
 Audit Source (1..1)
     not specified
 */
-* source 1..1
-* source.site 1..1
-* source.type 1..1
+* source 1..1 MS
+* source.site 1..1 MS
+* source.type 1..1 MS
 
 Profile:        AuditEventSearch
 Parent:         AuditEventBase
@@ -63,8 +63,8 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 
 * entity.type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity.role = http://terminology.hl7.org/CodeSystem/object-role#24 "Query"
-* entity.query 1..1
-* entity.detail 1..*
+* entity.query 1..1 MS
+* entity.detail 1..* MS
 
 Profile:        AuditEventRead
 Parent:         AuditEventBase
@@ -77,7 +77,7 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * subtype.display = "Read"
 * action = #R
 
-* entity.what 1..1
+* entity.what 1..1 MS
 * entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 
 Profile:        AuditEventCreate
@@ -92,7 +92,7 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * subtype.display = "Create"
 * action = #C
 
-* entity.what 1..1
+* entity.what 1..1 MS
 * entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 
 Profile:        AuditEventUpdate
@@ -106,9 +106,9 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * subtype = http://hl7.org/fhir/restful-interaction#create
 * subtype.display = "Update"
 * action = #U
-* recorded 1..1
+* recorded 1..1 MS
 
-* entity.what 1..1
+* entity.what 1..1 MS
 * entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 
 Profile:        AuditEventDelete
@@ -123,6 +123,6 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * subtype.display = "Delete"
 * action = #D
 
-* entity.what 1..1
+* entity.what 1..1 MS
 * entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 

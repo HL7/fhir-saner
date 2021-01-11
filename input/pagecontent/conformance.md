@@ -8,9 +8,14 @@
 * ig-data\input\pagecontent\conformance.md                                              *
 *****************************************************************************************
 {% endcomment %} -->
-This chapter enumerates the FHIR conformance resources used for validating implementations, provides a test
+This chapter [Need more here](#tbd) enumerates the FHIR conformance resources used for validating implementations, provides a test
 plan for evaluating actors in this guide, and test data testing implementations.
 
+### Conforming Actors
+A system can declare conformance to this implementation guide by ...
+
+
+ 
 <ol>
     <li id='capabilities'><details><summary>Capability Statements</summary><ol>
            {% include list-simple-capabilitystatements.xhtml %}

@@ -2,11 +2,12 @@
 Instance: MeasureDefinitionSource
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the requirements for the Measure Definition Source."
+Description: """
+Defines the requirements for the Measure Definition Source."""
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionSource"
 * title = "Measure Definition Source."
-* date = "2020-10-14T11:27:23.288495-04:00"
+* date = "2021-01-11T04:18:02.062902Z"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Source."
 * format[0] = #xml

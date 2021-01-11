@@ -2,11 +2,12 @@
 Instance: MeasureDefinitionConsumer-QueryMeasureDefinition
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction."
+Description: """
+Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction."""
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer_QueryMeasureDefinition"
 * title = "Measure Definition Consumer implementing the Query Measure Definition transaction."
-* date = "2020-10-14T11:27:23.288495-04:00"
+* date = "2021-01-11T04:18:02.062902Z"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction."
 * format[0] = #xml

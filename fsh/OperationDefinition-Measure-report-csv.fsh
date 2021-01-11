@@ -2,8 +2,8 @@
 Instance: Measure-report-csv
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.
-                            Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."
+Description: """
+Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated. Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."""
 * insert SanerDefinitionContent
  
 * status = #draft
@@ -15,8 +15,9 @@ Description: "Create or update a MeasureReport from the CSV Format. If a report 
 * instance = true
 * name = "CreateorupdateaMeasureReportfromCSVFormat"
 * title = "Create or update a MeasureReport from CSV Format"
-* description = """Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.
-                            Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."""
+* description = """
+Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter
+for the given time period, it is updated. Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."""
 * url = "http://hl7.org/fhir/uv/saner/OperationDefinition/Measure-report-csv"
 
 * parameter[0].name = #input
@@ -54,8 +55,7 @@ Description: "Create or update a MeasureReport from the CSV Format. If a report 
 * parameter[4].use = #in
 * parameter[4].min = 0
 * parameter[4].max = "1"
-* parameter[4].documentation = """A reference or identifier of the reporter for the MeasureReport. If unspecified,
-                                    the server may determine the reporter based on business rules (e.g., based on the identity of the sender)."""
+* parameter[4].documentation = "A reference or identifier of the reporter for the MeasureReport. If unspecified, the server may determine the reporter based on business rules (e.g., based on the identity of the sender)."
 * parameter[4].searchType = #reference
 * parameter[4].type = #string
 
@@ -63,8 +63,7 @@ Description: "Create or update a MeasureReport from the CSV Format. If a report 
 * parameter[5].use = #in
 * parameter[5].min = 0
 * parameter[5].max = "1"
-* parameter[5].documentation = """A reference or identifier of the subject for the MeasureReport. If unspecified,
-                                    the server may determine the subject based on business rules (e.g., based on the identity of the sender)."""
+* parameter[5].documentation = "A reference or identifier of the subject for the MeasureReport. If unspecified, the server may determine the subject based on business rules (e.g., based on the identity of the sender)."
 * parameter[5].searchType = #reference
 * parameter[5].type = #string
 

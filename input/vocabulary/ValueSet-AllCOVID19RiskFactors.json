@@ -1,0 +1,104 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "AllCOVID19RiskFactors",
+  "id": "AllCOVID19RiskFactors",
+  "title": "All COVID-19 Risk Factors",
+  "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/AllCOVID19RiskFactors",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "109841003",
+            "display": "Liver cell carcinoma (disorder)"
+          },
+          {
+            "code": "109989006",
+            "display": "Multiple myeloma (disorder)"
+          },
+          {
+            "code": "118600007",
+            "display": "Malignant lymphoma (disorder)"
+          },
+          {
+            "code": "13645005",
+            "display": "Chronic obstructive lung disease (disorder)"
+          },
+          {
+            "code": "363507003",
+            "display": "Malignant neoplasm of pharynx (disorder)"
+          },
+          {
+            "code": "365981007",
+            "display": "Finding of tobacco smoking behavior (finding)"
+          },
+          {
+            "code": "365982000",
+            "display": "Finding of tobacco smoking consumption (finding)"
+          },
+          {
+            "code": "38341003",
+            "display": "Hypertensive disorder, systemic arterial (disorder)"
+          },
+          {
+            "code": "414916001",
+            "display": "Obesity (disorder)"
+          },
+          {
+            "code": "417357006",
+            "display": "Sickling disorder due to hemoglobin S (disorder)"
+          },
+          {
+            "code": "42343007",
+            "display": "Congestive heart failure (disorder)"
+          },
+          {
+            "code": "428281000",
+            "display": "Malignant neoplasm of bone (disorder)"
+          },
+          {
+            "code": "44054006",
+            "display": "Diabetes mellitus type 2 (disorder)"
+          },
+          {
+            "code": "46177005",
+            "display": "End-stage renal disease (disorder)"
+          },
+          {
+            "code": "49601007",
+            "display": "Disorder of cardiovascular system (disorder)"
+          },
+          {
+            "code": "53741008",
+            "display": "Coronary arteriosclerosis (disorder)"
+          },
+          {
+            "code": "709044004",
+            "display": "Chronic kidney disease (disorder)"
+          },
+          {
+            "code": "77176002",
+            "display": "Smoker (finding)"
+          },
+          {
+            "code": "77386006",
+            "display": "Pregnant (finding)"
+          },
+          {
+            "code": "85898001",
+            "display": "Cardiomyopathy (disorder)"
+          },
+          {
+            "code": "93143009",
+            "display": "Leukemia, disease (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

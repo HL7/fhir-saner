@@ -1,0 +1,212 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VTEReports",
+  "id": "VTEReports",
+  "title": "Codes for reports about VTE Diagnosics",
+  "description": "Codes identifying Diagnostics tests or results for VTE",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/VTEReports",
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at LOINC/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "36850-6",
+            "display": "MRA Lower extremity veins - right WO and W contrast IV"
+          },
+          {
+            "code": "36416-6",
+            "display": "MRA Lower extremity veins WO and W contrast IV"
+          },
+          {
+            "code": "69162-6",
+            "display": "MRA Pulmonary artery - bilateral W contrast IA"
+          },
+          {
+            "code": "36803-5",
+            "display": "MRA Pulmonary vessels"
+          },
+          {
+            "code": "81596-9",
+            "display": "NM Lung Quantitative Views Ventilation and Perfusion"
+          },
+          {
+            "code": "39942-8",
+            "display": "NM Lung Ventilation and Perfusion"
+          },
+          {
+            "code": "39946-9",
+            "display": "NM Lung Ventilation and Perfusion and Differential"
+          },
+          {
+            "code": "30697-7",
+            "display": "NM Pulmonary system Ventilation and Perfusion"
+          },
+          {
+            "code": "24888-0",
+            "display": "NM Pulmonary system Ventilation and Perfusion W Xe-133 IH and W Tc-99m MAA IV"
+          },
+          {
+            "code": "39838-8",
+            "display": "SPECT Lung ventilation and perfusion"
+          },
+          {
+            "code": "69399-4",
+            "display": "US Femoral vein and Popliteal vein"
+          },
+          {
+            "code": "38134-3",
+            "display": "US Femoral vessels"
+          },
+          {
+            "code": "38128-5",
+            "display": "US Femoral vessels - bilateral"
+          },
+          {
+            "code": "38037-8",
+            "display": "US Femur - left"
+          },
+          {
+            "code": "38048-5",
+            "display": "US Femur - right"
+          },
+          {
+            "code": "43566-9",
+            "display": "US Hip and Thigh"
+          },
+          {
+            "code": "30709-0",
+            "display": "US Lower extremity"
+          },
+          {
+            "code": "38013-9",
+            "display": "US Lower extremity - bilateral"
+          },
+          {
+            "code": "38040-2",
+            "display": "US Lower extremity - left"
+          },
+          {
+            "code": "38039-4",
+            "display": "US Lower extremity - left limited"
+          },
+          {
+            "code": "38051-9",
+            "display": "US Lower extremity - right"
+          },
+          {
+            "code": "38050-1",
+            "display": "US Lower extremity - right limited"
+          },
+          {
+            "code": "46363-8",
+            "display": "US Lower extremity vein"
+          },
+          {
+            "code": "46364-6",
+            "display": "US Lower extremity vein - bilateral"
+          },
+          {
+            "code": "48692-8",
+            "display": "US Lower extremity vein - left"
+          },
+          {
+            "code": "48691-0",
+            "display": "US Lower extremity vein - right"
+          },
+          {
+            "code": "69385-3",
+            "display": "US Lower extremity veins - bilateral"
+          },
+          {
+            "code": "69392-9",
+            "display": "US Lower extremity veins - left"
+          },
+          {
+            "code": "80860-0",
+            "display": "US Lower extremity veins - unilateral limited"
+          },
+          {
+            "code": "24881-5",
+            "display": "US Popliteal space"
+          },
+          {
+            "code": "26262-6",
+            "display": "US Popliteal space - bilateral"
+          },
+          {
+            "code": "26263-4",
+            "display": "US Popliteal space - left"
+          },
+          {
+            "code": "26264-2",
+            "display": "US Popliteal space - right"
+          },
+          {
+            "code": "39498-1",
+            "display": "US.doppler Femoral vessels - left"
+          },
+          {
+            "code": "39504-6",
+            "display": "US.doppler Femoral vessels - right"
+          },
+          {
+            "code": "93604-7",
+            "display": "US.doppler Lower extremity arteries+veins - bilateral"
+          },
+          {
+            "code": "30881-7",
+            "display": "US.doppler Lower extremity vein"
+          },
+          {
+            "code": "39420-5",
+            "display": "US.doppler Lower extremity vein - bilateral"
+          },
+          {
+            "code": "39432-0",
+            "display": "US.doppler Lower extremity vein - left"
+          },
+          {
+            "code": "39443-7",
+            "display": "US.doppler Lower extremity vein - right"
+          },
+          {
+            "code": "42461-4",
+            "display": "US.doppler Lower extremity vessel - left for graft"
+          },
+          {
+            "code": "42462-2",
+            "display": "US.doppler Lower extremity vessel - right for graft"
+          },
+          {
+            "code": "44174-1",
+            "display": "US.doppler Lower extremity vessels"
+          },
+          {
+            "code": "39422-1",
+            "display": "US.doppler Lower extremity vessels - bilateral"
+          },
+          {
+            "code": "39431-2",
+            "display": "US.doppler Lower extremity vessels - left"
+          },
+          {
+            "code": "39430-4",
+            "display": "US.doppler Lower extremity vessels - left limited"
+          },
+          {
+            "code": "39442-9",
+            "display": "US.doppler Lower extremity vessels - right"
+          },
+          {
+            "code": "39441-1",
+            "display": "US.doppler Lower extremity vessels - right limited"
+          }
+        ]
+      }
+    ]
+  }
+}
