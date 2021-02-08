@@ -7,7 +7,7 @@ Defines the requirements for the Data Source implementing the Compute Measure tr
 * insert SanerDefinitionContent
 * name = "DataSource_ComputeMeasure"
 * title = "Data Source implementing the Compute Measure transaction."
-* date = "2021-01-11T09:39:55.251153-05:00"
+* date = "2021-02-08T14:50:06.760645Z"
 * kind = #requirements
 * description = "Defines the requirements for the Data Source implementing the Compute Measure transaction."
 * format[0] = #xml

@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the Supp
 * insert SanerDefinitionContent
 * name = "MeasureSource_SupplementalData"
 * title = "Measure Source implementing the Supplemental Data Option."
-* date = "2021-01-11T09:39:55.251153-05:00"
+* date = "2021-02-08T14:50:06.760645Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Supplemental Data Option."
 * format[0] = #xml
