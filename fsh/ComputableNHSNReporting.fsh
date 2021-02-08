@@ -96,7 +96,7 @@ in the prior two weeks.
                 with('status').equalTo(
                     'registered' | 'preliminary' | 'final' | 'amended' | 'corrected'),
                 with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
-                with('code').in(%CovidLabs),
+                with('code').in(%Covid19Labs),
                 with('value-concept).in(%PositiveResults)
            ).onServers(%Base), true,
            Patient.distinct()

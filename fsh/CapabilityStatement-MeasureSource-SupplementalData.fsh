@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the Supp
 * insert SanerDefinitionContent
 * name = "MeasureSource_SupplementalData"
 * title = "Measure Source implementing the Supplemental Data Option."
-* date = "2021-01-11T04:18:02.062902Z"
+* date = "2021-01-11T09:39:55.251153-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Supplemental Data Option."
 * format[0] = #xml
@@ -16,7 +16,6 @@ Defines the additional requirements for the Measure Source implementing the Supp
 
 * rest[clientSlice].mode = #client
 
-* rest[clientSlice].resource[BundleSlice].type = #Bundle
 
 * rest[clientSlice].interaction[0].code = #batch
 * rest[clientSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

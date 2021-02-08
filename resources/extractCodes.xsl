@@ -6,7 +6,7 @@
     version="2.0">
     <xsl:output method="text"/>
     <xsl:template match="/">
-        <xsl:variable name='codings' select="//f:coding[starts-with(f:system/@value,'http://hl7.org/fhir/us/saner/CodeSystem/')]"/>
+        <xsl:variable name='codings' select="//f:coding[starts-with(f:system/@value,'http://hl7.org/fhir/uv/saner/CodeSystem/')]"/>
         <xsl:for-each select="distinct-values($codings/f:system/@value)">
             <xsl:text>CodeSystem: </xsl:text>
             <xsl:value-of select="current()"/>

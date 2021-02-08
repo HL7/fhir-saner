@@ -1037,7 +1037,7 @@ between options when applicable are specified in notes.
             select="distinct-values(tokenize(string-join($tx//ig:message[$actor/@id=(if ($mode='client') then @from else @to)]//ig:operation/@resources,' '),'\s+'))"/>
         <xsl:value-of select="s:slice('rest','mode',('clientSlice 0..1','serverSlice 0..1'))"/>
         <xsl:variable name='resourceSlices'>
-            <xsl:for-each select='$resourceNames'>
+            <xsl:for-each select="$resourceNames[. != 'Bundle']">
                 <xsl:sequence select="concat(.,'0..1')"/>
             </xsl:for-each>
         </xsl:variable>
@@ -1055,31 +1055,33 @@ between options when applicable are specified in notes.
             <xsl:variable name='content'  select='$tx//ig:result//ig:content/@profiles'/>
 
             <xsl:text>&#xA;</xsl:text>
-            <xsl:value-of select="s:code(($res,'.type'), $r, '')"/>
-            <!-- xsl:value-of select="s:expect(($res), s:client($mode, $operations[1]))"/-->
-            <xsl:for-each select="tokenize($content,'\s+')[ends-with(lower-case(.), lower-case($r))]">
-                <xsl:variable name='url' select="if (contains(.,':')) then . else concat($base,'/StructureDefinition/',.)"/>
-                <xsl:value-of select="s:string(($res,'.supportedProfile[',position()-1,']'),$url)"/>
-            </xsl:for-each>
-            <!-- Generate interactions -->
-            <xsl:for-each select="distinct-values($operations/@name)[not(starts-with(.,'$')) and . != 'batch']">
-                <xsl:variable name='op' select="$operations[@name=current()]"/>
-                <xsl:text>&#xA;</xsl:text>
-                <xsl:value-of select="s:code(($res,'.interaction[',position()-1,'].code'),if (. = 'search') then 'search-type' else .,'')"/>
-                <xsl:value-of select="s:expect(($res,'.interaction[',position()-1,']'), s:client($mode, $op[1]))"/>
-            </xsl:for-each>
-            <!-- Generate operations -->
-            <xsl:for-each select="distinct-values($operations/@name)[starts-with(.,'$')]">
-                <xsl:variable name='op' select="$operations[@name=current()]"/>
-                <xsl:text>&#xA;</xsl:text>
-                <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].name'),substring($op[1]/@name,2))"/>
-                <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].definition'), concat($base,'/OperationDefinition/', s:opName($op)))"/>
-                <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].documentation'),$op[1]/ig:name)"/>
-                <!-- Expect not supported here, though it should be -->
-                <!-- xsl:value-of select="s:expect(($res,'.operation[',position()-1,']'), s:client($mode, $op[1]))"/ -->
-            </xsl:for-each>
+            <xsl:if test='$r != "Bundle"'>
+	            <xsl:value-of select="s:code(($res,'.type'), $r, '')"/>
+	            <!-- xsl:value-of select="s:expect(($res), s:client($mode, $operations[1]))"/-->
+	            <xsl:for-each select="tokenize($content,'\s+')[ends-with(lower-case(.), lower-case($r))]">
+	                <xsl:variable name='url' select="if (contains(.,':')) then . else concat($base,'/StructureDefinition/',.)"/>
+	                <xsl:value-of select="s:string(($res,'.supportedProfile[',position()-1,']'),$url)"/>
+	            </xsl:for-each>
+	            <!-- Generate interactions -->
+	            <xsl:for-each select="distinct-values($operations/@name)[not(starts-with(.,'$')) and . != 'batch' and . != 'transaction']">
+	                <xsl:variable name='op' select="$operations[@name=current()]"/>
+	                <xsl:text>&#xA;</xsl:text>
+	                <xsl:value-of select="s:code(($res,'.interaction[',position()-1,'].code'),if (. = 'search') then 'search-type' else .,'')"/>
+	                <xsl:value-of select="s:expect(($res,'.interaction[',position()-1,']'), s:client($mode, $op[1]))"/>
+	            </xsl:for-each>
+	            <!-- Generate operations -->
+	            <xsl:for-each select="distinct-values($operations/@name)[starts-with(.,'$')]">
+	                <xsl:variable name='op' select="$operations[@name=current()]"/>
+	                <xsl:text>&#xA;</xsl:text>
+	                <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].name'),substring($op[1]/@name,2))"/>
+	                <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].definition'), concat($base,'/OperationDefinition/', s:opName($op)))"/>
+	                <xsl:value-of select="s:string(($res,'.operation[',position()-1,'].documentation'),$op[1]/ig:name)"/>
+	                <!-- Expect not supported here, though it should be -->
+	                <!-- xsl:value-of select="s:expect(($res,'.operation[',position()-1,']'), s:client($mode, $op[1]))"/ -->
+	            </xsl:for-each>
+            </xsl:if>
             <!-- Batch -->
-            <xsl:for-each select="distinct-values($operations/@name)[. = 'batch']">
+            <xsl:for-each select="distinct-values($operations/@name)[. = 'batch' or . = 'transaction']">
                 <xsl:variable name='op' select="$operations[@name=current()]"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:code(('rest[',$index,'].interaction[',position()-1,'].code'),.,'')"/>

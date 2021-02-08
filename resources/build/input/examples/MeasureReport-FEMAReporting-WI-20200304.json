@@ -9,7 +9,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting",
+  "measure": "http://hl7.org/fhir/uv/saner/Measure/FEMADailyHospitalCOVID19Reporting",
   "subject": {
     "extension": [
       {
@@ -41,7 +41,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "scoring",
@@ -103,7 +103,7 @@
         "coding": [
           {
             "code": "positiveIncreasePercent",
-            "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
           }
         ],
         "text": "# of new positive test results released / # of total new tests released for previous date queried"
@@ -114,7 +114,7 @@
             "coding": [
               {
                 "code": "totalOrdersIncrease",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "initial-population",
@@ -145,7 +145,7 @@
             "coding": [
               {
                 "code": "totalTestResultsIncrease",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "denominator",
@@ -176,7 +176,7 @@
             "coding": [
               {
                 "code": "positiveIncrease",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "numerator",
@@ -225,7 +225,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes",
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
           "extension": [
             {
               "url": "scoring",
@@ -287,7 +287,7 @@
         "coding": [
           {
             "code": "positivePercent",
-            "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
           }
         ],
         "text": "# of total positive results to released date / # of total tests results released to date"
@@ -298,7 +298,7 @@
             "coding": [
               {
                 "code": "totalOrders",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "initial-population",
@@ -329,7 +329,7 @@
             "coding": [
               {
                 "code": "allReports",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "measure-population",
@@ -360,7 +360,7 @@
             "coding": [
               {
                 "code": "latestReports",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "measure-population",
@@ -391,7 +391,7 @@
             "coding": [
               {
                 "code": "rejected",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "denominator-exclusion",
@@ -422,7 +422,7 @@
             "coding": [
               {
                 "code": "totalTestResults",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "denominator",
@@ -438,7 +438,7 @@
             "coding": [
               {
                 "code": "positive",
-                "system": "http://hl7.org/fhir/us/saner/CodeSystem/PopulationSystem"
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
               },
               {
                 "code": "numerator",

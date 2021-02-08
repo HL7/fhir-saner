@@ -56,7 +56,7 @@
     <xsl:variable name="geo" select="document('US-States-Geocenters.xml')"/>
 
     <!-- Set the BASE URL for saner IG artifacts (we changed it once) -->
-    <xsl:variable name="base" select="'http://hl7.org/fhir/us/saner/'"/>
+    <xsl:variable name="base" select="'http://hl7.org/fhir/uv/saner/'"/>
 
     <!-- Load up the mapping file and convert to XML for XSLT processing -->
     <xsl:variable name="map">
@@ -408,7 +408,7 @@
         </xsl:choose>
     </xsl:template>
 
-    <xsl:template match='f:extension[@url="http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"]' mode="copyMeasureToReport">
+    <xsl:template match='f:extension[@url="http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"]' mode="copyMeasureToReport">
         <!-- Skip this extension, it's not needed in the report, just the measure -->
     </xsl:template>
 
@@ -433,7 +433,7 @@
 
                 <!-- If this is a group|population, we may need to output a measure score|count -->
                 <xsl:if test="self::f:group | self::f:population">
-                    <xsl:variable name="score" select="f:code/f:coding[starts-with(f:system/@value, 'http://hl7.org/fhir/us/saner/CodeSystem')]/f:code/@value"/>
+                    <xsl:variable name="score" select="f:code/f:coding[starts-with(f:system/@value, 'http://hl7.org/fhir/uv/saner/CodeSystem')]/f:code/@value"/>
                     <xsl:variable name="mappedScore" select="$map/maps/map[item/@value=$score]/column/@value"/>
 
                     <xsl:variable name="v" select="$values/result/*[local-name()=string($mappedScore)]"/>

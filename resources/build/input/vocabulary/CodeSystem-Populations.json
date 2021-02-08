@@ -7,7 +7,7 @@
   "title": "Population Measure Groups",
   "description": "Groups defined by The SANER Project for measure populations",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/CodeSystem/Populations",
+  "url": "http://hl7.org/fhir/uv/saner/CodeSystem/Populations",
   "concept": [
     {
       "code": "numTotBeds",

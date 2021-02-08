@@ -136,7 +136,7 @@
                 <xsl:with-param name="level">h4</xsl:with-param>
                 <xsl:with-param name="text">Group</xsl:with-param>
             </xsl:call-template>
-            <xsl:variable name='atts' select='fhir:extension[@url="http://hl7.org/fhir/us/saner/StructureDefinition/MeasureGroupAttributes"]/fhir:extension'/>
+            <xsl:variable name='atts' select='fhir:extension[@url="http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"]/fhir:extension'/>
             <dl>
             <xsl:for-each select='$atts/fhir:valueCodeableConcept'>
                 <xsl:variable name="attName" select="(fhir:text,fhir:coding/fhir:display,fhir:coding/fhir:code)[1]"/>

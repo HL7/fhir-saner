@@ -1,4 +1,4 @@
-Instance: PatientsByRiskFactorWithSupplementalData
+Instance: PatientsByRiskFactorWithSupplementalDataCerner
 InstanceOf: PublicHealthMeasure
 Title: "Patients By Risk Factor"
 Description: "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data"
@@ -10,8 +10,8 @@ Usage: #example
  * author.telecom.system = #email
  * author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
  * insert DailyReporting
- * name = "PatientsByRiskFactor"
- * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalData"
+ * name = "PatientsByRiskFactorCerner"
+ * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalDataCerner"
  * title = "COVID-19 Patients By Risk Factor"  // Official name of measure being represented as given by the author
  * insert NHSNArtifacts
  * library = Canonical(ComputableNHSNMeasureLibrary)
@@ -51,11 +51,18 @@ has any such associated Condition or Observation resources in the prior two week
 """
  * group[0].population[0].criteria.language = #text/fhirpath
  * group[0].population[0].criteria.expression = """
-    findAll('Encounter',
-        including('subject','condition','reasonReference'),
-        with('status').equalTo('in-progress,finished'),
-        with('date').within(%ReportingPeriod)
-     ).onServers(%Base).
+     (12742542|12742540|12744441|12744440|12744437|12744439|12744438|12742536|12742544).findAll('Encounter',
+        // including('subject','diagnosis','reasonReference'),
+        for('patient', $this),
+        // with('status').equalTo('in-progress,finished'),
+        // with('date').within(%ReportingPeriod)
+     ).onServers(%Base)
+      // with('status').equalTo('in-progress,finished')
+      .where(status = 'in-progress' or status = 'finished')
+      // with('date').within(%ReportingPeriod)
+      .where((period.start <= %ReportingPeriod.end) and (period.end >= %ReportingPeriod.start or period.end.empty())
+      // including('subject','diagnosis','reasonReference')
+      .select(Encounter | $this.resolve(subject) | $this.resolve(reasonReference) | $this.resolve(diagnosis.condition))
      where(
        iif(
          (Encounter.reasonCode | Condition.code).member0f(%ConfirmedCOVID19Diagnoses.url) |
@@ -63,22 +70,33 @@ has any such associated Condition or Observation resources in the prior two week
          true,
          iif(
            Patient.distinct()
-              .whereExists('Observation',
+              // was whereExists, now must be findAll b/c of post-filtering
+              .findAll('Observation',
                 for('patient', $this.id),
-                with('status').equalTo(
-                    'registered,preliminary,final,amended,corrected'),
+                // with('status').equalTo(
+                //    'registered,preliminary,final,amended,corrected'),
                 with('date').greaterThan(%ReportingPeriod.start - 1 'year'),
-                with('code').in(%Covid19Labs),
-                with('value-concept').in(%PositiveResults)
-           ).onServers(%Base),
+                with('code').in(%Covid19Labs)  // In to multi-conversion
+                //, with('value-concept').in(%PositiveResults)
+           ).onServers(%Base)
+            // with('status').equalTo('registered,preliminary,final,amended,corrected'),
+            .where(status.intersect('registered' | 'preliminary' | 'final' | 'amended' | 'corrected').exists(),
+            .where(valueCodeableConcept.coding.member0f(%PositiveResults.url)
            true,
            Patient.distinct()
-              .whereExists('Condition',
+              // was whereExists, now must be findAll b/c of post-filtering
+              .findAll('Condition',
                 for('patient', $this.id),
-                with('verification-status').notEqualTo('refuted,entered-in-error').
+                //with('verification-status').notEqualTo('refuted,entered-in-error').
                 with('date').greaterThan(%ReportingPeriod.start - 1 'year'),
                 with('code').in(%ConfirmedCOVID19Diagnoses.url)
            ).onServers(%Base)
+            // with('verification-status').notEqualTo('refuted,entered-in-error').
+            .where(verificationStatus.code.empty() |
+                   verificationStatus.code.coding.where(
+                     system='http://terminology.hl7.org/CodeSystem/condition-ver-status' and
+                     code.intersect('refuted'|'entered-in-error').not()
+                   )
          )
       )
     )

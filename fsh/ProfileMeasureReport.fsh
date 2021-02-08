@@ -49,6 +49,7 @@ error - MeasureReport was determined to be in error."""
 * type ^comment = "Other profiles may support collection of subject-list data (e.g., for contact tracing)"
 
 * subject only Reference(Location)
+* subject 1..1 MS
 * subject ^short = "The subject of a report is a location, e.g., a facility, region, service area, state or other geographic region"
 * subject ^comment = "The report is about a site or larger geographic region.  Individual measures within the report may be related to other subjects, but the report itself describes information about a location."
 * subject.identifier 1..1  MS

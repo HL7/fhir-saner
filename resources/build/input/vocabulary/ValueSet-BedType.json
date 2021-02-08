@@ -6,7 +6,7 @@
   "title": "Bed Type",
   "description": "This Value Set describes the types of care services that a bed can support.",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/ValueSet/BedType",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/BedType",
   "compose": {
     "include": [
       {
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "system": "http://hl7.org/fhir/us/saner/CodeSystem/BedType",
+        "system": "http://hl7.org/fhir/uv/saner/CodeSystem/BedType",
         "concept": [
           {
             "code": "OR"

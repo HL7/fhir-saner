@@ -408,18 +408,6 @@
         "fixedCode": "Parameters"
       },
       {
-        "id": "CapabilityStatement.rest.resource:BundleSlice",
-        "path": "CapabilityStatement.rest.resource",
-        "sliceName": "BundleSlice",
-        "min": 0,
-        "max": "*"
-      },
-      {
-        "id": "CapabilityStatement.rest.resource:BundleSlice.type",
-        "path": "CapabilityStatement.rest.resource.type",
-        "fixedCode": "Bundle"
-      },
-      {
         "id": "CapabilityStatement.rest:clientSlice",
         "path": "CapabilityStatement.rest",
         "sliceName": "clientSlice",

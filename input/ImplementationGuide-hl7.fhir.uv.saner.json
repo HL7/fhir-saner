@@ -4412,6 +4412,14 @@
       },
       {
         "reference": {
+          "reference": "Measure/PatientsByRiskFactorWithSupplementalDataCerner"
+        },
+        "name": "Patients By Risk Factor",
+        "description": "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data",
+        "exampleCanonical": "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/SearchParameter-code"
         },
         "name": "Search by Code in Definitions and Instances",

@@ -42,8 +42,7 @@ Description:    "A Capability Statement with slicing defined"
     ObservationSlice 0..* and
     ProcedureSlice 0..* and
     ServiceRequestSlice 0..* and
-    ParametersSlice 0..* and
-    BundleSlice 0..*
+    ParametersSlice 0..*
 
 * rest.resource[LocationSlice].type = #Location (exactly)
 * rest.resource[OrganizationSlice].type = #Organization (exactly)
@@ -70,4 +69,4 @@ Description:    "A Capability Statement with slicing defined"
 * rest.resource[ProcedureSlice].type = #Procedure (exactly)
 * rest.resource[ServiceRequestSlice].type = #ServiceRequest (exactly)
 * rest.resource[ParametersSlice].type = #Parameters (exactly)
-* rest.resource[BundleSlice].type = #Bundle (exactly)
+
