@@ -530,6 +530,7 @@
 <artifact id="Patient/Patient9b" key="Patient-Patient9b" name="Patient9b"/>
 <artifact id="Patient/Patient9c" key="Patient-Patient9c" name="Patient9c"/>
 <artifact id="Measure/PatientsByRiskFactorWithSupplementalData" key="Measure-PatientsByRiskFactorWithSupplementalData" name="Patients By Risk Factor"/>
+<artifact id="Measure/PatientsByRiskFactorWithSupplementalDataCerner" key="Measure-PatientsByRiskFactorWithSupplementalDataCerner" name="Patients By Risk Factor"/>
 <artifact id="StructureDefinition/PreciseDateTime" key="StructureDefinition-PreciseDateTime" name="Precise Date Time"/>
 <artifact id="ValueSet/PregnancyCOVID19RiskFactors" key="ValueSet-PregnancyCOVID19RiskFactors" name="Pregnancy COVID-19 Risk Factors"/>
 <artifact id="ValueSet/PublicHealthMeasureAttachmentTypes" key="ValueSet-PublicHealthMeasureAttachmentTypes" name="Public Health Measure Attachment Types"/>

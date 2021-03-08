@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Su
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_SupplementalData"
 * title = "Measure Consumer implementing the Supplemental Data Option."
-* date = "2021-01-11T09:39:55.251153-05:00"
+* date = "2021-03-08T13:17:41.609301-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Supplemental Data Option."
 * format[0] = #xml

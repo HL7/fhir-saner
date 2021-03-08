@@ -59,8 +59,6 @@ Title: "Search by Code in Definitions and Instances"
  * code = #code
  * base[0] = #Measure
  * base[1] = #MeasureReport
- * base[2] = #Questionnaire
- * base[3] = #QuestionnaireResponse
  * type = #token
  * expression = """
  descendants().valueCodeableConcept | descendants().valueCoding | descendants().valueCode | code | descendants().ofType(Coding).not().code
@@ -96,6 +94,6 @@ Title: "Search by hospitalization.dispositionCode in Encounters"
  * expression = "hospitalization.dispositionCode"
 
  * xpath = "f:hospitalization/f:dispositionCode"
-* xpathUsage = #normal
-* multipleOr = true
-* multipleAnd = true
+ * xpathUsage = #normal
+ * multipleOr = true
+ * multipleAnd = false

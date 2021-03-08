@@ -33,6 +33,12 @@
 			<artifactId>commonmark</artifactId>
 			<version>0.15.2</version>
 		</dependency>
+		<!-- Math for Case Generation -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-math3</artifactId>
+		    <version>3.6.1</version>
+		</dependency>
 
 		<!-- Logging -->
 		<dependency>
