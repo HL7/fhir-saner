@@ -48,5 +48,5 @@
   "xpath": "f:hospitalization/f:dispositionCode",
   "xpathUsage": "normal",
   "multipleOr": true,
-  "multipleAnd": true
+  "multipleAnd": false
 }

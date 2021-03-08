@@ -42,9 +42,7 @@
   "code": "code",
   "base": [
     "Measure",
-    "MeasureReport",
-    "Questionnaire",
-    "QuestionnaireResponse"
+    "MeasureReport"
   ],
   "type": "token",
   "expression": "descendants().valueCodeableConcept | descendants().valueCoding | descendants().valueCode | code | descendants().ofType(Coding).not().code",

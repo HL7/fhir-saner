@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the Prod
 * insert SanerDefinitionContent
 * name = "MeasureSource_ProduceMeasure_SupplementalData"
 * title = "Measure Source implementing the Produce Measure transaction with the Supplemental Data Option."
-* date = "2021-03-08T13:17:41.609301-05:00"
+* date = "2021-03-08T13:35:04.6251248-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Produce Measure transaction with the Supplemental Data Option."
 * format[0] = #xml
