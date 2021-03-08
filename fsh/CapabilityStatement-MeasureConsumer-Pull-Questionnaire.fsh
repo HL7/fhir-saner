@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Pu
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Pull_Questionnaire"
 * title = "Measure Consumer implementing the Pull Option and the Questionnaire Option."
-* date = "2021-03-08T14:28:08.1235426-05:00"
+* date = "2021-03-08T19:31:55.919352Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Pull Option and the Questionnaire Option."
 * format[0] = #xml

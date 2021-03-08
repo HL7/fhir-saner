@@ -7,7 +7,7 @@ Defines the requirements for the Measure Definition Consumer implementing the Qu
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer_QueryMeasureDefinition"
 * title = "Measure Definition Consumer implementing the Query Measure Definition transaction."
-* date = "2021-03-08T14:28:08.1235426-05:00"
+* date = "2021-03-08T19:31:55.919352Z"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction."
 * format[0] = #xml
