@@ -7,7 +7,7 @@ Defines the requirements for the Measure Definition Consumer."""
 * insert SanerDefinitionContent
 * name = "MeasureDefinitionConsumer"
 * title = "Measure Definition Consumer."
-* date = "2021-03-08T13:35:04.6251248-05:00"
+* date = "2021-03-08T14:28:08.1235426-05:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Definition Consumer."
 * format[0] = #xml

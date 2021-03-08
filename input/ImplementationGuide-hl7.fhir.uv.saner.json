@@ -4414,7 +4414,7 @@
         "reference": {
           "reference": "Measure/PatientsByRiskFactorWithSupplementalDataCerner"
         },
-        "name": "Patients By Risk Factor",
+        "name": "Patients By Risk Factor for Cerner",
         "description": "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data",
         "exampleCanonical": "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure"
       },

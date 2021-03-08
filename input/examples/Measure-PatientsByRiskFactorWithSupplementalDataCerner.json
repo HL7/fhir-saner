@@ -194,7 +194,7 @@
   ],
   "name": "PatientsByRiskFactorCerner",
   "url": "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalDataCerner",
-  "title": "COVID-19 Patients By Risk Factor",
+  "title": "COVID-19 Patients By Risk Factor for Cerner",
   "relatedArtifact": [
     {
       "type": "documentation",

@@ -62,7 +62,7 @@
   ],
   "name": "MeasureConsumer_CSV_Push",
   "title": "Measure Consumer implementing the CSV Option and the Push Option.",
-  "date": "2021-03-08T13:17:41.609301-05:00",
+  "date": "2021-03-08T14:07:13.917282-05:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Push Option.",
   "format": [

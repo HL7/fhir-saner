@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the CS
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_CSV_Pull"
 * title = "Measure Consumer implementing the CSV Option and the Pull Option."
-* date = "2021-03-08T13:35:04.6251248-05:00"
+* date = "2021-03-08T14:28:08.1235426-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Pull Option."
 * format[0] = #xml

@@ -1,6 +1,6 @@
 Instance: PatientsByRiskFactorWithSupplementalDataCerner
 InstanceOf: PublicHealthMeasure
-Title: "Patients By Risk Factor"
+Title: "Patients By Risk Factor for Cerner"
 Description: "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data"
 Usage: #example
 * insert SanerDefinitionContent
@@ -12,7 +12,7 @@ Usage: #example
  * insert DailyReporting
  * name = "PatientsByRiskFactorCerner"
  * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalDataCerner"
- * title = "COVID-19 Patients By Risk Factor"  // Official name of measure being represented as given by the author
+ * title = "COVID-19 Patients By Risk Factor for Cerner"  // Official name of measure being represented as given by the author
  * insert NHSNArtifacts
  * library = Canonical(ComputableNHSNMeasureLibrary)
 

@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Pr
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_ProduceMeasure_CSV_Push"
 * title = "Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option."
-* date = "2021-03-08T13:35:04.6251248-05:00"
+* date = "2021-03-08T14:28:08.1235426-05:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option."
 * format[0] = #xml
