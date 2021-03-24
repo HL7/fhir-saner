@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Qu
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_QueryMeasure_CSV_Pull"
 * title = "Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option."
-* date = "2021-03-08T14:28:08.1235426-05:00"
+* date = "2021-03-24T14:14:53.268835-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option."
 * format[0] = #xml
