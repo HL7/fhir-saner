@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Qu
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_QueryMeasure_Pull_Questionnaire"
 * title = "Measure Consumer implementing the Query Measure transaction with the Pull Option and the Questionnaire Option."
-* date = "2021-03-24T14:32:47.8509818-04:00"
+* date = "2021-03-24T14:54:21.7097753-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option and the Questionnaire Option."
 * format[0] = #xml
