@@ -103,7 +103,8 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureCriteria"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

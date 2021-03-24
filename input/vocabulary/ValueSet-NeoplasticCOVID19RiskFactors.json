@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NeoplasticCOVID19RiskFactors",
+  "id": "NeoplasticCOVID19RiskFactors",
+  "title": "Neoplastic COVID-19 Risk Factors",
+  "description": "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Neoplastic Diseases",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/NeoplasticCOVID19RiskFactors",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "109841003",
+            "display": "Liver cell carcinoma (disorder)"
+          },
+          {
+            "code": "109989006",
+            "display": "Multiple myeloma (disorder)"
+          },
+          {
+            "code": "118600007",
+            "display": "Malignant lymphoma (disorder)"
+          },
+          {
+            "code": "363507003",
+            "display": "Malignant neoplasm of pharynx (disorder)"
+          },
+          {
+            "code": "428281000",
+            "display": "Malignant neoplasm of bone (disorder)"
+          },
+          {
+            "code": "93143009",
+            "display": "Leukemia, disease (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

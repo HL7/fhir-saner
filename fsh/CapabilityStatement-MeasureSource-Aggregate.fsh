@@ -2,11 +2,12 @@
 Instance: MeasureSource-Aggregate
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the additional requirements for the Measure Source implementing the Aggregate Option."
+Description: """
+Defines the additional requirements for the Measure Source implementing the Aggregate Option."""
 * insert SanerDefinitionContent
 * name = "MeasureSource_Aggregate"
 * title = "Measure Source implementing the Aggregate Option."
-* date = "2020-10-14T11:27:23.288495-04:00"
+* date = "2021-01-11T04:18:02.062902Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Aggregate Option."
 * format[0] = #xml

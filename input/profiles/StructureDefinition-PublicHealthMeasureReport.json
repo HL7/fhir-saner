@@ -166,7 +166,8 @@
       {
         "id": "MeasureReport.measure",
         "path": "MeasureReport.measure",
-        "short": "Each MeasureReport resource must document the measure it is reporting for."
+        "short": "Each MeasureReport resource must document the measure it is reporting for.",
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.subject",
@@ -187,7 +188,8 @@
         "path": "MeasureReport.subject.identifier",
         "short": "The subject shall have an identifier which uniquely identifies the subject to the recepient.",
         "comment": "Requiring subject.identifier allows reports to be queried by locations using a well-known identifier.",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.date",
@@ -202,12 +204,14 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/PreciseDateTime"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.period",
         "path": "MeasureReport.period",
-        "short": "A period must be present"
+        "short": "A period must be present",
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.period.start",
@@ -221,7 +225,8 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/PreciseDateTime"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.period.end",
@@ -234,17 +239,20 @@
               "http://hl7.org/fhir/uv/saner/StructureDefinition/PreciseDateTime"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.code",
         "path": "MeasureReport.group.code",
         "short": "The code for each group must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.population",
         "path": "MeasureReport.group.population",
+        "min": 1,
         "constraint": [
           {
             "key": "ele-1",
@@ -262,30 +270,41 @@
             "xpath": "f:count or f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']",
             "source": "http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasureReport"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.population.code",
         "path": "MeasureReport.group.population.code",
         "short": "The code for each population must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.population.count",
         "path": "MeasureReport.group.population.count",
-        "short": "A count must be present for each population. Unknown values may be reported using the http://hl7.org/fhir/StructureDefinition/data-absent-reason extension."
+        "short": "A count must be present for each population. Unknown values may be reported using the http://hl7.org/fhir/StructureDefinition/data-absent-reason extension.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MeasureReport.group.stratifier",
+        "path": "MeasureReport.group.stratifier",
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.stratifier.code",
         "path": "MeasureReport.group.stratifier.code",
         "short": "A stratifier must have a code when present",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.stratifier.stratum",
         "path": "MeasureReport.group.stratifier.stratum",
         "short": "There must be at least one stratum reported",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.stratifier.stratum.value",
@@ -297,19 +316,22 @@
         "id": "MeasureReport.group.stratifier.stratum.population",
         "path": "MeasureReport.group.stratifier.stratum.population",
         "short": "At least one stratum population must be present",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.stratifier.stratum.population.code",
         "path": "MeasureReport.group.stratifier.stratum.population.code",
         "short": "The population code must be present",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.group.stratifier.stratum.population.count",
         "path": "MeasureReport.group.stratifier.stratum.population.count",
         "short": "The population code count be present",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "MeasureReport.evaluatedResource",

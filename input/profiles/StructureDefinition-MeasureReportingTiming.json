@@ -67,7 +67,8 @@
       {
         "id": "Timing.repeat",
         "path": "Timing.repeat",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Timing.repeat.bounds[x]",
@@ -92,7 +93,8 @@
         "id": "Timing.repeat.boundsPeriod",
         "path": "Timing.repeat.boundsPeriod",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Timing.repeat.count",
@@ -118,7 +120,8 @@
         "id": "Timing.repeat.frequency",
         "path": "Timing.repeat.frequency",
         "min": 1,
-        "patternPositiveInt": 1
+        "patternPositiveInt": 1,
+        "mustSupport": true
       },
       {
         "id": "Timing.repeat.frequencyMax",
@@ -128,7 +131,8 @@
       {
         "id": "Timing.repeat.period",
         "path": "Timing.repeat.period",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Timing.repeat.periodMax",
@@ -138,7 +142,8 @@
       {
         "id": "Timing.repeat.periodUnit",
         "path": "Timing.repeat.periodUnit",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Timing.repeat.dayOfWeek",

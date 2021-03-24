@@ -2,7 +2,8 @@
 Instance: MeasureReport-read-csv
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details."
+Description: """
+Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details."""
 * insert SanerDefinitionContent
  
 * status = #draft

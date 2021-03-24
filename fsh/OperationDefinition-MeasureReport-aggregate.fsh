@@ -2,7 +2,8 @@
 Instance: MeasureReport-aggregate
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Aggregate two or more more Messure Report resources into a single MeasureReport."
+Description: """
+Aggregate two or more more Messure Report resources into a single MeasureReport."""
 * insert SanerDefinitionContent
  
 * status = #draft
@@ -70,9 +71,7 @@ Description: "Aggregate two or more more Messure Report resources into a single 
 * parameter[7].use = #in
 * parameter[7].min = 0
 * parameter[7].max = "1"
-* parameter[7].documentation = """A reference or identifier of the reporter for the MeasureReport. May be omitted if all MeasureReport resources
-being aggregated have a common reporter. A server may determine the reporter based on business rules (e.g., based on the identity of the sender of the request).
-                                """
+* parameter[7].documentation = "A reference or identifier of the reporter for the MeasureReport. May be omitted if all MeasureReport resources being aggregated have a common reporter. A server may determine the reporter based on business rules (e.g., based on the identity of the sender of the request)."
 * parameter[7].searchType = #reference
 * parameter[7].type = #string
 
@@ -80,8 +79,7 @@ being aggregated have a common reporter. A server may determine the reporter bas
 * parameter[8].use = #in
 * parameter[8].min = 0
 * parameter[8].max = "1"
-* parameter[8].documentation = """A reference or identifier of the subject for the MeasureReport. May be omitted if all MeasureReport resources
-being aggregated have a common subject."""
+* parameter[8].documentation = "A reference or identifier of the subject for the MeasureReport. May be omitted if all MeasureReport resources being aggregated have a common subject."
 * parameter[8].searchType = #reference
 * parameter[8].type = #string
 

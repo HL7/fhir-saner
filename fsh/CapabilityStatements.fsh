@@ -28,7 +28,22 @@ Description:    "A Capability Statement with slicing defined"
     ConceptMapSlice 0..* and
     ValueSetSlice 0..* and
     CodeSystemSlice 0..* and
-    ParametersSlice 0..*
+    PatientSlice 0..* and
+    AllergyIntoleranceSlice 0..* and
+    ConditionSlice 0..* and
+    DocumentReferenceSlice 0..* and
+    DiagnosticReportSlice 0..* and
+    EncounterSlice 0..* and
+    FamilyMemberHistorySlice 0..* and
+    MedicationAdministrationSlice 0..* and
+    MedicationDispenseSlice 0..* and
+    MedicationRequestSlice 0..* and
+    MedicationStatementSlice 0..* and
+    ObservationSlice 0..* and
+    ProcedureSlice 0..* and
+    ServiceRequestSlice 0..* and
+    ParametersSlice 0..* and
+    BundleSlice 0..*
 
 * rest.resource[LocationSlice].type = #Location (exactly)
 * rest.resource[OrganizationSlice].type = #Organization (exactly)
@@ -40,6 +55,19 @@ Description:    "A Capability Statement with slicing defined"
 * rest.resource[ConceptMapSlice].type = #ConceptMap (exactly)
 * rest.resource[ValueSetSlice].type = #ValueSet (exactly)
 * rest.resource[CodeSystemSlice].type = #CodeSystem (exactly)
+* rest.resource[PatientSlice].type = #Patient (exactly)
+* rest.resource[AllergyIntoleranceSlice].type = #AllergyIntolerance (exactly)
+* rest.resource[ConditionSlice].type = #Condition (exactly)
+* rest.resource[DocumentReferenceSlice].type = #DocumentReference (exactly)
+* rest.resource[DiagnosticReportSlice].type = #DiagnosticReport (exactly)
+* rest.resource[EncounterSlice].type = #Encounter (exactly)
+* rest.resource[FamilyMemberHistorySlice].type = #FamilyMemberHistory (exactly)
+* rest.resource[MedicationAdministrationSlice].type = #MedicationAdministration (exactly)
+* rest.resource[MedicationDispenseSlice].type = #MedicationDispense (exactly)
+* rest.resource[MedicationRequestSlice].type = #MedicationRequest (exactly)
+* rest.resource[MedicationStatementSlice].type = #MedicationStatement (exactly)
+* rest.resource[ObservationSlice].type = #Observation (exactly)
+* rest.resource[ProcedureSlice].type = #Procedure (exactly)
+* rest.resource[ServiceRequestSlice].type = #ServiceRequest (exactly)
 * rest.resource[ParametersSlice].type = #Parameters (exactly)
-
-
+* rest.resource[BundleSlice].type = #Bundle (exactly)

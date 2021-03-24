@@ -15,6 +15,7 @@ The following use cases were used to identify the requirements addressed by this
 * [Accessing Measure Reports](#accessing-measure-reports)
 * [Distributing Measure Definitions](#distributing-measure-definitions)
 * [Automating Measure Computation](#automating-measure-computation)
+* [Reporting Supplemental Data](#reporting-supplemental-data)
 
 
 These are described in more detail in the sections that follow.
@@ -24,7 +25,8 @@ These are described in more detail in the sections that follow.
 
 This use case addresses the collection and exchange of data from several information systems in a Facility
 to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
-for multiple data elements by examining messages recieved and data in its database, and then reports these to a Measure Collector
+for multiple data elements by examining messages recieved and data in its database, and then reports these to a Measure
+Collector
 within the hospital.
 
 
@@ -44,24 +46,24 @@ This use case is supported by the following
 
 #### Collecting Hospital and Ventilator Measures Process Flow 
 
-Measure report data can come from multiple systems within a facility.  For example, the CDC/NHSN Patient Impact
+Measure report data can come from multiple systems within a facility. For example, the CDC/NHSN Patient Impact
 and Hospital Capacity Module asks for the following data elements:
 
 1. **Patient Impact**
-   1. Hospitalized Patients w/ COVID-19
-   2. Hospitalized and Ventilated Patients w/ COVID-19
-   3. Patients with Hospital Onset of COVID-19
-   4. Patients in ED/Overflow w/ COVID-19
-   5. Ventilated Patients in ED/Overflow w/ COVID-19
-   6. Patient Deaths due to COVID-19
+1. Hospitalized Patients w/ COVID-19
+2. Hospitalized and Ventilated Patients w/ COVID-19
+3. Patients with Hospital Onset of COVID-19
+4. Patients in ED/Overflow w/ COVID-19
+5. Ventilated Patients in ED/Overflow w/ COVID-19
+6. Patient Deaths due to COVID-19
 2. **Hospital Bed/ Intensive Care Unit (ICU)/ Ventilator Capacity**
-   1. Total number of available (inpatient and outpatient) beds
-   2. Total Acute staffed beds
-   3. Total Occupied Beds
-   4. Total ICU Beds
-   5. Total Occupied ICU Beds
-   6. Total Ventilators
-   7. Total Ventilators in Use
+1. Total number of available (inpatient and outpatient) beds
+2. Total Acute staffed beds
+3. Total Occupied Beds
+4. Total ICU Beds
+5. Total Occupied ICU Beds
+6. Total Ventilators
+7. Total Ventilators in Use
 
 
 These data elements are often not available through a single system. For example, an
@@ -72,8 +74,8 @@ on 2.1-3, the Hospital's [EHR](technology_environment.html#ehr-systems) is aware
 [Emergency Department system](technology_environment.html#emergency-department-systems) can provide
 an update on 1-4.
 
-In order to  automate capture of this information, a central reporting system (e.g., a FHIR Server) can be made
-available to accept partial reports for data.  This data can then be aggregated from reports made by the various
+In order to automate capture of this information, a central reporting system (e.g., a FHIR Server) can be made
+available to accept partial reports for data. This data can then be aggregated from reports made by the various
 information systems, and forwarded to a public endpoint for reporting.
 
 
@@ -90,14 +92,13 @@ Total ICU Beds, Occupied ICU Beds, Total Ventilators, Ventilators in Use.
 
 
    
-   1. The system collects information about ventilators outside the ICU for which the associated patient
+1. The system collects information about ventilators outside the ICU for which the associated patient
 was admitted for suspected or confirmed COVID-19. It can makes the determination of suspected/confirmed COVID-19 from
 the DG1 segment of the ADT message it recieved regarding the patient.
-   2. The system counts the number of ICU beds that it has been configured to recognize and which are operational
-   3. The system counts the number of ICU beds that are transmitting telemetry (patient monitoring) information.
-   4. The system counts the number of ventilators that it has been configured to recognize and which are operational
-   5. The system counts the number of ventilators that are transmitting telemetry data to it in the ICU.
-            
+2. The system counts the number of ICU beds that it has been configured to recognize and which are operational
+3. The system counts the number of ICU beds that are transmitting telemetry (patient monitoring) information.
+4. The system counts the number of ventilators that it has been configured to recognize and which are operational
+5. The system counts the number of ventilators that are transmitting telemetry data to it in the ICU.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="REPORTVALUES-1.5-2.4-7">ICU/Central Monitoring System Reports
@@ -117,12 +118,15 @@ within the hospital.
 
 
    
-   1. The Bed Management System examines master file data to count the total number of beds in the hospital,
-as well as those beds specifically identified as being for acute (inpatient) care. The Bed Management solution can be a component
-of the EHR, or as occurs in some hospital settings, a third party solution that integrates with the EHR (usually through ADT and master file
+1. The Bed Management System examines master file data to count the total number of beds in the hospital,
+as well as those beds specifically identified as being for acute (inpatient) care. The Bed Management solution can be a
+component
+of the EHR, or as occurs in some hospital settings, a third party solution that integrates with the EHR (usually through ADT
+and master file
 messages).
-   2. The bed management system counts the occupied beds (based on current state of each bed) as tracked through
-state changes communicated through ADT messages.  The Bed Management solution might be used to support housekeeping, or to support an [electronic
+2. The bed management system counts the occupied beds (based on current state of each bed) as tracked through
+state changes communicated through ADT messages. The Bed Management solution might be used to support housekeeping, or to support
+an [electronic
 bedboard](https://it.johnshopkins.edu/services/applications/administrative/ebb.html) that might used by a hospital
 "[Bed Czar](http://www.ihi.org/resources/Pages/Changes/RealTimeDemandCapacityManagement.aspx)."
 
@@ -135,9 +139,9 @@ on multiple data elements
 
 
    
-   1. The EHR collects data on hospitalized patients w/ COVID-19.
-   2. The EHR collects data on hospitalized patients diagnosed with COVID-19 14 days after admission.
-   3. The EHR collects data on patient deaths due to COVID-19.
+1. The EHR collects data on hospitalized patients w/ COVID-19.
+2. The EHR collects data on hospitalized patients diagnosed with COVID-19 14 days after admission.
+3. The EHR collects data on patient deaths due to COVID-19.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GETEDDATA">The ED System reports
@@ -154,7 +158,7 @@ that have communicated them, putting together a complete MeasureReport for later
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP3">Transmit Aggregated MeasureReport Data</html:span>
 
    In a "push" model, the Measure Collector sends the aggregated MeasureReport to a MeasureConsumer (e.g., a Public
-            Health endpoint used for measure transmission).
+Health endpoint used for measure transmission).
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP4">A Public Health Agency queries the
@@ -201,7 +205,8 @@ to them in an easy to view format.
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</html:span>
 
-   The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a function with other associated data) from one or more Measure Sources,
+   The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a
+function with other associated data) from one or more Measure Sources,
 and makes them available through a Measure Source interface it provides.
 
 
@@ -218,7 +223,8 @@ in a way that allows it to be reported using comparable scales.
    The Public Health User navigates to a web page where collected data is reported.
 
 
-   The user selects a geographic region and an issue of concern (e.g., beds, ventilators, PPE).  The Measure Consumer collects the appropriate reports
+   The user selects a geographic region and an issue of concern (e.g., beds, ventilators, PPE). The Measure Consumer
+collects the appropriate reports
 and displays the results.
 
 
@@ -229,7 +235,7 @@ user, and additional links which enable navigation to finer grained or alternati
 
 
    Data can be displayed as aggregated or fine-grained status information based
-on the current focus of the public health user.  It may be shown as a map, a table, or a graph.
+on the current focus of the public health user. It may be shown as a map, a table, or a graph.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Reporting-STEP2">User refines Focus or Form of Display</html:span>
@@ -245,7 +251,8 @@ focus (e.g., wider or smaller region).
 
 ### Distributing Measure Definitions
 
-A public health or emergency response agency distributes updated Measure definitions, a hospital or intermediary retrieves these definitions for reporting.
+A public health or emergency response agency distributes updated Measure definitions, a hospital or intermediary
+retrieves these definitions for reporting.
 
 
 This use case is supported by the following
@@ -262,7 +269,8 @@ This use case is supported by the following
 
 #### Distributing Measure Definitions Process Flow 
 
-Measures created for tracking a public health emergency may be revised periodically to support changing needs. This use case supports the need
+Measures created for tracking a public health emergency may be revised periodically to support changing needs. This
+use case supports the need
 to distribute updated measure definitions to organizations who report on these measures.
 
 
@@ -273,11 +281,11 @@ to distribute updated measure definitions to organizations who report on these m
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
 
-   An organization required to report queries for for updated from one or public health or emergency response agencies to identify reporting requirements.
+   An organization required to report queries for for updated from one or public health or emergency response
+agencies to identify reporting requirements.
 
 
    
-
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP5">Return matching measure specifications</html:span>
 
@@ -301,14 +309,17 @@ This use case is supported by the following
 
   - [Measure Computer](actors.html#measure-computer)
 
+  - [Data Source](actors.html#data-source)
+
 * Transactions
 
   - [Compute Measure](transaction-1.html)
 
 #### Automating Measure Computation Process Flow 
 
-Automating measure reporting reduces the burden on users for manual data collection. When a measure has been automated, it
-        can be computed using FHIR APIs from supporting information systems provided by the organization.
+Automating measure reporting reduces the burden on users for manual data collection. When a measure has been
+automated, it
+can be computed using FHIR APIs from supporting information systems provided by the organization.
 
 
 ![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow")
@@ -318,7 +329,8 @@ Automating measure reporting reduces the burden on users for manual data collect
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Check for New or Updated Measures">Query for New or Updated Measures</html:span>
 
-   The reporting organization checks for new measures see [Distributing Measure Definitions](#distributing-measure-definitions) above.
+   The reporting organization checks for new measures see [Distributing Measure
+Definitions](#distributing-measure-definitions) above.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
@@ -328,10 +340,92 @@ Automating measure reporting reduces the burden on users for manual data collect
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherData">Gather Data</html:span>
 
-   The hospital information system queries the local EHR or FHIR Server for applicable FHIR resources used in measure computation.
+   The hospital information system queries the local EHR or FHIR Server for applicable FHIR resources used in
+measure computation.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRData">Returns Matching FHIR Resources</html:span>
 
    The local EHR or FHIR Server returns the requested data and included resources.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Send Measures">Send Measures to a Measure Consumer</html:span>
+
+   The reporting organization sends the computer measure to the public health agency.
+
+
+### Reporting Supplemental Data
+
+A reporting organization (e.g., a hospital) collects and reports supplemental data with a measure report.
+
+
+This use case is supported by the following
+
+* Actors
+
+  - [Measure Source](actors.html#measure-source)
+
+  - [Measure Consumer](actors.html#measure-consumer)
+
+  - [Measure Computer](actors.html#measure-computer)
+
+  - [Data Source](actors.html#data-source)
+
+* Transactions
+
+  - [Compute Measure](transaction-1.html)
+
+#### Reporting Supplemental Data Process Flow 
+
+Supplemental data enables additional data analysis to be performed. The MeasureReport itself provides the capacity
+to detect
+a signal, e.g., increased strain on institutional resources, but does not by itself enable deeper analysis with regard to
+level or impact
+of this strain. Exchange of additional data elements allow deeper analysis, as might be used to support risk adjustment, or
+cause or impact analysis.
+
+Consider the case where patient comorbidities (e.g., Cardiovascular Disease, Smoking Status) are known to impact patient risk and
+associated complications, but
+where detailed analysis of these risk effects is unknown. Communication of supplemental data that include presence or absence of
+cardiovascuar disease, or the
+patient smoking status, and presence of absence of complications allows the recieving public health agencies to further analyze this
+data retrospectively.
+
+In the initial stages, this analysis can be used to assess strain, by comparing the impact of comorbidities on complications
+over time in facilities with
+otherwise similar measures of utilization. In later stages, this data can be used to further assess and refine strain created by
+disease burden based
+on associated complications.
+
+
+![Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow](usecase5-processflow.svg "Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow")
+
+**Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow**
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
+
+   The hospital information system collects data and computes the measures, returing a completed report.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherMeasureData">Gather Measure Data</html:span>
+
+   The hospital information system queries the local EHR or FHIR Server for applicable FHIR resources used in
+measure computation.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRMeasureData">Returns Matching FHIR Resources</html:span>
+
+   The local EHR or FHIR Server returns the requested data and included resources.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherSupplementalData">Gather Supplemental Data</html:span>
+
+   The hospital information system queries the local EHR or FHIR Server for supplemental FHIR resources reported
+with the measure.
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRSupplementalData">Returns Supplemental FHIR Resources</html:span>
+
+   The local EHR or FHIR Server returns the supplemental data and included resources.
 

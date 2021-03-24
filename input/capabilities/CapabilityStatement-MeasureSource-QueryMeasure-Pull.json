@@ -655,7 +655,7 @@
   ],
   "name": "MeasureSource_QueryMeasure_Pull",
   "title": "Measure Source implementing the Query Measure transaction with the Pull Option.",
-  "date": "2020-10-14T11:27:23.288495-04:00",
+  "date": "2021-01-10T17:46:00.501551-05:00",
   "kind": "requirements",
   "description": "Defines the additional requirements for the Measure Source implementing the Query Measure transaction with the Pull Option.",
   "format": [

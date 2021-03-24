@@ -21,15 +21,22 @@
         <xsl:param name="indent"></xsl:param>
         <xsl:text>&#xA;</xsl:text>
         <xsl:value-of select="$indent"/>
-        <xsl:choose>
-            <xsl:when test="@file">
-                <xsl:value-of select="translate(unparsed-text(resolve-uri(@file, base-uri())),'&#xD;','')"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates select="node()" mode='desc'/>
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:text>&#xA;&#xA;</xsl:text>
+        <xsl:variable name='content'>
+	        <xsl:choose>
+	            <xsl:when test="@file">
+	                <xsl:value-of select="translate(unparsed-text(resolve-uri(@file, base-uri())),'&#xD;','')"/>
+	            </xsl:when>
+	            <xsl:otherwise>
+	                <xsl:apply-templates select="node()" mode='desc'/>
+	            </xsl:otherwise>
+	        </xsl:choose>
+        </xsl:variable>
+        <xsl:for-each select='tokenize($content, "&#xA;")'>
+            <xsl:if test='starts-with(., " ") and matches(normalize-space(.),"^ +[\-\*1-9]")'><xsl:text>    </xsl:text></xsl:if>
+            <xsl:value-of select='normalize-space(.)'/>
+            <xsl:text>&#xA;</xsl:text>
+        </xsl:for-each>
+        <xsl:text>&#xA;</xsl:text>
     </xsl:template>
 
     <xsl:template match="ig:ref" mode='desc'>
@@ -122,11 +129,11 @@
         <xsl:value-of select="local-name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
-    
+
     <xsl:template match='text()' mode='copy-as-text'>
-        <xsl:copy-of select="."/>    
+        <xsl:copy-of select="."/>
     </xsl:template>
-    
+
     <xsl:template match='@*' mode='copy-as-text'>
         <xsl:text> </xsl:text>
         <xsl:value-of select='local-name()'/>

@@ -113,6 +113,9 @@ pages:
     transaction-5.md:
       title: Communicate Results
       generation: markdown
+#    transaction-6.md:
+#      title: Query Data
+#      generation: markdown
   integration.md:
     title: Integration with Existing Systems
     generation: markdown

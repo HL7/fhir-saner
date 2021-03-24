@@ -12,7 +12,8 @@ This section describes the REPORT-TX of this guide. This transaction is used by 
 
 ### Scope
 
-The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource availability,
+The Communicate Results transaction allows users (e.g., Public Health Officials) to view current resource
+availability,
 or other systems to access resource availability data.
 
 
@@ -56,14 +57,12 @@ or other systems to access resource availability data.
 Upon completion of this transaction, resource availability data will have been communicated to a
 user or system. This can be demonstrated by generation of a report, summary, or other artifact, or by transmission of resource
 availability data or some computation over it to another system.
-            
 
 
 This requirement can be met by a Measure Consumer that consumes and displays data in a Web Browser, consumes data
-            and transmits it in another format to a public health agency (e.g., using the CDC CSV format), or as a Measure
-            Intermediary that consumes data from one system and communicates it to another, or transforms it and communicates it back
-            to the original system or to another system.
-            
+and transmits it in another format to a public health agency (e.g., using the CDC CSV format), or as a Measure
+Intermediary that consumes data from one system and communicates it to another, or transforms it and communicates it back
+to the original system or to another system.
 
 
 ##### Trigger Event - 

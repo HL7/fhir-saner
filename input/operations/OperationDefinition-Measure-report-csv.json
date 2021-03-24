@@ -45,7 +45,7 @@
   "instance": true,
   "name": "CreateorupdateaMeasureReportfromCSVFormat",
   "title": "Create or update a MeasureReport from CSV Format",
-  "description": "port from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated.\nOtherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
+  "description": "Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter\nfor the given time period, it is updated. Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details.",
   "url": "http://hl7.org/fhir/uv/saner/OperationDefinition/Measure-report-csv",
   "parameter": [
     {
@@ -88,7 +88,7 @@
       "use": "in",
       "min": 0,
       "max": "1",
-      "documentation": "orter for the MeasureReport. If unspecified,\nthe server may determine the reporter based on business rules (e.g., based on the identity of the sender).",
+      "documentation": "A reference or identifier of the reporter for the MeasureReport. If unspecified, the server may determine the reporter based on business rules (e.g., based on the identity of the sender).",
       "searchType": "reference",
       "type": "string"
     },
@@ -97,7 +97,7 @@
       "use": "in",
       "min": 0,
       "max": "1",
-      "documentation": "ject for the MeasureReport. If unspecified,\nthe server may determine the subject based on business rules (e.g., based on the identity of the sender).",
+      "documentation": "A reference or identifier of the subject for the MeasureReport. If unspecified, the server may determine the subject based on business rules (e.g., based on the identity of the sender).",
       "searchType": "reference",
       "type": "string"
     },

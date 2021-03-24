@@ -119,12 +119,14 @@
       {
         "id": "AuditEvent.entity.query",
         "path": "AuditEvent.entity.query",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "AuditEvent.entity.detail",
         "path": "AuditEvent.entity.detail",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

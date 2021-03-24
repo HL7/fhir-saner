@@ -5,7 +5,7 @@ Description: "The timing used for measure reporting"
 * ^context.type = #element
 * ^context.expression = "Measure"
 * value[x] only MeasureReportingTiming
-* valueTiming 1..1
+* valueTiming 1..1 MS
 
 Profile:        MeasureReportingTiming
 Parent:         Timing
@@ -13,22 +13,22 @@ Title:          "Recommended Measure Reporting Times"
 Description:    "Provides the timing for measure  reporting"
 * insert SanerStructureDefinitionContent
 * event 0..0
-* repeat 1..1
+* repeat 1..1 MS
 // How long to be reporting for Start/Stop
 * repeat.bounds[x] only Period
-* repeat.boundsPeriod 0..1
+* repeat.boundsPeriod 0..1 MS
 * repeat.count 0..0
 * repeat.countMax 0..0
 * repeat.duration 0..0
 * repeat.durationMax 0..0
 
 // What is reporting frequency
-* repeat.frequency 1..1
+* repeat.frequency 1..1 MS
 * repeat.frequency = 1
 * repeat.frequencyMax 0..0
 // What is reporting period
-* repeat.period 1..1
-* repeat.periodUnit 1..1
+* repeat.period 1..1 MS
+* repeat.periodUnit 1..1 MS
 * repeat.periodMax 0..0
 * repeat.timeOfDay 0..0
 * repeat.when 0..0
