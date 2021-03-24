@@ -25,7 +25,7 @@ that address COVID-19 and similar public health emergencies.
 
 #### Principles
 The following principles were established for development of this guide:
-1.  The solution needs to be focused on providing high ROI.
+1.  The solution needs to be focused on providing high return on investment (ROI).
 2.  The solution should not duplicate existing efforts.
 3.  The solution needs to work with existing Health IT products currently deployed.
 4.  The uplift needed to enable an existing product to support public health information

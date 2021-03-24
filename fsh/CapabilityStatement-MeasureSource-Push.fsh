@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the Push
 * insert SanerDefinitionContent
 * name = "MeasureSource_Push"
 * title = "Measure Source implementing the Push Option."
-* date = "2021-03-24T14:14:53.268835-04:00"
+* date = "2021-03-24T14:32:47.8509818-04:00"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the Push Option."
 * format[0] = #xml
