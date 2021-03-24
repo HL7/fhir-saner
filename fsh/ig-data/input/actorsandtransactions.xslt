@@ -998,7 +998,7 @@ between options when applicable are specified in notes.
 	                <xsl:value-of select="s:instance($name, 'CapabilityStatementWithSlices',$desc, 'SanerDefinitionContent', null)"/>
 	                <xsl:value-of select="s:string('name',translate($name,'-','_'))"/>
 	                <xsl:value-of select="s:string('title', substring-after($desc, 'for the '))"/>
-	                <xsl:value-of select="s:string('date',current-dateTime())"/>
+	                <!--  xsl:value-of select="s:string('date',current-dateTime())"/ -->
 	                <xsl:value-of select="s:code('kind', 'requirements', null)"/>
 	                <xsl:value-of select="s:string('description', $desc)"/>
 	                <xsl:value-of select="s:code('format[0]', 'xml', null)"/>
