@@ -7,3 +7,5 @@
 /save/
 /bin/
 /target/
+/fsh/CapabilityStatement-*.fsh
+/fsh/ig-data/input/images/*.svg
