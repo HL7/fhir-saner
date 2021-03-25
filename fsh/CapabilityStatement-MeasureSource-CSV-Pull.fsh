@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the CSV 
 * insert SanerDefinitionContent
 * name = "MeasureSource_CSV_Pull"
 * title = "Measure Source implementing the CSV Option and the Pull Option."
-* date = "2021-03-25T12:41:33.0086908-04:00"
+* date = "2021-03-25T16:43:11.708216Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the CSV Option and the Pull Option."
 * format[0] = #xml

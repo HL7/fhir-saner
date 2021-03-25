@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Consumer implementing the Pu
 * insert SanerDefinitionContent
 * name = "MeasureConsumer_Push"
 * title = "Measure Consumer implementing the Push Option."
-* date = "2021-03-25T12:41:33.0086908-04:00"
+* date = "2021-03-25T16:43:11.708216Z"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Consumer implementing the Push Option."
 * format[0] = #xml
