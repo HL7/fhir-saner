@@ -7,6 +7,7 @@ Defines the requirements for the Measure Computer."""
 * insert SanerDefinitionContent
 * name = "MeasureComputer"
 * title = "Measure Computer."
+* date = "2021-03-25T12:41:33.0086908-04:00"
 * kind = #requirements
 * description = "Defines the requirements for the Measure Computer."
 * format[0] = #xml
