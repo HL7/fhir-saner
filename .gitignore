@@ -5,8 +5,6 @@ Thumbs.db
 /save/
 /bin/
 /target/
-/input/fsh/CapabilityStatement-*.fsh
-/input/images/*.svg
 /fsh-generated
 /input-cache
 /output
