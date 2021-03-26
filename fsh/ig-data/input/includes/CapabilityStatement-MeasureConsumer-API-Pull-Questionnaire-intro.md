@@ -1,1 +1,0 @@
-See <a href='actors.html#measure-consumer'>Measure Consumer</a> and the <a href='actors.html#pull-option'>Pull</a> and  <a href='actors.html#questionnaire-option'>Questionnaire</a>options in Actors for details.

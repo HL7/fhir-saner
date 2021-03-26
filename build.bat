@@ -1,4 +1,4 @@
-rd input output /s/q
+rd output /s/q
 call build-vars.cmd
 call build-content.cmd
 call build-images.cmd

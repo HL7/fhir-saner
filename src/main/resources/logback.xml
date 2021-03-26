@@ -17,4 +17,5 @@
 	<logger name="ca.uhn.fhir.jpa.subscription.module.interceptor.SubscriptionDebugLogInterceptor" level="WARN"/>
     <logger name="ca.uhn.fhir.context" level="WARN"/>
     <logger name="com.ainq.fhir" level="DEBUG"/>
+    <logger name="com.ainq.fhir.saner.actors.impl.SanerEvaluationContext" level="DEBUG"/>
 </configuration>

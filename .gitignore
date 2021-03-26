@@ -1,10 +1,13 @@
-/output/
-/input-cache/
-/temp/
-/template/
+.DS_Store
+Thumbs.db
 /node_modules/
 /docs/
 /save/
 /bin/
 /target/
+/fsh-generated
+/input-cache
+/output
+/template
+/temp
 .settings

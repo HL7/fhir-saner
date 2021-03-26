@@ -6,5 +6,5 @@
   "title": "Occupied Bed",
   "description": "Codes used Occupied Beds",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/ValueSet/OccupiedBed"
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/OccupiedBed"
 }
