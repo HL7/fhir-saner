@@ -103,24 +103,28 @@
 					<forceCreation>true</forceCreation>
 					<transformationSets>
 						<transformationSet>
-							<dir>${project.basedir}/fsh/ig-data/input</dir>
+							<dir>${project.basedir}//input</dir>
 							<includes>SANER.xml</includes>
-							<stylesheet>file:///${project.basedir}/fsh/ig-data/input/overview.xslt</stylesheet>
+							<stylesheet>file:///${project.basedir}/input/overview.xslt</stylesheet>
+							<otherDepends>file:///${project.basedir}/input/fsh.xslt</otherDepends>
+							<otherDepends>file:///${project.basedir}/input/utility.xslt</otherDepends>
 							<parameters>
 								<parameter>
 									<name>dir</name>
-									<value>file:///${project.basedir}/fsh/ig-data/input/</value>
+									<value>file:///${project.basedir}/input/</value>
 								</parameter>
 							</parameters>
 						</transformationSet>
 						<transformationSet>
-							<dir>${project.basedir}/fsh/ig-data/input</dir>
+							<dir>${project.basedir}/input</dir>
 							<includes>SANER.xml</includes>
-							<stylesheet>file:///${project.basedir}/fsh/ig-data/input/actorsandtransactions.xslt</stylesheet>
+							<stylesheet>file:///${project.basedir}/input/actorsandtransactions.xslt</stylesheet>
+							<otherDepends>file:///${project.basedir}/input/fsh.xslt</otherDepends>
+							<otherDepends>file:///${project.basedir}/input/utility.xslt</otherDepends>
 							<parameters>
 								<parameter>
 									<name>dir</name>
-									<value>file:///${project.basedir}/fsh/ig-data/input/</value>
+									<value>file:///${project.basedir}/input/</value>
 								</parameter>
 							</parameters>
 						</transformationSet>
