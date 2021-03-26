@@ -6,5 +6,5 @@
   "title": "Inpatient Locations",
   "description": "Codes used for inpatient locations",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/ValueSet/InpatientLocations"
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/InpatientLocations"
 }

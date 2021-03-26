@@ -33,14 +33,14 @@ jobs:
       - name: Run Plant UML
         uses: lokkju/github-action-plantuml@master
         with:
-          args: -tsvg $GITHUB_WORKSPACE/fsh/ig-data/input/images-source/*.txt -o $GITHUB_WORKSPACE/fsh/ig-data/input/images
+          args: -tsvg $GITHUB_WORKSPACE/input/images-source/*.txt -o $GITHUB_WORKSPACE/input/images
           
       - name: Checkin Generated Inputs 
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Generated Content, Images and FHIR Shorthand Files"
+          git commit --allow-empty -m "Generated Content, Images and FHIR Shorthand Files"
           git push
         
         

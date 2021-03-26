@@ -6,5 +6,5 @@
   "title": "COVID-19 Diagnostic Test",
   "description": "Codes for COVID-19 Diagnostic Tests",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/ValueSet/COVID19DiagnosticTest"
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/COVID19DiagnosticTest"
 }

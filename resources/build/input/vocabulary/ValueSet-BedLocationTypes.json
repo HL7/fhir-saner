@@ -6,5 +6,5 @@
   "title": "Location Types",
   "description": "Codes used to locations",
   "version": "0.1.0",
-  "url": "http://hl7.org/fhir/us/saner/ValueSet/BedLocationTypes"
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/BedLocationTypes"
 }

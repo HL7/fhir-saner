@@ -12,7 +12,7 @@
         document('../output/Measure-C19Testing.xml') | document('../output/Measure-C19CumulativeTesting.xml') |
         document('../output/Measure-CDAReporting.xml') | document('../output/Measure-FEMAReporting.xml')"/>
     
-    <xsl:variable name="base" select="'http://hl7.org/fhir/us/saner/'"/>
+    <xsl:variable name="base" select="'http://hl7.org/fhir/uv/saner/'"/>
     <xsl:template match="/">
         <xsl:apply-templates select="results/result[state/@value != 'AS'][position() &lt;= 10]"/>
     </xsl:template>
