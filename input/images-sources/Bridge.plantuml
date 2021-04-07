@@ -1,0 +1,19 @@
+@startuml
+!pragma graphviz_dot smetana
+title Bridging between Push and Pull with a FHIR Server
+rectangle "Hospital EHR System" as Hospital {
+agent "Measure Source" as MeasureSource
+}
+rectangle Bridge {
+agent "Measure Intermediary" as MeasureIntermediary
+}
+rectangle "Public Health Agency" as Agency {
+agent "Measure Consumer\n(FHIR Server)" as MeasureConsumer
+}
+
+
+MeasureSource -> MeasureIntermediary : Push
+MeasureIntermediary -> MeasureConsumer : Pull
+
+
+@enduml

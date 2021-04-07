@@ -1,0 +1,12 @@
+@startuml
+!pragma graphviz_dot smetana
+hide footbox
+participant "Measure Consumer" as MeasureConsumer
+participant "Measure Source" as MeasureSource
+"MeasureConsumer" -> "MeasureSource" : 1. Search Request
+activate "MeasureConsumer"
+activate "MeasureSource"
+"MeasureSource" --> "MeasureConsumer" : 2. Search Response
+deactivate "MeasureConsumer"
+deactivate "MeasureSource"
+@enduml

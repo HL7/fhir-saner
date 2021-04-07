@@ -1,0 +1,28 @@
+@startuml
+!pragma graphviz_dot smetana
+hide footbox
+participant "Measure Definition Consumer" as MeasureDefinitionConsumer
+participant "Measure Definition Source" as MeasureDefinitionSource
+participant "Measure Computer" as MeasureComputer
+participant "Data Source" as DataSource
+"MeasureDefinitionConsumer" -> "MeasureDefinitionSource" : 1. Query for New or Updated Measures
+activate "MeasureDefinitionConsumer"
+activate "MeasureDefinitionSource"
+return
+deactivate "MeasureDefinitionConsumer"
+deactivate "MeasureDefinitionSource"
+"MeasureComputer" -> "MeasureComputer" : 2. Compute Measure
+activate "MeasureComputer"
+activate "MeasureComputer"
+"MeasureComputer" -> "DataSource" : 3. Gather Data
+activate "DataSource"
+"DataSource" --> "MeasureComputer" : 4. Returns Matching FHIR Resources
+deactivate "DataSource"
+deactivate "MeasureComputer"
+deactivate "MeasureComputer"
+"MeasureComputer" -> "MeasureComputer" : 5. Send Measures to a Measure Consumer
+activate "MeasureComputer"
+activate "MeasureComputer"
+deactivate "MeasureComputer"
+deactivate "MeasureComputer"
+@enduml

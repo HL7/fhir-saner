@@ -1,0 +1,6 @@
+@startuml
+!pragma graphviz_dot smetana
+agent "Measure Consumer" as MeasureConsumer
+usecase (Communicate Results) as (REPORT-TX)
+MeasureConsumer --> (REPORT-TX)
+@enduml

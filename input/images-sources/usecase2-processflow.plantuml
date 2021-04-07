@@ -1,0 +1,26 @@
+@startuml
+!pragma graphviz_dot smetana
+hide footbox
+participant "Measure Intermediary" as MeasureIntermediary
+participant "Measure Source" as MeasureSource
+actor "Public Health User"
+participant "Measure Consumer" as MeasureConsumer
+"MeasureIntermediary" -> "MeasureSource" : 1. Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources
+activate "MeasureIntermediary"
+activate "MeasureSource"
+return
+deactivate "MeasureIntermediary"
+deactivate "MeasureSource"
+"Public Health User" -> "MeasureConsumer" : 2. User Initiates Search
+activate "Public Health User"
+activate "MeasureConsumer"
+"MeasureConsumer" --> "Public Health User" : 3. Display Results
+deactivate "Public Health User"
+deactivate "MeasureConsumer"
+"Public Health User" -> "MeasureConsumer" : 4. User refines Focus or Form of Display
+activate "Public Health User"
+activate "MeasureConsumer"
+"MeasureConsumer" --> "Public Health User" : 5. Display Refined Results
+deactivate "Public Health User"
+deactivate "MeasureConsumer"
+@enduml

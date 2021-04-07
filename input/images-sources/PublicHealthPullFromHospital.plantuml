@@ -1,0 +1,12 @@
+@startuml
+!pragma graphviz_dot smetana
+rectangle "Hospital EHR System" {
+agent "Measure Source\n<i>(FHIR Server)</i>" as MeasureSource
+}
+
+rectangle "Public Health Agency" {
+agent "Measure Consumer" as MeasureConsumer
+}
+MeasureSource <- MeasureConsumer : Pull with API
+
+@enduml

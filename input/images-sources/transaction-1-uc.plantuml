@@ -1,0 +1,9 @@
+@startuml
+!pragma graphviz_dot smetana
+agent "Measure Source" as MeasureSource
+
+agent "Measure Consumer" as MeasureConsumer
+usecase (Query Measure) as (PULL-TX)
+MeasureSource --> (PULL-TX)
+MeasureConsumer --> (PULL-TX)
+@enduml

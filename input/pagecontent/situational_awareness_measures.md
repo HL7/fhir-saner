@@ -140,7 +140,9 @@ Each of the entries in these spreadsheets or forms is measure or count of groups
 of things such as available beds, ventilators, tests ordered, et cetera.  The completed
 spreadsheet or form is a Measure Report.  Accompanying instructions describe (to a human)
 what to include in a group.  A conceptual model of these artifacts appears below.
-
+<div>
+{%include ConceptualModel.svg%}
+</div>
 ![Conceptual Model](ConceptualModel.svg)
 
 The HL7 FHIR standard has similarly named resources that perform the same functions.

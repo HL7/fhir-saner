@@ -1,0 +1,13 @@
+@startuml
+!pragma graphviz_dot smetana
+rectangle "Hospital EHR System" {
+storage "External Storage" as ExternalStorage
+agent "Measure Source" as MeasureSource
+}
+rectangle "Public Health Agency" {
+agent "Measure Consumer" as MeasureConsumer
+}
+ExternalStorage <-- MeasureConsumer : Pull with Dump
+MeasureSource -> ExternalStorage : Push with Dump
+
+@enduml
