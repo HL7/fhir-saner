@@ -29,11 +29,11 @@ jobs:
 
       - name: Maven Clean, Test and Package the output
         run: mvn -B test        
-
-      - name: Run Plant UML
-        uses: lokkju/github-action-plantuml@master
-        with:
-          args: -tsvg $GITHUB_WORKSPACE/input/images-source/*.txt -o $GITHUB_WORKSPACE/input/images
+#
+#      - name: Run Plant UML
+#        uses: lokkju/github-action-plantuml@master
+#        with:
+#          args: -tsvg $GITHUB_WORKSPACE/input/images-source/*.txt -o $GITHUB_WORKSPACE/input/images
           
       - name: Checkin Generated Inputs 
         run: |
