@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="128px" preserveAspectRatio="none" style="width:421px;height:128px;" version="1.1" viewBox="0 0 421 128" width="421px" zoomAndPan="magnify"><defs><filter height="300%" id="fk27807eqq0so" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fk27807eqq0so)" height="29.1328" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="107.5" y="69.4297"/><rect fill="#FFFFFF" filter="url(#fk27807eqq0so)" height="29.1328" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="315.5" y="69.4297"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="112" x2="112" y1="38.2969" y2="116.5625"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="320" x2="320" y1="38.2969" y2="116.5625"/><rect fill="#FEFECE" filter="url(#fk27807eqq0so)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="205" x="8" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="191" x="15" y="22.9951">Measure Definition Consumer</text><rect fill="#FEFECE" filter="url(#fk27807eqq0so)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="183" x="227" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="169" x="234" y="22.9951">Measure Definition Source</text><rect fill="#FFFFFF" filter="url(#fk27807eqq0so)" height="29.1328" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="107.5" y="69.4297"/><rect fill="#FFFFFF" filter="url(#fk27807eqq0so)" height="29.1328" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="315.5" y="69.4297"/><polygon fill="#A80036" points="303.5,65.4297,313.5,69.4297,303.5,73.4297,307.5,69.4297" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="117.5" x2="309.5" y1="69.4297" y2="69.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="104" x="124.5" y="64.3638">1. Search Request</text><polygon fill="#A80036" points="123.5,94.5625,113.5,98.5625,123.5,102.5625,119.5,98.5625" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="117.5" x2="319.5" y1="98.5625" y2="98.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="114" x="129.5" y="93.4966">2. Search Response</text><!--
+@startuml
+hide footbox
+participant "Measure Definition Consumer" as MeasureDefinitionConsumer
+participant "Measure Definition Source" as MeasureDefinitionSource
+"MeasureDefinitionConsumer" -> "MeasureDefinitionSource" : 1. Search Request
+activate "MeasureDefinitionConsumer"
+activate "MeasureDefinitionSource"
+"MeasureDefinitionSource" - -> "MeasureDefinitionConsumer" : 2. Search Response
+deactivate "MeasureDefinitionConsumer"
+deactivate "MeasureDefinitionSource"
+@enduml
+
+PlantUML version 1.2019.08(Sat Jul 13 19:25:14 GMT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 14-ea+33
+Operating System: Linux
+OS Version: 5.4.0-1043-azure
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
