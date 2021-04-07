@@ -9,7 +9,9 @@ This transaction defines the create and update operations that a MeasureConsumer
 
 
 ### Actors Roles
-
+<div>
+{%include transaction-2-uc.svg%}
+<div>
 ![Figure 2.2-1: Produce Measure Use Case Diagram](transaction-2-uc.svg "Figure 2.2-1: Produce Measure Use Case Diagram")
 
 **Figure 2.2-1: Produce Measure Use Case Diagram**
@@ -23,7 +25,7 @@ This transaction defines the create and update operations that a MeasureConsumer
         <tr><td><a href="actors.html#measure-consumer">Measure Consumer</a></td>
 <td>Collects data for reporting</td>
 </tr>
-        
+
 </tbody>
 </table>
 
@@ -34,16 +36,18 @@ This transaction defines the create and update operations that a MeasureConsumer
 <thead><tr><th>Standard</th><th>Name</th></tr></thead>
 <tbody>
             <tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-        
+
             <tr><td>RFC-7230</td><td><a href='https://ietf.org/rfc/rfc7230.html'>Hypertext Transfer Protocol - HTTP/1.1</a></td></tr>
-        
+
             <tr><td>NDJSON</td><td><a href='http://ndjson.org/'>Newline Delimited JSON</a></td></tr>
-        
+
 </tbody>
 </table>
 
 ### Interactions
-        
+<div>
+{%include transaction-2-seq.svg%}
+<div>
 ![Figure 2.2-2: Produce Measure Interactions](transaction-2-seq.svg "Figure 2.2-2: Produce Measure Interactions")
 
 **Figure 2.2-2: Produce Measure Interactions**
@@ -96,5 +100,3 @@ The Measure Consumer reports success using 200 OK, 201 Created, or 204 No Conten
 
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
-
-        

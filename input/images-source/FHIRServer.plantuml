@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 rectangle "FHIR Server (Intermediary)" as MeasureIntermediary {
 agent "Measure Source" as MeasureSource1
 agent "Measure Consumer" as MeasureConsumer1

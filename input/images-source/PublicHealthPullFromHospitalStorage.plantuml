@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 rectangle "Hospital EHR System" {
 storage "External Storage" as ExternalStorage
 agent "Measure Source" as MeasureSource

@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 hide footbox
 actor "ICU/Central Monitoring System"
 actor "Measure Collector"

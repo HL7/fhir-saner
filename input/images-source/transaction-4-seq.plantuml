@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 hide footbox
 participant "Measure Computer" as MeasureComputer
 participant "Data Source" as DataSource

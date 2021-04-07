@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="169px" preserveAspectRatio="none" style="width:498px;height:169px;" version="1.1" viewBox="0 0 498 169" width="498px" zoomAndPan="magnify"><defs><filter height="300%" id="f1x14ysazyrhpu" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[f1c0919dbb4996c8c6b1861e2543b315]
+entity MeasureReport--><rect fill="#FEFECE" filter="url(#f1x14ysazyrhpu)" height="36.2969" style="stroke:#A80036;stroke-width:1.5;" width="134" x="7" y="8.5659"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="17" y="31.561">Measure Report</text><!--MD5=[1d3f47a7e609f181be99b94883e12270]
+entity Measure--><rect fill="#FEFECE" filter="url(#f1x14ysazyrhpu)" height="36.2969" style="stroke:#A80036;stroke-width:1.5;" width="79" x="261.5" y="8.5659"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="271.5" y="31.561">Measure</text><!--MD5=[d68a45e10daed9c275d097ed7cabf6ae]
+entity Group--><rect fill="#FEFECE" filter="url(#f1x14ysazyrhpu)" height="36.2969" style="stroke:#A80036;stroke-width:1.5;" width="64" x="422" y="8.5659"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="432" y="31.561">Group</text><!--MD5=[196c9804558a0a96c60a856594ea64ad]
+entity CountableEntity--><rect fill="#FEFECE" filter="url(#f1x14ysazyrhpu)" height="36.2969" style="stroke:#A80036;stroke-width:1.5;" width="142" x="192" y="121.5659"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="202" y="144.561">Countable Entity</text><!--MD5=[f4ae6bb931c8a6a76c38cf43ff3fae35]
+link MeasureReport to Measure--><path d="M141.186,26.5659 C178.291,26.5659 223.367,26.5659 256.175,26.5659 " fill="none" id="MeasureReport-to-Measure" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="261.332,26.5659,252.332,22.5659,256.332,26.5659,252.332,30.5659,261.332,26.5659" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="159.25" y="19.6328">Is Defined By</text><!--MD5=[0be1d48780af1c11c0148b2aee502167]
+link MeasureReport to CountableEntity--><path d="M103.1171,44.6659 C137.108,64.6291 193.234,97.5921 229.14,118.6797 " fill="none" id="MeasureReport-to-CountableEntity" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="233.85,121.446,228.1161,113.4383,229.5389,118.9134,224.0639,120.3361,233.85,121.446" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="181" y="87.6328">Assesses</text><!--MD5=[37e56974d92bbbf8a72986d2b6ac62d4]
+link Measure to Group--><path d="M352.8,26.5659 C352.8,26.5659 391.36,26.5659 408.489,26.5659 " fill="none" id="Measure-Group" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="421.608,26.5659,412.608,22.5659,416.608,26.5659,412.608,30.5659,421.608,26.5659" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="416.608" x2="408.608" y1="26.5659" y2="26.5659"/><polygon fill="#FFFFFF" points="340.8,26.5659,346.8,30.5659,352.8,26.5659,346.8,22.5659,340.8,26.5659" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="45" x="358.75" y="19.6328">Counts</text><!--MD5=[786e3921d34b38f1a1ed0be65c1bd505]
+link Group to CountableEntity--><path d="M424.575,44.6659 C390.225,64.6291 333.505,97.5921 297.219,118.6797 " fill="none" id="Group-to-CountableEntity" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="292.459,121.446,302.2501,120.3813,296.7818,118.9333,298.2298,113.4649,292.459,121.446" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="371" y="87.6328">Has Member</text><!--MD5=[dc9e4fe107ed909e6e3e88fe999af2bc]
+@startuml
+agent "Measure Report" as MeasureReport
+agent Measure
+agent Group
+agent "Countable Entity" as CountableEntity
+
+MeasureReport -> Measure : Is Defined By
+MeasureReport ..> CountableEntity : Assesses
+Measure  o-> Group : Counts
+
+Group - -> CountableEntity : Has Member
+@enduml
+
+PlantUML version 1.2021.4(Sun Apr 04 08:49:39 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

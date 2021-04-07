@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 agent "Measure Source" as MeasureSource
 
 agent "Measure Consumer" as MeasureConsumer

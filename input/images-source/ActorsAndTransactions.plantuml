@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 skinparam FolderBorderColor white
 skinparam FolderFontColor white
 skinparam Shadowing false

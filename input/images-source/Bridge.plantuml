@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 title Bridging between Push and Pull with a FHIR Server
 rectangle "Hospital EHR System" as Hospital {
 agent "Measure Source" as MeasureSource

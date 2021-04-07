@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 title Intermediaries enable multi-level reporting
 rectangle "Hospital EHR System A" as Hospital1 {
 agent "Measure Source" as MeasureSource1

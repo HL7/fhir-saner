@@ -149,14 +149,16 @@ The HL7 FHIR standard has similarly named resources that perform the same functi
 A more detailed model about how these are related follows.
 * [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
 * [Measure](https://hl7.org/fhir/R4/Measure)
-
+<div>
+{%include Model.svg%}
+</div>
 ![Model](Model.svg)
 
 ### Measurement Reporting Approach
 The approach of this IG to measurement is to capture all measurements reported to a single
 agency in a single FHIR MeasureReport resource, using multiple groups in the report for
 each kind of measurement reported.  This approach is aligned with existing workflows associated with
-automated systems for **recieving** measure data. The approach very much treats the MeasureReport
+automated systems for **receiving** measure data. The approach very much treats the MeasureReport
 as if it were a report card (as one might receive from a school) deescribing how a location is doing
 on all measured criteria, with each group within the MeasureReport reflecting one of the
 "subject areas" being measured.

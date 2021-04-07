@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 rectangle "Hospital EHR System" {
 agent "Measure Source\n<i>(FHIR Server)</i>" as MeasureSource
 }

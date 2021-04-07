@@ -1,5 +1,4 @@
 @startuml
-!pragma graphviz_dot smetana
 title Public Health does Most of the Work
 rectangle "Hospital EHR System" as Hospital {
 agent "Measure Source" as MeasureSource
