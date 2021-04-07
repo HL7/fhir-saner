@@ -8,9 +8,6 @@ or other systems to access resource availability data.
 
 
 ### Actors Roles
-<div>
-{%include transaction-5-uc.svg%}
-<div>
 
 ![Figure 2.5-1: Communicate Results Use Case Diagram](transaction-5-uc.svg "Figure 2.5-1: Communicate Results Use Case Diagram")
 
@@ -22,7 +19,7 @@ or other systems to access resource availability data.
 <tbody><tr><td><a href="actors.html#measure-consumer">Measure Consumer</a></td>
 <td>Display or transmits reports using availability data</td>
 </tr>
-
+        
 </tbody>
 </table>
 
@@ -33,14 +30,12 @@ or other systems to access resource availability data.
 <thead><tr><th>Standard</th><th>Name</th></tr></thead>
 <tbody>
             <tr><td>RFC-7230</td><td><a href='https://ietf.org/rfc/rfc7230.html'>Hypertext Transfer Protocol - HTTP/1.1</a></td></tr>
-
+        
 </tbody>
 </table>
 
 ### Interactions
-<div>
-{%include transaction-5-seq.svg%}
-<div>
+        
 ![Figure 2.5-2: Communicate Results Interactions](transaction-5-seq.svg "Figure 2.5-2: Communicate Results Interactions")
 
 **Figure 2.5-2: Communicate Results Interactions**
@@ -60,7 +55,7 @@ Intermediary that consumes data from one system and communicates it to another, 
 to the original system or to another system.
 
 
-##### Trigger Event -
+##### Trigger Event - 
 
 ##### Message Semantics
 
@@ -69,3 +64,5 @@ to the original system or to another system.
 
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
+
+        

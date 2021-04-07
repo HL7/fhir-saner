@@ -34,7 +34,7 @@ This use case is supported by the following
 
   - [Produce Measure](transaction-2.html)
 
-#### Collecting Hospital and Ventilator Measures Process Flow
+#### Collecting Hospital and Ventilator Measures Process Flow 
 
 Measure report data can come from multiple systems within a facility. For example, the CDC/NHSN Patient Impact
 and Hospital Capacity Module asks for the following data elements:
@@ -69,9 +69,6 @@ available to accept partial reports for data. This data can then be aggregated f
 information systems, and forwarded to a public endpoint for reporting.
 
 
-<div>
-{%include usecase1-processflow.svg%}
-<div>
 ![Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow")
 
 **Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow**
@@ -84,7 +81,7 @@ a report on ICU beds and equipment, including ventilated patients in ED/Overflow
 Total ICU Beds, Occupied ICU Beds, Total Ventilators, Ventilators in Use.
 
 
-
+   
 1. The system collects information about ventilators outside the ICU for which the associated patient
 was admitted for suspected or confirmed COVID-19. It can makes the determination of suspected/confirmed COVID-19 from
 the DG1 segment of the ADT message it recieved regarding the patient.
@@ -110,7 +107,7 @@ examining messages recieved and data in its database, and then reports these to 
 within the hospital.
 
 
-
+   
 1. The Bed Management System examines master file data to count the total number of beds in the hospital,
 as well as those beds specifically identified as being for acute (inpatient) care. The Bed Management solution can be a
 component
@@ -131,7 +128,7 @@ on multiple data elements
    The Hospital's EHR collects data for multiple data elements.
 
 
-
+   
 1. The EHR collects data on hospitalized patients w/ COVID-19.
 2. The EHR collects data on hospitalized patients diagnosed with COVID-19 14 days after admission.
 3. The EHR collects data on patient deaths due to COVID-19.
@@ -184,15 +181,13 @@ This use case is supported by the following
 
   - [Communicate Results](transaction-1.html)
 
-#### Accessing Measure Reports Process Flow
+#### Accessing Measure Reports Process Flow 
 
 In this use case, we see the classic "dashboard" panel, where a public health user
 selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
 to them in an easy to view format.
 
-<div>
-{%include usecase2-processflow.svg%}
-<div>
+
 ![Figure 2.3.1.2-1: Accessing Measure Reports Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Accessing Measure Reports Process Flow")
 
 **Figure 2.3.1.2-1: Accessing Measure Reports Process Flow**
@@ -262,15 +257,13 @@ This use case is supported by the following
 
   - [Query Measure Definition](transaction-1.html)
 
-#### Distributing Measure Definitions Process Flow
+#### Distributing Measure Definitions Process Flow 
 
 Measures created for tracking a public health emergency may be revised periodically to support changing needs. This
 use case supports the need
 to distribute updated measure definitions to organizations who report on these measures.
 
-<div>
-{%include usecase3-processflow.svg%}
-<div>
+
 ![Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow](usecase3-processflow.svg "Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow")
 
 **Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow**
@@ -282,7 +275,7 @@ to distribute updated measure definitions to organizations who report on these m
 agencies to identify reporting requirements.
 
 
-
+   
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP5">Return matching measure specifications</html:span>
 
@@ -312,15 +305,13 @@ This use case is supported by the following
 
   - [Compute Measure](transaction-1.html)
 
-#### Automating Measure Computation Process Flow
+#### Automating Measure Computation Process Flow 
 
 Automating measure reporting reduces the burden on users for manual data collection. When a measure has been
 automated, it
 can be computed using FHIR APIs from supporting information systems provided by the organization.
 
-<div>
-{%include usecase4-processflow.svg%}
-<div>
+
 ![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow")
 
 **Figure 2.3.1.4-1: Automating Measure Computation Process Flow**
@@ -374,7 +365,7 @@ This use case is supported by the following
 
   - [Compute Measure](transaction-1.html)
 
-#### Reporting Supplemental Data Process Flow
+#### Reporting Supplemental Data Process Flow 
 
 Supplemental data enables additional data analysis to be performed. The MeasureReport itself provides the capacity
 to detect
@@ -396,9 +387,7 @@ otherwise similar measures of utilization. In later stages, this data can be use
 disease burden based
 on associated complications.
 
-<div>
-{%include usecase5-processflow.svg%}
-<div>
+
 ![Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow](usecase5-processflow.svg "Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow")
 
 **Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow**
@@ -429,3 +418,4 @@ with the measure.
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRSupplementalData">Returns Supplemental FHIR Resources</html:span>
 
    The local EHR or FHIR Server returns the supplemental data and included resources.
+
