@@ -12,10 +12,8 @@ and the read operations that must be supported.
 
 
 ### Actors Roles
-<div>
-<%include transaction-1-uc.svg%}
-</div>
-<!-- ![Figure 2.1-1: Query Measure Use Case Diagram](transaction-1-uc.svg "Figure 2.1-1: Query Measure Use Case Diagram") -->
+
+![Figure 2.1-1: Query Measure Use Case Diagram](transaction-1-uc.svg "Figure 2.1-1: Query Measure Use Case Diagram")
 
 **Figure 2.1-1: Query Measure Use Case Diagram**
 
@@ -28,7 +26,7 @@ and the read operations that must be supported.
         <tr><td><a href="actors.html#measure-consumer">Measure Consumer</a></td>
 <td>Collects data for reporting</td>
 </tr>
-
+        
 </tbody>
 </table>
 
@@ -39,17 +37,15 @@ and the read operations that must be supported.
 <thead><tr><th>Standard</th><th>Name</th></tr></thead>
 <tbody>
             <tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-
+        
             <tr><td>RFC-7230</td><td><a href='https://ietf.org/rfc/rfc7230.html'>Hypertext Transfer Protocol - HTTP/1.1</a></td></tr>
-
+        
 </tbody>
 </table>
 
 ### Interactions
-<div>
-<%include transaction-1-seq.svg%}
-</div>
-<!-- ![Figure 2.1-2: Query Measure Interactions](transaction-1-seq.svg "Figure 2.1-2: Query Measure Interactions") -->
+        
+![Figure 2.1-2: Query Measure Interactions](transaction-1-seq.svg "Figure 2.1-2: Query Measure Interactions")
 
 **Figure 2.1-2: Query Measure Interactions**
 
@@ -229,7 +225,7 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </tbody>
 </table>
 
-
+        
 </li>
 
 <li>
@@ -284,7 +280,7 @@ _count
 </tbody>
 </table>
 
-
+        
 </li>
 
 <li>
@@ -371,7 +367,7 @@ _include:iterate
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -465,7 +461,7 @@ return
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -801,7 +797,7 @@ return
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -864,7 +860,7 @@ _id
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -950,7 +946,7 @@ identifier
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -1133,7 +1129,7 @@ code:in
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -1203,7 +1199,7 @@ _id
 </tbody>
 </table>
 
-
+        
 </li>
 
 <li>
@@ -1359,7 +1355,7 @@ code:in
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -1641,7 +1637,7 @@ author:identifier
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -1946,7 +1942,7 @@ reporter:identifier
 </tbody>
 </table>
 
-
+        
 </li>
 
 </ol>
@@ -1988,3 +1984,5 @@ The Measure Source returns the requested resource.
 
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
+
+        
