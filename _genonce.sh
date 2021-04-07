@@ -1,6 +1,7 @@
 #!/bin/bash
 publisher_jar=publisher.jar
 input_cache_path=./input-cache/
+GRAPHVIZ_DOT=/usr/bin/dot
 echo Checking internet connection...
 curl -sSf tx.fhir.org > /dev/null
 
