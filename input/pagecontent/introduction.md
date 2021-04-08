@@ -105,9 +105,7 @@ ambulance.  Given its broad application, would need to be profiled to support us
 While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's
 little use of the Location resource to report data about beds.  It is more commonly used to report
 Location data associated with the
-[Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (now known as the US Core Data for
-Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification
-regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
+[Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (precursor to the US Core Data for Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
 describe the facility where an encounter occurs, the location where a procedure is performed, or
 the location of a practitioner or facility.
 
