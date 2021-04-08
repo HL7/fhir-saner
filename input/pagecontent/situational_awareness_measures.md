@@ -301,9 +301,8 @@ use denominator exceptions.  This implementation guide defines four additional t
 These population types are defined in the [Measure Populations](CodeSystem-MeasurePopulationSystem.html) code system.
 
 #### Numerator Complement
-The numerator complement is the quantity in the denominator that match neither the numerator the numerator exclusion criteria.
-Summed together, the numerator, numerator-exclusion and numerator-complement must match the value of the
-denominator - denominator-exclusion value.
+The numerator complement is the quantity in the denominator that match neither the numerator nor the numerator exclusion criteria.
+Summed together, the numerator, numerator-exclusion and numerator-complement must match the value of the denominator - denominator-exclusion value.
 
 In a capacity and utilization measure, the numerator-complement population represents available capacity. By enabling reporting
 of available capacity in a measure report, the numerator-complement enables search for locations with available capacity meeting
