@@ -53,8 +53,8 @@ evolution from Bed Availability.
 The key data for bed availability is found in Bed Management solutions integrated with
 current inpatient EHR Systems, and in departmental ICU and Central Monitoring systems.
 Such solutions support management of bed assignment for admissions and provide direction to
-housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems
-which provide ICU and Nursing central monitoring capabilities.  They are often separate components
+housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems,
+that provide ICU and Nursing central monitoring capabilities.  They are often separate components
 or modules, Standalone solutions, or third party solutions which integrate with an
 EHR System.
 
