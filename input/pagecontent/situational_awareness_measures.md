@@ -12,8 +12,7 @@ emergencies (e.g., huricanes, wild fires, mass injury events, et cetera).
 
 ### Situational Awareness for Novel Epidemic Response
 Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially
-pandemic flu strains in 2005.  Since then, a number of pandemics have emerged requiring some level of situational
-awareness to support responses by public health agencies.
+pandemic flu strains in 2005.  Since then, a number of pandemics  and other regional and national emergencies have emerged requiring some level of situational awareness to support responses by public health agencies.
 
 2006
 : Bird Flu (H5N1)
@@ -27,8 +26,13 @@ awareness to support responses by public health agencies.
 2013
 : Another form of Bird Flu (H7N9)
 
+2017
+: Hurricane Maria
+
 2019
 : COVID-19 (SARS-Cov-2)
+
+
 
 Situational Data Needs of Public Health
 Key situational data needed by public health has remained relatively consistent and well established over this time, and is to support awareness of:
