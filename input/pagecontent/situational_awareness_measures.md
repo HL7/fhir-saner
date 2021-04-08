@@ -1,4 +1,4 @@
-The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission
+The Situational awareness for Novel Epidemic Response Implementation Guide enables transmission
 of high level situational awareness information from inpatient facilities to centralized data repositories
 to support the treatment of novel influenza-like illness.
 
@@ -8,10 +8,10 @@ public health officials.  It describes how to exchange measures supporting situa
 awareness to enable appropriate response to healthcare emergencies affecting a population.  While the
 immediate focus of this guide is in support of efforts to manage challenges related to the novel Coronavirus, the
 guide is informed by prior efforts supporting the exchange of situation awareness data in support of other
-emergencies (e.g., huricanes, wild fires, mass injury events, et cetera).
+emergencies (e.g., hurricanes, wild fires, mass injury events, et cetera).
 
 ### Situational Awareness for Novel Epidemic Response
-Situational Awareness has been the focus of attention in health IT circles well before the detection of potentially
+Situational awareness has been the focus of attention in health IT circles well before the detection of potentially
 pandemic flu strains in 2005.  Since then, a number of pandemics  and other regional and national emergencies have emerged requiring some level of situational awareness to support responses by public health agencies.
 
 2006
@@ -161,7 +161,7 @@ if they are not strictly needed.
 ### Types of Measures for Situational Awareness
 Just as [quality reporting](https://www.hl7.org/fhir/clinicalreasoning-quality-reporting.html) defines
 several types of measures, situational awareness measures also follow several common patterns. Examining the data being captured
-for Situational Awareness during the COVID-19 crisis, this guide has identified the following types
+for situational awareness during the COVID-19 crisis, this guide has identified the following types
 of measures:
 
 * Capacity and Utilization
