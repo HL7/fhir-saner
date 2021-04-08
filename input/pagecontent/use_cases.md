@@ -260,8 +260,7 @@ This use case is supported by the following
 #### Distributing Measure Definitions Process Flow
 
 Measures created for tracking a public health emergency may be revised periodically to support changing needs. This
-use case supports the need
-to distribute updated measure definitions to organizations who report on these measures.
+use case supports the need to distribute updated measure definitions to organizations who report on these measures.
 
 
 <div>
@@ -274,7 +273,7 @@ to distribute updated measure definitions to organizations who report on these m
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
 
-   An organization required to report queries for for updated from one or public health or emergency response
+   An organization required to report queries for updated measures from one or more public health or emergency response
 agencies to identify reporting requirements.
 
 
