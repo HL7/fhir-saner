@@ -68,7 +68,7 @@ In some cases the use of this data may require user authentication for purposes 
 Given this assessment, the main Security Considerations are focused on:
 * Assuring the data published is authentic to the organization publishing the data. That is that a consumer of the API can be given assurances that they are connecting to the authentic service endpoint they intended to connect to. This functionally is provided by common use of TLS with server sided authentication, commonly used in HTTPS.
 
-* Taking care to validate that the server certificate validated and authenticated by the TLS / HTTPS is the server intended to connect to. This is important management of client side certificate trust store.
+* It is strongly recommended that the client system communicating to a server verify not only the server's certificate, but that server is also one trusted by client.
 
 * Assuring the data communicated is not modified in transit. The consumer of the API can be given assurances that they are retrieving exactly the data that is published. This functionality is provided by common use of TLS with integrity cyphers such as SHA256.
 
