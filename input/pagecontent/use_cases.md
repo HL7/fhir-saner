@@ -11,12 +11,13 @@ The following use cases were used to identify the requirements addressed by this
 These are described in more detail in the sections that follow.
 
 
-### Collecting Patient Outcomes and Hospital Capacity
+### Collecting Hospital and Ventilator Measures
 
 This use case addresses the collection and exchange of data from several information systems in a Facility
 to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
-for multiple data elements by examining messages received and data in its database, and then reports these to a Measure
-Collector within the hospital.
+for multiple data elements by examining messages recieved and data in its database, and then reports these to a Measure
+Collector
+within the hospital.
 
 
 This use case is supported by the following
@@ -33,7 +34,7 @@ This use case is supported by the following
 
   - [Produce Measure](transaction-2.html)
 
-#### Patient Outcomes and Hospital Capacity Process Flow
+#### Collecting Hospital and Ventilator Measures Process Flow 
 
 Measure report data can come from multiple systems within a facility. For example, the CDC/NHSN Patient Impact
 and Hospital Capacity Module asks for the following data elements:
@@ -67,10 +68,8 @@ In order to automate capture of this information, a central reporting system (e.
 available to accept partial reports for data. This data can then be aggregated from reports made by the various
 information systems, and forwarded to a public endpoint for reporting.
 
-<div>
-{%include usecase1-processflow.svg%}
-</div>
-<!-- ![Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow") -->
+
+![Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow")
 
 **Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow**
 
@@ -82,7 +81,7 @@ a report on ICU beds and equipment, including ventilated patients in ED/Overflow
 Total ICU Beds, Occupied ICU Beds, Total Ventilators, Ventilators in Use.
 
 
-
+   
 1. The system collects information about ventilators outside the ICU for which the associated patient
 was admitted for suspected or confirmed COVID-19. It can makes the determination of suspected/confirmed COVID-19 from
 the DG1 segment of the ADT message it recieved regarding the patient.
@@ -108,7 +107,7 @@ examining messages recieved and data in its database, and then reports these to 
 within the hospital.
 
 
-
+   
 1. The Bed Management System examines master file data to count the total number of beds in the hospital,
 as well as those beds specifically identified as being for acute (inpatient) care. The Bed Management solution can be a
 component
@@ -129,7 +128,7 @@ on multiple data elements
    The Hospital's EHR collects data for multiple data elements.
 
 
-
+   
 1. The EHR collects data on hospitalized patients w/ COVID-19.
 2. The EHR collects data on hospitalized patients diagnosed with COVID-19 14 days after admission.
 3. The EHR collects data on patient deaths due to COVID-19.
@@ -182,19 +181,19 @@ This use case is supported by the following
 
   - [Communicate Results](transaction-1.html)
 
-#### Accessing Measure Reports Process Flow
+#### Accessing Measure Reports Process Flow 
 
-In this use case, we see the classic "dashboard" panel, where a public health user selects a region, and one or more measures (or functions of measures) to report on, and the data is presented to them in an easy to view format.
+In this use case, we see the classic "dashboard" panel, where a public health user
+selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
+to them in an easy to view format.
 
 
-<div>
-{%include usecase2-processflow.svg%}
-</div>
-<!-- ![Figure 2.3.1.2-1: Accessing Measure Reports Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Accessing Measure Reports Process Flow") -->
+![Figure 2.3.1.2-1: Accessing Measure Reports Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Accessing Measure Reports Process Flow")
 
-**Figure 2.3.2.1-1: Accessing Measure Reports Process Flow**
+**Figure 2.3.1.2-1: Accessing Measure Reports Process Flow**
 
-1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or more Measure Sources</html:span>
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</html:span>
 
    The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a
 function with other associated data) from one or more Measure Sources,
@@ -202,7 +201,7 @@ and makes them available through a Measure Source interface it provides.
 
 
    The specific ordering in which gathering and aggregation is performed is not further specified
-by this implementation guide. It is shown as occurring before the user initiates the query here, but could also occur
+by this implementation guide. It is shown as occuring before the user initiates the query here, but could also occur
 after. However, for many cases, geospatial systems can likely do a better job if the aggregation is done ahead of time.
 The application of a function to the data can enable a measure such as # of cases to be combined with other data such as
 population for the area to report # of cases per 10K population, or similar functions to better present data
@@ -215,7 +214,8 @@ in a way that allows it to be reported using comparable scales.
 
 
    The user selects a geographic region and an issue of concern (e.g., beds, ventilators, PPE). The Measure Consumer
-collects the appropriate reports and displays the results.
+collects the appropriate reports
+and displays the results.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Results</html:span>
@@ -236,7 +236,7 @@ focus (e.g., wider or smaller region).
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Refined Results</html:span>
 
-   The Measure Repository modifies the user's focus and reporting format
+   The Measure Repository modifies the users focus and reporting format
 
 
 ### Distributing Measure Definitions
@@ -257,27 +257,25 @@ This use case is supported by the following
 
   - [Query Measure Definition](transaction-1.html)
 
-#### Distributing Measure Definitions Process Flow
+#### Distributing Measure Definitions Process Flow 
 
 Measures created for tracking a public health emergency may be revised periodically to support changing needs. This
-use case supports the need to distribute updated measure definitions to organizations who report on these measures.
+use case supports the need
+to distribute updated measure definitions to organizations who report on these measures.
 
 
-<div>
-{%include usecase3-processflow.svg%}
-</div>
-<!-- ![Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow](usecase3-processflow.svg "Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow") -->
+![Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow](usecase3-processflow.svg "Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow")
 
-**Figure 2.3.3.1-1: Distributing Measure Definitions Process Flow**
+**Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
 
-   An organization required to report queries for updated measures from one or more public health or emergency response
+   An organization required to report queries for for updated from one or public health or emergency response
 agencies to identify reporting requirements.
 
 
-
+   
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP5">Return matching measure specifications</html:span>
 
@@ -307,19 +305,16 @@ This use case is supported by the following
 
   - [Compute Measure](transaction-1.html)
 
-#### Automating Measure Computation Process Flow
+#### Automating Measure Computation Process Flow 
 
 Automating measure reporting reduces the burden on users for manual data collection. When a measure has been
 automated, it
 can be computed using FHIR APIs from supporting information systems provided by the organization.
 
 
-<div>
-{%include usecase4-processflow.svg%}
-</div>
-<!-- ![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow") -->
+![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow")
 
-**Figure 2.3.4.1-1: Automating Measure Computation Process Flow**
+**Figure 2.3.1.4-1: Automating Measure Computation Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Check for New or Updated Measures">Query for New or Updated Measures</html:span>
@@ -330,7 +325,7 @@ Definitions](#distributing-measure-definitions) above.
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
 
-   The hospital information system collects data and computes the measures, returning a completed report.
+   The hospital information system collects data and computes the measures, returing a completed report.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherData">Gather Data</html:span>
@@ -370,7 +365,7 @@ This use case is supported by the following
 
   - [Compute Measure](transaction-1.html)
 
-#### Reporting Supplemental Data Process Flow
+#### Reporting Supplemental Data Process Flow 
 
 Supplemental data enables additional data analysis to be performed. The MeasureReport itself provides the capacity
 to detect
@@ -382,8 +377,8 @@ cause or impact analysis.
 Consider the case where patient comorbidities (e.g., Cardiovascular Disease, Smoking Status) are known to impact patient risk and
 associated complications, but
 where detailed analysis of these risk effects is unknown. Communication of supplemental data that include presence or absence of
-cardiovascular disease, or the
-patient smoking status, and presence of absence of complications allows the receiving public health agencies to further analyze this
+cardiovascuar disease, or the
+patient smoking status, and presence of absence of complications allows the recieving public health agencies to further analyze this
 data retrospectively.
 
 In the initial stages, this analysis can be used to assess strain, by comparing the impact of comorbidities on complications
@@ -393,12 +388,9 @@ disease burden based
 on associated complications.
 
 
-<div>
-{%include usecase5-processflow.svg%}
-</div>
-<!-- ![Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow](usecase5-processflow.svg "Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow") -->
+![Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow](usecase5-processflow.svg "Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow")
 
-**Figure 2.3.5.1-1: Reporting Supplemental Data Process Flow**
+**Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
@@ -426,3 +418,4 @@ with the measure.
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRSupplementalData">Returns Supplemental FHIR Resources</html:span>
 
    The local EHR or FHIR Server returns the supplemental data and included resources.
+
