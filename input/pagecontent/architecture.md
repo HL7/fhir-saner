@@ -53,8 +53,7 @@ In this guide, the Adapter component is implemented by the [Measure Intermediary
 Several off the shelf FHIR Server components exist which can be stood up in a data center
 or in the cloud to provide functionality that supports the FHIR Project.  [HAPI on FHIR](https://hapifhir.io/) is
 a Java-based FHIR Server that is at the core of the [Smile CDR](https://smilecdr.com/) commercial
-offering.  Microsoft offers the [Azure API for FHIR](https://azure.microsoft.com/en-us/services/azure-api-for-fhir/#overview).  Firely offers
-[Vonk](https://fire.ly/products/vonk) which has both a free community edition and a commercial product.
+offering.  Microsoft offers the [Azure API for FHIR](https://azure.microsoft.com/en-us/services/azure-api-for-fhir/#overview).  Firely offers [Vonk](https://fire.ly/products/vonk) which has both a free community edition and a commercial product.
 HL7 offers a page filled with [Open Source FHIR Server](https://wiki.hl7.org/Open_Source_FHIR_implementations)
 (and client) implementation software.
 
@@ -92,26 +91,26 @@ But a hospital might as easily push data to public health's external storage sys
 <!-- ![Hospital Pushes To Public Health Agency's External Storage](HospitalPushToPublicHealthStorage.svg) -->
 
 
-## Deployment
+### Deployment
 System components are designed such that they can be individually deployed and configured.
 
-The following diagrams depict several different deployments with different responsibilties owned by a Hospital or Public Health Agency
+The following diagrams depict several different deployments with different responsibilities owned by a Hospital or Public Health Agency
 
-### Hospital Supported Infrastructure
+#### Hospital Supported Infrastructure
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-0.svg%}
 <div>
 <!-- ![Hospital Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-0.svg) -->
 
 
-### Middle of the Road
+#### Middle of the Road
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-1.svg%}
 <div>
 <!-- ![Middle of the Road](HospitalPushToExternalStorageAdaptedToPullAPI-1.svg) -->
 
 
-### Public Health Supported Infrastructure
+#### Public Health Supported Infrastructure
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-2.svg%}
 <div>
