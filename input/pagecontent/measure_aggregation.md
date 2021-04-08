@@ -47,7 +47,7 @@ The scoring of measures implies the way that which rate aggregation can be perfo
 * Event Growth<br/>
   Measures **cumulative** growth by counting current and cumulative events over time
 * Queue Length<br/>
-  Measures the **point in time** number of activities awaiting completion
+  Measures the number of activities awaiting completion at a **point in time**.
 * Service Time<br/>
   Measures the **aggregate** total time to complete activities / total number of activities
 * Availability
