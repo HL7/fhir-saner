@@ -36,7 +36,7 @@ case data sets and visualizing them addresses national and even regional (at the
 work [^1]<sup>,</sup>[^2]<sup>,</sup>[^3]<sup>,</sup>[^4], but not much prior success, although there
 are existing Health IT solutions that have this data (not just in the EHR).  If the solution can be
 interfaced rather than integrated, an implementation can be piloted much faster.
-3.  Other resource utilization is available in inventory control or central monitoring
+3.  Other resource utilization data is available in inventory control or central monitoring
 solutions, but are not necessarily readily available in the EHR.  This is a natural
 evolution from Bed Availability.
 
