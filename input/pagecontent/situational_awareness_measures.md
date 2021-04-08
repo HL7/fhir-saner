@@ -113,7 +113,7 @@ to identify **populations** (of resources), and relate these populations in vari
 to express a measurement.  These measurements describe the capacity, availability, average
 service times, et cetera.
 
-#### Example Situational Awareness Measures used in the US
+#### Example Situational Awareness Measures Used in the U.S.
 In late March of 2020, the CDC [published a form](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-covid19-pimhc-blank-p.pdf)
 and [instructions](https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf) for hospital reporting of
 bed and ventilator utilization, and FEMA [provided a spreadsheet](Template for Daily Hospital COVID-19 Reporting.xlsx) it expects to be
@@ -180,22 +180,22 @@ and provides scores showing used and available capacity. It is a specialization 
 The total system capacity is the denominator for the measure. There can be exclusions from the denominator to
 count resources that are temporarily unavailable for care for reasons other than being used for treatment. The
 utilization component is the numerator. It describes the number of units in use for treatment. The availability
-component is the numerator-complement which describes thee number of units available for use. The measure score
+component is the numerator-complement which describes the number of units available for use. The measure score
 is computed as for a proportion measure.
 
 The difference between is Proportion Measure and a Utilization measure is that in a proportion measure available
 capacity must be inferred, however, in a Utilization measure, the available capacity is directly reported in
 a measurement in the numerator-complement population of the measure.  This implementation guide defines the code for
-the the numerator-complement population.
+the numerator-complement population.
 
 In this way, the MeasureReport resource reporting utilization can be directly queried through FHIR APIs for
 available capacity to find a location capable of treating or caring for some number of patients (e.g., by available beds
 or ventilators at a facility or within a region).
 
 #### Event Growth
-An event growth measure reports the number of events occuring during a time period (e.g., tests performed,
+An event growth measure reports the number of events occurring during a time period (e.g., tests performed,
 positive test results, new cases) over the cumulative total of events (e.g., total tests performed, total
-positive results, or total cases) from some defined starting point.  The numerator is the number events occuring
+positive results, or total cases) from some defined starting point.  The numerator is the number events occurring
 during the period, and the denominator is the cumulative total of events. It represents the point in time rate
 of growth during the measure period of events of interest.
 
@@ -205,7 +205,7 @@ same initial population.
 NOTE: The score for this measure group **shall** always range from 0 to 1, where 1 represents the highest rate of
 cumulative growth.  If there were no prior event, the growth rate will be 1 in the first reporting period because the
 number of total events is the same as the number of new events.  The number of total events never exceed the number of new
-events becasue they are counted at the same point in time (new events is part of total events). When the number of new events
+events because they are counted at the same point in time (new events is part of total events). When the number of new events
 is 0, the measure score **shall** be reported as 0. Implementations failing to account for this may generate divide by zero
 exceptions, or attempt to report NaN (Not a Number) values, which can result in errors elsewhere.
 
@@ -264,12 +264,12 @@ the rate across both sites will be different if the quantities of tests performe
 #### Availability
 Availability measures are subtypes of cohort measures which enable tracking of availability of
 critical resources, generally consumables (e.g., PPE, medications, immunizations, oxygen, blood, IV fluids),
-and can also report availability of staff to support facility operations (e.g., physicans, nurses,
+and can also report availability of staff to support facility operations (e.g., physicians, nurses,
 other licensed providers, support and maintenance staff), or other resources (e.g., electricity, water)
 or available facility services (e.g., emergency department, helipad, burn unit).
 
 Availability measures are generally "yes/no" to indicate availability where a facility record
-a measure value of 1 if sufficent quantity is available to meet demand, and 0 otherwise.  These
+a measure value of 1 if sufficient quantity is available to meet demand, and 0 otherwise.  These
 can be further stratified based on degree of availability (e.g., by days supply remaining).
 
 Availability measures can also report whether conservation measures have been implemented
@@ -323,7 +323,7 @@ A supporting population represents an intermediate computation helpful in defini
 may be used to compute common groups of artifacts which are needed to report other populations.
 
 Supporting populations **should not** be reported in production measures, but may be reported when testing or under other
-circumstances. A Measure Consumer that recieves a report containing a supporting population **should** simply ignore or perhaps
+circumstances. A Measure Consumer that receives a report containing a supporting population **should** simply ignore or perhaps
 even discard it from the stored MeasureReport resource.  These are like extra subtotals in spreadsheets, helpful for computing
 a final total, but not essential.
 
