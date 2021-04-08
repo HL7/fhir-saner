@@ -7,7 +7,7 @@
   profiles the MeasureReport resource to align it with resources adopting the Public
   Health Measure profile.  These are instances of reports of specific measurements.
 
-* [Public Health Measure Library](StructureDefinition-PublicHealthMeasureReport.html) profiles the
+* [Public Health Measure Library](StructureDefinition-PublicHealthMeasureLibrary.html) profiles the
   Library resource to ensure that all essential terminology and logic components are available
   for implementation of a measure.
 
@@ -74,4 +74,3 @@ described by this guide.
 * [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) defines
   an extension that enables interpretation the structure of a group as a collection
   of populations that evaluate to a single measured item.
-
