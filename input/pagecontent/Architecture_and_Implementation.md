@@ -76,7 +76,7 @@ Or, Public Health can configure its own FHIR Server, and a Hospital can push the
 <!-- ![HospitalPushToPublicHealth](HospitalPushToPublicHealth.svg) -->
 
 ### External Storage
-Deployments can also use external storage, for example a file system, message queue, S3 bucket, Azure Blob Storage, SFTP, or even Direct Messaging
+Deployments can also use external storage, for example a file system, message queue, network or cloud storage, SFTP, or even Direct Messaging
 to exchange data.  In the figure below, a hospital pushes data to its own external storage, and public health pulls data from it.
 <div>
 {%include PublicHealthPullFromHospitalStorage.svg%}
