@@ -116,7 +116,7 @@ any known system.  This resource can also be used to report on other types of re
 ventilators, respirators, and N95 masks.
 
 NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
-report on any group of things that can be defined by characteristics, it simply cannot
+report on any group of things that can be defined by characteristics; it simply cannot
 enumerate those resources.  That is not essential for the use cases in this implementation
 guide.
 
