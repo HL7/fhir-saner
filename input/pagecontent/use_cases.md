@@ -11,13 +11,12 @@ The following use cases were used to identify the requirements addressed by this
 These are described in more detail in the sections that follow.
 
 
-### Collecting Hospital and Ventilator Measures
+### Collecting Patient Outcomes and Hospital Capacity
 
 This use case addresses the collection and exchange of data from several information systems in a Facility
 to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
 for multiple data elements by examining messages received and data in its database, and then reports these to a Measure
-Collector
-within the hospital.
+Collector within the hospital.
 
 
 This use case is supported by the following
@@ -34,7 +33,7 @@ This use case is supported by the following
 
   - [Produce Measure](transaction-2.html)
 
-#### Collecting Hospital and Ventilator Measures Process Flow
+#### Patient Outcomes and Hospital Capacity Process Flow
 
 Measure report data can come from multiple systems within a facility. For example, the CDC/NHSN Patient Impact
 and Hospital Capacity Module asks for the following data elements:
