@@ -184,9 +184,7 @@ This use case is supported by the following
 
 #### Accessing Measure Reports Process Flow
 
-In this use case, we see the classic "dashboard" panel, where a public health user
-selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
-to them in an easy to view format.
+In this use case, we see the classic "dashboard" panel, where a public health user selects a region, and one or more measures (or functions of measures) to report on, and the data is presented to them in an easy to view format.
 
 
 <div>
@@ -238,7 +236,7 @@ focus (e.g., wider or smaller region).
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Refined Results</html:span>
 
-   The Measure Repository modifies the users focus and reporting format
+   The Measure Repository modifies the user's focus and reporting format
 
 
 ### Distributing Measure Definitions
