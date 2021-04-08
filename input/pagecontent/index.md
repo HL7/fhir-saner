@@ -110,4 +110,5 @@ at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.
 | John Moehrke | Bylight | Security and Testing Advisor |
 | Austin Kreisler | Leidos | Subject Matter Expert |
 | Josh Mandel | Microsoft | Subject Matter Expert |
+| Abigail Watson | Symptomatic.io |  Subject Matter Expert |
 | David Pyke | Audacious Inquiry | HL7 Liason |
