@@ -100,7 +100,7 @@ used by systems reporting on device quantities or status.
 ##### Location Resource
 While the [Location](https://hl7.org/fhir/R4/location.html) resource can report on beds, it can also be used to describe buildings, wards,
 geographic area, or any other sort of place, including "mobile" places such as a mobile clinic or
-ambulance.  Given its broad application, would need to be profiled to support use for bed availability.
+ambulance.  Given its broad application, the Location resource would need to be profiled to support use for bed availability.
 
 While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's
 little use of the Location resource to report data about beds.  It is more commonly used to report
