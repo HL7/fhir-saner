@@ -8,7 +8,7 @@ to support the treatment of novel influenza-like illness.
 This guide is organized into five main sections:
 
 * Chapter I: Introduction and Overview
-1. [Introduction](introduction.html) - Provides and Introduction to this IG
+1. [Introduction](introduction.html) - Provides an Introduction to this IG
 2. [Measuring Situational Awareness](situational_awareness_measures.html) - Describes situational awareness and how to measure it.
 3. [Use Cases](use_cases.html) - Illustrates Key Uses Cases addressed by this guide.
 * Chapter II: Technical Implementation
@@ -97,3 +97,18 @@ Human Services, or Centers for Disease Control and Prevention. Source materials 
 at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 
 * The SANER Logo was created by Adrian "Kingsley" McDermott, additional imagery by [@RoseFyreWolf](https://www.instagram.com/rosefyrewolf/)
+
+#### Contributors
+
+
+| Name | Organization | Role |
+| --- | --- | --- |
+| Keith Boone | Audacious Inquiry | Project Lead, Lead Devloper |
+| Gino Canessa | Microsoft | Developer |
+| Michael Donnelly | Epic | Developer |
+| Rick Geimer | Lantana | Measure Computer |
+| John Moehrke | Bylight | Security and Testing Advisor |
+| Austin Kreisler | Leidos | Subject Matter Expert |
+| Josh Mandel | Microsoft | Subject Matter Expert |
+| Abigail Watson | Symptomatic.io |  Subject Matter Expert |
+| David Pyke | Audacious Inquiry | HL7 Liason |

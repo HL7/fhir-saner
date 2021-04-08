@@ -6,12 +6,12 @@ of one-off reporting solutions, including operational disruptions to address cha
 Among institutions, barriers to reporting include having available systems to report to,
 and challenges in interfacing to facility Health IT infrastructure and extracting data from EHR systems[^4].
 
-Thus, measures **should** be automatable where feasible, and integratee with existing Health IT system capabilities.
+Thus, measures **should** be automatable where feasible, and integrate with existing Health IT system capabilities.
 Automation of measurement is possible when:
 1. There is a common information model:
    1. A commonly understood information model and terminology that enables data collection requirements to be
       specified consistently across disparate systems, or <br/>
-   2. A general information model which can be eaily adapted via local translations.<br/>
+   2. A general information model which can be easily adapted via local translations.<br/>
 2. There are common workflows that will not significantly impact the interpretation of data.  For example, the workflow
 for reporting that a patient is on a ventilator could rely on orders for ventilation, or on flowsheet observations
 related to ventilator reported measurements.
@@ -47,7 +47,7 @@ components referenced by the Measure.
 ### Data Access for Computation
 Data access is encouraged through one of three mechanisms, all of which rely on core [FHIR search](https://www.hl7.org/fhir/search.html) capabilities.
 These mechanisms are described in order from lowest to highest implementation complexity.
-1. [FHIR Search](http://hl7.org/fhir/R4/search.html) is the basic capability supporing automation. Applications can support counting by using
+1. [FHIR Search](http://hl7.org/fhir/R4/search.html) is the basic capability supporting automation. Applications can support counting by using
 FHIR queries to select appropriate data elements for evaluation, and then compute measures based on the responses.  This is the most limited
 and "chatty" of mechanisms supporting integration, as many servers to not provide search capabilities supporting query across resource
 boundaries using different kinds of joins (e.g., chaining and _has search capabilities). Combining FHIR queries with other FHIR capabilities
@@ -77,7 +77,7 @@ A Measure is defined by the computable criteria contained in definitions for the
 [population](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.population.criteria),
 [stratifier](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.stratifier.criteria) and other criteria components within the measure.
 These criteria elements are defined using the [Expression](https://www.hl7.org/fhir/metadatatypes.html#Expression) datatype.  This datatype
-requires the language used for the criteria to be defined using one of the following values (cooresponding to mechanisms listed in the
+requires the language used for the criteria to be defined using one of the following values (corresponding to mechanisms listed in the
 list above):
 
 1. application/x-fhir-query<br/>
@@ -95,7 +95,7 @@ list above):
    [FHIRPath functions and syntax elements](https://www.hl7.org/fhir/fhirpath.html) defined specifically for FHIR.
 
 3. text/cql<br/>
-   Expressions defines in CQL **shall** conform to the [Clinical Quality Language](https://cql.hl7.org/), and are permitteed to
+   Expressions defines in CQL **shall** conform to the [Clinical Quality Language](https://cql.hl7.org/), and are permitted to
    use CQL modules referenced by one of the [libraries](https://www.hl7.org/fhir/measure-definitions.html#Measure.library)
    referenced by the measure.
 
@@ -144,7 +144,7 @@ The process for measure computation relies on several preconditions:
    with the measure.  This element contains the collection or
    singular numeric result or quantity returned by the evaluation process.
 6. Having evaluated a population, the strata within the population may
-   be computable, but could reequire evaluation of other populations.
+   be computable, but could require evaluation of other populations.
    Evaluation of strata follow a similar pattern to evaluation of
    populations.
 
@@ -152,7 +152,7 @@ The general algorithm is:
 
 Given a Measure, find a population or strata within a group of the measure
 that does not reference an unresolved contextual element. Evaluate that population
-or strata and update the context with the evaluted result. If the population
+or strata and update the context with the evaluated result. If the population
 has strata without an unresolved contextual reference, evaluate its strata.
 
 If there are no more unevaluated populations or strata, then evaluation
@@ -170,8 +170,7 @@ is being corrected.
 #### Resolving Parameters and Computed Content
 Named parameters are essential to support automated measure evaluation. They are used to constrain queries using FHIR Search, FHIRPath
 or CQL in order to limit the data retrieved to that which is relevant for measure computation.  The names of parameters used in Measure resources
-conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a perdiod to must match the
-regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
+conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a period to match the regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
 
 FHIRPath and CQL provide mechanisms to provide named parameters (e.g., reporting period) and collections
 of FHIR resources during their evaluation.
@@ -266,7 +265,7 @@ but returns the day after today() with respect to the date associated with the r
 
 Yesterday
 : This parameter is the day before the "as of date" and is of the FHIR Date data type. It works like the FHIRPath today() function,
-but returns the day before today() with reespeect to the date associated with the report.
+but returns the day before today() with respect to the date associated with the report.
 
 ##### Library Resources
 Attachments in Library resources referenced by a Measure (through Measure.library) are also available as parameters using the name given
@@ -366,10 +365,10 @@ For CQL, this value will be a named parameter in the execution of other CQL Expr
    3. Variables explicitely defined by [this guide](#parameters-defined-in-this-guide), e.g., %_ReportingPeriod_, %_Today_, %_Tomorrow_, %_Yesterday_
    4. Variables which have been named in any [Libary.content](#library-resources) item referenced by the Measure, e.g., %_VentPatients_
    5. Variables which have been identified in other [population.criteria.name](#population-parameters) elements found in the Measure. e.g., %_InitialPop_, %_VentilatedPatients_
-2. Any other parmeters found **should** be reported as a warning, as implementation may agree on additional parmeters.
+2. Any other parmeters found **should** be reported as a warning, as implementation may agree on additional parameters.
 3. No two parameters **shall** be provided in the context of a single measure with the same name having different values.
    NOTE: The same resource may be referenced by two different libraries. So long as the URL and content of the resource is the same, the
-   name given to it in the referenced measure libaries **may** be identical.
+   name given to it in the referenced measure libraries **may** be identical.
    1. More specifically, a Library **shall not** name a resource with any of the names defined by items 1-3 in rule 1 above,
    2. A Measure **shall not** name a criteria with any of the names defined from items 1-4.
    3. Parameter Names **shall not** be duplicated within a measure or library.
@@ -422,4 +421,3 @@ available data through FHIRPath. This helps to eliminate excessive queries to th
 [^3]: Rizi SA, Roudsari A. Development of a public health reporting data warehouse: lessons learned. Stud Health Technol Inform. 2013;192:861-5. PMID: 23920680. Available on the web at http://ebooks.iospress.nl/volumearticle/34122
 
 [^4]: Holmgren AJ, Apathy NC, Adler-Milstein J. Barriers to Hospital Electronic Public Health Reporting and Implications for the COVID-19 Pandemic. J Am Med Inform Assoc. 2020 May 22:ocaa112. doi: 10.1093/jamia/ocaa112. Epub ahead of print. PMID: 32442266. Available on the web at https://pubmed.ncbi.nlm.nih.gov/32442266/
-

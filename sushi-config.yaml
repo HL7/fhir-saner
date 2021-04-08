@@ -65,7 +65,7 @@ pages:
   spec.md:
     title: Specification Details
     generation: markdown
-    architecture.md:
+    Architecture_and_Implementation.md:
       title: Architecture and Implementation
       generation: markdown
     security_considerations.md:

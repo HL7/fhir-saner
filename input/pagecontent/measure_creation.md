@@ -23,7 +23,7 @@ Would be the same as
 FHIRPath Expressions used for this measure will use the functions defined by [FluentQuery](fluent_query.html) defined
 in Appendix B of this guide to make the expressions more readable.
 
-NOTE: The the [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html) may vary slightly from the
+NOTE: The [completed measure](Measure-ComputableCDCPatientImpactAndHospitalCapacity.html) may vary slightly from the
 text in this section.
 
 ### Patient Impact and Hospital Capacity Module Definition
@@ -39,7 +39,7 @@ author and publisher, et cetera.  These components are described in more detail 
 
 #### Author Information
 The measure begins by describing the author and providing contact information using an e-mail address.
-This enables those with access to the measure content to easily contact the organziation which authored
+This enables those with access to the measure content to easily contact the organization which authored
 it.
 ```
  * author.name = "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)"
@@ -59,7 +59,7 @@ the measure.
 ```
 
 #### Measure Name and Title
-Each measure has both a human readable title, and computation oriented name, and a url which uniquely identifies
+Each measure has both a human readable title, and computation oriented name, and a URL which uniquely identifies
 it.
 
 ```
@@ -77,7 +77,7 @@ for implement the measure itself.
  * relatedArtifact[0].label = "NHSN COVID-19 Reporting"  // Descriptive Text to display in a Link
  * relatedArtifact[0].display = "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page" // Title of the link target page
 ```
-Multiple relatedArtifiact elements can be provided, the text above shows only the first of four relatedArtifact
+Multiple relatedArtifact elements can be provided, the text above shows only the first of four relatedArtifact
 entries included in the actual example measure.
 
 #### Measure Library
@@ -111,9 +111,9 @@ Patients on a ventilator are of interest, patients not on a ventilator are a str
 number can be determined mathematically from the data already provided.
 
 Each of the values above is essentially counting an event, an admission to a location, or such admission with the use of ventilator equipment, or a death,
-but are not reporting cumulative totals. These would then be reported as different cohorts with potientially overlapping values.
+but are not reporting cumulative totals. These would then be reported as different cohorts with potentially overlapping values.
 
-Patients who aquired COVID-19 while in the hospital are a separate strata from patients on a ventilator.
+Patients who acquired COVID-19 while in the hospital are a separate strata from patients on a ventilator.
 
 The Venn Diagram below illustrates the different subsets of patients in this measure.
 ![Venn Diagram](venn.png).
@@ -167,7 +167,3 @@ distinguishes it.
 ```
     .where(fieldToStratifyBy = 'ValueToMatch')
 ```
-
-
-
-

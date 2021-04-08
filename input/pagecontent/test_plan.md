@@ -85,10 +85,10 @@ The Measure Computer is a combination of a Measure Definition Consumer and a Mea
 * When the Measure is changed, a new report is created.
 * The updated report matches the expected test values based on the test data.
 
-### CSV Measure Source
-The CSV Measure Source reports results for a single facility, or a collection of facilities using files in Comma Separated Value format.
+### Measure Source using CSV Option
+The Measure Source using CSV Option reports results for a single facility, or a collection of facilities using files in Comma Separated Value format.
 
-#### CSV Measure Source Preparation
+#### Measure Source using CSV Option Preparation
 1. Be able to convert one or more MeasureReport resources into CSV format for the example Measure.
 2. Load realistic sample data into your system to populate a CSV file. <br/>
 These data should be sufficiently distinctive that you can recognize them in a MeasureReport or in someone else's system.
@@ -98,22 +98,22 @@ These data should be sufficiently distinctive that you can recognize them in a M
 6. Respond to the MeasureReport/$search-csv Operation to retrieve one or more MeasureReport resources in CSV format.
 7. Respond to the MeasureReport/$read-csv Operation to read a MeasureReport resource in CSV format.
 
-### CSV Measure Consumer
-The CSV Measure Consumer provides access to aggregated or fine-grained data gathered from one or more Measure Sources using files in Comma Separated Value format.
+### Measure Consumer using CSV Option
+The Measure Consumer using CSV Option provides access to aggregated or fine-grained data gathered from one or more Measure Sources using files in Comma Separated Value format.
 
-#### CSV Measure Consumer Preparation
+#### Measure Consumer using CSV Option Preparation
 1. Be able to parse a MeasureReport resource for the CDC Measure and store it in your system.
 2. Download example resources from this guide.
 3. If you're doing the publication scenario, have a server that supports the [Measure/$report-csv](OperationDefinition-Measure-report-csv.html) operation.
-4. Respond to the the MeasureReport/$convert Operation to convert a CSV file to convert from the CSV format to one or more MeasureReport resources .
-5. Respond to the the MeasureReport/$report Operation to submit a CSV file to create from the CSV format one or more MeasureReport resources.
+4. Respond to the MeasureReport/$convert Operation to convert a CSV file to convert from the CSV format to one or more MeasureReport resources .
+5. Respond to the MeasureReport/$report Operation to submit a CSV file to create from the CSV format one or more MeasureReport resources.
 6. If you're doing the retrieval scenario, have a client that can initiate a [MeasureReport/$search-csv](OperationDefinition-MeasureReport-search-csv.html) and [MeasureReport/$read-csv](OperationDefinition-MeasureReport-read-csv.html) operations.
 7. Send a MeasureReport/$search-csv Operation to retrieve one or more MeasureReport resources in CSV format.
 8. Respond to the MeasureReport/$read-csv Operation to read a MeasureReport resource in CSV format.
 
 ### Integration Test Scenarios
 The following integration test scenarios included in this test place:
-1. Automated Meeasure Computation and Reporting
+1. Automated Measure Computation and Reporting
 2. Exchanging Updated Measure Definitions
 3. Reporting in CSV Format
 4. Accessing MeasureReport Resources in CSV Format
@@ -166,7 +166,7 @@ A Measure Consumer implementing the CSV and Pull options queries a Measure Sourc
 
 #### Accessing MeasureReport Resources in CSV Format Preconditions
 1. The Measure Source implements the Pull and CSV options
-2. The Measure Source has MeasureReport resources loaded to support the Measure reesource being reported upon.
+2. The Measure Source has MeasureReport resources loaded to support the Measure resource being reported upon.
 3. The Measure Consumer implements the Pull and CSV options
 
 #### Success Criteria
@@ -244,7 +244,7 @@ A Measure Intermediary is able to aggregate multiple MeasureReport resources:
 3. Within a facility, collecting data from several reporting systems into a singular MeasureReport containing data from all systems.
 
 #### Aggregate MeasureReport Resources Preconditions
-1. MeasureReport resources are available from a single facility covering a period of 7 consectutive days for different types of Measures (count, point-in-time, and cumulative).
+1. MeasureReport resources are available from a single facility covering a period of 7 consecutive days for different types of Measures (count, point-in-time, and cumulative).
 2. MeasureReport resources are available from multiple facilities within a region (e.g. Cook County, IL, the State of Rhode Island).
 3. MeasureReport resources for the same measure and time period are available within a single facility, covering different sets of data.
 
@@ -255,7 +255,7 @@ A Measure Intermediary is able to aggregate multiple MeasureReport resources:
 
 ### Unit Test Procedures
 Unit Tests in this context is where a system under test is tested against a simulator or validator.  A simulator is a
-implementation of an actor that is designed specifically to test the oposite pair actor. The simulator
+implementation of an actor that is designed specifically to test the opposite pair actor. The simulator
 might be a reference implementation or may be a specially designed test-bench. Where a reference
 implementation is used the negative tests are harder to simulate. A validator is a implementation
 that can check conformance. A validator may be a simulator, but may also be a standalone tool used
@@ -286,7 +286,7 @@ all be handled gracefully in a way appropriate to the SUT functionality.
 #### Measure Consumer
 Unit Tests for Measure Consumer actor test that it can consume valid and invalid content robustly.
 
-##### Postive Test Scenarios
+##### Positive Test Scenarios
 * Measure Consumer provides a CapabilityStatement indicating support of the Measure Consumer actor
 * Submit sample measures from SANER examples are consumed and made available in the Measure Consumer as expected by system functionality
   * [Public Health Measure Examples](StructureDefinition-PublicHealthMeasure-examples.html)
@@ -298,12 +298,11 @@ Negative tests are deliberate deviations from "happy path". They would not all b
 handled gracefully in a way appropriate to the SUT functionality.
 * Submit a non-FHIR data (random data)
   * The receiver should fail (except in the case where allowances have been made for CSV conversion).
-* Submit a valid FHIR Observation (from fhir core one of the examples)
+* Submit a valid FHIR Observation (from FHIR core in one of the examples)
   * e.g., http://hl7.org/fhir/R4/observation-example-f001-glucose.html
   * The receiver should fail, as the resource does not meet the expectations from the API.
 * Submit a valid FHIR Measure that is not SANER compliant (e.g. one of the Measure examples in the Core FHIR specification).
   * e.g., http://hl7.org/fhir/R4/measurereport-cms146-cat3-example.html
-  * The reciever may succeed or fail.  If the receiver as a FHIR Server, it would generally accept resources for a wide variety of use
+  * The receiver may succeed or fail.  If the receiver as a FHIR Server, it would generally accept resources for a wide variety of use
     cases.  A receiver designed specifically to support only those capabilities defined by this guide may reject the submission because
     it does not meet the business rules associated with the use of this endpoint.
-

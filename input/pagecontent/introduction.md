@@ -1,8 +1,7 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of
-high level situational awareness information from initially inpatient facilities to centralized data
+situational awareness information from healthcare facilities to centralized data
 repositories to support the focus and response to novel influenza-like illness, such as COVID-19.
-The COVID-19 pandemic has caused a need to have immediate awareness of available aggregate status,
-outcome, and resource availability for public health and emergency response agencies to support
+The COVID-19 pandemic has caused a need to have immediate awareness of available aggregate facility status, patient outcomes and resource availability for public health and emergency response agencies to support
 monitoring, coordination, and management. Similar outbreaks and other public health emergencies
 can immediately benefit from the work in this project to support public health emergency preparedness
 and response.
@@ -10,8 +9,7 @@ and response.
 ### Scope
 
 The scope of this project is to support reporting of data required by public health and emergency
-response agencies to address management of the COVID-19 Pandemic. The project will address solutions
-that address COVID-19 and similar public health emergencies.
+response agencies to address management of the COVID-19 Pandemic. The project will develop solutions that address COVID-19 and similar public health emergencies.
 
 #### Principles
 The following principles were established for development of this guide:
@@ -22,13 +20,13 @@ The following principles were established for development of this guide:
 requirements needs to be low enough to effectively deliver quickly.
 
 #### Approach
-This guide will focus on existing FHIR Release 4.0 resources with extensions where necessary.
+This guide will focus on existing FHIR Release 4 resources with extensions where necessary.
 The project team assessed past efforts to support situational awareness, including:
 * Existing standards,
 * Existing HL7 FHIR resources, and
 * Terminology
 
-Based on these assessments, this IG prioritized its focus on for supporting bed and ventilator
+Based on these assessments, this IG prioritized its focus on supporting bed and ventilator
 availability, but includes support for other reporting efforts (e.g., PPE supplies, staffing).
 
 #### Assessment
@@ -38,25 +36,25 @@ case data sets and visualizing them addresses national and even regional (at the
 work [^1]<sup>,</sup>[^2]<sup>,</sup>[^3]<sup>,</sup>[^4], but not much prior success, although there
 are existing Health IT solutions that have this data (not just in the EHR).  If the solution can be
 interfaced rather than integrated, an implementation can be piloted much faster.
-3.  Other resource utilization is available in inventory control or central monitoring
+3.  Other resource utilization data is available in inventory control or central monitoring
 solutions, but are not necessarily readily available in the EHR.  This is a natural
 evolution from Bed Availability.
 
 [^1]: [HITSP C47: Resource Utilization Message](http://www.hitsp.org/ConstructSet_Details.aspx?&PrefixAlpha=4&PrefixNumeric=47)
 
-[^2]: [HAvBED2: Hospital Avaialable Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
+[^2]: [HAvBED2: Hospital Available Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
 
-[^3]: [Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) v1.0 incorporating Approved Errata](https://www.oasis-open.org/standards#edxlhave-v1.0)
+[^3]: [Emergency Data Exchange Language (EDXL) Hospital Availability Exchange (HAVE) v1.0 incorporating Approved Errata](https://www.oasis-open.org/standards#edxlhave-v1.0)
 
-[^4]: [HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
+[^4]: [HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital Availability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
 
 
 ##### Bed Availability
 The key data for bed availability is found in Bed Management solutions integrated with
 current inpatient EHR Systems, and in departmental ICU and Central Monitoring systems.
 Such solutions support management of bed assignment for admissions and provide direction to
-housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems
-which provide ICU and Nursing central monitoring capabilities.  They are often separate components
+housekeeping staff regarding bed-turnover activities (e.g., cleaning) or departmental systems,
+that provide ICU and Nursing central monitoring capabilities.  They are often separate components
 or modules, Standalone solutions, or third party solutions which integrate with an
 EHR System.
 
@@ -66,18 +64,16 @@ outlined below.
 
 ###### HAvBED and OASIS EDXL/HAVE Standards
 Most notably, the OASIS Emergency Data Exchange Language (EDXL), and the OASIS Hospital Availability Exchange
-were profiled by ANSI/HITSP in response to the AHIC Emergency Responder Use Case.  This work was advanced by
-AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
+were profiled by ANSI/HITSP in reponse to the American Health Information Community (AHIC)  Emergency Responder Use Case.  This work was advanced by AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
 to collect and report bed availability data.  Health and Human Services suspended the HAvBED program in 2016.
 Some of the challenges with HAvBED included:
 
 * Manually entered data in many automated bed availability systems is labor-intensive, untimely, resulting in data quality issues.
-* Similar issues with to the manual data entry option.
 * Technology standards have evolved, and HAvBED requirements did not keep pace.
 * Facilities and states were often reluctant to share bed availability data.
 
 ###### HL7 Version 2
-Other standards which contain information about bed availability include HL7 Version 2
+Other standards that contain information about bed availability include HL7 Version 2
 (e.g., the [ADT_A20 Bed Status Update](http://www.hl7.eu/refactored/msgADT_A20.html) message),
 and general observations profiled by ANSI/HITSP to support organizational reporting of bed availability using HL7 Version 2 OBX segments.
 
@@ -102,14 +98,12 @@ used by systems reporting on device quantities or status.
 ##### Location Resource
 While the [Location](https://hl7.org/fhir/R4/location.html) resource can report on beds, it can also be used to describe buildings, wards,
 geographic area, or any other sort of place, including "mobile" places such as a mobile clinic or
-ambulance.  Given its broad application, would need to be profiled to support use for bed availability.
+ambulance.  Given its broad application, the Location resource would need to be profiled to support use for bed availability.
 
 While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's
 little use of the Location resource to report data about beds.  It is more commonly used to report
 Location data associated with the
-[Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (now known as the US Core Data for
-Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification
-regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
+[Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (precursor to the US Core Data for Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
 describe the facility where an encounter occurs, the location where a procedure is performed, or
 the location of a practitioner or facility.
 
@@ -120,12 +114,11 @@ any known system.  This resource can also be used to report on other types of re
 ventilators, respirators, and N95 masks.
 
 NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
-report on any group of things that can be defined by characteristics, it simply cannot
+report on any group of things that can be defined by characteristics; it simply cannot
 enumerate those resources.  That is not essential for the use cases in this implementation
 guide.
 
-The Group resource is more lightly deployed in existing EHR products. It is not
-a requirement of the 2015 Certification program.
+The Group resource is more lightly deployed in existing EHR products.
 
 ##### Immunization
 The [Immunization](https://hl7.org/fhir/R4/immunization.html) resource can be used to determine the quantity of immunizations dispensed to
@@ -183,7 +176,7 @@ stratification efforts.
 ##### New Codes
 Until COVID-19 and SARS-Cov-2 were discovered, codes to describe the disease, diagnostic
 tests, antibody tests, or test results did not exist because these concepts did not
-yet exist.  Since then organizations like LOINC, SNOMED and CMS responsible for managing code
+yet exist.  Since then organizations like AMA, WHO, Regenstrief and IHTSDO, responsible for managing code
 systems used by EHR and other Health IT systems have produced codes where needed, and developed value
 sets and guidelines for coding conditions and situations related to COVID-19 including
 diagnosis, evaluation, treatment, procedures, and medications associated with the disease.
@@ -194,4 +187,4 @@ These new codes and guidelines for use of existing codes support:
 * Diagnosis of COVID-19
 * Suspected Diagnosis of COVID-19
 * Suspected or actual Exposure to COVID-19
-
+---------

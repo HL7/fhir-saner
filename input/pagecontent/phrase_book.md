@@ -182,9 +182,9 @@ vary with regard to coding these values?
 Not every discharge is a good outcome. Discharge due to death reqires special handling because of different
 hospital workfows used to track the death of a patient.
 
-1. * The discharge disposition may indicate death in the Encounter.hospitalization.dispositionCode value, or
+1. \* The discharge disposition may indicate death in the Encounter.hospitalization.dispositionCode value, or
 2. The fact that a patient has died (but not when) may appear in Patient.deceasedBoolean, or
-3. * The date of death may appear in Patient.deceasedDateTime, or
+3. \* The date of death may appear in Patient.deceasedDateTime, or
 4. A date of death may be recorded in an Observation for the patient, or
 5. The Location resource referenced by Encounter.hospitalization.destination may indicate a morgue or autopsy
    room in Location.type.
@@ -259,7 +259,7 @@ occured during the encounter (i.e., date of death is >= Encounter.period.start a
 ### For a type of healthcare service (e.g., ED, Observation, Acute, ICU, Outpatient)
 The type of healthcare service may be determined in a couple of different ways depending on hospital workflow:
 
-1. * It may be broadly coded in Encounter.class (e.g., ED, Observation, Acute, ICU, Outpatient), or
+1. \* It may be broadly coded in Encounter.class (e.g., ED, Observation, Acute, ICU, Outpatient), or
 2. Deeply coded in Encounter.serviceClass (more detailed encoding for different kinds of services,
    from which one can infer ED, Observation, et cetera.
 3. Encoded in the Location resource referenced by Encounter.location.location in Location.type, again, from
@@ -268,11 +268,11 @@ The type of healthcare service may be determined in a couple of different ways d
 Many HL7 standards use the HL7 Version 3 Service Delivery Location Role Type vocabulary to describe locations.
 In the US, the [HSLOC Coding System](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest)
 is used to record the type of healthcare service for the HL7 Healthcare Acquired Infections Implementation Guides in both
-(CDA)[https://www.hl7.org/implement/standards/product_brief.cfm?product_id=20] and (FHIR)[http://hl7.org/fhir/us/hai/].
+[CDA](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=20) and [FHIR](http://hl7.org/fhir/us/hai/).
 This coding system supports development of value set that can be used in the expression to identify a location
 supporting a specific type of service.
 
-This guide provides a (ConceptMap)[ConceptMap_ServiceDeliveryLocations.html) that supports mapping between these two vocabularies.
+This guide provides a [ConceptMap](ConceptMap_ServiceDeliveryLocations.html) that supports mapping between these two vocabularies.
 
 <table border='1' cellspacing='0'>
   <caption>Determining the type of service using Encounter resource</caption>
