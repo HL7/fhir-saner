@@ -70,7 +70,6 @@ to collect and report bed availability data.  Health and Human Services suspende
 Some of the challenges with HAvBED included:
 
 * Manually entered data in many automated bed availability systems is labor-intensive, untimely, resulting in data quality issues.
-* Similar issues with to the manual data entry option.
 * Technology standards have evolved, and HAvBED requirements did not keep pace.
 * Facilities and states were often reluctant to share bed availability data.
 
