@@ -1,5 +1,5 @@
 The Situational Awareness for Novel Epidemic Response Implementation Guide enables transmission of
-high level situational awareness information from initially inpatient facilities to centralized data
+situational awareness information from initially inpatient facilities to centralized data
 repositories to support the focus and response to novel influenza-like illness, such as COVID-19.
 The COVID-19 pandemic has caused a need to have immediate awareness of available aggregate status,
 outcome, and resource availability for public health and emergency response agencies to support
