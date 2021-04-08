@@ -35,7 +35,7 @@ The maintenance of the data on the client or server is not specified in this imp
 ### Security and Privacy Risks
 This section includes an enumeration of some of the risks identified for the use-cases covered and justifying the security and privacy mitigations indicated above.
 
-- Risk to re-identification when the Location (region reporting on) is small enough to identify too few individuals (e.g. k-anonymity). For example where a region is so small that the community can re-identify a death because it is the only death in that region with the other indirect identifiers (gender, etc.)
+- Risk to re-identification when the Location (region reporting on) is small enough to identify too few individuals (e.g. k-anonymity); for example, where a region is so small that the community can re-identify a death because it is the only death in that region with the other indirect identifiers (gender, etc.)
 - Risk to reputation of a healthcare facility that is serving a community with increased negative incidents
 - Risk to community reputation -- if a community is harder hit, it may be perceived negatively on that community. People in that community may be targeted by scams and bullied (cyberbullying).
 
