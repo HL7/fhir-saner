@@ -138,14 +138,6 @@ as if it were a report card (as one might receive from a school) describing how 
 on all measured criteria, with each group within the MeasureReport reflecting one of the
 "subject areas" being measured.
 
-Unlike a report card, a Measure Report is not necessarily a grade or an evaluation of
-how well a location is performing its function. The number of patients in the hospital due
-to pandemic is not related to how well the hospital performs, and much more due to other
-factors, such as the density of the local population, or the implementation of appropriate
-responses to contain the pandemic that are outside the control of the location that is
-being measured. These MeasureReport resources should be viewed not as a critique of a given
-facility, rather, as an evaluation of the impact the pandemic is having upon a facility.
-
 This is unlike typical workflows for clinical quality measurement, where measures are assessed
 one measure at a time, and is reflected in the current structure of the MeasureReport resource.
 There is some support in the MeasureReport to support composite measures reporting results
