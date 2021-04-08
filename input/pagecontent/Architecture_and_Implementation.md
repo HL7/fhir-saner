@@ -50,12 +50,7 @@ those capabilities, much like a ground adapter does with two pronged electrical 
 In this guide, the Adapter component is implemented by the [Measure Intermediary](actors.html#measure-intermediary) actor.
 
 ### FHIR Server
-Several off the shelf FHIR Server components exist, which can be stood up in a data center or in the cloud to provide functionality that supports the FHIR Project:  
-* [HAPI on FHIR](https://hapifhir.io/) is a Java-based FHIR Server that is at the core of the [Smile CDR](https://smilecdr.com/) commercial offering.  
-* Microsoft offers the [Azure API for FHIR](https://azure.microsoft.com/en-us/services/azure-api-for-fhir/#overview).  
-* Firely offers [Vonk](https://fire.ly/products/vonk) which has both a free community edition and a commercial product.
-
-HL7 offers a page filled with [Open Source FHIR Server](https://wiki.hl7.org/Open_Source_FHIR_implementations) (and client) implementation software.
+Several off the shelf FHIR Server components exist, which can be stood up in a data center or in the cloud to provide functionality that supports the FHIR Project. HL7 offers a page filled with [Open Source FHIR Servers](https://wiki.hl7.org/Open_Source_FHIR_implementations) (and client) implementation software.
 
 The figure below shows a FHIR Server acting as an Intermediary between a Hospital and Public Health
 <div>
