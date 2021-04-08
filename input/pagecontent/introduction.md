@@ -124,8 +124,7 @@ report on any group of things that can be defined by characteristics, it simply 
 enumerate those resources.  That is not essential for the use cases in this implementation
 guide.
 
-The Group resource is more lightly deployed in existing EHR products. It is not
-a requirement of the 2015 Certification program.
+The Group resource is more lightly deployed in existing EHR products. 
 
 ##### Immunization
 The [Immunization](https://hl7.org/fhir/R4/immunization.html) resource can be used to determine the quantity of immunizations dispensed to
@@ -194,4 +193,3 @@ These new codes and guidelines for use of existing codes support:
 * Diagnosis of COVID-19
 * Suspected Diagnosis of COVID-19
 * Suspected or actual Exposure to COVID-19
-
