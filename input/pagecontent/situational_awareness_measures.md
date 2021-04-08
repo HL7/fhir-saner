@@ -79,8 +79,7 @@ In the ideal world:
 3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
 
 ### Measure Reporting for Situational Awareness
-This implementation guide expands the uses for [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
- resource to report measures of situational awareness to state, local, territorial, regional, and national agencies, including but not limited to state and territorial public health agencies, regional agencies supporting public health or emergency preparedness and response, or national agencies such as the Centers for Disease Control (CDC) and the Federal Emergency Management Agency in the US.
+This implementation guide expands the uses for [MeasureReport](https://hl7.org/fhir/R4/MeasureReport) resource to report measures of situational awareness to state, local, territorial, regional, and national agencies, including but not limited to state and territorial public health agencies, regional agencies supporting public health or emergency preparedness and response, or national agencies such as the Centers for Disease Control (CDC) and the Federal Emergency Management Agency in the US.
 
 #### Measurement in HL7
 For more than the last decade, HL7 and its members have been deeply involved in the evolution
