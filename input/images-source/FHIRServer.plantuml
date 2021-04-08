@@ -1,0 +1,18 @@
+@startuml
+rectangle "FHIR Server (Intermediary)" as MeasureIntermediary {
+agent "Measure Source" as MeasureSource1
+agent "Measure Consumer" as MeasureConsumer1
+MeasureSource1 == MeasureConsumer1
+}
+
+rectangle "Hospital EHR System" {
+agent "Measure Source" as MeasureSource
+MeasureSource -> MeasureConsumer1 : Push with API
+}
+
+rectangle "Public Health Agency" {
+agent "Measure Consumer" as MeasureConsumer
+MeasureConsumer -> MeasureSource1 : Pull with API
+}
+
+@enduml

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Organization xmlns="http://hl7.org/fhir">
-  <id value="NJ-DPH"/>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: NJ-DPH</p><p><b>name</b>: New Jersey Department of Public Health</p></div>
-  </text>
-  <name value="New Jersey Department of Public Health"/>
-</Organization>

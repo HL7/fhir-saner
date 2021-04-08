@@ -1,0 +1,18 @@
+@startuml
+hide footbox
+participant "Measure Computer" as MeasureComputer
+participant "Data Source" as DataSource
+"MeasureComputer" -> "MeasureComputer" : 1. Compute Measure
+activate "MeasureComputer"
+activate "MeasureComputer"
+"MeasureComputer" -> "DataSource" : 2. Gather Measure Data
+activate "DataSource"
+"DataSource" --> "MeasureComputer" : 3. Returns Matching FHIR Resources
+deactivate "DataSource"
+"MeasureComputer" -> "DataSource" : 4. Gather Supplemental Data
+activate "DataSource"
+"DataSource" --> "MeasureComputer" : 5. Returns Supplemental FHIR Resources
+deactivate "DataSource"
+deactivate "MeasureComputer"
+deactivate "MeasureComputer"
+@enduml

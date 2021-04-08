@@ -1,0 +1,18 @@
+@startuml
+title Public Health does Most of the Work
+rectangle "Hospital EHR System" as Hospital {
+agent "Measure Source" as MeasureSource
+}
+rectangle "Public Health Agency" as Agency {
+storage "External Storage" as ExternalStorage
+agent "Measure Intermediary" as MeasureIntermediary
+agent "Measure Consumer" as MeasureConsumer
+}
+
+
+MeasureSource -> ExternalStorage : Push
+ExternalStorage <- MeasureIntermediary : Pull
+MeasureIntermediary <- MeasureConsumer : Pull
+
+
+@enduml

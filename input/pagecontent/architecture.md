@@ -59,27 +59,37 @@ HL7 offers a page filled with [Open Source FHIR Server](https://wiki.hl7.org/Ope
 (and client) implementation software.
 
 The figure below shows a FHIR Server acting as an Intermediary between a Hospital and Public Health
-
-![FHIR Server](FHIRServer.svg)
+<div>
+{%include FHIRServer.svg%}
+<div>
+<!-- ![FHIR Server](FHIRServer.svg) -->
 
 However, a Hospital could simply configure it's own FHIR Server, and Public Health could then pull the data they need from it.
-
-![PublicHealthPullFromHospital](PublicHealthPullFromHospital.svg)
+<div>
+{%include PublicHealthPullFromHospital.svg%}
+<div>
+<!-- ![PublicHealthPullFromHospital](PublicHealthPullFromHospital.svg) -->
 
 Or, Public Health can configure it's own FHIR Server, and a Hospital can push the data to it.
-
-![HospitalPushToPublicHealth](HospitalPushToPublicHealth.svg)
+<div>
+{%include HospitalPushToPublicHealth.svg%}
+<div>
+<!-- ![HospitalPushToPublicHealth](HospitalPushToPublicHealth.svg) -->
 
 ### External Storage
 Deployments can also use external storage, for example a file system, message queue, S3 bucket, Azure Blob Storage, SFTP, or even Direct Messaging
 to exchange data.  In the figure below, a hospital pushes data to its own external storage, and public health pulls data from it.
-
-![Hospital Pushes To its own External Storage](PublicHealthPullFromHospitalStorage.svg)
+<div>
+{%include PublicHealthPullFromHospitalStorage.svg%}
+<div>
+<!-- ![Hospital Pushes To its own External Storage](PublicHealthPullFromHospitalStorage.svg) -->
 
 
 But a hospital might as easily push data to public health's external storage system.
-
-![Hospital Pushes To Public Health Agency's External Storage](HospitalPushToPublicHealthStorage.svg)
+<div>
+{%include HospitalPushToPublicHealthStorage.svg%}
+<div>
+<!-- ![Hospital Pushes To Public Health Agency's External Storage](HospitalPushToPublicHealthStorage.svg) -->
 
 
 ## Deployment
@@ -88,16 +98,21 @@ System components are designed such that they can be individually deployed and c
 The following diagrams depict several different deployments with different responsibilties owned by a Hospital or Public Health Agency
 
 ### Hospital Supported Infrastructure
-
-![Hospital Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-0.svg)
+<div>
+{%include HospitalPushToExternalStorageAdaptedToPullAPI-0.svg%}
+<div>
+<!-- ![Hospital Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-0.svg) -->
 
 
 ### Middle of the Road
-
-![Middle of the Road](HospitalPushToExternalStorageAdaptedToPullAPI-1.svg)
+<div>
+{%include HospitalPushToExternalStorageAdaptedToPullAPI-1.svg%}
+<div>
+<!-- ![Middle of the Road](HospitalPushToExternalStorageAdaptedToPullAPI-1.svg) -->
 
 
 ### Public Health Supported Infrastructure
-
-![Public Health Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-2.svg)
-
+<div>
+{%include HospitalPushToExternalStorageAdaptedToPullAPI-2.svg%}
+<div>
+<!-- ![Public Health Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-2.svg) -->
