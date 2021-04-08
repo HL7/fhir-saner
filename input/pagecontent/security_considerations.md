@@ -14,7 +14,7 @@ Given this assessment, the main Security Considerations are focused on
   data that is published. This functionality is provided by common use of TLS with integrity cyphers such as SHA256.
 - The Confidentiality of the communicated data is not critical, but having it encrypted may prevent unidentified risks. Given that common use of TLS includes
   common use of encryption cyphers such as AES256, this is recommended for consistency sake.
-- The data served by this API may not be considered readily available to all that might request the data. That is that there may be no need for client or
+- The data served by this API may not be considered readily available to all that might request the data. That is, that there may be no need for client or
   app level authentication. This is typical of data that is assessed at [Anonymous READ Access](http://hl7.org/fhir/R4/security.html#Anonymous)
 - The service may choose to request a security token be obtained to provide identity of the client. When a client token is provided the server will have
   more rich information to make an access control decision or record in an audit log.
