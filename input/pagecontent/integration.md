@@ -3,3 +3,4 @@ This chapter describes how the capabilities of this guide can be integrated with
 1. [Technology Environment](technology_environment.html) - Identifies existing information systems containing situational awareness data.
 2. [Integrating via CSV Files](CSV_Conversion.html) - Describes how CSV Conversions are performed.
 3. [Aggregating Data](measure_aggregation.html) - Describes how to aggregate Measure data.
+4. [Computing Measures](measure_automation.html) - Describes automating the computation of Measures
