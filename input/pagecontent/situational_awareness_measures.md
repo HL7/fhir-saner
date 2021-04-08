@@ -72,10 +72,10 @@ published by the National Information Sharing Consortium.
 
 In the ideal world:
 
-1. EEIs will be well defined and understood before a crisis occurs, but may need to evolve as a crisis evolves and more is understood about the emerging
-situation.
-2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response.
-Time spent manually collecting and reporting data that is not automated often suffers in quality[^1].
+1. EEIs will be well defined, understood, and implemented before a crisis occurs, but may need to evolve or be scaled as a crisis evolves and more is understood about the emerging situation.
+
+2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response. Time spent manually collecting and reporting data that is not automated often suffers in quality[^1].
+
 3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
 
 ### Measure Reporting for Situational Awareness
