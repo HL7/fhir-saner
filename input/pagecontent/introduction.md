@@ -75,7 +75,7 @@ Some of the challenges with HAvBED included:
 * Facilities and states were often reluctant to share bed availability data.
 
 ###### HL7 Version 2
-Other standards which contain information about bed availability include HL7 Version 2
+Other standards that contain information about bed availability include HL7 Version 2
 (e.g., the [ADT_A20 Bed Status Update](http://www.hl7.eu/refactored/msgADT_A20.html) message),
 and general observations profiled by ANSI/HITSP to support organizational reporting of bed availability using HL7 Version 2 OBX segments.
 
