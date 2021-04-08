@@ -11,9 +11,7 @@ The process to perform this aggregation is the same for all of the above cases, 
 can be used by an Intermediary to consolidate MeasureReport resources into an aggregated MeasureReport for further processing.
 
 The MeasureReport resource can be used to report on situational awareness not just for individual facilities,
-but also on broader definitions of a locations. Geographic regions such as cities, towns, counties, states,
-provinces, territories, and other ad hoc geographic regions. They can also be used for reporting of non-geographically
-identified groups (e.g., all facilities managed by the same organization).
+but also on geographic regions such as cities, towns, counties, states, provinces, territories, and other ad hoc geographic regions. They can also be used for reporting of non-geographically identified groups (e.g., all facilities managed by the same organization).
 
 Group reports by aggregation region. This implementation guide does not specify how these groupings are created, but there are several mechanisms
 that might be used in an implementation:
