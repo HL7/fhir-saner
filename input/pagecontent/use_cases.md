@@ -196,7 +196,7 @@ to them in an easy to view format.
 
 **Figure 2.3.2.1-1: Accessing Measure Reports Process Flow**
 
-1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</html:span>
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or more Measure Sources</html:span>
 
    The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a
 function with other associated data) from one or more Measure Sources,
@@ -204,7 +204,7 @@ and makes them available through a Measure Source interface it provides.
 
 
    The specific ordering in which gathering and aggregation is performed is not further specified
-by this implementation guide. It is shown as occuring before the user initiates the query here, but could also occur
+by this implementation guide. It is shown as occurring before the user initiates the query here, but could also occur
 after. However, for many cases, geospatial systems can likely do a better job if the aggregation is done ahead of time.
 The application of a function to the data can enable a measure such as # of cases to be combined with other data such as
 population for the area to report # of cases per 10K population, or similar functions to better present data
@@ -217,8 +217,7 @@ in a way that allows it to be reported using comparable scales.
 
 
    The user selects a geographic region and an issue of concern (e.g., beds, ventilators, PPE). The Measure Consumer
-collects the appropriate reports
-and displays the results.
+collects the appropriate reports and displays the results.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Results</html:span>
