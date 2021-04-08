@@ -72,7 +72,7 @@ Given this assessment, the main Security Considerations are focused on:
 
 * Assuring the data communicated is not modified in transit. The consumer of the API can be given assurances that they are retrieving exactly the data that is published. This functionality is provided by common use of TLS with integrity cyphers such as SHA256.
 
-* Encrypting the data. When evaluated or supplemental data is not used, the Confidentiality of the communicated data is not critical, but having it encrypted may prevent unidentified risks. Given that common use of TLS includes common use of encryption cyphers such as AES256, encryption is strongly recommended for consistency sake.
+* Encrypting the data. When evaluated or supplemental data is not used, the Confidentiality of the communicated data is not critical, but having it encrypted may prevent unidentified risks. Given that, common use of TLS includes use of encryption cyphers such as AES256, this is recommended for consistency sake.
 
 * The service may choose to request a security token be obtained to provide identity of the client. When a client token is provided the server will have more rich information to make an access control decision or record in an audit log.
 
