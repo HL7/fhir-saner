@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-ND",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "38"
+    }
+  ],
+  "name": "North Dakota",
+  "position": {
+    "latitude": 47.4501,
+    "longitude": 100.4659
+  }
+}

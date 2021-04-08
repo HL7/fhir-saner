@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-AZ",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "4"
+    }
+  ],
+  "name": "Arizona",
+  "position": {
+    "latitude": 34.2744,
+    "longitude": 111.6602
+  }
+}

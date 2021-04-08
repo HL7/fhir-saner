@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-GA",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "13"
+    }
+  ],
+  "name": "Georgia",
+  "position": {
+    "latitude": 32.6415,
+    "longitude": 83.4426
+  }
+}

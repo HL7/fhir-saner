@@ -1,0 +1,460 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "FEMAReporting-CO-20200305",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "8"
+    }
+  ],
+  "status": "complete",
+  "type": "summary",
+  "measure": "http://hl7.org/fhir/uv/saner/Measure/FEMADailyHospitalCOVID19Reporting",
+  "subject": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+        "extension": [
+          {
+            "url": "latitude",
+            "valueDecimal": 38.9972
+          },
+          {
+            "url": "longitude",
+            "valueDecimal": 105.5478
+          }
+        ]
+      },
+    "reference": "Location/states-CO",
+    "display": "State of Colorado"
+  },
+  "date": "2020-03-05",
+  "reporter": {
+    "reference": "Organization/CO-DPH",
+    "display": "Colorado Department of Public Health"
+  },
+  "period": {
+    "start": "2020-03-05",
+    "end": "2020-03-05"
+  },
+  "group": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "continuous-variable",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "subject",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "ServiceRequest",
+                    "system": "http://hl7.org/fhir/resource-types"
+                  },
+                  {
+                    "code": "252318005",
+                    "system": "http://snomed.info/sct"
+                  }
+                ],
+                "text": "COVID-19 Diagnostic Testing"
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "outcome",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "decrease",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "aggregable-by-period"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "positiveIncreasePercent",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+          }
+        ],
+        "text": "# of new positive test results released / # of total new tests released for previous date queried"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "totalOrdersIncrease",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Midnight to midnight cutoff, tests ordered on previous date queried"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "totalTestResultsIncrease",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "denominator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Midnight to midnight cutoff, test results released on previous date queried"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "positiveIncrease",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "numerator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Midnight to midnight cutoff, positive test results released on previous date queried"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "measureScore": {
+        "_value": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "unknown",
+                    "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                    "display": "Unknown"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes",
+          "extension": [
+            {
+              "url": "scoring",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "continuous-variable",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-scoring"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "subject",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "ServiceRequest",
+                    "system": "http://hl7.org/fhir/resource-types"
+                  },
+                  {
+                    "code": "252318005",
+                    "system": "http://snomed.info/sct"
+                  }
+                ],
+                "text": "COVID-19 Cumulative Diagnostic Testing"
+              }
+            },
+            {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "outcome",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-type"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "improvementNotation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "decrease",
+                    "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "rateAggregation",
+              "valueString": "cumulative"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "positivePercent",
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+          }
+        ],
+        "text": "# of total positive results to released date / # of total tests results released to date"
+      },
+      "population": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "totalOrders",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "initial-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "All tests ordered to date."
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "allReports",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Reports to date including corrected, amended and canceled reports"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "latestReports",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "measure-population",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "Latest Reports to date for each order"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "rejected",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "denominator-exclusion",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "All specimens rejected for testing to date"
+          },
+          "_count": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "unknown",
+                      "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                      "display": "Unknown"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "totalTestResults",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "denominator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "All tests with results released to date"
+          },
+          "count": 19
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "positive",
+                "system": "http://hl7.org/fhir/uv/saner/CodeSystem/PopulationSystem"
+              },
+              {
+                "code": "numerator",
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population"
+              }
+            ],
+            "text": "All positive test results released to date"
+          },
+          "count": 0
+        }
+      ],
+      "measureScore": {
+        "value": 0,
+        "unit": "%",
+        "code": "%"
+      }
+    }
+  ]
+}

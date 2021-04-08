@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<states>
+    <!-- State Geographic Centroids from https://en.wikipedia.org/wiki/List_of_geographic_centers_of_the_United_States -->
+    <state PostalCode="AL" Name="Alabama" Lat="32.7794" Long="86.8287"/>
+    <state PostalCode="AK" Name="Alaska" Lat="64.0685" Long="152.2782"/>
+    <state PostalCode="AZ" Name="Arizona" Lat="34.2744" Long="111.6602"/>
+    <state PostalCode="AR" Name="Arkansas" Lat="34.8938" Long="92.4426"/>
+    <state PostalCode="AS" Name="American Samoa" Lat="-13.851669" Long="169.057621" territory="true"/>
+    <state PostalCode="CA" Name="California" Lat="37.1841" Long="119.4696"/>
+    <state PostalCode="CO" Name="Colorado" Lat="38.9972" Long="105.5478"/>
+    <state PostalCode="CT" Name="Connecticut" Lat="41.6219" Long="72.7273"/>
+    <state PostalCode="DE" Name="Delaware" Lat="38.9896" Long="75.505"/>
+    <state PostalCode="DC" Name="District of Columbia" Lat="28.6305" Long="82.4497"/>
+    <state PostalCode="FL" Name="Florida" Lat="28.6305" Long="82.4497"/>
+    <state PostalCode="FM" Name="Micronesia" territory="true"/>
+    <state PostalCode="GA" Name="Georgia" Lat="32.6415" Long="83.4426"/>
+    <state PostalCode="GU" Name="Guam" territory="true"/>
+    <state PostalCode="HI" Name="Hawaii" Lat="20.2927" Long="156.3737"/>
+    <state PostalCode="ID" Name="Idaho" Lat="44.3509" Long="114.613"/>
+    <state PostalCode="IL" Name="Illinois" Lat="40.0417" Long="89.1965"/>
+    <state PostalCode="IN" Name="Indiana" Lat="39.8942" Long="86.2816"/>
+    <state PostalCode="IA" Name="Iowa" Lat="42.0751" Long="93.496"/>
+    <state PostalCode="KS" Name="Kansas" Lat="38.4937" Long="98.3804"/>
+    <state PostalCode="KY" Name="Kentucky" Lat="37.5347" Long="85.3021"/>
+    <state PostalCode="LA" Name="Louisiana" Lat="31.0689" Long="91.9968"/>
+    <state PostalCode="ME" Name="Maine" Lat="45.3695" Long="69.2428"/>
+    <state PostalCode="MD" Name="Maryland" Lat="39.055" Long="76.7909"/>
+    <state PostalCode="MA" Name="Massachusetts" Lat="42.2596" Long="71.8083"/>
+    <state PostalCode="MI" Name="Michigan" Lat="44.3467" Long="85.4102"/>
+    <state PostalCode="MH" Name="Marshall Islands" territory="true"/>
+    <state PostalCode="MN" Name="Minnesota" Lat="46.2807" Long="94.3053"/>
+    <state PostalCode="MS" Name="Mississippi" Lat="32.7364" Long="89.6678"/>
+    <state PostalCode="MO" Name="Missouri" Lat="38.3566" Long="92.458"/>
+    <state PostalCode="MP" Name="Northern Marianas" territory="true"/>
+    <state PostalCode="MT" Name="Montana" Lat="47.0527" Long="109.6333"/>
+    <state PostalCode="NE" Name="Nebraska" Lat="41.5378" Long="99.7951"/>
+    <state PostalCode="NV" Name="Nevada" Lat="39.3289" Long="116.6312"/>
+    <state PostalCode="NH" Name="New Hampshire" Lat="43.6805" Long="71.5811"/>
+    <state PostalCode="NJ" Name="New Jersey" Lat="40.1907" Long="74.6728"/>
+    <state PostalCode="NM" Name="New Mexico" Lat="34.4071" Long="106.1126"/>
+    <state PostalCode="NY" Name="New York" Lat="42.9538" Long="75.5268"/>
+    <state PostalCode="NC" Name="North Carolina" Lat="35.5557" Long="79.3877"/>
+    <state PostalCode="ND" Name="North Dakota" Lat="47.4501" Long="100.4659"/>
+    <state PostalCode="OH" Name="Ohio" Lat="40.2862" Long="82.7937"/>
+    <state PostalCode="OK" Name="Oklahoma" Lat="35.5889" Long="97.4943"/>
+    <state PostalCode="OR" Name="Oregon" Lat="43.9336" Long="120.5583"/>
+    <state PostalCode="PA" Name="Pennsylvania" Lat="40.8781" Long="77.7996"/>
+    <state PostalCode="PW" Name="Palau" territory="true"/>
+    <state PostalCode="RI" Name="Rhode Island" Lat="41.6762" Long="71.5562"/>
+    <state PostalCode="SC" Name="South Carolina" Lat="33.9169" Long="80.8964"/>
+    <state PostalCode="SD" Name="South Dakota" Lat="44.4443" Long="100.2263"/>
+    <state PostalCode="TN" Name="Tennessee" Lat="35.858" Long="86.3505"/>
+    <state PostalCode="TX" Name="Texas" Lat="31.4757" Long="99.3312"/>
+    <state PostalCode="UT" Name="Utah" Lat="39.3055" Long="111.6703"/>
+    <state PostalCode="VI" Name="Virgin Islands" territory="true"/>
+    <state PostalCode="VT" Name="Vermont" Lat="44.0687" Long="72.6658"/>
+    <state PostalCode="VA" Name="Virginia" Lat="37.5215" Long="78.8537"/>
+    <state PostalCode="WA" Name="Washington" Lat="47.3826" Long="120.4472"/>
+    <state PostalCode="WV" Name="West Virginia" Lat="38.6409" Long="80.6227"/>
+    <state PostalCode="WI" Name="Wisconsin" Lat="44.6243" Long="89.9941"/>
+    <state PostalCode="WY" Name="Wyoming" Lat="42.9957" Long="107.5512"/>
+</states>

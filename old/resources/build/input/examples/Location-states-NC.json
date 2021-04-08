@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-NC",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "37"
+    }
+  ],
+  "name": "North Carolina",
+  "position": {
+    "latitude": 35.5557,
+    "longitude": 79.3877
+  }
+}

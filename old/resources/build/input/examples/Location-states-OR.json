@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-OR",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "41"
+    }
+  ],
+  "name": "Oregon",
+  "position": {
+    "latitude": 43.9336,
+    "longitude": 120.5583
+  }
+}

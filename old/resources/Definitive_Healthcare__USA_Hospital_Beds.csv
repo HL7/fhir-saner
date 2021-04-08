@@ -1,0 +1,66 @@
+﻿X,Y,OBJECTID,HOSPITAL_NAME,HOSPITAL_TYPE,HQ_ADDRESS,HQ_ADDRESS1,HQ_CITY,HQ_STATE,HQ_ZIP_CODE,COUNTY_NAME,STATE_NAME,STATE_FIPS,CNTY_FIPS,FIPS,NUM_LICENSED_BEDS,NUM_STAFFED_BEDS,NUM_ICU_BEDS,ADULT_ICU_BEDS,PEDI_ICU_BEDS,BED_UTILIZATION,Potential_Increase_In_Bed_Capac,AVG_VENTILATOR_USAGE
+-74.59448,39.32036,2468,Shore Medical Center (FKA Shore Memorial Hospital),Short Term Acute Care Hospital,100 Medical Center Way,,Somers Point,NJ,8244,Atlantic,New Jersey,34,1,34001,203,199,16,16,0,0.430316,4,7
+-74.4342891,39.3583314,2469,AtlantiCare Regional Medical Center - Atlantic City Campus,Short Term Acute Care Hospital,1925 Pacific Ave,,Atlantic City,NJ,8401,Atlantic,New Jersey,34,1,34001,244,540,38,38,22,0.6683105,-296,24
+-73.9686632,40.9041892,2470,Englewood Hospital and Medical Center (AKA Englewood Health),Short Term Acute Care Hospital,350 Engle St,,Englewood,NJ,7631,Bergen,New Jersey,34,3,34003,531,275,26,26,11,0.6626487,256,10
+-74.0632065,40.9569233,2471,Bergen New Bridge Medical Center (FKA Bergen Regional Medical Center),Short Term Acute Care Hospital,230 E Ridgewood Ave,,Paramus,NJ,7652,Bergen,New Jersey,34,3,34003,496,127,9,9,0,0.577737,369,3
+-74.0106982,40.8831082,2472,Holy Name Medical Center (AKA Holy Name Health),Short Term Acute Care Hospital,718 Teaneck Rd,,Teaneck,NJ,7666,Bergen,New Jersey,34,3,34003,372,284,19,19,0,0.590739,88,6
+-74.0565417,40.8840335,2473,Hackensack University Medical Center,Short Term Acute Care Hospital,30 Prospect Ave,,Hackensack,NJ,7601,Bergen,New Jersey,34,3,34003,781,687,35,35,40,0.8279994,94,29
+-74.100692,40.9835909,2474,The Valley Hospital (AKA Valley Health System),Short Term Acute Care Hospital,223 N Van Dien Ave,,Ridgewood,NJ,7450,Bergen,New Jersey,34,3,34003,446,363,14,14,0,0.6296409,83,23
+-74.5851859,39.9775118,2475,Deborah Heart and Lung Center,Short Term Acute Care Hospital,200 Trenton Rd,,Browns Mills,NJ,8015,Burlington,New Jersey,34,5,34005,89,86,24,24,0,0.6511665,3,3
+-74.7949847,39.9860186,2476,Virtua Memorial Hospital (FKA Virtua Memorial Hospital of Burlington County),Short Term Acute Care Hospital,175 Madison Ave,,Mount Holly,NJ,8060,Burlington,New Jersey,34,5,34005,383,317,38,38,0,0.5885831,66,12
+-74.8808324,40.0466266,2477,Virtua Willingboro Hospital (FKA Lourdes Medical Center of Burlington County),Short Term Acute Care Hospital,218 Sunset Rd,,Willingboro,NJ,8046,Burlington,New Jersey,34,5,34005,169,124,20,20,0,0.6589041,45,6
+-75.008266,39.8281678,2478,Jefferson Stratford Hospital (FKA Kennedy University Hospital - Stratford),Short Term Acute Care Hospital,18 E Laurel Rd,,Stratford,NJ,8084,Camden,New Jersey,34,7,34007,181,522,67,67,0,0.6585064,-341,36
+-75.0949231,39.9279261,2479,Virtua Our Lady of Lourdes Hospital,Short Term Acute Care Hospital,1600 Haddon Ave,,Camden,NJ,8103,Camden,New Jersey,34,7,34007,340,257,21,21,16,0.5654414,83,13
+-75.1161353,39.9410298,2480,Cooper University Hospital (AKA Cooper University Health Care),Short Term Acute Care Hospital,1 Cooper Plz,,Camden,NJ,8103,Camden,New Jersey,34,7,34007,635,574,30,30,32,0.7062792,61,20
+-74.8168994,39.0874828,2481,Cape Regional Health System (AKA Cape Regional Medical Center),Short Term Acute Care Hospital,2 Stone Harbor Blvd,,Cape May Court House,NJ,8210,Cape May,New Jersey,34,9,34009,242,149,16,16,0,0.4329503,93,6
+-75.0584681,39.44534,2482,Inspira Medical Center Vineland (FKA South Jersey Healthcare Regional Medical Center),Short Term Acute Care Hospital,1505 W Sherman Ave,,Vineland,NJ,8360,Cumberland,New Jersey,34,11,34011,335,280,24,24,0,0.6759295,55,15
+-74.2361139,40.752661,2483,VA New Jersey Health Care System - East Orange Campus (AKA East Orange VA Medical Center),VA Hospital,385 Tremont Ave,,East Orange,NJ,7018,Essex,New Jersey,34,13,34013,,,1,1,,,0,1
+-74.2136147,40.7102476,2484,Newark Beth Israel Medical Center,Short Term Acute Care Hospital,201 Lyons Ave,,Newark,NJ,7112,Essex,New Jersey,34,13,34013,667,442,35,35,67,0.7236038,225,16
+-74.1764487,40.7856535,2485,Clara Maass Medical Center,Short Term Acute Care Hospital,1 Clara Maass Dr,,Belleville,NJ,7109,Essex,New Jersey,34,13,34013,472,280,32,32,0,0.6394325,192,11
+-74.2138513,40.7545333,2486,East Orange General Hospital,Short Term Acute Care Hospital,300 Central Ave,,East Orange,NJ,7018,Essex,New Jersey,34,13,34013,188,159,15,15,0,0.4352546,29,6
+-74.3047629,40.7631494,2487,Saint Barnabas Medical Center,Short Term Acute Care Hospital,94 Old Short Hills Rd,,Livingston,NJ,7039,Essex,New Jersey,34,13,34013,585,552,46,46,56,0.7483869,33,14
+-74.2055733,40.8101189,2488,Hackensack Meridian Health Mountainside Medical Center,Short Term Acute Care Hospital,1 Bay Ave,,Montclair,NJ,7042,Essex,New Jersey,34,13,34013,357,185,16,16,4,0.5924917,172,7
+-74.1747061,40.7438855,2489,Saint Michaels Medical Center,Short Term Acute Care Hospital,111 Central Ave,,Newark,NJ,7102,Essex,New Jersey,34,13,34013,358,147,30,30,0,0.6493896,211,12
+-74.1910884,40.7406294,2490,The University Hospital (FKA UMDNJ University Hospital),Short Term Acute Care Hospital,150 Bergen St,,Newark,NJ,7103,Essex,New Jersey,34,13,34013,519,355,41,41,42,0.7492031,164,13
+-75.1499467,39.8440659,2491,Inspira Medical Center Woodbury (FKA Underwood Memorial Hospital),Short Term Acute Care Hospital,509 N Broad St,,Woodbury,NJ,8096,Gloucester,New Jersey,34,15,34015,311,233,14,14,0,0.4378505,78,8
+-74.0503916,40.7163016,2492,Jersey City Medical Center,Short Term Acute Care Hospital,355 Grand St,,Jersey City,NJ,7302,Hudson,New Jersey,34,17,34017,302,272,18,18,41,0.6787168,30,7
+-74.0338197,40.7407752,2493,Hoboken University Medical Center,Short Term Acute Care Hospital,308 Willow Ave,,Hoboken,NJ,7030,Hudson,New Jersey,34,17,34017,284,117,15,15,0,0.4612575,167,3
+-73.9964049,40.7937964,2494,Palisades Medical Center,Short Term Acute Care Hospital,7600 River Rd,,North Bergen,NJ,7047,Hudson,New Jersey,34,17,34017,206,202,10,10,0,0.5217415,4,6
+-74.0497949,40.7342535,2495,Christ Hospital,Short Term Acute Care Hospital,176 Palisade Ave,,Jersey City,NJ,7306,Hudson,New Jersey,34,17,34017,350,178,18,18,0,0.6773891,172,5
+-74.1131495,40.6681933,2496,Bayonne Medical Center,Short Term Acute Care Hospital,29 E 29th St,,Bayonne,NJ,7002,Hudson,New Jersey,34,17,34017,244,131,14,14,0,0.5043174,113,5
+-74.0734305,40.7917444,2497,Hudson Regional Hospital (FKA Meadowlands Hospital Medical Center),Short Term Acute Care Hospital,55 Meadowlands Pkwy,,Secaucus,NJ,7094,Hudson,New Jersey,34,17,34017,204,102,14,14,0,0.2160613,102,2
+-74.86113,40.5314853,2498,Hunterdon Medical Center (AKA Hunterdon Healthcare),Short Term Acute Care Hospital,2100 Wescott Dr,,Flemington,NJ,8822,Hunterdon,New Jersey,34,19,34019,184,170,12,12,0,0.5685115,14,9
+-74.6240079,40.3398191,2499,Princeton Medical Center (FKA University Medical Center of Princeton at Plainsboro),Short Term Acute Care Hospital,1 Plainsboro Rd,,Plainsboro,NJ,8536,Middlesex,New Jersey,34,23,34023,429,206,24,24,0,0.7410427,223,13
+-74.741205,40.2166342,2500,St Francis Medical Center,Short Term Acute Care Hospital,601 Hamilton Ave,,Trenton,NJ,8629,Mercer,New Jersey,34,21,34021,231,134,12,12,0,0.4591495,97,4
+-74.8076198,40.2945988,2501,Capital Health Medical Center - Hopewell,Short Term Acute Care Hospital,1 Capital Way,,Pennington,NJ,8534,Mercer,New Jersey,34,21,34021,221,145,16,16,0,0.8841568,76,4
+-74.6720664,40.2161213,2502,RWJ University Hospital Hamilton,Short Term Acute Care Hospital,1 Hamilton Health Pl,,Hamilton,NJ,8690,Mercer,New Jersey,34,21,34021,248,152,20,20,0,0.6322639,96,8
+-74.7518116,40.2359137,2503,Capital Health Regional Medical Center,Short Term Acute Care Hospital,750 Brunswick Ave,,Trenton,NJ,8638,Mercer,New Jersey,34,21,34021,237,134,32,32,0,0.8402371,103,7
+-74.3508341,40.5567643,2504,JFK Medical Center,Short Term Acute Care Hospital,65 James St,,Edison,NJ,8820,Middlesex,New Jersey,34,23,34023,498,357,63,63,0,0.6831434,141,17
+-74.4594521,40.5015232,2505,Saint Peters University Hospital,Short Term Acute Care Hospital,254 Easton Ave,,New Brunswick,NJ,8901,Middlesex,New Jersey,34,23,34023,478,353,28,28,62,0.6079087,125,9
+-74.4498466,40.4953282,2506,Robert Wood Johnson University Hospital New Brunswick,Short Term Acute Care Hospital,1 Robert Wood Johnson Pl,,New Brunswick,NJ,8901,Middlesex,New Jersey,34,23,34023,600,600,44,44,42,0.7499034,0,29
+-74.2818674,40.5188431,2507,Raritan Bay Medical Center - Perth Amboy,Short Term Acute Care Hospital,530 New Brunswick Ave,,Perth Amboy,NJ,8861,Middlesex,New Jersey,34,23,34023,365,388,29,29,0,0.520294,-23,7
+-74.0407767,40.2075024,2508,Jersey Shore University Medical Center,Short Term Acute Care Hospital,1945 Route 33,,Neptune,NJ,7753,Monmouth,New Jersey,34,25,34025,618,597,37,37,44,0.6656387,21,21
+-73.9856012,40.2950943,2509,Monmouth Medical Center,Short Term Acute Care Hospital,300 2nd Ave,,Long Branch,NJ,7740,Monmouth,New Jersey,34,25,34025,514,279,23,23,31,0.5416703,235,8
+-74.3131045,40.2368406,2510,CentraState Medical Center,Short Term Acute Care Hospital,901 W Main St,,Freehold,NJ,7728,Monmouth,New Jersey,34,25,34025,284,264,25,25,0,0.5822541,20,13
+-74.1917012,40.4054853,2511,Bayshore Medical Center (FKA Bayshore Community Hospital),Short Term Acute Care Hospital,727 N Beers St,,Holmdel,NJ,7733,Monmouth,New Jersey,34,25,34025,211,169,16,16,0,0.6068574,42,10
+-74.0639766,40.3536779,2512,Riverview Medical Center,Short Term Acute Care Hospital,1 Riverview Plz,,Red Bank,NJ,7701,Monmouth,New Jersey,34,25,34025,468,274,27,27,0,0.5583042,194,7
+-74.3080801,40.9592284,2513,Chilton Medical Center,Short Term Acute Care Hospital,97 W Parkway,,Pompton Plains,NJ,7444,Morris,New Jersey,34,27,34027,260,175,12,12,4,0.6023953,85,8
+-74.4655683,40.7896261,2514,Morristown Medical Center,Short Term Acute Care Hospital,100 Madison Ave,,Morristown,NJ,7960,Morris,New Jersey,34,27,34027,657,614,44,44,34,0.7968676,43,23
+-74.4656599,40.8953079,2515,Saint Clares Denville Hospital,Short Term Acute Care Hospital,25 Pocono Rd,,Denville,NJ,7834,Morris,New Jersey,34,27,34027,314,264,41,41,0,0.4397977,50,14
+-74.1312932,40.0771073,2516,Ocean Medical Center,Short Term Acute Care Hospital,425 Jack Martin Blvd,,Brick,NJ,8724,Ocean,New Jersey,34,29,34029,317,318,24,24,0,0.6331869,-1,15
+-74.2156583,39.9642549,2517,Community Medical Center,Short Term Acute Care Hospital,99 Highway 37 W,,Toms River,NJ,8755,Ocean,New Jersey,34,29,34029,592,424,50,50,0,0.6616439,168,16
+-74.285275,39.7210809,2518,Southern Ocean Medical Center,Short Term Acute Care Hospital,1140 Route 72 W,,Manahawkin,NJ,8050,Ocean,New Jersey,34,29,34029,156,154,12,12,0,0.4652197,2,6
+-74.2186842,40.0730373,2519,Monmouth Medical Center Southern Campus,Short Term Acute Care Hospital,600 River Ave,,Lakewood,NJ,8701,Ocean,New Jersey,34,29,34029,241,201,20,20,0,0.4900157,40,6
+-74.1661378,40.9022582,2520,St Josephs University Medical Center (FKA St Josephs Regional Medical Center),Short Term Acute Care Hospital,703 Main St,,Paterson,NJ,7503,Passaic,New Jersey,34,31,34031,651,678,28,28,56,0.7317654,-27,25
+-74.1372832,40.8590505,2521,St Marys General Hospital,Short Term Acute Care Hospital,350 Boulevard,,Passaic,NJ,7055,Passaic,New Jersey,34,31,34031,269,145,25,25,0,0.5709589,124,6
+-75.4445128,39.5940226,2522,Salem Medical Center (FKA the Memorial Hospital of Salem County),Short Term Acute Care Hospital,310 Woodstown Rd,,Salem,NJ,8079,Salem,New Jersey,34,33,34033,126,126,12,12,0,0.1969897,0,5
+-75.180292,39.587857,2523,Inspira Medical Center Elmer (FKA South Jersey Healthcare - Elmer Hospital),Short Term Acute Care Hospital,501 Front St,,Elmer,NJ,8318,Salem,New Jersey,34,33,34033,96,83,7,7,0,0.3682456,13,2
+-74.5950225,40.5681075,2524,RWJ University Hospital Somerset (FKA Somerset Medical Center),Short Term Acute Care Hospital,110 Rehill Ave,,Somerville,NJ,8876,Somerset,New Jersey,34,35,34035,311,281,28,28,0,0.5713937,30,10
+-74.7682688,41.0578686,2525,Newton Medical Center,Short Term Acute Care Hospital,175 High St,,Newton,NJ,7860,Sussex,New Jersey,34,37,34037,148,130,10,10,0,0.7139304,18,6
+-74.2141265,40.6597934,2526,Trinitas Regional Medical Center,Short Term Acute Care Hospital,225 Williamson St,,Elizabeth,NJ,7202,Union,New Jersey,34,39,34039,407,220,25,25,0,0.5963014,187,10
+-74.2911039,40.6129663,2527,RWJ University Hospital Rahway,Short Term Acute Care Hospital,865 Stone St,,Rahway,NJ,7065,Union,New Jersey,34,39,34039,251,122,21,21,0,0.5659331,129,9
+-74.3536189,40.7121248,2528,Overlook Medical Center,Short Term Acute Care Hospital,99 Beauvoir Ave,,Summit,NJ,7901,Union,New Jersey,34,39,34039,504,443,30,30,15,0.5656328,61,10
+-75.178597,40.702113,2529,St Lukes Warren Campus (FKA Warren Hospital),Short Term Acute Care Hospital,185 Roseberry St,,Phillipsburg,NJ,8865,Warren,New Jersey,34,41,34041,198,92,12,12,0,0.5018463,106,3
+-74.8158027,40.8619382,2530,Hackettstown Medical Center,Short Term Acute Care Hospital,651 Willow Grove St,,Hackettstown,NJ,7840,Warren,New Jersey,34,41,34041,111,64,8,8,0,0.5796561,47,4
+-74.7336705,40.2927431,6007,Al Rashid Health and Wellness Center,Short Term Acute Care Hospital,2500 Main St,,Lawrenceville,NJ,8648,Mercer,New Jersey,34,21,34021,18,18,3,3,,,0,0
+,,,,,,,,,,,,,,,21707,16913,1536,1536,619,37.0533642,4794,673

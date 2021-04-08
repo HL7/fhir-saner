@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-SC",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "45"
+    }
+  ],
+  "name": "South Carolina",
+  "position": {
+    "latitude": 33.9169,
+    "longitude": 80.8964
+  }
+}

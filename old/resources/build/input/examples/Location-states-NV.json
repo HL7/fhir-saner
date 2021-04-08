@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-NV",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "32"
+    }
+  ],
+  "name": "Nevada",
+  "position": {
+    "latitude": 39.3289,
+    "longitude": 116.6312
+  }
+}

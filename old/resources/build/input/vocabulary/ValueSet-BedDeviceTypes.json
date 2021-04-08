@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BedDeviceTypes",
+  "id": "BedDeviceTypes",
+  "title": "Bed Device Types",
+  "description": "Codes used to identify beds",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/uv/saner/ValueSet/BedDeviceTypes"
+}

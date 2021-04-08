@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-MI",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "26"
+    }
+  ],
+  "name": "Michigan",
+  "position": {
+    "latitude": 44.3467,
+    "longitude": 85.4102
+  }
+}

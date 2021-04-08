@@ -1,0 +1,130 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "LocationFields",
+  "id": "LocationFields",
+  "title": "Location Resource Field Names",
+  "description": "This Coding System identifies legal field names in a FHIR R4 Location Resource.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/StructureDefinition/Device",
+  "concept": [
+    {
+      "code": "Location"
+    },
+    {
+      "code": "Location.id"
+    },
+    {
+      "code": "Location.meta"
+    },
+    {
+      "code": "Location.implicitRules"
+    },
+    {
+      "code": "Location.language"
+    },
+    {
+      "code": "Location.text"
+    },
+    {
+      "code": "Location.contained"
+    },
+    {
+      "code": "Location.extension"
+    },
+    {
+      "code": "Location.modifierExtension"
+    },
+    {
+      "code": "Location.identifier"
+    },
+    {
+      "code": "Location.status"
+    },
+    {
+      "code": "Location.operationalStatus"
+    },
+    {
+      "code": "Location.name"
+    },
+    {
+      "code": "Location.alias"
+    },
+    {
+      "code": "Location.description"
+    },
+    {
+      "code": "Location.mode"
+    },
+    {
+      "code": "Location.type"
+    },
+    {
+      "code": "Location.telecom"
+    },
+    {
+      "code": "Location.address"
+    },
+    {
+      "code": "Location.physicalType"
+    },
+    {
+      "code": "Location.position"
+    },
+    {
+      "code": "Location.position.id"
+    },
+    {
+      "code": "Location.position.extension"
+    },
+    {
+      "code": "Location.position.modifierExtension"
+    },
+    {
+      "code": "Location.position.longitude"
+    },
+    {
+      "code": "Location.position.latitude"
+    },
+    {
+      "code": "Location.position.altitude"
+    },
+    {
+      "code": "Location.managingOrganization"
+    },
+    {
+      "code": "Location.partOf"
+    },
+    {
+      "code": "Location.hoursOfOperation"
+    },
+    {
+      "code": "Location.hoursOfOperation.id"
+    },
+    {
+      "code": "Location.hoursOfOperation.extension"
+    },
+    {
+      "code": "Location.hoursOfOperation.modifierExtension"
+    },
+    {
+      "code": "Location.hoursOfOperation.daysOfWeek"
+    },
+    {
+      "code": "Location.hoursOfOperation.allDay"
+    },
+    {
+      "code": "Location.hoursOfOperation.openingTime"
+    },
+    {
+      "code": "Location.hoursOfOperation.closingTime"
+    },
+    {
+      "code": "Location.availabilityExceptions"
+    },
+    {
+      "code": "Location.endpoint"
+    }
+  ]
+}

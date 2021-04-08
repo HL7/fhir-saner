@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-NH",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "33"
+    }
+  ],
+  "name": "New Hampshire",
+  "position": {
+    "latitude": 43.6805,
+    "longitude": 71.5811
+  }
+}

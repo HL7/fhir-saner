@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-SD",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "46"
+    }
+  ],
+  "name": "South Dakota",
+  "position": {
+    "latitude": 44.4443,
+    "longitude": 100.2263
+  }
+}

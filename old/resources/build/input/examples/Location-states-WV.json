@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-WV",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "54"
+    }
+  ],
+  "name": "West Virginia",
+  "position": {
+    "latitude": 38.6409,
+    "longitude": 80.6227
+  }
+}

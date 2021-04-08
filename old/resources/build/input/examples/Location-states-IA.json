@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-IA",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "19"
+    }
+  ],
+  "name": "Iowa",
+  "position": {
+    "latitude": 42.0751,
+    "longitude": 93.496
+  }
+}

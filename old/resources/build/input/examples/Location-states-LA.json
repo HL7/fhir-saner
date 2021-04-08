@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-LA",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "22"
+    }
+  ],
+  "name": "Louisiana",
+  "position": {
+    "latitude": 31.0689,
+    "longitude": 91.9968
+  }
+}

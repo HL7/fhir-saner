@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-KS",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "20"
+    }
+  ],
+  "name": "Kansas",
+  "position": {
+    "latitude": 38.4937,
+    "longitude": 98.3804
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "Location",
+  "id": "states-ME",
+  "identifier": [
+    {
+      "system": "https://www.census.gov/geographies",
+      "value": "23"
+    }
+  ],
+  "name": "Maine",
+  "position": {
+    "latitude": 45.3695,
+    "longitude": 69.2428
+  }
+}
