@@ -80,7 +80,6 @@ situation.
 Time spent manually collecting and reporting data that is not automated often suffers in quality[^1].
 3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
 
-
 ### Measure Reporting for Situational Awareness
 This implementation guide expands the uses for [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
 resource to report measures of situational awareness to regional and national agencies, including regional agencies
@@ -134,22 +133,6 @@ official sources for reporting.</caption>
 </tr>
 </tbody>
 </table>
-
-
-#### Conceptual Model
-Each of the entries in these spreadsheets or forms is measure or count of groups
-of things such as available beds, ventilators, tests ordered, et cetera.  The completed
-spreadsheet or form is a Measure Report.  Accompanying instructions describe (to a human)
-what to include in a group.  A conceptual model of these artifacts appears below.
-
-![Conceptual Model](ConceptualModel.svg)
-
-The HL7 FHIR standard has similarly named resources that perform the same functions.
-A more detailed model about how these are related follows.
-* [MeasureReport](https://hl7.org/fhir/R4/MeasureReport)
-* [Measure](https://hl7.org/fhir/R4/Measure)
-
-![Model](Model.svg)
 
 ### Measurement Reporting Approach
 The approach of this IG to measurement is to capture all measurements reported to a single
