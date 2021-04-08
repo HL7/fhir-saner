@@ -75,7 +75,7 @@ In the ideal world:
 
 1. EEIs will be well defined, understood, and implemented before a crisis occurs, but may need to evolve or be scaled as a crisis evolves and more is understood about the emerging situation.
 
-2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response. Time spent manually collecting and reporting data that is not automated often suffers in quality.
+2. Systems that have EEIs will be able to automatically collect and report them to organizations responsible for emergency response. Time spent manually collecting and reporting data that is not automated often suffers in quality.
 
 3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
 
