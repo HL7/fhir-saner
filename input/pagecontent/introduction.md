@@ -9,8 +9,7 @@ and response.
 ### Scope
 
 The scope of this project is to support reporting of data required by public health and emergency
-response agencies to address management of the COVID-19 Pandemic. The project will address solutions
-that address COVID-19 and similar public health emergencies.
+response agencies to address management of the COVID-19 Pandemic. The project will develop solutions that address COVID-19 and similar public health emergencies.
 
 #### Principles
 The following principles were established for development of this guide:
