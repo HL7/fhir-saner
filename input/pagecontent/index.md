@@ -97,3 +97,17 @@ Human Services, or Centers for Disease Control and Prevention. Source materials 
 at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 
 * The SANER Logo was created by Adrian "Kingsley" McDermott, additional imagery by [@RoseFyreWolf](https://www.instagram.com/rosefyrewolf/)
+
+#### Contributors
+
+
+| Name | Organization | Role |
+| --- | --- | --- |
+| Keith Boone | Audacious Inquiry | Project Lead, Lead Devloper |
+| Gino Canessa | Microsoft | Developer |
+| Michael Donnelly | Epic | Developer |
+| Rick Geimer | Lantana | Measure Computer |
+| John Moehrke | Bylight | Security and Testing Advisor |
+| Austin Kreisler | Leidos | Subject Matter Expert |
+| Josh Mandel | Microsoft | Subject Matter Expert |
+| David Pyke | Audacious Inquiry | HL7 Liason |
