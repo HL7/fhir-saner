@@ -64,8 +64,7 @@ outlined below.
 
 ###### HAvBED and OASIS EDXL/HAVE Standards
 Most notably, the OASIS Emergency Data Exchange Language (EDXL), and the OASIS Hospital Availability Exchange
-were profiled by ANSI/HITSP in response to the AHIC Emergency Responder Use Case.  This work was advanced by
-AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
+were profiled by ANSI/HITSP in reponse to the American Health Information Community (AHIC)  Emergency Responder Use Case.  This work was advanced by AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
 to collect and report bed availability data.  Health and Human Services suspended the HAvBED program in 2016.
 Some of the challenges with HAvBED included:
 
