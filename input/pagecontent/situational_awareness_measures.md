@@ -15,7 +15,7 @@ Situational awareness has been the focus of attention in health IT circles well 
 pandemic flu strains in 2005.  Since then, a number of pandemics  and other regional and national emergencies have emerged requiring some level of situational awareness to support responses by public health agencies.
 
 2006
-: Bird Flu (H5N1)
+: Avian Influenza subtype H1N5
 
 2009
 : Swine Flu (H1N1)
@@ -24,7 +24,7 @@ pandemic flu strains in 2005.  Since then, a number of pandemics  and other regi
 : Middle East Respiratory Syndrome (MERS)
 
 2013
-: Another form of Bird Flu (H7N9)
+: Avian Influenza subtype H7N9
 
 2017
 : Hurricane Maria
