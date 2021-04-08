@@ -26,7 +26,7 @@ The project team assessed past efforts to support situational awareness, includi
 * Existing HL7 FHIR resources, and
 * Terminology
 
-Based on these assessments, this IG prioritized its focus on for supporting bed and ventilator
+Based on these assessments, this IG prioritized its focus on supporting bed and ventilator
 availability, but includes support for other reporting efforts (e.g., PPE supplies, staffing).
 
 #### Assessment
