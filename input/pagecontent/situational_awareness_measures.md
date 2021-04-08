@@ -51,9 +51,7 @@ Situational awareness represents an understanding of what resources are availabl
 where, and when, so that decisions can be made about allocating resources where needed, or moving resources
 or those in need of them to the appropriate locations so that those resources can be used to support emergency
 response efforts.  Resources can include just about anything that can be used to support the effort, food,
-medicine, supplies, people (with appropriate skills), equipment, utilities like water, power, et cetera. The key
-mechanism by which this guide supports situation awareness is through communication of measures related to
-essential elements of information needed to support emergency response activities.
+medicine, supplies, people (with appropriate skills), equipment, utilities like water, power, et cetera. The key mechanism by which this guide supports situation awareness is through communication of measures related to essential elements of information needed to support emergency preparedness and response activities.
 
 #### Essential Elements of Information
 The purpose of situation awareness measures is to collect these essential elements of information (EEI) used to support emergency
