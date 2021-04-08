@@ -22,7 +22,7 @@ The following principles were established for development of this guide:
 requirements needs to be low enough to effectively deliver quickly.
 
 #### Approach
-This guide will focus on existing FHIR Release 4.0 resources with extensions where necessary.
+This guide will focus on existing FHIR Release 4 resources with extensions where necessary.
 The project team assessed past efforts to support situational awareness, including:
 * Existing standards,
 * Existing HL7 FHIR resources, and
@@ -44,11 +44,11 @@ evolution from Bed Availability.
 
 [^1]: [HITSP C47: Resource Utilization Message](http://www.hitsp.org/ConstructSet_Details.aspx?&PrefixAlpha=4&PrefixNumeric=47)
 
-[^2]: [HAvBED2: Hospital Avaialable Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
+[^2]: [HAvBED2: Hospital Available Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
 
-[^3]: [Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) v1.0 incorporating Approved Errata](https://www.oasis-open.org/standards#edxlhave-v1.0)
+[^3]: [Emergency Data Exchange Language (EDXL) Hospital Availability Exchange (HAVE) v1.0 incorporating Approved Errata](https://www.oasis-open.org/standards#edxlhave-v1.0)
 
-[^4]: [HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
+[^4]: [HL7/OASIS Cross Paradigm Implementation Guide: Emergency Data Exchange Language (EDXL) Hospital Availability Exchange (HAVE) Version 2.0 (EDXL-HAVE), Release 1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
 
 
 ##### Bed Availability
@@ -124,7 +124,7 @@ report on any group of things that can be defined by characteristics, it simply 
 enumerate those resources.  That is not essential for the use cases in this implementation
 guide.
 
-The Group resource is more lightly deployed in existing EHR products. 
+The Group resource is more lightly deployed in existing EHR products.
 
 ##### Immunization
 The [Immunization](https://hl7.org/fhir/R4/immunization.html) resource can be used to determine the quantity of immunizations dispensed to
