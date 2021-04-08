@@ -15,7 +15,7 @@ These are described in more detail in the sections that follow.
 
 This use case addresses the collection and exchange of data from several information systems in a Facility
 to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
-for multiple data elements by examining messages recieved and data in its database, and then reports these to a Measure
+for multiple data elements by examining messages received and data in its database, and then reports these to a Measure
 Collector
 within the hospital.
 
@@ -195,8 +195,7 @@ to them in an easy to view format.
 </div>
 <!-- ![Figure 2.3.1.2-1: Accessing Measure Reports Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Accessing Measure Reports Process Flow") -->
 
-**Figure 2.3.1.2-1: Accessing Measure Reports Process Flow**
-
+**Figure 2.3.2.1-1: Accessing Measure Reports Process Flow**
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</html:span>
 
@@ -274,7 +273,7 @@ to distribute updated measure definitions to organizations who report on these m
 </div>
 <!-- ![Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow](usecase3-processflow.svg "Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow") -->
 
-**Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow**
+**Figure 2.3.3.1-1: Distributing Measure Definitions Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
@@ -325,7 +324,7 @@ can be computed using FHIR APIs from supporting information systems provided by 
 </div>
 <!-- ![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow") -->
 
-**Figure 2.3.1.4-1: Automating Measure Computation Process Flow**
+**Figure 2.3.4.1-1: Automating Measure Computation Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Check for New or Updated Measures">Query for New or Updated Measures</html:span>
@@ -336,7 +335,7 @@ Definitions](#distributing-measure-definitions) above.
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
 
-   The hospital information system collects data and computes the measures, returing a completed report.
+   The hospital information system collects data and computes the measures, returning a completed report.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherData">Gather Data</html:span>
@@ -388,8 +387,8 @@ cause or impact analysis.
 Consider the case where patient comorbidities (e.g., Cardiovascular Disease, Smoking Status) are known to impact patient risk and
 associated complications, but
 where detailed analysis of these risk effects is unknown. Communication of supplemental data that include presence or absence of
-cardiovascuar disease, or the
-patient smoking status, and presence of absence of complications allows the recieving public health agencies to further analyze this
+cardiovascular disease, or the
+patient smoking status, and presence of absence of complications allows the receiving public health agencies to further analyze this
 data retrospectively.
 
 In the initial stages, this analysis can be used to assess strain, by comparing the impact of comorbidities on complications
@@ -404,7 +403,7 @@ on associated complications.
 </div>
 <!-- ![Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow](usecase5-processflow.svg "Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow") -->
 
-**Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow**
+**Figure 2.3.5.1-1: Reporting Supplemental Data Process Flow**
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>

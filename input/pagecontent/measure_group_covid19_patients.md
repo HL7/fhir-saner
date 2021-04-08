@@ -139,6 +139,7 @@ The computable content "implements" the automated computation of the measure.
                 with('verification-status').notEqualTo('refuted'|'entered-in-error').
                 with('date').greaterThan(%ReportingPeriod.start - 14 'days'),
                 with('code').in(%SuspectedOrConfirmedCOVID19Diagnoses.url)
+            // Missing onServers()
            ).exists()
          )
       )

@@ -55,9 +55,8 @@ medicine, supplies, people (with appropriate skills), equipment, utilities like 
 
 #### Essential Elements of Information
 The purpose of situation awareness measures is to collect these essential elements of information (EEI) used to support emergency
-response. Briefly, EEIs are the data elements emergency response officials need in order to critical support decision making during
-an emergency.  In the US, the Office of the Assistant Secretary of Preparedness and Response
-[defines EEIs](https://www.phe.gov/Preparedness/planning/hpp/reports/Documents/hpp-pmi-guidance-2017.pdf#page=54) as:
+response. Briefly, EEIs are the data elements emergency response officials need in order to support critical decision making during an emergency.  In the US, the Office of the Assistant Secretary of Preparedness and Response
+[defines EEIs](https://www.phe.gov/Preparedness/planning/hpp/reports/Documents/hpp-pmi-guidance-2017.pdf#page=60) as:
 
 > Essential Elements of Information (EEI)
 > : Essential elements of information are discrete types of reportable public health or healthcare-related incident-specific knowledge communicated or received
@@ -74,7 +73,7 @@ In the ideal world:
 
 1. EEIs will be well defined, understood, and implemented before a crisis occurs, but may need to evolve or be scaled as a crisis evolves and more is understood about the emerging situation.
 
-2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response. Time spent manually collecting and reporting data that is not automated often suffers in quality[^1].
+2. Systems that have EEIs will be able to automatically collect and report it to organizations responsible for emergency response. Time spent manually collecting and reporting data that is not automated often suffers in quality.
 
 3. New and changed EEI criteria can be automatically deployed, and those reporting systems can be rapidly updated to respond to changing information needs.
 
@@ -109,7 +108,7 @@ At its simplest, measurement is counting in units, and then doing some math with
 the resulting count or to obtain a value that lets you do something useful.  The approach
 used in this guide is the counting of HL7 FHIR resources matching criteria associated
 to identify **populations** (of resources), and relate these populations in various ways
-to express a measurement.  These measurements describe the capacity, availablity, average
+to express a measurement.  These measurements describe the capacity, availability, average
 service times, et cetera.
 
 #### Example Situational Awareness Measures used in the US
@@ -133,7 +132,7 @@ The approach of this IG to measurement is to capture all measurements reported t
 agency in a single FHIR MeasureReport resource, using multiple groups in the report for
 each kind of measurement reported.  This approach is aligned with existing workflows associated with
 automated systems for **receiving** measure data. The approach very much treats the MeasureReport
-as if it were a report card (as one might receive from a school) deescribing how a location is doing
+as if it were a report card (as one might receive from a school) describing how a location is doing
 on all measured criteria, with each group within the MeasureReport reflecting one of the
 "subject areas" being measured.
 
@@ -157,13 +156,13 @@ scoring and type to be shifted from Measure to Measure.group. To simplify interp
 by consumers, Measures created in this guide always include these extensions on Measure.group, even
 if they are not strictly needed.
 
-### Measures for Situational Awareness
+### Types of Measures for Situational Awareness
 Just as [quality reporting](https://www.hl7.org/fhir/clinicalreasoning-quality-reporting.html) defines
-several types of measures, situational awareness measures also follow several common patterns. Examing the data being captured
+several types of measures, situational awareness measures also follow several common patterns. Examining the data being captured
 for Situational Awareness during the COVID-19 crisis, this guide has identified the following types
 of measures:
 
-* Capacity or Utilization
+* Capacity and Utilization
 * Current and Cumulative Event Counting (Event Growth)
 * Queue Length
 * Service Times
@@ -173,7 +172,7 @@ These categories describe different ways of scoring of a measure and are include
 [Public Health Measure Scoring](CodeSystem-PublicHealthMeasureScoring.html) coding system established by this guide.
 
 #### Capacity and Utilization
-A Capacity and Utilitization measure describes the current capacity and utilization of fixed assets for treatment,
+A Capacity and Utilization measure describes the current capacity and utilization of fixed assets for treatment,
 and provides scores showing used and available capacity. It is a specialization of a
 [Proportion Measure](https://www.hl7.org/fhir/R4/codesystem-measure-scoring.html#measure-scoring-proportion).
 The total system capacity is the denominator for the measure. There can be exclusions from the denominator to
@@ -384,7 +383,7 @@ MeasureReport resource for these elements to indicate that they are not availabl
 
 To enable measure developers to specify which measure components are required, recommended or optional
 this IG defines the [Measure Expectation](StructureDefinition-measure-expectation.html) extension. This
-extension operates identically to the https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html
+extension operates identically to the [expectation](https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html)
 extension, but can be applied to Measure resources.
 
 The [Profiles and Extensions](profiles_and_extensions.html) page enumerates the various profiles and extensions

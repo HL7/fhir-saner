@@ -1,7 +1,7 @@
 This guide envisions a system architecture comprised of small, easily deliverable
 components that can be used together to support deployment of reporting, analysis,
 alerting and data aggregation tools to support fast deployment of solutions supporting
-public health situation awareness.
+public health situational awareness.
 
 The technology uses for SANER includes both FHIR Servers and clients,
 implemented in or along side other [Health IT Systems](technology_environment.html) to
