@@ -65,7 +65,7 @@ an emergency.  In the US, the Office of the Assistant Secretary of Preparedness 
 > decision-making purposes. EEI are often coordinated and agreed upon pre-incident (and communicated to local partners) as part of information collection request
 > templates and emergency response playbooks.
 
-This is a healthcare focused definition of EEIs, rather than a more general definition of the term, but the term EEEI is also used in other domains.  A more detailed
+This is a healthcare focused definition of EEIs, rather than a more general definition of the term, but the term EEI is also used in other domains.  A more detailed
 discussion of Essential Elements of Information addressing broader domain needs (including healthcare) can be found in
 [Essential Elements of Information Publication Guidance](https://www.nisconsortium.org/portal/resources/bin/NISC_EEI_Publication_1426695387.pdf)
 published by the National Information Sharing Consortium.
@@ -223,11 +223,11 @@ A Queue Length measure is a cohort measure which reports the number of activitie
 area waiting for a bed, tests awaiting to be resulted, patients in a hospital awaiting discharge). Queue length usually represents
 a measure of an unmet need. Queue length measures can be improved to become service time measures by capturing the total time waiting
 for an completion of an activity, but this time may not be readily tracked, or queue length may be a sufficient signal of a problem
-that needs to be addressed. The benefit of service time measures is that they can be compared betweeen facilities, whereas queue length
+that needs to be addressed. The benefit of service time measures is that they can be compared between facilities, whereas queue length
 is not readily comparable but may be more readily computable.
 
 #### Service Time
-A Service Time measure is a specialization of the ratio meausure which reports the total time taken to provide a service
+A Service Time measure is a specialization of the ratio measure which reports the total time taken to provide a service
 (e.g., wait times, length of stay, time to report a lab test result) for all events in the numerator, and the total number
 of events (e.g., services such as inpatient stays, tests performed) provided in the denominator. This is a ratio measure because
 the units differ in the numerator and denominator, where the events being counted in the numerator are essentially clock ticks in
