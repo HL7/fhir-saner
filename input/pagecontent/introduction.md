@@ -176,7 +176,7 @@ stratification efforts.
 ##### New Codes
 Until COVID-19 and SARS-Cov-2 were discovered, codes to describe the disease, diagnostic
 tests, antibody tests, or test results did not exist because these concepts did not
-yet exist.  Since then organizations like LOINC, SNOMED and CMS responsible for managing code
+yet exist.  Since then organizations like AMA, WHO, Regenstrief and IHTSDO, responsible for managing code
 systems used by EHR and other Health IT systems have produced codes where needed, and developed value
 sets and guidelines for coding conditions and situations related to COVID-19 including
 diagnosis, evaluation, treatment, procedures, and medications associated with the disease.
