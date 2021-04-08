@@ -8,7 +8,7 @@ to support the treatment of novel influenza-like illness.
 This guide is organized into five main sections:
 
 * Chapter I: Introduction and Overview
-1. [Introduction](introduction.html) - Provides and Introduction to this IG
+1. [Introduction](introduction.html) - Provides an Introduction to this IG
 2. [Measuring Situational Awareness](situational_awareness_measures.html) - Describes situational awareness and how to measure it.
 3. [Use Cases](use_cases.html) - Illustrates Key Uses Cases addressed by this guide.
 * Chapter II: Technical Implementation
