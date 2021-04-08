@@ -87,9 +87,6 @@ resource to report measures of situational awareness to regional and national ag
 supporting public health or emergency preparedness and response, or national agencies such as the Centers for Disease Control (CDC)
 and the Federal Emergency Management Agency in the US.
 
-Measures developed using this profile need not be confined to a health system, they might also be applied to other kinds of facilities required to report
-EEIs in support of emergency response (e.g., measures about essential workforce members, or the food distribution, or even different forms of housing).
-Many of the principles of measurement will still apply even though the measurement is performed outside of the healthcare domain.
 
 #### Measurement in HL7
 For more than the last decade, HL7 and its members have been deeply involved in the evolution
