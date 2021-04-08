@@ -34,17 +34,19 @@ pandemic flu strains in 2005.  Since then, a number of pandemics  and other regi
 
 
 
-Situational Data Needs of Public Health
-Key situational data needed by public health has remained relatively consistent and well established over this time, and is to support awareness of:
-
-1.  Local, Regional and National case rates and trends
-2.  Bed availability for treatment
-3.  Other resources availability for treatment
-  * Staff
-  * Medications
-  * Immunizations
-  * Medical Equipment (e.g., Respirators, N95 Masks)
-  * Supplies (e.g., Cleaning Supplies, Facemasks)
+### Situational Data Needs of Public Health
+Situational Data Needs of Public Health Key situational data needed by public health has remained relatively consistent and well established over this time, and is to support awareness of:
+1. Local, Regional and National case rates and trends
+2. Bed
+   * Total Capacity
+   * Available (availability for treatment)
+   * Surge Capacity
+3. Other resources availability for treatment
+   * Staff
+   * Medications
+   * Immunizations
+   * Medical Equipment (e.g., Respirators, N95 Masks)
+   * Supplies (e.g., Cleaning Supplies, Facemasks, PPE by Class)
 
 ### Situational Awareness
 Situational awareness represents an understanding of what resources are available or needed,
