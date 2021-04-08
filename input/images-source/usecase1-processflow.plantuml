@@ -1,10 +1,10 @@
 @startuml
 hide footbox
 actor "ICU/Central Monitoring System"
-actor "Measure Collector"
 actor "Bed Management System"
 actor "EHR"
 actor "ED System"
+actor "Measure Collector"
 actor "Public Health Agency"
 "ICU/Central Monitoring System" -> "ICU/Central Monitoring System" : 1. ICU/Central Monitoring System collects data
 activate "ICU/Central Monitoring System"
