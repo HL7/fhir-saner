@@ -2,8 +2,7 @@ The transactions in this profile are summarized in the sections below.
 
 ### Query Measure
 
-The Query Measure transaction allows a Measure Consumer to
-periodically query about the availability of a resource from an Measure Source.
+The Query Measure transaction allows a Measure Consumer to periodically query about the availability of a resource from a Measure Source.
 
 
 This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
