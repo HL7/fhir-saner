@@ -63,13 +63,13 @@ The figure below shows a FHIR Server acting as an Intermediary between a Hospita
 <div>
 <!-- ![FHIR Server](FHIRServer.svg) -->
 
-However, a Hospital could simply configure it's own FHIR Server, and Public Health could then pull the data they need from it.
+However, a Hospital could simply configure its own FHIR Server, and Public Health could then pull the data they need from it.
 <div>
 {%include PublicHealthPullFromHospital.svg%}
 <div>
 <!-- ![PublicHealthPullFromHospital](PublicHealthPullFromHospital.svg) -->
 
-Or, Public Health can configure it's own FHIR Server, and a Hospital can push the data to it.
+Or, Public Health can configure its own FHIR Server, and a Hospital can push the data to it.
 <div>
 {%include HospitalPushToPublicHealth.svg%}
 <div>
