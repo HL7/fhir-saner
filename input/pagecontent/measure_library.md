@@ -6,7 +6,7 @@ resources essential for computing the measure.
 #### Software Component Name
 Computer friendly names enable developers to create software tools that facilitate measure implementation and automation.  This profile
 recommends transforming the title into a name by removing spaces and special characters (any character other than A-Z, a-z and 0-9),
-using PascalCase to seperate boundaries between words. This allows the name to be used in most computing languages and as
+using PascalCase to separate boundaries between words. This allows the name to be used in most computing languages and as
 the `id` for the resource in systems where user defined identifiers are supported for id values.
 
 1. `Library.name` **shall** be present.
@@ -23,8 +23,8 @@ recommendations for URLs used by a publisher.  The example below is used to illu
 1. All Library URLs for libraries published by the same organization **should** have the same base URL. The Base URL part **should** be memorable.
    In the example above, `https:\//example.com/saner` is the base URL.
 2. The base URL **should** be less than 40 characters in length.
-3. The penultimate path part of the URL may be used to categorize libraries in some way, e.g., by topic (e.g., valuesets, functions). In the example above, `covid19ValueSets` is the category.
-4. The last path part in the URL **should** be Library. Following this recomendation simplifies the use of FHIR IG Development tools to
+3. The penultimate path part of the URL may be used to categorize libraries in some way, e.g., by topic (e.g., ValueSets, functions). In the example above, `covid19ValueSets` is the category.
+4. The last path part in the URL **should** be Library. Following this recommendation simplifies the use of FHIR IG Development tools to
    generate Measure resources.  In the example above, the last path part is `Library`.
 5. The computable name given in the Library **should** be the last part of the URL. Again, this simplifies measure development using existing
    FHIR IG Development tools. In the example above, `MyLibraryName` is the name of the library.
@@ -41,7 +41,7 @@ Library resources can change over time. This guide requires that the Library ver
 2. If versions can be updated more frequently than by day, a publisher **shall** use semantic versioning.
 
 The use of semantic versioning is preferred because this is the form required in FHIR implementation guides, and it enables support for versioning
-of libaries using FHIR Implementation Guide tools. This is also the format for versioning that has been the most widely adopted by the IT industry.
+of libraries using FHIR Implementation Guide tools. This is also the format for versioning that has been the most widely adopted by the IT industry.
 
 #### Status of a Library
 This profile requires that the publication status of a library be reported (this is a general requirement of all Library resources), and
@@ -73,4 +73,3 @@ during use.
 Libraries are published by organizations rather than individuals.  This profile requires that the organization be identified in
 `Library.publisher`, and furthermore, that there is at least one organizational e-mail address which can be used to contact
 that publisher about the Library in `Library.contact`
-

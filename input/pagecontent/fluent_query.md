@@ -98,7 +98,7 @@ onServers('http:example.com/server1'|'http://example.com/server2')
 ```
 
 #### Query Parameter Name Functions
-The query parameter name functions start the first half of a query parameter to add to the query url.  They
+The query parameter name functions start the first half of a query parameter to add to the query URL.  They
 simply return the name as a string
 
 ##### `with(Name)`
@@ -201,4 +201,3 @@ needs access to the focus)
 <span id='notIn'> </span>
 Appends `:modifier=token|uri` to the query parameter, where modifier is `not`, `text`, `above`, `below`, `in`,
 or `not-in` appropriately.
-

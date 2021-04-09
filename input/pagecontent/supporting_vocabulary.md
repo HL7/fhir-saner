@@ -45,7 +45,7 @@ These Value Sets have been defined to illustrate creation of measures using this
 2. [Measure Populations](ValueSet-MeasurePopulations.html)
 
 ### Code Systems
-These Code Systems havee been included to illustrate creation of measures using this implementation guide.
+These Code Systems have been included to illustrate creation of measures using this implementation guide.
 
 1. [Measure Group System](CodeSystem-MeasureGroupSystem.html)
 2. [Situational Awareness Measure Populations](CodeSystem-MeasurePopulationSystem.html)
@@ -62,8 +62,8 @@ to codes found in HL7 FHIR.
 <span id='coding-location'> </span>
 
 ### Recommended Coding Systems and Value Sets for Location.identifer
-This implementation guide requires the Location resource reference by MeasureReport.subject to have both a name and an identitifer. This raises the question of
-the identifier and identifier system to use for geographic. While facility locations ofent have identifiers, larger geopolitical boundaries are identified
+This implementation guide requires the Location resource reference by MeasureReport.subject to have both a name and an identifier. This raises the question of
+the identifier and identifier system to use for geographic. While facility locations often have identifiers, larger geopolitical boundaries are identified
 using codes from a [coding system](https://www.hl7.org/fhir/R4/codesystem.html), such as ISO 3166, or GIS Information standards from INCITS.
 
 When using a Coding system value in a FHIR Identifier, the value that would normally appear in Coding.code appears in Identifier.value.
@@ -126,7 +126,7 @@ Information Systems used in the US still report the FIPS 6-4 code for a region.
 #### [Dartmouth Atlas](https://atlasdata.dartmouth.edu/static/supp_research_data) Geographic Boundary Files
 The Dartmouth Atlas defines three different kinds of Geographic regions in the US. These regions describe service areas and referral regions with common characteristics
 based on geography and population, and are used for some forms of statistical health research. These identifiers are often found in data sets provided by geographic
-information systems. Cross walks and geographic boundary files for each of theese areas can be found at the link above.
+information systems. Cross walks and geographic boundary files for each of these areas can be found at the link above.
 
 ##### Hospital Service Area (HSA)
 An HSA is a collection of ZIP codes whose residents receive most of their hospitalizations from the hospitals in that area.

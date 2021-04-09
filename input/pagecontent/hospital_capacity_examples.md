@@ -16,7 +16,7 @@ requirements are established by HHS and other US Federal agencies and not by thi
 
 #### Cook County, Illinois and Rhode Island Hospitals
 The organizations and locations referenced in this data set exist in the real world, but the measure report data included for
-those is all test data, and is not related to any actual events occuring in real life.
+those is all test data, and is not related to any actual events occurring in real life.
 
 This data can be be used to prepopulate a FHIR Server to support test cases for the Measure Consumer, and
 Measure Source actors, and the Measure Intermediary actors.
@@ -212,7 +212,7 @@ Measure Source actors, and the Measure Intermediary actors.
 
 #### State of New Jersey
 A second data set comes from publicly reported data published via [The COVID Tracking Project](https://covidtracking.com/),
-combined with data from the New Jersery Department of Public Health. This data is based on real world reports provided at the state
+combined with data from the New Jersey Department of Public Health. This data is based on real world reports provided at the state
 level, but should NOT be considered an authoritative source.
 
 This data set can be used to test aggregation of measure reports over time for point-in-time and count based measurements.

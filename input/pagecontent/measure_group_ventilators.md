@@ -1,14 +1,10 @@
 #### Ventilators
 When tracking ventilators, many EHR systems may not directly track ventilator devices in the hospital. Ventilator use is indirectly determined in this measure based on the presence of observations that would only be present in the patient chart
-when the patient is being ventilated. Direct tracking of ventilator devices and teleemetry is typically the purview of other systems used for asset
-management or ICU central monitoring.  The number of ventilator devices is generally known, and does not change frequently, and so implementers may
-provide an alternate mechanism (e.g., a defined parameter) to supply this value.  Thus, while this guide provides an expression for identifying
-ventilators in this sample measure, more user feedback on how to obtain this value is desired.
+when the patient is being ventilated. Direct tracking of ventilator devices and telemetry is typically the purview of other systems used for asset management or ICU central monitoring.  The number of ventilator devices is generally known, and does not change frequently, and so implementers may provide an alternate mechanism (e.g., a defined parameter) to supply this value.  Thus, while this guide provides an expression for identifying ventilators in this sample measure, more user feedback on how to obtain this value is desired.
 
 ### Describing the Group
 
-The first step in describing the group is to identify it with a code.  Measure developers will generally
-define the codes used for the measure groups they create.
+The first step in describing the group is to identify it with a code.  Measure developers will generally define the codes used for the measure groups they create.
 ```
  * with group[3].code do
  ** coding = MeasureGroupSystem#Ventilators
@@ -20,8 +16,7 @@ define the codes used for the measure groups they create.
 Each group must be described by the [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) extension to
 further describe the measure group content.
 
-The first step in describing these attributes is to indicate how the measure is scored.  The ventilator measure is
-a measure of available and utilized capacity, so the capacity scoring is used.
+The first step in describing these attributes is to indicate how the measure is scored.  The ventilator measure is a measure of available and utilized capacity, so the capacity scoring is used.
 ```
  * with group[3].extension[groupAtts] do
  ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#capacity
@@ -44,7 +39,7 @@ patients with an active inpatient or ED Encounter. This tells "what to count". T
 which is likely being counted.  The SNOMED slice can be used to provide a more fine grained code to describe the resource
 (e.g. a specific condition, medication, type of encounter, patient, practitioner, et cetera), and might be a code found or used
 to find resources based on the code field associated with it. This information is descriptive, rather than semantically exact content.
-It is meant to convey information to an implementor, rather than to automated systems.
+It is meant to convey information to an implementer, rather than to automated systems.
 ```
  ** with extension[subject] do
  *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
@@ -54,7 +49,7 @@ It is meant to convey information to an implementor, rather than to automated sy
 
 NOTE: The coding of this measure reports that it counts ventilator outlets. During the early period of the COVID Epidemic, a facilities
 in New York City and elsewhere used a single ventilator to support more than one patient.  In the US, the FDA issued an emergency
-use authorization for such use. CDC issued guideance describing the counting of Bi-level Positive Airway Pressure (BiPAP) equipment
+use authorization for such use. CDC issued guidance describing the counting of Bi-level Positive Airway Pressure (BiPAP) equipment
 when such equipment and procedures were available within the facility.  This guide makes NO recommendation about the appropriateness
 of this use, but notes this so that measure developers will consider such cases when creating measures.
 
@@ -70,9 +65,9 @@ implementer, and to the system that automates its computation. Capacity measures
 1. An optional initial population from which the other populations are found.
 2. The denominator population, which may simply be the initial population (this is the case for ventilators).
 3. The numerator population, which usually applies a filter to the initial population.
-4. The numerator-complement population, which represents the population in the denomonator not found in the numerator.
+4. The numerator-complement population, which represents the population in the denominator not found in the numerator.
 
-The initial population is not used in the Ventilators measure becase it would be the same as the denominator population
+The initial population is not used in the Ventilators measure because it would be the same as the denominator population
 so the measure starts with the denominator.
 
 ```
@@ -99,7 +94,7 @@ so the measure starts with the denominator.
 ```
 
 #### Describe the Evaluation Criteria
-Name the criteria and give a description for what qualifies to to be included.
+Name the criteria and give a description for what qualifies to be included.
 
 ```
  * with group[3].population[0].criteria do

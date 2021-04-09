@@ -15,7 +15,7 @@ These are described in more detail in the sections that follow.
 
 This use case addresses the collection and exchange of data from several information systems in a Facility
 to a centralized reporting system that communicates to Public Health. The ICU/Central Monitoring System collects data
-for multiple data elements by examining messages recieved and data in its database, and then reports these to a Measure
+for multiple data elements by examining messages received and data in its database, and then reports these to a Measure
 Collector
 within the hospital.
 
@@ -34,7 +34,7 @@ This use case is supported by the following
 
   - [Produce Measure](transaction-2.html)
 
-#### Collecting Hospital and Ventilator Measures Process Flow 
+#### Collecting Hospital and Ventilator Measures Process Flow
 
 Measure report data can come from multiple systems within a facility. For example, the CDC/NHSN Patient Impact
 and Hospital Capacity Module asks for the following data elements:
@@ -81,10 +81,10 @@ a report on ICU beds and equipment, including ventilated patients in ED/Overflow
 Total ICU Beds, Occupied ICU Beds, Total Ventilators, Ventilators in Use.
 
 
-   
+
 1. The system collects information about ventilators outside the ICU for which the associated patient
 was admitted for suspected or confirmed COVID-19. It can makes the determination of suspected/confirmed COVID-19 from
-the DG1 segment of the ADT message it recieved regarding the patient.
+the DG1 segment of the ADT message it received regarding the patient.
 2. The system counts the number of ICU beds that it has been configured to recognize and which are operational
 3. The system counts the number of ICU beds that are transmitting telemetry (patient monitoring) information.
 4. The system counts the number of ventilators that it has been configured to recognize and which are operational
@@ -103,11 +103,11 @@ on multiple data elements
 (measure populations)</html:span>
 
    The Hospitals Bed Management System collects data for multiple data elements by
-examining messages recieved and data in its database, and then reports these to a Measure Collector
+examining messages received and data in its database, and then reports these to a Measure Collector
 within the hospital.
 
 
-   
+
 1. The Bed Management System examines master file data to count the total number of beds in the hospital,
 as well as those beds specifically identified as being for acute (inpatient) care. The Bed Management solution can be a
 component
@@ -128,7 +128,7 @@ on multiple data elements
    The Hospital's EHR collects data for multiple data elements.
 
 
-   
+
 1. The EHR collects data on hospitalized patients w/ COVID-19.
 2. The EHR collects data on hospitalized patients diagnosed with COVID-19 14 days after admission.
 3. The EHR collects data on patient deaths due to COVID-19.
@@ -140,7 +140,7 @@ on patients in the ED and/or overflow area.</html:span>
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP1">Measure Collector aggregates reports for
 transmission to a Public Health Agency</html:span>
 
-   Either periodically on some schedule configured for the hospital, or upon recieving a
+   Either periodically on some schedule configured for the hospital, or upon receiving a
 full set of data, the Measure Collector gathers a set of results from different systems
 that have communicated them, putting together a complete MeasureReport for later reporting to the Public Health Agency.
 
@@ -181,7 +181,7 @@ This use case is supported by the following
 
   - [Communicate Results](transaction-1.html)
 
-#### Accessing Measure Reports Process Flow 
+#### Accessing Measure Reports Process Flow
 
 In this use case, we see the classic "dashboard" panel, where a public health user
 selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
@@ -201,7 +201,7 @@ and makes them available through a Measure Source interface it provides.
 
 
    The specific ordering in which gathering and aggregation is performed is not further specified
-by this implementation guide. It is shown as occuring before the user initiates the query here, but could also occur
+by this implementation guide. It is shown as occurring before the user initiates the query here, but could also occur
 after. However, for many cases, geospatial systems can likely do a better job if the aggregation is done ahead of time.
 The application of a function to the data can enable a measure such as # of cases to be combined with other data such as
 population for the area to report # of cases per 10K population, or similar functions to better present data
@@ -257,7 +257,7 @@ This use case is supported by the following
 
   - [Query Measure Definition](transaction-1.html)
 
-#### Distributing Measure Definitions Process Flow 
+#### Distributing Measure Definitions Process Flow
 
 Measures created for tracking a public health emergency may be revised periodically to support changing needs. This
 use case supports the need
@@ -271,11 +271,10 @@ to distribute updated measure definitions to organizations who report on these m
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
 
-   An organization required to report queries for for updated from one or public health or emergency response
-agencies to identify reporting requirements.
+   An organization required to report queries for updated [#fixme] from one or public health or emergency response agencies to identify reporting requirements.
 
 
-   
+
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="BED-STEP5">Return matching measure specifications</html:span>
 
@@ -305,7 +304,7 @@ This use case is supported by the following
 
   - [Compute Measure](transaction-1.html)
 
-#### Automating Measure Computation Process Flow 
+#### Automating Measure Computation Process Flow
 
 Automating measure reporting reduces the burden on users for manual data collection. When a measure has been
 automated, it
@@ -325,7 +324,7 @@ Definitions](#distributing-measure-definitions) above.
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
 
-   The hospital information system collects data and computes the measures, returing a completed report.
+   The hospital information system collects data and computes the measures, returning a completed report.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherData">Gather Data</html:span>
@@ -365,7 +364,7 @@ This use case is supported by the following
 
   - [Compute Measure](transaction-1.html)
 
-#### Reporting Supplemental Data Process Flow 
+#### Reporting Supplemental Data Process Flow
 
 Supplemental data enables additional data analysis to be performed. The MeasureReport itself provides the capacity
 to detect
@@ -377,8 +376,8 @@ cause or impact analysis.
 Consider the case where patient comorbidities (e.g., Cardiovascular Disease, Smoking Status) are known to impact patient risk and
 associated complications, but
 where detailed analysis of these risk effects is unknown. Communication of supplemental data that include presence or absence of
-cardiovascuar disease, or the
-patient smoking status, and presence of absence of complications allows the recieving public health agencies to further analyze this
+cardiovascular disease, or the
+patient smoking status, and presence of absence of complications allows the receiving public health agencies to further analyze this
 data retrospectively.
 
 In the initial stages, this analysis can be used to assess strain, by comparing the impact of comorbidities on complications
@@ -395,7 +394,7 @@ on associated complications.
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
 
-   The hospital information system collects data and computes the measures, returing a completed report.
+   The hospital information system collects data and computes the measures, returning a completed report.
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GatherMeasureData">Gather Measure Data</html:span>
@@ -418,4 +417,3 @@ with the measure.
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="FHIRSupplementalData">Returns Supplemental FHIR Resources</html:span>
 
    The local EHR or FHIR Server returns the supplemental data and included resources.
-

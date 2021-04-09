@@ -17,7 +17,7 @@
 
 * [Capability Statement With Slices](StructureDefinition-CapabilityStatementWithSlices.html) assists in the
   automated creation of CapabilityStatement resources for this guide.  Capability statements reported
-  by implementors of this guide need not conform to this profile (but may do so if they choose).
+  by implementers of this guide need not conform to this profile (but may do so if they choose).
 
 #### Audit Records
 This guide includes profiles that support auditing of activity on the MeasureReport and Measure resources

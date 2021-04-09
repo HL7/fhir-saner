@@ -15,7 +15,7 @@ Resource utilization data can be provided from a number of sources:
   + Master Patient Index
   + Security Infrastructure
   + Revenue Cycle Management/Billing Systems
-* **Systems not having Clinical Data**
+* **Systems unlikely to have Clinical Data**
   + Bed Management (a.k.a., Housekeeping) systems
   + Asset Management systems
   + Surgery/Operating Room Scheduling systems
@@ -28,7 +28,7 @@ Resource utilization data can be provided from a number of sources:
 
 ## Systems Having Clinical Data
 Systems in this category have access to some or all of the health records (problems,
-medications, lab results, procedures, etc) for a patient, and so can often provide information
+medications, lab results, procedures, etc.) for a patient, and so can often provide information
 indicating COVID-19 positive or suspected patients, as well as associated problems, patient
 demographics, and patient acuity (severity of illness) data.
 
@@ -127,14 +127,14 @@ and organizations).
 #### Care Management Systems
 Care Management Systems support referral and transition between the hospital and follow-up
 care environments (e.g., post-acute care, rehabilitation referrals), or referrals to other types of care
-(tertiary care from ED, referral to behavioral health, etc).  These are often used to
+(tertiary care from ED, referral to behavioral health, etc.).  These are often used to
 support discharge/transfer planning, and may also involve coordination with payers to
 ensure treatment will be covered at the referred to facility.
 
 ### Command and Control Systems
 Command and Control Systems are used to provide a view throughout a facility of the
 overall operations, including patient flow, transfers, ED, et cetera, allowing a facility
-to understand its current load, forcast capacity demand, and manage logistics.  See
+to understand its current load, forecast capacity demand, and manage logistics.  See
 [Operational Command Centers](https://klasresearch.com/resources/blogs/2019/01/10/operational-command-centers)
 for more details.
 
@@ -175,7 +175,7 @@ The MPI will generally have information about a patient including demographics, 
 of residence, place of employment, insurers, and potentially other providers and/or
 sources of information available that are associated with a given individual.
 
-### Bed Management (a.k.a Housekeeping) systems
+### Bed Management (a.k.a. Housekeeping) systems
 Bed Management systems are designed specifically to keep track of the status of beds
 as it impacts the operations of the housekeeping in a facility.  After a patient is
 discharged, the bed and room in which they resided need to be cleaned, special precautions

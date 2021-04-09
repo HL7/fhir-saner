@@ -41,7 +41,7 @@ Given a collection of MeasureReport resources using the same Measure Resource, a
 
    2. Produce the rows for each group within the MeasureReport
 
-      1. Produce a row ror each population within the group which contains:
+      1. Produce a row for each population within the group which contains:
 
          1. The identifier of the subject
          2. The identifier of the reporter
@@ -114,7 +114,7 @@ The mapping processes described above will produce a canonical mapping from one 
 given a Measure and value set for conversion codes.  Over time, the names of columns may change in a CSV file,
 or additional columns may be added, and others might be removed.  For example, the CSV format for the
 [CDC COVID-19 Patient Capacity](https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf#page=6) module
-made many of these changes to expand upon reported data and clarify the content of certain feilds.
+made many of these changes to expand upon reported data and clarify the content of certain fields.
 
 To support reporting under these circumstances, the canonical form of the CSV file needs to be remapped to support
 reporting of existing data fields using new field names, or to remove fields from the report that do not need to
@@ -144,13 +144,11 @@ may be omitted. This allows for:
 
     map=code1,code2,...,codeN
 
-This would specify that column heads be named code1 code2 ... codeN in the CSV file used during conversion.
+This would specify that column heads be named code1 code2 … codeN in the CSV file used during conversion.
 
 Although FHIR does not generally specify the importance of ordering in multi-valued parameters, implementations **should** use the order
 to manage the order of the columns in the CSV output.  Thus:
 
-    map=code2,code1,...,codeN
+    map=code2,code1, … ,codeN
 
-This specify that column heads be output in the order code2 code1 ... codeN in the CSV file (reversing the order of code1 and code2).
-
-
+This specify that column heads be output in the order code2 code1 … codeN in the CSV file (reversing the order of code1 and code2).

@@ -43,7 +43,7 @@ The Measure Consumer provides access to aggregated or fine-grained data gathered
 
 #### Measure Consumer Success Criteria
 * For the publication scenario, a MeasureReport is created on a Measure Consumer system.
-* For the retrieval scenario, the MeeasureConsumer is able to retrieve the MeasureReport based on the sample data from the Measure Source.
+* For the retrieval scenario, the MeasureConsumer is able to retrieve the MeasureReport based on the sample data from the Measure Source.
 
 ### Measure Definition Source
 Measure Definition Source providing Measure resources to a Measure Definition Consumer.
@@ -143,9 +143,7 @@ A provider organization application executes the following actions in appropriat
 For example, identify the FHIR Patient resources in the measure report that were used to calculate the data.
 
 #### Exchanging Updated Measure Definitions
-This scenario is planned for the second cycle of testing and involves the Measure Definition Source making a new Computable Measure Definition
-available for use. The new Computable Measure Definition will result in at least one different calculated result in a Measure Report based on the
-provided test data.  This scenario otherwise follows the Automated Measure Computation and Reporting scenario
+This scenario is planned for the second cycle of testing and involves the Measure Definition Source making a new Computable Measure Definition available for use. The new Computable Measure Definition will result in at least one different calculated result in a Measure Report based on the provided test data.  This scenario otherwise follows the Automated Measure Computation and Reporting scenario
 
 ### Reporting in CSV Format
 Send CSV Data to a system for reporting.
@@ -157,8 +155,7 @@ Send CSV Data to a system for reporting.
 
 #### Reporting in CSV Format Success Criteria
 * When $report-csv is called, a new MeasureReport is created with appropriate values based on the CSV test data in the Measure Consumer.
-* Bonus Point: The Measure Consumer and Measure Source interact using normal FHIR Create or Update operations, but with a mime type or _format value
-of csv, application/csv, or text/csv and the CSV formats are used instead of a FHIR Resource.
+* Bonus Point: The Measure Consumer and Measure Source interact using normal FHIR Create or Update operations, but with a mime type or _format value of csv, application/csv, or text/csv and the CSV formats are used instead of a FHIR Resource.
 
 ### Accessing MeasureReport Resources in CSV Format
 A Measure Consumer implementing the CSV and Pull options queries a Measure Source implementing the CSV and Pull options to retrieve resources in CSV format.
@@ -174,8 +171,7 @@ A Measure Consumer implementing the CSV and Pull options queries a Measure Sourc
 * When $search-csv is called, multiple matching MeasureReport resources are reported in CSV format.
 * The Measure Consumer calls $read-csv to read a single MeasureReport resources.
 * When $read-csv is called, the identified MeasureReport resource is provided in CSV format.
-* Bonus Point: The Measure Consumer and Measure Source interact using normal FHIR Search and FHIR Read operations, but with a mime type or _format value
-of csv, application/csv, or text/csv and the CSV formats are returned.
+* Bonus Point: The Measure Consumer and Measure Source interact using normal FHIR Search and FHIR Read operations, but with a mime type or _format value of csv, application/csv, or text/csv and the CSV formats are returned.
 
 ### Generate and Store a MeasureReport
 

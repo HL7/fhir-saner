@@ -1,7 +1,6 @@
 The first group to address is Suspected or Confirmed COVID-19 Patients Stratified by Location and Ventilator Status.
 This measure is a [Queue Length](situational_awareness_measures.html#queue-length) measure. It measures patients in the hospital (in
-an inpatient setting or overflow area) awaiting completion of treatment. This is especially evidident in the case for patients in an ED/Overflow
-area awaiting an inpatient bed, but generally true for all the different strata.
+an inpatient setting or overflow area) awaiting completion of treatment. This is especially evident in the case for patients in an ED/Overflow area awaiting an inpatient bed, but generally true for all the different strata.
 
 ### Describing the Group
 
@@ -41,7 +40,7 @@ patients with an active inpatient or ED Encounter. This tells "what to count". T
 which is likely being counted.  The SNOMED slice can be used to provide a more fine grained code to describe the resource
 (e.g. a specific condition, medication, type of encounter, patient, practitioner, et cetera), and might be a code found or used
 to find resources based on the code field associated with it. This information is descriptive, rather than semantically exact content.
-It is meant to convey information to an implementor, rather than to automated systems.
+It is meant to convey information to an implementer, rather than to automated systems.
 ```
  ** with extension[subject] do
  *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Encounter
@@ -84,7 +83,7 @@ Provide a code describing the initial population.
 ```
 
 #### Describe the Evaluation Criteria
-Name the criteria and give a description for what qualifies to to be included.
+Name the criteria and give a description for what qualifies to be included.
 NOTE: The description **shall** be given in detail for each population and provide enough
 information for a competent human reader to correctly implement the computation.
 ```
@@ -294,21 +293,15 @@ To ensure that this works all of the time, the encounters must be sorted in orde
 lacks a sort() function.
 
 ### Stratification
-The use of different strata for this measure helps with the prioritization of additional resource assignments to assist facilities in need,
-improves accuracy and provides for error detection and resiliency. The count for the overall population of patients with suspected or
-confirmed COVID-19 in the hospital) must be equal to the sum counts over each stratum.  This provides for additional opportunity for
-error detection by both the sender and the reciever.  It may also help to identify special cases that may not have been included in
+The use of different strata for this measure helps with the prioritization of additional resource assignments to assist facilities in need, improves accuracy and provides for error detection and resiliency. The count for the overall population of patients with suspected or confirmed COVID-19 in the hospital) must be equal to the sum counts over each stratum.  This provides for additional opportunity for
+error detection by both the sender and the receiver.  It may also help to identify special cases that may not have been included in
 the design or logic of the measure or its stratifying criteria.
 
-NOTE: When designing measures for manual implementation, the use of redundant data assigns more work for the users manually collecting and reporting
-the data.  When measures are automatically computed, the work is being done by computer systems implementing software algorithms. It is very little
-addition work for the software to do some additional arithmetic, but additional value in providing cross-checks on data accuracy for automated
-systems.
+NOTE: When designing measures for manual implementation, the use of redundant data assigns more work for the users manually collecting and reporting the data.  When measures are automatically computed, the work is being done by computer systems implementing software algorithms. It is very little addition work for the software to do some additional arithmetic, but additional value in providing cross-checks on data accuracy for automated systems.
 
 Strata for this measure are the possible combinations (a cartesian product) of patient location and ventilator status.
 
-Expressions used for stratification return the value by which the measure is stratified for a counted element, thus, one of four values must
-be returned by the stratification criteria expression. The expressions for stratification are evaluated in the context of the matched
+Expressions used for stratification return the value by which the measure is stratified for a counted element, thus, one of four values must be returned by the stratification criteria expression. The expressions for stratification are evaluated in the context of the matched
 element.  In this first case, that is a patient encounter.
 
 ```
@@ -335,5 +328,5 @@ It first determines whether the patient has been ventilated by comparing patient
 
 While patients on a ventilator is calculated "later" in the measure, the strata for this group cannot be computed until
 that computation is finished.  Once that computation has completed, the next step is to compare the type location where
-the encounter has occured with a value set describing inpatient encounter locations.  If that matches, the patient is considered
+the encounter has occurred with a value set describing inpatient encounter locations.  If that matches, the patient is considered
 to be in a normal inpatient location (including the ICU), and if not, an overflow location (such as an ED or other location).

@@ -1,5 +1,4 @@
-This section of the implementation guide walks through an example for automating computation
-of a measure.
+This section of the implementation guide walks through an example for automating computation of a measure.
 
 ### Conventions in this Section
 The definitions for these proposed groupings appear below.  For simplicity and brevity, the definitions below are provided in a

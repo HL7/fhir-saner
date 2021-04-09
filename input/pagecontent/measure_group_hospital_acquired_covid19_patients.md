@@ -2,7 +2,7 @@ The measure group counting patients acquiring COVID-19 14 days or more after adm
 because FHIR Queries do not support complex join criteria (e.g., Observation.date - Observation.encounter.date > 14 days).  Such criteria
 can be evaluated using FHIRPath [Date/Time Arithmetic](http://hl7.org/fhirpath/#datetime-arithmetic) or
 [CQL Date and Time Operators](https://cql.hl7.org/02-authorsguide.html#datetime-operators).
-Several measures consider dates and times that have a relative offset to the reporting period, or an event occuring during the
+Several measures consider dates and times that have a relative offset to the reporting period, or an event occurring during the
 reporting period.
 
 ### Describing the Group
@@ -45,7 +45,7 @@ patients with an active inpatient or ED Encounter. This tells "what to count". T
 which is likely being counted.  The SNOMED slice can be used to provide a more fine grained code to describe the resource
 (e.g. a specific condition, medication, type of encounter, patient, practitioner, et cetera), and might be a code found or used
 to find resources based on the code field associated with it. This information is descriptive, rather than semantically exact content.
-It is meant to convey information to an implementor, rather than to automated systems.
+It is meant to convey information to an implementer, rather than to automated systems.
 ```
  ** with extension[subject] do
  *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
@@ -95,7 +95,7 @@ population will already have been evaluated and can be further refined to identi
 with hospital onset COVID-19.
 
 #### Describe the Evaluation Criteria
-Name the criteria and give a description for what qualifies to to be included.
+Name the criteria and give a description for what qualifies to be included.
 NOTE: The description **shall** be given in detail for each population and provide enough
 information for a competent human reader to correctly implement the computation.
 ```
@@ -173,7 +173,7 @@ this latter two week period in the discussion for the prior measure group.
     .select(patient).resolve()
  """
 ```
-Again, note the use of of nested iif() calls and _count=1 in the query to ensure short-circuit evaluation.
+Again, note the use of nested iif() calls and _count=1 in the query to ensure short-circuit evaluation.
 Also note that these queries are almost identical to the [queries](measure_group_covid19_patients.html#fhir-queries)
 used in the first measure group.
 ```

@@ -23,7 +23,7 @@ The initial set of encounters can be retrieved using the `Encounters?status=in-p
 `Encounter.where(status='in-progress')` in FHIRPath.
 
 #### Active Encounters Within a Time Frame
-Both Encounter.period.start and Encounter.period.end can be tested for occurence on a specific day, or within a given date range,
+Both Encounter.period.start and Encounter.period.end can be tested for occurrence on a specific day, or within a given date range,
 allowing for tests of Admit/Discharge/Transfer/Death by date.
 
 If looking for encounters started yesterday, and today is September 1, 2020, the appropriate FHIR query is:
@@ -42,10 +42,7 @@ An admission generally starts an encounter that lasts more than a single day, al
 a single day (e.g., emergency department encounters which could last more than a day, but often are completed with a single day).
 
 Admission
-: An admission is identified from an Encounter that has not yet ended. Encounter.status **should** be "in-progress".  The date (and time) of
-admission can generally be determined from Encounter.period.start. Encounter.period.end will not be present, and
-Encounter.hospitalization.dispositionCode will also not be present, but the latter is not generally directly accessible
-through a search.
+: An admission is identified from an Encounter that has not yet ended. Encounter.status **should** be "in-progress".  The date (and time) of admission can generally be determined from Encounter.period.start. Encounter.period.end will not be present, and Encounter.hospitalization.dispositionCode will also not be present, but the latter is not generally directly accessible through a search.
 
 ##### Examples for Admission
 
@@ -79,12 +76,7 @@ through a search.
 </table>
 
 #### Encounters with a Disposition
-The base FHIR specification does not support query by discharge disposition. Some FHIR Servers may be configurable
-to support this search.  See the [disposition](SearchParameter-SearchParameter-disposition.html) search parameter for an example of a resource
-that can be used to support this capability.  When present, discharge disposition codes are often populated according to
-requirements established for payment (e.g.,
-[US Medicare payment requirements](https://www.cms.gov/medicare/medicare-contracting/contractorlearningresources/downloads/ja0801.pdf#page=2),
-rather than treatment.
+The base FHIR specification does not support query by discharge disposition. Some FHIR Servers may be configurable to support this search.  See the [disposition](SearchParameter-SearchParameter-disposition.html) search parameter for an example of a resource that can be used to support this capability.  When present, discharge disposition codes are often populated according to requirements established for payment (e.g., [US Medicare payment requirements](https://www.cms.gov/medicare/medicare-contracting/contractorlearningresources/downloads/ja0801.pdf#page=2), rather than treatment.
 
 \* The date of the disposition (discharge/transfer or death) may be determined from Encounter.period.end.
 
@@ -107,7 +99,7 @@ rather than treatment.
          <td>Encounter.where(period.end >= @<i>2020-09-08</i> and period.end < @<i>2020-09-09</i>)<br/>
              It is generally preferable for comparisons in for a time period to use an the inclusive
              lower bound with greater than or equal to (>=) and an exclusive upper bound with
-             less-than (<). This is less likely to run into implementation errors affecting date comparisions.
+             less-than (<). This is less likely to run into implementation errors affecting date comparisons.
          </td>
          <td>parameter MeasurementPeriod default Interval[@2020-09-08, @2020-09-09)<br/>
              [Encounter] E where E.period ends during <i>MeasurementPeriod</i></td>
@@ -145,8 +137,7 @@ Encounter.hospitalization.dispositionCode **should** be present, and where the t
 </table>
 
 ##### Transfers
-A transfer to another facility (inter-facility transfer) is like a discharge, except that the Encounter.hospitalization.dispositionCode **should** be
-present and indicates a transfer to a different healthcare setting (e.g., rehabilitation, hospice, long-term care).
+A transfer to another facility (inter-facility transfer) is like a discharge, except that the Encounter.hospitalization.dispositionCode **should** be present and indicates a transfer to a different healthcare setting (e.g., rehabilitation, hospice, long-term care).
 
 <table border='1' cellspacing='0'>
   <caption>Locating Transfers via the Encounter resource</caption>
@@ -179,8 +170,8 @@ a "discharge" or a "transfer"?  If "long-term care" is the same as "home" for th
 vary with regard to coding these values?
 
 ##### Death
-Not every discharge is a good outcome. Discharge due to death reqires special handling because of different
-hospital workfows used to track the death of a patient.
+Not every discharge is a good outcome. Discharge due to death requires special handling because of different
+hospital workflows used to track the death of a patient.
 
 1. \* The discharge disposition may indicate death in the Encounter.hospitalization.dispositionCode value, or
 2. The fact that a patient has died (but not when) may appear in Patient.deceasedBoolean, or
@@ -190,7 +181,7 @@ hospital workfows used to track the death of a patient.
    room in Location.type.
 
 When testing for death during an encounter using date of death (numbers 3 and 4 above), take care to verify that death
-occured during the encounter (i.e., date of death is >= Encounter.period.start and <= Encounter.period.end).
+occurred during the encounter (i.e., date of death is >= Encounter.period.start and <= Encounter.period.end).
 
 <table border='1' cellspacing='0'>
   <caption>Locating Deaths via the Encounter resource</caption>
@@ -441,8 +432,7 @@ http://loinc.org|20112-9,http://loinc.org|20115-2,http://loinc.org|33438-3,http:
   </tbody>
 </table>
 
-The handling of Procedure or Immunization resources is similar.  For Procedure, change Observation above to Procedure.  For Immunization, change Obsevation to Immunization,
-and code to vaccine-code for FHIR Query, or to vaccineCode for FHIRPath and CQL.
+The handling of Procedure or Immunization resources is similar.  For Procedure, change Observation above to Procedure.  For Immunization, change Observation to Immunization, and code to vaccine-code for FHIR Query, or to vaccineCode for FHIRPath and CQL.
 
 #### Test with a coded result or interpretation
 To test for a specific coded result, add the following clauses to the above expressions:

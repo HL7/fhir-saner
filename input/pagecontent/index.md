@@ -103,7 +103,7 @@ at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.
 
 | Name | Organization | Role |
 | --- | --- | --- |
-| Keith Boone | Audacious Inquiry | Project Lead, Lead Devloper |
+| Keith Boone | Audacious Inquiry | Project Lead, Lead Developer |
 | Gino Canessa | Microsoft | Developer |
 | Michael Donnelly | Epic | Developer |
 | Rick Geimer | Lantana | Measure Computer |

@@ -1,8 +1,8 @@
 Deaths in the hospital during the reporting period is half of an [event growth measure](situational_awareness_measures.html#event-growth),
 it does not include the cumulative total number of deaths.  There are several good reasons to use an event growth measure in this case:
    1. Loss of a single report does not damage the cumulative total value.  When the next report is sent, a new cumulative total will also
-      be sent, allowing the reciever to adjust for the missing data.
-   2. Reporting both the incremental, and cumulative total allows the reciever to detect potential reporting errors over time.
+      be sent, allowing the receiver to adjust for the missing data.
+   2. Reporting both the incremental, and cumulative total allows the receiver to detect potential reporting errors over time.
    3. Using the Event Growth measure supports data correction over time. During a public health emergency where there are limited resources,
       activities are triaged to protect life first. Death reporting may be delayed for facilities under extreme stress.
    4. Event growth measures support the [BASE Consistency](https://en.wikipedia.org/wiki/Eventual_consistency) model, which means that prior
@@ -52,7 +52,7 @@ patients with COVID-19 who have died. This tells "what to count". The ResourceTy
 which is likely being counted.  The SNOMED slice can be used to provide a more fine grained code to describe the resource
 (e.g. a specific condition, medication, type of encounter, patient, practitioner, et cetera), and might be a code found or used
 to find resources based on the code field associated with it. This information is descriptive, rather than semantically exact content.
-It is meant to convey information to an implementor, rather than to automated systems.
+It is meant to convey information to an implementer, rather than to automated systems.
 ```
  ** with extension[subject] do
  *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Patient
@@ -100,9 +100,8 @@ population will already have been evaluated and can be further refined to identi
 who have died.
 
 #### Describe the Evaluation Criteria
-Name the criteria and give a description for what qualifies to to be included.
-NOTE: The description **shall** be given in detail for each population and provide enough
-information for a competent human reader to correctly implement the computation.
+Name the criteria and give a description for what qualifies to be included.
+NOTE: The description **shall** be given in detail for each population and provide enough information for a competent human reader to correctly implement the computation.
 ```
  * with group[2].population[0].criteria do
  ** name = "NumC19HospPats"
@@ -134,7 +133,7 @@ enables reuse of common subexpressions reducing evaluation overhead.
 Measure Developers **should** consider the order of presentation of groups within measures.
 While this walkthrough follows the original order in which the groups are presented, a different
 order would present the groups and populations which need to be computed first to the implementer.
-This reduces opportunities for congitive overload, simplifies implementations and avoid errors.
+This reduces opportunities for cognitive overload, simplifies implementations and avoid errors.
 
 ```
  * with group[2].population[0].criteria do
@@ -163,7 +162,7 @@ The next population identifies patients who have died.
     .select(subject).resolve()
  """
 ```
-Again, note the use of of nested iif() calls in the query to ensure short-circuit evaluation.
+Again, note the use of nested iif() calls in the query to ensure short-circuit evaluation.
 ```
  * with group[2].population[2].criteria do
  ** name = "CumC19Died"

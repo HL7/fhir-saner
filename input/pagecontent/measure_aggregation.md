@@ -18,7 +18,7 @@ that might be used in an implementation:
 
 1. Aggregate within a Facility to support consolidated reporting from multiple agents (e.g., information systems) within a facility for external reporting.
 2. Aggregate by geolocation - When an implementation provides geographic coordinates, aggregates can be defined by polygons defining the set of geographic regions.
-3. Aggregate by address - Some geographies can be aggregated by postal address.  Postal addresses identify some geopolitical boundaries, includeing
+3. Aggregate by address - Some geographies can be aggregated by postal address.  Postal addresses identify some geopolitical boundaries, including:
    * [Cities](http://www.hl7.org/fhir/datatypes-definitions.html#Address.city),
    * Counties or parishes (known as the [district](http://www.hl7.org/fhir/datatypes-definitions.html#Address.district) in the FHIR Address data type),
    * (States)[http://www.hl7.org/fhir/datatypes-definitions.html#Address.state],
@@ -61,7 +61,7 @@ implementation guide. Each of these must be aggregated differently.
 * point-in-time<br/>
   A count of things at a point in time (e.g., active cases, beds currently occupied, ventilators in use).
   Point in time measurements (e.g., bed occupancy, ventilators in use) represent a current state. When aggregated for the same facility
-  over multiple (continguous) time  periods, the most recent population.count is the "aggregated" value.
+  over multiple (contiguous) time  periods, the most recent population.count is the "aggregated" value.
 * cumulative<br/>
   A cumulative measure (e.g., tests performed).
   Cumulative measures are a combination of count and point-in-time measurements.  These represent a count of the current quantity (e.g., tests performed) over the total performed over "all time" (e.g., cumulative total tests performed).  When these are aggregated over multiple time periods, the aggregate of the cumulative total (the denominator) is the most recent value, but the aggregate of the current quantity (the numerator) is summed.

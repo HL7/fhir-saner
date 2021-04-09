@@ -2,9 +2,7 @@ This chapter [Need more here](#tbd) enumerates the FHIR conformance resources us
 plan for evaluating actors in this guide, and test data testing implementations.
 
 ### Conforming Actors
-A system can declare conformance to this implementation guide by ...
-
-
+A system can declare conformance to this implementation guide by:
  
 <ol>
     <li id='capabilities'><details><summary>Capability Statements</summary><ol>

@@ -47,22 +47,11 @@ components referenced by the Measure.
 ### Data Access for Computation
 Data access is encouraged through one of three mechanisms, all of which rely on core [FHIR search](https://www.hl7.org/fhir/search.html) capabilities.
 These mechanisms are described in order from lowest to highest implementation complexity.
-1. [FHIR Search](http://hl7.org/fhir/R4/search.html) is the basic capability supporting automation. Applications can support counting by using
-FHIR queries to select appropriate data elements for evaluation, and then compute measures based on the responses.  This is the most limited
-and "chatty" of mechanisms supporting integration, as many servers to not provide search capabilities supporting query across resource
-boundaries using different kinds of joins (e.g., chaining and _has search capabilities). Combining FHIR queries with other FHIR capabilities
-such as [Bulk Data Access](https://hl7.org/fhir/uv/bulkdata/) or [R5 Subscriptions](https://build.fhir.org/subscription.html) can make this
-a more efficient process, but integrating with these specifications is beyond the scope of this implementation guide.
+1. [FHIR Search](http://hl7.org/fhir/R4/search.html) is the basic capability supporting automation. Applications can support counting by using FHIR queries to select appropriate data elements for evaluation, and then compute measures based on the responses.  This is the most limited and "chatty" of mechanisms supporting integration, as many servers to not provide search capabilities supporting query across resource boundaries using different kinds of joins (e.g., chaining and _has search capabilities). Combining FHIR queries with other FHIR capabilities such as [Bulk Data Access](https://hl7.org/fhir/uv/bulkdata/) or [R5 Subscriptions](https://build.fhir.org/subscription.html) can make this a more efficient process, but integrating with these specifications is beyond the scope of this implementation guide.
 
-2. [FHIRPath](http://hl7.org/fhirpath) is a standalone specification that works with hierarchical models in structured representations (e.g.,
-JSON) originally designed for use with FHIR.  It is similar in form and capability to [XPath](https://www.w3.org/TR/xpath-31/), but has application
-to more general models than those represented by an XML document. When [FHIRPath is used within a FHIR Server](https://www.hl7.org/fhir/fhirpath.html)
-context, the language includes capabilities which support automation of queries, and resolution of resources matching the specified path.
+2. [FHIRPath](http://hl7.org/fhirpath) is a standalone specification that works with hierarchical models in structured representations (e.g., JSON) originally designed for use with FHIR.  It is similar in form and capability to [XPath](https://www.w3.org/TR/xpath-31/), but has application to more general models than those represented by an XML document. When [FHIRPath is used within a FHIR Server](https://www.hl7.org/fhir/fhirpath.html) context, the language includes capabilities which support automation of queries, and resolution of resources matching the specified path.
 
-3. [Clinical Quality Language](https://cql.hl7.org/) is an language designed to automate the computation of measures from FHIR and other data models. It enables
-localization of models to support variations in organizational workflows and data models.  Several open source implementations of CQL interpreters
-are available, but this technology has not yet reached the maturity of other sorts of systems, and it is not always widely available for users
-of systems supporting FHIR.
+3. [Clinical Quality Language](https://cql.hl7.org/) is an language designed to automate the computation of measures from FHIR and other data models. It enables localization of models to support variations in organizational workflows and data models.  Several open source implementations of CQL interpreters are available, but this technology has not yet reached the maturity of other sorts of systems, and it is not always widely available for users of systems supporting FHIR.
 
 While measures conforming to this guide may use any of the above in expressions, FHIRPath is the preferred format because open source
 implementations of FHIRPath are [generally available](https://confluence.hl7.org/display/FHIR/Open+Source+Implementations) for multiple
@@ -105,75 +94,36 @@ The computable criteria found definitions for the Measure in
 [stratifier](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.stratifier.criteria) and other criteria
 components within the measure are deemed to be the "normative" definition of the measure.  However, measure developers may wish to provide
 alternative implementations to support application environments that cannot support FHIRPath, or which have access to a high quality CQL
-engine. These definitions can be supplied using the [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html)
-extension. This extension allows alternate criteria to be supplied which can support evaluation on systems not having support for the
-preferred (and normative) specification for the measure.
+engine. These definitions can be supplied using the [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html) extension. This extension allows alternate criteria to be supplied which can support evaluation on systems not having support for the preferred (and normative) specification for the measure.
 
 ### Other Measure Definition Content
 A computable public health measure may reference [ValueSet](https://www.hl7.org/fhir/ValueSet), [ConceptMap](https://www.hl7.org/fhir/), [CQL definitions](https://cql.hl7.org/), [SearchParameter](https://www.hl7.org/fhir/SearchParameter) and
-other FHIR conformance resources to support automation. The [PublicHealthMeasureLibrary](StructureDefinition-PublicHealthMeasureLibrary.html) defines
-the constraints relevant to referencing the FHIR resources needed to automate measure computation.
+other FHIR conformance resources to support automation. The [PublicHealthMeasureLibrary](StructureDefinition-PublicHealthMeasureLibrary.html) defines the constraints relevant to referencing the FHIR resources needed to automate measure computation.
 
 ### Automated Measure Computation
 
 The process for measure computation relies on several preconditions:
 
-1. The measure establishes the initial context for evaluation by
-   defining libraries, value sets, code systems or other resources
-   necessary for automating the computation. These can be found in the
-   Library resources defined by the measure.
-2. A measure is broken up into groups, populations and strata which
-   facilitate evaluation.
-3. A group evaluates a measurement associated with a specific kind of
-   resource or event, e.g., a patient, an admission or patient encounter,
-   a lab result, et cetera. This is defined in the groups of the measure as described
-   in the [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html)
-   extension.
-4. Populations are evaluated based on queries of resources associated with
-   the group, and may depend on other resources defined within the context
-   of the measure.  Populations may be defined by refining other
-   populations within the group or measure, but at least one population
-   (normally the initial population) does not have any unresolved context
-   references.  The result of an evaluation is either a collection, in which
-   case the population count is computed based on the number of elements
-   in the collection, OR it is a singular numeric result or quantity, in
-   which case the count is the numeric value.
-5. Once a population has been evaluated, it establishes a element within
-   the measure context that uses a computable name established by the
-   criteria.  This element may enable the evaluation of other populations
-   with the measure.  This element contains the collection or
+1. The measure establishes the initial context for evaluation by defining libraries, value sets, code systems or other resources necessary for automating the computation. These can be found in the Library resources defined by the measure.
+2. A measure is broken up into groups, populations and strata which facilitate evaluation.
+3. A group evaluates a measurement associated with a specific kind of resource or event, e.g., a patient, an admission or patient encounter, a lab result, et cetera. This is defined in the groups of the measure as described in the [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) extension.
+4. Populations are evaluated based on queries of resources associated with the group, and may depend on other resources defined within the context of the measure.  Populations may be defined by refining other populations within the group or measure, but at least one population (normally the initial population) does not have any unresolved context references.  The result of an evaluation is either a collection, in which case the population count is computed based on the number of elements in the collection, OR it is a singular numeric result or quantity, in which case the count is the numeric value.
+5. Once a population has been evaluated, it establishes a element within the measure context that uses a computable name established by the criteria.  This element may enable the evaluation of other populations with the measure.  This element contains the collection or
    singular numeric result or quantity returned by the evaluation process.
-6. Having evaluated a population, the strata within the population may
-   be computable, but could require evaluation of other populations.
-   Evaluation of strata follow a similar pattern to evaluation of
-   populations.
+6. Having evaluated a population, the strata within the population may be computable, but could require evaluation of other populations.
+   Evaluation of strata follow a similar pattern to evaluation of populations.
 
 The general algorithm is:
 
-Given a Measure, find a population or strata within a group of the measure
-that does not reference an unresolved contextual element. Evaluate that population
-or strata and update the context with the evaluated result. If the population
-has strata without an unresolved contextual reference, evaluate its strata.
+Given a Measure, find a population or strata within a group of the measure that does not reference an unresolved contextual element. Evaluate that population or strata and update the context with the evaluated result. If the population has strata without an unresolved contextual reference, evaluate its strata.
 
-If there are no more unevaluated populations or strata, then evaluation
-is complete. There should not be a population or strata that cannot be resolved
-because of a missing dependency.  If an implementation detects a case where
-a population or stratum cannot be evaluated, it should report an
-evaluation error.  It may populate the unpopulated components of the measure
-(e.g., count or score) using the
-[data-absent-reason](http://hl7.org/fhir/StructureDefinition/data-absent-reason)
-extension, indicating that the value is unavailable due to an
-[error](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html#data-absent-reason-error)
-in order to support reporting of partial results while the error condition
-is being corrected.
+If there are no more unevaluated populations or strata, then evaluation is complete. There should not be a population or strata that cannot be resolved because of a missing dependency.  If an implementation detects a case where a population or stratum cannot be evaluated, it should report an evaluation error.  It may populate the unpopulated components of the measure (e.g., count or score) using the [data-absent-reason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension, indicating that the value is unavailable due to an [error](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html#data-absent-reason-error) in order to support reporting of partial results while the error condition is being corrected.
 
 #### Resolving Parameters and Computed Content
 Named parameters are essential to support automated measure evaluation. They are used to constrain queries using FHIR Search, FHIRPath
-or CQL in order to limit the data retrieved to that which is relevant for measure computation.  The names of parameters used in Measure resources
-conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a period to match the regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
+or CQL in order to limit the data retrieved to that which is relevant for measure computation.  The names of parameters used in Measure resources conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a period to match the regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
 
-FHIRPath and CQL provide mechanisms to provide named parameters (e.g., reporting period) and collections
-of FHIR resources during their evaluation.
+FHIRPath and CQL provide mechanisms to provide named parameters (e.g., reporting period) and collections of FHIR resources during their evaluation.
 
 * FHIR Search<br/>
   To support named parameters in FHIR Queries, this guide uses the notation @_Name_ to indicate a named parameter in a FHIR Query.

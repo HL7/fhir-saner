@@ -64,7 +64,7 @@ outlined below.
 
 ###### HAvBED and OASIS EDXL/HAVE Standards
 Most notably, the OASIS Emergency Data Exchange Language (EDXL), and the OASIS Hospital Availability Exchange
-were profiled by ANSI/HITSP in reponse to the American Health Information Community (AHIC)  Emergency Responder Use Case.  This work was advanced by AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
+were profiled by ANSI/HITSP in response to the American Health Information Community (AHIC)  Emergency Responder Use Case.  This work was advanced by AHRQ to develop what is now known as the HAvBED solution, which became a federally-mandated program for states
 to collect and report bed availability data.  Health and Human Services suspended the HAvBED program in 2016.
 Some of the challenges with HAvBED included:
 
@@ -132,7 +132,7 @@ quantity of medications given.  MedicationDispense and MedicationAdministration 
 through EHR systems generally.
 
 ##### SupplyRequest and SupplyDelivery
-The [SupplyDelivery](https://hl7.org/fhir/R4/supplydelivery.html) resources can be used to determine quantities of supplies, such as PPE or or disposable items
+The [SupplyDelivery](https://hl7.org/fhir/R4/supplydelivery.html) resources can be used to determine quantities of supplies, such as PPE or disposable items
 used during treatment. These resources are relatively new and not widely available.
 
 ##### Measure and MeasureReport Resource

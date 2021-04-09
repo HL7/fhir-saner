@@ -1,4 +1,3 @@
-
 Each of the  measures or counts of groups of things such as available beds, ventilators, tests ordered, et cetera, with accompanying instructions describe (to a human) of what to include in a group creates a Measure which combine into a MeasureReport .  A conceptual model of the Measure and MeasureReport artifacts appears below.
 <div>
 {%include ConceptualModel.svg%}

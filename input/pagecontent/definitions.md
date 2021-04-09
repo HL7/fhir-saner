@@ -1,7 +1,7 @@
 [Delete this content or figure out where to put it](#todo)
 
 Definitions are critical during times of crisis. Knowing and understanding these definitions
-enables the implementors of this specification to operate from a common understanding
+enables the implementers of this specification to operate from a common understanding
 of meaning, and those using the data produced from those implementations to respond
 accordingly.
 
@@ -69,7 +69,7 @@ can be configured to track and manage them.
 ## Ventilation Support
 
 Similarly, ventilators can be shared, so the important number for ventilators may not
-be the number of devices, but rather the number of patients that can be accomodated
+be the number of devices, but rather the number of patients that can be accommodated
 (ventilator outputs). New York-Presbyterian Hospital began ventilator sharing in late
 March as reported in a [March 26 New York Times article](https://www.nytimes.com/2020/03/26/health/coronavirus-ventilator-sharing.html).
 
@@ -82,7 +82,7 @@ Others have noted that respiratory assistance can be provided by non-invasive ve
 
 Ventilator
 : A regulated medical device capable of providing ventilation support.  Use of a ventilator
-requires intubation with an endotraceal tube to provide ventilation support, and is
+requires intubation with an endotracheal tube to provide ventilation support, and is
 considered to be an "invasive procedure", usually requiring the kind of monitoring performed
 in an intensive care unit.
 
@@ -95,7 +95,7 @@ CPAP
 : A regulated medical device providing continuous positive airway pressure.
 
 BiPAP
-: BiPAP is the trade name for Respironics Bilevel Positive Airway Pressure equipement.
+: BiPAP is the trade name for Respironics Bilevel Positive Airway Pressure equipment.
 These are regulated medical devices similar to CPAP, but with adjusted pressure levels
 during the cycles of breathing in and out.
 
@@ -145,4 +145,3 @@ collected using a nasal swab in order to diagnosis COVID-19.
 COVID Test Kit for Blood
 : A quantity of materials sufficient to perform a single test on a single specimen
 collected from blood or blood products in order to diagnosis COVID-19.
-

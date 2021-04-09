@@ -1,15 +1,15 @@
 Test data for the Laboratory Reporting Test Data Set includes a measure, measure reports, and locations
 and organizations resources representing aggregate reports for the State of New Jersey over time.  This data
-comes from publicly reported data sets published via [The COVID Tracking Project](https://covidtracking.com/), or the New Jersery
+comes from publicly reported data sets published via [The COVID Tracking Project](https://covidtracking.com/), or the New Jersey
 department of public health.  The data is based on real world reports provided at the state level, but should
 NOT be considered an authoritative source.
 
-This data can be be used to prepopulate a FHIR Server to support test cases for the Measure Consumer, and
+This data can be used to prepopulate a FHIR Server to support test cases for the Measure Consumer, and
 Measure Source actors, and the Measure Intermediary actors.
 
 ### Predefined Measure for the Laboratory Reporting Test Data Set
 This implementation guide includes a sample measure describing the measurements that were required to be reported
-to the US Federal Emergency Management Agency (FEMA) earlier this year for for hospital laboratory reporting.
+to the US Federal Emergency Management Agency (FEMA) earlier this year for hospital laboratory reporting.
 
 * [FEMA Daily Hospital COVID-19 Reporting Measures](Measure-FEMADailyHospitalCOVID19Reporting.html)
   defines a measure that was aligned with the reporting required by the
