@@ -178,7 +178,7 @@ menu:
     Use Cases: use_cases.html
 
   Architecture &amp; Implementation:
-    Architecture: architecture.html
+    Architecture: Architecture_and_Implementation.html
     Security Considerations: security_considerations.html
     Actors: actors.html
     Transactions: transactions.html
