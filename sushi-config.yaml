@@ -62,6 +62,9 @@ pages:
     use_cases.md:
       title: Use Cases
       generation: markdown
+    ConceptualModel.md:
+          title: Conceptual Model
+          generation: markdown
   spec.md:
     title: Specification Details
     generation: markdown
@@ -176,6 +179,7 @@ menu:
     Scope: introduction.html
     Situational Awareness Measures: situational_awareness_measures.html
     Use Cases: use_cases.html
+    Conceptual Model: ConceptualModel.html
 
   Architecture &amp; Implementation:
     Architecture: Architecture_and_Implementation.html

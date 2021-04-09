@@ -12,7 +12,7 @@ This guide is organized into five main sections:
 2. [Measuring Situational Awareness](situational_awareness_measures.html) - Describes situational awareness and how to measure it.
 3. [Use Cases](use_cases.html) - Illustrates Key Uses Cases addressed by this guide.
 * Chapter II: Technical Implementation
-1. [Architecture](architecture.html) - Illustrates the Microservice Architecture.
+1. [Architecture and Implementation](Architecture_and_Implementation.html) - Illustrates the Microservice Architecture.
 2. [Security Considerations](security_considerations.html) - Documents security concerns and mitigations.
 3. [Actors and Transactions](actors.html) - Provides an overview of technical components
 
