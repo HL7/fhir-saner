@@ -60,7 +60,7 @@ evolution from Bed Availability.
 
 [^1]: [HITSP C47: Resource Utilization Message](http://www.hitsp.org/ConstructSet_Details.aspx?&PrefixAlpha=4&PrefixNumeric=47)
 
-[^2]: [HAvBED2: Hospital Available Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
+[^2]: [HAvBED2: Hospital Avaialable Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
 
 [^3]: [Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) v1.0 incorporating Approved Errata](https://www.oasis-open.org/standards#edxlhave-v1.0)
 
@@ -135,7 +135,7 @@ the location of a practitioner.
 ###### Group Resource
 While the Group resource can be used to support aggregate reporting on beds, as it allows reporting
 of quantities of an item without referencing an individual item, it has not been deployed in this way by
-any known system. This resource can also be used to report on other types of resources, such as
+any knwon system. This resource can also be used to report on other types of resources, such as
 ventilators, respirators, and N95 masks.
 
 NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
@@ -172,14 +172,17 @@ above.
 </table>
 
 #### Terminology
-Terminology plays an important role in this implementation guide. It can be used to describe:
-* The kind of location where the bed is located (e.g., ED, med/surgery, ICU, Pediatric, NICU, Isolation)
+Terminology plays an important role in this implementation guide.
+It can be used to describe:
+* The kind of location where the bed is located (e.g., ED, med/surgery, ICU, Pediatric,
+NICU, Isolation)
 * The status of a bed (e.g., available, in use, isolated, contaminated, housekeeping)
 * Other types of resources (e.g., ventilators, respirators, masks, et cetera)
 
 ##### Location Type
 The HL7 Version 3 [Service Delivery Location Role Type](https://www.hl7.org/fhir/v3/ServiceDeliveryLocationRoleType/vs.html)
-Value Set has been adopted as the [Preferred](https://www.hl7.org/fhir/terminologies.html#preferred) classification system for `Location.type` in the Location resource in FHIR R4.
+Value Set has been adopted as the [Preferred](https://www.hl7.org/fhir/terminologies.html#preferred) classification system for `Location.type` in the Location resource in FHIR
+R4.
 
 ##### Bed Status
 HL7 Version 2 Table 0116 [Bed Status Provides Vocabulary](https://www.hl7.org/fhir/v2/0116/index.html) that can describe the status
@@ -207,4 +210,8 @@ These new codes and guidelines for use of existing codes support:
 * Suspected Diagnosis of COVID-19
 * Suspected or actual Exposure to COVID-19
 
-----
+
+
+
+**Footnotes**
+        
