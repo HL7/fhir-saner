@@ -76,10 +76,10 @@ Profile and the relevant transactions between them.&#xA;
                 <xsl:with-param name="document" select="concat('transaction-',position(),'.md')"></xsl:with-param>
             </xsl:call-template>
         </xsl:result-document>
-        <xsl:result-document href="{$dir}images-source/transaction-{position()}-uc.txt" method="text">
+        <xsl:result-document href="{$dir}images-source/transaction-{position()}-uc.plantuml" method="text">
             <xsl:call-template name="transaction-uc"/>
         </xsl:result-document>
-        <xsl:result-document href="{$dir}images-source/transaction-{position()}-seq.txt" method="text">
+        <xsl:result-document href="{$dir}images-source/transaction-{position()}-seq.plantuml" method="text">
             <xsl:call-template name="transaction-seq"/>
         </xsl:result-document>
         <xsl:call-template name="transaction-capability">
@@ -361,7 +361,7 @@ See the following CapabilityStatement resources for conformance requirements:
     <xsl:template match="text()" mode="interaction-diagram"/>
 
     <xsl:template name="actor-transaction-diagram">
-        <xsl:result-document href="{$dir}images-source/ActorsAndTransactions.txt" method="text">
+        <xsl:result-document href="{$dir}images-source/ActorsAndTransactions.plantuml" method="text">
             <xsl:text>@startuml
 skinparam FolderBorderColor white
 skinparam FolderFontColor white
