@@ -54,7 +54,7 @@ evolution from Bed Availability.
 
 [^1]: [HITSP C47: Resource Utilization Message](http://www.hitsp.org/ConstructSet_Details.aspx?&PrefixAlpha=4&PrefixNumeric=47)
 
-[^2]: [HAvBED2: Hospital Avaialable Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
+[^2]: [HAvBED2: Hospital Available Beds for Emergencies and Disasters](https://archive.ahrq.gov/prep/havbed2/)
 
 [^3]: [Emergency Data Exchange Language (EDXL) Hospital AVailability Exchange (HAVE) v1.0 incorporating Approved Errata](https://www.oasis-open.org/standards#edxlhave-v1.0)
 
@@ -129,7 +129,7 @@ the location of a practitioner.
 ###### Group Resource
 While the Group resource can be used to support aggregate reporting on beds, as it allows reporting
 of quantities of an item without referencing an individual item, it has not been deployed in this way by
-any knwon system.  This resource can also be used to report on other types of resources, such as
+any known system.  This resource can also be used to report on other types of resources, such as
 ventilators, respirators, and N95 masks.
 
 NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
