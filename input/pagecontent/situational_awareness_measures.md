@@ -305,9 +305,7 @@ Duration is a measure-observation provided with time units representing the dura
 (e.g. length of stay, time to admission, time for service).
 
 #### Duration Squared
-Like Duration, duration-squared is a measure-observation. It represents the sum of squares duration of an activity or event. This value can be used
-to support computation of variance in time of service measures. Increases in variation over time represent areas where service times are changing, and measures
-of variance allow for hypotheses testing about the distribution of measured events.
+Like Duration, duration-squared is a measure-observation. It represents the sum of squares duration of an activity or event. The sum of squares can be used to calculate other statistics, such as variance and standard deviation. Average and variance are the first two parameters that describe the shape of a distribution. Signal changes may first show up in sum of squares ahead of other statistics. This value can be used to support computation of variance in time of service measures. Increases in variation over time represent areas where service times are changing, and measures of variance allow for hypotheses testing about the distribution of measured events.
 
 #### Supporting
 A supporting population represents an intermediate computation helpful in defining a measure, but not needing to be reported.  It
