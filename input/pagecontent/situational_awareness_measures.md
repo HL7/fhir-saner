@@ -92,19 +92,11 @@ implementation guides. These guides provide excellent reference and background m
 for those interested in learning more about the terminology used in measurement.
 
 According to The American Heritage® Stedman's Medical Dictionary:
-<blockquote>
-<dl>
-<dt>
-measure <i>v.</i>
-</dt>
-<dd>
-To ascertain the dimensions, quantity, or capacity of.
-</dd>
-<dd>
-To mark, lay out, or establish dimensions for by measuring.
-</dd>
-</dl>
-</blockquote>
+> measure <i>v.</i>
+>
+> To ascertain the dimensions, quantity, or capacity of.
+>
+> To mark, lay out, or establish dimensions for by measuring.
 
 At its simplest, measurement is counting in units, and then doing some math with
 the resulting count or to obtain a value that lets you do something useful.  The approach
@@ -229,29 +221,26 @@ one site results tests in 22.0 hours, and another site reports tests in 12.0 hou
 computed if the number of tests is not reported.  If the first site performed 100 tests, and the second performed 1000 tests, then
 the rate across both sites will be different if the quantities of tests performed is swapped.  This is shown in the two tables below:
 
-<table border='1' cellspacing='0' cols='5' rows='4' border='1'>
-  <caption>Case 1: Site 1 reports on 100 tests, Site 2 on 1000</caption>
-  <thead>
-    <tr><th>Site</th><th>Average Rate</th><th>Tests Performed</th><th>Total Time</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>100</td><td> 2,200 hrs</td><td>22.0 hrs/result</td></tr>
-    <tr><td>2</td><td>1000</td><td>12,000 hrs</td><td>12.0 hrs/result</td></tr>
-    <tr><td>All</td><td>1100</td><td>14,200 hrs</td><td>12.9 hrs/result</td></tr>
-  </tbody>
-</table><br/>
+<br />
+Case 1: Site 1 reports on 100 tests, Site 2 on 1000
 
-<table border='1' cellspacing='0' cols='5' rows='4' border='1'>
-  <caption>Case 2: Site 1 reports on 1000 tests, Site 2 on 100</caption>
-  <thead>
-    <tr><th>Site</th><th>Tests Performed</th><th>Total Time</th><th>Average Rate</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>1000</td><td>22,000 hrs</td><td>22.0 hrs/result</td></tr>
-    <tr><td>2</td><td>100</td><td> 1,200 hrs</td><td>12.0 hrs/result</td></tr>
-    <tr><td>All</td><td>1100</td><td>23,200 hrs</td><td>21.1 hrs/result</td></tr>
-  </tbody>
-</table>
+|Site|Average Rate|Tests Performed|Total Time|
+|---|---|---|---|
+|1|100|2,200 hrs|22.0 hrs/result|
+|2|1000|12,000 hrs|12.0 hrs/result|
+|All|1100|14,200 hrs|12.9 hrs/result|
+{: .grid}
+
+<br/>
+Case 2: Site 1 reports on 1000 tests, Site 2 on 100
+
+|Site|Tests Performed|Total Time|Average Rate|
+|---|---|---|---|
+|1|1000|22,000 hrs|22.0 hrs/result|
+|2|100|1,200 hrs|12.0 hrs/result|
+|All|1100|23,200 hrs|21.1 hrs/result|
+{: .grid}
+
 
 #### Availability
 Availability measures are subtypes of cohort measures which enable tracking of availability of
@@ -322,47 +311,16 @@ Unlike quality measures, situation awareness measures do not require that an ini
 for all measure types. It is permitted, and may be helpful in measure computation, but it is not essential
 for scoring or reporting.
 
-<table rows='12'>
-  <thead>
-    <tr><th>MeasureType</th><th>Initial Population</th><th>Suppporing Population</th>
-        <th>Denominator</th><th>Denominator Exclusion</th>
-        <th>Numerator</th><th>Numerator Exclusion</th><th>Numerator Complement</th>
-        <th>Duration</th><th>Duration Squared</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Capacity and Utilization</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>R</td><td>O</td><td>R</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-    <tr><td>Event Growth</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>R</td><td>O</td><td>NP</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-    <tr><td>Queue Length</td>
-      <td>R</td><td>O</td>
-      <td>NP</td><td>NP</td>
-      <td>NP</td><td>NP</td><td>NP</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-    <tr><td>Service Time</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>NP</td><td>NP</td><td>NP</td>
-      <td>R</td><td>O</td>
-    </tr>
-    <tr><td>Availability</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>R</td><td>O</td><td>R</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-  </tbody>
-</table>
+
+|MeasureType| Initial<br/>Population | Supporting<br/>Population| Denominator| Denominator<br/>Exclusion| Numerator| Numerator<br/> Exclusion | Numerator<br/>Complement| Duration| Duration<br/>Squared|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Capacity and<br/>Utilization**|O|O|R|O|R|O|R|NP|NP|
+|**Event Growth**|O|O|R|O|R|O|NP|NP|NP|
+|**Queue Length**|O|O|R|O|NP|NP|NP|NP|NP|
+|**Service Time**|O|O|R|O|NP|NP|NP|R|O|
+|**Availability**|O|O|R|O|R|O|R|NP|NP|
+{: .grid}
+
 
 ### Optionality in Situation Awareness Measures
 A measure may contain sections for reporting that are either not appropriate or not applicable for all settings.
