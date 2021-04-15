@@ -23,16 +23,16 @@ This guide is organized into five main sections:
 
 * Chapter IV: Conformance and Testing
 <ol>
-    <li><details><summary>Capability Statements</summary><ol>
+    <li><details><summary<a href="artifacts.html#behavior-capabilitystatements">Capability Statements</a></summary><ol>
 
         {% include list-name-capabilitystatements.xhtml %}
 
         </ol></details>
     </li>
-    <li><details><summary>Operations</summary><ol>
+    <li><details><summary><a href="artifacts.html#behavior-operation-definitions">Operations</a></summary><ol>
         <li><a href='OperationDefinition-Measure-evaluate-measure.html'>Measure/$evaluate-measure</a> Evaluate the Measure</li>
         <li><a href='OperationDefinition-Measure-report-csv.html'>Measure/$report-csv</a> Create or update a MeasureReport from CSV Format</li>
-        <li><a href='OperationDefinition-MeasureReport-aggregate.html'>MeasureReport/$aggregate</a> Aggregate MeeasureReport resources</li>
+        <li><a href='OperationDefinition-MeasureReport-aggregate.html'>MeasureReport/$aggregate</a>Aggregate MeasureReport resources</li>
         <li><a href='OperationDefinition-MeasureReport-read-csv.html'>MeasureReport/$read-csv</a> Read in CSV Format</li>
         <li><a href='OperationDefinition-MeasureReport-search-csv.html'>MeasureReport/$search-csv</a> Search in CSV Format</li>
         </ol></details>
@@ -111,4 +111,4 @@ at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.
 | Austin Kreisler | Leidos | Subject Matter Expert |
 | Josh Mandel | Microsoft | Subject Matter Expert |
 | Abigail Watson | Symptomatic.io |  Subject Matter Expert |
-| David Pyke | Audacious Inquiry | HL7 Liason |
+| David Pyke | Audacious Inquiry | HL7 Liaison |
