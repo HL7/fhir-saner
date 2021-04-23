@@ -23,5 +23,6 @@ OASIS|A standards development organization
 ONC| Office of the National Coordinator for Health Information Technology
 SARS-Cov-2| Severe Acute Respiratory Syndrome Associated Coronavirus 2
 SNOMED|Systemized Nomenclature of Medicine
-SOA| Service-oriented architecture 
+SOA| Service-oriented architecture
+tern|Terns are seabirds in the family Laridae that have a worldwide distribution and are normally found near the sea, rivers, or wetlands.
 USCDI| United States Core Data for Interoperability
