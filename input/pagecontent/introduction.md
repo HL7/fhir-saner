@@ -83,71 +83,39 @@ The HL7 SOA Workgroup Collaborated with the OASIS EDXL Committee to develop a [C
 Paradigm](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=489)
 specification supporting the communication of bed availability information.
 
+
 #### HL7 FHIR Resources Supporting Situational Awareness Reporting
-In HL7 FHIR the [Location](https://hl7.org/fhir/R4/location.html) resource can describe information about
-any bed within a facility.  The [Group](https://hl7.org/fhir/R4/group.html) resource
-can report on specific quantities of groups of resources available that match a specific
-set of characteristics.  The [MeasureReport](https://hl7.org/fhir/R4/measurereport.html)
-resource can report on measures using counts and other metrics over a variety of resources.
+In HL7 FHIR the [Location](https://hl7.org/fhir/R4/location.html) resource can describe information about any bed within a facility. The [Group](https://hl7.org/fhir/R4/group.html) resource can report on specific quantities of groups of resources available that match a specific set of characteristics. The [MeasureReport](https://hl7.org/fhir/R4/measurereport.html) resource can report on measures using counts and other metrics over a variety of resources.
 
 ##### Device Resource
-The [Device](https://hl7.org/fhir/R4/device.html) Resource can report on medical devices, including ventilators, respirators,
-personal protective equipment such as masks, and viral test kits.  Device is not widely
-used by systems reporting on device quantities or status.
+The [Device](https://hl7.org/fhir/R4/device.html) Resource can report on medical devices, including ventilators, respirators, personal protective equipment such as masks, and viral test kits. Device is not widely used by systems reporting on device quantities or status.
 
 ##### Location Resource
-While the [Location](https://hl7.org/fhir/R4/location.html) resource can report on beds, it can also be used to describe buildings, wards,
-geographic area, or any other sort of place, including "mobile" places such as a mobile clinic or
-ambulance.  Given its broad application, the Location resource would need to be profiled to support use for bed availability.
+While the [Location](https://hl7.org/fhir/R4/location.html) resource can report on beds, it can also be used to describe buildings, wards, geographic area, or any other sort of place, including "mobile" places such as a mobile clinic or ambulance. Given its broad application, would need to be profiled to support use for bed availability.
 
-While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's
-little use of the Location resource to report data about beds.  It is more commonly used to report
-Location data associated with the
-[Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (precursor to the US Core Data for Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification regulations.  These uses of Location are found in the Encounter, Procedure and Practitioner resources to
-describe the facility where an encounter occurs, the location where a procedure is performed, or
-the location of a practitioner or facility.
+While many existing Certified EHR Systems support the FHIR standard and the Location resource today, there's little use of the Location resource to report data about beds. It is more commonly used to report Location data associated with the [Common Clinical Data Set](https://www.healthit.gov/sites/default/files/commonclinicaldataset_ml_11-4-15.pdf) (a precursor to the US Core Data for Interoperability or [USCDI](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi)) required by the ONC 2015 Certification regulations. These uses of Location are found in the Encounter, Procedure and Practitioner resources to describe the facility where an encounter occurs, the location where a procedure is performed, or the location of a practitioner or facility.
 
 ##### Group Resource
-While the [Group](https://hl7.org/fhir/R4/group.html) resource can be used to support aggregate reporting on beds, as it allows reporting
-of quantities of an item without referencing an individual item, it has not been deployed in this way by
-any known system.  This resource can also be used to report on other types of resources, such as
-ventilators, respirators, and N95 masks.
+While the [Group](https://hl7.org/fhir/R4/group.html) resource can be used to support aggregate reporting on beds, as it allows reporting of quantities of an item without referencing an individual item, it has not been deployed in this way by any known system. This resource can also be used to report on other types of resources, such as ventilators, respirators, and N95 masks.
 
-NOTE: While Group doesn't specifically support groups of Location resources, it can be used to
-report on any group of things that can be defined by characteristics; it simply cannot
-enumerate those resources.  That is not essential for the use cases in this implementation
-guide.
+NOTE: While Group doesn't specifically support groups of Location resources, it can be used to report on any group of things that can be defined by characteristics, it simply cannot enumerate those resources. That is not essential for the use cases in this implementation guide.
 
 The Group resource is more lightly deployed in existing EHR products.
 
 ##### Immunization
-The [Immunization](https://hl7.org/fhir/R4/immunization.html) resource can be used to determine the quantity of immunizations dispensed to
-vaccinate patients. The Immunization resource is included in USCDI and generally available in EHR
-systems in the US.
+The [Immunization](https://hl7.org/fhir/R4/immunization.html) resource can be used to determine the quantity of immunizations dispensed to vaccinate patients. The Immunization resource is included in USCDI and generally available in EHR systems in the US.
 
 ##### MedicationDispense, MedicationAdministration
-The [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html) resource can be used to determine the quantity of specific types of medications
-dispensed to treat patients (e.g., Remdesivir). MedicationAdministration would be used to determine the
-quantity of medications given.  MedicationDispense and MedicationAdministration are not widely available
-through EHR systems generally.
+ The [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html) resource can be used to determine the quantity of specific types of medications dispensed to treat patients (e.g., Remdesivir). MedicationAdministration would be used to determine the quantity of medications given. MedicationDispense and MedicationAdministration are not widely available through EHR systems generally.
 
 ##### SupplyRequest and SupplyDelivery
-The [SupplyDelivery](https://hl7.org/fhir/R4/supplydelivery.html) resources can be used to determine quantities of supplies, such as PPE or disposable items
-used during treatment. These resources are relatively new and not widely available.
+The [SupplyDelivery](https://hl7.org/fhir/R4/supplydelivery.html) resources can be used to determine quantities of supplies, such as PPE or disposable items used during treatment. These resources are relatively new and not widely available.
 
 ##### Measure and MeasureReport Resource
-The [Measure](https://hl7.org/fhir/R4/measure.html) and [MeasureReport](https://hl7.org/fhir/R4/measurereport.html) resource can be used to support reporting of a variety of measures,
-including simple counts, tracking of inventory (e.g., PPE, medication supply), or used with measures
-over different strata.  It is not readily searchable at the stratum level.  MeasureReport is beginning
-to gain traction because of efforts using it in the [DaVinci Project](https://www.hl7.org/about/davinci/)
-and in clinical quality reporting efforts.
+ The [Measure](https://hl7.org/fhir/R4/measure.html) and [MeasureReport](https://hl7.org/fhir/R4/measurereport.html) resource can be used to support reporting of a variety of measures, including simple counts, tracking of inventory (e.g., PPE, medication supply), or used with measures over different strata. It is not readily searchable at the stratum level. MeasureReport is beginning to gain traction because of efforts using it in the [DaVinci Project](https://www.hl7.org/about/davinci/) and in clinical quality reporting efforts.
 
 ##### Questionnaire Response
-The [QuestionnaireResponse](https://hl7.org/fhir/R4/questionnaireresponse.html) resource has been profiled for use in reporting to CDC's National
-Healthcare Safety Network (NHSN) in two implementation guides to report the occurrence
-of Healthcare Acquired Infections. These guides have seen limited implementation and
-testing.
-
+The [QuestionnaireResponse](https://hl7.org/fhir/R4/questionnaireresponse.html) resource has been profiled for use in reporting to CDC's National Healthcare Safety Network (NHSN) in two implementation guides to report the occurrence of Healthcare Acquired Infections. These guides have seen limited implementation and testing.
 
 #### Terminology
 Terminology plays an important role in this implementation guide.
