@@ -25,12 +25,11 @@ Severity: #error
 
 Extension: GeoLocation
 Title: "Extension Attributes to associate with a Location Reference to simplify Geographic search"
-* insert: SanerStructureDefinitionContent
 Description: """This is essentially a database denormalization that facilitates search by Geographics coordinates on a location.
 It enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.
 The extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)
 in the hope that it could eventually be absorbed by that extension."""
-* insert: SanerStructureDefinitionContent
+* insert SanerStructureDefinitionContent
 
 * extension contains latitude 1..1 and longitude 1..1
 * extension[latitude] ^short = "Like [geolocation:latitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:latitude)"
