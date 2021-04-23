@@ -1,17 +1,17 @@
 RuleSet: NHSNArtifacts
- * relatedArtifact[0].type = http://hl7.org/fhir/ValueSet/library-type#documentation
+ * relatedArtifact[0].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
  * relatedArtifact[0].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
  * relatedArtifact[0].label = "NHSN COVID-19 Reporting"  // Descriptive Text to display in a Link
  * relatedArtifact[0].display = "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page" // Title of the link target page
- * relatedArtifact[1].type = http://hl7.org/fhir/ValueSet/library-type#documentation
+ * relatedArtifact[1].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
  * relatedArtifact[1].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
  * relatedArtifact[1].label = "How to import COVID-19 Summary Data"
  * relatedArtifact[1].display = "Importing COVID-19 Patient Module Denominator data for Patient Safety Component"
- * relatedArtifact[2].type = http://hl7.org/fhir/ValueSet/library-type#documentation
+ * relatedArtifact[2].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
  * relatedArtifact[2].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"
  * relatedArtifact[2].label = "Table of Instructions"
  * relatedArtifact[2].display = "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)"
- * relatedArtifact[3].type = http://hl7.org/fhir/ValueSet/library-type#documentation
+ * relatedArtifact[3].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
  * relatedArtifact[3].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"
  * relatedArtifact[3].label = "CSV File Template"
  * relatedArtifact[3].display = "CDC/NHSN COVID-19 Reporting CSV File Template"
