@@ -14,7 +14,7 @@ Given this assessment, the main Security Considerations are focused on:
 
 * Assuring the data published is authentic to the organization publishing the data. That is that a consumer of the API can be given assurances that they are connecting to the authentic service endpoint they intended to connect to. This functionally is provided by common use of TLS with server sided authentication, commonly used in HTTPS.
 
-* Taking care to validate that the server certificate validated and authenticated by the TLS / HTTPS is the server intended to connect to. This is important management of client side certificate trust store.
+* Taking care to validate that the server certificate validated and authenticated by TLS/HTTPS is the server intended to connect to. This is important management of client side certificate trust store.
 
 * Assuring the data communicated is not modified in transit. The consumer of the API can be given assurances that they are retrieving exactly the data that is published. This functionality is provided by common use of TLS with integrity cyphers such as SHA256.
 
@@ -46,7 +46,7 @@ In addition to the mitigations above, careful definition of regions that would b
 Where evaluated or supplemental data is used, the following risks **must** also be recognized:
 
 * Direct identification of a patient within a facility, or indirect identification outside the facility.
-* Direct identification of a patient to an attacker with access to commonly available data sources. 
+* Direct identification of a patient to an attacker with access to commonly available data sources.
 
 Combined reports within one dataset increase the risk of re-identification through the correlation of indirect identifiers within the dataset. Independent reports can mitigate this reverse correlation used for re-identification.
 
