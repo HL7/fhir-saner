@@ -63,8 +63,11 @@ pages:
       title: Use Cases
       generation: markdown
     ConceptualModel.md:
-          title: Conceptual Model
-          generation: markdown
+      title: Conceptual Model
+      generation: markdown
+    glossary.md:
+      title: Glossary of Terms
+      generation: markdown
   spec.md:
     title: Specification Details
     generation: markdown
