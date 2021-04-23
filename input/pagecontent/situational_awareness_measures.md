@@ -253,8 +253,7 @@ Availability measures are generally "yes/no" to indicate availability where a fa
 a measure value of 1 if sufficient quantity is available to meet demand, and 0 otherwise.  These
 can be further stratified based on degree of availability (e.g., by days supply remaining).
 
-Availability measures can also report whether conservation measures have been implemented
-(e.g., N95 mask reuse after sterilization), and whether equivalent resupplies are readily available
+Automatically reported PPE inventory information at the manufacturer and model number level can be used to determine if a facility should be instituting conventional, contingent, or crisis optimization strategies and whether equivalent resupplies are readily available
 using the same mechanism for recording yes/no answers.
 
 A measure report for a single facility **shall** always have a value of 0 or 1 as the count for
