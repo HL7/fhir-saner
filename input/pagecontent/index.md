@@ -38,14 +38,32 @@ This guide is organized into five main sections:
         </ol></details>
     </li>
     <li><details><summary>Search Parameters</summary><ol>
-        <li><a href='SearchParameter-SearchParameter-code.html'>code</a> Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
-        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a> Enables definition resources to be discovered from text used in the resource definition</li>
-        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a> Enables query of encounters by discharge disposition</li>
+        <li><a href='SearchParameter-SearchParameter-code.html'>code</a>Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
+        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a>Enables definition resources to be discovered from text used in the resource definition</li>
+        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a>Enables query of encounters by discharge disposition</li>
         </ol></details>
     </li>
-    <li><a href='profiles_and_extensions.html'>Profiles and Extensions</a></li>
-    <li><a href='vocabulary.html'>Terminology Resources</a></li>
-    <li><a href='test_plan.html'>Test Plan</a></li>
+    <li><details><summary><a href='profiles_and_extensions.html'>Profiles and Extensions</a></summary></li><ol>
+      <li><a href='profiles_and_extensions.html#resources'>Resource Profiles</a></li>
+      <li><a href='profiles_and_extensions.html#audit'>Audit Records</a></li>
+      <li><a href='profiles_and_extensions.html#datatype'>DataType Profiles</a></li>
+      <li><a href='profiles_and_extensions.html#extensions'>Extensions</a></li>
+      </ol></details>
+    <li><details><summary><a href='vocabulary.html'>Terminology Resources</a></summary></li><ol>
+      <li><a href='vocabulary.html#valuesets'>Value Sets</a></li>
+      <li><a href='vocabulary.html#codesystems'>Code Systems</a></li>
+      <li><a href='vocabulary.html#ageranges'>Recommendations for Coding Age Ranges</a></li>
+      </ol></details>
+    <li><details><summary><a href='test_plan.html'>Test Plan</a></summary></li><ol>
+      <li><a href='test_plan.html#actors'>Supported Actors</a></li>
+      <li><a href='test_plan.html#scenarios'>Integration Test Scenarios</a></li>
+      <li><a href='test_plan.html#csvformat'>Reporting in CSV Format</a></li>
+      <li><a href='test_plan.html#genstore'>Generate and Store a MeasureReport</a></li>
+      <li><a href='test_plan.html#query'>Query for MeasureReport Resources</a></li>
+      <li><a href='test_plan.html#forward'>Forward a MeasureReport</a></li>
+      <li><a href='test_plan.html#aggregate'>Aggregate MeasureReport Resources</a></li>
+      <li><a href='test_plan.html#unittest'>Unit Test Procedures</a></li>
+      </ol></details>
     <li><details><summary id='test-data'>Test Data Sets</summary><ol>
         <li><a href='hospital_capacity_examples.html'>Hospital Capacity Measure and Report Examples</a></li>
         <li><a href='laboratory_reporting_examples.html'>Laboratory Reporting Measure and Report Examples</a></li>

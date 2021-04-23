@@ -1,4 +1,4 @@
-### Resource Profiles
+### Resource Profiles<a name="resources"></a>
 * [Public Health Measure](StructureDefinition-PublicHealthMeasure.html) profiles the
   Measure resource to support Public Health and Emergency Response surveillance requirements.  This
   provides the definition of the measurements that will be reported.
@@ -19,7 +19,7 @@
   automated creation of CapabilityStatement resources for this guide.  Capability statements reported
   by implementers of this guide need not conform to this profile (but may do so if they choose).
 
-#### Audit Records
+#### Audit Records <a name="audit"></a>
 This guide includes profiles that support auditing of activity on the MeasureReport and Measure resources
 described by this guide.
 
@@ -37,7 +37,7 @@ described by this guide.
 * [Audit Event Delete](StructureDefinition-AuditEventDelete.html) is the profile for AuditEvent resources reporting on delete operations.
 
 
-### Supporting DataType Profiles
+### Supporting DataType Profiles <a name="datatypes"></a>
 * [Measure Criteria](StructureDefinition-MeasureCriteria.html) profiles the
   [Expression](https://www.hl7.org/fhir/R4/metadatatypes.html#Expression) data type
   to enforce requirements essential for the creation of measures supporting automatic
@@ -59,7 +59,7 @@ described by this guide.
 
 
 
-### Supporting Extensions
+### Supporting Extensions<a name="extensions"></a>
 * [Measure Expectation](StructureDefinition-measure-expectation.html) defines an extension
   that allows parts of a defined measure to be marked as optional or required.
 
