@@ -8,5 +8,5 @@ MeasureReport -> Measure : Is Defined By
 MeasureReport ..> CountableEntity : Assesses
 Measure  o-> Group : Counts
 
-Group - -> CountableEntity : Has Member
+Group --> CountableEntity : Has Member
 @enduml
