@@ -15,6 +15,9 @@ Resource utilization data can be provided from a number of sources:
   + Master Patient Index
   + Security Infrastructure
   + Revenue Cycle Management/Billing Systems
+  + Public Health Case Reporting Solutions
+  + Immunization Information Systems (Immunization Registries)
+  + Electronic Laboratory Reporting Solutions
 * **Systems unlikely to have Clinical Data**
   + Bed Management (a.k.a., Housekeeping) systems
   + Asset Management systems

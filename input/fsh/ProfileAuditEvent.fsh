@@ -15,14 +15,15 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * agent ^slicing.discriminator[1].type = #pattern
 * agent ^slicing.discriminator[1].path = "requestor"
 * agent ^slicing.rules = #openAtEnd
-* agent ^slicing.ordered = false   // can be omitted, since false is the default
+// * agent ^slicing.ordered = false   // can be omitted, since false is the default
 * agent ^slicing.description = "Slice based on the component.code pattern"
 
 * agent contains Source 1..1 MS and
            HumanRequestor 0..* MS and
            Destination 1..1 MS
 
-* agent[Source].role = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
+// * agent[Source].role = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
+* agent[Source].role 1..1 MS
 * agent[Source].who 1..1 MS
 * agent[Source].name 1..1 MS
 * agent[Source].requestor = false
@@ -32,7 +33,8 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * agent[HumanRequestor].name 1..1 MS
 * agent[HumanRequestor].requestor = true
 
-* agent[Destination].role =  http://dicom.nema.org/resources/ontology/DCM#110152 "Destination Role ID"
+// * agent[Destination].role =  http://dicom.nema.org/resources/ontology/DCM#110152 "Destination Role ID"
+* agent[Destination].role 1..1 MS
 * agent[Destination].who 1..1 MS
 * agent[Destination].name 1..1 MS
 * agent[Destination].requestor = false
@@ -42,12 +44,11 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * entity.role.system = "http://terminology.hl7.org/CodeSystem/object-role"
 
 /*
-Audit Source (1..1)
-    not specified
-*/
-* source 1..1 MS
-* source.site 1..1 MS
-* source.type 1..1 MS
+//Audit Source (1..1)
+//    not specified
+// * source 1..1 MS
+// * source.site 1..1 MS
+// * source.type 1..1 MS
 
 Profile:        AuditEventSearch
 Parent:         AuditEventBase
@@ -125,4 +126,4 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 
 * entity.what 1..1 MS
 * entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
-
+*/

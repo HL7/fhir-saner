@@ -92,19 +92,11 @@ implementation guides. These guides provide excellent reference and background m
 for those interested in learning more about the terminology used in measurement.
 
 According to The American Heritage® Stedman's Medical Dictionary:
-<blockquote>
-<dl>
-<dt>
-measure <i>v.</i>
-</dt>
-<dd>
-To ascertain the dimensions, quantity, or capacity of.
-</dd>
-<dd>
-To mark, lay out, or establish dimensions for by measuring.
-</dd>
-</dl>
-</blockquote>
+> measure <i>v.</i>
+>
+> To ascertain the dimensions, quantity, or capacity of.
+>
+> To mark, lay out, or establish dimensions for by measuring.
 
 At its simplest, measurement is counting in units, and then doing some math with
 the resulting count or to obtain a value that lets you do something useful.  The approach
@@ -229,29 +221,26 @@ one site results tests in 22.0 hours, and another site reports tests in 12.0 hou
 computed if the number of tests is not reported.  If the first site performed 100 tests, and the second performed 1000 tests, then
 the rate across both sites will be different if the quantities of tests performed is swapped.  This is shown in the two tables below:
 
-<table border='1' cellspacing='0' cols='5' rows='4' border='1'>
-  <caption>Case 1: Site 1 reports on 100 tests, Site 2 on 1000</caption>
-  <thead>
-    <tr><th>Site</th><th>Average Rate</th><th>Tests Performed</th><th>Total Time</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>100</td><td> 2,200 hrs</td><td>22.0 hrs/result</td></tr>
-    <tr><td>2</td><td>1000</td><td>12,000 hrs</td><td>12.0 hrs/result</td></tr>
-    <tr><td>All</td><td>1100</td><td>14,200 hrs</td><td>12.9 hrs/result</td></tr>
-  </tbody>
-</table><br/>
+<br />
+Case 1: Site 1 reports on 100 tests, Site 2 on 1000
 
-<table border='1' cellspacing='0' cols='5' rows='4' border='1'>
-  <caption>Case 2: Site 1 reports on 1000 tests, Site 2 on 100</caption>
-  <thead>
-    <tr><th>Site</th><th>Tests Performed</th><th>Total Time</th><th>Average Rate</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>1000</td><td>22,000 hrs</td><td>22.0 hrs/result</td></tr>
-    <tr><td>2</td><td>100</td><td> 1,200 hrs</td><td>12.0 hrs/result</td></tr>
-    <tr><td>All</td><td>1100</td><td>23,200 hrs</td><td>21.1 hrs/result</td></tr>
-  </tbody>
-</table>
+|Site|Average Rate|Tests Performed|Total Time|
+|---|---|---|---|
+|1|100|2,200 hrs|22.0 hrs/result|
+|2|1000|12,000 hrs|12.0 hrs/result|
+|All|1100|14,200 hrs|12.9 hrs/result|
+{: .grid}
+
+<br/>
+Case 2: Site 1 reports on 1000 tests, Site 2 on 100
+
+|Site|Tests Performed|Total Time|Average Rate|
+|---|---|---|---|
+|1|1000|22,000 hrs|22.0 hrs/result|
+|2|100|1,200 hrs|12.0 hrs/result|
+|All|1100|23,200 hrs|21.1 hrs/result|
+{: .grid}
+
 
 #### Availability
 Availability measures are subtypes of cohort measures which enable tracking of availability of
@@ -264,8 +253,7 @@ Availability measures are generally "yes/no" to indicate availability where a fa
 a measure value of 1 if sufficient quantity is available to meet demand, and 0 otherwise.  These
 can be further stratified based on degree of availability (e.g., by days supply remaining).
 
-Availability measures can also report whether conservation measures have been implemented
-(e.g., N95 mask reuse after sterilization), and whether equivalent resupplies are readily available
+Automatically reported PPE inventory information at the manufacturer and model number level can be used to determine if a facility should be instituting conventional, contingent, or crisis optimization strategies and whether equivalent resupplies are readily available
 using the same mechanism for recording yes/no answers.
 
 A measure report for a single facility **shall** always have a value of 0 or 1 as the count for
@@ -305,9 +293,7 @@ Duration is a measure-observation provided with time units representing the dura
 (e.g. length of stay, time to admission, time for service).
 
 #### Duration Squared
-Like Duration, duration-squared is a measure-observation. It represents the sum of squares duration of an activity or event. This value can be used
-to support computation of variance in time of service measures. Increases in variation over time represent areas where service times are changing, and measures
-of variance allow for hypotheses testing about the distribution of measured events.
+Like Duration, duration-squared is a measure-observation. It represents the sum of squares duration of an activity or event. The sum of squares can be used to calculate other statistics, such as variance and standard deviation. Average and variance are the first two parameters that describe the shape of a distribution. Signal changes may first show up in sum of squares ahead of other statistics. This value can be used to support computation of variance in time of service measures. Increases in variation over time represent areas where service times are changing, and measures of variance allow for hypotheses testing about the distribution of measured events.
 
 #### Supporting
 A supporting population represents an intermediate computation helpful in defining a measure, but not needing to be reported.  It
@@ -324,55 +310,21 @@ Unlike quality measures, situation awareness measures do not require that an ini
 for all measure types. It is permitted, and may be helpful in measure computation, but it is not essential
 for scoring or reporting.
 
-<table rows='12'>
-  <thead>
-    <tr><th>MeasureType</th><th>Initial Population</th><th>Suppporing Population</th>
-        <th>Denominator</th><th>Denominator Exclusion</th>
-        <th>Numerator</th><th>Numerator Exclusion</th><th>Numerator Complement</th>
-        <th>Duration</th><th>Duration Squared</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Capacity and Utilization</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>R</td><td>O</td><td>R</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-    <tr><td>Event Growth</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>R</td><td>O</td><td>NP</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-    <tr><td>Queue Length</td>
-      <td>R</td><td>O</td>
-      <td>NP</td><td>NP</td>
-      <td>NP</td><td>NP</td><td>NP</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-    <tr><td>Service Time</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>NP</td><td>NP</td><td>NP</td>
-      <td>R</td><td>O</td>
-    </tr>
-    <tr><td>Availability</td>
-      <td>O</td><td>O</td>
-      <td>R</td><td>O</td>
-      <td>R</td><td>O</td><td>R</td>
-      <td>NP</td><td>NP</td>
-    </tr>
-  </tbody>
-</table>
+
+|MeasureType| Initial<br/>Population | Supporting<br/>Population| Denominator| Denominator<br/>Exclusion| Numerator| Numerator<br/> Exclusion | Numerator<br/>Complement| Duration| Duration<br/>Squared|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Capacity and<br/>Utilization**|O|O|R|O|R|O|R|NP|NP|
+|**Event Growth**|O|O|R|O|R|O|NP|NP|NP|
+|**Queue Length**|O|O|R|O|NP|NP|NP|NP|NP|
+|**Service Time**|O|O|R|O|NP|NP|NP|R|O|
+|**Availability**|O|O|R|O|R|O|R|NP|NP|
+{: .grid}
+
 
 ### Optionality in Situation Awareness Measures
-A measure may contain sections for reporting that are either not appropriate or not applicable for all settings.
-In order to pass FHIR Validation, a MeasureReport that references a Measure must however, include all components
-of the measure.  At the time of this publication, these constraints are hard coded into FHIR Validation tools, and
-are not generally available in computable form. When reporting these elements, the
-[data-absent-reason](https://www.hl7.org/fhir/extension-data-absent-reason.html) extension can be used in the
-MeasureReport resource for these elements to indicate that they are not available.
+Public health or other agencies may define a minimum set of values that must be reported on, allowing facilities to omit entries in the measure that are either not applicable or not relevant for reporting.  Thus, some measure values are required, and others are optional.  This can be defined in the measure using the Measure Expectation extension in the Measure
+
+A measure may contain sections for reporting that are either not appropriate or not applicable for all settings. In order to pass FHIR Validation, a MeasureReport that references a Measure must however, include all components of the measure.  At the time of this publication, these constraints are hard coded into FHIR Validation tools, and are not generally available in computable form. When reporting these elements, the [data-absent-reason](https://www.hl7.org/fhir/extension-data-absent-reason.html) extension can be used in the MeasureReport resource for these elements to indicate that they are not available.
 
 To enable measure developers to specify which measure components are required, recommended or optional
 this IG defines the [Measure Expectation](StructureDefinition-measure-expectation.html) extension. This

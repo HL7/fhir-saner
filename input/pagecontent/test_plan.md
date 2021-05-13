@@ -10,6 +10,7 @@ The following is the overall test plan for this guide:
 * Integration Tests -- automation of actors interacting through defined communications mechanism
 * Validation Tests -- user expectation based testing
 
+<a name="actors"></a>
 Tests below support testing for the following actors:
   * [Measure Source](actors.html#measure-source) publishes MeasureReport content
   * [Measure Consumer](actors.html#measure-consumer) consumes MeasureReport content
@@ -111,7 +112,7 @@ The Measure Consumer using CSV Option provides access to aggregated or fine-grai
 7. Send a MeasureReport/$search-csv Operation to retrieve one or more MeasureReport resources in CSV format.
 8. Respond to the MeasureReport/$read-csv Operation to read a MeasureReport resource in CSV format.
 
-### Integration Test Scenarios
+### Integration Test Scenarios <a name="scenarios"></a>
 The following integration test scenarios included in this test place:
 1. Automated Measure Computation and Reporting
 2. Exchanging Updated Measure Definitions
@@ -145,7 +146,7 @@ For example, identify the FHIR Patient resources in the measure report that were
 #### Exchanging Updated Measure Definitions
 This scenario is planned for the second cycle of testing and involves the Measure Definition Source making a new Computable Measure Definition available for use. The new Computable Measure Definition will result in at least one different calculated result in a Measure Report based on the provided test data.  This scenario otherwise follows the Automated Measure Computation and Reporting scenario
 
-### Reporting in CSV Format
+### Reporting in CSV Format <a name="csvformat"></a>
 Send CSV Data to a system for reporting.
 
 #### Reporting in CSV Format Preconditions
@@ -173,7 +174,7 @@ A Measure Consumer implementing the CSV and Pull options queries a Measure Sourc
 * When $read-csv is called, the identified MeasureReport resource is provided in CSV format.
 * Bonus Point: The Measure Consumer and Measure Source interact using normal FHIR Search and FHIR Read operations, but with a mime type or _format value of csv, application/csv, or text/csv and the CSV formats are returned.
 
-### Generate and Store a MeasureReport
+### Generate and Store a MeasureReport <a name="genstore"></a>
 
 A Measure Source generates a MeasureReport for the CDC Measure resource (available as part of a ZIP with multiple example resources) using realistic sample data from its system.  Participants manually transmit this MeasureReport by whatever means are expedient.  A Measure Consumer consumes the MeasureReport and stores the measure data.
 
@@ -199,7 +200,7 @@ The Measure Source creates a MeasureReport on a Measure Consumer using the [Prod
 This can be demonstrated by generation of a report, summary, or other artifact, or by transmission of resource availability
 data or some computation over it to another system.
 
-### Query for MeasureReport Resources
+### Query for MeasureReport Resources <a name="query"></a>
 1. The Measure Consumer searches for MeasureReport resources on the Measure Source's system using the [Query Measure Transaction](transaction-1.html).
 2. The Measure Consumer reads a single MeasureReport.
 
@@ -216,7 +217,7 @@ data or some computation over it to another system.
 * The Measure Source returns the correct results for the read.
 * Bonus Point: The Measure Consumer uses _include to read referenced resources, and the Measure Source correctly handles the _include values.
 
-### Forward a MeasureReport
+### Forward a MeasureReport <a name="forward"></a>
 1. Acting as a Measure Consumer, the Measure Intermediary obtains one MeasureReport resource following the steps of either
    1. Query for MeasureReport OR
    2. Generate and Store a MeasureReport
@@ -233,7 +234,7 @@ these two steps
 * A MeasureReport is obtained from a first measure source
 * The MeasureReport is communicated to a second measure source
 
-### Aggregate MeasureReport Resources
+### Aggregate MeasureReport Resources <a name="aggregate"></a>
 A Measure Intermediary is able to aggregate multiple MeasureReport resources:
 1. Over a period of time, turning 7 daily reports into a weekly report for different types of Measures (count, point-in-time, and cumulative).
 2. Over multiple sites, turning MeasureReport resources from multiple facilities in the same region to a MeasureReport describing the region.
@@ -249,7 +250,7 @@ A Measure Intermediary is able to aggregate multiple MeasureReport resources:
 2. A MeasureReport resource is communicated to a MeasureConsumer that contains a consolidated report across facilities.
 3. A MeasureReport resource is created that contains a consolidated report within a single facility having appropriate values.
 
-### Unit Test Procedures
+### Unit Test Procedures <a name="unittest"></a>
 Unit Tests in this context is where a system under test is tested against a simulator or validator.  A simulator is a
 implementation of an actor that is designed specifically to test the opposite pair actor. The simulator
 might be a reference implementation or may be a specially designed test-bench. Where a reference

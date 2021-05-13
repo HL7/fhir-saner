@@ -2,6 +2,7 @@ Profile:        CapabilityStatementWithSlices
 Parent:         CapabilityStatement
 Title:          "Capability Statements with Slices"
 Description:    "A Capability Statement with slicing defined"
+* ^abstract = true
 * insert SanerStructureDefinitionContent
 
 * rest ^slicing.discriminator.type = #value
@@ -69,4 +70,3 @@ Description:    "A Capability Statement with slicing defined"
 * rest.resource[ProcedureSlice].type = #Procedure (exactly)
 * rest.resource[ServiceRequestSlice].type = #ServiceRequest (exactly)
 * rest.resource[ParametersSlice].type = #Parameters (exactly)
-

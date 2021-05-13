@@ -23,6 +23,21 @@ Expression: "count.exists() or extension.url = 'http://hl7.org/fhir/StructureDef
 XPath: "f:count or f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']"
 Severity: #error
 
+Extension: GeoLocation
+Title: "Extension Attributes to associate with a Location Reference to simplify Geographic search"
+Description: """This is essentially a database denormalization that facilitates search by Geographics coordinates on a location.
+It enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.
+The extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)
+in the hope that it could eventually be absorbed by that extension."""
+* insert SanerStructureDefinitionContent
+
+* extension contains latitude 1..1 and longitude 1..1
+* extension[latitude] ^short = "Like [geolocation:latitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:latitude)"
+* extension[latitude].value[x] only decimal
+* extension[longitude] ^short = "Like [geolocation:longitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:longitude)"
+* extension[longitude].value[x] only decimal
+
+
 Profile:        PublicHealthMeasureReport
 Parent:         MeasureReport
 Title:          "Public Health Measure Report"
@@ -33,6 +48,7 @@ a report of a Public Health Measure.
 """
 * insert SanerStructureDefinitionContent
 * obeys ReporterPresentInCompleteReport
+
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from MeasureReportStatus
 * status ^short = "complete | pending | error"
@@ -55,6 +71,7 @@ error - MeasureReport was determined to be in error."""
 * subject.identifier 1..1  MS
 * subject.identifier ^short = "The subject shall have an identifier which uniquely identifies the subject to the recepient."
 * subject.identifier ^comment = "Requiring subject.identifier allows reports to be queried by locations using a well-known identifier."
+* subject.extension contains GeoLocation named geolocation 0..1
 
 * date 1..1  MS
 * date only PreciseDateTime

@@ -1,0 +1,53 @@
+@startuml
+hide footbox
+actor "ICU/Central Monitoring System"
+actor "Measure Collector"
+actor "Bed Management System"
+actor "EHR"
+actor "ED System"
+actor "Public Health Agency"
+"ICU/Central Monitoring System" -> "ICU/Central Monitoring System" : 1. ICU/Central Monitoring System collects data
+activate "ICU/Central Monitoring System"
+activate "ICU/Central Monitoring System"
+"ICU/Central Monitoring System" -> "Measure Collector" : 2. ICU/Central Monitoring System Reports\non multiple data elements\n(measure populations)
+activate "Measure Collector"
+return
+deactivate "Measure Collector"
+deactivate "ICU/Central Monitoring System"
+deactivate "ICU/Central Monitoring System"
+"Bed Management System" -> "Measure Collector" : 3. Bed Management System Reports\non multiple data elements\n(measure populations)
+activate "Bed Management System"
+activate "Measure Collector"
+return
+deactivate "Bed Management System"
+deactivate "Measure Collector"
+"EHR" -> "Measure Collector" : 4. EHR System reports\non multiple data elements\n(measure populations)
+activate "EHR"
+activate "Measure Collector"
+return
+deactivate "EHR"
+deactivate "Measure Collector"
+"ED System" -> "Measure Collector" : 5. The ED System reports\non patients in the ED and/or overflow area.
+activate "ED System"
+activate "Measure Collector"
+return
+deactivate "ED System"
+deactivate "Measure Collector"
+"Measure Collector" -> "Measure Collector" : 6. Measure Collector aggregates reports for\ntransmission to a Public Health Agency
+activate "Measure Collector"
+activate "Measure Collector"
+deactivate "Measure Collector"
+deactivate "Measure Collector"
+"Measure Collector" -> "Public Health Agency" : 7. Transmit Aggregated MeasureReport Data
+activate "Measure Collector"
+activate "Public Health Agency"
+return
+deactivate "Measure Collector"
+deactivate "Public Health Agency"
+"Public Health Agency" -> "Measure Collector" : 8. A Public Health Agency queries the\nhospitals Measure Collector\nfor the most recent reports.
+activate "Public Health Agency"
+activate "Measure Collector"
+"Measure Collector" --> "Public Health Agency" : 9. Transmit Aggregated MeasureReport Data
+deactivate "Public Health Agency"
+deactivate "Measure Collector"
+@enduml

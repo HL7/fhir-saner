@@ -12,7 +12,7 @@ This guide is organized into five main sections:
 2. [Measuring Situational Awareness](situational_awareness_measures.html) - Describes situational awareness and how to measure it.
 3. [Use Cases](use_cases.html) - Illustrates Key Uses Cases addressed by this guide.
 * Chapter II: Technical Implementation
-1. [Architecture](architecture.html) - Illustrates the Microservice Architecture.
+1. [Architecture and Implementation](Architecture_and_Implementation.html) - Illustrates the Microservice Architecture.
 2. [Security Considerations](security_considerations.html) - Documents security concerns and mitigations.
 3. [Actors and Transactions](actors.html) - Provides an overview of technical components
 
@@ -23,29 +23,47 @@ This guide is organized into five main sections:
 
 * Chapter IV: Conformance and Testing
 <ol>
-    <li><details><summary>Capability Statements</summary><ol>
+    <li><details><summary<a href="artifacts.html#behavior-capabilitystatements">Capability Statements</a></summary><ol>
 
         {% include list-name-capabilitystatements.xhtml %}
 
         </ol></details>
     </li>
-    <li><details><summary>Operations</summary><ol>
+    <li><details><summary><a href="artifacts.html#behavior-operation-definitions">Operations</a></summary><ol>
         <li><a href='OperationDefinition-Measure-evaluate-measure.html'>Measure/$evaluate-measure</a> Evaluate the Measure</li>
         <li><a href='OperationDefinition-Measure-report-csv.html'>Measure/$report-csv</a> Create or update a MeasureReport from CSV Format</li>
-        <li><a href='OperationDefinition-MeasureReport-aggregate.html'>MeasureReport/$aggregate</a> Aggregate MeeasureReport resources</li>
+        <li><a href='OperationDefinition-MeasureReport-aggregate.html'>MeasureReport/$aggregate</a>Aggregate MeasureReport resources</li>
         <li><a href='OperationDefinition-MeasureReport-read-csv.html'>MeasureReport/$read-csv</a> Read in CSV Format</li>
         <li><a href='OperationDefinition-MeasureReport-search-csv.html'>MeasureReport/$search-csv</a> Search in CSV Format</li>
         </ol></details>
     </li>
     <li><details><summary>Search Parameters</summary><ol>
-        <li><a href='SearchParameter-SearchParameter-code.html'>code</a> Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
-        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a> Enables definition resources to be discovered from text used in the resource definition</li>
-        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a> Enables query of encounters by discharge disposition</li>
+        <li><a href='SearchParameter-SearchParameter-code.html'>code</a>Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
+        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a>Enables definition resources to be discovered from text used in the resource definition</li>
+        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a>Enables query of encounters by discharge disposition</li>
         </ol></details>
     </li>
-    <li><a href='profiles_and_extensions.html'>Profiles and Extensions</a></li>
-    <li><a href='vocabulary.html'>Terminology Resources</a></li>
-    <li><a href='test_plan.html'>Test Plan</a></li>
+    <li><details><summary><a href='profiles_and_extensions.html'>Profiles and Extensions</a></summary></li><ol>
+      <li><a href='profiles_and_extensions.html#resources'>Resource Profiles</a></li>
+      <li><a href='profiles_and_extensions.html#audit'>Audit Records</a></li>
+      <li><a href='profiles_and_extensions.html#datatype'>DataType Profiles</a></li>
+      <li><a href='profiles_and_extensions.html#extensions'>Extensions</a></li>
+      </ol></details>
+    <li><details><summary><a href='vocabulary.html'>Terminology Resources</a></summary></li><ol>
+      <li><a href='vocabulary.html#valuesets'>Value Sets</a></li>
+      <li><a href='vocabulary.html#codesystems'>Code Systems</a></li>
+      <li><a href='vocabulary.html#ageranges'>Recommendations for Coding Age Ranges</a></li>
+      </ol></details>
+    <li><details><summary><a href='test_plan.html'>Test Plan</a></summary></li><ol>
+      <li><a href='test_plan.html#actors'>Supported Actors</a></li>
+      <li><a href='test_plan.html#scenarios'>Integration Test Scenarios</a></li>
+      <li><a href='test_plan.html#csvformat'>Reporting in CSV Format</a></li>
+      <li><a href='test_plan.html#genstore'>Generate and Store a MeasureReport</a></li>
+      <li><a href='test_plan.html#query'>Query for MeasureReport Resources</a></li>
+      <li><a href='test_plan.html#forward'>Forward a MeasureReport</a></li>
+      <li><a href='test_plan.html#aggregate'>Aggregate MeasureReport Resources</a></li>
+      <li><a href='test_plan.html#unittest'>Unit Test Procedures</a></li>
+      </ol></details>
     <li><details><summary id='test-data'>Test Data Sets</summary><ol>
         <li><a href='hospital_capacity_examples.html'>Hospital Capacity Measure and Report Examples</a></li>
         <li><a href='laboratory_reporting_examples.html'>Laboratory Reporting Measure and Report Examples</a></li>
@@ -111,4 +129,4 @@ at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.
 | Austin Kreisler | Leidos | Subject Matter Expert |
 | Josh Mandel | Microsoft | Subject Matter Expert |
 | Abigail Watson | Symptomatic.io |  Subject Matter Expert |
-| David Pyke | Audacious Inquiry | HL7 Liason |
+| David Pyke | Audacious Inquiry | HL7 Liaison |
