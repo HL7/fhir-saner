@@ -302,6 +302,6 @@ cumulative
  * group.stratifier.component ^short = "Strata components are not used"
 
 * supplementalData.code 1..1
-* supplementalData.code from  http://hl7.org/fhir/resource-types (extensible)
+* supplementalData.code from  http://hl7.org/fhir/ValueSet/resource-types (extensible)
 * supplementalData.code ^short = "Resource type included in the supplementalData"
 * supplementalData.description 1..1
