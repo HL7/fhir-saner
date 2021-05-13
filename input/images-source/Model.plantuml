@@ -1,0 +1,20 @@
+@startuml
+class MeasureReport <<(R,Red)>>
+class Measure <<(R,Red)>>
+class Group <<(R,Red)>>
+class Characteristic <<(E,Yellow)>>
+class CountableEntity <<(P,Cyan)>>
+class Field <<(E,Yellow)>>
+
+MeasureReport o->  Measure : Is Defined By
+Measure  o->  Group : Has Subject
+Group *-- Characteristic : "Stratified By             "
+Group o-->  CountableEntity : "Has Member"
+
+(Group, CountableEntity) .. Characteristic : Identifies Field Of
+
+CountableEntity  *-   Field : Composed of
+Characteristic --> Field : Names
+
+MeasureReport ..> CountableEntity : "Assesses        \n\n\n"
+@enduml
