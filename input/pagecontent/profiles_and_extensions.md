@@ -26,15 +26,7 @@ described by this guide.
 * [Audit Event Base](StructureDefinition-AuditEventBase.html) is the base profile for all audit event
   resources use by this guide. It defines the core requirements for audit events.
 
-* [Audit Event Search](StructureDefinition-AuditEventSearch.html) is the profile for AuditEvent resources reporting on search operations.
 
-* [Audit Event Read](StructureDefinition-AuditEventRead.html) is the profile for AuditEvent resources reporting on read operations.
-
-* [Audit Event Create](StructureDefinition-AuditEventCreate.html) is the profile for AuditEvent resources reporting on create operations.
-
-* [Audit Event Update](StructureDefinition-AuditEventUpdate.html) is the profile for AuditEvent resources reporting on update operations.
-
-* [Audit Event Delete](StructureDefinition-AuditEventDelete.html) is the profile for AuditEvent resources reporting on delete operations.
 
 
 ### Supporting DataType Profiles <a name="datatypes"></a>
