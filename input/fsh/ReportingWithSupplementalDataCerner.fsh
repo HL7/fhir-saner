@@ -39,16 +39,14 @@ Usage: #example
  * group[0].population[0].description = """
 Active encounters where the encounter diagnosis is suspected or confirmed COVID-19,
 or a Condition of confirmed COVID-19 was created during that encounter.  This includes the patients with laboratory-confirmed
-or clinically diagnosed COVID-19.
-"""
+or clinically diagnosed COVID-19."""
 
  * group[0].population[0].criteria.name = "ConfirmedC19Pats"
  * group[0].population[0].criteria.description = """
 This expression finds encounters that were active or finished in the reporting period, and their referenced Patient, Condition
 and Observation resources. It filters these based on cases where Encounter reports a reason or condition in the
 ConfirmedCOVID19Diagnoses value set, or where a positive lab test from the Covid19Labs valueset, or where the patient
-has any such associated Condition or Observation resources in the prior two weeks.
-"""
+has any such associated Condition or Observation resources in the prior two weeks."""
  * group[0].population[0].criteria.language = #text/fhirpath
  * group[0].population[0].criteria.expression = """
      (12742542|12742540|12744441|12744440|12744437|12744439|12744438|12742536|12742544).findAll('Encounter',
@@ -125,8 +123,7 @@ has any such associated Condition or Observation resources in the prior two week
     	iif(code.member0f(%KidneyDiseaseCOVID19RiskFactors.url), 'Chronic Kidney Disease', {}) |
     	iif(code.member0f(%PregnancyCOVID19RiskFactors.url), 'Pregnant', {}) |
     	iif(code.member0f(%DiabetesCOVID19RiskFactors.url), 'Diabetes', {})
-    )
- """
+    )"""
 
 * supplementalData[0].code.coding = http://hl7.org/fhir/resource-types#Encounter
 // Consider adding an extension to support filtering resource elements as per _elements in search.
@@ -235,8 +232,7 @@ has any such associated Condition or Observation resources in the prior two week
 		including('based-on'), // what else?
 		with('date').greaterThan(%ReportingPeriod.start - 1 'year'),
 		with('code').in(%VTEReports.url)
-	).onServers(%Base)
-	"""
+	).onServers(%Base)"""
 
 * supplementalData[7].code.coding[0] = http://hl7.org/fhir/resource-types#Procedure
 * supplementalData[7].code.coding[1] = http://hl7.org/fhir/resource-types#ServiceRequest
@@ -448,4 +444,3 @@ Description: "Codes identifying Complications associated with COVID-19"
 * SCT#870591003	"Rhabdomyolysis due to disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
 * SCT#880529761000119102	"Lower respiratory infection caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
 * SCT#882784691000119100	"Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
-
