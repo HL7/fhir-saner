@@ -137,7 +137,7 @@ from more than one measure.  However, combining these subject areas into a singl
 results in data loss when the separate measures in the composite use a different measure approach.
 This is due to the lack of an ability to express attributes of each Measured item at the group
 level within the Measure. That issue is addressed by this guide by creating an extension (see [Measure
-Group Attributes](profiles_and_extensions.html#supporting-datatype-profiles)) to allow topic,
+Group Attributes](profiles_and_extensions.html#datatypes)) to allow topic,
 scoring and type to be shifted from Measure to Measure.group. To simplify interpretation of Measure
 by consumers, Measures created in this guide always include these extensions on Measure.group, even
 if they are not strictly needed.

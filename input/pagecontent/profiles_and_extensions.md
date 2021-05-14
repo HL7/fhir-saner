@@ -27,8 +27,6 @@ described by this guide.
   resources use by this guide. It defines the core requirements for audit events.
 
 
-
-
 ### Supporting DataType Profiles <a name="datatypes"></a>
 * [Measure Criteria](StructureDefinition-MeasureCriteria.html) profiles the
   [Expression](https://www.hl7.org/fhir/R4/metadatatypes.html#Expression) data type

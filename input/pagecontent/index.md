@@ -23,7 +23,7 @@ This guide is organized into five main sections:
 
 * Chapter IV: Conformance and Testing
 <ol>
-    <li><details><summary<a href="artifacts.html#behavior-capabilitystatements">Capability Statements</a></summary><ol>
+    <li><details><summary<a href="artifacts.html#behavior-capability-statements">Capability Statements</a></summary><ol>
 
         {% include list-name-capabilitystatements.xhtml %}
 
@@ -46,7 +46,7 @@ This guide is organized into five main sections:
     <li><details><summary><a href='profiles_and_extensions.html'>Profiles and Extensions</a></summary></li><ol>
       <li><a href='profiles_and_extensions.html#resources'>Resource Profiles</a></li>
       <li><a href='profiles_and_extensions.html#audit'>Audit Records</a></li>
-      <li><a href='profiles_and_extensions.html#datatype'>DataType Profiles</a></li>
+      <li><a href='profiles_and_extensions.html#datatypes'>DataType Profiles</a></li>
       <li><a href='profiles_and_extensions.html#extensions'>Extensions</a></li>
       </ol></details>
     <li><details><summary><a href='vocabulary.html'>Terminology Resources</a></summary></li><ol>
