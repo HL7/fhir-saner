@@ -23,7 +23,7 @@ This guide is organized into five main sections:
 
 * Chapter IV: Conformance and Testing
 <ol>
-    <li><details><summary<a href="artifacts.html#behavior-capability-statements">Capability Statements</a></summary><ol>
+    <li><details><summary><a href="artifacts.html#behavior-capability-statements">Capability Statements</a></summary><ol>
 
         {% include list-name-capabilitystatements.xhtml %}
 
