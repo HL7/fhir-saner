@@ -23,11 +23,12 @@ This guide is organized into five main sections:
 
 * Chapter IV: Conformance and Testing
 <ol>
-    <li><details><summary><a href="artifacts.html#behavior-capability-statements">Capability Statements</a></summary><ol>
+    <li><details><summary><a href="artifacts.html#behavior-capability-statements">Capability Statements</a></summary>
+      <ol>
 
         {% include list-name-capabilitystatements.xhtml %}
 
-        </ol></details>
+      </ol></details>
     </li>
     <li><details><summary><a href="artifacts.html#behavior-operation-definitions">Operations</a></summary><ol>
         <li><a href='OperationDefinition-Measure-evaluate-measure.html'>Measure/$evaluate-measure</a> Evaluate the Measure</li>
@@ -43,18 +44,18 @@ This guide is organized into five main sections:
         <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a>Enables query of encounters by discharge disposition</li>
         </ol></details>
     </li>
-    <li><details><summary><a href='profiles_and_extensions.html'>Profiles and Extensions</a></summary></li><ol>
+    <li><details><summary><a href='profiles_and_extensions.html'>Profiles and Extensions</a></summary><ol>
       <li><a href='profiles_and_extensions.html#resources'>Resource Profiles</a></li>
       <li><a href='profiles_and_extensions.html#audit'>Audit Records</a></li>
       <li><a href='profiles_and_extensions.html#datatypes'>DataType Profiles</a></li>
       <li><a href='profiles_and_extensions.html#extensions'>Extensions</a></li>
-      </ol></details>
-    <li><details><summary><a href='vocabulary.html'>Terminology Resources</a></summary></li><ol>
+      </ol></details></li>
+    <li><details><summary><a href='vocabulary.html'>Terminology Resources</a></summary><ol>
       <li><a href='vocabulary.html#valuesets'>Value Sets</a></li>
       <li><a href='vocabulary.html#codesystems'>Code Systems</a></li>
       <li><a href='vocabulary.html#ageranges'>Recommendations for Coding Age Ranges</a></li>
-      </ol></details>
-    <li><details><summary><a href='test_plan.html'>Test Plan</a></summary></li><ol>
+      </ol></details></li>
+    <li><details><summary><a href='test_plan.html'>Test Plan</a></summary><ol>
       <li><a href='test_plan.html#actors'>Supported Actors</a></li>
       <li><a href='test_plan.html#scenarios'>Integration Test Scenarios</a></li>
       <li><a href='test_plan.html#csvformat'>Reporting in CSV Format</a></li>
@@ -63,7 +64,7 @@ This guide is organized into five main sections:
       <li><a href='test_plan.html#forward'>Forward a MeasureReport</a></li>
       <li><a href='test_plan.html#aggregate'>Aggregate MeasureReport Resources</a></li>
       <li><a href='test_plan.html#unittest'>Unit Test Procedures</a></li>
-      </ol></details>
+      </ol></details></li>
     <li><details><summary id='test-data'>Test Data Sets</summary><ol>
         <li><a href='hospital_capacity_examples.html'>Hospital Capacity Measure and Report Examples</a></li>
         <li><a href='laboratory_reporting_examples.html'>Laboratory Reporting Measure and Report Examples</a></li>
@@ -71,6 +72,7 @@ This guide is organized into five main sections:
         </ol></details>
     </li>
 </ol>
+
 
 * Chapter V: Defining Measures from Essential Elements of Information
 1. [Computing Measures](measure_automation.html) - Describes mechanisms to automate measure computation.
