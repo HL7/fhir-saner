@@ -39,9 +39,9 @@ This guide is organized into five main sections:
         </ol></details>
     </li>
     <li><details><summary>Search Parameters</summary><ol>
-        <li><a href='SearchParameter-SearchParameter-code.html'>code</a>Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
-        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a>Enables definition resources to be discovered from text used in the resource definition</li>
-        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a>Enables query of encounters by discharge disposition</li>
+        <li><a href='SearchParameter-SearchParameter-code.html'>code</a> - Enables Measure, MeasureReport, Questionnaire and QuestionnaireResponse resources to be discovered by codes used in the resource</li>
+        <li><a href='SearchParameter-SearchParameter-definition-text.html'>definition-text</a> - Enables definition resources to be discovered from text used in the resource definition</li>
+        <li><a href='SearchParameter-SearchParameter-disposition.html'>disposition</a> - Enables query of encounters by discharge disposition</li>
         </ol></details>
     </li>
     <li><details><summary><a href='profiles_and_extensions.html'>Profiles and Extensions</a></summary><ol>
