@@ -1,4 +1,3 @@
-#### Ventilators
 When tracking ventilators, many EHR systems may not directly track ventilator devices in the hospital. Ventilator use is indirectly determined in this measure based on the presence of observations that would only be present in the patient chart
 when the patient is being ventilated. Direct tracking of ventilator devices and telemetry is typically the purview of other systems used for asset management or ICU central monitoring.  The number of ventilator devices is generally known, and does not change frequently, and so implementers may provide an alternate mechanism (e.g., a defined parameter) to supply this value.  Thus, while this guide provides an expression for identifying ventilators in this sample measure, more user feedback on how to obtain this value is desired.
 
