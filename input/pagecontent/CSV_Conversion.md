@@ -103,18 +103,12 @@ Given a Measure, a CSV file, and a value set of codes used for conversion:
 
               1. For each unused column value in the row:
 
-                 1. If the column name matches a Measure.group.stratifier.stratum.code in the conversion value set for some group, copy the column value to
-                    the measureValue field for the named group into the identified stratifier and stratum.
+                 1. If the column name matches a Measure.group.stratifier.stratum.code in the conversion value set for some group, copy the column value to the measureValue field for the named group into the identified stratifier and stratum.
 
-                 2. Otherwise if the column name matches Measure.stratifier.stratum.population.coding[0].code in the conversion value set for some population, copy the column
-                    value to the count field for the named population into the identified stratifier and stratum.
+                 2. Otherwise if the column name matches Measure.stratifier.stratum.population.coding[0].code in the conversion value set for some population, copy the column value to the count field for the named population into the identified stratifier and stratum.
 
 #### Remapping
-The mapping processes described above will produce a canonical mapping from one or more MeasureReports to a CSV file
-given a Measure and value set for conversion codes.  Over time, the names of columns may change in a CSV file,
-or additional columns may be added, and others might be removed.  For example, the CSV format for the
-[CDC COVID-19 Patient Capacity](https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf#page=6) module
-made many of these changes to expand upon reported data and clarify the content of certain fields.
+The mapping processes described above will produce a canonical mapping from one or more MeasureReports to a CSV file given a Measure and value set for conversion codes.  Over time, the names of columns may change in a CSV file, or additional columns may be added, and others might be removed.  For example, the CSV format for the [CDC COVID-19 Patient Capacity](https://web.archive.org/web/20200429021826/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf#page=6) module made many of these changes to expand upon reported data and clarify the content of certain fields.
 
 To support reporting under these circumstances, the canonical form of the CSV file needs to be remapped to support
 reporting of existing data fields using new field names, or to remove fields from the report that do not need to
