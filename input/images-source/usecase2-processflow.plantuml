@@ -1,28 +1,33 @@
 @startuml
 hide footbox
-
 actor "Public Health User"
-participant "Measure Source" as MeasureSource
-participant "Measure Intermediary/\nMeasure Consumer" as MeasureIntermediary
-
-
-"MeasureSource" -> "MeasureIntermediary" : 1. Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources
+participant "Measure Aggregating System [Measure Intermediary]" as MeasureIntermediary
+participant "Measure Reporting and Analytics System [Measure Consumer]" as MeasureConsumer
+participant "Reporting Sources [Measure Source]" as MeasureSource
+"MeasureIntermediary" -> "MeasureSource" : 1. Measure Intermediary aggregates data from one or Measure Sources
 activate "MeasureIntermediary"
 activate "MeasureSource"
 return
-deactivate "MeasureSource"
-
-"Public Health User" -> "MeasureIntermediary" : 2. User Initiates Search
-activate "Public Health User"
-"MeasureIntermediary" --> "Public Health User" : 3. Display Results
-deactivate "Public Health User"
-
-"Public Health User" -> "MeasureIntermediary" : 4. User refines Focus or Form of Display
-
-activate "Public Health User"
-
-"MeasureIntermediary" --> "Public Health User" : 5. Display Refined Results
-
-deactivate "Public Health User"
 deactivate "MeasureIntermediary"
+deactivate "MeasureSource"
+"Public Health User" -> "MeasureConsumer" : 2. User Initiates Search
+activate "Public Health User"
+activate "MeasureConsumer"
+"MeasureConsumer" -> "MeasureIntermediary" : 3. Get Aggregated Results
+activate "MeasureIntermediary"
+"MeasureIntermediary" --> "MeasureConsumer" : 4. Aggregated Results
+deactivate "MeasureIntermediary"
+"MeasureConsumer" --> "Public Health User" : 5. Display Results
+deactivate "Public Health User"
+deactivate "MeasureConsumer"
+"Public Health User" -> "MeasureConsumer" : 6. User refines Focus or Form of Display
+activate "Public Health User"
+activate "MeasureConsumer"
+"MeasureConsumer" -> "MeasureIntermediary" : 7. Get Aggregated Results
+activate "MeasureIntermediary"
+"MeasureIntermediary" --> "MeasureConsumer" : 8. Aggregated Results
+deactivate "MeasureIntermediary"
+"MeasureConsumer" --> "Public Health User" : 9. Display Refined Results
+deactivate "Public Health User"
+deactivate "MeasureConsumer"
 @enduml

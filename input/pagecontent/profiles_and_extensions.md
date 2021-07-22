@@ -56,7 +56,7 @@ described by this guide.
 * [Reporting Period](StructureDefinition-ReportingPeriod.html) defines an extension enabling
   a definition for a measure to provide the suggested reporting period.
 
-* [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html)
+* [Measure Alternate Criteria](StructureDefinition-MeasureAlternateCriteria.html)
   defines an extension that allows alternate criteria for evaluation to be defined for
   a Measure.  In this way, multiple implementations for counting can be supported based
   on the capabilities of the system available.

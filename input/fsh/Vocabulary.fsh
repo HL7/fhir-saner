@@ -351,6 +351,7 @@ Description: "This Value Set identifies Lab tests related to detection of curren
  * LOINC#94315-9 "SARS-related coronavirus E gene [Presence] in Unspecified specimen by NAA with probe detection"
  * LOINC#94316-7 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by NAA with probe detection"
  * LOINC#94500-6 "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94531-1 "SARS-CoV-2 (COVID-19) RNA panel - Respiratory specimen by NAA with probe detection"
  * LOINC#94533-7 "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory specimen by NAA with probe detection"
  * LOINC#94534-5 "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory specimen by NAA with probe detection"
  * LOINC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"

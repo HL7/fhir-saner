@@ -6,14 +6,12 @@ involved in the SANER
 Profile and the relevant transactions between them.
 
 
-
-![Figure 3-1: SANER Actor Diagram](ActorsAndTransactions.svg "Figure 3-1: SANER Actor Diagram")
+{% include ActorsAndTransactions.svg%}
 
 **Figure 3-1: SANER Actor Diagram**
 
 Table 3-1 lists the transactions for each actor directly involved in the SANER Implementation Guide. To claim compliance with this guide, an actor shall
-support all required transactions (labeled "R") and may support the
-optional transactions (labeled "O").
+support all required transactions (labeled "R").
 
 
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
@@ -87,7 +85,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 3</sup>
+                                <sup> 1</sup>
                             
 </td>
 </tr>
@@ -101,7 +99,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 4</sup>
+                                <sup> 2</sup>
                             
 </td>
 </tr>
@@ -158,7 +156,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 3</sup>
+                                <sup> 1</sup>
                             
 </td>
 </tr>
@@ -172,7 +170,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 4</sup>
+                                <sup> 2</sup>
                             
 </td>
 </tr>
@@ -186,7 +184,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 5</sup>
+                                <sup> 1</sup>
                             
 </td>
 </tr>
@@ -200,7 +198,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 6</sup>
+                                <sup> 3</sup>
                             
 </td>
 </tr>
@@ -214,7 +212,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 7</sup>
+                                <sup> 1</sup>
                             
 </td>
 </tr>
@@ -228,7 +226,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 8</sup>
+                                <sup> 3</sup>
                             
 </td>
 </tr>
@@ -337,7 +335,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 9</sup>
+                                <sup> 1</sup>
                             
 </td>
 </tr>
@@ -351,7 +349,7 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 <td align='center'>
                         C
 
-                                <sup> 10</sup>
+                                <sup> 3</sup>
                             
 </td>
 </tr>
@@ -377,27 +375,13 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
         
 **Notes:**
 
-1. This transaction is required when the Measure Source implements the [Pull Option](#pull-option).
+1. This transaction is required when the actor implements the [Pull Option](#pull-option).
 
-2. This transaction is required when the Measure Source implements the [Push Option](#push-option), or [Supplemental Data Option](#supplemental-data-option).
+2. This transaction is required when the actor implements the [Push Option](#push-option), or [Supplemental Data Option](#supplemental-data-option).
 
-3. This transaction is required when the Measure Consumer implements the [Pull Option](#pull-option).
+3. This transaction is required when the actor implements the [Push Option](#push-option).
 
-4. This transaction is required when the Measure Consumer implements the [Push Option](#push-option), or [Supplemental Data Option](#supplemental-data-option).
-
-5. This transaction is required when the Measure Intermediary implements the [Pull Option](#pull-option).
-
-6. This transaction is required when the Measure Intermediary implements the [Push Option](#push-option).
-
-7. This transaction is required when the Measure Intermediary implements the [Pull Option](#pull-option).
-
-8. This transaction is required when the Measure Intermediary implements the [Push Option](#push-option).
-
-9. This transaction is required when the Measure Computer implements the [Pull Option](#pull-option).
-
-10. This transaction is required when the Measure Computer implements the [Push Option](#push-option).
-
-### Actors
+### Actor Descriptions
 The actors in this profile are described in more detail in the sections below.
 
 #### Measure Source
@@ -422,18 +406,17 @@ A Measure Source provides the FHIR data that is used by a Measure Consumer.
 [base]/metadata.
 3. A Measure Source that implements the Supplemental Data Option **shall** support creation of MeasureReport and Supplemental Data
             resources through the [HTTP Batch](https://www.hl7.org/fhir/http.html#transaction) operation and endpoint.
-4. A Measure Source that implements the Supplemental Data option must also implement the Push Option
+4. A Measure Source that implements the Supplemental Data option **shall** also implement the Push Option
 
 ##### Measure Source Conformance
 
 See the following CapabilityStatement resources for conformance requirements:
-* [CapabilityStatement-MeasureSource-Aggregate](CapabilityStatement-MeasureSource-Aggregate.html) Defines the additional requirements for the Measure Source implementing the Aggregate Option.
-* [CapabilityStatement-MeasureSource-CSV-Pull](CapabilityStatement-MeasureSource-CSV-Pull.html) Defines the additional requirements for the Measure Source implementing the CSV Option and the Pull Option.
-* [CapabilityStatement-MeasureSource-CSV-Push](CapabilityStatement-MeasureSource-CSV-Push.html) Defines the additional requirements for the Measure Source implementing the CSV Option and the Push Option.
-* [CapabilityStatement-MeasureSource-Pull](CapabilityStatement-MeasureSource-Pull.html) Defines the additional requirements for the Measure Source implementing the Pull Option.
-* [CapabilityStatement-MeasureSource-Pull-Questionnaire](CapabilityStatement-MeasureSource-Pull-Questionnaire.html) Defines the additional requirements for the Measure Source implementing the Pull Option and the Questionnaire Option.
-* [CapabilityStatement-MeasureSource-Push](CapabilityStatement-MeasureSource-Push.html) Defines the additional requirements for the Measure Source implementing the Push Option.
-* [CapabilityStatement-MeasureSource-SupplementalData](CapabilityStatement-MeasureSource-SupplementalData.html) Defines the additional requirements for the Measure Source implementing the Supplemental Data Option.
+* [CapabilityStatement-MeasureSource-Aggregate](CapabilityStatement-MeasureSource-Aggregate.html) Defines the requirements for the Measure Source implementing the Aggregate Option.
+* [CapabilityStatement-MeasureSource-CSV-Pull](CapabilityStatement-MeasureSource-CSV-Pull.html) Defines the requirements for the Measure Source implementing the CSV Option and the Pull Option.
+* [CapabilityStatement-MeasureSource-CSV-Push](CapabilityStatement-MeasureSource-CSV-Push.html) Defines the requirements for the Measure Source implementing the CSV Option and the Push Option.
+* [CapabilityStatement-MeasureSource-Pull](CapabilityStatement-MeasureSource-Pull.html) Defines the requirements for the Measure Source implementing the Pull Option.
+* [CapabilityStatement-MeasureSource-Push](CapabilityStatement-MeasureSource-Push.html) Defines the requirements for the Measure Source implementing the Push Option.
+* [CapabilityStatement-MeasureSource-SupplementalData](CapabilityStatement-MeasureSource-SupplementalData.html) Defines the requirements for the Measure Source implementing the Supplemental Data Option.
 #### Measure Consumer
 
 The Measure Consumer provides access to aggregated or fine-grained
@@ -453,18 +436,17 @@ or varying levels of granularity using data extracted from a Measure Source.
 				[base]/metadata.
 3. A Measure Consumer that implements the Supplemental Data Option **shall** support creation of MeasureReport and Supplemental Data
             resources through the [HTTP Batch](https://www.hl7.org/fhir/http.html#transaction) operation and endpoint.
-4. A Measure Consumer that implements the Supplemental Data option must also implement the Push Option
+4. A Measure Consumer that implements the Supplemental Data option **shall** also implement the Push Option
 
 ##### Measure Consumer Conformance
 
 See the following CapabilityStatement resources for conformance requirements:
-* [CapabilityStatement-MeasureConsumer-Aggregate](CapabilityStatement-MeasureConsumer-Aggregate.html) Defines the additional requirements for the Measure Consumer implementing the Aggregate Option.
-* [CapabilityStatement-MeasureConsumer-CSV-Pull](CapabilityStatement-MeasureConsumer-CSV-Pull.html) Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Pull Option.
-* [CapabilityStatement-MeasureConsumer-CSV-Push](CapabilityStatement-MeasureConsumer-CSV-Push.html) Defines the additional requirements for the Measure Consumer implementing the CSV Option and the Push Option.
-* [CapabilityStatement-MeasureConsumer-Pull](CapabilityStatement-MeasureConsumer-Pull.html) Defines the additional requirements for the Measure Consumer implementing the Pull Option.
-* [CapabilityStatement-MeasureConsumer-Pull-Questionnaire](CapabilityStatement-MeasureConsumer-Pull-Questionnaire.html) Defines the additional requirements for the Measure Consumer implementing the Pull Option and the Questionnaire Option.
-* [CapabilityStatement-MeasureConsumer-Push](CapabilityStatement-MeasureConsumer-Push.html) Defines the additional requirements for the Measure Consumer implementing the Push Option.
-* [CapabilityStatement-MeasureConsumer-SupplementalData](CapabilityStatement-MeasureConsumer-SupplementalData.html) Defines the additional requirements for the Measure Consumer implementing the Supplemental Data Option.
+* [CapabilityStatement-MeasureConsumer-Aggregate](CapabilityStatement-MeasureConsumer-Aggregate.html) Defines the requirements for the Measure Consumer implementing the Aggregate Option.
+* [CapabilityStatement-MeasureConsumer-CSV-Pull](CapabilityStatement-MeasureConsumer-CSV-Pull.html) Defines the requirements for the Measure Consumer implementing the CSV Option and the Pull Option.
+* [CapabilityStatement-MeasureConsumer-CSV-Push](CapabilityStatement-MeasureConsumer-CSV-Push.html) Defines the requirements for the Measure Consumer implementing the CSV Option and the Push Option.
+* [CapabilityStatement-MeasureConsumer-Pull](CapabilityStatement-MeasureConsumer-Pull.html) Defines the requirements for the Measure Consumer implementing the Pull Option.
+* [CapabilityStatement-MeasureConsumer-Push](CapabilityStatement-MeasureConsumer-Push.html) Defines the requirements for the Measure Consumer implementing the Push Option.
+* [CapabilityStatement-MeasureConsumer-SupplementalData](CapabilityStatement-MeasureConsumer-SupplementalData.html) Defines the requirements for the Measure Consumer implementing the Supplemental Data Option.
 #### Measure Intermediary
 
 The Measure Intermediary is a grouping of a Measure Source with a Measure Consumer.
@@ -499,8 +481,10 @@ communication with a Measure Consumer implementing the Pull option.
 In this example, the Bridge is simply a FHIR Server. A FHIR Server that supports CRUD operations on MeasureReport and Measure
 effectively implements both the Measure Consumer with the Push Option
 and the Measure Source actor implementing the Pull Option.
+<div>
+{% include FHIRServer.svg %}
+</div>
 
-![FHIR Server](FHIRServer.svg)
 
 
 ##### Measure Intermediary Requirements
@@ -596,7 +580,7 @@ between options when applicable are specified in notes.
         
                 <tr>
                 
-                    <td rowspan='5'>Measure Source</td>
+                    <td rowspan='4'>Measure Source</td>
                 
                 <td><a href="#csv-option">CSV Option</a></td>
                 </tr>
@@ -618,12 +602,7 @@ between options when applicable are specified in notes.
             
                 <tr>
                 
-                <td><a href="#questionnaire-option">Questionnaire Option</a></td>
-                </tr>
-            
-                <tr>
-                
-                    <td rowspan='5'>Measure Consumer</td>
+                    <td rowspan='4'>Measure Consumer</td>
                 
                 <td><a href="#csv-option">CSV Option</a></td>
                 </tr>
@@ -641,11 +620,6 @@ between options when applicable are specified in notes.
                 <tr>
                 
                 <td><a href="#supplemental-data-option">Supplemental Data Option</a></td>
-                </tr>
-            
-                <tr>
-                
-                <td><a href="#questionnaire-option">Questionnaire Option</a></td>
                 </tr>
             
                 <tr><td>Measure Intermediary</td>
@@ -753,7 +727,7 @@ transaction to enable collection of the current status.
 #### Supplemental Data Option
 
 An actor implementing the Supplemental Data Option supports the use of Bundle in Push transactions
-used with the MeasureReport resource. Actors implementing the Supplemental Data Option must also implement
+used with the MeasureReport resource. Actors implementing the Supplemental Data Option **shall** also implement
 the Push Option.
 
 This option applies to the actors as described below.
@@ -771,30 +745,6 @@ in the Bundle will be the resources representing the supplemental data reference
 A MeasureConsumer implementing the Supplemental Data Option can receive measures containing
 supplemental data at its Bundle endpoint, and will store the resources following the requirements of
 the HTTP Batch operation.
-
-
-#### Questionnaire Option
-
-An actor implementing the Questionnaire Option supports the use of Questionnaire
-and QuestionnaireResponse resources to determine the current status of selected
-health delivery resources.
-
-
-
-This option applies to the actors as described below.
-
-##### Measure Source
-
-A Measure Source implementing the Questionnaire Option will interact
-using Questionnaire and QuestionnaireResponse resources to report on the current status
-of health delivery resources.
-
-
-##### Measure Consumer
-
-A Measure Consumer implementing the Questionnaire Option will interact
-using Questionnaire and QuestionnaireResponse resources to access the current status
-of health delivery resources.
 
 
 #### Aggregate Option

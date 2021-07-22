@@ -92,35 +92,46 @@ These are described in more detail in the sections that follow.
     </xsl:template>
 
     <xsl:template match="ig:usecase" mode="process-flow-diagram">
-        <!-- This is an ugly hack to work around the limits in Saxon HE implementation of result-document() -->
-        <xsl:result-document href="{$dir}images-source/usecase{position()}-processflow.txt" method="text">
-            <xsl:call-template name="process-flow2"/>
+        <xsl:variable name='uc' select='.'/>
+        <xsl:result-document href="{$dir}images-source/usecase{position()}-processflow.plantuml" method="text">
+            <xsl:variable name="actors" select="/ig:profile/ig:actor"/>
+            <xsl:text>@startuml&#xA;</xsl:text>
+            <xsl:text>hide footbox&#xA;</xsl:text>
+            <xsl:variable name="ctx" select="."/>
+            <xsl:variable name="orderedActors" select='ig:orderSteps(.//ig:step)'/>
+            <xsl:for-each select="$orderedActors">
+                <!-- xsl:sort select="index-of($ctx//ig:step/@to, .)[1]"/>
+                <xsl:sort select="index-of($ctx//ig:step/@from, .)[1]"/ -->
+                <!-- List actors in order of appearance -->
+                <xsl:choose>
+                    <!-- If it's an actor in the profile use a box -->
+                    <xsl:when test="$actors/@id = .">
+                        <xsl:text>participant "</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="$uc/ig:alias/@actor = current()">
+                                <xsl:value-of select="$uc/ig:alias[@actor = current()]/@name"/>
+                                <xsl:text> [</xsl:text>
+                                <xsl:value-of select="$actors[@id = current()]/ig:name"/>
+                                <xsl:text>]</xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="$actors[@id = current()]/ig:name"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>" as </xsl:text><xsl:value-of select="."/>
+                        <xsl:text>&#xA;</xsl:text>
+                    </xsl:when>
+                    <!-- If it's not an actor in the profile use the stick figure -->
+                    <xsl:otherwise>
+                        <xsl:text>actor "</xsl:text>
+                        <xsl:value-of select="."/>
+                        <xsl:text>"&#xA;</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+            <xsl:apply-templates select="ig:step|ig:return" mode="process-flow-diagram"/>
+            <xsl:text>@enduml&#xA;</xsl:text>
         </xsl:result-document>
-    </xsl:template>
-    <xsl:template name="process-flow2">
-        <xsl:variable name="actors" select="/ig:profile/ig:actor"/>
-        <xsl:text>@startuml&#xA;</xsl:text>
-        <xsl:text>hide footbox&#xA;</xsl:text>
-        <xsl:for-each select="distinct-values(.//ig:step/@from|.//ig:step/@to)">
-            <!-- List actors in order of appearance -->
-            <xsl:choose>
-                <!-- If it's an actor in the profile use a box -->
-                <xsl:when test="$actors/@id = .">
-                    <xsl:text>participant "</xsl:text>
-                    <xsl:value-of select="$actors[@id = current()]/ig:name"/>
-                    <xsl:text>" as </xsl:text><xsl:value-of select="."/>
-                    <xsl:text>&#xA;</xsl:text>
-                </xsl:when>
-                <!-- If it's not an actor in the profile use the stick figure -->
-                <xsl:otherwise>
-                    <xsl:text>actor "</xsl:text>
-                    <xsl:value-of select="."/>
-                    <xsl:text>"&#xA;</xsl:text>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:for-each>
-        <xsl:apply-templates select="ig:step|ig:return" mode="process-flow-diagram"/>
-        <xsl:text>@enduml&#xA;</xsl:text>
     </xsl:template>
 
     <xsl:template match="ig:step" mode="process-flow-diagram">
@@ -159,4 +170,25 @@ These are described in more detail in the sections that follow.
         <xsl:value-of select="concat($number,'. ',ig:name)"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
+    
+    <xsl:function name="ig:orderSteps">
+        <xsl:param name='steps'/>
+        <xsl:variable name='actors' select="$steps/ancestor::ig:profile//ig:actor[@id=$steps/@from|$steps/@to]"/>
+        <xsl:variable name="fromOnly" select="distinct-values($steps/@from[not(.=$steps[@from != @to]/@to)])"/>
+        <xsl:variable name="toOnly" select="distinct-values($steps/@to[not(.=$steps/@from)])"/>
+        <xsl:variable name='rest' select="distinct-values($steps/@from|$steps/@to)[not(.=$fromOnly or .=$toOnly)]"/>
+        <xsl:for-each select='$fromOnly'>
+            <xsl:sort select="index-of($steps/@from, current())[1]"/>
+            <xsl:sequence select='.'/>            
+        </xsl:for-each>
+        <xsl:for-each select='$rest'>
+            <xsl:sort select="index-of($steps/@from|$steps/@to, current())[1]"/>            
+            <xsl:sequence select='.'/>            
+        </xsl:for-each>
+        <xsl:for-each select='$toOnly'>
+            <xsl:sort select="index-of($steps/@to, current())[1]"/>            
+            <xsl:sequence select='.'/>            
+        </xsl:for-each>
+        
+    </xsl:function>
 </xsl:stylesheet>

@@ -448,6 +448,7 @@ Description: "Codes for COVID-19 Diagnostic Tests"
  * LOINC#94315-9 "SARS-related coronavirus E gene [Presence] in Unspecified specimen by NAA with probe detection"
  * LOINC#94316-7 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by NAA with probe detection"
  * LOINC#94500-6 "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection"
+ * LOINC#94531-1 "SARS-CoV-2 (COVID-19) RNA panel - Respiratory specimen by NAA with probe detection"
  * LOINC#94533-7 "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory specimen by NAA with probe detection"
  * LOINC#94534-5 "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory specimen by NAA with probe detection"
  * LOINC#94559-2 "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory specimen by NAA with probe detection"
@@ -462,6 +463,7 @@ Description: "Codes for a positive COVID-19 Diagnostic Test Result"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#10828004  "Positive"
 * SCT#260373001 "Detected"
+
 
 ValueSet:    NegativeResults
 Title:       "COVID-19 Not Detected"

@@ -1,9 +1,10 @@
 @startuml
 hide footbox
-participant "Measure Definition Consumer" as MeasureDefinitionConsumer
-participant "Measure Definition Source" as MeasureDefinitionSource
-participant "Measure Computer" as MeasureComputer
-participant "Data Source" as DataSource
+participant "Reporting Organization [Measure Definition Consumer]" as MeasureDefinitionConsumer
+participant "Hospital Reporting System Public Health Agency [Measure Computer]" as MeasureComputer
+participant "Defining Agency [Measure Definition Source]" as MeasureDefinitionSource
+participant "Hospital EHR System [Data Source]" as DataSource
+participant "Measure Consumer" as MeasureConsumer
 "MeasureDefinitionConsumer" -> "MeasureDefinitionSource" : 1. Query for New or Updated Measures
 activate "MeasureDefinitionConsumer"
 activate "MeasureDefinitionSource"
@@ -19,9 +20,10 @@ activate "DataSource"
 deactivate "DataSource"
 deactivate "MeasureComputer"
 deactivate "MeasureComputer"
-"MeasureComputer" -> "MeasureComputer" : 5. Send Measures to a Measure Consumer
+"MeasureComputer" -> "MeasureConsumer" : 5. Send Measures to a Measure Consumer
 activate "MeasureComputer"
-activate "MeasureComputer"
+activate "MeasureConsumer"
+return
 deactivate "MeasureComputer"
-deactivate "MeasureComputer"
+deactivate "MeasureConsumer"
 @enduml

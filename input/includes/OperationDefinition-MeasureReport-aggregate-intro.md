@@ -9,7 +9,7 @@ The process for aggregating MeasureReport resources up to a geographic region or
 follows the steps below:
 
 1. Collect all MeasureReport resources to be aggregated.
-   Note: All MeasureReport resources being aggregated must refererence a common Measure in MeasureReport.measure.
+   Note: All MeasureReport resources being aggregated **shall** refererence a common Measure in MeasureReport.measure.
 2. Determine the subject of the report (the larger location)
 3. Compute the start of the time period for the aggregate as the minimum of MeasureReport.period.start for all MeasureReport resources being aggregated.
 4. Compute the end of the time period for the aggregate as the maximum of MeasureReport.period.end for all MeasureReport resources being aggregated.

@@ -1,4 +1,5 @@
 @startuml
+
 agent "Measure Source" as MeasureSource
 
 agent "Measure Consumer" as MeasureConsumer

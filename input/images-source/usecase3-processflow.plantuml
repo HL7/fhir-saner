@@ -1,7 +1,7 @@
 @startuml
 hide footbox
-participant "Measure Definition Consumer" as MeasureDefinitionConsumer
-participant "Measure Definition Source" as MeasureDefinitionSource
+participant "Reporting Organization [Measure Definition Consumer]" as MeasureDefinitionConsumer
+participant "Defining Agency [Measure Definition Source]" as MeasureDefinitionSource
 "MeasureDefinitionConsumer" -> "MeasureDefinitionSource" : 1. Query for New or Updated Measures
 activate "MeasureDefinitionConsumer"
 activate "MeasureDefinitionSource"

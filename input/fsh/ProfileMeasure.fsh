@@ -32,7 +32,9 @@ Description: "Attributes describing the group of measures"
     riskAdjustment 0..1 and
     rateAggregation 0..1 and
     improvementNotation 0..1 and
-    subject 1..1 MS
+    subject 1..1 MS and
+    subjectValueSet 0..1 MS
+
 * extension[scoring] ^short = "Like Measure.scoring, but applies to group"
 * extension[scoring].value[x] only CodeableConcept
 * extension[scoring].valueCodeableConcept from MeasureScoring
@@ -60,10 +62,18 @@ Description: "Attributes describing the group of measures"
 * extension[subject].valueCodeableConcept only MeasuredItemDescription
 * extension[subject].valueCodeableConcept from http://hl7.org/fhir/ValueSet/resource-types (extensible)
 
+* extension[subjectValueSet] ^short = "Identifies the ValueSet describing the subject elements to count based on a code."
+* extension[subjectValueSet].value[x] only Reference(ValueSet)
+
+
+
 Profile: MeasureCriteria
 Parent: Expression
 Description: "Constraints on documentation for the evaluation of a Measure"
 * insert SanerStructureDefinitionContent
+
+ * extension contains MeasureAlternateCriteria named alternateCriteria 0..1
+ * extension[alternateCriteria] ^short = "Other expressions for computing the criterion"
 
 // Name only needs to be present if the expression will be reused
 * name 0..1 MS
@@ -78,10 +88,19 @@ Description: "Constraints on documentation for the evaluation of a Measure"
 * expression 1..1 MS
 * expression ^short = "A measure must describe how to automate the computation in an expression that can be evaluated in the specified language"
 
-Extension: MeasurePopulationAlternateCriteria
+Extension: MeasureAlternateCriteria
 Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drools, et cetera)"
 * insert SanerStructureDefinitionContent
+* ^context[0].type = #element
+* ^context[0].expression = "Measure.population.criteria"
+* ^context[1].type = #element
+* ^context[1].expression = "Measure.stratifier.criteria"
+* ^context[2].type = #element
+* ^context[2].expression = "Measure.stratifier.component.criteria"
+* ^context[3].type = #element
+* ^context[3].expression = "Measure.supplementalData.criteria"
+
 * value[x] only Expression
 * valueExpression only MeasureCriteria
 * valueExpression 1..1 MS
@@ -280,9 +299,6 @@ cumulative
 
  * group.population.criteria only MeasureCriteria
 
- * group.population.extension contains MeasurePopulationAlternateCriteria named alternateCriteria 0..1
- * group.population.extension[MeasurePopulationAlternateCriteria] ^short = "Other expressions for computing the criterion"
-
  * group.stratifier 0..*  MS
  * group.stratifier ^short = "A group may have none, some or many strata"
  * group.stratifier.code 1..1  MS
@@ -296,8 +312,7 @@ cumulative
  * group.stratifier.description 1..1  MS
  * group.stratifier.description ^short = "Describes the overall function of the strata."
  * group.stratifier.criteria 1..1  MS
- * group.stratifier.criteria.language 1..1  MS
- * group.stratifier.criteria.expression 1..1  MS
+ * group.stratifier.criteria only MeasureCriteria
  * group.stratifier.component 0..0
  * group.stratifier.component ^short = "Strata components are not used"
 
@@ -305,3 +320,6 @@ cumulative
 * supplementalData.code from  http://hl7.org/fhir/ValueSet/resource-types (extensible)
 * supplementalData.code ^short = "Resource type included in the supplementalData"
 * supplementalData.description 1..1
+* supplementalData.criteria 1..1
+* supplementalData.criteria only MeasureCriteria
+

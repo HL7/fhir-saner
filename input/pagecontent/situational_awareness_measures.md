@@ -125,7 +125,7 @@ official sources for reporting.</caption>
 The approach of this IG to measurement is to capture all measurements reported to a single
 agency in a single FHIR MeasureReport resource, using multiple groups in the report for
 each kind of measurement reported.  This approach is aligned with existing workflows associated with
-automated systems for **receiving** measure data. The approach very much treats the MeasureReport
+automated systems for receiving measure data. The approach very much treats the MeasureReport
 as if it were a report card (as one might receive from a school) describing how a location is doing
 on all measured criteria, with each group within the MeasureReport reflecting one of the
 "subject areas" being measured.
@@ -176,6 +176,8 @@ In this way, the MeasureReport resource reporting utilization can be directly qu
 available capacity to find a location capable of treating or caring for some number of patients (e.g., by available beds
 or ventilators at a facility or within a region).
 
+A worked through example of capacity measure is provided in [Measure Group Beds](measure_group_beds.html#capacity-example).
+
 #### Event Growth
 An event growth measure reports the number of events occurring during a time period (e.g., tests performed,
 positive test results, new cases) over the cumulative total of events (e.g., total tests performed, total
@@ -184,7 +186,8 @@ during the period, and the denominator is the cumulative total of events. It rep
 of growth during the measure period of events of interest.
 
 This is simply another form of Proportion measure, since what is being counted in the numerator and denominator come from the
-same initial population.
+same initial population.  A worked through example of an event growth measure is provided
+in [Measure Group Covid-19 Deaths](measure_group_covid19_deaths.html#event-growth-example).
 
 NOTE: The score for this measure group **shall** always range from 0 to 1, where 1 represents the highest rate of
 cumulative growth.  If there were no prior event, the growth rate will be 1 in the first reporting period because the
@@ -206,6 +209,10 @@ a measure of an unmet need. Queue length measures can be improved to become serv
 for an completion of an activity, but this time may not be readily tracked, or queue length may be a sufficient signal of a problem
 that needs to be addressed. The benefit of service time measures is that they can be compared between facilities, whereas queue length
 is not readily comparable but may be more readily computable.
+
+
+A worked through example of a queue length measure is provided
+in [Measure Group Covid-19 Patients](measure_group_covid19_patients.html#queue-length-example).
 
 #### Service Time
 A Service Time measure is a specialization of the ratio measure which reports the total time taken to provide a service
@@ -241,20 +248,34 @@ Case 2: Site 1 reports on 1000 tests, Site 2 on 100
 |All|1100|23,200 hrs|21.1 hrs/result|
 {: .grid}
 
+A worked through example of a service time measure is provided
+at the end of [Measure Group Covid-19 Patients](measure_group_covid19_patients.html#service-time-example).
+
 
 #### Availability
 Availability measures are subtypes of cohort measures which enable tracking of availability of
 critical resources, generally consumables (e.g., PPE, medications, immunizations, oxygen, blood, IV fluids),
-and can also report availability of staff to support facility operations (e.g., physicians, nurses,
-other licensed providers, support and maintenance staff), or other resources (e.g., electricity, water)
-or available facility services (e.g., emergency department, helipad, burn unit).
+or staff to support facility operations (e.g., physicians, nurses, other licensed providers, support and maintenance staff),
+or other resources (e.g., electricity, water) or available facility services (e.g., emergency department, helipad, burn unit).
 
-Availability measures are generally "yes/no" to indicate availability where a facility record
-a measure value of 1 if sufficient quantity is available to meet demand, and 0 otherwise.  These
-can be further stratified based on degree of availability (e.g., by days supply remaining).
+These are generally categorical responses, typically in the form of a yes or no response to indicate availability
+or lack of availability. These are recorded in a similar manner to which categorical responses are encoded
+for stastical analysis, where a question that has one response that can be answered by selecting one of N values
+each value is turned into a separate question, with a yes or no answer, where yes is encoded using a value of 1
+and no is encoded with a value of 0.  For more complex questions with three or more categories, similar rules
+apply.
 
-Automatically reported PPE inventory information at the manufacturer and model number level can be used to determine if a facility should be instituting conventional, contingent, or crisis optimization strategies and whether equivalent resupplies are readily available
-using the same mechanism for recording yes/no answers.
+For example: PPE inventory quanties might be used to determine if a facility should be instituting conventional, contingent, or crisis optimization
+strategies and whether equivalent resupplies are readily available using the same mechanism for
+recording yes/no answers.  If this were worded as a multiple choice question (allowing only one answer)
+in a questionnaire, a measurement instrument might ask:
+
+What kind of resupply strategy is being used for N95 respirators:
+A) Conventional, B) Contingent, or C) Crisis Optimization
+
+The measure would instead request individual count values for Conventional, Contingent or Crisis Optimization
+resupply strategy.  A count of 1 would be assigned to the selected strategy, and a count of 0 to unselected
+strategies. This allows numerical analysis techniques to be used with categorical data.
 
 A measure report for a single facility **shall** always have a value of 0 or 1 as the count for
 an availability measure.  When unstratified, a 1 **shall** mean available, a 0 **shall** mean unavailable.
@@ -263,10 +284,13 @@ meets the criteria for a specified stratum, and a 0 **shall** mean it does not. 
 one stratum whose count is 1, and **should** be one stratum whose count is 1. The sum of values for all
 strata **shall** be 0 or 1.
 
-A measure report aggregating over multiple facilities or over reporting periods may have a value greater
+A measure report aggregating over multiple facilities may have a value greater
 than one (the sum of all count values for all aggregated reports).  The number "counts" the number of
-facilities or time periods for which the identified resource is available, or within strata, the number
-of facilities or time periods for which the stratification criteria were met.
+facilities for which the identified resource is available, or within strata, the number
+of facilities for which the stratification criteria were met.
+
+A worked through example of a service time measure is provided
+at the end of [Measure Group Ventilators](measure_group_ventilators.html#availability-example).
 
 ### Measure Populations in Situation Awareness Measures
 In addition to initial population, denominator, denominator-exclusions and numerators, situational awareness measures
@@ -281,7 +305,7 @@ use denominator exceptions.  This implementation guide defines four additional t
 These population types are defined in the [Measure Populations](CodeSystem-MeasurePopulationSystem.html) code system.
 
 #### Numerator Complement
-The numerator complement is the quantity in the denominator that match neither the numerator nor the numerator exclusion criteria.
+The numerator complement is the quantity in the denominator that match neither the numerator nor the numerator-exclusion criteria.
 Summed together, the numerator, numerator-exclusion and numerator-complement must match the value of the denominator - denominator-exclusion value.
 
 In a capacity and utilization measure, the numerator-complement population represents available capacity. By enabling reporting
@@ -320,9 +344,12 @@ for scoring or reporting.
 |**Availability**|O|O|R|O|R|O|R|NP|NP|
 {: .grid}
 
+R - Required
+O - Optional
+NP - Not Permitted
 
 ### Optionality in Situation Awareness Measures
-Public health or other agencies may define a minimum set of values that must be reported on, allowing facilities to omit entries in the measure that are either not applicable or not relevant for reporting.  Thus, some measure values are required, and others are optional.  This can be defined in the measure using the Measure Expectation extension in the Measure
+Public health or other agencies may define a minimum set of values that are to be reported on, allowing facilities to omit entries in the measure that are either not applicable or not relevant for reporting.  Thus, some measure values are required, and others are optional.  This can be defined in the measure using the Measure Expectation extension in the Measure
 
 A measure may contain sections for reporting that are either not appropriate or not applicable for all settings. In order to pass FHIR Validation, a MeasureReport that references a Measure must however, include all components of the measure.  At the time of this publication, these constraints are hard coded into FHIR Validation tools, and are not generally available in computable form. When reporting these elements, the [data-absent-reason](https://www.hl7.org/fhir/extension-data-absent-reason.html) extension can be used in the MeasureReport resource for these elements to indicate that they are not available.
 

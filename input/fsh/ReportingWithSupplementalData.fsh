@@ -91,6 +91,12 @@ has any such associated Condition or Observation resources in the prior two week
  * group[0].stratifier[0].code.text = "By Risk Factor"
  * group[0].stratifier[0].description = "Stratifies the population by Condition/RiskFactor"
  * group[0].stratifier[0].criteria.language = #text/fhirpath
+ * group[0].stratifier[0].criteria.description = """
+   Final all conditions for each patient in the AllCOVID19RiskFactors ValueSet
+   and stratify by membership in subsets of that value set.  NOTE: A patient
+   can belong to multiple strata in this example.
+ """
+
  * group[0].stratifier[0].criteria.expression = """
 	findAll('Condition',
 		for('patient', $this.subject),

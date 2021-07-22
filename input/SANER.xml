@@ -77,7 +77,7 @@
 	<option id="SupplementalData">
         <name>Supplemental Data Option</name>
         <description>An actor implementing the Supplemental Data Option supports the use of Bundle in Push transactions
-        used with the MeasureReport resource.  Actors implementing the Supplemental Data Option must also implement
+        used with the MeasureReport resource.  Actors implementing the Supplemental Data Option **shall** also implement
         the Push Option.</description>
         <participant actor='MeasureSource'>
             <description>A MeasureSource implementing the Supplemental Data Option will send measures containing Supplemental Data using
@@ -90,23 +90,6 @@
             supplemental data at its Bundle endpoint, and will store the resources following the requirements of
             the HTTP Batch operation.</description>
         </participant>
-	</option>
-	<option id="Questionnaire">
-		<name>Questionnaire Option</name>
-		<description>An actor implementing the Questionnaire Option supports the use of Questionnaire
-			and QuestionnaireResponse resources to determine the current status of selected
-			health delivery resources.</description>
-		<overview />
-		<participant actor='MeasureSource'>
-			<description>A Measure Source implementing the Questionnaire Option will interact
-				using Questionnaire and QuestionnaireResponse resources to report on the current status
-				of health delivery resources.</description>
-		</participant>
-		<participant actor='MeasureConsumer'>
-			<description>A Measure Consumer implementing the Questionnaire Option will interact
-				using Questionnaire and QuestionnaireResponse resources to access the current status
-				of health delivery resources.</description>
-		</participant>
 	</option>
 	<option id="Aggregate">
 		<name>Aggregate Option</name>
@@ -158,6 +141,8 @@
 			Collector
 			within the hospital.</description>
 		<overview file='SANER-getbeds.md' />
+		<alias actor="MeasureSource" name="Reporting Organization"/>
+		<alias actor="MeasureConsumer" name="Public Health Agency"/>
 		<step id="GETVALUES" from="ICU/Central Monitoring System" to="ICU/Central Monitoring System" returns="now">
 			<name>ICU/Central Monitoring System collects data</name>
 			<description>The ICU/Central Monitoring System is triggered (by request or schedule) to generate
@@ -237,8 +222,11 @@
 		<overview>In this use case, we see the classic "dashboard" panel, where a public health user
 			selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
 			to them in an easy to view format.</overview>
+		<alias actor="MeasureIntermediary" name="Measure Aggregating System"/>
+		<alias actor="MeasureSource" name="Reporting Sources"/>
+		<alias actor="MeasureConsumer" name="Measure Reporting and Analytics System"/>
 		<step id="Aggregating-STEP2" from="MeasureIntermediary" to="MeasureSource" returns="now">
-			<name>Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</name>
+			<name>Measure Intermediary aggregates data from one or Measure Sources</name>
 			<description>The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a
 				function with other associated data) from one or more Measure Sources,
 				and makes them available through a Measure Source interface it provides.</description>
@@ -255,6 +243,14 @@
 			<overview>The user selects a geographic region and an issue of concern (e.g., beds, ventilators, PPE). The Measure Consumer
 				collects the appropriate reports
 				and displays the results.</overview>
+			<step id='Data-Collection-Step-1' from="MeasureConsumer" to="MeasureIntermediary" returns="now">
+				<name>Get Aggregated Results</name>
+				<description>The reporting system requests aggregated results from the analytics system</description>
+				<return>
+					<name>Aggregated Results</name>
+					<description>The analytics system returns the aggregated results</description>
+				</return>
+			</step>
 			<return>
 				<name>Display Results</name>
 				<description>The Measure Consumer displays an overview of aggregated regional results to the
@@ -267,6 +263,14 @@
 			<name>User refines Focus or Form of Display</name>
 			<description>The Public Health User selects a new form of display (e.g., Map, table or graph) or refines their
 				focus (e.g., wider or smaller region).</description>
+			<step id='Data-Collection-Step-2' from="MeasureConsumer" to="MeasureIntermediary" returns="now">
+				<name>Get Aggregated Results</name>
+				<description>The reporting system requests aggregated results from the analytics system</description>
+				<return>
+					<name>Aggregated Results</name>
+					<description>The analytics system returns the aggregated results</description>
+				</return>
+			</step>
 			<return>
 				<name>Display Refined Results</name>
 				<description>The Measure Repository modifies the users focus and reporting format</description>
@@ -282,6 +286,8 @@
 		<overview>Measures created for tracking a public health emergency may be revised periodically to support changing needs. This
 			use case supports the need
 			to distribute updated measure definitions to organizations who report on these measures.</overview>
+		<alias actor="MeasureDefinitionSource" name="Defining Agency"/>
+		<alias actor="MeasureDefinitionConsumer" name="Reporting Organization"/>
 		<step id="Search for updated Measures" from="MeasureDefinitionConsumer" to="MeasureDefinitionSource" returns="now">
 			<name>Query for New or Updated Measures</name>
 			<description>An organization required to report queries for for updated from one or public health or emergency response
@@ -301,6 +307,12 @@
 		<overview>Automating measure reporting reduces the burden on users for manual data collection. When a measure has been
 			automated, it
 			can be computed using FHIR APIs from supporting information systems provided by the organization.</overview>
+		<alias actor="MeasureDefinitionSource" name="Defining Agency"/>
+		<alias actor="MeasureDefinitionConsumer" name="Reporting Organization"/>
+		<alias actor="MeasureComputer" name="Hospital Reporting System"/>
+		<alias actor='DataSource' name='Hospital EHR System'/>
+		<alias actor="MeasureComputer" name="Public Health Agency"/>
+
 		<step id="Check for New or Updated Measures" from="MeasureDefinitionConsumer" to="MeasureDefinitionSource" returns="now">
 			<name>Query for New or Updated Measures</name>
 			<description>The reporting organization checks for new measures see [Distributing Measure
@@ -319,7 +331,7 @@
 				</return>
 			</step>
 		</step>
-		<step id="Send Measures" from="MeasureComputer" to="MeasureComputer" returns="now">
+		<step id="Send Measures" from="MeasureComputer" to="MeasureConsumer" returns="now">
             <name>Send Measures to a Measure Consumer</name>
             <description>The reporting organization sends the computer measure to the public health agency.</description>
         </step>
@@ -348,6 +360,8 @@
 			otherwise similar measures of utilization. In later stages, this data can be used to further assess and refine strain created by
 			disease burden based
 			on associated complications.</overview>
+		<alias actor='MeasureComputer' name='Hospital Reporting System'/>
+		<alias actor='DataSource' name='Hospital EHR System'/>
 		<step id="ComputeMeasures" from="MeasureComputer" to="MeasureComputer" returns="now">
 			<name>Compute Measure</name>
 			<description>The hospital information system collects data and computes the measures, returing a completed report.</description>
@@ -404,7 +418,7 @@ A Measure Source provides the FHIR data that is used by a Measure Consumer.</ove
             resources through the [HTTP Batch](https://www.hl7.org/fhir/http.html#transaction) operation and endpoint.</description>
 		</requires>
 		<requires id="SOURCE-SupplementalDataOption" implementing="SupplementalData">
-           <description>A Measure Source that implements the Supplemental Data option must also implement the Push Option</description>
+           <description>A Measure Source that implements the Supplemental Data option **shall** also implement the Push Option</description>
         </requires>
 	</actor>
 
@@ -437,7 +451,7 @@ or varying levels of granularity using data extracted from a Measure Source.</ov
             resources through the [HTTP Batch](https://www.hl7.org/fhir/http.html#transaction) operation and endpoint.</description>
         </requires>
         <requires id="CONSUMER-SupplementalDataOption" implementing="SupplementalData">
-           <description>A Measure Consumer that implements the Supplemental Data option must also implement the Push Option</description>
+           <description>A Measure Consumer that implements the Supplemental Data option **shall** also implement the Push Option</description>
         </requires>
 	</actor>
 
@@ -473,8 +487,10 @@ communication with a Measure Consumer implementing the Pull option.
 In this example, the Bridge is simply a FHIR Server. A FHIR Server that supports CRUD operations on MeasureReport and Measure
 effectively implements both the Measure Consumer with the Push Option
 and the Measure Source actor implementing the Pull Option.
-
-![FHIR Server](FHIRServer.svg)</overview>
+&lt;div&gt;
+{% include FHIRServer.svg %}
+&lt;/div&gt;
+	</overview>
 		<supports-tx transaction="PULL-TX" as="client" required-with-options="Pull">
 			<role>Collects data for reporting</role>
 		</supports-tx>
@@ -564,8 +580,8 @@ and the Measure Source actor implementing the Pull Option.
 		<description>The Query Measure transaction allows a Measure Consumer to
 			periodically query about the availability of a resource from an Measure Source.</description>
 		<overview>This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
-			resources from a MeasureSource actor. It defines the query parameters that the actors must and **should** support for search,
-			and the read operations that must be supported.</overview>
+			resources from a MeasureSource actor. It defines the query parameters that the actors **shall** and **should** support for search,
+			and the read operations that **shall** be supported.</overview>
 		<!-- like steps, messages can nest to support activation lines -->
 		<message from="MeasureConsumer" to="MeasureSource">
 			<name>Search Request</name>
@@ -596,9 +612,9 @@ and the Measure Source actor implementing the Pull Option.
 					</group>
 					<group>
 						<name>Formats</name>
-						<description>All servers must support the _format parameter for any read or search and the standard values
-							defined by FHIR for JSON and XML output. This value must override the Accept: header when present in an exchange.
-							Servers must also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
+						<description>All servers **shall** support the _format parameter for any read or search and the standard values
+							defined by FHIR for JSON and XML output. This value **shall** override the Accept: header when present in an exchange.
+							Servers **shall** also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
 							for consistency. Servers are also free to support other output formats (e.g. turtle as defined in the base FHIR
 							specifications, or other formats such as CSV which might be easier for clients to present or use). Servers
 							should support other commonly used expressions representing JSON or XML outputs without complaint, including
@@ -615,7 +631,7 @@ and the Measure Source actor implementing the Pull Option.
 							client='should-not' />
 					</group>
 					<group>
-						<description>The server must support the _count parameter for queries. Servers **should** use a default
+						<description>The server **shall** support the _count parameter for queries. Servers **should** use a default
 							value for _count if no value is provided to avoid server overloading. This guide recommends a default value of 100 based on
 							existing implementation experience.</description>
 						<parameter name='_count' min='0' max='1' expect='shall' />
@@ -638,9 +654,9 @@ and the Measure Source actor implementing the Pull Option.
 						these are the defined FHIR operations, or a specific operation definition. Each operation describes one possible interaction. -->
 					<operation name='read' resources='Location MeasureReport Measure Organization' expect='shall'>
 						<name>Read on Required Resources</name>
-						<description>A client must be able to read individual resources that are returned or referenced within resources
+						<description>A client **shall** be able to read individual resources that are returned or referenced within resources
 							returned by a query. Since MeasureReport references at the very least, Measure, Organization, and Location
-							these must all be able to be read.</description>
+							these **shall** all be able to be read.</description>
 					</operation>
 					<operation options='CSV' name='$read-csv' invoke='instance' resources="MeasureReport" expect="shall" client='may'>
 						<name>Read in CSV Format</name>
@@ -674,7 +690,7 @@ and the Measure Source actor implementing the Pull Option.
 						<name>Search by _id on Required Resources</name>
 						<group>
 							<name>Search by _id</name>
-							<description>A client must be able to read individual resources that are returned or referenced within resources
+							<description>A client **shall** be able to read individual resources that are returned or referenced within resources
 								returned by a query. Client systems may save resource references for future use, retrieving them later as
 								needed. To reduce overhead, a client system may also wish to retrieve the resources referenced by the
 								selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*</description>
@@ -685,7 +701,7 @@ and the Measure Source actor implementing the Pull Option.
 						<name>Search by name or identifier on Referenced Resources</name>
 						<group>
 							<name>Search by name or identifier</name>
-							<description>A client must be able to read resources that are referenced within resources
+							<description>A client **shall** be able to read resources that are referenced within resources
 								returned by a query by name or identifier.</description>
 							<parameter name='name' min='0' max='*' type='string' expect='shall' />
 							<parameter name='identifier' min='0' max='*' type='token' expect='shall' />
@@ -693,7 +709,7 @@ and the Measure Source actor implementing the Pull Option.
 					</operation>
 					<operation id='search-for-measure-definition' name='search' resources='Measure' expect='shall'>
 						<name>Search on Definition Resources</name>
-						<description>A client system must be able to retrieve the data they need, be it about beds,
+						<description>A client system **shall** be able to retrieve the data they need, be it about beds,
 							ventilators, PPE, or other measure.</description>
 						<overview>Measures can be identified by codes used in the measure,
 							or by the measure title, its canonical URL, or by something easier for a user to recall, such
@@ -707,7 +723,7 @@ and the Measure Source actor implementing the Pull Option.
 							However, search by code is not supported by default by many off-the-shelf systems,
 							and so this is not a strict requirement for implementers. Also, chained searching
 							is also not always readily available, and so search by measure title is also not a hard requirement.
-							At the very least, a server must be able to search by measure, and a client must also to ensure
+							At the very least, a server **shall** be able to search by measure, and a client **shall** also to ensure
 							the greatest interoperability between systems with differing capabilities.</overview>
 
 						<group>
@@ -723,81 +739,21 @@ and the Measure Source actor implementing the Pull Option.
 							<parameter name='code:in' min='0' max='*' type='token' expect='should' />
 						</group>
 					</operation>
-					<operation name='read' resources='Questionnaire QuestionnaireResponse' expect='shall' options='Questionnaire'>
-						<name>Read on Questionnaire and QuestionnaireResponse Resources</name>
-						<description>Questionnaire and QuestionnaireResponse are being considered because some data is being requested
-							via forms that better fit a QuestionnaireResponse approach (e.g., free form answers).</description>
-					</operation>
-					<operation name='search' resources="Questionnaire QuestionnaireResponse" expect='shall' options='Questionnaire'>
-						<name>Search by _id</name>
-						<description>A client must be able to read individual resources returned in a query</description>
-						<overview>We are still experimenting with QuestionnaireResponse, but expect to adopt it.</overview>
-						<group>
-							<name>Search by _id</name>
-							<parameter name='_id' min='1' max='*' type='token' expect='shall' />
-						</group>
-						<group>
-							<name>Search by Text or Code</name>
-							<description>A client system **should** be able to search for Questionnaire or other definition resources
-								associated with by text within the definition. This requirement can be met through support of the
-								&lt;a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters&lt;/a>, or by implementation
-								of the &lt;a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter&lt;/a>.</description>
-							<parameter name='_text' min='0' max='*' type='string' expect='should' />
-							<parameter name='_content' min='0' max='*' type='string' expect='should' />
-							<parameter name='definition-text' min='0' type='string' max='*' expect='should' />
-							<parameter name='code' min='0' max='*' type='token' expect='should' />
-							<parameter name='code:in' min='0' max='*' type='token' expect='should' />
-						</group>
-					</operation>
-					<operation name='search' resources='QuestionnaireResponse' expect='shall' client='shall' options="Questionnaire">
-						<name>Search by Date and Questionnaire</name>
-						<description>A client must be able to search for responses by Questionnaire for relevant dates,
-							e.g., the date of _lastUpdate of a previously retrieved resource to see if it has changed (e.g., in cases
-							where data needs to be refreshed), the date it was reported, or the period it applies to.
-
-							In order to enable queries within a geographic region, search must allow for a client to at least enumerate locations
-							by a well defined identifier (e.g., an NPI, a HIFLD location identifier, or some other readily and publicly available
-							facility identifier.) This enables systems to use publicly available data to identify facilities within a
-							particular region.
-
-							Further geographic search can be enabled by chaining to location, and using the near search operation location,
-							which allows search to be performed based on geographic coordinates and a distance measure to specify a search
-							within a region. This enables systems without extensive geographic capabilities to come close in identifying a
-							facility within a particular distance (some implementations e.g., HAPI, use a bounding box, rather than a circle,
-							because it increases search efficiency).</description>
-						<overview>All date searches
-							must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
-							to be supported because server support for these is not commonly available, nor implemented in readily reproducable
-							fashions (the definition of an approximate date can have different meanings for different servers). Simple eq, le, lt,
-							ge,
-							and gt **should** be sufficient to specify date ranges.</overview>
-						<group>
-							<parameter name='_lastUpdated' comp='eq lt gt ge le' type='date' min='0' max='2' expect='shall' />
-							<parameter name='authored' comp='eq lt gt ge le' min='0' max='2' type='date' expect='shall' />
-							<parameter name='questionnaire' min='1' max='*' type='uri' expect='shall' />
-							<parameter name='questionnaire.title' min='0' max='*' type='string' expect='should' />
-							<parameter name='subject' min='0' max='*' type='reference' expect='shall' />
-							<parameter name='subject:identifier' min='0' max='*' type='token' expect='shall' />
-							<parameter name='subject:Location.near' min='0' max='1' type='special' expect='should' />
-							<parameter name='author' min='0' max='*' type='reference' expect='shall' />
-							<parameter name='author:identifier' min='0' max='*' type='token' expect='shall' />
-						</group>
-					</operation>
 					<operation name='search' resources='MeasureReport' expect='shall' client='shall'>
 						<name>Search on Required Resources</name>
-						<!-- Parameter describes each parameter that must be supported in the interaction To require support for multiple parameters,
+						<!-- Parameter describes each parameter that **shall** be supported in the interaction To require support for multiple parameters,
 							list each that can be used name - name of the parameter type - type of the parameter (specified by protocol, e.g. header, query parameter,
 							post body parameter for http) can be omitted if the value can be understood in the protocol comp - comparators supported min - The
-							minimum number of values this parameter must have when requested by a client (0 = optional in an interaction) max - The maximum number
-							of values this parameter the must be supported by a server (0 = not permitted, * = no limit) expect - shall|should|should-not -->
+							minimum number of values this parameter **shall** have when requested by a client (0 = optional in an interaction) max - The maximum number
+							of values this parameter the **shall** be supported by a server (0 = not permitted, * = no limit) expect - shall|should|should-not -->
 
 						<group>
 							<name>Search by Date and Measure</name>
-							<description>A client must be able to search by Measure for relevant dates,
+							<description>A client **shall** be able to search by Measure for relevant dates,
 e.g., the date of _lastUpdate of a previously retrieved resource to see if it has changed (e.g., in cases
 where data needs to be refreshed), the date it was reported, or the period it applies to.
 
-In order to enable querys within a geographic region, search must allow for a client to at least enumerate locations
+In order to enable querys within a geographic region, search **shall** allow for a client to at least enumerate locations
 by a well defined identifier (e.g., an NPI, a HIFLD location identifier, or some other readily and publicly available
 facility identifier.) This enables systems to use publicly available data to identify facilities within a
 particular region.
@@ -807,7 +763,7 @@ which allows search to be performed based on geographic coordinates and a distan
 within a region. This enables systems without extensive geographic capabilities to come close in identifying a
 facility within a particular distance (some implementations e.g., HAPI, use a bounding box, rather than a circle,
 because it increases search efficiency).</description>
-							<overview>All date searches must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
+							<overview>All date searches **shall** allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
 to be supported because server support for these is not commonly available, nor implemented in readily reproducable
 fashions (the definition of an approximate date can have different meanings for different servers). Simple eq, le, lt,
 ge, and gt **should** be sufficient to specify date ranges.</overview>
@@ -857,7 +813,7 @@ in a FHIR resource following the protocol for the read or search operation reque
 	<transaction id="PUSH-TX" standards="FHIR-R4 RFC-7230 NDJSON">
 		<name>Produce Measure</name>
 		<description>The Produce Measure transaction allows an Measure Source to periodically report on availability of resources to a Measure Consumer.</description>
-		<overview>This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor must support.</overview>
+		<overview>This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor **shall** support.</overview>
 		<message from="MeasureSource" to="MeasureConsumer">
 			<name>Push Measure</name>
 			<description></description>
@@ -954,7 +910,7 @@ the server may determine the subject based on business rules (e.g., based on the
 					<overview>This operation enables a Measure Intermediary to create a measure report that aggregates data from multiple
 measure reports. The MeasureReport to be aggregated can be provided in the measure-report parameter, or the caller can indicate which measures
 **should** be aggregated by specifying the search criteria which the Intermediary will use to select the MeasureReport resources to aggregate. In
-all cases, the MeasureReport resources being aggregated must reference the same Measure resource defining the MeasureReport to generate.</overview>
+all cases, the MeasureReport resources being aggregated **shall** reference the same Measure resource defining the MeasureReport to generate.</overview>
 					<group>
 						<name>Aggregate one or more MeasureReport reesources into a single MeasureReport resource</name>
 						<parameter name='measure-report' use='in' type='MeasureReport' min="0" max="*">
@@ -997,7 +953,7 @@ resources being aggregated have a common subject.</description>
 		<name>Query Measure Definition</name>
 		<description>The Query Measure Definition transaction allows a Measure Definition Consumer to periodically query about the availability of a resource from an Measure Definition Source.</description>
 		<overview>This transaction enables a MeasureDefinition Consumer actor to access Measure resources from a MeasureDefinitionSource actor.
-It defines the query parameters that the actors must and **should** support for search and read operations that must be supported.</overview>
+It defines the query parameters that the actors **shall** and **should** support for search and read operations that **shall** be supported.</overview>
 		<!-- like steps, messages can nest to support activation lines -->
 		<message from="MeasureDefinitionConsumer" to="MeasureDefinitionSource">
 			<name>Search Request</name>
@@ -1012,9 +968,9 @@ It defines the query parameters that the actors must and **should** support for 
 					<!-- Servers must support standard values for format, clients may use Accept header or _format -->
 					<group id='formats'>
 						<name>Formats</name>
-						<description>All servers must support the _format parameter for any read or search and the standard values
-defined by FHIR for JSON and XML output. This value must override the Accept: header when present in an exchange.
-Servers must also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
+						<description>All servers **shall** support the _format parameter for any read or search and the standard values
+defined by FHIR for JSON and XML output. This value **shall** override the Accept: header when present in an exchange.
+Servers **shall** also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
 for consistency. Servers are also free to support other output formats (e.g. turtle as defined in the base FHIR
 specifications, or other formats such as CSV which might be easier for clients to present or use). Servers
 should support other commonly used expressions representing JSON or XML outputs without complaint, including
@@ -1044,21 +1000,21 @@ have since changed in R4).</description>
 						<parameter name='_include:iterate' type='string' expect='should-not' />
 					</group>
 					<group id='count'>
-						<description>The server must support the _count parameter for queries. Servers **should** use a default
+						<description>The server **shall** support the _count parameter for queries. Servers **should** use a default
 							value for _count if no value is provided to avoid server overloading. This guide recommends a default value of 100 based on
 							existing implementation experience.</description>
 						<parameter name='_count' min='0' max='1' expect='shall' />
 					</group>
 					<operation name='read' resources='Measure Library ValueSet CodeSystem ConceptMap' expect='shall'>
 						<name>Read on Required Resources</name>
-						<description>A client must be able to read individual Measure and Library resources that are returned by a query.</description>
+						<description>A client **shall** be able to read individual Measure and Library resources that are returned by a query.</description>
 					</operation>
 					<operation name='search' resources='Measure Library ValueSet CodeSystem ConceptMap' expect='shall'
 						client="should">
 						<name>Search by _id on Measure and Library Resources</name>
 						<group>
 							<name>Search by _id</name>
-							<description>A client must be able to read individual resources that are returned or referenced within resources
+							<description>A client **shall** be able to read individual resources that are returned or referenced within resources
 								returned by a query. Client systems may save resource references for future use, retrieving them later as
 								needed. To reduce overhead, a client system may also wish to retrieve the resources referenced by the
 								selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*</description>
@@ -1066,7 +1022,7 @@ have since changed in R4).</description>
 						</group>
 						<group>
 							<name>Search by _url</name>
-							<description>A client must be able to read individual resources that are returned or referenced within a measure
+							<description>A client **shall** be able to read individual resources that are returned or referenced within a measure
 								by the canonical url that is used to identify them. Client systems may save resource references for future use,
 								retrieving them later as needed.</description>
 							<parameter name='url' min='1' max='*' type='uri' expect='shall' />
@@ -1074,7 +1030,7 @@ have since changed in R4).</description>
 					</operation>
 					<operation id='search-for-measure-definition' name='search' resources='Measure' expect='shall' client="should">
 						<name>Search on Measure Definition Resources</name>
-						<description>Systems must be able to retrieve measures needed for automation.</description>
+						<description>Systems **shall** be able to retrieve measures needed for automation.</description>
 						<overview>Measures can be identified by codes used in the measure,
 							or by the measure title, its canonical URL, or by something easier for a user to recall, such
 							as the text of the measure or a code within it. Multiple measures may report on the same kind of thing (e.g., beds),
@@ -1087,7 +1043,7 @@ have since changed in R4).</description>
 							However, search by code is not supported by default by many off-the-shelf systems,
 							and so this is not a strict requirement for implementers. Also, chained searching
 							is also not always readily available, and so search by measure title is also not a hard requirement.
-							At the very least, a server must be able to search by measure, and a client must also to ensure
+							At the very least, a server **shall** be able to search by measure, and a client **shall** also to ensure
 							the greatest interoperability between systems with differing capabilities.</overview>
 						<group id='text-search'>
 							<name>Search by Text or Code</name>
@@ -1218,7 +1174,7 @@ updated MeasureReport resource</description>
                         resources='AllergyIntolerance Condition DiagnosticReport Encounter MedicationRequest Observation Procedure ServiceRequest'
                         expect='shall' client='should'>
                         <name>Search for Basic Patient Clinical Data</name>
-                        <description>The Data Query operation must support retrieval of basic clinical data for
+                        <description>The Data Query operation **shall** support retrieval of basic clinical data for
                             patients by patient id, encounter or code.</description>
                         <overview>The requirements below represent the bare minimum expected parameters used for
                             searching for these resources.</overview>
@@ -1246,7 +1202,7 @@ updated MeasureReport resource</description>
                     </operation>
                 </interaction>
             </semantics>
-            <action by="MeasureConsumer">
+            <action by="MeasureComputer">
                 <name>Search for Data</name>
                 <description>Measure Computer requests data from a Data Source.</description>
                 <overview>The Measure Computer performs a FHIR Search operation

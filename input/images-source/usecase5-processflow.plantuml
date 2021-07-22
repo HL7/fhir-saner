@@ -1,7 +1,7 @@
 @startuml
 hide footbox
-participant "Measure Computer" as MeasureComputer
-participant "Data Source" as DataSource
+participant "Hospital Reporting System [Measure Computer]" as MeasureComputer
+participant "Hospital EHR System [Data Source]" as DataSource
 "MeasureComputer" -> "MeasureComputer" : 1. Compute Measure
 activate "MeasureComputer"
 activate "MeasureComputer"

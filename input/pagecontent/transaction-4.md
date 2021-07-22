@@ -11,8 +11,7 @@ diagnostics or error recovery.
 
 
 ### Actors Roles
-
-![Figure 2.4-1: Compute Measure Use Case Diagram](transaction-4-uc.svg "Figure 2.4-1: Compute Measure Use Case Diagram")
+{% include transaction-4-uc.svg%}
 
 **Figure 2.4-1: Compute Measure Use Case Diagram**
 
@@ -51,8 +50,7 @@ diagnostics or error recovery.
 </table>
 
 ### Interactions
-        
-![Figure 2.4-2: Compute Measure Interactions](transaction-4-seq.svg "Figure 2.4-2: Compute Measure Interactions")
+        {% include transaction-4-seq.svg%}
 
 **Figure 2.4-2: Compute Measure Interactions**
 
@@ -194,8 +192,8 @@ by the MeasureConsumer
 The MeasureConsumer queries for the MeasureReport from the MeasureSource
 
 
-
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
 
-        
+* [CapabilityStatement-MeasureComputer-ComputeMeasure](CapabilityStatement-MeasureComputer-ComputeMeasure.html) Defines the requirements for the Measure Computer implementing the Compute Measure transaction.
+* [CapabilityStatement-DataSource-ComputeMeasure](CapabilityStatement-DataSource-ComputeMeasure.html) Defines the requirements for the Data Source implementing the Compute Measure transaction.

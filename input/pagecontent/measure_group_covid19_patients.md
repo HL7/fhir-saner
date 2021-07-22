@@ -1,6 +1,7 @@
 The first group to address is Suspected or Confirmed COVID-19 Patients Stratified by Location and Ventilator Status.
 This measure is a [Queue Length](situational_awareness_measures.html#queue-length) measure. It measures patients in the hospital (in
-an inpatient setting or overflow area) awaiting completion of treatment. This is especially evident in the case for patients in an ED/Overflow area awaiting an inpatient bed, but generally true for all the different strata.
+an inpatient setting or overflow area) awaiting completion of treatment. This is especially evident in the case for patients in an
+ED/Overflow area awaiting an inpatient bed, but generally true for all the different strata.
 
 ### Describing the Group
 
@@ -12,7 +13,7 @@ define the codes used for the measure groups they create.
  ** coding.display = "Encounters"
  ** text = "Hospital COVID-19 Patient Encounters Reporting"
 ```
-#### Measure Group Attributes
+#### <a name='queue-length-example'/>Measure Group Attributes
 
 Each group must be described by the [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) extension to
 further describe the measure group content.
@@ -330,3 +331,50 @@ While patients on a ventilator is calculated "later" in the measure, the strata 
 that computation is finished.  Once that computation has completed, the next step is to compare the type location where
 the encounter has occurred with a value set describing inpatient encounter locations.  If that matches, the patient is considered
 to be in a normal inpatient location (including the ICU), and if not, an overflow location (such as an ED or other location).
+
+### <a name='service-time-example'/>Enhancing a Queue Length Measure to a Service Time Measure
+Any queue length measure can be enhanced to become a service time measure by adding a Duration population
+and changing the scoring attribute to service time as shown below.
+```
+ * with group[0].extension[groupAtts] do
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#queue-length
+```
+The denominator population named NumC19Pats in this example collects and counts the encounters in which patients have been
+admitted.  The expression %NumC19Pats can be used to access this collection of encounters in the definition
+of the Period population for this measure as follows:
+
+Provide a code describing the initial population.
+```
+ * with group[0].population[1] do
+ ** with code do
+ *** coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#durationC19Pats
+ *** coding.display = "Duration of treatment for all COVID-19 Confirmed or Suspected Patients"
+ *** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#duration
+ *** text = "Elapsed encounter time for patients with suspected or confirmed COVID-19 in any location."
+```
+
+#### Describe the Evaluation Criteria for Duration
+Name the criteria and give a description for what qualifies to be included.
+```
+ ** with criteria do
+ *** name = "DurationC19Pats"  // Note: Follow PascalCase conventions for names
+ *** description = """Duration of active or completed encounters where the encounter diagnosis is suspected
+ or confirmed COVID-19, or a Condition of suspected or confirmed COVID-19 was created during that encounter."""
+```
+
+#### Provide the Computable Content
+The computable content implements the automated computation of the measure.
+
+```
+ *** language = #text/fhirpath
+ *** expression = """%NumC19Pats.select(iif(period.end,period.end,%ReportinPeriod.end) - period.start)"""
+```
+
+This expression first tests to see if there is an end dateTime reported for the encounter, and if so uses that value,
+otherwise it uses the ending dateTime associated with the reporting period. This is because uncompleted encounters
+do not yet have an end time associated with the encounter.  Next, it simply computes the duration as that ending value
+minus the start dateTime for the encounter. These values are summed, and the evaluated measure is the sum of durations
+divided by the sum of time, giving an average time per encounter.
+
+This measure could be further extended by including the duration-squared population to support computation of
+service-time variance.

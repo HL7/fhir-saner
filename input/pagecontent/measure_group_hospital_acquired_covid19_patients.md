@@ -187,10 +187,14 @@ detected.  Populations whose values are computed in this manner will not be able
 within the measure report for the cumulative total.
 
 ### Stratification
-Social determinants of health, such as age, race, ethnicity and gender can have negative impacts on
-patient treatment.  This measure is stratified by age group, race, ethnicity and gender to illustrate
-the use of stratification in a cumulative measure.
+Stratification enables reporting by subgroups within a population.  In this example, subgroups are created
+based on social determinants of health, such as age, race, ethnicity and gender.  Reeporting on social determinant subgroups
+can show the negative impacts of membership in the subgroup on patient treatment.  This measure is stratified by age group, race,
+ethnicity and gender to illustrate the use of stratification in a cumulative measure.
 
+For this example, the population is stratified by orthogonal subgroups, i.e., a patient is a member of
+only on subgroup within the strata.  However, subgroups need not be orthogonal. The expression in
+the criteria for a stratifier returns the list of subgroups to which the population member belongs.
 
 #### Stratification by Age Group
 Stratification by age group involves determining the age of the patient. There is no

@@ -113,10 +113,14 @@
             <xsl:value-of select="$number"/><xsl:text>: </xsl:text>
             <xsl:value-of select="$name"/>
         </xsl:variable>
-        <xsl:text>&#xA;![</xsl:text><xsl:value-of select="$title"/>
+        <!-- xsl:text>&#xA;![</xsl:text><xsl:value-of select="$title"/>
         <xsl:text>](</xsl:text><xsl:value-of select='$file'/>
         <xsl:text> "</xsl:text><xsl:value-of select="$title"/>
-        <xsl:text>")&#xA;&#xA;**</xsl:text><xsl:value-of select="$title"/><xsl:text>**&#xA;&#xA;</xsl:text>
+        <xsl:text>")</xsl:text -->
+        <div>
+        <xsl:text>{% include </xsl:text><xsl:value-of select='$file'/>
+        <xsl:text>%}&#xA;&#xA;**</xsl:text><xsl:value-of select="$title"/><xsl:text>**&#xA;&#xA;</xsl:text>
+        </div>
     </xsl:template>
 
     <xsl:template match='*' mode='copy-as-text'>

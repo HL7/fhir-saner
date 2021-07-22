@@ -68,12 +68,11 @@ In order to automate capture of this information, a central reporting system (e.
 available to accept partial reports for data. This data can then be aggregated from reports made by the various
 information systems, and forwarded to a public endpoint for reporting.
 
-
-![Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow](usecase1-processflow.svg "Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow")
+<div>{% include usecase1-processflow.svg%}
 
 **Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow**
 
-
+</div>
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="GETVALUES">ICU/Central Monitoring System collects data</html:span>
 
    The ICU/Central Monitoring System is triggered (by request or schedule) to generate
@@ -187,13 +186,12 @@ In this use case, we see the classic "dashboard" panel, where a public health us
 selects a region, and one or more measures (or functions of measures) to report on, and the data is presented
 to them in an easy to view format.
 
-
-![Figure 2.3.1.2-1: Accessing Measure Reports Process Flow](usecase2-processflow.svg "Figure 2.3.1.2-1: Accessing Measure Reports Process Flow")
+<div>{% include usecase2-processflow.svg%}
 
 **Figure 2.3.1.2-1: Accessing Measure Reports Process Flow**
 
-
-1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Consumer component of a Measure Intermediary gathers data from one or Measure Sources</html:span>
+</div>
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Aggregating-STEP2">Measure Intermediary aggregates data from one or Measure Sources</html:span>
 
    The Measure Intermediary, acting as a Measure Consumer gathers and aggregates data (possibly computing a
 function with other associated data) from one or more Measure Sources,
@@ -218,6 +216,16 @@ collects the appropriate reports
 and displays the results.
 
 
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Data-Collection-Step-1">Get Aggregated Results</html:span>
+
+   The reporting system requests aggregated results from the analytics system
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Aggregated Results</html:span>
+
+   The analytics system returns the aggregated results
+
+
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Results</html:span>
 
    The Measure Consumer displays an overview of aggregated regional results to the
@@ -232,6 +240,16 @@ on the current focus of the public health user. It may be shown as a map, a tabl
 
    The Public Health User selects a new form of display (e.g., Map, table or graph) or refines their
 focus (e.g., wider or smaller region).
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Data-Collection-Step-2">Get Aggregated Results</html:span>
+
+   The reporting system requests aggregated results from the analytics system
+
+
+1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Aggregated Results</html:span>
+
+   The analytics system returns the aggregated results
 
 
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="">Display Refined Results</html:span>
@@ -263,12 +281,11 @@ Measures created for tracking a public health emergency may be revised periodica
 use case supports the need
 to distribute updated measure definitions to organizations who report on these measures.
 
-
-![Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow](usecase3-processflow.svg "Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow")
+<div>{% include usecase3-processflow.svg%}
 
 **Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow**
 
-
+</div>
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Search for updated Measures">Query for New or Updated Measures</html:span>
 
    An organization required to report queries for for updated from one or public health or emergency response
@@ -311,12 +328,11 @@ Automating measure reporting reduces the burden on users for manual data collect
 automated, it
 can be computed using FHIR APIs from supporting information systems provided by the organization.
 
-
-![Figure 2.3.1.4-1: Automating Measure Computation Process Flow](usecase4-processflow.svg "Figure 2.3.1.4-1: Automating Measure Computation Process Flow")
+<div>{% include usecase4-processflow.svg%}
 
 **Figure 2.3.1.4-1: Automating Measure Computation Process Flow**
 
-
+</div>
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="Check for New or Updated Measures">Query for New or Updated Measures</html:span>
 
    The reporting organization checks for new measures see [Distributing Measure
@@ -387,12 +403,11 @@ otherwise similar measures of utilization. In later stages, this data can be use
 disease burden based
 on associated complications.
 
-
-![Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow](usecase5-processflow.svg "Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow")
+<div>{% include usecase5-processflow.svg%}
 
 **Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow**
 
-
+</div>
 1. <html:span xmlns:html="http://www.w3.org/1999/xhtml" id="ComputeMeasures">Compute Measure</html:span>
 
    The hospital information system collects data and computes the measures, returing a completed report.

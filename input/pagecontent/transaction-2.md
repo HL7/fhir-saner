@@ -5,12 +5,11 @@ This section describes the PUSH-TX of this guide. This transaction is used by th
 The Produce Measure transaction allows an Measure Source to periodically report on availability of resources to a Measure Consumer.
 
 
-This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor must support.
+This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor **shall** support.
 
 
 ### Actors Roles
-
-![Figure 2.2-1: Produce Measure Use Case Diagram](transaction-2-uc.svg "Figure 2.2-1: Produce Measure Use Case Diagram")
+{% include transaction-2-uc.svg%}
 
 **Figure 2.2-1: Produce Measure Use Case Diagram**
 
@@ -43,8 +42,7 @@ This transaction defines the create and update operations that a MeasureConsumer
 </table>
 
 ### Interactions
-        
-![Figure 2.2-2: Produce Measure Interactions](transaction-2-seq.svg "Figure 2.2-2: Produce Measure Interactions")
+        {% include transaction-2-seq.svg%}
 
 **Figure 2.2-2: Produce Measure Interactions**
 
@@ -93,8 +91,12 @@ The Measure Consumer reports success using 200 OK, 201 Created, or 204 No Conten
 
 
 
-
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
 
-        
+* [CapabilityStatement-MeasureSource-ProduceMeasure-CSV-Push](CapabilityStatement-MeasureSource-ProduceMeasure-CSV-Push.html) Defines the requirements for the Measure Source implementing the Produce Measure transaction with the CSV Option and the Push Option.
+* [CapabilityStatement-MeasureConsumer-ProduceMeasure-CSV-Push](CapabilityStatement-MeasureConsumer-ProduceMeasure-CSV-Push.html) Defines the requirements for the Measure Consumer implementing the Produce Measure transaction with the CSV Option and the Push Option.
+* [CapabilityStatement-MeasureSource-ProduceMeasure-Push](CapabilityStatement-MeasureSource-ProduceMeasure-Push.html) Defines the requirements for the Measure Source implementing the Produce Measure transaction with the Push Option.
+* [CapabilityStatement-MeasureConsumer-ProduceMeasure-Push](CapabilityStatement-MeasureConsumer-ProduceMeasure-Push.html) Defines the requirements for the Measure Consumer implementing the Produce Measure transaction with the Push Option.
+* [CapabilityStatement-MeasureSource-ProduceMeasure-SupplementalData](CapabilityStatement-MeasureSource-ProduceMeasure-SupplementalData.html) Defines the requirements for the Measure Source implementing the Produce Measure transaction with the Supplemental Data Option.
+* [CapabilityStatement-MeasureConsumer-ProduceMeasure-SupplementalData](CapabilityStatement-MeasureConsumer-ProduceMeasure-SupplementalData.html) Defines the requirements for the Measure Consumer implementing the Produce Measure transaction with the Supplemental Data Option.

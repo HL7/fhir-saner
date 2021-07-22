@@ -7,13 +7,12 @@ periodically query about the availability of a resource from an Measure Source.
 
 
 This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
-resources from a MeasureSource actor. It defines the query parameters that the actors must and **should** support for search,
-and the read operations that must be supported.
+resources from a MeasureSource actor. It defines the query parameters that the actors **shall** and **should** support for search,
+and the read operations that **shall** be supported.
 
 
 ### Actors Roles
-
-![Figure 2.1-1: Query Measure Use Case Diagram](transaction-1-uc.svg "Figure 2.1-1: Query Measure Use Case Diagram")
+{% include transaction-1-uc.svg%}
 
 **Figure 2.1-1: Query Measure Use Case Diagram**
 
@@ -44,8 +43,7 @@ and the read operations that must be supported.
 </table>
 
 ### Interactions
-        
-![Figure 2.1-2: Query Measure Interactions](transaction-1-seq.svg "Figure 2.1-2: Query Measure Interactions")
+        {% include transaction-1-seq.svg%}
 
 **Figure 2.1-2: Query Measure Interactions**
 
@@ -97,9 +95,9 @@ given a measure and a date range.
 Formats
 <div>
 
-All servers must support the _format parameter for any read or search and the standard values
-defined by FHIR for JSON and XML output. This value must override the Accept: header when present in an exchange.
-Servers must also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
+All servers **shall** support the _format parameter for any read or search and the standard values
+defined by FHIR for JSON and XML output. This value **shall** override the Accept: header when present in an exchange.
+Servers **shall** also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
 for consistency. Servers are also free to support other output formats (e.g. turtle as defined in the base FHIR
 specifications, or other formats such as CSV which might be easier for clients to present or use). Servers
 should support other commonly used expressions representing JSON or XML outputs without complaint, including
@@ -137,12 +135,12 @@ _format=application/fhir+xml|application/fhir+json
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -162,12 +160,12 @@ _format=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 </tr>
@@ -187,12 +185,12 @@ Accept:=application/fhir+xml|application/fhir+json
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -212,12 +210,12 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 </tr>
@@ -232,7 +230,7 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 
 <div>
 
-The server must support the _count parameter for queries. Servers **should** use a default
+The server **shall** support the _count parameter for queries. Servers **should** use a default
 value for _count if no value is provided to avoid server overloading. This guide recommends a default value of 100 based on
 existing implementation experience.
 
@@ -267,12 +265,12 @@ _count
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -329,12 +327,12 @@ _include=*
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -354,12 +352,12 @@ _include:iterate
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 </tr>
@@ -374,18 +372,18 @@ _include:iterate
 
 ###### Read on Required Resources
 
-A client must be able to read individual resources that are returned or referenced within resources
+A client **shall** be able to read individual resources that are returned or referenced within resources
 returned by a query. Since MeasureReport references at the very least, Measure, Organization, and Location
-these must all be able to be read.
+these **shall** all be able to be read.
 
-The MeasureSource <b>SHALL</b> demonstrate the FHIR read operation on  the Location, MeasureReport, Measure and Organization resources.
+The MeasureSource <b>shall</b> demonstrate the FHIR read operation on  the Location, MeasureReport, Measure and Organization resources.
 
 ###### Read in CSV Format
 
 Read a given MeasureReport using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.
 
-The MeasureConsumer <b>MAY</b> demonstrate the FHIR $read-csv operation on  the MeasureReport resource with the following parameters.
-The MeasureSource <b>SHALL</b> demonstrate the FHIR $read-csv operation on  the MeasureReport resource with the following parameters.
+The MeasureConsumer <b>may</b> support the FHIR $read-csv operation on  the MeasureReport resource with the following parameters.
+The MeasureSource <b>shall</b> demonstrate the FHIR $read-csv operation on  the MeasureReport resource with the following parameters.
 
 <ol>
 
@@ -470,8 +468,8 @@ return
 
 Search Measure Report resources using the CSV Format. See [CSV Conversion](CSV_Conversion.html) for details.
 
-The MeasureConsumer <b>SHALL</b> demonstrate the FHIR $search-csv operation on  the MeasureReport resource with the following parameters.
-The MeasureSource <b>SHALL</b> demonstrate the FHIR $search-csv operation on  the MeasureReport resource with the following parameters.
+The MeasureConsumer <b>shall</b> support the FHIR $search-csv operation on  the MeasureReport resource with the following parameters.
+The MeasureSource <b>shall</b> demonstrate the FHIR $search-csv operation on  the MeasureReport resource with the following parameters.
 
 <ol>
 
@@ -509,12 +507,12 @@ _lastUpdated
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -534,12 +532,12 @@ date
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -559,12 +557,12 @@ period
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -584,12 +582,12 @@ measure
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -609,12 +607,12 @@ measure.title
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -634,12 +632,12 @@ subject
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -659,12 +657,12 @@ subject:identifier
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -684,12 +682,12 @@ subject:Location.near
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -709,12 +707,12 @@ reporter
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -734,12 +732,12 @@ reporter:identifier
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -803,7 +801,7 @@ return
 </ol>
 
 ###### Search by _id on Required Resources
-The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Location, MeasureReport, Measure and Organization resources with the following parameters.
+The MeasureSource <b>shall</b> demonstrate the FHIR search operation on  the Location, MeasureReport, Measure and Organization resources with the following parameters.
 
 <ol>
 
@@ -811,7 +809,7 @@ The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Loc
 Search by _id
 <div>
 
-A client must be able to read individual resources that are returned or referenced within resources
+A client **shall** be able to read individual resources that are returned or referenced within resources
 returned by a query. Client systems may save resource references for future use, retrieving them later as
 needed. To reduce overhead, a client system may also wish to retrieve the resources referenced by the
 selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*
@@ -847,12 +845,12 @@ _id
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -866,7 +864,7 @@ _id
 </ol>
 
 ###### Search by name or identifier on Referenced Resources
-The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Location and Organization resources with the following parameters.
+The MeasureSource <b>shall</b> demonstrate the FHIR search operation on  the Location and Organization resources with the following parameters.
 
 <ol>
 
@@ -874,7 +872,7 @@ The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Loc
 Search by name or identifier
 <div>
 
-A client must be able to read resources that are referenced within resources
+A client **shall** be able to read resources that are referenced within resources
 returned by a query by name or identifier.
 
 
@@ -908,12 +906,12 @@ name
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -933,12 +931,12 @@ identifier
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -953,7 +951,7 @@ identifier
 
 ###### Search on Definition Resources
 
-A client system must be able to retrieve the data they need, be it about beds,
+A client system **shall** be able to retrieve the data they need, be it about beds,
 ventilators, PPE, or other measure.
 
 
@@ -969,10 +967,10 @@ search parameter.
 However, search by code is not supported by default by many off-the-shelf systems,
 and so this is not a strict requirement for implementers. Also, chained searching
 is also not always readily available, and so search by measure title is also not a hard requirement.
-At the very least, a server must be able to search by measure, and a client must also to ensure
+At the very least, a server **shall** be able to search by measure, and a client **shall** also to ensure
 the greatest interoperability between systems with differing capabilities.
 
-The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
+The MeasureSource <b>shall</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
 
 <ol>
 
@@ -1016,12 +1014,12 @@ _text
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1041,12 +1039,12 @@ _content
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1066,12 +1064,12 @@ definition-text
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1091,12 +1089,12 @@ code
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1116,520 +1114,12 @@ code:in
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-</tbody>
-</table>
-
-        
-</li>
-
-</ol>
-
-###### Read on Questionnaire and QuestionnaireResponse Resources
-
-Questionnaire and QuestionnaireResponse are being considered because some data is being requested
-via forms that better fit a QuestionnaireResponse approach (e.g., free form answers).
-
-The MeasureSource <b>SHALL</b> demonstrate the FHIR read operation on  the Questionnaire and QuestionnaireResponse resources.
-
-###### Search by _id
-
-A client must be able to read individual resources returned in a query
-
-
-We are still experimenting with QuestionnaireResponse, but expect to adopt it.
-
-The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Questionnaire and QuestionnaireResponse resources with the following parameters.
-
-<ol>
-
-<li>
-Search by _id
-<div>
-
-</div>
-
-
-<table class='grid'>
-
-<thead><tr>
-
-<th>Parameter</th><th>Cardinality</th><th>
-Measure Source Expectation</th><th>
-Measure Consumer Expectation</th>
-
-</tr></thead>
-
-<tbody>
-
-
-<tr>
-
-<td>
-
-_id
-
-</td>
-
-<td>
-
-1..*
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-</tbody>
-</table>
-
-        
-</li>
-
-<li>
-Search by Text or Code
-<div>
-
-A client system **should** be able to search for Questionnaire or other definition resources
-associated with by text within the definition. This requirement can be met through support of the
-<a href='http://hl7.org/fhir/search.html#text'>_text or _content search parameters</a>, or by implementation
-of the <a href='SearchParameter-SearchParameter-definition-text.html'>definition-text SearchParameter</a>.
-
-
-</div>
-
-
-<table class='grid'>
-
-<thead><tr>
-
-<th>Parameter</th><th>Cardinality</th><th>
-Measure Source Expectation</th><th>
-Measure Consumer Expectation</th>
-
-</tr></thead>
-
-<tbody>
-
-
-<tr>
-
-<td>
-
-_text
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-_content
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-definition-text
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-code
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-code:in
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-</tbody>
-</table>
-
-        
-</li>
-
-</ol>
-
-###### Search by Date and Questionnaire
-
-A client must be able to search for responses by Questionnaire for relevant dates,
-e.g., the date of _lastUpdate of a previously retrieved resource to see if it has changed (e.g., in cases
-where data needs to be refreshed), the date it was reported, or the period it applies to.
-
-In order to enable queries within a geographic region, search must allow for a client to at least enumerate locations
-by a well defined identifier (e.g., an NPI, a HIFLD location identifier, or some other readily and publicly available
-facility identifier.) This enables systems to use publicly available data to identify facilities within a
-particular region.
-
-Further geographic search can be enabled by chaining to location, and using the near search operation location,
-which allows search to be performed based on geographic coordinates and a distance measure to specify a search
-within a region. This enables systems without extensive geographic capabilities to come close in identifying a
-facility within a particular distance (some implementations e.g., HAPI, use a bounding box, rather than a circle,
-because it increases search efficiency).
-
-
-All date searches
-must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
-to be supported because server support for these is not commonly available, nor implemented in readily reproducable
-fashions (the definition of an approximate date can have different meanings for different servers). Simple eq, le, lt,
-ge,
-and gt **should** be sufficient to specify date ranges.
-
-The MeasureConsumer <b>SHALL</b> demonstrate the FHIR search operation on  the QuestionnaireResponse resource with the following parameters.
-The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the QuestionnaireResponse resource with the following parameters.
-
-<ol>
-
-<li>
-
-<div>
-
-</div>
-
-
-<table class='grid'>
-
-<thead><tr>
-
-<th>Parameter</th><th>Cardinality</th><th>
-Measure Source Expectation</th><th>
-Measure Consumer Expectation</th>
-
-</tr></thead>
-
-<tbody>
-
-
-<tr>
-
-<td>
-
-_lastUpdated
-
-</td>
-
-<td>
-
-0..2
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-authored
-
-</td>
-
-<td>
-
-0..2
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-questionnaire
-
-</td>
-
-<td>
-
-1..*
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-questionnaire.title
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-subject
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-subject:identifier
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-subject:Location.near
-
-</td>
-
-<td>
-
-0..1
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-<td>
-
-<b>SHOULD</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-author
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-
-author:identifier
-
-</td>
-
-<td>
-
-0..*
-</td>
-<td>
-
-<b>SHALL</b>
-
-</td>
-<td>
-
-<b>SHALL</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1643,8 +1133,8 @@ author:identifier
 </ol>
 
 ###### Search on Required Resources
-The MeasureConsumer <b>SHALL</b> demonstrate the FHIR search operation on  the MeasureReport resource with the following parameters.
-The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the MeasureReport resource with the following parameters.
+The MeasureConsumer <b>shall</b> support the FHIR search operation on  the MeasureReport resource with the following parameters.
+The MeasureSource <b>shall</b> demonstrate the FHIR search operation on  the MeasureReport resource with the following parameters.
 
 <ol>
 
@@ -1652,11 +1142,11 @@ The MeasureSource <b>SHALL</b> demonstrate the FHIR search operation on  the Mea
 Search by Date and Measure
 <div>
 
-A client must be able to search by Measure for relevant dates,
+A client **shall** be able to search by Measure for relevant dates,
 e.g., the date of _lastUpdate of a previously retrieved resource to see if it has changed (e.g., in cases
 where data needs to be refreshed), the date it was reported, or the period it applies to.
 
-In order to enable querys within a geographic region, search must allow for a client to at least enumerate locations
+In order to enable querys within a geographic region, search **shall** allow for a client to at least enumerate locations
 by a well defined identifier (e.g., an NPI, a HIFLD location identifier, or some other readily and publicly available
 facility identifier.) This enables systems to use publicly available data to identify facilities within a
 particular region.
@@ -1668,7 +1158,7 @@ facility within a particular distance (some implementations e.g., HAPI, use a bo
 because it increases search efficiency).
 
 
-All date searches must allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
+All date searches **shall** allow a range to be specified, but need not allow more than one range. Approximate ranges are not required
 to be supported because server support for these is not commonly available, nor implemented in readily reproducable
 fashions (the definition of an approximate date can have different meanings for different servers). Simple eq, le, lt,
 ge, and gt **should** be sufficient to specify date ranges.
@@ -1704,12 +1194,12 @@ _lastUpdated
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1729,12 +1219,12 @@ date
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1754,12 +1244,12 @@ period
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1779,12 +1269,12 @@ measure
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1804,12 +1294,12 @@ measure.title
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1829,12 +1319,12 @@ subject
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1854,12 +1344,12 @@ subject:identifier
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1879,12 +1369,12 @@ subject:Location.near
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -1904,12 +1394,12 @@ reporter
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1929,12 +1419,12 @@ reporter:identifier
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -1981,8 +1471,10 @@ The resources will conform to the profiles for the MeasureReport, Location or Or
 The Measure Source returns the requested resource.
 
 
-
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
 
-        
+* [CapabilityStatement-MeasureSource-QueryMeasure-CSV-Pull](CapabilityStatement-MeasureSource-QueryMeasure-CSV-Pull.html) Defines the requirements for the Measure Source implementing the Query Measure transaction with the CSV Option and the Pull Option.
+* [CapabilityStatement-MeasureConsumer-QueryMeasure-CSV-Pull](CapabilityStatement-MeasureConsumer-QueryMeasure-CSV-Pull.html) Defines the requirements for the Measure Consumer implementing the Query Measure transaction with the CSV Option and the Pull Option.
+* [CapabilityStatement-MeasureSource-QueryMeasure-Pull](CapabilityStatement-MeasureSource-QueryMeasure-Pull.html) Defines the requirements for the Measure Source implementing the Query Measure transaction with the Pull Option.
+* [CapabilityStatement-MeasureConsumer-QueryMeasure-Pull](CapabilityStatement-MeasureConsumer-QueryMeasure-Pull.html) Defines the requirements for the Measure Consumer implementing the Query Measure transaction with the Pull Option.

@@ -12,8 +12,8 @@ NOTE: When using an event growth measure, it is important to establish a convent
 this is based on the date the sender started reporting data (the simplest to implement), but may be altered to be based on reporting as of
 a given date or other criteria (more complicated).
 
-### Measure Definition for Deaths in the Hospital
 
+### <a name='event-growth-example'/>Measure Definition for Deaths in the Hospital
 The first step in describing the group is to identify it with a code.  Measure developers will generally
 define the codes used for the measure groups they create.
 ```

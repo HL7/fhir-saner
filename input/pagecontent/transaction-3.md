@@ -6,12 +6,11 @@ The Query Measure Definition transaction allows a Measure Definition Consumer to
 
 
 This transaction enables a MeasureDefinition Consumer actor to access Measure resources from a MeasureDefinitionSource actor.
-It defines the query parameters that the actors must and **should** support for search and read operations that must be supported.
+It defines the query parameters that the actors **shall** and **should** support for search and read operations that **shall** be supported.
 
 
 ### Actors Roles
-
-![Figure 2.3-1: Query Measure Definition Use Case Diagram](transaction-3-uc.svg "Figure 2.3-1: Query Measure Definition Use Case Diagram")
+{% include transaction-3-uc.svg%}
 
 **Figure 2.3-1: Query Measure Definition Use Case Diagram**
 
@@ -44,8 +43,7 @@ It defines the query parameters that the actors must and **should** support for 
 </table>
 
 ### Interactions
-        
-![Figure 2.3-2: Query Measure Definition Interactions](transaction-3-seq.svg "Figure 2.3-2: Query Measure Definition Interactions")
+        {% include transaction-3-seq.svg%}
 
 **Figure 2.3-2: Query Measure Definition Interactions**
 
@@ -70,9 +68,9 @@ The following are general requirements of the interaction.
 Formats
 <div>
 
-All servers must support the _format parameter for any read or search and the standard values
-defined by FHIR for JSON and XML output. This value must override the Accept: header when present in an exchange.
-Servers must also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
+All servers **shall** support the _format parameter for any read or search and the standard values
+defined by FHIR for JSON and XML output. This value **shall** override the Accept: header when present in an exchange.
+Servers **shall** also support the Accept: header, and **shall** support any value in Accept: that can be given to _format
 for consistency. Servers are also free to support other output formats (e.g. turtle as defined in the base FHIR
 specifications, or other formats such as CSV which might be easier for clients to present or use). Servers
 should support other commonly used expressions representing JSON or XML outputs without complaint, including
@@ -110,12 +108,12 @@ _format=application/fhir+xml|application/fhir+json
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -135,12 +133,12 @@ _format=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 </tr>
@@ -160,12 +158,12 @@ Accept:=application/fhir+xml|application/fhir+json
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -185,12 +183,12 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 </tr>
@@ -247,12 +245,12 @@ _include=*
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -272,12 +270,12 @@ _include:iterate
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 <td>
 
-<b>SHOULD NOT</b>
+<b>should not</b>
 
 </td>
 </tr>
@@ -292,7 +290,7 @@ _include:iterate
 
 <div>
 
-The server must support the _count parameter for queries. Servers **should** use a default
+The server **shall** support the _count parameter for queries. Servers **should** use a default
 value for _count if no value is provided to avoid server overloading. This guide recommends a default value of 100 based on
 existing implementation experience.
 
@@ -327,12 +325,12 @@ _count
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -347,13 +345,13 @@ _count
 
 ###### Read on Required Resources
 
-A client must be able to read individual Measure and Library resources that are returned by a query.
+A client **shall** be able to read individual Measure and Library resources that are returned by a query.
 
-The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR read operation on  the Measure, Library, ValueSet, CodeSystem and ConceptMap resources.
+The MeasureDefinitionSource <b>shall</b> demonstrate the FHIR read operation on  the Measure, Library, ValueSet, CodeSystem and ConceptMap resources.
 
 ###### Search by _id on Measure and Library Resources
-The MeasureDefinitionConsumer <b>SHOULD</b> demonstrate the FHIR search operation on  the Measure, Library, ValueSet, CodeSystem and ConceptMap resources with the following parameters.
-The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation on  the Measure, Library, ValueSet, CodeSystem and ConceptMap resources with the following parameters.
+The MeasureDefinitionConsumer <b>should</b> support the FHIR search operation on  the Measure, Library, ValueSet, CodeSystem and ConceptMap resources with the following parameters.
+The MeasureDefinitionSource <b>shall</b> demonstrate the FHIR search operation on  the Measure, Library, ValueSet, CodeSystem and ConceptMap resources with the following parameters.
 
 <ol>
 
@@ -361,7 +359,7 @@ The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation o
 Search by _id
 <div>
 
-A client must be able to read individual resources that are returned or referenced within resources
+A client **shall** be able to read individual resources that are returned or referenced within resources
 returned by a query. Client systems may save resource references for future use, retrieving them later as
 needed. To reduce overhead, a client system may also wish to retrieve the resources referenced by the
 selected resource. This can be accomplished by using a search with an _id parameter, combined with _include=*
@@ -397,12 +395,12 @@ _id
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -417,7 +415,7 @@ _id
 Search by _url
 <div>
 
-A client must be able to read individual resources that are returned or referenced within a measure
+A client **shall** be able to read individual resources that are returned or referenced within a measure
 by the canonical url that is used to identify them. Client systems may save resource references for future use,
 retrieving them later as needed.
 
@@ -452,12 +450,12 @@ url
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 <td>
 
-<b>SHALL</b>
+<b>shall</b>
 
 </td>
 </tr>
@@ -472,7 +470,7 @@ url
 
 ###### Search on Measure Definition Resources
 
-Systems must be able to retrieve measures needed for automation.
+Systems **shall** be able to retrieve measures needed for automation.
 
 
 Measures can be identified by codes used in the measure,
@@ -487,11 +485,11 @@ search parameter.
 However, search by code is not supported by default by many off-the-shelf systems,
 and so this is not a strict requirement for implementers. Also, chained searching
 is also not always readily available, and so search by measure title is also not a hard requirement.
-At the very least, a server must be able to search by measure, and a client must also to ensure
+At the very least, a server **shall** be able to search by measure, and a client **shall** also to ensure
 the greatest interoperability between systems with differing capabilities.
 
-The MeasureDefinitionConsumer <b>SHOULD</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
-The MeasureDefinitionSource <b>SHALL</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
+The MeasureDefinitionConsumer <b>should</b> support the FHIR search operation on  the Measure resource with the following parameters.
+The MeasureDefinitionSource <b>shall</b> demonstrate the FHIR search operation on  the Measure resource with the following parameters.
 
 <ol>
 
@@ -535,12 +533,12 @@ _text
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -560,12 +558,12 @@ _content
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -585,12 +583,12 @@ definition-text
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -610,12 +608,12 @@ code
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -635,12 +633,12 @@ code:in
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 <td>
 
-<b>SHOULD</b>
+<b>should</b>
 
 </td>
 </tr>
@@ -685,8 +683,8 @@ Public Health Measure described elsewhere in this Implementation Guide
 The Measure Definition Source returns the requested resource.
 
 
-
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
 
-        
+* [CapabilityStatement-MeasureDefinitionSource-QueryMeasureDefinition](CapabilityStatement-MeasureDefinitionSource-QueryMeasureDefinition.html) Defines the requirements for the Measure Definition Source implementing the Query Measure Definition transaction.
+* [CapabilityStatement-MeasureDefinitionConsumer-QueryMeasureDefinition](CapabilityStatement-MeasureDefinitionConsumer-QueryMeasureDefinition.html) Defines the requirements for the Measure Definition Consumer implementing the Query Measure Definition transaction.

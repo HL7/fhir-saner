@@ -73,7 +73,6 @@ This guide is organized into five main sections:
     </li>
 </ol>
 
-
 * Chapter V: Defining Measures from Essential Elements of Information
 1. [Computing Measures](measure_automation.html) - Describes mechanisms to automate measure computation.
 2. [Phrase Book](phrase_book.html) - A Phrase Book for creating automatable Measures

@@ -120,6 +120,20 @@ in the prior two weeks.
  * group[0].stratifier[0].code.text = "By Location and Ventilator Status"
  * group[0].stratifier[0].description = "Stratifies the population by Location (inpatient vs ED/Overflow/Other) and Ventilator Status (Ventilated vs Not Ventilated)"
  * group[0].stratifier[0].criteria.language = #text/fhirpath
+ * group[0].stratifier[0].criteria.description = """
+   For each Encounter,
+     if the encounter subject has been ventilated
+       if the Encounter location is an inpatient loocation,
+         return InpVentilated
+       Otherwise
+         return OFVentilated
+     else
+       if the Encounter location is an inpatient loocation,
+         return InpNotVentilated
+       Otherwise
+         return OFNotVentilated
+     end if
+ """
  * group[0].stratifier[0].criteria.expression = """
       iif(%NumVentUse.id contains Encounter.subject,
           iif(myMemberOf(Encounter.location.location.resolve().type, %InpatientLocations.url), 'InpVentilated', 'OFVentilated'),
@@ -211,6 +225,8 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[1].stratifier[0].code.text = "By Age Group"
  * group[1].stratifier[0].description = "Stratifies the population by Age Group"
  * group[1].stratifier[0].criteria.language = #text/fhirpath
+ * group[1].stratifier[0].criteria.description = """If birth date + N years < today, return the code for the patient < N Years of age for values
+ of N from 20, 30, 40, 50, 60, 70 and 80, otherise return the code for over 80"""
  * group[1].stratifier[0].criteria.expression = """
     Patient.select(
       iif(dateAdd(birthDate, 20 'years') < today(), 'P0Y--P20Y',
@@ -233,12 +249,14 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[1].stratifier[1].code.text = "By Gender"
  * group[1].stratifier[1].description = "Stratifies the population by Gender"
  * group[1].stratifier[1].criteria.language = #text/fhirpath
+ * group[1].stratifier[1].criteria.description = "Return the patient gender"
  * group[1].stratifier[1].criteria.expression = "Patient.gender"
 
  //* with group[1].stratifier[2] do
  * group[1].stratifier[2].code.text = "By Ethnicity"
  * group[1].stratifier[2].description = "Stratifies the population by Ethnicity"
  * group[1].stratifier[2].criteria.language = #text/fhirpath
+ * group[1].stratifier[2].criteria.description = "Return the patient enthnicity code"
  * group[1].stratifier[2].criteria.expression = """
     Patient.extension('http://hl7.org/fhir/us/core/StructureDefinition/us-ethnicity-category').extension('ombCategory').valueCoding.code
     """
@@ -247,6 +265,7 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[1].stratifier[3].code.text = "By Race"
  * group[1].stratifier[3].description = "Stratifies the population by Race"
  * group[1].stratifier[3].criteria.language = #text/fhirpath
+ * group[1].stratifier[3].criteria.description = "Return the patient race code"
  * group[1].stratifier[3].criteria.expression = """
     Patient
     .extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')
@@ -329,6 +348,8 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[2].stratifier[0].code.text = "By Age Group"
  * group[2].stratifier[0].description = "Stratifies the population by Age Group"
  * group[2].stratifier[0].criteria.language = #text/fhirpath
+ * group[2].stratifier[0].criteria.description = """If birth date + N years < today, return the code for the patient < N Years of age for values
+ of N from 20, 30, 40, 50, 60, 70 and 80, otherise return the code for over 80"""
  * group[2].stratifier[0].criteria.expression = """
     Patient.select(
       iif(dateAdd(birthDate, 20 'years') < today(), 'P0Y--P20Y',
@@ -351,12 +372,14 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[2].stratifier[1].code.text = "By Gender"
  * group[2].stratifier[1].description = "Stratifies the population by Gender"
  * group[2].stratifier[1].criteria.language = #text/fhirpath
+ * group[2].stratifier[1].criteria.description = "Return the patient gender"
  * group[2].stratifier[1].criteria.expression = "Patient.gender"
 
  //* with group[2].stratifier[2] do
  * group[2].stratifier[2].code.text = "By Ethnicity"
  * group[2].stratifier[2].description = "Stratifies the population by Ethnicity"
  * group[2].stratifier[2].criteria.language = #text/fhirpath
+ * group[2].stratifier[2].criteria.description = "Return the patient ethnicity code"
  * group[2].stratifier[2].criteria.expression = """
     Patient.extension('http://hl7.org/fhir/us/core/StructureDefinition/us-ethnicity-category').extension('ombCategory').valueCoding.code
     """
@@ -365,6 +388,7 @@ Computes the cumulative total from the prior measure report and the number of ne
  * group[2].stratifier[3].code.text = "By Race"
  * group[2].stratifier[3].description = "Stratifies the population by Race"
  * group[2].stratifier[3].criteria.language = #text/fhirpath
+ * group[2].stratifier[3].criteria.description = "Return the patient race code"
  * group[2].stratifier[3].criteria.expression = """
     Patient
     .extension('http://hl7.org/fhir/us/core/StructureDefinition/us-core-race')

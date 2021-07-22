@@ -16,7 +16,7 @@ define the codes used for the measure groups they create.
  ** coding.display = "Beds"
  ** text = "Bed Reporting"
 ```
-#### Measure Group Attributes
+#### <a name='capacity-example'/>Measure Group Attributes
 The measure group for Bed Availability has the same attributes as for Ventilator Availability, with the
 exception of the subject, which is Beds rather than ventilators.
 

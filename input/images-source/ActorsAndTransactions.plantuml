@@ -14,13 +14,13 @@ MeasureDefinitionSource -- MeasureDefinitionConsumer : "Query Measure Definition
 MeasureComputer -- MeasureComputer : "Compute Measure [COMPUTE-MX] ↕"
 MeasureComputer -- DataSource : "Compute Measure [COMPUTE-MX] ↓"
 }
-rectangle "Measure Intermediary" as MeasureIntermediary {
-agent "Measure Source" as MeasureSourced3e542
-agent "Measure Consumer" as MeasureConsumerd3e542
+rectangle "Measure Intermediary" as MeasureIntermediary { 
+agent "Measure Source" as MeasureSourced3e582
+agent "Measure Consumer" as MeasureConsumerd3e582
 }
-rectangle "Measure Computer" as MeasureComputer {
-agent "Measure Source" as MeasureSourced3e628
-agent "Measure Definition Consumer" as MeasureDefinitionConsumerd3e628
+rectangle "Measure Computer" as MeasureComputer { 
+agent "Measure Source" as MeasureSourced3e668
+agent "Measure Definition Consumer" as MeasureDefinitionConsumerd3e668
 }
 MeasureIntermediary -[hidden]- MeasureComputer
 @enduml

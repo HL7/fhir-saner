@@ -7,8 +7,8 @@ periodically query about the availability of a resource from an Measure Source.
 
 
 This transaction enables a MeasureConsumer actor to access Measure, MeasureReport, Location and Organization
-resources from a MeasureSource actor. It defines the query parameters that the actors must and **should** support for search,
-and the read operations that must be supported.
+resources from a MeasureSource actor. It defines the query parameters that the actors **shall** and **should** support for search,
+and the read operations that **shall** be supported.
 
 
 For more details see the detailed [transaction description](transaction-1.html)
@@ -18,7 +18,7 @@ For more details see the detailed [transaction description](transaction-1.html)
 The Produce Measure transaction allows an Measure Source to periodically report on availability of resources to a Measure Consumer.
 
 
-This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor must support.
+This transaction defines the create and update operations that a MeasureConsumer and MeasureSource actor **shall** support.
 
 
 For more details see the detailed [transaction description](transaction-2.html)
@@ -29,7 +29,7 @@ The Query Measure Definition transaction allows a Measure Definition Consumer to
 
 
 This transaction enables a MeasureDefinition Consumer actor to access Measure resources from a MeasureDefinitionSource actor.
-It defines the query parameters that the actors must and **should** support for search and read operations that must be supported.
+It defines the query parameters that the actors **shall** and **should** support for search and read operations that **shall** be supported.
 
 
 For more details see the detailed [transaction description](transaction-3.html)

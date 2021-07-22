@@ -1,4 +1,5 @@
 @startuml
+
 agent "Measure Definition Source" as MeasureDefinitionSource
 
 agent "Measure Definition Consumer" as MeasureDefinitionConsumer

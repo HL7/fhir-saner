@@ -8,8 +8,7 @@ or other systems to access resource availability data.
 
 
 ### Actors Roles
-
-![Figure 2.5-1: Communicate Results Use Case Diagram](transaction-5-uc.svg "Figure 2.5-1: Communicate Results Use Case Diagram")
+{% include transaction-5-uc.svg%}
 
 **Figure 2.5-1: Communicate Results Use Case Diagram**
 
@@ -35,8 +34,7 @@ or other systems to access resource availability data.
 </table>
 
 ### Interactions
-        
-![Figure 2.5-2: Communicate Results Interactions](transaction-5-seq.svg "Figure 2.5-2: Communicate Results Interactions")
+        {% include transaction-5-seq.svg%}
 
 **Figure 2.5-2: Communicate Results Interactions**
 
@@ -61,8 +59,5 @@ to the original system or to another system.
 
 ##### Expected Actions
 
-
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
-
-        

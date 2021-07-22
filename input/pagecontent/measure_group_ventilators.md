@@ -161,3 +161,73 @@ The computable content "implements" the automated computation of the measure.
  ** language = #text/fhirpath
  ** expression = "%NumVent - %NumVentUse.count()"
 ```
+### <a name='availability-example'/>Ventilator Supplies
+With any resources, including ventilators, require a supply of additional equipment in order to
+maintain operations.  In the case of ventilators, this might include tubing which needs replacement
+for each patient using the ventilator.  The adequacy of the ventilator tubing supply can be reported
+using an availability measure.  The simplest measure of adequacy of supply would be provided
+using the example below; either there is tubing available, or it is not.
+
+#### Describing the Ventilator Supplies Group
+```
+ * with group[3].code do
+ ** coding = MeasureGroupSystem#VentilatorSupplies
+ ** coding.display = "Ventilator Supplies"
+ ** text = "Ventilator Supplies Reporting"
+```
+
+#### Ventilator Supplies Measure Group Attributes
+
+The [Measure Group Attributes](StructureDefinition-MeasureGroupAttributes.html) for this group appears below.
+
+This is an availability measure:
+```
+ * with group[4].extension[groupAtts] do
+ ** extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#availability
+```
+
+This measure is a structural measure, representing the current ventilator supply availability in a hospital.
+```
+ ** extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+```
+
+Higher numbers (1) represent availability, and so are "better" for this case, but it may vary depending on the question.
+```
+ ** extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#increase
+```
+
+This example reports on availability of devices (most non-medication supplies are devices)
+```
+ ** with extension[subject] do
+ *** valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
+ *** valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#26412008 "Endotracheal Tube"
+ *** valueCodeableConcept.text = "Endotracheal Tube"
+```
+
+Supplies are normally tracked in an inventory management system, and these systems do not typically track supplies an an individual
+unit level, but rather as a quantity of a specific kind of device that is described.  FHIR does not presently have a resource that
+tracks supplies at the quantity level. Supply adequacy is a determination that is made at the facility level, possibly through some
+automated logic.
+```
+ *** extension[subjectValueSet].valueReference.reference = http://example.com/ventilatorSupplies
+```
+```
+ * with group[4].population[0] do
+ ** with code do
+ *** coding[0] = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#VentSuppliesAdequate "Ventilator Supplies"
+ *** coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#denominator
+ *** text = "Adequacey of ventilator supplies"
+ ** description = "Represents the adequacy of ventilator supplies"
+```
+
+Lastly, encode the logic that determines the adequacy of ventilator supplies.  That logic is not shown below because it varies by facility.
+Knowing the quantity of supplies on hand is a critical input for that decision, but adequacy of supply is also based on the current or projected
+rate of consumption, and the lead time for obtaining replacements.
+
+```
+ ** with criteria do
+ *** language = #text/fhirpath
+ *** name = "VentSuppliesAdequate"
+ *** description = """Computes the adequecay of ventilator supplies from inventory"""
+ *** expression = """See text above"""
+```

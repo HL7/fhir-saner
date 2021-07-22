@@ -94,7 +94,7 @@ The computable criteria found definitions for the Measure in
 [stratifier](https://www.hl7.org/fhir/measure-definitions.html#Measure.group.stratifier.criteria) and other criteria
 components within the measure are deemed to be the "normative" definition of the measure.  However, measure developers may wish to provide
 alternative implementations to support application environments that cannot support FHIRPath, or which have access to a high quality CQL
-engine. These definitions can be supplied using the [Measure Population Alternate Criteria](StructureDefinition-MeasurePopulationAlternateCriteria.html) extension. This extension allows alternate criteria to be supplied which can support evaluation on systems not having support for the preferred (and normative) specification for the measure.
+engine. These definitions can be supplied using the [Measure Alternate Criteria](StructureDefinition-MeasureAlternateCriteria.html) extension. This extension allows alternate criteria to be supplied which can support evaluation on systems not having support for the preferred (and normative) specification for the measure.
 
 ### Other Measure Definition Content
 A computable public health measure may reference [ValueSet](https://www.hl7.org/fhir/ValueSet), [ConceptMap](https://www.hl7.org/fhir/), [CQL definitions](https://cql.hl7.org/), [SearchParameter](https://www.hl7.org/fhir/SearchParameter) and
@@ -121,7 +121,9 @@ If there are no more unevaluated populations or strata, then evaluation is compl
 
 #### Resolving Parameters and Computed Content
 Named parameters are essential to support automated measure evaluation. They are used to constrain queries using FHIR Search, FHIRPath
-or CQL in order to limit the data retrieved to that which is relevant for measure computation.  The names of parameters used in Measure resources conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a period to match the regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
+or CQL in order to limit the data retrieved to that which is relevant for measure computation.  The names of parameters used in Measure resources
+conforming to this guide **shall** start with an upper case letter, and may contain lowercase letters and numbers, and may contain a period to
+match the regular expression [A-Z][A-Za-z0-9.]+.  They **should** be in _PascalCase_.
 
 FHIRPath and CQL provide mechanisms to provide named parameters (e.g., reporting period) and collections of FHIR resources during their evaluation.
 
@@ -138,8 +140,8 @@ FHIRPath and CQL provide mechanisms to provide named parameters (e.g., reporting
   _Name_ to indicate a named parameter in a CQL Expression.
 
 #### Parameter Types
-Parameters have a data type, either a FHIR Primitive type such as date, dateTime, or string, or complex types such as Coding, Quantity, Period or Resource and
-any of its subtypes (e.g., Patient, Encounter).  The fields of the parameter are accessible via dot notation.
+Parameters have a data type, either a FHIR Primitive type such as date, dateTime, or string, or complex types such as Coding, Quantity, Period or
+Resource and any of its subtypes (e.g., Patient, Encounter).  The fields of the parameter are accessible via dot notation.
 
 For example:
 ```
@@ -184,6 +186,12 @@ the MeasureReport.  A reference to the reporter can be found in %MeasureReport.r
 Subject
 : The Subject parameter is of the FHIR Location resource type and represents the subject of the
 MeasureReport.  A reference to this subject can be found in %MeasureReport.subject.
+
+ValueSet
+: The ValueSet parameter is a reference (preferably canonical) to a ValueSet resource that
+can be used to select matching resources for populations within a MeasureGroup.  It is populated from
+the Measure.group.extension[MeasureGroupAttributes].extension[SubjectValueSet].valueReference parameter
+supplied in the measure when evaluating a population.
 
 ##### Date Parameters
 Date parameters are essential to support appropriate filters for queries.  This enables essential dates such as the date of evaluation and the

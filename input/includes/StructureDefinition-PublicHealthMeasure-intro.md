@@ -56,8 +56,8 @@ of measures using FHIR Implementation Guide tools. This is also the format for v
 ##### Meanings of Major, Minor and Patch with respect to Measures
 
 Major
-: A major update adds one or more required elements to the Measure that must be present in a MeasureReport to be considered valid
-  by the recieving system. The definition of valid is defined by the measure developer, and need not be the same as that performed
+: A major update adds one or more required elements to the Measure that **shall** be present in a MeasureReport to be considered valid
+  by the receiving system. The definition of valid is defined by the measure developer, and need not be the same as that performed
   by FHIR validation tools. The FHIR Validator will fail a MeasureReport that does not include all the groups, populations and strata
   defined in the Measure, even though these components might otherwise be considered optional by the measure developer.
 

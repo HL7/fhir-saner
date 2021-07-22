@@ -51,20 +51,24 @@ The scoring of measures implies the way that which rate aggregation can be perfo
 * Availability
   Measures the **point in time** availability of resources
 
-Measures aggregate values according to the [Measure Rate Aggregation Values](ValueSet-MeasureRateAggregationValues.html) value set,
-which draws from Each the [Measure Rate Aggregation](CodeSystem-MeasureRateAggregation.html) coding system defined by this
-implementation guide. Each of these must be aggregated differently.
+Measure population values can be aggregated across multiple measures to report across a wider group. The aggregation method is indicated in the rateAggregation field
+found in the MeasureGroupAttributes extension on the Measure.group element.  These values come from the
+[Measure Rate Aggregation Values](ValueSet-MeasureRateAggregationValues.html) value set.
+Each of these values describes the method of aggregation.
 
 * count<br/>
-  A count of events that happened, or changes in status, or of things consumed over that period in time (e.g., admissions, deaths, tests performed).
-  Quantity measurements (e.g., those counting events such as admissions, deaths, or tests performed) represent a count.  When aggregated for the same facility over multiple time periods, the population.count values can be summed to produce a count of events or things in the total time period.
+  A count of events that happened, or changes in status, or of things consumed or performed over that period in
+  time (e.g., admissions, deaths, tests performed).
+  These are aggregated within and across subjects by summing all values for each MeasureReport.
 * point-in-time<br/>
-  A count of things at a point in time (e.g., active cases, beds currently occupied, ventilators in use).
-  Point in time measurements (e.g., bed occupancy, ventilators in use) represent a current state. When aggregated for the same facility
-  over multiple (contiguous) time  periods, the most recent population.count is the "aggregated" value.
+  Point in time measurements (e.g., bed occupancy, ventilators in use) represent the current state at a point in time.
+  Group the MeasureReport resources by MeasureReport.subject, and aggregate within each group by taking the
+  most receent point-in-time value.  Then aggregate across groups by summing the most recent values.
 * cumulative<br/>
-  A cumulative measure (e.g., tests performed).
-  Cumulative measures are a combination of count and point-in-time measurements.  These represent a count of the current quantity (e.g., tests performed) over the total performed over "all time" (e.g., cumulative total tests performed).  When these are aggregated over multiple time periods, the aggregate of the cumulative total (the denominator) is the most recent value, but the aggregate of the current quantity (the numerator) is summed.
+  Cumulative measures are a combination of count and point-in-time measurements.
+  These represent a count of the current quantity (e.g., tests performed) in the numerator over the
+  total performed over "all time" (e.g., cumulative total tests performed) in the denominator.
+  The numerator is aggregated as for a count.  The denominator is aggregated as for point-in-time.
 
 Across subjects (locations or facilities), counts are always summed. This assumes that subjects are non-overlapping (one is not trying to aggregate county data
 with the data for an entire state that contains the county).

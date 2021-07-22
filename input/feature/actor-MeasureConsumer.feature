@@ -7,4 +7,4 @@ Feature: MeasureConsumer-2 A Measure Consumer that implements the Push Option **
 				[base]/metadata.
 Feature: MeasureConsumer-3 A Measure Consumer that implements the Supplemental Data Option **shall** support creation of MeasureReport and Supplemental Data
             resources through the [HTTP Batch](https://www.hl7.org/fhir/http.html#transaction) operation and endpoint.
-Feature: MeasureConsumer-4 A Measure Consumer that implements the Supplemental Data option must also implement the Push Option
+Feature: MeasureConsumer-4 A Measure Consumer that implements the Supplemental Data option **shall** also implement the Push Option
