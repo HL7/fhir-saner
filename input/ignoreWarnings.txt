@@ -1,0 +1,6 @@
+Measure.group[0].stratifier[0].criteria	warning	The expression language text/fhirpath is not supported, so can't be validated
+SearchParameter	warning	spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+PublicHealthMeasureMetadataAttachment.Attachment.contentType	warning	Unable to check if http://hl7.org/fhir/uv/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
+StructureDefinition	warning	Unable to check if http://hl7.org/fhir/uv/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
+ValueSet.compose[0].include[0]	warning	Unknown System specified, so Concepts and Filters can''t be checked
+ValueSet.where(id = 'VentilatorProcedures')	warning	Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt

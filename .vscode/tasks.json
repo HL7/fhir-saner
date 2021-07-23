@@ -6,7 +6,8 @@
         {
             "label": "sushi",
             "type": "shell",
-            "command": "sushi ."
+            "command": "sushi .",
+            "problemMatcher": []
         },
         {
             "label": "publisher",

@@ -1,22 +1,22 @@
 Instance: SearchParameter-definition-text
 InstanceOf: SearchParameter
 Title: "Search by Text in Definitions"
- * insert SanerDefinitionContent
- * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-definition-text"
- * description = "This SearchParameter enables definition resources to be discovered from text used in the resource definition."
- * name = "definition-text"
- * code = #definition-text
- * base[0] = #Measure
- * base[1] = #Questionnaire
- * base[2] = #ValueSet
- * base[3] = #CodeSystem
- * base[4] = #ConceptMap
- * base[5] = #SearchParameter
- * base[6] = #OperationDefinition
- * base[7] = #StructureDefinition
- * base[8] = #CapabilityStatement
- * type = #string
- * expression = """
+* insert SanerDefinitionContent
+* url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-definition-text"
+* description = "This SearchParameter enables definition resources to be discovered from text used in the resource definition."
+* name = "definition-text"
+* code = #definition-text
+* base[0] = #Measure
+* base[1] = #Questionnaire
+* base[2] = #ValueSet
+* base[3] = #CodeSystem
+* base[4] = #ConceptMap
+* base[5] = #SearchParameter
+* base[6] = #OperationDefinition
+* base[7] = #StructureDefinition
+* base[8] = #CapabilityStatement
+* type = #string
+* expression = """
  Measure.title | Measure.subtitle | Measure.publisher | Measure.description | Measure.purpose | Measure.usage |
  Measure.riskAdjustment | Measure.rateAggregation | Measure.clinicalRecommendationStatement | Measure.definition | Measure.guideance |
  Questionnaire.title | Questionnaire.publisher | Questionnaire.description | Questionnaire.purpose |
@@ -50,21 +50,21 @@ Title: "Search by Text in Definitions"
 Instance: SearchParameter-code
 InstanceOf: SearchParameter
 Title: "Search by Code in Definitions and Instances"
- * insert SanerDefinitionContent
- * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-code"
- * description = "This SearchParameter enables resources to be discovered by codes or valueSets used in the resource including those in any extensions."
- * name = "code"
- * purpose = """
+* insert SanerDefinitionContent
+* url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-code"
+* description = "This SearchParameter enables resources to be discovered by codes or valueSets used in the resource including those in any extensions."
+* name = "code"
+* purpose = """
  """
- * code = #code
- * base[0] = #Measure
- * base[1] = #MeasureReport
- * type = #token
- * expression = """
+* code = #code
+* base[0] = #Measure
+* base[1] = #MeasureReport
+* type = #token
+* expression = """
  descendants().valueCodeableConcept | descendants().valueCoding | descendants().valueCode | code | descendants().ofType(Coding).not().code
 """
 
- * xpath = """
+* xpath = """
  descendant::f:valueCodeableConcept | descendant::f:valueCoding | descendant::f:valueCode | f:code | f:descendant::f:code[ends-with(local-name(..),'oding')]
 """
 * xpathUsage = #normal
@@ -82,18 +82,18 @@ Title: "Search by Code in Definitions and Instances"
 Instance: SearchParameter-disposition
 InstanceOf: SearchParameter
 Title: "Search by hospitalization.dispositionCode in Encounters"
- * insert SanerDefinitionContent
- * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-disposition"
- * description = "This SearchParameter enables query of encounters by disposition to support automation of measure computation."
- * name = "disposition"
- * purpose = """
+* insert SanerDefinitionContent
+* url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-disposition"
+* description = "This SearchParameter enables query of encounters by disposition to support automation of measure computation."
+* name = "disposition"
+* purpose = """
  """
- * code = #disposition
- * base[0] = #Encounter
- * type = #token
- * expression = "hospitalization.dispositionCode"
+* code = #disposition
+* base[0] = #Encounter
+* type = #token
+* expression = "hospitalization.dispositionCode"
 
- * xpath = "f:hospitalization/f:dispositionCode"
- * xpathUsage = #normal
- * multipleOr = true
- * multipleAnd = false
+* xpath = "f:hospitalization/f:dispositionCode"
+* xpathUsage = #normal
+* multipleOr = true
+* multipleAnd = false

@@ -1,20 +1,20 @@
 RuleSet: NHSNArtifacts
- * relatedArtifact[0].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
- * relatedArtifact[0].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
- * relatedArtifact[0].label = "NHSN COVID-19 Reporting"  // Descriptive Text to display in a Link
- * relatedArtifact[0].display = "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page" // Title of the link target page
- * relatedArtifact[1].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
- * relatedArtifact[1].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
- * relatedArtifact[1].label = "How to import COVID-19 Summary Data"
- * relatedArtifact[1].display = "Importing COVID-19 Patient Module Denominator data for Patient Safety Component"
- * relatedArtifact[2].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
- * relatedArtifact[2].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"
- * relatedArtifact[2].label = "Table of Instructions"
- * relatedArtifact[2].display = "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)"
- * relatedArtifact[3].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
- * relatedArtifact[3].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"
- * relatedArtifact[3].label = "CSV File Template"
- * relatedArtifact[3].display = "CDC/NHSN COVID-19 Reporting CSV File Template"
+* relatedArtifact[0].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
+* relatedArtifact[0].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/acute-care-hospital/covid19/"
+* relatedArtifact[0].label = "NHSN COVID-19 Reporting"  // Descriptive Text to display in a Link
+* relatedArtifact[0].display = "CDC/NHSN COVID-19 Patient Impact & Hospital Capacity Module Home Page" // Title of the link target page
+* relatedArtifact[1].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
+* relatedArtifact[1].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf"
+* relatedArtifact[1].label = "How to import COVID-19 Summary Data"
+* relatedArtifact[1].display = "Importing COVID-19 Patient Module Denominator data for Patient Safety Component"
+* relatedArtifact[2].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
+* relatedArtifact[2].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/57.130-toi-508.pdf"
+* relatedArtifact[2].label = "Table of Instructions"
+* relatedArtifact[2].display = "Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)"
+* relatedArtifact[3].type = http://terminology.hl7.org/CodeSystem/library-type#documentation
+* relatedArtifact[3].url = "https://web.archive.org/web/20200501215043/https://www.cdc.gov/nhsn/pdfs/covid19/covid19-test-csv-import.csv"
+* relatedArtifact[3].label = "CSV File Template"
+* relatedArtifact[3].display = "CDC/NHSN COVID-19 Reporting CSV File Template"
 
 Instance: NHSNMeasureLibrary
 InstanceOf: PublicHealthMeasureLibrary
@@ -22,57 +22,57 @@ Description: "This Library contains value sets for the example NHSN Measure"
 // We aren't automating anything other than patient impact and hospital capacity, this library
 // will be referenced by other NHSN inspired measures but will not be used by them.
 
- * insert SanerDefinitionContent
- * id = "NHSNMeasureLibrary"
- * name = "NHSNMeasureLibrary"
- * url = "http://hl7.org/fhir/uv/saner/StructureDefinition/NHSNMeasureLibrary"
- * title = "NHSN Patient Impact and Hospital Capacity Measure Library"
- * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
- * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * author.name = "HL7 Public Health Workgroup"
- * author.telecom.system = #email
- * author.telecom.value = "mailto:pher@lists.hl7.org"
- * insert NHSNArtifacts
- * content[0].id = "SARSCoV2Labs"
- * content[0].contentType = #application/fhir+xml
- * content[0].title = "C19HCC SARS coronavirus 2 Qualitative Detection Laboratory Tests"
- * content[0].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
+* insert SanerDefinitionContent
+* id = "NHSNMeasureLibrary"
+* name = "NHSNMeasureLibrary"
+* url = "http://hl7.org/fhir/uv/saner/StructureDefinition/NHSNMeasureLibrary"
+* title = "NHSN Patient Impact and Hospital Capacity Measure Library"
+* type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
+* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
+* author.name = "HL7 Public Health Workgroup"
+* author.telecom.system = #email
+* author.telecom.value = "mailto:pher@lists.hl7.org"
+* insert NHSNArtifacts
+* content[0].id = "SARSCoV2Labs"
+* content[0].contentType = #application/fhir+xml
+* content[0].title = "C19HCC SARS coronavirus 2 Qualitative Detection Laboratory Tests"
+* content[0].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
 
- * content[1].id = "COVID19DXSNOMED"
- * content[1].contentType = #application/fhir+xml
- * content[1].title = "COVID_19 SNOMED CT (Disorders)"
- * content[1].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
+* content[1].id = "COVID19DXSNOMED"
+* content[1].contentType = #application/fhir+xml
+* content[1].title = "COVID_19 SNOMED CT (Disorders)"
+* content[1].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
 
- * content[2].id = "COVID19DXICD10"
- * content[2].contentType = #application/fhir+xml
- * content[2].title = "COVID_19 ICD-10 (Disorders)"
- * content[2].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
+* content[2].id = "COVID19DXICD10"
+* content[2].contentType = #application/fhir+xml
+* content[2].title = "COVID_19 ICD-10 (Disorders)"
+* content[2].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
 
- * content[3].id = "Remdesivir"
- * content[3].contentType = #application/fhir+xml
- * content[3].title = "Remdesivir"
- * content[3].url = Canonical(Remdesivir)
+* content[3].id = "Remdesivir"
+* content[3].contentType = #application/fhir+xml
+* content[3].title = "Remdesivir"
+* content[3].url = Canonical(Remdesivir)
 
- * content[4].id = "COVID19Exposure"
- * content[4].contentType = #application/fhir+xml
- * content[4].title = "COVID_19 (COVID_19 Exposure)"
- * content[4].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
+* content[4].id = "COVID19Exposure"
+* content[4].contentType = #application/fhir+xml
+* content[4].title = "COVID_19 (COVID_19 Exposure)"
+* content[4].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
 
- * content[5].id = "SuspectedCOVID19"
- * content[5].contentType = #application/fhir+xml
- * content[5].title = "C19HCC Suspected COVID19 Infection"
- * content[5].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.116"
+* content[5].id = "SuspectedCOVID19"
+* content[5].contentType = #application/fhir+xml
+* content[5].title = "C19HCC Suspected COVID19 Infection"
+* content[5].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.116"
 
- * content[6].id = "HealthcareServiceLocation"
- * content[6].contentType = #application/fhir+xml
- * content[6].title = "Healthcare Service Location"
- * content[6].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.13.192.16.840.1.113883.1.11.20275"
+* content[6].id = "HealthcareServiceLocation"
+* content[6].contentType = #application/fhir+xml
+* content[6].title = "Healthcare Service Location"
+* content[6].url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.13.192.16.840.1.113883.1.11.20275"
 
- * content[7].id = "PatientsOnVentilator"
- * content[7].contentType = #application/fhir+xml
- * content[7].title = "Patients on a Ventilator"
- * content[7].url = Canonical(PatientsOnVentilator)
+* content[7].id = "PatientsOnVentilator"
+* content[7].contentType = #application/fhir+xml
+* content[7].title = "Patients on a Ventilator"
+* content[7].url = Canonical(PatientsOnVentilator)
 
 
 
@@ -83,9 +83,9 @@ Title: "CDC Patient Impact and Hospital Capacity"
 Description: "This measure demonstrates reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements."
 Usage: #example
 * insert SanerDefinitionContent
- * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * definition = """Ventilator
+* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
+* definition = """Ventilator
 : Any device used to support, assist or control respiration (inclusive of the weaning period) through the application of positive
 pressure to the airway when delivered via an artificial airway, specifically an oral/nasal endotracheal or tracheostomy tube.
 Note: Ventilation and lung expansion devices that deliver positive pressure to the airway (for example: CPAP, BiPAP, bi-level, IPPB and
@@ -100,249 +100,250 @@ Total includes all beds, even if with surge beds it exceeds licensed beds.
 ICU beds
 : Include NICU (from CDC Webinar 31-Mar-2020) (outstanding question on burn unit)
 """
- * author.name = "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)"  // Fully spelled out name (Acronym)
- * author.telecom.system = #email
- * author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
- * insert DailyReporting
- * name = "CDCPatientImpactAndHospitalCapacity"
- * url = "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity"
- * title = "Patient Impact and Hospital Capacity"  // Official name of measure being represented as given by the author
- * insert NHSNArtifacts
- * library = Canonical(NHSNMeasureLibrary)
+* author.name = "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)"  // Fully spelled out name (Acronym)
+* author.telecom.system = #email
+* author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
+* insert DailyReporting
+* name = "CDCPatientImpactAndHospitalCapacity"
+* url = "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity"
+* title = "Patient Impact and Hospital Capacity"  // Official name of measure being represented as given by the author
+* insert NHSNArtifacts
+* library = Canonical(NHSNMeasureLibrary)
 
- * group[0].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-scoring#continuous-variable
- * group[0].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
- * group[0].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#increase
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Location
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#91537007
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Hospital bed, device (physical object)"
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Hospital Beds"
- * group[0].extension[groupAtts].extension[rateAggregation].valueString = "count"
+* group[0].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-scoring#continuous-variable
+* group[0].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+* group[0].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#increase
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Location
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#91537007
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Hospital bed, device (physical object)"
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Hospital Beds"
+* group[0].extension[groupAtts].extension[rateAggregation].valueString = "count"
 
 // Describe the group of populations being reported, and WHAT this group counts.
- * group[0].code.coding = MeasureGroupSystem#Beds
- * group[0].code.coding.display = "Beds"
- * group[0].code.text = "Hospital Bed Reporting"
+* group[0].code.coding = MeasureGroupSystem#Beds
+* group[0].code.coding.display = "Beds"
+* group[0].code.text = "Hospital Bed Reporting"
 
  // Describe the initial population for this Measure Group
- * group[0].population[0].code = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBeds
- * group[0].population[0].code.coding.display = "All Hospital Beds"
- * group[0].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
- * group[0].population[0].code.text = "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
- * group[0].population[0].description = """Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,
+* group[0].population[0].code = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numTotBeds
+* group[0].population[0].code.coding.display = "All Hospital Beds"
+* group[0].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
+* group[0].population[0].code.text = "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
+* group[0].population[0].description = """Enter the total number of all hospital beds, including inpatient and outpatient beds. All staffed, licensed,
 and overflow and surge/expansion beds used for inpatients or outpatients. This includes ICU beds."""
- * group[0].population[0].criteria.name = "numTotBeds"
- * group[0].population[0].criteria.description = "A bed in any location"
- * group[0].population[0].criteria.language = #text/fhirpath
- * group[0].population[0].criteria.expression = "Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"
+* group[0].population[0].criteria.name = "numTotBeds"
+* group[0].population[0].criteria.description = "A bed in any location"
+* group[0].population[0].criteria.language = #text/fhirpath
+* group[0].population[0].criteria.expression = "Device.where(type in %ValueSet-BedDeviceTypes and location.physicalType in %ValueSet-BedLocationTypes)"
 
 // Describe the population strata for numBeds
- * group[0].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numbeds
- * group[0].population[1].code.coding.display = "Hospital Inpatient Beds"
+* group[0].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numbeds
+* group[0].population[1].code.coding.display = "Hospital Inpatient Beds"
 // * group[0].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[0].population[1].code.text = "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
- * group[0].population[1].description = "Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."
- * group[0].population[1].criteria.name = "numbeds"
- * group[0].population[1].criteria.description = "A Bed where the location is an inpatient location."
- * group[0].population[1].criteria.language = #text/fhirpath
- * group[0].population[1].criteria.expression = "%numTotBeds.where(location.type in %ValueSet-InpatientLocations)"
+* group[0].population[1].code.text = "Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients"
+* group[0].population[1].description = "Required. Enter the total number of all inpatient beds, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes intensive care unit (ICU) beds."
+* group[0].population[1].criteria.name = "numbeds"
+* group[0].population[1].criteria.description = "A Bed where the location is an inpatient location."
+* group[0].population[1].criteria.language = #text/fhirpath
+* group[0].population[1].criteria.expression = "%numTotBeds.where(location.type in %ValueSet-InpatientLocations)"
 
 // Describe the population for numBedsOcc
- * group[0].population[2].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numBedsOcc
- * group[0].population[2].code.coding.display = "Hospital Inpatient Bed Occupancy"
- * group[0].population[2].code.text = "Total number of staffed inpatient beds that are occupied"
+* group[0].population[2].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numBedsOcc
+* group[0].population[2].code.coding.display = "Hospital Inpatient Bed Occupancy"
+* group[0].population[2].code.text = "Total number of staffed inpatient beds that are occupied"
 // * group[0].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[0].population[2].description = """Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.
+* group[0].population[2].description = """Enter the total number of staffed inpatient beds occupied by patients at the time the data is collected, including all staffed, licensed, and overflow and surge/expansion beds created for inpatient care. This includes ICU beds.
 
 CDC Webinar 31-Mar-2020:
 Baby beds in mom's room count as 1 bed, even if there are multiple baby beds
 Follow-up in progress if staffed is less than licensed.
 Total includes all beds, even if with surge beds it exceeds licensed beds."""
- * group[0].population[2].criteria.name = "numBedsOcc"
- * group[0].population[2].criteria.description = "An Inpatient Bed where the Bed is occupied."
- * group[0].population[2].criteria.language = #text/fhirpath
- * group[0].population[2].criteria.expression = "%numbeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
+* group[0].population[2].criteria.name = "numBedsOcc"
+* group[0].population[2].criteria.description = "An Inpatient Bed where the Bed is occupied."
+* group[0].population[2].criteria.language = #text/fhirpath
+* group[0].population[2].criteria.expression = "%numbeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
 
 // Describe the population for numICUBeds
- * group[0].population[3].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numICUBeds
- * group[0].population[3].code.coding.display = "ICU Beds"
- * group[0].population[3].code.text = "ICU Bed Occupancy"
+* group[0].population[3].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numICUBeds
+* group[0].population[3].code.coding.display = "ICU Beds"
+* group[0].population[3].code.text = "ICU Bed Occupancy"
 // * group[0].population[3].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[0].population[3].description = """Enter the total number of staffed Intensive Care Unit (ICU) beds.
+* group[0].population[3].description = """Enter the total number of staffed Intensive Care Unit (ICU) beds.
 
 CDC Webinar 31-Mar-2020:
 ICU beds include NICU
 """
- * group[0].population[3].criteria.name = "numICUBeds"
- * group[0].population[3].criteria.description = "A Bed where the location is an inpatient ICU location."
- * group[0].population[3].criteria.language = #text/fhirpath
- * group[0].population[3].criteria.expression = "%numbeds.where(location.type in %ValueSet-ICULocations)"
+* group[0].population[3].criteria.name = "numICUBeds"
+* group[0].population[3].criteria.description = "A Bed where the location is an inpatient ICU location."
+* group[0].population[3].criteria.language = #text/fhirpath
+* group[0].population[3].criteria.expression = "%numbeds.where(location.type in %ValueSet-ICULocations)"
 
 // Describe the population for numICUBedsOcc
- * group[0].population[4].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numICUBedsOcc
- * group[0].population[4].code.coding.display = "ICU Bed Occupancy"
+* group[0].population[4].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numICUBedsOcc
+* group[0].population[4].code.coding.display = "ICU Bed Occupancy"
 // * group[0].population[4].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[0].population[4].code.text = """Total number of staffed inpatient intensive care unit (ICU) beds"""
- * group[0].population[4].description = """Enter the total number of staffed ICU beds occupied by patients at the time the data is collected.
+* group[0].population[4].code.text = """Total number of staffed inpatient intensive care unit (ICU) beds"""
+* group[0].population[4].description = """Enter the total number of staffed ICU beds occupied by patients at the time the data is collected.
 
 CDC Webinar 31-Mar-2020:
 ICU beds include NICU"""
- * group[0].population[4].criteria.name = "numICUBedsOcc"
- * group[0].population[4].criteria.description = "An ICU Bed that is occupied."
- * group[0].population[4].criteria.language = #text/fhirpath
- * group[0].population[4].criteria.expression = "%numICUBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
+* group[0].population[4].criteria.name = "numICUBedsOcc"
+* group[0].population[4].criteria.description = "An ICU Bed that is occupied."
+* group[0].population[4].criteria.language = #text/fhirpath
+* group[0].population[4].criteria.expression = "%numICUBeds.where(location.operationalStatus = %ValueSet-OccupiedBed)"
 
 
- * group[1].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-scoring#continuous-variable
- * group[1].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
- * group[1].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
- * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
- * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#706172005
- * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Ventilator (physical object)"
- * group[1].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Ventilator"
- * group[1].extension[groupAtts].extension[rateAggregation].valueString = "count"
+* group[1].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-scoring#continuous-variable
+* group[1].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+* group[1].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
+* group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Device
+* group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#706172005
+* group[1].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Ventilator (physical object)"
+* group[1].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Ventilator"
+* group[1].extension[groupAtts].extension[rateAggregation].valueString = "count"
 
- * group[1].code.coding = MeasureGroupSystem#Ventilators
- * group[1].code.coding.display = "Ventilators"
- * group[1].code.text = "Hospital Ventilators Reporting"
+* group[1].code.coding = MeasureGroupSystem#Ventilators
+* group[1].code.coding.display = "Ventilators"
+* group[1].code.text = "Hospital Ventilators Reporting"
 
 // Describe initial population
- * group[1].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVent
- * group[1].population[0].code.coding.display = "Mechanical Ventilators"
- * group[1].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
- * group[1].population[0].code.text = "Total number of ventilators available"
- * group[1].population[0].description = """Enter the total number of mechanical ventilators, including anesthesia machines and
+* group[1].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVent
+* group[1].population[0].code.coding.display = "Mechanical Ventilators"
+* group[1].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
+* group[1].population[0].code.text = "Total number of ventilators available"
+* group[1].population[0].description = """Enter the total number of mechanical ventilators, including anesthesia machines and
 portable/transport ventilators available in the facility.
 Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways."""
- * group[1].population[0].criteria.name = "numVent"
- * group[1].population[0].criteria.description = "A Device that is used for ventilation and could be used (e.g., not broken, transferred, etc)"
- * group[1].population[0].criteria.language = #text/fhirpath
- * group[1].population[0].criteria.expression = "Device.where(type in %ValueSet-VentilatorDevices and status = active)"
+* group[1].population[0].criteria.name = "numVent"
+* group[1].population[0].criteria.description = "A Device that is used for ventilation and could be used (e.g., not broken, transferred, etc)"
+* group[1].population[0].criteria.language = #text/fhirpath
+* group[1].population[0].criteria.expression = "Device.where(type in %ValueSet-VentilatorDevices and status = active)"
 
 // Describe the population for numVentUse
- * group[1].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVentUse
- * group[1].population[1].code.coding.display = "Mechanical Ventilators in Use"
+* group[1].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numVentUse
+* group[1].population[1].code.coding.display = "Mechanical Ventilators in Use"
 // * group[1].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[1].population[1].code.text = "Total number of ventilators in use"
- * group[1].population[1].description = """Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia
+* group[1].population[1].code.text = "Total number of ventilators in use"
+* group[1].population[1].description = """Enter the total number of mechanical ventilators use at the time the data is collected, including anesthesia
 machines and portable/transport ventilators. Include BiPAP machines if the hospital uses BiPAP to deliver positive pressure ventilation via artificial airways."""
- * group[1].population[1].criteria.name = "numVentUse"
- * group[1].population[1].criteria.description = "A ventilator that is attached to a patient."
- * group[1].population[1].criteria.language = #text/fhirpath
- * group[1].population[1].criteria.expression = "%numVent.where(patient!={})"
+* group[1].population[1].criteria.name = "numVentUse"
+* group[1].population[1].criteria.description = "A ventilator that is attached to a patient."
+* group[1].population[1].criteria.language = #text/fhirpath
+* group[1].population[1].criteria.expression = "%numVent.where(patient!={})"
 
- * group[2].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-scoring#continuous-variable
- * group[2].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
- * group[2].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
- * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Encounter
- * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#308335008
- * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient encounter procedure (procedure)"
- * group[2].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Encounter"
- * group[2].extension[groupAtts].extension[rateAggregation].valueString = "count"
+* group[2].extension[groupAtts].extension[scoring].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-scoring#continuous-variable
+* group[2].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+* group[2].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
+* group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Encounter
+* group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#308335008
+* group[2].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient encounter procedure (procedure)"
+* group[2].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Encounter"
+* group[2].extension[groupAtts].extension[rateAggregation].valueString = "count"
 
- * group[2].code.coding = MeasureGroupSystem#Encounters
- * group[2].code.coding.display = "Encounters"
- * group[2].code.text = "Hospital COVID-19 Encounters Reporting"
+* group[2].code.coding = MeasureGroupSystem#Encounters
+* group[2].code.coding.display = "Encounters"
+* group[2].code.text = "Hospital COVID-19 Encounters Reporting"
 
 // Describe the criteria for numC19HospPats
- * group[2].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HospPats
- * group[2].population[0].code.coding.display = "Hospitalized COVID-19 Patients"
+* group[2].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HospPats
+* group[2].population[0].code.coding.display = "Hospitalized COVID-19 Patients"
 // * group[2].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[0].code.text = "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
- * group[2].population[0].description = """Enter the number of patients hospitalized in an inpatient bed at the time the data is collected
+* group[2].population[0].code.text = "Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19"
+* group[2].population[0].description = """Enter the number of patients hospitalized in an inpatient bed at the time the data is collected
  who have suspected or confirmed COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.
 Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis
 Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance
 for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compatible with COVID-19 (most patients with confirmed
 COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue)."""
- * group[2].population[0].criteria.name = "numC19HospPats"
- * group[2].population[0].criteria.description = "An COVID-19 encounter where the active location is an inpatient location"
- * group[2].population[0].criteria.language = #text/fhirpath
- * group[2].population[0].criteria.expression = "%numC19Pats.where(location.where(status='active' and type in %ValueSet-InpatientLocations))"
+* group[2].population[0].criteria.name = "numC19HospPats"
+* group[2].population[0].criteria.description = "An COVID-19 encounter where the active location is an inpatient location"
+* group[2].population[0].criteria.language = #text/fhirpath
+* group[2].population[0].criteria.expression = "%numC19Pats.where(location.where(status='active' and type in %ValueSet-InpatientLocations))"
 
 // Describe the criteria for numC19MechVentPats
- * group[2].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19MechVentPats
- * group[2].population[1].code.coding.display = "Hospitalized and Ventilated COVID-19 Patients"
+* group[2].population[1].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19MechVentPats
+* group[2].population[1].code.coding.display = "Hospitalized and Ventilated COVID-19 Patients"
 // * group[2].population[1].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[1].code.text = "Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
- * group[2].population[1].description = """Enter the number of patients hospitalized in an inpatient bed who have
+* group[2].population[1].code.text = "Patients currently hospitalized in an inpatient bed who have suspected or confirmed COVID-19 and are on a mechanical ventilator"
+* group[2].population[1].description = """Enter the number of patients hospitalized in an inpatient bed who have
 suspected or confirmed COVID-19 and are currently on a mechanical ventilator* at the time the data is collected . This includes the
 patients with laboratory-confirmed or clinically diagnosed COVID-19."""
- * group[2].population[1].criteria.name = "numC19OFMechVentPats"
- * group[2].population[1].criteria.description = "An COVID-19 encounter in an inpatient setting on a ventilator"
- * group[2].population[1].criteria.language = #text/fhirpath
- * group[2].population[1].criteria.expression = "%numC19HospPats.intersect(%numC19VentPats)"
+* group[2].population[1].criteria.name = "numC19OFMechVentPats"
+* group[2].population[1].criteria.description = "An COVID-19 encounter in an inpatient setting on a ventilator"
+* group[2].population[1].criteria.language = #text/fhirpath
+* group[2].population[1].criteria.expression = "%numC19HospPats.intersect(%numC19VentPats)"
 
 // Describe the criteria for numC19HOPats
- * group[2].population[2].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HOPats
- * group[2].population[2].code.coding.display = "Hospital Onset COVID-19 Patients"
+* group[2].population[2].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19HOPats
+* group[2].population[2].code.coding.display = "Hospital Onset COVID-19 Patients"
 // * group[2].population[2].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[2].code.text = """Patients currently hospitalized in an inpatient bed with onset of suspected or
+* group[2].population[2].code.text = """Patients currently hospitalized in an inpatient bed with onset of suspected or
 confirmed COVID-19 fourteen or more days after hospital admission due to a condition other than COVID-19"""
- * group[2].population[2].description = """Enter the number of patients hospitalized in an inpatient bed at the time the data is
+* group[2].population[2].description = """Enter the number of patients hospitalized in an inpatient bed at the time the data is
 collected with onset of suspected or confirmed COVID-19 fourteen or more days after hospitalization (admission date = hospital
 day 1). This includes laboratory-confirmed or clinically diagnosed COVID-19 cases."""
- * group[2].population[2].criteria.name = "numC19HOPats"
- * group[2].population[2].criteria.description = "Encounters associated with suspected or confirmed COVID-19 with onset > 14 days after start"
- * group[2].population[2].criteria.language = #text/fhirpath
- * group[2].population[2].criteria.expression = """Condition.where(
+* group[2].population[2].criteria.name = "numC19HOPats"
+* group[2].population[2].criteria.description = "Encounters associated with suspected or confirmed COVID-19 with onset > 14 days after start"
+* group[2].population[2].criteria.language = #text/fhirpath
+* group[2].population[2].criteria.expression = """Condition.where(
    code in %ValueSet-SuspectedOrDiagnosedCOVID19
    and encounter in %numC19HospPats
    and onset + 14 days > encounter.period.start).encounter"""
 
 // Describe the criteria for numC19OverflowPats
- * group[2].population[3].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19OverflowPats
- * group[2].population[3].code.coding.display = "ED/Overflow COVID-19 Patients"
+* group[2].population[3].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19OverflowPats
+* group[2].population[3].code.coding.display = "ED/Overflow COVID-19 Patients"
 // * group[2].population[3].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[3].code.text = "Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed"
- * group[2].population[3].description = """Enter the number of patients with suspected or confirmed COVID-19 who are in the
+* group[2].population[3].code.text = "Patients with suspected or confirmed COVID-19 who are currently in the Emergency Department (ED) or any overflow location awaiting an inpatient bed"
+* group[2].population[3].description = """Enter the number of patients with suspected or confirmed COVID-19 who are in the
 Emergency Department(ED) or any overflow/expansion location awaiting placement in an inpatient bed at the time the data
 is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Overflow locations include any physical
 locations created to accommodate patients include but not limited to 24-hour observation units, hallways, parking lots, or tents."""
- * group[2].population[3].criteria.name = "numC19OverflowPats"
- * group[2].population[3].criteria.description = "An COVID-19 encounter where the active location is an ED or Overflow location"
- * group[2].population[3].criteria.language = #text/fhirpath
- * group[2].population[3].criteria.expression = "%numC19Pats.where(location.where(status='active' and type in %ValueSet-EDorOverflowLocations))"
+* group[2].population[3].criteria.name = "numC19OverflowPats"
+* group[2].population[3].criteria.description = "An COVID-19 encounter where the active location is an ED or Overflow location"
+* group[2].population[3].criteria.language = #text/fhirpath
+* group[2].population[3].criteria.expression = "%numC19Pats.where(location.where(status='active' and type in %ValueSet-EDorOverflowLocations))"
 
 // Describe the criteria for numC19OFMechVentPats
- * group[2].population[4].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19OFMechVentPats
- * group[2].population[4].code.coding.display = "ED/Overflow and Ventilated COVID-19 Patients"
+* group[2].population[4].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19OFMechVentPats
+* group[2].population[4].code.coding.display = "ED/Overflow and Ventilated COVID-19 Patients"
 // * group[2].population[4].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[4].code.text = "Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"
- * group[2].population[4].description = """Enter the number of patients with suspected or confirmed COVID-19 who are in the ED or any overflow/expansion location on a
+* group[2].population[4].code.text = "Patients with suspected or confirmed COVID-19 who currently are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator"
+* group[2].population[4].description = """Enter the number of patients with suspected or confirmed COVID-19 who are in the ED or any overflow/expansion location on a
 mechanical ventilator* at the time the data is collected . This includes patients with laboratory-confirmed or clinically diagnosed COVID-19."""
- * group[2].population[4].criteria.name = "numC19OFMechVentPats"
- * group[2].population[4].criteria.description = "An COVID-19 encounter where the active location is an ED or Overflow location"
- * group[2].population[4].criteria.language = #text/fhirpath
- * group[2].population[4].criteria.expression = "%numC19OverflowPats.intersect(%numC19VentPats)" * group[2].population[5].criteria.name = "numC19Died"
+* group[2].population[4].criteria.name = "numC19OFMechVentPats"
+* group[2].population[4].criteria.description = "An COVID-19 encounter where the active location is an ED or Overflow location"
+* group[2].population[4].criteria.language = #text/fhirpath
+* group[2].population[4].criteria.expression = "%numC19OverflowPats.intersect(%numC19VentPats)" 
+* group[2].population[5].criteria.name = "numC19Died"
 
 // Describe the criteria for numC19Died
- * group[2].population[5].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Died
- * group[2].population[5].code.coding.display = "COVID-19 Patient Deaths"
+* group[2].population[5].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Died
+* group[2].population[5].code.coding.display = "COVID-19 Patient Deaths"
 // * group[2].population[5].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[5].code.text = "Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting."
- * group[2].population[5].description = """Enter the number of patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. This
+* group[2].population[5].code.text = "Patients with suspected or confirmed COVID-19 who died in the hospital, ED or any overflow location on the date for which you are reporting."
+* group[2].population[5].description = """Enter the number of patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location. This
 includes patients with laboratory-confirmed or clinically diagnosed COVID-19. Please enter the count of deaths newly occurred, at the time
 the data is collected instead of the cumulated number of deaths."""
- * group[2].population[5].criteria.name = "numC19Died"
- * group[2].population[5].criteria.description = "All C19 Patients who have died in an encounter during the reporting period."
- * group[2].population[5].criteria.language = #text/fhirpath
- * group[2].population[5].criteria.expression = "%numC19Pats.hospitalization.dispostion in %ValueSet-PatientDied"
+* group[2].population[5].criteria.name = "numC19Died"
+* group[2].population[5].criteria.description = "All C19 Patients who have died in an encounter during the reporting period."
+* group[2].population[5].criteria.language = #text/fhirpath
+* group[2].population[5].criteria.expression = "%numC19Pats.hospitalization.dispostion in %ValueSet-PatientDied"
 
 
 // describe the initial population
- * group[2].population[6].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Pats
- * group[2].population[6].code.coding.display = "All COVID-19 Confirmed or Suspected Patients"
- * group[2].population[6].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
- * group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
- * group[2].population[6].criteria.name = "numC19Pats"
- * group[2].population[6].criteria.description = """Active encounters where the encounter diagnosis is suspected or confirmed COVID-19,
+* group[2].population[6].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19Pats
+* group[2].population[6].code.coding.display = "All COVID-19 Confirmed or Suspected Patients"
+* group[2].population[6].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
+* group[2].population[6].code.text = "Patients with suspected or confirmed COVID-19 in any location."
+* group[2].population[6].criteria.name = "numC19Pats"
+* group[2].population[6].criteria.description = """Active encounters where the encounter diagnosis is suspected or confirmed COVID-19,
  or a Condition of suspected or confirmed COVID-19 was created during that encounter."""
- * group[2].population[6].criteria.language = #text/fhirpath
- * group[2].population[6].criteria.expression = """Encounter.where(clinicalStatus = 'active' and diagnosis.condition.ofType(Condition).code in %ValueSet-SuspectedOrDiagnosedCOVID19)
+* group[2].population[6].criteria.language = #text/fhirpath
+* group[2].population[6].criteria.expression = """Encounter.where(clinicalStatus = 'active' and diagnosis.condition.ofType(Condition).code in %ValueSet-SuspectedOrDiagnosedCOVID19)
  | Encounter.where(clinicalStatus = "active" and Condition.where(code in %ValueSet-SuspectedOrDiagnosedCOVID19).encounter = $this)
  """
- * group[2].population[6].description = """Enter the number of patients in any location at the time the data is collected who have suspected or confirmed
+* group[2].population[6].description = """Enter the number of patients in any location at the time the data is collected who have suspected or confirmed
 COVID-19. This includes the patients with laboratory-confirmed or clinically diagnosed COVID-19.
 Confirmed: A patient with a laboratory confirmed COVID-19 diagnosis
 Suspected: A patient without a laboratory confirmed COVID-19 diagnosis who, in accordance with CDC’s Interim Public Health Guidance
@@ -350,15 +351,15 @@ for Evaluating Persons Under Investigation (PUIs), has signs and symptoms compat
 COVID-19 have developed fever and/or symptoms of acute respiratory illness, such as cough, shortness of breath or myalgia/fatigue)."""
 
 // Describe the criteria for numC19VentPats
- * group[2].population[7].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19VentPats
- * group[2].population[7].code.coding.display = "Ventilated COVID-19 Patients"
+* group[2].population[7].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#numC19VentPats
+* group[2].population[7].code.coding.display = "Ventilated COVID-19 Patients"
 // * group[2].population[7].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#measure-population
- * group[2].population[7].code.text = "Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator."
- * group[2].population[7].criteria.name = "numC19VentPats"
- * group[2].population[7].criteria.description = "A COVID-19 encounter where the patient is ventilated"
- * group[2].population[7].criteria.language = #text/fhirpath
- * group[2].population[7].criteria.expression = "%numC19Pats.where(Device.where(type in %ValueSet-VentilatorDevices and status = active).patient = $this.patient)"
- * group[2].population[7].description = """Enter the number of patients in any location who have suspected or confirmed COVID-19 and are
+* group[2].population[7].code.text = "Patients in any location who have suspected or confirmed COVID-19 and are currently on a ventilator."
+* group[2].population[7].criteria.name = "numC19VentPats"
+* group[2].population[7].criteria.description = "A COVID-19 encounter where the patient is ventilated"
+* group[2].population[7].criteria.language = #text/fhirpath
+* group[2].population[7].criteria.expression = "%numC19Pats.where(Device.where(type in %ValueSet-VentilatorDevices and status = active).patient = $this.patient)"
+* group[2].population[7].description = """Enter the number of patients in any location who have suspected or confirmed COVID-19 and are
 currently on a mechanical ventilator* at the time the data is collected. This includes the patients with laboratory-confirmed or clinically
 diagnosed COVID-19."""
 

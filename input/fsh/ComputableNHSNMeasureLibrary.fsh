@@ -4,18 +4,18 @@ Description: "This library contains references to the value sets used for the Co
 // We aren't automating anything other than patient impact and hospital capacity, this library
 // will be referenced by other NHSN inspired measures but will not be used by them.
 
- * insert SanerDefinitionContent
- * id = "ComputableNHSNMeasureLibrary"
- * name = "ComputableNHSNMeasureLibrary"
- * url = "http://hl7.org/fhir/uv/saner/Library/ComputableNHSNMeasureLibrary"
- * title = "Computable NHSN Patient Impact and Hospital Capacity Measure Library"
- * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
- * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * author.name = "HL7 Public Health Workgroup"
- * author.telecom.system = #email
- * author.telecom.value = "mailto:pher@lists.hl7.org"
- * insert NHSNArtifacts
+* insert SanerDefinitionContent
+* id = "ComputableNHSNMeasureLibrary"
+* name = "ComputableNHSNMeasureLibrary"
+* url = "http://hl7.org/fhir/uv/saner/Library/ComputableNHSNMeasureLibrary"
+* title = "Computable NHSN Patient Impact and Hospital Capacity Measure Library"
+* type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
+* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
+* author.name = "HL7 Public Health Workgroup"
+* author.telecom.system = #email
+* author.telecom.value = "mailto:pher@lists.hl7.org"
+* insert NHSNArtifacts
 
 * content[0].id = "BedLocationOperationalStatus"
 * content[0].url = Canonical(BedLocationOperationalStatus)
