@@ -12,7 +12,8 @@
         {
             "label": "publisher",
             "type": "shell",
-            "command": "_genonce.bat ."
+            "command": "_genonce.bat .",
+            "problemMatcher": []
         }
     ]
 }
