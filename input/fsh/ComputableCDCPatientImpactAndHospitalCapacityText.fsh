@@ -478,9 +478,9 @@ RuleSet: ComputableCDCPatientImpactAndHospitalCapacityText
 
 
    <ul>
-      <li><a href="" title="CDC/NHSN COVID-19 Patient Impact &amp; Hospital Capacity Module Home Page">NHSN COVID-19 Reporting</a></li>
-      <li><a href="" title="Importing COVID-19 Patient Module Denominator data for Patient Safety Component">How to import COVID-19 Summary Data</a></li>
-      <li><a href="" title="Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)">Table of Instructions</a></li>
-      <li><a href="" title="CDC/NHSN COVID-19 Reporting CSV File Template">CSV File Template</a></li>
+      <li><a href="https://www.cdc.gov/nhsn/pdfs/commup/email-covid19-pihc-508.pdf" title="CDC/NHSN COVID-19 Patient Impact &amp; Hospital Capacity Module Home Page">NHSN COVID-19 Reporting</a></li>
+      <li><a href="https://web.archive.org/web/20200407141902/https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf" title="Importing COVID-19 Patient Module Denominator data for Patient Safety Component">How to import COVID-19 Summary Data</a></li>
+      <li><a href="https://www.ohsu.edu/sites/default/files/2020-03/NHSN%20COVID-19%20Patient%20Impact%20and%20Hospital%20Capacity%20Module-%20Data%20Elements....pdf" title="Instructions for Completion of the COVID-19 Patient Impact and Hospital Capacity Module Form (CDC 57.130)">Table of Instructions</a></li>
+      <li><a href="https://www.cdc.gov/nhsn/pdfs/covid19/ltcf/fac-import-csv-508.pdf" title="CDC/NHSN COVID-19 Reporting CSV File Template">CSV File Template</a></li>
    </ul>
 </div>"""
