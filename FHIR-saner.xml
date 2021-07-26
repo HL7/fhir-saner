@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner/2021Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-saner/" defaultVersion="0.1.0" defaultWorkgroup="PHWG" gitUrl="https://github.com/HL7/fhir-saner" url="http://hl7.org/fhir/uv/saner">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner/2021Jan" ciUrl="" defaultVersion="0.1.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-saner" url="http://hl7.org/fhir/uv/saner">
 <version code="0.1.0" url="http://hl7.org/fhir/uv/saner/2021Jan"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
@@ -407,11 +407,11 @@
 <artifact id="CapabilityStatement/MeasureConsumer-ProduceMeasure-Push" key="CapabilityStatement-MeasureConsumer-ProduceMeasure-Push" name="MeasureConsumer-ProduceMeasure-Push"/>
 <artifact id="CapabilityStatement/MeasureConsumer-ProduceMeasure-SupplementalData" key="CapabilityStatement-MeasureConsumer-ProduceMeasure-SupplementalData" name="MeasureConsumer-ProduceMeasure-SupplementalData"/>
 <artifact id="CapabilityStatement/MeasureConsumer-Pull" key="CapabilityStatement-MeasureConsumer-Pull" name="MeasureConsumer-Pull"/>
-<artifact id="CapabilityStatement/MeasureConsumer-Pull-Questionnaire" key="CapabilityStatement-MeasureConsumer-Pull-Questionnaire" name="MeasureConsumer-Pull-Questionnaire"/>
+<artifact deprecated="true" id="CapabilityStatement/MeasureConsumer-Pull-Questionnaire" key="CapabilityStatement-MeasureConsumer-Pull-Questionnaire" name="MeasureConsumer-Pull-Questionnaire"/>
 <artifact id="CapabilityStatement/MeasureConsumer-Push" key="CapabilityStatement-MeasureConsumer-Push" name="MeasureConsumer-Push"/>
 <artifact id="CapabilityStatement/MeasureConsumer-QueryMeasure-CSV-Pull" key="CapabilityStatement-MeasureConsumer-QueryMeasure-CSV-Pull" name="MeasureConsumer-QueryMeasure-CSV-Pull"/>
 <artifact id="CapabilityStatement/MeasureConsumer-QueryMeasure-Pull" key="CapabilityStatement-MeasureConsumer-QueryMeasure-Pull" name="MeasureConsumer-QueryMeasure-Pull"/>
-<artifact id="CapabilityStatement/MeasureConsumer-QueryMeasure-Pull-Questionnaire" key="CapabilityStatement-MeasureConsumer-QueryMeasure-Pull-Questionnaire" name="MeasureConsumer-QueryMeasure-Pull-Questionnaire"/>
+<artifact deprecated="true" id="CapabilityStatement/MeasureConsumer-QueryMeasure-Pull-Questionnaire" key="CapabilityStatement-MeasureConsumer-QueryMeasure-Pull-Questionnaire" name="MeasureConsumer-QueryMeasure-Pull-Questionnaire"/>
 <artifact id="CapabilityStatement/MeasureConsumer-SupplementalData" key="CapabilityStatement-MeasureConsumer-SupplementalData" name="MeasureConsumer-SupplementalData"/>
 <artifact id="StructureDefinition/MeasureCriteria" key="StructureDefinition-MeasureCriteria" name="MeasureCriteria"/>
 <artifact id="CapabilityStatement/MeasureDefinitionConsumer" key="CapabilityStatement-MeasureDefinitionConsumer" name="MeasureDefinitionConsumer"/>
@@ -432,11 +432,11 @@
 <artifact id="CapabilityStatement/MeasureSource-ProduceMeasure-Push" key="CapabilityStatement-MeasureSource-ProduceMeasure-Push" name="MeasureSource-ProduceMeasure-Push"/>
 <artifact id="CapabilityStatement/MeasureSource-ProduceMeasure-SupplementalData" key="CapabilityStatement-MeasureSource-ProduceMeasure-SupplementalData" name="MeasureSource-ProduceMeasure-SupplementalData"/>
 <artifact id="CapabilityStatement/MeasureSource-Pull" key="CapabilityStatement-MeasureSource-Pull" name="MeasureSource-Pull"/>
-<artifact id="CapabilityStatement/MeasureSource-Pull-Questionnaire" key="CapabilityStatement-MeasureSource-Pull-Questionnaire" name="MeasureSource-Pull-Questionnaire"/>
+<artifact deprecated="true" id="CapabilityStatement/MeasureSource-Pull-Questionnaire" key="CapabilityStatement-MeasureSource-Pull-Questionnaire" name="MeasureSource-Pull-Questionnaire"/>
 <artifact id="CapabilityStatement/MeasureSource-Push" key="CapabilityStatement-MeasureSource-Push" name="MeasureSource-Push"/>
 <artifact id="CapabilityStatement/MeasureSource-QueryMeasure-CSV-Pull" key="CapabilityStatement-MeasureSource-QueryMeasure-CSV-Pull" name="MeasureSource-QueryMeasure-CSV-Pull"/>
 <artifact id="CapabilityStatement/MeasureSource-QueryMeasure-Pull" key="CapabilityStatement-MeasureSource-QueryMeasure-Pull" name="MeasureSource-QueryMeasure-Pull"/>
-<artifact id="CapabilityStatement/MeasureSource-QueryMeasure-Pull-Questionnaire" key="CapabilityStatement-MeasureSource-QueryMeasure-Pull-Questionnaire" name="MeasureSource-QueryMeasure-Pull-Questionnaire"/>
+<artifact deprecated="true" id="CapabilityStatement/MeasureSource-QueryMeasure-Pull-Questionnaire" key="CapabilityStatement-MeasureSource-QueryMeasure-Pull-Questionnaire" name="MeasureSource-QueryMeasure-Pull-Questionnaire"/>
 <artifact id="CapabilityStatement/MeasureSource-SupplementalData" key="CapabilityStatement-MeasureSource-SupplementalData" name="MeasureSource-SupplementalData"/>
 <artifact id="CodeSystem/MeasuredValues" key="CodeSystem-MeasuredValues" name="Measured Values in Sample Measures"/>
 <artifact deprecated="true" id="MedicationRequest/MedicationRequest11a" key="MedicationRequest-MedicationRequest11a" name="MedicationRequest11a"/>

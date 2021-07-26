@@ -43,87 +43,36 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * entity.role 1..1 MS
 * entity.role.system = "http://terminology.hl7.org/CodeSystem/object-role"
 
-/*
-//Audit Source (1..1)
-//    not specified
-// * source 1..1 MS
-// * source.site 1..1 MS
-// * source.type 1..1 MS
+Instance: ExAuditEventBase
+InstanceOf: AuditEventBase
+Usage: #example
+Title: "ExAuditEventBase"
+Description: "Example Audit Event following the SANER Base definition illustrating the creation of a MeasureReport."
+* type = #object
+* subtype = #create
+* recorded = "2021-08-09T00:00:35Z"
+* outcome = #0
+* agent[Source].role = #PRIMAUTH
+* agent[Source].who = Reference(X140008)
+* agent[Source].name = "SANER Project automation"
+* agent[Source].requestor = false
 
-Profile:        AuditEventSearch
-Parent:         AuditEventBase
-Title:          "Audit Event Search"
-Description:    "Defines constraints on the AuditEvent Resource to record when a record has been queried."
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* agent[Destination].role = #IRCP
+* agent[Destination].who = Reference(MiDOH)
+* agent[Destination].name = "State DOH"
+* agent[Destination].requestor = false
 
-* type = http://dicom.nema.org/resources/ontology/DCM#110112
-* type.display = "Query"
-* subtype = http://hl7.org/fhir/restful-interaction#search-type
-* subtype.display = "Search"
-* action = #E
-
-* entity.type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity.role = http://terminology.hl7.org/CodeSystem/object-role#24 "Query"
-* entity.query 1..1 MS
-* entity.detail 1..* MS
-
-Profile:        AuditEventRead
-Parent:         AuditEventBase
-Title:          "Audit Event Read"
-Description:    "Defines constraints on the AuditEvent Resource to record when a record has been Read."
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* type = http://dicom.nema.org/resources/ontology/DCM#110106
-* type.display = "Export"
-* subtype = http://hl7.org/fhir/restful-interaction#read
-* subtype.display = "Read"
-* action = #R
-
-* entity.what 1..1 MS
-* entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
-
-Profile:        AuditEventCreate
-Parent:         AuditEventBase
-Title:          "Audit Event Create Profile"
-Description:    "Defines constraints on the AuditEvent Resource to record when a resource has been written."
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-
-* type = http://dicom.nema.org/resources/ontology/DCM#110107
-* type.display = "Import"
-* subtype = http://hl7.org/fhir/restful-interaction#create
-* subtype.display = "Create"
+* entity.role = #3
 * action = #C
+* source.observer = Reference(MiDOH)
+* period.start = 2021-08-09T00:00:01Z
+* period.end = 2021-08-09T00:00:34Z
 
-* entity.what 1..1 MS
-* entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
-
-Profile:        AuditEventUpdate
-Parent:         AuditEventBase
-Title:          "Audit Event Update Profile"
-Description:    "Defines constraints on the AuditEvent Resource to record when a resource has been updated."
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-
-* type = http://dicom.nema.org/resources/ontology/DCM#110107
-* type.display = "Import"
-* subtype = http://hl7.org/fhir/restful-interaction#create
-* subtype.display = "Update"
-* action = #U
-* recorded 1..1 MS
-
-* entity.what 1..1 MS
-* entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
-
-Profile:        AuditEventDelete
-Parent:         AuditEventBase
-Title:          "Audit Event Delete Profile"
-Description:    "Defines constraints on the AuditEvent Resource to record when a resource has been deleted."
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-
-* type = http://dicom.nema.org/resources/ontology/DCM#110105
-* type.display = "DICOM Study Deleted"
-* subtype = http://hl7.org/fhir/restful-interaction#delete
-* subtype.display = "Delete"
-* action = #D
-
-* entity.what 1..1 MS
-* entity.role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
-*/
+Instance: MiDOH
+InstanceOf: Organization
+Usage: #example
+Description: "Michigan State Department of Health"
+* identifier.system = "http://michigan.gov/state-dept-ids"
+* identifier.value = "25"
+* name = "Michigan Health"
+* alias = "Michigan State Department of Health"

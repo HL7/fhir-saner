@@ -7,12 +7,16 @@
             "label": "sushi",
             "type": "shell",
             "command": "sushi .",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "publisher",
             "type": "shell",
-            "command": "_genonce.bat .",
+            "command": ".\\_genonce.bat .",
             "problemMatcher": []
         }
     ]

@@ -1046,6 +1046,8 @@ Description: "Example MeasureReport of CDCPatientImpactAndHospitalCapacity for N
 * date = "2020-04-19"
 * period.start = "2020-04-19"
 * period.end = "2020-04-19"
+* subject.extension[GeoLocation].extension[latitude].valueDecimal = 40.6673906
+* subject.extension[GeoLocation].extension[longitude].valueDecimal = -74.11422
 * group.code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem#Beds
 * group.population.code.coding = MeasuredValues#numTotBeds
 * group.population.code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
