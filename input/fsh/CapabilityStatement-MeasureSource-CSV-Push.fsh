@@ -7,7 +7,7 @@ Defines the additional requirements for the Measure Source implementing the CSV 
 * insert SanerDefinitionContent
 * name = "MeasureSource_CSV_Push"
 * title = "Measure Source implementing the CSV Option and the Push Option."
-* date = "2021-03-26"
+* date = "2021-07-26"
 * kind = #requirements
 * description = "Defines the additional requirements for the Measure Source implementing the CSV Option and the Push Option."
 * format[0] = #xml

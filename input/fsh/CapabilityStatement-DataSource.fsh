@@ -7,7 +7,7 @@ Defines the requirements for the Data Source."""
 * insert SanerDefinitionContent
 * name = "DataSource"
 * title = "Data Source."
-* date = "2021-03-26"
+* date = "2021-07-26"
 * kind = #requirements
 * description = "Defines the requirements for the Data Source."
 * format[0] = #xml

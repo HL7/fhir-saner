@@ -5,7 +5,7 @@ Usage: #definition
 Description: """
 Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter for the given time period, it is updated. Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."""
 * insert SanerDefinitionContent
-
+ 
 * status = #draft
 * kind = #operation
 * code = #report-csv
@@ -13,12 +13,11 @@ Create or update a MeasureReport from the CSV Format. If a report already exists
 * system = false
 * type = false
 * instance = true
-* name = "CreateorUpdateaMeasureReportfromCSVFormat"
-* title = "Create or Update a MeasureReport from CSV Format"
+* name = "CreateorupdateaMeasureReportfromCSVFormat"
+* title = "Create or update a MeasureReport from CSV Format"
 * description = """
- Port from the CSV Format. If a report already exists for the subject and reporter for the given time period it is updated,
- otherwise, a new report is created. See CSV Conversion for details. See [CSV Conversion](CSV_Conversion.html) for details.
- """
+Create or update a MeasureReport from the CSV Format. If a report already exists for the subject and reporter
+for the given time period, it is updated. Otherwise, a new report is created. See [CSV Conversion](CSV_Conversion.html) for details."""
 * url = "http://hl7.org/fhir/uv/saner/OperationDefinition/Measure-report-csv"
 
 * parameter[0].name = #input

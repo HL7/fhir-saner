@@ -994,7 +994,7 @@ between options when applicable are specified in notes.
 
             <xsl:if test='$tx//ig:message[$actor/@id=(@from, @to)]//ig:operation/@resources'>
                 <!--xsl:message>CapabilityStatement-<xsl:value-of select="$name"/></xsl:message-->
-	            <xsl:result-document href="{$dir}../../CapabilityStatement-{$name}.fsh" method="text">
+	            <xsl:result-document href="{$dir}fsh/CapabilityStatement-{$name}.fsh" method="text">
 	                <xsl:value-of select="s:instance($name, 'CapabilityStatementWithSlices',$desc, 'SanerDefinitionContent', null)"/>
 	                <xsl:value-of select="s:string('name',translate($name,'-','_'))"/>
 	                <xsl:value-of select="s:string('title', substring-after($desc, 'for the '))"/>
@@ -1158,7 +1158,7 @@ between options when applicable are specified in notes.
         <xsl:param name='mode'/>
         <xsl:for-each select="$operations[starts-with(@name,'$') and $mode='server']">
             <xsl:variable name='op' select="."/>
-            <xsl:result-document href="{$dir}../../OperationDefinition-{s:opName($op)}.fsh" method="text">
+            <xsl:result-document href="{$dir}fsh/OperationDefinition-{s:opName($op)}.fsh" method="text">
                 <xsl:value-of select="s:instance(s:opName($op), 'OperationDefinition', $op/ig:description, 'SanerDefinitionContent', '')"/>
                 <xsl:text>&#xA;</xsl:text>
                 <xsl:value-of select="s:code('status','draft','')"/>
