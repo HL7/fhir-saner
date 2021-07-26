@@ -1,14 +1,14 @@
 RuleSet: NJExamplesNHSN
-   * status = #complete
-   * type = #summary
-   * measure = "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity"
-   * subject.identifier.system = "https://www.census.gov/geographies"
-   * subject.identifier.value = "34"
-   * subject.reference = "Location/states-NJ"
-   * subject.display = "State of New Jersey"
+* status = #complete
+* type = #summary
+* measure = "http://hl7.org/fhir/uv/saner/Measure/CDCPatientImpactAndHospitalCapacity"
+* subject.identifier.system = "https://www.census.gov/geographies"
+* subject.identifier.value = "34"
+* subject.reference = "Location/states-NJ"
+* subject.display = "State of New Jersey"
 
-   * reporter.reference = "Organization/NJ-DPH"
-   * reporter.display = "New Jersey Department of Public Health"
+* reporter.reference = "Organization/NJ-DPH"
+* reporter.display = "New Jersey Department of Public Health"
 
 Instance: ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity
 InstanceOf: PublicHealthMeasureReport

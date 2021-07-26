@@ -72,8 +72,8 @@ Parent: Expression
 Description: "Constraints on documentation for the evaluation of a Measure"
 * insert SanerStructureDefinitionContent
 
- * extension contains MeasureAlternateCriteria named alternateCriteria 0..1
- * extension[alternateCriteria] ^short = "Other expressions for computing the criterion"
+* extension contains MeasureAlternateCriteria named alternateCriteria 0..1
+* extension[alternateCriteria] ^short = "Other expressions for computing the criterion"
 
 // Name only needs to be present if the expression will be reused
 * name 0..1 MS
@@ -289,32 +289,32 @@ point-in-time
 cumulative
 : Use this when the value being reported is a point-in-time cumulative value over all reports"""
 
- * group.population 0..* MS
- * group.population.code 1..1 MS
- * group.population.code.coding 1..*  MS
- * group.population.code.coding ^short = "The coding gives a 'name' for this population and must be supplied"
- * group.population.code.text ^short = "A human readable description of what this population is"
- * group.population.description 1..1  MS
- * group.population.description ^short = "Human readable instructions for counting or measuring this population"
+* group.population 0..* MS
+* group.population.code 1..1 MS
+* group.population.code.coding 1..*  MS
+* group.population.code.coding ^short = "The coding gives a 'name' for this population and must be supplied"
+* group.population.code.text ^short = "A human readable description of what this population is"
+* group.population.description 1..1  MS
+* group.population.description ^short = "Human readable instructions for counting or measuring this population"
 
- * group.population.criteria only MeasureCriteria
+* group.population.criteria only MeasureCriteria
 
- * group.stratifier 0..*  MS
- * group.stratifier ^short = "A group may have none, some or many strata"
- * group.stratifier.code 1..1  MS
- * group.stratifier.code ^short = "Describes the purpose of this stratifier"
- * group.stratifier.code.coding 0..*  MS
- * group.stratifier.code.coding ^short = "Optional code uniquely identifying the strata"
- * group.stratifier.code.coding.display 1..1  MS
- * group.stratifier.code.coding.display ^short = "Provides a human readable name for the strata"
- * group.stratifier.code.text 1..1  MS
- * group.stratifier.code.text ^short = "Describes the function of the stratifier."
- * group.stratifier.description 1..1  MS
- * group.stratifier.description ^short = "Describes the overall function of the strata."
- * group.stratifier.criteria 1..1  MS
- * group.stratifier.criteria only MeasureCriteria
- * group.stratifier.component 0..0
- * group.stratifier.component ^short = "Strata components are not used"
+* group.stratifier 0..*  MS
+* group.stratifier ^short = "A group may have none, some or many strata"
+* group.stratifier.code 1..1  MS
+* group.stratifier.code ^short = "Describes the purpose of this stratifier"
+* group.stratifier.code.coding 0..*  MS
+* group.stratifier.code.coding ^short = "Optional code uniquely identifying the strata"
+* group.stratifier.code.coding.display 1..1  MS
+* group.stratifier.code.coding.display ^short = "Provides a human readable name for the strata"
+* group.stratifier.code.text 1..1  MS
+* group.stratifier.code.text ^short = "Describes the function of the stratifier."
+* group.stratifier.description 1..1  MS
+* group.stratifier.description ^short = "Describes the overall function of the strata."
+* group.stratifier.criteria 1..1  MS
+* group.stratifier.criteria only MeasureCriteria
+* group.stratifier.component 0..0
+* group.stratifier.component ^short = "Strata components are not used"
 
 * supplementalData.code 1..1
 * supplementalData.code from  http://hl7.org/fhir/ValueSet/resource-types (extensible)

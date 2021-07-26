@@ -1,99 +1,5 @@
-== suppressed messages ==
-# The Terminology Server doesn't know about these codes, but SNOMED and ICD10 do.
-ERROR: C:\Users\kboone\git\fhir-saner\output\test_plan.html#/html/body/div/div/div/div/div/p/a at Line 294, column 5: The link '#todo' for "Update this from Confluence" cannot be resolved (valid targets: 35 targets)
-ERROR: C:\Users\kboone\git\fhir-saner\output\security_considerations.html#/html/body/div/div/div/div/div/p/a at Line 301, column 5: The link '#todo' for "TODO: add auditEvent pattern for client and server for each transaction or processing event." cannot be resolved (valid targets: 24 targets)
-ERROR: Encounter/Encounter1a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter2b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter2c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter3b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter4c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter5a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter6a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter7a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter7b: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter9a: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Encounter/Encounter9c: Encounter.reasonCode[0].coding[0]: Code "U07.1" not found; The code "U07.1" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#U07.1) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#U07.1'
-ERROR: Condition/Condition1a: Condition.code.coding[0]: Unable to find code 870590002 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "870590002" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#870590002) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#870590002'
-ERROR: Condition/Condition12c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition1c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition22c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition2a: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition2b: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition4c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition5a: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition5c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition6a: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition6c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition7a: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition7b: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-ERROR: Condition/Condition9c: Condition.code.coding[0]: Unable to find code 882784691000119100 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200309); The code "882784691000119100" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#882784691000119100) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#882784691000119100'
-
-# Bugs due to recent changes to support searchform.html
-ERROR: C:\Users\kboone\git\fhir-saner\output\searchform.html#/html/body/div/div/a/img/div/div/nav/div/div/ul/li/a at Line 64, column 21: The link 'history.html' for "History" cannot be resolved
-ERROR: C:\Users\kboone\git\fhir-saner\output\searchform.html: The html source does not contain the publish box <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader--> (see note at http://wiki.hl7.org/index.php?title=FHIR_Implementation_Guide_Publishing_Requirements#HL7_HTML_Standards_considerations)
-
-# Manually Verified that it is
-WARNING: PublicHealthMeasureMetadataAttachment.Attachment.contentType: Unable to check if http://hl7.org/fhir/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
-
-# Following FHIR Conventions for OperationDefinition and SearchParameter identifiers
-WARNING: OperationDefinition/MeasureReport-aggregate: OperationDefinition: opd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-WARNING: SearchParameter/SearchParameter-code: SearchParameter: spd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-WARNING: SearchParameter/SearchParameter-definition-text: SearchParameter: spd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-WARNING: SearchParameter/SearchParameter-disposition: SearchParameter: spd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-
-
-# These were drawn from SNOMED CT
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[3]: The code 870518005 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[1]: The code 870519002 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[5]: The code 870520008 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[4]: The code 870521007 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[6]: The code 870522000 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[0]: The code 870592005 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/Remdesivir: ValueSet.compose[0].include[1].concept[2]: The code 870600003 is not valid in the system http://snomed.info/sct
-WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[3]: The code 882784691000119100 is not valid in the system http://snomed.info/sct
-
-# These are all legal ICD-10-CM Codes
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[0]: The code A41.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[4]: The code A41.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[0]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[0]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[1]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[0]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[5]: The code B34.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[1]: The code B97.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[1]: The code B97.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[1]: The code B97.2 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[2]: The code B97.29 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[2]: The code B97.29 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[2]: The code B97.29 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[2]: The code J12.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[6]: The code J12.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[3]: The code J12.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[7]: The code J12.89 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[4]: The code J20.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[8]: The code J20.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[5]: The code J22 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[9]: The code J22 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[6]: The code J40 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[10]: The code J40 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[7]: The code J80 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[11]: The code J80 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[8]: The code J98.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[12]: The code J98.8 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[9]: The code R05 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[13]: The code R05 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[10]: The code R06.0 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[14]: The code R06.0 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[11]: The code R06.02 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[15]: The code R06.02 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedCOVID19Diagnoses: ValueSet.compose[0].include[1].concept[12]: The code R50.9 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[16]: The code R50.9 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/ConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[3]: The code U07.1 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/COVID19DXICD10: ValueSet.compose[0].include[0].concept[3]: The code U07.1 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-WARNING: ValueSet/SuspectedOrConfirmedCOVID19Diagnoses: ValueSet.compose[0].include[0].concept[3]: The code U07.1 is not valid in the system http://hl7.org/fhir/sid/icd-10-cm
-
-
-# These were seperately parsed during connectathon
+== Suppressed Messages ==
+# But it's what we're supposed to use in a measure criteria
 WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[0].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
 WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[1].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
 WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[1].stratifier[1].criteria: The expression language text/fhirpath is not supported, so can't be validated
@@ -104,24 +10,12 @@ WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2]
 WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2].stratifier[2].criteria: The expression language text/fhirpath is not supported, so can't be validated
 WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[2].stratifier[3].criteria: The expression language text/fhirpath is not supported, so can't be validated
 WARNING: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[4].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
+WARNING: Measure/PatientsByRiskFactorWithSupplementalData: Measure.group[0].stratifier[0].criteria: The expression language text/fhirpath is not supported, so can't be validated
 
-# It is
-WARNING: StructureDefinition/PublicHealthMeasureMetadataAttachment: StructureDefinition: Unable to check if http://hl7.org/fhir/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
-
-# NHSN HSLOC Not Yet Supported by tx
-WARNING: ValueSet.where(id = 'HealthcareServiceLocation'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
-WARNING: ValueSet.where(id = 'ICULocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
-WARNING: ValueSet.where(id = 'InpatientLocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
-
-# NHSN HSLOC Not Yet Supported by tx
-WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
-WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
-WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
-
-# Fix these
+# can't find the thing anywhere in my FSH code
 WARNING: StructureDefinition/CapabilityStatementWithSlices: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
 
-# But yet it exists
+# BCP-13 issues
 WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[0].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareSupplyPathway: Measure.group[0].population[2].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
@@ -147,18 +41,6 @@ WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[0].population
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[0].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[1].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[1].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[10].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[10].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[11].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[11].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[12].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[12].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[13].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[13].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[14].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[14].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[15].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
-WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[15].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[2].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[2].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[3].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
@@ -175,18 +57,393 @@ WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[8].population
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[8].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[9].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[9].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[10].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[10].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[11].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[11].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[12].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[12].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[13].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[13].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[14].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[14].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[15].population[0].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
+WARNING: Measure/CDCHealthcareWorkerStaffingPathway: Measure.group[15].population[1].criteria.language: ValueSet http://www.rfc-editor.org/bcp/bcp13.txt not found by validator
 
-# Provide Examples
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventBase'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventCreate'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventDelete'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventRead'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventSearch'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/AuditEventUpdate'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/measure-expectation'): The Implementation Guide contains no examples for this extension
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/MeasurePopulationAlternateCriteria'): The Implementation Guide contains no examples for this extension
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/saner/StructureDefinition/MeasureReportingTiming'): The Implementation Guide contains no examples for this data type profile
+# I like dashes
+WARNING: SearchParameter/SearchParameter-code: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+WARNING: SearchParameter/SearchParameter-definition-text: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+WARNING: SearchParameter/SearchParameter-disposition: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 
-# How to fix?
-WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jiraspec.tmp.xml' (currently in Github) and 'jira.xml' (reflects current IG content)
+# it's a big value set
+WARNING: PublicHealthMeasureMetadataAttachment.Attachment.contentType: Unable to check if http://hl7.org/fhir/uv/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
+WARNING: StructureDefinition/PublicHealthMeasureMetadataAttachment: StructureDefinition: Unable to check if http://hl7.org/fhir/uv/saner/ValueSet/PublicHealthMeasureAttachmentTypes is a proper subset of http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 - base value set is too large to check
 
+# Someday CPT will work
+WARNING: ValueSet/VentilatorProcedures: ValueSet.compose[0].include[0].concept[0]: The code 94002 is not valid in the system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet/VentilatorProcedures: ValueSet.compose[0].include[0].concept[1]: The code 94003 is not valid in the system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet.where(id = 'VentilatorProcedures'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+
+# They say HSLOC is supported, but it's not
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[0]: The code 1005-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[1]: The code 1007-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[2]: The code 1008-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[3]: The code 1009-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[4]: The code 1010-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[5]: The code 1011-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[6]: The code 1012-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[7]: The code 1013-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[8]: The code 1014-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[9]: The code 1015-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[10]: The code 1016-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[11]: The code 1017-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[12]: The code 1018-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[13]: The code 1019-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[14]: The code 1020-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[15]: The code 1025-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[16]: The code 1026-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[17]: The code 1027-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[18]: The code 1028-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[19]: The code 1029-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[20]: The code 1030-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[21]: The code 1031-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[22]: The code 1032-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[23]: The code 1033-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[24]: The code 1034-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[25]: The code 1035-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[26]: The code 1038-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[27]: The code 1039-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[28]: The code 1040-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[29]: The code 1041-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[30]: The code 1042-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[31]: The code 1043-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[32]: The code 1044-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[33]: The code 1045-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[34]: The code 1046-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[35]: The code 1047-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[36]: The code 1048-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[37]: The code 1049-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[38]: The code 1051-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[39]: The code 1052-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[40]: The code 1053-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[41]: The code 1054-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[42]: The code 1055-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[43]: The code 1056-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[44]: The code 1057-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[45]: The code 1058-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[46]: The code 1059-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[47]: The code 1060-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[48]: The code 1061-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[49]: The code 1062-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[50]: The code 1063-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[51]: The code 1064-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[52]: The code 1065-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[53]: The code 1066-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[54]: The code 1067-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[55]: The code 1068-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[56]: The code 1069-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[57]: The code 1070-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[58]: The code 1071-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[59]: The code 1072-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[60]: The code 1073-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[61]: The code 1075-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[62]: The code 1076-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[63]: The code 1077-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[64]: The code 1078-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[65]: The code 1079-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[66]: The code 1080-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[67]: The code 1081-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[68]: The code 1082-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[69]: The code 1083-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[70]: The code 1084-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[71]: The code 1085-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[72]: The code 1086-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[73]: The code 1091-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[74]: The code 1092-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[75]: The code 1093-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[76]: The code 1095-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[77]: The code 1096-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[78]: The code 1097-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[79]: The code 1099-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[80]: The code 1100-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[81]: The code 1102-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[82]: The code 1103-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[83]: The code 1104-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[84]: The code 1105-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[85]: The code 1106-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[86]: The code 1108-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[87]: The code 1109-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[88]: The code 1110-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[89]: The code 1112-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[90]: The code 1113-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[91]: The code 1115-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[92]: The code 1116-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[93]: The code 1117-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[94]: The code 1118-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[95]: The code 1119-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[96]: The code 1120-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[97]: The code 1121-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[98]: The code 1122-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[99]: The code 1123-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[100]: The code 1124-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[101]: The code 1125-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[102]: The code 1126-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[103]: The code 1127-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[104]: The code 1128-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[105]: The code 1129-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[106]: The code 1130-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[107]: The code 1131-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[108]: The code 1132-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[109]: The code 1133-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[110]: The code 1134-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[111]: The code 1136-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[112]: The code 1137-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[113]: The code 1138-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[114]: The code 1139-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[115]: The code 1140-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[116]: The code 1141-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[117]: The code 1142-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[118]: The code 1143-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[119]: The code 1144-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[120]: The code 1145-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[121]: The code 1146-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[122]: The code 1147-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[123]: The code 1148-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[124]: The code 1149-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[125]: The code 1150-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[126]: The code 1151-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[127]: The code 1152-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[128]: The code 1153-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[129]: The code 1154-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[130]: The code 1155-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[131]: The code 1156-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[132]: The code 1157-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[133]: The code 1158-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[134]: The code 1159-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[135]: The code 1160-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[136]: The code 1161-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[137]: The code 1162-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[138]: The code 1164-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[139]: The code 1165-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[140]: The code 1169-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[141]: The code 1170-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[142]: The code 1171-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[143]: The code 1172-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[144]: The code 1174-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[145]: The code 1175-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[146]: The code 1176-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[147]: The code 1178-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[148]: The code 1179-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[149]: The code 1180-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[150]: The code 1181-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[151]: The code 1182-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[152]: The code 1183-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[153]: The code 1184-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[154]: The code 1185-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[155]: The code 1186-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[156]: The code 1187-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[157]: The code 1188-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[158]: The code 1189-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[159]: The code 1190-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[160]: The code 1192-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[161]: The code 1194-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[162]: The code 1195-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[163]: The code 1196-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[164]: The code 1198-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[165]: The code 1200-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[166]: The code 1202-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[167]: The code 1203-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[168]: The code 1204-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[169]: The code 1205-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[170]: The code 1207-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[171]: The code 1208-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[172]: The code 1209-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[173]: The code 1210-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[174]: The code 1211-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[175]: The code 1212-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[176]: The code 1214-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[177]: The code 1217-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[178]: The code 1218-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[179]: The code 1220-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[180]: The code 1221-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[181]: The code 1222-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[182]: The code 1223-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[183]: The code 1224-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[184]: The code 1225-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[185]: The code 1226-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[186]: The code 1227-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[187]: The code 1228-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[188]: The code 1229-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[189]: The code 1230-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[190]: The code 1231-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[191]: The code 1232-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[192]: The code 1233-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[193]: The code 1234-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[194]: The code 1235-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[195]: The code 1236-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[196]: The code 1242-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[197]: The code 1243-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[198]: The code 1244-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[199]: The code 1245-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[200]: The code 1246-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[201]: The code 1247-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[202]: The code 1248-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[203]: The code 1249-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[204]: The code 1254-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[205]: The code 1255-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[206]: The code 1256-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[207]: The code 1257-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[208]: The code 1258-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[209]: The code 1259-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[210]: The code 1260-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[211]: The code 1261-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[212]: The code 1262-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[213]: The code 1268-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet.where(id = 'HealthcareServiceLocation'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[0]: The code 1026-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[1]: The code 1028-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[2]: The code 1027-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[3]: The code 1029-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[4]: The code 1035-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[5]: The code 1223-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[6]: The code 1224-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[7]: The code 1225-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[8]: The code 1034-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[9]: The code 1033-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[10]: The code 1032-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[11]: The code 1233-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[12]: The code 1043-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[13]: The code 1044-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[14]: The code 1045-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[15]: The code 1047-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[16]: The code 1048-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[17]: The code 1039-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[18]: The code 1221-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[19]: The code 1224-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0].concept[20]: The code 1225-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet.where(id = 'ICULocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[0]: The code 1026-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[1]: The code 1028-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[2]: The code 1027-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[3]: The code 1029-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[4]: The code 1035-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[5]: The code 1031-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[6]: The code 1223-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[7]: The code 1224-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[8]: The code 1225-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[9]: The code 1034-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[10]: The code 1033-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[11]: The code 1032-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[12]: The code 1030-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[13]: The code 1025-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[14]: The code 1233-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[15]: The code 1042-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[16]: The code 1043-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[17]: The code 1044-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[18]: The code 1045-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[19]: The code 1046-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[20]: The code 1047-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[21]: The code 1048-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[22]: The code 1049-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[23]: The code 1038-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[24]: The code 1041-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[25]: The code 1039-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[26]: The code 1040-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[27]: The code 1269-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[28]: The code 1198-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[29]: The code 1091-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[30]: The code 1093-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[31]: The code 1092-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[32]: The code 1205-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[33]: The code 1051-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[34]: The code 1052-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[35]: The code 1053-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[36]: The code 1054-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[37]: The code 1055-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[38]: The code 1056-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[39]: The code 1057-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[40]: The code 1171-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[41]: The code 1058-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[42]: The code 1059-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[43]: The code 1060-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[44]: The code 1061-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[45]: The code 1062-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[46]: The code 1063-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[47]: The code 1226-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[48]: The code 1228-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[49]: The code 1229-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[50]: The code 1230-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[51]: The code 1231-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[52]: The code 1232-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[53]: The code 1064-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[54]: The code 1065-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[55]: The code 1066-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[56]: The code 1067-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[57]: The code 1068-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[58]: The code 1069-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[59]: The code 1070-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[60]: The code 1172-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[61]: The code 1071-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[62]: The code 1072-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[63]: The code 1208-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[64]: The code 1073-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[65]: The code 1075-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[66]: The code 1234-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[67]: The code 1235-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[68]: The code 1077-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[69]: The code 1078-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[70]: The code 1079-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[71]: The code 1080-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[72]: The code 1076-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[73]: The code 1081-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[74]: The code 1082-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[75]: The code 1083-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[76]: The code 1084-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[77]: The code 1085-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[78]: The code 1086-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[79]: The code 1099-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[80]: The code 1227-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[81]: The code 1100-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[82]: The code 1210-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[83]: The code 1211-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[84]: The code 1212-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[85]: The code 1236-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[86]: The code 1005-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[87]: The code 1095-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[88]: The code 1203-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[89]: The code 1096-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[90]: The code 1097-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[91]: The code 1165-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[92]: The code 1103-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[93]: The code 1104-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[94]: The code 1105-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[95]: The code 1102-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[96]: The code 1164-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[97]: The code 1254-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[98]: The code 1255-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[99]: The code 1256-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[100]: The code 1257-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[101]: The code 1258-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[102]: The code 1259-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[103]: The code 1260-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[104]: The code 1220-3 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[105]: The code 1221-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[106]: The code 1222-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[107]: The code 1214-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[108]: The code 1217-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[109]: The code 1218-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[110]: The code 1223-7 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[111]: The code 1224-5 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[112]: The code 1225-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[113]: The code 1233-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[114]: The code 1226-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[115]: The code 1228-6 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[116]: The code 1229-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[117]: The code 1230-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[118]: The code 1231-0 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[119]: The code 1232-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[120]: The code 1234-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[121]: The code 1235-1 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[122]: The code 1227-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[123]: The code 1236-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+WARNING: ValueSet.where(id = 'InpatientLocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html

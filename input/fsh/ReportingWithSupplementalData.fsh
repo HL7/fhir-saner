@@ -4,53 +4,53 @@ Title: "Patients By Risk Factor"
 Description: "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data"
 Usage: #example
 * insert SanerDefinitionContent
- * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
- * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
- * author.name = "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)"  // Fully spelled out name (Acronym)
- * author.telecom.system = #email
- * author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
- * insert DailyReporting
- * name = "PatientsByRiskFactor"
- * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalData"
- * title = "COVID-19 Patients By Risk Factor"  // Official name of measure being represented as given by the author
- * insert NHSNArtifacts
- * library = Canonical(ComputableNHSNMeasureLibrary)
+* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
+* author.name = "Centers for Disease Control/National Healthcare Safety Network (CDC/NHSN)"  // Fully spelled out name (Acronym)
+* author.telecom.system = #email
+* author.telecom.value = "mailto:nhsn@cdc.gov"  // adding the url schema so that tooling won't be annoyed.
+* insert DailyReporting
+* name = "PatientsByRiskFactor"
+* url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalData"
+* title = "COVID-19 Patients By Risk Factor"  // Official name of measure being represented as given by the author
+* insert NHSNArtifacts
+* library = Canonical(ComputableNHSNMeasureLibrary)
 
 // COVID-19 Patients
- * group[0].code.coding = MeasureGroupSystem#Encounters
- * group[0].code.coding.display = "Encounters"
- * group[0].code.text = "Hospital COVID-19 Patient Encounters Reporting"
+* group[0].code.coding = MeasureGroupSystem#Encounters
+* group[0].code.coding.display = "Encounters"
+* group[0].code.text = "Hospital COVID-19 Patient Encounters Reporting"
  //* with group[0].extension[groupAtts] do
- * group[0].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#queue-length
- * group[0].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
- * group[0].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
+* group[0].extension[groupAtts].extension[scoring].valueCodeableConcept = http://hl7.org/fhir/uv/saner/CodeSystem/PublicHealthMeasureScoring#queue-length
+* group[0].extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
+* group[0].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
  //** with extension[subject] do
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Encounter
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#398284004
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient in room"
- * group[0].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Patient in room"
- * group[0].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = http://hl7.org/fhir/resource-types#Encounter
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#398284004
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed].display = "Patient in room"
+* group[0].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Patient in room"
+* group[0].extension[groupAtts].extension[rateAggregation].valueString = "point-in-time"
  //* with group[0].population[0] do
  //** with code do
- * group[0].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#confirmedC19Pats
- * group[0].population[0].code.coding.display = "All Confirmed COVID-19 Patients"
- * group[0].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
- * group[0].population[0].code.text = "Patients with confirmed COVID-19 in any location."
- * group[0].population[0].description = """
+* group[0].population[0].code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasuredValues#confirmedC19Pats
+* group[0].population[0].code.coding.display = "All Confirmed COVID-19 Patients"
+* group[0].population[0].code.coding[1] = http://terminology.hl7.org/CodeSystem/measure-population#initial-population
+* group[0].population[0].code.text = "Patients with confirmed COVID-19 in any location."
+* group[0].population[0].description = """
 Active encounters where the encounter diagnosis is suspected or confirmed COVID-19,
 or a Condition of confirmed COVID-19 was created during that encounter.  This includes the patients with laboratory-confirmed
 or clinically diagnosed COVID-19.
 """
 
- * group[0].population[0].criteria.name = "ConfirmedC19Pats"
- * group[0].population[0].criteria.description = """
+* group[0].population[0].criteria.name = "ConfirmedC19Pats"
+* group[0].population[0].criteria.description = """
 This expression finds encounters that were active or finished in the reporting period, and their referenced Patient, Condition
 and Observation resources. It filters these based on cases where Encounter reports a reason or condition in the
 ConfirmedCOVID19Diagnoses value set, or where a positive lab test from the Covid19Labs valueset, or where the patient
 has any such associated Condition or Observation resources in the prior two weeks.
 """
- * group[0].population[0].criteria.language = #text/fhirpath
- * group[0].population[0].criteria.expression = """
+* group[0].population[0].criteria.language = #text/fhirpath
+* group[0].population[0].criteria.expression = """
     findAll('Encounter',
         including('subject','condition','reasonReference'),
         with('status').equalTo('in-progress,finished'),
@@ -88,16 +88,16 @@ has any such associated Condition or Observation resources in the prior two week
       iif($total.subject contains $this.subject, $total, $total | $this )
     )"""
 
- * group[0].stratifier[0].code.text = "By Risk Factor"
- * group[0].stratifier[0].description = "Stratifies the population by Condition/RiskFactor"
- * group[0].stratifier[0].criteria.language = #text/fhirpath
- * group[0].stratifier[0].criteria.description = """
+* group[0].stratifier[0].code.text = "By Risk Factor"
+* group[0].stratifier[0].description = "Stratifies the population by Condition/RiskFactor"
+* group[0].stratifier[0].criteria.language = #text/fhirpath
+* group[0].stratifier[0].criteria.description = """
    Final all conditions for each patient in the AllCOVID19RiskFactors ValueSet
    and stratify by membership in subsets of that value set.  NOTE: A patient
    can belong to multiple strata in this example.
  """
 
- * group[0].stratifier[0].criteria.expression = """
+* group[0].stratifier[0].criteria.expression = """
 	findAll('Condition',
 		for('patient', $this.subject),
 		with('code').in(%AllCOVID19RiskFactors.url),
