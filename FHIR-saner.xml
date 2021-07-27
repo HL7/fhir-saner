@@ -88,6 +88,7 @@
 <artifact deprecated="true" id="Encounter/Encounter9b" key="Encounter-Encounter9b" name="Encounter9b"/>
 <artifact deprecated="true" id="Encounter/Encounter9c" key="Encounter-Encounter9c" name="Encounter9c"/>
 <artifact id="ValueSet/EventContext" key="ValueSet-EventContext" name="Event Context"/>
+<artifact id="AuditEvent/ExAuditEventBase" key="AuditEvent-ExAuditEventBase" name="ExAuditEventBase"/>
 <artifact id="MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity" key="MeasureReport-ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity" name="ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity"/>
 <artifact id="MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting" key="MeasureReport-ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting" name="ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting"/>
 <artifact id="MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity" key="MeasureReport-ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity" name="ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity"/>
@@ -456,6 +457,7 @@
 <artifact deprecated="true" id="MedicationRequest/MedicationRequest18b" key="MedicationRequest-MedicationRequest18b" name="MedicationRequest18b"/>
 <artifact deprecated="true" id="MedicationRequest/MedicationRequest18c" key="MedicationRequest-MedicationRequest18c" name="MedicationRequest18c"/>
 <artifact deprecated="true" id="MedicationRequest/MedicationRequest19c" key="MedicationRequest-MedicationRequest19c" name="MedicationRequest19c"/>
+<artifact id="Organization/MiDOH" key="Organization-MiDOH" name="MiDOH"/>
 <artifact id="Library/NHSNMeasureLibrary" key="Library-NHSNMeasureLibrary" name="NHSNMeasureLibrary"/>
 <artifact id="Organization/NJ-DPH" key="Organization-NJ-DPH" name="NJ-DPH"/>
 <artifact id="ValueSet/NeoplasticCOVID19RiskFactors" key="ValueSet-NeoplasticCOVID19RiskFactors" name="Neoplastic COVID-19 Risk Factors"/>

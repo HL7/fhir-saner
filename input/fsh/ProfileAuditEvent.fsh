@@ -10,9 +10,9 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * period 1..1 MS
 * recorded 1..1 MS
 
-* agent ^slicing.discriminator[0].type = #pattern
+* agent ^slicing.discriminator[0].type = #value
 * agent ^slicing.discriminator[0].path = "role"
-* agent ^slicing.discriminator[1].type = #pattern
+* agent ^slicing.discriminator[1].type = #value
 * agent ^slicing.discriminator[1].path = "requestor"
 * agent ^slicing.rules = #openAtEnd
 // * agent ^slicing.ordered = false   // can be omitted, since false is the default
@@ -48,21 +48,22 @@ InstanceOf: AuditEventBase
 Usage: #example
 Title: "ExAuditEventBase"
 Description: "Example Audit Event following the SANER Base definition illustrating the creation of a MeasureReport."
-* type = #object
-* subtype = #create
+* type = http://terminology.hl7.org/CodeSystem/audit-event-type#object
+* subtype = http://hl7.org/fhir/restful-interaction#create
 * recorded = "2021-08-09T00:00:35Z"
 * outcome = #0
-* agent[Source].role = #PRIMAUTH
+
+* agent[Source].role = http://terminology.hl7.org/CodeSystem/contractsignertypecodes#PRIMAUTH
 * agent[Source].who = Reference(X140008)
 * agent[Source].name = "SANER Project automation"
 * agent[Source].requestor = false
 
-* agent[Destination].role = #IRCP
+* agent[Destination].role = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#IRCP
 * agent[Destination].who = Reference(MiDOH)
 * agent[Destination].name = "State DOH"
 * agent[Destination].requestor = false
 
-* entity.role = #3
+* entity.role = http://terminology.hl7.org/CodeSystem/object-role#3
 * action = #C
 * source.observer = Reference(MiDOH)
 * period.start = 2021-08-09T00:00:01Z

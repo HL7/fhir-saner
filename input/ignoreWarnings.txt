@@ -85,6 +85,9 @@ WARNING: ValueSet/VentilatorProcedures: ValueSet.compose[0].include[0].concept[1
 WARNING: ValueSet.where(id = 'VentilatorProcedures'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 
 # They say HSLOC is supported, but it's not
+WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet/ICULocations: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
 WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[0]: The code 1005-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[1]: The code 1007-4 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0].concept[2]: The code 1008-2 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
