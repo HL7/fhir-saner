@@ -293,6 +293,21 @@ otherwise, adds the encounter to the new $total list.
 To ensure that this works all of the time, the encounters must be sorted in order by most to least recent, but FHIRPath
 lacks a sort() function.
 
+### <a name='measure-alternate-criteria'>Providing an Alternate Evaluation Method for Criteria
+Criteria can be specified using different languages to count the results.  The example above shows a criteria element
+in FHIRPath. To provide an alternate criterion, add the alternate definition to the criteria element as shown below.
+```
+ ** with criteria.extension[MeasureAlternateCriteria].valueExpression do
+ *** name = "NumC19Pats"  // Note: Follow PascalCase conventions for names
+ *** description = """Alternate definition for Active encounters using CQL"""
+ *** language = #text/cql
+ *** expression = "NumberOfCOVID19Patients"
+```
+
+For measures defined in CQL, the language **shall** be text/cql as shown above.
+The expression **shall** be the name of the CQL expression in the CQL statement that computes the value for the measure.
+
+
 ### Stratification
 The use of different strata for this measure helps with the prioritization of additional resource assignments to assist facilities in need, improves accuracy and provides for error detection and resiliency. The count for the overall population of patients with suspected or confirmed COVID-19 in the hospital) must be equal to the sum counts over each stratum.  This provides for additional opportunity for
 error detection by both the sender and the receiver.  It may also help to identify special cases that may not have been included in

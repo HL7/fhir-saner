@@ -1,14 +1,13 @@
-Extension: MeasureExpection
-Id: measure-expectation
+Extension: MeasureExpectation
+Title: "Measure Expectation"
 Description: "Enables definitions to identify components that are required, recommended or optional"
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element
 * ^context[0].expression = "Measure.group"
-* ^context[0].type = #element
-* ^context[0].expression = "Measure.group.population"
-* ^context[0].type = #element
-* ^context[0].expression = "Measure.group.stratifier"
-* ^context[0].type = #element
+* ^context[1].type = #element
+* ^context[1].expression = "Measure.group.population"
+* ^context[2].type = #element
+* ^context[2].expression = "Measure.group.stratifier"
 
 * value[x] only code
 * valueCode 1..1  MS
@@ -93,7 +92,7 @@ Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drools, et cetera)"
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element
-* ^context[0].expression = "Measure.population.criteria"
+* ^context[0].expression = "Measure.group.population.criteria"
 * ^context[1].type = #element
 * ^context[1].expression = "Measure.stratifier.criteria"
 * ^context[2].type = #element

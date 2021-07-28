@@ -2,7 +2,8 @@
 Instance: MeasureComputer
 InstanceOf: CapabilityStatementWithSlices
 Usage: #definition
-Description: "Defines the requirements for the Measure Computer."
+Description: """
+Defines the requirements for the Measure Computer."""
 * insert SanerDefinitionContent
 * name = "MeasureComputer"
 * title = "Measure Computer"

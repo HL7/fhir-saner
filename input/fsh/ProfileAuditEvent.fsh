@@ -22,19 +22,20 @@ Description: "Defines general constraints on the AuditEvent Resource."
            HumanRequestor 0..* MS and
            Destination 1..1 MS
 
-// * agent[Source].role = http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
 * agent[Source].role 1..1 MS
+* agent[Source].role from SourceRoles
 * agent[Source].who 1..1 MS
 * agent[Source].name 1..1 MS
 * agent[Source].requestor = false
 
 * agent[HumanRequestor].role 1..1 MS
+* agent[HumanRequestor].role from SourceOrDestinationRoles
 * agent[HumanRequestor].who 1..1 MS
 * agent[HumanRequestor].name 1..1 MS
 * agent[HumanRequestor].requestor = true
 
-// * agent[Destination].role =  http://dicom.nema.org/resources/ontology/DCM#110152 "Destination Role ID"
 * agent[Destination].role 1..1 MS
+* agent[Destination].role from DestinationRoles
 * agent[Destination].who 1..1 MS
 * agent[Destination].name 1..1 MS
 * agent[Destination].requestor = false
@@ -43,12 +44,45 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * entity.role 1..1 MS
 * entity.role.system = "http://terminology.hl7.org/CodeSystem/object-role"
 
+ValueSet: SourceRoles
+Description: "Roles for communication source in AuditEvent"
+* http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
+* http://dicom.nema.org/resources/ontology/DCM#110155 "Source Media"
+* http://terminology.hl7.org/CodeSystem/contractsignertypecodes#PRIMAUTH	"Primary Author"
+* http://terminology.hl7.org/CodeSystem/contractsignertypecodes#AMENDER	"Amender"
+* http://terminology.hl7.org/CodeSystem/contractsignertypecodes#COAUTH	"Co-author"
+* http://terminology.hl7.org/CodeSystem/contractsignertypecodes#SOURCE	"Source"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#AUT	"Author"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST	"Custodian"
+
+ValueSet: DestinationRoles
+Description: "Roles for communication destination in AuditEvent"
+* http://dicom.nema.org/resources/ontology/DCM#110152 "Destination Role ID"
+* http://dicom.nema.org/resources/ontology/DCM#110154 "Destination Media"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#IRCP	"Information Recipient"
+// Sub-types of Information Recipient
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#NOT	"Ugent Notification Contact"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRCP	"Primary Information Recipient"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REFB	"Referred By"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REFT	"Referred to"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#TRC	"Tracker"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction#AUCG	"Caregiver Information Receiver"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction#AULR	"Legitimate Relationship Information Receiver"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction#AUTM	"Care Team Information Receiver"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction#AUWA	"Work Area Information Receiver"
+
+ValueSet: SourceOrDestinationRoles
+Description: "Roles for human requestors in an AuditEvent"
+* codes from valueset SourceRoles
+* codes from valueset DestinationRoles
+* http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser
+
 Instance: ExAuditEventBase
 InstanceOf: AuditEventBase
 Usage: #example
 Title: "ExAuditEventBase"
 Description: "Example Audit Event following the SANER Base definition illustrating the creation of a MeasureReport."
-* type = http://terminology.hl7.org/CodeSystem/audit-event-type#object
+* type = http://terminology.hl7.org/CodeSystem/audit-event-type#rest
 * subtype = http://hl7.org/fhir/restful-interaction#create
 * recorded = "2021-08-09T00:00:35Z"
 * outcome = #0

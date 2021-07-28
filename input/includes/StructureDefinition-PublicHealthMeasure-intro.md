@@ -158,6 +158,12 @@ Setting the Measure jurisdiction ensures that resources referenced by the Measur
 ### Measure Reporting Period
 A measure **shall** suggest the approrpriate reporting frequency and period using the [ReportingPeriod](StructureDefinition-ReportingPeriod.html] extension.
 
+### Measure Requirements
+A measure may indicate the requirements for sending the content of a measure group, population or stratum within a MeasureReport by
+using the  [MeasureExpection](StructureDefinition-MeasureExpectation.html) extension on the Measure.group, Measure.group.population or Measure.group.stratifier element. The MeasureExpectation
+extension works like the [Expectation extension](https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html) on CapabilityStatement resources,
+but applies to the requirements for the content of a MeasureReport.
+
 ### Stratifiers
 Stratifiers partition a measure so that it counts subsets of the measure population
 within the numerator or other measure population by some attribute that classifies the population.

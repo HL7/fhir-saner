@@ -1,11 +1,12 @@
 This chapter enumerates the FHIR conformance resources used for validating implementations, provides a test
 plan for evaluating actors in this guide, and test data testing implementations.
 
-### Conforming Actors
-A system can declare conformance to this implementation guide by:
 
 <ol>
     <li id='capabilities'><details><summary>Capability Statements</summary><ol>
+		<p>
+			A system can declare conformance to this implementation guide by implementing one of the [defined actors](actors.html)
+			and including the requisite content in the CapabilityStatement from the list below.</p>
            {% include list-simple-capabilitystatements.xhtml %}
         </ol></details>
     </li>

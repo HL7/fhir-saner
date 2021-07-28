@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner/2021Jan" ciUrl="" defaultVersion="0.1.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-saner" url="http://hl7.org/fhir/uv/saner">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/uv/saner/2021Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-saner" defaultVersion="1.0.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/fhir-saner" url="http://hl7.org/fhir/uv/saner">
+<version code="current" url="http://build.fhir.org/ig/HL7/fhir-saner"/>
 <version code="0.1.0" url="http://hl7.org/fhir/uv/saner/2021Jan"/>
+<version code="1.0.0" url="http://hl7.org/fhir/uv/saner"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -60,6 +62,7 @@
 <artifact id="ValueSet/ConfirmedCOVID19Diagnoses" key="ValueSet-ConfirmedCOVID19Diagnoses" name="Confirmed COVID-19 Diagnosis Values"/>
 <artifact id="CapabilityStatement/DataSource" key="CapabilityStatement-DataSource" name="DataSource"/>
 <artifact id="CapabilityStatement/DataSource-ComputeMeasure" key="CapabilityStatement-DataSource-ComputeMeasure" name="DataSource-ComputeMeasure"/>
+<artifact id="ValueSet/DestinationRoles" key="ValueSet-DestinationRoles" name="DestinationRoles"/>
 <artifact id="ValueSet/DiabetesCOVID19RiskFactors" key="ValueSet-DiabetesCOVID19RiskFactors" name="Diabetes COVID-19 Risk Factors"/>
 <artifact id="StructureDefinition/ReportingPeriod" key="StructureDefinition-ReportingPeriod" name="Enables specification of proposed measure reporting"/>
 <artifact deprecated="true" id="Encounter/Encounter1a" key="Encounter-Encounter1a" name="Encounter1a"/>
@@ -391,6 +394,7 @@
 <artifact deprecated="true" id="Location/Location9a" key="Location-Location9a" name="Location9a"/>
 <artifact deprecated="true" id="Location/Location9b" key="Location-Location9b" name="Location9b"/>
 <artifact deprecated="true" id="Location/Location9c" key="Location-Location9c" name="Location9c"/>
+<artifact id="StructureDefinition/MeasureExpectation" key="StructureDefinition-MeasureExpectation" name="Measure Expectation"/>
 <artifact id="CodeSystem/MeasureGroupSystem" key="CodeSystem-MeasureGroupSystem" name="Measure Group System"/>
 <artifact id="ValueSet/MeasureGroups" key="ValueSet-MeasureGroups" name="Measure Groups"/>
 <artifact id="ValueSet/MeasurePopulations" key="ValueSet-MeasurePopulations" name="Measure Populations"/>
@@ -419,7 +423,7 @@
 <artifact id="CapabilityStatement/MeasureDefinitionConsumer-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionConsumer-QueryMeasureDefinition" name="MeasureDefinitionConsumer-QueryMeasureDefinition"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource" key="CapabilityStatement-MeasureDefinitionSource" name="MeasureDefinitionSource"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionSource-QueryMeasureDefinition" name="MeasureDefinitionSource-QueryMeasureDefinition"/>
-<artifact id="StructureDefinition/measure-expectation" key="StructureDefinition-measure-expectation" name="MeasureExpection"/>
+<artifact deprecated="true" id="StructureDefinition/measure-expectation" key="StructureDefinition-measure-expectation" name="MeasureExpection"/>
 <artifact deprecated="true" id="StructureDefinition/MeasureGroupAttributes" key="MeasureGroupAttributes" name="MeasureGroupAttributes"/>
 <artifact deprecated="true" id="MeasurePopulationAlternateCriteria" key="MeasurePopulationAlternateCriteria" name="MeasurePopulationAlternateCriteria"/>
 <artifact id="OperationDefinition/MeasureReport-aggregate" key="OperationDefinition-MeasureReport-aggregate" name="MeasureReport-aggregate"/>
@@ -554,6 +558,8 @@
 <artifact id="SearchParameter/SearchParameter-disposition" key="SearchParameter-SearchParameter-disposition" name="Search by hospitalization.dispositionCode in Encounters"/>
 <artifact id="ValueSet/SickleCellCOVID19RiskFactors" key="ValueSet-SickleCellCOVID19RiskFactors" name="Sickle Cell COVID-19 Risk Factors"/>
 <artifact id="CodeSystem/MeasurePopulationSystem" key="CodeSystem-MeasurePopulationSystem" name="Situational Awareness Measure Populations"/>
+<artifact id="ValueSet/SourceOrDestinationRoles" key="ValueSet-SourceOrDestinationRoles" name="SourceOrDestinationRoles"/>
+<artifact id="ValueSet/SourceRoles" key="ValueSet-SourceRoles" name="SourceRoles"/>
 <artifact deprecated="true" id="StructureDefinition/saner-supporting-device" key="SupportingDevice" name="SupportingDevice"/>
 <artifact id="ValueSet/SuspectedOrConfirmedCOVID19Diagnoses" key="ValueSet-SuspectedOrConfirmedCOVID19Diagnoses" name="Suspected Or Diagnosed COVID-19"/>
 <artifact id="ValueSet/SuspectedCOVID19Diagnoses" key="ValueSet-SuspectedCOVID19Diagnoses" name="SuspectedCOVID19Diagnoses"/>

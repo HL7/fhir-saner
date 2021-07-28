@@ -4,7 +4,7 @@ Title: "Computable CDC Patient Impact and Hospital Capacity"
 Description: "This measure demonstrates automated reporting on bed availability and use at a facility location based on CDC/NHSN reporting requirements."
 Usage: #example
 * insert SanerDefinitionContent
-// This doesn't work yet due to newline removal >> 
+// This doesn't work yet due to newline removal >>
 * insert ComputableCDCPatientImpactAndHospitalCapacityText
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
@@ -116,6 +116,11 @@ in the prior two weeks.
           $total, $total | $this
       )
     )"""
+
+* group[0].population[0].criteria.extension[MeasureAlternateCriteria].valueExpression.name = "NumC19Pats"
+* group[0].population[0].criteria.extension[MeasureAlternateCriteria].valueExpression.language = #text/cql
+* group[0].population[0].criteria.extension[MeasureAlternateCriteria].valueExpression.description = "Alternate definition for Active encounters using CQL"
+* group[0].population[0].criteria.extension[MeasureAlternateCriteria].valueExpression.expression = "NumberOfCOVID19Patients"
 
 // Technically, this should be done by stratifier.component
 * group[0].stratifier[0].code.text = "By Location and Ventilator Status"
@@ -404,6 +409,7 @@ Computes the cumulative total from the prior measure report and the number of ne
     """
 
 // Ventiltors
+* group[3].extension[MeasureExpectation].valueCode = http://terminology.hl7.org/CodeSystem/conformance-expectation#SHOULD
 * group[3].code.coding = MeasureGroupSystem#Ventilators
 * group[3].code.coding.display = "Ventilators"
 * group[3].code.text = "Ventilator Reporting"

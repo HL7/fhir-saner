@@ -50,7 +50,7 @@ described by this guide.
 
 
 ### Supporting Extensions<a name="extensions"></a>
-* [Measure Expectation](StructureDefinition-measure-expectation.html) defines an extension
+* [Measure Expectation](StructureDefinition-MeasureExpectation.html) defines an extension
   that allows parts of a defined measure to be marked as optional or required.
 
 * [Reporting Period](StructureDefinition-ReportingPeriod.html) defines an extension enabling

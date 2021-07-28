@@ -354,7 +354,7 @@ Public health or other agencies may define a minimum set of values that are to b
 A measure may contain sections for reporting that are either not appropriate or not applicable for all settings. In order to pass FHIR Validation, a MeasureReport that references a Measure must however, include all components of the measure.  At the time of this publication, these constraints are hard coded into FHIR Validation tools, and are not generally available in computable form. When reporting these elements, the [data-absent-reason](https://www.hl7.org/fhir/extension-data-absent-reason.html) extension can be used in the MeasureReport resource for these elements to indicate that they are not available.
 
 To enable measure developers to specify which measure components are required, recommended or optional
-this IG defines the [Measure Expectation](StructureDefinition-measure-expectation.html) extension. This
+this IG defines the [Measure Expectation](StructureDefinition-MeasureExpectation.html) extension. This
 extension operates identically to the [expectation](https://www.hl7.org/fhir/extension-capabilitystatement-expectation.html)
 extension, but can be applied to Measure resources.
 
