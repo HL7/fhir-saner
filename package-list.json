@@ -24,7 +24,7 @@
     {
       "version": "1.0.0",
       "date": "TBA",
-      "desc": "Stnandard for Trial Use 1 Release",
+      "desc": "Standard for Trial Use 1 Release",
       "path": "http://hl7.org/fhir/uv/saner",
       "status": "trial-use",
       "sequence": "STU 1",
