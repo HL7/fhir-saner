@@ -436,7 +436,7 @@ Description: "Codes used to identify that a patient has died"
 ValueSet:    Covid19Labs
 Title:       "COVID-19 Diagnostic Test"
 Description: "Codes for COVID-19 Diagnostic Tests"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at LOINC/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 
 * codes from valueset SARSCoV2Labs // Day 2: SARSCoV2GeneticLabs
 

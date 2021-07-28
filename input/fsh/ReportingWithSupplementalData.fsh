@@ -249,7 +249,7 @@ has any such associated Condition or Observation resources in the prior two week
 ValueSet:    VTEReports
 Title:       "Codes for reports about VTE Diagnosics"
 Description: "Codes identifying Diagnostics tests or results for VTE"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at LOINC/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LOINC#36850-6 "MRA Lower extremity veins - right WO and W contrast IV"
 * LOINC#36416-6 "MRA Lower extremity veins WO and W contrast IV"
 * LOINC#69162-6 "MRA Pulmonary artery - bilateral W contrast IA"
