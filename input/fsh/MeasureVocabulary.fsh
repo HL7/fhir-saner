@@ -296,6 +296,7 @@ Description: "Codes used for inpatient locations"
 * HSLOC#1235-1  "Oncology Pediatric General Hematology-Oncology Ward"
 * HSLOC#1227-8  "Oncology Step Down Unit"
 * HSLOC#1236-9  "Oncology  Mixed Acuity Unit (all ages)"
+
 ValueSet:    ICULocations
 Title:       "ICU Locations"
 Description: "Codes used for ICU locations"
@@ -328,6 +329,7 @@ https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"""
 ValueSet:    VentilatorDevices
 Title:       "Ventilator Devices"
 Description: "Codes used for Ventilator Devices"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#706172005 "Ventilator"
 * SCT#257463002 "Ventilator outlet"
 
@@ -351,6 +353,9 @@ Description: "Codes used to report ventilation activity"
 ValueSet:    VentilatorProcedures
 Title:       "Ventilator Procedures"
 Description: "Codes used to report a ventilation procedure"
+* ^copyright = """Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
+
+This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"""
 * CPT#94002	"Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing; hospital inpatient/observation, initial day"
 * CPT#94003 "Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing; hospital inpatient/observation, each subsequent day"
 * SCT#26763009 "Controlled ventilation procedure and therapy, initiation and management (procedure)"
