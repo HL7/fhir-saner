@@ -53,22 +53,24 @@ In this guide, the Adapter component is implemented by the [Measure Intermediary
 Several off the shelf FHIR Server components exist, which can be stood up in a data center or in the cloud to provide functionality that supports the FHIR Project. HL7 offers a page filled with [Open Source FHIR Servers](https://wiki.hl7.org/Open_Source_FHIR_implementations) (and client) implementation software.
 
 The figure below shows a FHIR Server acting as an Intermediary between a Hospital and Public Health
+
 <div>
 {%include FHIRServer.svg%}
 </div>
-<!-- ![FHIR Server](FHIRServer.svg) -->
+
+
 
 However, a Hospital could simply configure its own FHIR Server, and Public Health could then pull the data they need from it.
 <div>
 {%include PublicHealthPullFromHospital.svg%}
 </div>
-<!-- ![PublicHealthPullFromHospital](PublicHealthPullFromHospital.svg) -->
+
 
 Or, Public Health can configure its own FHIR Server, and a Hospital can push the data to it.
 <div>
 {%include HospitalPushToPublicHealth.svg%}
 </div>
-<!-- ![HospitalPushToPublicHealth](HospitalPushToPublicHealth.svg) -->
+
 
 ### External Storage
 Deployments can also use external storage, for example a file system, message queue, network or cloud storage, SFTP, or even Direct Messaging
@@ -76,7 +78,7 @@ to exchange data.  In the figure below, a hospital pushes data to its own extern
 <div>
 {%include PublicHealthPullFromHospitalStorage.svg%}
 </div>
-<!-- ![Hospital Pushes To its own External Storage](PublicHealthPullFromHospitalStorage.svg) -->
+
 
 
 But a hospital might as easily push data to public health's external storage system.
@@ -84,7 +86,7 @@ But a hospital might as easily push data to public health's external storage sys
 <div>
 {%include HospitalPushToPublicHealthStorage.svg%}
 </div>
-<!-- ![Hospital Pushes To Public Health Agency's External Storage](HospitalPushToPublicHealthStorage.svg) -->
+
 
 
 ### Deployment
@@ -97,7 +99,7 @@ The following diagrams depict several different deployments with different respo
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-0.svg%}
 </div>
-<!-- ![Hospital Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-0.svg) -->
+
 
 
 #### Middle of the Road
@@ -105,7 +107,7 @@ The following diagrams depict several different deployments with different respo
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-1.svg%}
 </div>
-<!-- ![Middle of the Road](HospitalPushToExternalStorageAdaptedToPullAPI-1.svg) -->
+
 
 
 #### Public Health Supported Infrastructure
@@ -113,4 +115,4 @@ The following diagrams depict several different deployments with different respo
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-2.svg%}
 </div>
-<!-- ![Public Health Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-2.svg) -->
+
