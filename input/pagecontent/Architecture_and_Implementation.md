@@ -80,6 +80,7 @@ to exchange data.  In the figure below, a hospital pushes data to its own extern
 
 
 But a hospital might as easily push data to public health's external storage system.
+
 <div>
 {%include HospitalPushToPublicHealthStorage.svg%}
 <div>
@@ -92,21 +93,24 @@ System components are designed such that they can be individually deployed and c
 The following diagrams depict several different deployments with different responsibilities owned by a Hospital or Public Health Agency
 
 #### Hospital Supported Infrastructure
+
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-0.svg%}
-<div>
+</div>
 <!-- ![Hospital Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-0.svg) -->
 
 
 #### Middle of the Road
+
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-1.svg%}
-<div>
+</div>
 <!-- ![Middle of the Road](HospitalPushToExternalStorageAdaptedToPullAPI-1.svg) -->
 
 
 #### Public Health Supported Infrastructure
+
 <div>
 {%include HospitalPushToExternalStorageAdaptedToPullAPI-2.svg%}
-<div>
+</div>
 <!-- ![Public Health Supported Infrastructure](HospitalPushToExternalStorageAdaptedToPullAPI-2.svg) -->
