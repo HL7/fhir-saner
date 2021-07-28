@@ -55,19 +55,19 @@ Several off the shelf FHIR Server components exist, which can be stood up in a d
 The figure below shows a FHIR Server acting as an Intermediary between a Hospital and Public Health
 <div>
 {%include FHIRServer.svg%}
-<div>
+</div>
 <!-- ![FHIR Server](FHIRServer.svg) -->
 
 However, a Hospital could simply configure its own FHIR Server, and Public Health could then pull the data they need from it.
 <div>
 {%include PublicHealthPullFromHospital.svg%}
-<div>
+</div>
 <!-- ![PublicHealthPullFromHospital](PublicHealthPullFromHospital.svg) -->
 
 Or, Public Health can configure its own FHIR Server, and a Hospital can push the data to it.
 <div>
 {%include HospitalPushToPublicHealth.svg%}
-<div>
+</div>
 <!-- ![HospitalPushToPublicHealth](HospitalPushToPublicHealth.svg) -->
 
 ### External Storage
@@ -75,7 +75,7 @@ Deployments can also use external storage, for example a file system, message qu
 to exchange data.  In the figure below, a hospital pushes data to its own external storage, and public health pulls data from it.
 <div>
 {%include PublicHealthPullFromHospitalStorage.svg%}
-<div>
+</div>
 <!-- ![Hospital Pushes To its own External Storage](PublicHealthPullFromHospitalStorage.svg) -->
 
 
@@ -83,7 +83,7 @@ But a hospital might as easily push data to public health's external storage sys
 
 <div>
 {%include HospitalPushToPublicHealthStorage.svg%}
-<div>
+</div>
 <!-- ![Hospital Pushes To Public Health Agency's External Storage](HospitalPushToPublicHealthStorage.svg) -->
 
 
