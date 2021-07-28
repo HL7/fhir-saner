@@ -10,7 +10,9 @@ It defines the query parameters that the actors **shall** and **should** support
 
 
 ### Actors Roles
+<div>
 {% include transaction-3-uc.svg%}
+</div>
 
 **Figure 2.3-1: Query Measure Definition Use Case Diagram**
 
@@ -23,7 +25,7 @@ It defines the query parameters that the actors **shall** and **should** support
         <tr><td><a href="actors.html#measure-definition-consumer">Measure Definition Consumer</a></td>
 <td>Queries for available measures and components.</td>
 </tr>
-        
+
 </tbody>
 </table>
 
@@ -34,16 +36,18 @@ It defines the query parameters that the actors **shall** and **should** support
 <thead><tr><th>Standard</th><th>Name</th></tr></thead>
 <tbody>
             <tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-        
+
             <tr><td>RFC-7230</td><td><a href='https://ietf.org/rfc/rfc7230.html'>Hypertext Transfer Protocol - HTTP/1.1</a></td></tr>
-        
+
             <tr><td>NDJSON</td><td><a href='http://ndjson.org/'>Newline Delimited JSON</a></td></tr>
-        
+
 </tbody>
 </table>
 
 ### Interactions
-        {% include transaction-3-seq.svg%}
+<div>
+{% include transaction-3-seq.svg%}
+</div>
 
 **Figure 2.3-2: Query Measure Definition Interactions**
 
@@ -196,7 +200,7 @@ Accept:=xml|json|text/xml|application/json|application/xml|application/xml+fhir|
 </tbody>
 </table>
 
-        
+
 </li>
 
 <li>
@@ -283,7 +287,7 @@ _include:iterate
 </tbody>
 </table>
 
-        
+
 </li>
 
 <li>
@@ -338,7 +342,7 @@ _count
 </tbody>
 </table>
 
-        
+
 </li>
 
 </ol>
@@ -408,7 +412,7 @@ _id
 </tbody>
 </table>
 
-        
+
 </li>
 
 <li>
@@ -463,7 +467,7 @@ url
 </tbody>
 </table>
 
-        
+
 </li>
 
 </ol>
@@ -646,7 +650,7 @@ code:in
 </tbody>
 </table>
 
-        
+
 </li>
 
 </ol>

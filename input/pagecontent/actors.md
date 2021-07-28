@@ -6,7 +6,9 @@ involved in the SANER
 Profile and the relevant transactions between them.
 
 
+<div>
 {% include ActorsAndTransactions.svg%}
+</div>
 
 **Figure 3-1: SANER Actor Diagram**
 
@@ -28,13 +30,13 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
 </tr>
 </thead>
 <tbody>
-                
+
 <tr>
-                        
+
 <td rowspan="2">
 <a href="#measure-source">Measure Source</a>
 </td>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a>
@@ -43,12 +45,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a>
@@ -57,16 +59,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="3">
 <a href="#measure-consumer">Measure Consumer</a>
 </td>
-                        
+
 <td>
 <a href='transaction-5.html'>
                         Communicate Results [REPORT-TX]</a>
@@ -75,9 +77,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a>
@@ -86,12 +88,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a>
@@ -100,16 +102,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="9">
 <a href="#measure-intermediary">Measure Intermediary</a>
 </td>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Source</i>
@@ -118,12 +120,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i>
@@ -132,12 +134,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-5.html'>
                         Communicate Results [REPORT-TX]</a><br/><i>As Measure Consumer</i>
@@ -146,9 +148,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Consumer</i>
@@ -157,12 +159,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Consumer</i>
@@ -171,12 +173,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i>
@@ -185,12 +187,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i>
@@ -199,12 +201,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i>
@@ -213,12 +215,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i>
@@ -227,16 +229,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="1">
 <a href="#measure-definition-source">Measure Definition Source</a>
 </td>
-                        
+
 <td>
 <a href='transaction-3.html'>
                         Query Measure Definition [PULL-MX]</a>
@@ -245,13 +247,13 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="1">
 <a href="#measure-definition-consumer">Measure Definition Consumer</a>
 </td>
-                        
+
 <td>
 <a href='transaction-3.html'>
                         Query Measure Definition [PULL-MX]</a>
@@ -260,13 +262,13 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="7">
 <a href="#measure-computer">Measure Computer</a>
 </td>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Source</i>
@@ -275,12 +277,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i>
@@ -289,12 +291,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 2</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-3.html'>
                         Query Measure Definition [PULL-MX]</a><br/><i>As Measure Definition Consumer</i>
@@ -303,9 +305,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-3.html'>
                         Query Measure Definition [PULL-MX]</a><br/><i>As Measure Computer</i>
@@ -314,9 +316,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-4.html'>
                         Compute Measure [COMPUTE-MX]</a><br/><i>As Measure Computer</i>
@@ -325,9 +327,9 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-1.html'>
                         Query Measure [PULL-TX]</a><br/><i>As Measure Computer</i>
@@ -336,12 +338,12 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 1</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td>
 <a href='transaction-2.html'>
                         Produce Measure [PUSH-TX]</a><br/><i>As Measure Computer</i>
@@ -350,16 +352,16 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         C
 
                                 <sup> 3</sup>
-                            
+
 </td>
 </tr>
-                    
+
 <tr>
-                        
+
 <td rowspan="1">
 <a href="#data-source">Data Source</a>
 </td>
-                        
+
 <td>
 <a href='transaction-4.html'>
                         Compute Measure [COMPUTE-MX]</a>
@@ -368,11 +370,11 @@ Table 3-1: SANER Implementation Guide - Actors and Transactions
                         R
 </td>
 </tr>
-                    
+
 </tbody>
 </table>
-        
-        
+
+
 **Notes:**
 
 1. This transaction is required when the actor implements the [Pull Option](#pull-option).
@@ -577,70 +579,70 @@ between options when applicable are specified in notes.
         </tr>
     </thead>
     <tbody>
-        
+
                 <tr>
-                
+
                     <td rowspan='4'>Measure Source</td>
-                
+
                 <td><a href="#csv-option">CSV Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#supplemental-data-option">Supplemental Data Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                     <td rowspan='4'>Measure Consumer</td>
-                
+
                 <td><a href="#csv-option">CSV Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
-            
+
                 <tr>
-                
+
                 <td><a href="#supplemental-data-option">Supplemental Data Option</a></td>
                 </tr>
-            
+
                 <tr><td>Measure Intermediary</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
                 <tr><td>Measure Definition Source</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
                 <tr><td>Measure Definition Consumer</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
                 <tr><td>Measure Computer</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
                 <tr><td>Data Source</td>
                 <td><i>No Options Defined</i></td></tr>
-            
+
     </tbody>
 </table>
 
-        
+
 The options in this guide are describe in more detail the sections below.
 
 #### CSV Option

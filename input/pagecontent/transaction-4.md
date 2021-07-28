@@ -11,7 +11,9 @@ diagnostics or error recovery.
 
 
 ### Actors Roles
+<div>
 {% include transaction-4-uc.svg%}
+</div>
 
 **Figure 2.4-1: Compute Measure Use Case Diagram**
 
@@ -30,7 +32,7 @@ diagnostics or error recovery.
         <tr><td><a href="actors.html#data-source">Data Source</a></td>
 <td>Responds to queries for data used to compute measures or collect supplemental data.</td>
 </tr>
-        
+
 </tbody>
 </table>
 
@@ -41,11 +43,11 @@ diagnostics or error recovery.
 <thead><tr><th>Standard</th><th>Name</th></tr></thead>
 <tbody>
             <tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-        
+
             <tr><td>RFC-7230</td><td><a href='https://ietf.org/rfc/rfc7230.html'>Hypertext Transfer Protocol - HTTP/1.1</a></td></tr>
-        
+
             <tr><td>NDJSON</td><td><a href='http://ndjson.org/'>Newline Delimited JSON</a></td></tr>
-        
+
 </tbody>
 </table>
 
