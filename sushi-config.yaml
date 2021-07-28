@@ -44,7 +44,7 @@ parameters:
   usage-stats-opt-out: true
   logging: progress
 copyrightYear: 2020+
-releaseLabel: STU Ballot
+releaseLabel: STU Release
 
 pages:
   index.md:
