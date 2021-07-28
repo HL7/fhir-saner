@@ -342,7 +342,7 @@ Description: "This Value Set identifies Lab tests related to detection of curren
 * ^status = #active
 * ^date = "2020-04-17T01:00:20-04:00"
 * ^publisher = "MITRE Steward"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at LOINC/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LOINC#94307-6 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by Nucleic acid amplification using CDC primer-probe set N1"
 * LOINC#94308-4 "SARS-CoV-2 (COVID-19) N gene [Presence] in Unspecified specimen by Nucleic acid amplification using CDC primer-probe set N2"
 * LOINC#94309-2 "SARS-CoV-2 (COVID-19) RNA [Presence] in Unspecified specimen by NAA with probe detection"
