@@ -83,6 +83,7 @@ WARNING: StructureDefinition/PublicHealthMeasureMetadataAttachment: StructureDef
 WARNING: ValueSet/VentilatorProcedures: ValueSet.compose[0].include[0].concept[0]: The code 94002 is not valid in the system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet/VentilatorProcedures: ValueSet.compose[0].include[0].concept[1]: The code 94003 is not valid in the system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'VentilatorProcedures'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet/VentilatorProcedures: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
 
 # They say HSLOC is supported, but it's not
 WARNING: ValueSet/HealthcareServiceLocation: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
