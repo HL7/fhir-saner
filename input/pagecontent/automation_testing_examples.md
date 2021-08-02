@@ -28,5 +28,3 @@ automate computation from data available via a FHIR Server.
   defines a computable measure that is aligned with the reporting previously required by the
   [National Healthcare Safety Network (CDC/NHSN)](https://www.cdc.gov/nhsn/index.html) using the COVID-19 Patient Impact and
   Hospital Capacity module.
-
-Test data for the set can be found at https://github.com/HL7/fhir-saner/tree/master/testcasedata
