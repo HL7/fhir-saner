@@ -159,7 +159,7 @@ pages:
       title: Creating the Ventilator Availability Group
       generation: markdown
     measure_group_beds.md:
-      title: Creating the Bed Avaiability Group
+      title: Creating the Bed Availability Group
       generation: markdown
     measure_library.md:
       title: Sample Measure Library
