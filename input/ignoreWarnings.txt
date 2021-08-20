@@ -451,3 +451,53 @@ WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[121
 WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[122]: The code 1227-8 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 WARNING: ValueSet/InpatientLocations: ValueSet.compose[0].include[0].concept[123]: The code 1236-9 is not valid in the system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
 WARNING: ValueSet.where(id = 'InpatientLocations'): Error from server: Unable to provide support for code system https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+
+# Informational Messages
+INFORMATION: CodeSystem/IHE-ADX-agerange: CodeSystem.description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: ImplementationGuide/hl7.fhir.uv.saner: ImplementationGuide.definition.resource[64].description: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.definition[0]: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: Measure/ComputableCDCPatientImpactAndHospitalCapacity: Measure.group[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
+INFORMATION: MeasureReport/ExampleNJ-20200404-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200404-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200405-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200405-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200406-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200406-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200407-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200407-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200408-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200408-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200409-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200409-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200410-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200410-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200411-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200412-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200412-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200413-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200413-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200414-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200414-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200415-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200415-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200416-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200416-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200417-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200417-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200418-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200419-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200419-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200420-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200420-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200421-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200421-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200422-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200422-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200423-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200423-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+INFORMATION: MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked

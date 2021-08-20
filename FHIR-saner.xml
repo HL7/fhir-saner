@@ -3,6 +3,7 @@
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-saner"/>
 <version code="0.1.0" url="http://hl7.org/fhir/uv/saner/2021Jan"/>
 <version code="1.0.0" url="http://hl7.org/fhir/uv/saner"/>
+<version code="0.0.1" deprecated="true"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -136,7 +137,7 @@
 <artifact id="MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting" key="MeasureReport-ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting" name="ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting"/>
 <artifact id="MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity" key="MeasureReport-ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity" name="ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity"/>
 <artifact id="MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting" key="MeasureReport-ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting" name="ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting"/>
-<artifact id="StructureDefinition/GeoLocation" key="StructureDefinition-GeoLocation" name="Extension Attributes to associate with a Location Reference to simplify Geographic search"/>
+<artifact id="StructureDefinition/GeoLocation" key="StructureDefinition-GeoLocation-Extension" name="Extension Attributes to associate with a Location Reference to simplify Geographic search"/>
 <artifact id="Measure/FEMADailyHospitalCOVID19Reporting" key="Measure-FEMADailyHospitalCOVID19Reporting" name="FEMA Laboratory Orders and Results Daily Increase Reporting"/>
 <artifact id="Library/FEMAMeasureLibrary" key="Library-FEMAMeasureLibrary" name="FEMAMeasureLibrary"/>
 <artifact deprecated="true" id="MeasureReport/FHIR-102" key="MeasureReport-FHIR-102" name="FHIR-102"/>
@@ -394,7 +395,7 @@
 <artifact deprecated="true" id="Location/Location9a" key="Location-Location9a" name="Location9a"/>
 <artifact deprecated="true" id="Location/Location9b" key="Location-Location9b" name="Location9b"/>
 <artifact deprecated="true" id="Location/Location9c" key="Location-Location9c" name="Location9c"/>
-<artifact id="StructureDefinition/MeasureExpectation" key="StructureDefinition-MeasureExpectation" name="Measure Expectation"/>
+<artifact id="StructureDefinition/MeasureExpectation" key="StructureDefinition-measure-expectation" name="Measure Expectation"/>
 <artifact id="CodeSystem/MeasureGroupSystem" key="CodeSystem-MeasureGroupSystem" name="Measure Group System"/>
 <artifact id="ValueSet/MeasureGroups" key="ValueSet-MeasureGroups" name="Measure Groups"/>
 <artifact id="ValueSet/MeasurePopulations" key="ValueSet-MeasurePopulations" name="Measure Populations"/>
@@ -423,7 +424,6 @@
 <artifact id="CapabilityStatement/MeasureDefinitionConsumer-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionConsumer-QueryMeasureDefinition" name="MeasureDefinitionConsumer-QueryMeasureDefinition"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource" key="CapabilityStatement-MeasureDefinitionSource" name="MeasureDefinitionSource"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionSource-QueryMeasureDefinition" name="MeasureDefinitionSource-QueryMeasureDefinition"/>
-<artifact deprecated="true" id="StructureDefinition/measure-expectation" key="StructureDefinition-measure-expectation" name="MeasureExpection"/>
 <artifact deprecated="true" id="StructureDefinition/MeasureGroupAttributes" key="MeasureGroupAttributes" name="MeasureGroupAttributes"/>
 <artifact deprecated="true" id="MeasurePopulationAlternateCriteria" key="MeasurePopulationAlternateCriteria" name="MeasurePopulationAlternateCriteria"/>
 <artifact id="OperationDefinition/MeasureReport-aggregate" key="OperationDefinition-MeasureReport-aggregate" name="MeasureReport-aggregate"/>
@@ -637,7 +637,7 @@
 <page key="transaction-4" name="Compute Measure"/>
 <page key="measure_automation" name="Computing Measures"/>
 <page key="ConceptualModel" name="Conceptual Model"/>
-<page key="measure_group_beds" name="Creating the Bed Avaiability Group"/>
+<page key="measure_group_beds" name="Creating the Bed Availability Group"/>
 <page key="measure_group_covid19_deaths" name="Creating the COVID 19 Deaths Group"/>
 <page key="measure_group_hospital_acquired_covid19_patients" name="Creating the Hospital Acquired COVID 19 Group"/>
 <page key="measure_group_covid19_patients" name="Creating the Patients with COVID 19 Group"/>
