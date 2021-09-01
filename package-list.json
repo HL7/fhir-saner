@@ -23,9 +23,9 @@
     },
     {
       "version": "1.0.0",
-      "date": "TBA",
+      "date": "2021-09-01",
       "desc": "Standard for Trial Use 1 Release",
-      "path": "http://hl7.org/fhir/uv/saner",
+      "path": "http://hl7.org/fhir/uv/saner/STU1",
       "status": "trial-use",
       "sequence": "STU 1",
       "fhirversion": "4.0.1"

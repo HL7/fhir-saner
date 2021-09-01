@@ -13,6 +13,7 @@
 <artifact id="CodeSystem/IHE-ADX-agerange" key="CodeSystem-IHE-ADX-agerange" name="Age Range Coding System"/>
 <artifact id="ValueSet/AllCOVID19RiskFactors" key="ValueSet-AllCOVID19RiskFactors" name="All COVID-19 Risk Factors"/>
 <artifact id="StructureDefinition/MeasureAlternateCriteria" key="StructureDefinition-MeasurePopulationAlternateCriteria" name="Alternate criteria for performing a measure"/>
+<artifact deprecated="true" id="StructureDefinition/MeasureGroupAttributes" key="StructureDefinition-MeasureGroupAttributes" name="Attributes describing a group of measures"/>
 <artifact deprecated="true" id="StructureDefinition/AuditEventCreate" key="StructureDefinition-AuditEventCreate" name="Audit Event Create Profile"/>
 <artifact deprecated="true" id="StructureDefinition/AuditEventDelete" key="StructureDefinition-AuditEventDelete" name="Audit Event Delete Profile"/>
 <artifact deprecated="true" id="StructureDefinition/AuditEventRead" key="StructureDefinition-AuditEventRead" name="Audit Event Read"/>
@@ -424,7 +425,6 @@
 <artifact id="CapabilityStatement/MeasureDefinitionConsumer-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionConsumer-QueryMeasureDefinition" name="MeasureDefinitionConsumer-QueryMeasureDefinition"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource" key="CapabilityStatement-MeasureDefinitionSource" name="MeasureDefinitionSource"/>
 <artifact id="CapabilityStatement/MeasureDefinitionSource-QueryMeasureDefinition" key="CapabilityStatement-MeasureDefinitionSource-QueryMeasureDefinition" name="MeasureDefinitionSource-QueryMeasureDefinition"/>
-<artifact deprecated="true" id="StructureDefinition/MeasureGroupAttributes" key="MeasureGroupAttributes" name="MeasureGroupAttributes"/>
 <artifact deprecated="true" id="MeasurePopulationAlternateCriteria" key="MeasurePopulationAlternateCriteria" name="MeasurePopulationAlternateCriteria"/>
 <artifact id="OperationDefinition/MeasureReport-aggregate" key="OperationDefinition-MeasureReport-aggregate" name="MeasureReport-aggregate"/>
 <artifact id="OperationDefinition/MeasureReport-read-csv" key="OperationDefinition-MeasureReport-read-csv" name="MeasureReport-read-csv"/>
@@ -540,11 +540,11 @@
 <artifact id="Measure/PatientsByRiskFactorWithSupplementalData" key="Measure-PatientsByRiskFactorWithSupplementalData" name="Patients By Risk Factor"/>
 <artifact id="StructureDefinition/PreciseDateTime" key="StructureDefinition-PreciseDateTime" name="Precise Date Time"/>
 <artifact id="ValueSet/PregnancyCOVID19RiskFactors" key="ValueSet-PregnancyCOVID19RiskFactors" name="Pregnancy COVID-19 Risk Factors"/>
+<artifact id="StructureDefinition/PublicHealthMeasure" key="StructureDefinition-PublicHealthMeasure" name="Public Health Measure"/>
 <artifact id="ValueSet/PublicHealthMeasureAttachmentTypes" key="ValueSet-PublicHealthMeasureAttachmentTypes" name="Public Health Measure Attachment Types"/>
 <artifact id="StructureDefinition/PublicHealthMeasureLibrary" key="StructureDefinition-PublicHealthMeasureLibrary" name="Public Health Measure Library"/>
 <artifact id="StructureDefinition/PublicHealthMeasureReport" key="StructureDefinition-PublicHealthMeasureReport" name="Public Health Measure Report"/>
 <artifact id="CodeSystem/PublicHealthMeasureScoring" key="CodeSystem-PublicHealthMeasureScoring" name="Public Health Measure Scoring"/>
-<artifact deprecated="true" id="StructureDefinition/PublicHealthMeasure" key="PublicHealthMeasure" name="PublicHealthMeasure"/>
 <artifact id="StructureDefinition/PublicHealthMeasureMetadataAttachment" key="StructureDefinition-PublicHealthMeasureMetadataAttachment" name="PublicHealthMeasureMetadataAttachment"/>
 <artifact deprecated="true" id="StructureDefinition/PublicHealthMeasureStratifier" key="PublicHealthMeasureStratifier" name="PublicHealthMeasureStratifier"/>
 <artifact id="StructureDefinition/MeasureReportingTiming" key="StructureDefinition-MeasureReportingTiming" name="Recommended Measure Reporting Times"/>
