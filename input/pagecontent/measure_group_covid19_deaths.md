@@ -68,7 +68,7 @@ Growth rate measures aggregate according to cumulative aggregation rules.
  ** extension[rateAggregation].valueString = "cumulative"
 ```
 
-### Define each Population
+### Define Each Population
 
 Each population for the measure is described. For this case, there are three populations,
 the Initial Population, a Numerator (the new infections), and a Denominator (the cumulative total).
