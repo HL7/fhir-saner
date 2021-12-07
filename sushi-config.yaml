@@ -212,7 +212,7 @@ menu:
     Creating the Patients with COVID 19 Group: measure_group_covid19_patients.html
     Creating the Hospital Acquired COVID 19 Group: measure_group_hospital_acquired_covid19_patients.html
     Creating the COVID 19 Deaths Group: measure_group_covid19_deaths.html
-    Creating the Ventilator Avaiability Group: measure_group_ventilators.html
+    Creating the Ventilator Availability Group: measure_group_ventilators.html
     Creating the Bed Availability Group: measure_group_beds.html
     Creating the Measure Library: measure_library.html
     Supporting Vocabulary: supporting_vocabulary.html
