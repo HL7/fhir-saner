@@ -11,7 +11,7 @@ vocabularies and value sets supported by HL7 FHIR.
 In the text below, examples are based on measures analyzed from the CDC Patient Impact and Hospital Capacity module used for
 reporting in the first half of 2020 and shown below.
 
-![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)
+![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)<br clear="all">
 
 
 ### Active Patient Encounters
