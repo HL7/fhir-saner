@@ -98,7 +98,7 @@ Each of the values above is essentially counting an event, an admission to a loc
 Patients who acquired COVID-19 while in the hospital are a separate strata from patients on a ventilator.
 
 The Venn Diagram below illustrates the different subsets of patients in this measure.
-![Venn Diagram](venn.png)
+![Venn Diagram](venn.png)<br clear="all">
 
 To simplify this section, this measure should be divided into at least three separate groups. Each group and stratum is preceded by the name used to identify it.
 
