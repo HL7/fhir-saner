@@ -1,45 +1,29 @@
-This section of the IG explains possible ways to record the expressions used to automate a Measure.  Essentially it is a phrase book
-from English to the Expression elements used in the PublicHealthMeasure resource to describe the automation.  Due to different
-workflows and national requirements, these phrases may require translation to different FHIR models to represent the concept
-being tested.
+This section of the IG explains possible ways to record the expressions used to automate a Measure.  Essentially it is a phrase book from English to the Expression elements used in the PublicHealthMeasure resource to describe the automation.  Due to different workflows and national requirements, these phrases may require translation to different FHIR models to represent the concept being tested.
 
 Preferred models are marked with an asterisk.
 
-The examples below are informative, and show how measures could be developed to support different constraints using existing
-vocabularies and value sets supported by HL7 FHIR.
+The examples below are informative, and show how measures could be developed to support different constraints using existing vocabularies and value sets supported by HL7 FHIR.
 
-In the text below, examples are based on measures analyzed from the CDC Patient Impact and Hospital Capacity module used for
-reporting in the first half of 2020 and shown below.
+In the text below, examples are based on measures analyzed from the CDC Patient Impact and Hospital Capacity module used for reporting in the first half of 2020 and shown below.
 
 ![CDC Patient Impact and Hospital Capacity module](57.130-covid19-pimhc-blank-p.png)<br clear="all">
 
 
 ### Active Patient Encounters
-Encounters represent interactions between a patient and a healthcare provider in inpatient, outpatient or other settings. Many measures
-for situational awareness start with a patient encounter as the context for the measurement.
+Encounters represent interactions between a patient and a healthcare provider in inpatient, outpatient or other settings. Many measures for situational awareness start with a patient encounter as the context for the measurement.
 
-The HOSPITAL INPATIENT BED OCCUPANCY measure can be evaluated through encounters.
-The initial set of encounters can be retrieved using the `Encounters?status=in-progress` FHIR query, or represented as
+The HOSPITAL INPATIENT BED OCCUPANCY measure can be evaluated through encounters. The initial set of encounters can be retrieved using the `Encounters?status=in-progress` FHIR query, or represented as
 `Encounter.where(status='in-progress')` in FHIRPath.
 
 #### Active Encounters Within a Time Frame
-Both Encounter.period.start and Encounter.period.end can be tested for occurrence on a specific day, or within a given date range,
-allowing for tests of Admit/Discharge/Transfer/Death by date.
+Both Encounter.period.start and Encounter.period.end can be tested for occurrence on a specific day, or within a given date range, allowing for tests of Admit/Discharge/Transfer/Death by date.
 
-If looking for encounters started yesterday, and today is September 1, 2020, the appropriate FHIR query is:
-`Encounter?date=sa2020-08-30T23:59:59&date=le2020-09-01`. This query will find encounters that start after the last second of August 30,
-and which were present before September 1.  These encounters must have been present Yesterday, and started after the day before yesterday,
-thus, must have started yesterday.  The same query expressed as a filter in FHIRPath is `Encounter.where(period.start.toDate() = @2020-08-31)`.
-FHIRPath provides finer grained access than FHIR queries, enabling direct access to the start component of the encounter period.  The start
-component needs to be converted to a date to ensure that precision matches for the equals operator.
+If looking for encounters started yesterday, and today is September 1, 2020, the appropriate FHIR query is: `Encounter?date=sa2020-08-30T23:59:59&date=le2020-09-01`. This query will find encounters that start after the last second of August 30, and which were present before September 1.  These encounters must have been present Yesterday, and started after the day before yesterday, thus, must have started yesterday.  The same query expressed as a filter in FHIRPath is `Encounter.where(period.start.toDate() = @2020-08-31)`. FHIRPath provides finer grained access than FHIR queries, enabling direct access to the start component of the encounter period.  The start component needs to be converted to a date to ensure that precision matches for the equals operator.
 
-The first and second examples above can be combined to ensure that the encounters in question are still in-progress, and filter out other
-encounters (e.g., those created in error).  For the FHIR query, this would be `Encounters?status=in-progress&date=sa2020-08-30T23:59:59&date=le2020-09-01`.
-In FHIRPath, this would be `Encounter.where(period.start.toDate() = @2020-08-31 and status = 'in-progress')`
+The first and second examples above can be combined to ensure that the encounters in question are still in-progress, and filter out other encounters (e.g., those created in error).  For the FHIR query, this would be `Encounters?status=in-progress&date=sa2020-08-30T23:59:59&date=le2020-09-01`. In FHIRPath, this would be `Encounter.where(period.start.toDate() = @2020-08-31 and status = 'in-progress')`
 
 #### Admission
-An admission generally starts an encounter that lasts more than a single day, although might also be used for encounters lasting only
-a single day (e.g., emergency department encounters which could last more than a day, but often are completed with a single day).
+An admission generally starts an encounter that lasts more than a single day, although might also be used for encounters lasting only a single day (e.g., emergency department encounters which could last more than a day, but often are completed with a single day).
 
 Admission
 : An admission is identified from an Encounter that has not yet ended. Encounter.status **should** be "in-progress".  The date (and time) of admission can generally be determined from Encounter.period.start. Encounter.period.end will not be present, and Encounter.hospitalization.dispositionCode will also not be present, but the latter is not generally directly accessible through a search.
@@ -78,7 +62,7 @@ Admission
 #### Encounters with a Disposition
 The base FHIR specification does not support query by discharge disposition. Some FHIR Servers may be configurable to support this search.  See the [disposition](SearchParameter-SearchParameter-disposition.html) search parameter for an example of a resource that can be used to support this capability.  When present, discharge disposition codes are often populated according to requirements established for payment (e.g., [US Medicare payment requirements](https://www.cms.gov/medicare/medicare-contracting/contractorlearningresources/downloads/ja0801.pdf#page=2), rather than treatment.
 
-\* The date of the disposition (discharge/transfer or death) may be determined from Encounter.period.end.
+\*The date of the disposition (discharge/transfer or death) may be determined from Encounter.period.end.
 
 <table border='1' cellspacing='0'>
   <caption>Locating Discharges, Transfers and Deaths via the Encounter resource</caption>
@@ -107,14 +91,10 @@ The base FHIR specification does not support query by discharge disposition. Som
   </tbody>
 </table>
 
-To distinguish between discharge to home vs. a transfer to another facility vs. death, the value of
-\* Encounter.hospitalization.disposionCode must be examined. Usually discharge means "to home" or
-other non-healthcare setting (e.g., another family member's home). These cases are shown in more detail below.
+To distinguish between discharge to home vs. a transfer to another facility vs. death, the value of \*Encounter.hospitalization.disposionCode must be examined. Usually discharge means "to home" or other non-healthcare setting (e.g., another family member's home). These cases are shown in more detail below.
 
 ##### Discharge
-A discharge is represented by an Encounter that has been completed in some way, either Encounter.status is "finished" to indicate
-normal completion, or in some cases, the Encounter.status may be marked as "cancelled" for special cases.
-Encounter.hospitalization.dispositionCode **should** be present, and where the the patient was discharged to.
+A discharge is represented by an Encounter that has been completed in some way, either Encounter.status is "finished" to indicate normal completion, or in some cases, the Encounter.status may be marked as "cancelled" for special cases. Encounter.hospitalization.dispositionCode **should** be present, and where the the patient was discharged to.
 
 <table border='1' cellspacing='0'>
   <caption>Locating Discharges via the Encounter resource</caption>
@@ -162,26 +142,20 @@ A transfer to another facility (inter-facility transfer) is like a discharge, ex
 </table>
 
 Notes
-: A transfer within a facility (intra-facility transfer) can mark a change in patient class (e.g., outpatient, emergency, observation, inpatient, long-term care) and type of
-service being provided, but may also simply indicate movement between locations within a facility.
+: A transfer within a facility (intra-facility transfer) can mark a change in patient class (e.g., outpatient, emergency, observation, inpatient, long-term care) and type of service being provided, but may also simply indicate movement between locations within a facility.
 
-: Measure developers **should** provide clarity around the distinctions between discharge and transfer.  Is discharge to home-health
-a "discharge" or a "transfer"?  If "long-term care" is the same as "home" for the patient, how would different hospital workflows
-vary with regard to coding these values?
+: Measure developers **should** provide clarity around the distinctions between discharge and transfer.  Is discharge to home-health a "discharge" or a "transfer"?  If "long-term care" is the same as "home" for the patient, how would different hospital workflows vary with regard to coding these values?
 
 ##### Death
-Not every discharge is a good outcome. Discharge due to death requires special handling because of different
-hospital workflows used to track the death of a patient.
+Not every discharge is a good outcome. Discharge due to death requires special handling because of different hospital workflows used to track the death of a patient.
 
-1. \* The discharge disposition may indicate death in the Encounter.hospitalization.dispositionCode value, or
+1. \*The discharge disposition may indicate death in the Encounter.hospitalization.dispositionCode value, or
 2. The fact that a patient has died (but not when) may appear in Patient.deceasedBoolean, or
-3. \* The date of death may appear in Patient.deceasedDateTime, or
+3. \*The date of death may appear in Patient.deceasedDateTime, or
 4. A date of death may be recorded in an Observation for the patient, or
-5. The Location resource referenced by Encounter.hospitalization.destination may indicate a morgue or autopsy
-   room in Location.type.
+5. The Location resource referenced by Encounter.hospitalization.destination may indicate a morgue or autopsy    room in Location.type.
 
-When testing for death during an encounter using date of death (numbers 3 and 4 above), take care to verify that death
-occurred during the encounter (i.e., date of death is >= Encounter.period.start and <= Encounter.period.end).
+When testing for death during an encounter using date of death (numbers 3 and 4 above), take care to verify that death occurred during the encounter (i.e., date of death is >= Encounter.period.start and <= Encounter.period.end).
 
 <table border='1' cellspacing='0'>
   <caption>Locating Deaths via the Encounter resource</caption>
@@ -250,18 +224,11 @@ occurred during the encounter (i.e., date of death is >= Encounter.period.start 
 ### For a type of healthcare service (e.g., ED, Observation, Acute, ICU, Outpatient)
 The type of healthcare service may be determined in a couple of different ways depending on hospital workflow:
 
-1. \* It may be broadly coded in Encounter.class (e.g., ED, Observation, Acute, ICU, Outpatient), or
-2. Deeply coded in Encounter.serviceClass (more detailed encoding for different kinds of services,
-   from which one can infer ED, Observation, et cetera.
-3. Encoded in the Location resource referenced by Encounter.location.location in Location.type, again, from
-   which one can infer ED, Observation, et cetera.
+1. \*It may be broadly coded in Encounter.class (e.g., ED, Observation, Acute, ICU, Outpatient), or
+2. Deeply coded in Encounter.serviceClass (more detailed encoding for different kinds of services, from which one can infer ED, Observation, et cetera.
+3. Encoded in the Location resource referenced by Encounter.location.location in Location.type, again, from which one can infer ED, Observation, et cetera.
 
-Many HL7 standards use the HL7 Version 3 HealthcareServiceLocation vocabulary to describe locations.
-Based on the U.S. [HSLOC Coding System](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest)
-is used to record the type of healthcare service for the HL7 Healthcare Acquired Infections Implementation Guides in both
-[CDA](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=20) and [FHIR](http://hl7.org/fhir/us/hai/).
-This coding system supports development of value set that can be used in the expression to identify a location
-supporting a specific type of service.
+Many HL7 standards use the HL7 Version 3 HealthcareServiceLocation vocabulary to describe locations. Based on the U.S. [HSLOC Coding System](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest) is used to record the type of healthcare service for the HL7 Healthcare Acquired Infections Implementation Guides in both [CDA](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=20) and [FHIR](http://hl7.org/fhir/us/hai/). This coding system supports development of value set that can be used in the expression to identify a location supporting a specific type of service.
 
 <table border='1' cellspacing='0'>
   <caption>Determining the type of service using Encounter resource</caption>
@@ -301,46 +268,30 @@ supporting a specific type of service.
 </table>
 
 ### Temporary/Surge/Overflow
-Some facilities, especially under stress will house patients in temporary locations, known as surge or overflow locations.  NHSN
-defined these thus:
+Some facilities, especially under stress will house patients in temporary locations, known as surge or overflow locations.  NHSN defined these thus:
 
-> Overflow locations include any physical locations created to accommodate patients including but not
-> limited to 24-hour observation units, hallways, parking lots, or tents.
+> Overflow locations include any physical locations created to accommodate patients including but not > limited to 24-hour observation units, hallways, parking lots, or tents.
 
-There is no common workflow or model used to represent this sort of situation. This IG recommends the use of
-a special code within Encounter.location.physicalType to identify a location that is a temporary location.  This value should
-also appear within Location.physicalType in the location resource referenced by Encounter.location.location.
+There is no common workflow or model used to represent this sort of situation. This IG recommends the use of a special code within Encounter.location.physicalType to identify a location that is a temporary location.  This value should also appear within Location.physicalType in the location resource referenced by Encounter.location.location.
 
 ### With a Given Condition or Symptom
-Patient conditions or symptoms may appear in several places, with different degrees of confidence in the
-patient having the condition (e.g., admission, preliminary, differential, possible, or confirmed diagnosis).
+Patient conditions or symptoms may appear in several places, with different degrees of confidence in the patient having the condition (e.g., admission, preliminary, differential, possible, or confirmed diagnosis).
 
 #### Admitted/Seen for:
 In the context of a given encounter, the condition may appear in:
 
-1. The Condition resource referenced by Encounter.diagnosis.condition in Condition.code.  When using this field,
-consider also the value of Encounter.diagnosis.use, which encodes the provider confidence in the diagnosis, or
-2. As a coded value in Encounter.reasonCode, or
+1. The Condition resource referenced by Encounter.diagnosis.condition in Condition.code.  When using this field, consider also the value of Encounter.diagnosis.use, which encodes the provider confidence in the diagnosis, or
+2. As a coded value in Encounter.reasonCode, or 
 3. As a reference to a Condition resource in Encounter.reasonReference, or
 4. As a reference to an Observation resource in Encounter.reasonReference
-5. As a problem in a Condition resource linked to the encounter, i.e., where Condition.encounter references
-the Encounter of interest.
+5. As a problem in a Condition resource linked to the encounter, i.e., where Condition.encounter references the Encounter of interest.
 6. As a problem in a Condition resource from a prior period or encounter.
-7. As an finding reported in an Observation resource linked to the encounter i.e.,
-where Observation.encounter references the encounter of interest.  These observations may report subjective
-or objective findings during review of systems or physical examination (e.g., shortness of breath, sense of smell,
-et cetera).
+7. As an finding reported in an Observation resource linked to the encounter i.e., where Observation.encounter references the encounter of interest.  These observations may report subjective or objective findings during review of systems or physical examination (e.g., shortness of breath, sense of smell, et cetera).
 8. As a finding reported in an Observation from a prior period or encounter.
 
-NOTE: In all cases where Condition is used, consider also the values of `Condition.verificationStatus` and
-`Condition.clinicalStatus` during evaluation.  The `verificationStatus` indicates whether the condition
-is unconfirmed, provisional, confirmed or even refuted or entered-in-error.  Note that the last two cases the
-patient does NOT have the condition.  The `clinicalStatus` may describe clinical status of the condition
-of interest, using the value active, inactive or resolved.  Again, note that resolved indicates the condition
-is no longer active.
+NOTE: In all cases where Condition is used, consider also the values of `Condition.verificationStatus` and `Condition.clinicalStatus` during evaluation.  The `verificationStatus` indicates whether the condition is unconfirmed, provisional, confirmed or even refuted or entered-in-error.  Note that the last two cases the patient does NOT have the condition.  The `clinicalStatus` may describe clinical status of the condition of interest, using the value active, inactive or resolved.  Again, note that resolved indicates the condition is no longer active.
 
-The `Condition.onset[x]` and `Condition.abatement[x]` fields identity the time frame over which the condition was
-active.  The `Condition.recordedDate` indicates when the provider recorded the condition in the system.
+The `Condition.onset[x]` and `Condition.abatement[x]` fields identity the time frame over which the condition was active.  The `Condition.recordedDate` indicates when the provider recorded the condition in the system.
 
 <table border='1' cellspacing='0'>
   <caption>Determining the reason for care using Encounter resources</caption>
@@ -390,17 +341,10 @@ active.  The `Condition.recordedDate` indicates when the provider recorded the c
 
 
 ### Measures based on codes or results
-Several different kinds of measures can be based on codes describing a diagnostic tests, a procedure, or other activity
-having been performed, and in the case of diagnostic tests, combinations including both the test code and result value.
+Several different kinds of measures can be based on codes describing a diagnostic tests, a procedure, or other activity having been performed, and in the case of diagnostic tests, combinations including both the test code and result value.
 
 #### Test / Procedure / Immunization Performed
-Electronic laboratory reporting is used to track both the kinds of tested performed as well as the results.
-A commonly reported measure for COVID-19 is the number of COVID-19 diagnostic tests performed, regardless
-of outcome, where the results are then stratified by outcome.  This can be counted by looking for the existence
-of an Observation, Procedure
-
-Reporting of certain kinds of observations (e.g., Fraction of Inhaled Oxygen or Positive End Expiratory Pressure) are commonly reported
-for patients who are on a ventilator.  Existence of these observations indicate that a patient is on a ventilator.
+Electronic laboratory reporting is used to track both the kinds of tested performed as well as the results. A commonly reported measure for COVID-19 is the number of COVID-19 diagnostic tests performed, regardless of outcome, where the results are then stratified by outcome.  This can be counted by looking for the existence of an Observation or Procedure. Reporting of certain kinds of observations (e.g., Fraction of Inhaled Oxygen or Positive End Expiratory Pressure) are commonly reported for patients who are on a ventilator.  Existence of these observations indicate that a patient is on a ventilator.
 
 <table border='1' cellspacing='0'>
   <caption>Determining the reason for care using Encounter resources</caption>
@@ -484,9 +428,7 @@ To test for a specific coded result, add the following clauses to the above expr
 ### Handling Temporal Relationships
 In the example below, NHSN defined HOSPITAL ONSET for COVID-19 as shown below:
 
-> HOSPITAL ONSET: Patients currently hospitalized in an inpatient bed with onset of
-> suspected or confirmed COVID-19 fourteen or more days after hospital admission
-> due to a condition other than COVID-19
+> HOSPITAL ONSET: Patients currently hospitalized in an inpatient bed with onset of suspected or confirmed COVID-19 fourteen or more days after hospital admission due to a condition other than COVID-19
 
 This kind of query cannot be handled directly using a FHIR Search query, as it requires computing a relationship between
 to related resources.
