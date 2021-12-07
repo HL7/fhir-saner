@@ -27,7 +27,6 @@ Resource utilization data can be provided from a number of sources:
 <div>
 {%include technology-environment.svg%}
 </div>
-<!--   <object type="image/svg+xml" data="technology-environment.svg"></object> -->
 
 ## Systems Having Clinical Data
 Systems in this category have access to some or all of the health records (problems,
