@@ -29,7 +29,7 @@ exception of the subject, which is Beds rather than ventilators.
  ** extension[subject].valueCodeableConcept.coding[Snomed] = http://snomed.info/sct#91537007 "Hospital Bed"
  ** extension[subject].valueCodeableConcept.text = "Bed capacity"
  ** extension[rateAggregation].valueString = "point-in-time"
-
+```
 ### Define each Population
 The next step for the bed capacity measure is to define the denominator, numerator and numerator-complement populations:
 
