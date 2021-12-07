@@ -341,7 +341,7 @@ for scoring or reporting.
 |**Event Growth**|O|O|R|O|R|O|NP|NP|NP|
 |**Queue Length**|O|O|R|O|NP|NP|NP|NP|NP|
 |**Service Time**|O|O|R|O|NP|NP|NP|R|O|
-|**Availability**|O|O|R|O|R|O|R|NP|NP|
+|**Categorical**|O|O|R|O|R|O|R|NP|NP|
 {: .grid}
 
 R - Required
