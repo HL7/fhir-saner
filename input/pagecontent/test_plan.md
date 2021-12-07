@@ -113,7 +113,7 @@ The Measure Consumer using CSV Option provides access to aggregated or fine-grai
 8. Respond to the MeasureReport/$read-csv Operation to read a MeasureReport resource in CSV format.
 
 ### Integration Test Scenarios <a name="scenarios"></a>
-The following integration test scenarios included in this test place:
+The following integration test scenarios included in this test plan:
 1. Automated Measure Computation and Reporting
 2. Exchanging Updated Measure Definitions
 3. Reporting in CSV Format
