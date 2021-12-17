@@ -12,6 +12,7 @@ Alias: CPT = http://www.ama-assn.org/go/cpt
 CodeSystem:   PublicHealthMeasureScoring
 Title: "Public Health Measure Scoring"
 Description: "A code system describing types of measure scoring used for situational awareness measures"
+* ^caseSensitive = false
 * #capacity     "Capacity"  "Measures point in time capacity or utilization"
 * #event-growth "Event Growth" "Measures cumulative growth by counting current and cumulative events over time"
 * #queue-length "Queue Length" "Measures the point in time number of activities awaiting completion"
@@ -21,6 +22,7 @@ Description: "A code system describing types of measure scoring used for situati
 CodeSystem: MeasurePopulationSystem
 Title: "Situational Awareness Measure Populations"
 Description: "A Code System for Situation Awareness Measure Populations"
+* ^caseSensitive = false
 * #numerator-complement "Numerator Complement"  "Like a numerator, but expresses that part of the Denominator not present in the Numerator"
 * #duration             "Duration"              "A Time Duration"
 * #duration-squared     "Duration Squared"      "The square of the time duration, useful for identifying variance"
@@ -29,6 +31,7 @@ Description: "A Code System for Situation Awareness Measure Populations"
 CodeSystem: MeasuredValues
 Title: "Measured Values in Sample Measures"
 Description: "A Code System for Populations in Sample Measures"
+* ^caseSensitive = false
 * #numTotBeds                   "All Hospital Beds" "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
 * #numTotBedsOcc                "Hospital Beds Occupied" "Total number of all Inpatient and outpatient beds that are occupied"
 * #numTotBedsAvail              "Hospital Beds Available" "Total number of all Inpatient and outpatient beds that are available"
@@ -118,6 +121,7 @@ Description: "A Code System for Populations in Sample Measures"
 CodeSystem: MeasureGroupSystem
 Title: "Measure Group System"
 Description: "A Code System for Groups"
+* ^caseSensitive = false
 * #Beds             "Beds" "This group reports on Bed availability"
 * #Ventilators      "Ventilators" "This group reports on Ventilator availability"
 * #Encounters       "Encounters" "This group reports on COVID-19 Patient Encounters"
