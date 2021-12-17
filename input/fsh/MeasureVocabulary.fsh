@@ -160,6 +160,7 @@ Description: "Allowed Status Values for Saner Measures"
 CodeSystem: MeasureRateAggregation
 Title: "Measure Rate Aggregation Coding System"
 Description: "This Coding System Identifies methods of rate aggregation"
+* ^caseSensitive = false
 * #count "Aggregable" "Rates can be summed over consecutive periods"
 * #point-in-time "Point in Time" "Rates are point in time measures during the reporting period, the most recent measure is retained in an aggregate"
 * #cumulative "Cumulative" "Rates are point in time measures showing cumulative values over all reporting periods, the most recent measure is retained in an aggregate"
