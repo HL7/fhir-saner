@@ -40,7 +40,7 @@ parameters:
   usage-stats-opt-out: true
   logging: progress
 copyrightYear: 2020+
-releaseLabel: STU Release
+releaseLabel: CI Build
 
 pages:
   index.md:
