@@ -140,3 +140,6 @@ INFORMATION: MeasureReport/ExampleNJ-20200424-CDCPatientImpactAndHospitalCapacit
 INFORMATION: MeasureReport/ExampleNJ-20200424-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
 INFORMATION: MeasureReport/ExampleNJ-20200425-CDCPatientImpactAndHospitalCapacity: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
 INFORMATION: MeasureReport/ExampleNJ-20200425-FEMADailyHospitalCOVID19Reporting: MeasureReport.measure: The scoring system in this measure is unknown, so the measureScore values cannot be checked
+
+# inhereted from Library in the core
+INFORMATION: StructureDefinition/PublicHealthMeasureLibrary: StructureDefinition.snapshot.element[18].binding: The element Library.subject[x] has a binding, and has multiple types ([Reference, CodeableConcept]). The binding will apply to all the types

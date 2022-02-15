@@ -3,14 +3,14 @@ Description: "The dateTime value must contain seconds and a timezone"
 Expression: "replaceMatches('[0-9.T]','').length()=6"
 Severity: #error
 XPath: "string-length(replace(@value,'01234566789.T',''))=6"
-
+/*
 Profile: PreciseDateTime
 Parent: dateTime
 Title: "Precise Date Time"
 Description: "A dateTime value that contains seconds and a timezone"
 * insert SanerStructureDefinitionContent
 * value obeys DateTimePreciseToSecond
-
+*/
 Invariant: ReporterPresentInCompleteReport
 Description: "A reporter must be present in a complete report."
 Expression: "MeasureReport.status != 'completed' or MeasureReport.reporter.exists()"
@@ -74,18 +74,21 @@ error - MeasureReport was determined to be in error."""
 * subject.extension contains GeoLocation named geolocation 0..1
 
 * date 1..1  MS
-* date only PreciseDateTime
+//* date only PreciseDateTime
+* date obeys DateTimePreciseToSecond
 * date ^short = "The date the report was generated must be specified, and must be precise to the second"
 * date ^comment = "Since report generation is being automated, reporting to the second should not be a significant burden"
 
 * period 1..1  MS
 * period ^short = "A period must be present"
 * period.start 1..1  MS
-* period.start only PreciseDateTime
+//* period.start only PreciseDateTime
+* period.start obeys DateTimePreciseToSecond
 * period.start ^short = "The start time of the period must be present, be precise to the second, and have a time zone"
 * period.end 1..1  MS
 * period.start ^short = "The end time of the period must be present, be precise to the second, and have a time zone"
-* period.end only PreciseDateTime
+//* period.end only PreciseDateTime
+* period.end obeys DateTimePreciseToSecond
 
 * group.code 1..1  MS
 * group.code ^short = "The code for each group must be present to enable matching to the measure, and a value must be present that matches the required binding codes in the Measure"
