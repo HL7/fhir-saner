@@ -42,11 +42,11 @@ described by this guide.
 * [Measure Reporting Timing](StructureDefinition-MeasureReportingTiming.html) profiles the Timing datatype
   to uniformly described recommended measure reporting times.
 
-
+<!--  removed
 * [Precise Date Time](StructureDefinition-PreciseDateTime.html) profiles the DateTime data type to
   fix the requirements for at least second precision, including a time zone, for reporting dates of
   reporting and the reporting period for a MeasureReport resource.
-
+-->
 
 
 ### Supporting Extensions<a name="extensions"></a>
