@@ -1,6 +1,7 @@
 Instance: SearchParameter-definition-text
 InstanceOf: SearchParameter
 Title: "Search by Text in Definitions"
+Usage: #definition
 * insert SanerDefinitionContent
 * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-definition-text"
 * description = "This SearchParameter enables definition resources to be discovered from text used in the resource definition."
@@ -50,6 +51,7 @@ Title: "Search by Text in Definitions"
 Instance: SearchParameter-code
 InstanceOf: SearchParameter
 Title: "Search by Code in Definitions and Instances"
+Usage: #definition
 * insert SanerDefinitionContent
 * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-code"
 * description = "This SearchParameter enables resources to be discovered by codes or valueSets used in the resource including those in any extensions."
@@ -82,6 +84,7 @@ Title: "Search by Code in Definitions and Instances"
 Instance: SearchParameter-disposition
 InstanceOf: SearchParameter
 Title: "Search by hospitalization.dispositionCode in Encounters"
+Usage: #definition
 * insert SanerDefinitionContent
 * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-disposition"
 * description = "This SearchParameter enables query of encounters by disposition to support automation of measure computation."
