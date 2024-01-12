@@ -1,20 +1,7 @@
 CodeSystem: IHE_ADX_agerange
 Id: IHE-ADX-agerange
 Title: "Age Range Coding System"
-Description: "This Coding System provides a way to Code age ranges"
-* ^url = "http://profiles.ihe.net/fhir/CodeSystem/IHE_ADX_agerange"
-* ^status = #active
-* ^publisher = "IHE"
-* ^contact[0].name = "IHE"
-* ^contact[0].telecom.system = #url
-* ^contact[0].telecom.value = "http://ihe.net"
-* ^contact[1].name = "Keith W. Boone"
-* ^contact[1].telecom.system = #email
-* ^contact[1].telecom.value = "kboone@ainq.com"
-* ^copyright = "Some content from IHE� Copyright � 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."
-* ^caseSensitive = true
-* ^description = """
-The description below includes text from CP-QRPH-238. The normative text describing this code system can be found at
+Description: """The description below includes text from CP-QRPH-238. The normative text describing this code system can be found at
 https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_ADX.pdf#page=78
 
 The representation of age group ranges code should be unambiguous, human readable and machine-readable. There being no commonly
@@ -23,10 +10,10 @@ age group band through two simple durations as defined in the ISO 8601. The defi
 system.  The URL for this Coding System is [http://profiles.ihe.net/fhir/CodeSystem/IHE_ADX_agerange](./CodeSystem-IHE-ADX-agerange.html) (for use in HL7® FHIR®),
 and the OID is 1.3.6.1.4.1.19376.1.7.3.1.1.29.1 (for use in HL7® CDA® and Version 3 standards).
 
-ADX describes an age group range as two durations:  <duration1> -- <duration2>. Where duration1 specifies the beginning of the
+ADX describes an age group range as two durations:  &ltduration1&gt -- &ltduration2&gt. Where duration1 specifies the beginning of the
 age group band (everyone who is this age and above) and duration2 signify the upper bound of the age group band.
-Therefore, age groups like "1-9 years" means everyone who is at least one year old and less than 10 years old represented as
-P1Y--P10Y,age group like "10-14 years" means everyone who is at least 10 years old and less than 15 years old is represented
+Therefore, age groups like '1-9 years' means everyone who is at least one year old and less than 10 years old represented as
+P1Y--P10Y,age group like '10-14 years' means everyone who is at least 10 years old and less than 15 years old is represented
 as P10Y--P15Y.
 
 Durations define the amount if an intervening time between two time points. These durations are represented in the
@@ -43,6 +30,18 @@ the [n] and the letters have the meaning:
 * M is the minute designator that follows the value for the number of minutes.
 * S is the second designator that follows the value for the number of seconds.
 """
+* ^experimental = true
+/* ^url = "http://profiles.ihe.net/fhir/CodeSystem/IHE_ADX_agerange"*/
+* ^status = #active
+* ^publisher = "IHE"
+* ^contact[0].name = "IHE"
+* ^contact[0].telecom.system = #url
+* ^contact[0].telecom.value = "http://ihe.net"
+* ^contact[1].name = "Keith W. Boone"
+* ^contact[1].telecom.system = #email
+* ^contact[1].telecom.value = "kboone@ainq.com"
+* ^copyright = "Some content from IHE Copyright 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."
+* ^caseSensitive = true
 
 * #P0M--P7M "0-6 Months" "A age of less than 7 months old"
 * #P0Y--P1Y "<1 Year"  "A age of less than 1 year old"

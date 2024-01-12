@@ -5,8 +5,8 @@ name: SituationalAwarenessforNovelEpidemicResponse
 title: Situational Awareness for Novel Epidemic Response
 status: active
 publisher:
-  - name: HL7 International Public Health Workgroup
-  - url: http://hl7.org/Special/committees/pher
+  - name: HL7 International / Public Health
+  - url: http://www.hl7.org/Special/committees/pher
   - email: pher@lists.hl7.org
 contact:
   - name: Keith W. Boone
@@ -17,17 +17,20 @@ description: The Situational Awareness for Novel Epidemic Response Implementatio
   enables transmission of high level situational awareness information from
   healthcare facilities to centralized data repositories to support the treatment
   of the novel coronavirus illness.
-jurisdiction:  "urn:iso:std:iso:3166#US"
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 license: CC0-1.0
 fhirVersion: 4.0.1
-dependencies: 
-  hl7.fhir.us.core: 3.1.1
+#dependencies: 
+#  hl7.fhir.us.core: 3.1.1
 parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true
   logging: progress
 copyrightYear: 2020+
 releaseLabel: CI Build
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: pher
 
 pages:
   index.md:
@@ -94,7 +97,7 @@ pages:
       title: Exchanging data via CSV Files
       generation: markdown
     measure_aggregation.md:
-      title: Aggregatating Measure Reports
+      title: Aggregating Measure Reports
       generation: markdown
     measure_automation.md:
         title: Computing Measures
@@ -123,6 +126,9 @@ pages:
       automation_testing_examples.md:
         title: Automation Testing Examples
         generation: markdown
+    techanalysis.md:
+      title: Technical Analysis
+      generation: markdown
   measure_creation.md:
     title: Defining a Measure from Essential Elements of Information
     generation: markdown
@@ -167,7 +173,7 @@ menu:
     Use Cases: use_cases.html
     Conceptual Model: ConceptualModel.html
 
-  Architecture &amp; Implementation:
+  Architecture & Implementation:
     Architecture: Architecture_and_Implementation.html
     Security Considerations: security_considerations.html
     Actors: actors.html
@@ -182,16 +188,17 @@ menu:
   Integrating with Existing Systems:
     Technology Environment: technology_environment.html
     Exchanging data via CSV Files: CSV_Conversion.html
-    Aggregatating Measure Reports: measure_aggregation.html
+    Aggregating Measure Reports: measure_aggregation.html
     Computing Measures: measure_automation.html
 
-  Testing &amp; Conformance:
+  Testing & Conformance:
     Profiles and Extensions: profiles_and_extensions.html
     Terminology Resources: vocabulary.html
     Test Plan: test_plan.html
     Hospital Capacity Measure and Report Examples: hospital_capacity_examples.html
     Laboratory Reporting Measure and Report Examples: laboratory_reporting_examples.html
     Automation Testing Data: automation_testing_examples.html
+    Technical Analysis: techanalysis.html
 
   Defining Measures:
     Defining a Measure from Essential Elements of Information: measure_creation.html

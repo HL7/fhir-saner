@@ -130,4 +130,11 @@ at no charge at https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.
 | Austin Kreisler | Leidos | Subject Matter Expert |
 | Josh Mandel | Microsoft | Subject Matter Expert |
 | Abigail Watson | Symptomatic.io |  Subject Matter Expert |
-| David Pyke | Audacious Inquiry | HL7 Liaison |
+| David Pyke | Audacious Inquiry | HL7 Liaison, Developer |
+
+### Legal Statements
+ While this implementation guide and the underlying FHIR are licensed as public domain under the FHIR license. The license page also describes rules for the use of the FHIR name and logo.
+
+This guide includes examples making use of terminologies such as LOINC, SNOMED CT and RxNorm codes that have more restrictive licensing requirements. Implementers should make themselves familiar with licensing and any other constraints of terminologies, questionnaires, and other components used as part of their implementation process. In some cases, licensing requirements may limit the systems that data captured using certain Definitions may be shared with. 
+
+{% include ip-statements.xhtml %}

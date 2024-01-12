@@ -1,7 +1,7 @@
 Extension: MeasureExpectation
 Title: "Measure Expectation"
 Description: "Enables definitions to identify components that are required, recommended or optional"
-Context: Measure
+Context: Measure.group
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element
 * ^context[0].expression = "Measure.group"
@@ -24,7 +24,7 @@ Description: "All codes from the Public Health Measure Scoring System"
 Extension: MeasureGroupAttributes
 Title: "Attributes describing a group of measures"
 Description: "Attributes describing the group of measures"
-Context: Measure
+Context: Measure.group
 * insert SanerStructureDefinitionContent
 * extension contains
     scoring 0..1 MS and
@@ -92,7 +92,7 @@ Description: "Constraints on documentation for the evaluation of a Measure"
 Extension: MeasureAlternateCriteria
 Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drools, et cetera)"
-Context: Measure
+Context: Measure.group.population.criteria
 
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element

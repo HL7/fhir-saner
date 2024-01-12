@@ -250,6 +250,7 @@ ValueSet:    VTEReports
 Title:       "Codes for reports about VTE Diagnosics"
 Description: "Codes identifying Diagnostics tests or results for VTE"
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^experimental = true
 * LOINC#36850-6 "MRA Lower extremity veins - right WO and W contrast IV"
 * LOINC#36416-6 "MRA Lower extremity veins WO and W contrast IV"
 * LOINC#69162-6 "MRA Pulmonary artery - bilateral W contrast IA"
@@ -302,19 +303,8 @@ Description: "Codes identifying Diagnostics tests or results for VTE"
 ValueSet:    AllCOVID19RiskFactors
 Title:       "All COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
-// I don't exactly recall why these are commented out elsewhere
-// but we'll need to figure that out during publication.
-// * codes from NeoplasticCOVID19RiskFactors
-// * codes from COPDCOVID19RiskFactors
-// * codes from TobaccoCOVID19RiskFactors
-// * codes from HypertensionCOVID19RiskFactors
-// * codes from CardiovascularCOVID19RiskFactors
-// * codes from ObesityCOVID19RiskFactors
-// * codes from SickleCellCOVID19RiskFactors
-// * codes from KidneyDiseaseCOVID19RiskFactors
-// * codes from PregnancyCOVID19RiskFactors
-// * codes from DiabetesCOVID19RiskFactors
 * SCT#109841003	"Liver cell carcinoma (disorder)"
 * SCT#109989006	"Multiple myeloma (disorder)"
 * SCT#118600007	"Malignant lymphoma (disorder)"
@@ -340,6 +330,7 @@ Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern"
 ValueSet:    NeoplasticCOVID19RiskFactors
 Title:       "Neoplastic COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Neoplastic Diseases"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#109841003	"Liver cell carcinoma (disorder)"
 * SCT#109989006	"Multiple myeloma (disorder)"
@@ -351,12 +342,14 @@ Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern r
 ValueSet:    COPDCOVID19RiskFactors
 Title:       "COPD COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to COPD"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#13645005	"Chronic obstructive lung disease (disorder)"
 
 ValueSet:    TobaccoCOVID19RiskFactors
 Title:       "Tobacco COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Tobacco Use"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#77176002	"Smoker (finding)"
 * SCT#365981007	"Finding of tobacco smoking behavior (finding)"
@@ -365,12 +358,14 @@ Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern r
 ValueSet:    HypertensionCOVID19RiskFactors
 Title:       "Hypertension COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Hypertension"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#38341003	"Hypertensive disorder, systemic arterial (disorder)"
 
 ValueSet:    CardiovascularCOVID19RiskFactors
 Title:       "Cardiovascular COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Cardiovascular disease"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#49601007	"Disorder of cardiovascular system (disorder)"
 * SCT#42343007	"Congestive heart failure (disorder)"
@@ -380,18 +375,21 @@ Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern r
 ValueSet:    ObesityCOVID19RiskFactors
 Title:       "Obesity COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Obesity"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#414916001	"Obesity (disorder)"
 
 ValueSet:    SickleCellCOVID19RiskFactors
 Title:       "Sickle Cell COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Sickle Cell Disease"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#417357006	"Sickling disorder due to hemoglobin S (disorder)"
 
 ValueSet:    KidneyDiseaseCOVID19RiskFactors
 Title:       "Kidney Disease COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Chronic Kidney Disease"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#709044004	"Chronic kidney disease (disorder)"
 * SCT#46177005	"End-stage renal disease (disorder)"
@@ -399,18 +397,21 @@ Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern r
 ValueSet:    PregnancyCOVID19RiskFactors
 Title:       "Pregnancy COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Pregnancy"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#77386006	"Pregnant (finding)"
 
 ValueSet:    DiabetesCOVID19RiskFactors
 Title:       "Diabetes COVID-19 Risk Factors"
 Description: "Codes identifying COVID-19 Risk Factors/Comorbidities of Concern related to Diabetes"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#44054006	"Diabetes mellitus type 2 (disorder)"
 
 ValueSet:    IsolationPrecautions
 Title:       "COVID-19 Isolation Precautions"
 Description: "Codes identifying Isolation Precaution Orders or Procedures"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#409524006	"Airborne precautions (procedure)"
 * SCT#409525007	"Respiratory secretion precautions (procedure)"
@@ -420,6 +421,7 @@ Description: "Codes identifying Isolation Precaution Orders or Procedures"
 ValueSet:    COVID19Complications
 Title:       "COVID-19 Complications"
 Description: "Codes identifying Complications associated with COVID-19"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#119731000146105	"Cardiomyopathy due to disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
 * SCT#1240531000000103	"Myocarditis due to disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
@@ -436,4 +438,3 @@ Description: "Codes identifying Complications associated with COVID-19"
 * SCT#870591003	"Rhabdomyolysis due to disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
 * SCT#880529761000119102	"Lower respiratory infection caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
 * SCT#882784691000119100	"Pneumonia caused by Severe acute respiratory syndrome coronavirus 2 (disorder)"
-

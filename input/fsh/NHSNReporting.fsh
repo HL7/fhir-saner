@@ -432,7 +432,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group.extension[groupAtts].extension[type].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-type#structure
 * group.extension[groupAtts].extension[improvementNotation].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease
 * group.extension[groupAtts].extension[rateAggregation].valueString = "count"
-* group.extension.url = "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
+//* group.extension.url = "http://hl7.org/fhir/uv/saner/StructureDefinition/MeasureGroupAttributes"
 * group.code.coding = http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem#Ventilators
 * group.code.text = "Ventilator Supply Reporting"
 

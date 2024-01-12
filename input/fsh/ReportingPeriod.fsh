@@ -3,8 +3,6 @@ Title: "Enables specification of proposed measure reporting"
 Description: "The timing used for measure reporting"
 Context: Measure
 * insert SanerStructureDefinitionContent
-* ^context.type = #element
-* ^context.expression = "Measure"
 * value[x] only MeasureReportingTiming
 * valueTiming 1..1 MS
 

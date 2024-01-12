@@ -1,6 +1,7 @@
 ValueSet: BedLocationOperationalStatus
 Title: "Bed Location Operational Status"
 Description: "This Value Set is used to indicate whether a bed is in use (O), available for use (U), or not available (C) for use."
+* ^experimental = true
 * http://terminology.hl7.org/CodeSystem/v2-0116#C
 * http://terminology.hl7.org/CodeSystem/v2-0116#O
 * http://terminology.hl7.org/CodeSystem/v2-0116#U
@@ -8,6 +9,7 @@ Description: "This Value Set is used to indicate whether a bed is in use (O), av
 ValueSet: PatientsOnVentilator
 Title: "Observations for Patients on a Ventilator"
 Description: "This Value Set identifies patients currently on a ventilator"
+* ^experimental = true
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LOINC#19835-8 // Breath rate setting Ventilator synchronized intermittent mandatory
 * LOINC#19994-3 // Oxygen/Inspired gas setting [Volume Fraction] Ventilator
@@ -24,8 +26,7 @@ Description: "This Value Set identifies patients currently on a ventilator"
 ValueSet: Remdesivir
 Title: "Remdesivir"
 Description: "This Value Set identifies Remdesivir"
-* ^name = "Remdesivir"
-* ^id = "Remdesivir"
+* ^experimental = true
 * ^copyright = """
 This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards
 Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT
@@ -53,6 +54,7 @@ NLM Website at no charge at https://www.nlm.nih.gov/research/umls/rxnorm/index.h
 
 // The following value sets are expansions from VSAC
 ValueSet: COVID19Organism
+Title: "COVID-19 Organism"
 Description: "This Value Set identifies codes describing SARS COV2 Related Substances detected during testing"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200716"
@@ -60,11 +62,14 @@ Description: "This Value Set identifies codes describing SARS COV2 Related Subst
 * ^status = #active
 * ^date = "2020-07-16T01:00:25-04:00"
 * ^publisher = "CSTE Steward"
+* ^experimental = true
 * SCT#840533007 "Severe acute respiratory syndrome coronavirus 2 (organism)"
 * SCT#840536004 "Antigen of severe acute respiratory syndrome coronavirus 2 (substance)"
 
 ValueSet: COVID19Antibody
+Title: "COVID-19 Antibody"
 Description: "This Value Set includes codes describing SARS COV-2 antibodies detected during testing"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200430"
 * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155"
@@ -74,7 +79,9 @@ Description: "This Value Set includes codes describing SARS COV-2 antibodies det
 * SCT#840535000 "Antibody to severe acute respiratory syndrome coronavirus 2 (substance)"
 
 ValueSet: COVID19DXICD10
+Title: "COVID-19 ICD-10"
 Description: "This Value Set includes codes describing COVID-19 illness from ICD-10-CM"
+* ^experimental = true
 * ^version = "20200516"
 * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
 * ^status = #active
@@ -86,7 +93,9 @@ Description: "This Value Set includes codes describing COVID-19 illness from ICD
 * ICD10CM#U07.1 "COVID-19"
 
 ValueSet: COVID19DXSNOMED
+Title: "COVID-19 SNOMED"
 Description: "This Value Set includes codes describing COVID-19 illness from SNOMED-CT"
+* ^experimental = true
 * ^version = "Draft"
 * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
 * ^status = #draft
@@ -99,7 +108,9 @@ Description: "This Value Set includes codes describing COVID-19 illness from SNO
 * SCT#840544004 "Suspected disease caused by severe acute respiratory coronavirus 2 (situation)"
 
 ValueSet: COVID19Exposures
+Title: "COVID-19 Exposures"
 Description: "This Value Set includes codes describing COVID-19 exposure from SNOMED-CT"
+* ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200604"
 * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
@@ -109,7 +120,9 @@ Description: "This Value Set includes codes describing COVID-19 exposure from SN
 * SCT#840546002 "Exposure to severe acute respiratory syndrome coronavirus 2 (event)"
 
 ValueSet: HealthcareServiceLocation
+Title: "Healthcare Service Location"
 Description: "This Value Set includes codes describing Service Locations in a healthcare facility"
+* ^experimental = true
 * ^version = "20200604"
 * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275"
 * ^status = #active
@@ -336,7 +349,9 @@ Description: "This Value Set includes codes describing Service Locations in a he
 * HSLOC#1268-2 "Outpatient Hemodialysis Clinic - Acute Kidney Injury"
 
 ValueSet: SARSCoV2Labs
+Title: "SARS CoV2 Labs"
 Description: "This Value Set identifies Lab tests related to detection of current or prior COVID-19 infection."
+* ^experimental = true
 * ^version = "20200417"
 * ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
 * ^status = #active
@@ -361,6 +376,7 @@ Description: "This Value Set identifies Lab tests related to detection of curren
 ValueSet: SARSCoV2GeneticLabs
 Title: "SARSCoV2 Genetic Labs"
 Description: "This Value Set identifies Lab tests using gene-based testing instead of other methods (e.g., Antibody testing)"
+* ^experimental = true
 * ^version = "20200904"
 * ^status = #draft
 * ^publisher = "HL7"
