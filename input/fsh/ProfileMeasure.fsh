@@ -1,6 +1,7 @@
 Extension: MeasureExpectation
 Title: "Measure Expectation"
 Description: "Enables definitions to identify components that are required, recommended or optional"
+Context: Measure
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element
 * ^context[0].expression = "Measure.group"
@@ -23,6 +24,7 @@ Description: "All codes from the Public Health Measure Scoring System"
 Extension: MeasureGroupAttributes
 Title: "Attributes describing a group of measures"
 Description: "Attributes describing the group of measures"
+Context: Measure
 * insert SanerStructureDefinitionContent
 * extension contains
     scoring 0..1 MS and
@@ -90,6 +92,8 @@ Description: "Constraints on documentation for the evaluation of a Measure"
 Extension: MeasureAlternateCriteria
 Title: "Alternate criteria for performing a measure"
 Description: "Provides Alternate criteria for performing a measure, (e.g., CQL, Drools, et cetera)"
+Context: Measure
+
 * insert SanerStructureDefinitionContent
 * ^context[0].type = #element
 * ^context[0].expression = "Measure.group.population.criteria"
@@ -284,7 +288,7 @@ it using SNOMED CT. Subsequent codes may describe it using other coding systems.
 
 point-in-time
 : Use this when the value being reported is a point-in-time (e.g. instantanious value) that cannot be meaningfully combined with a value from another reporting period
-
+ 
 cumulative
 : Use this when the value being reported is a point-in-time cumulative value over all reports"""
 

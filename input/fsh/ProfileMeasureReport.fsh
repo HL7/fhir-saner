@@ -29,6 +29,7 @@ Description: """This is essentially a database denormalization that facilitates 
 It enables a FHIR Server to implement search on a MeasureReport by GeoLocation using an extension.
 The extension is purposefully designed to duplicate the existing [FHIR GeoLocation Extension](http://hl7.org/fhir/StructureDefinition/geolocation)
 in the hope that it could eventually be absorbed by that extension."""
+Context: MeasureReport
 * insert SanerStructureDefinitionContent
 
 * extension contains latitude 1..1 and longitude 1..1

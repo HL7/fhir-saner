@@ -1,15 +1,3 @@
-# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
-# │                                                                                                │
-# │  This file was generated from your existing project files and will be used for SUSHI           │
-# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-# ╭───────────────────────────ImplementationGuide-hl7.fhir.uv.saner.json───────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see:                                                                    │
-# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.saner
 canonical: http://hl7.org/fhir/uv/saner
 version: 1.0.1
@@ -29,12 +17,11 @@ description: The Situational Awareness for Novel Epidemic Response Implementatio
   enables transmission of high level situational awareness information from
   healthcare facilities to centralized data repositories to support the treatment
   of the novel coronavirus illness.
-jurisdiction: "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
-# "urn:iso:std:iso:3166#US"
+jurisdiction:  "urn:iso:std:iso:3166#US"
 license: CC0-1.0
 fhirVersion: 4.0.1
-dependencies:
-# hl7.fhir.us.core: 3.1.0
+dependencies: 
+  hl7.fhir.us.core: 3.1.1
 parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true

@@ -1,6 +1,7 @@
 Extension: ReportingPeriod
 Title: "Enables specification of proposed measure reporting"
 Description: "The timing used for measure reporting"
+Context: Measure
 * insert SanerStructureDefinitionContent
 * ^context.type = #element
 * ^context.expression = "Measure"

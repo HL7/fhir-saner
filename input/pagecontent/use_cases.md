@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 The following use cases were used to identify the requirements addressed by this guide:
 
 * [Collecting Hospital and Ventilator Measures](#collecting-hospital-and-ventilator-measures)
