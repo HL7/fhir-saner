@@ -45,7 +45,9 @@ Description: "Defines general constraints on the AuditEvent Resource."
 * entity.role.system = "http://terminology.hl7.org/CodeSystem/object-role"
 
 ValueSet: SourceRoles
+Title: "Source Roles"
 Description: "Roles for communication source in AuditEvent"
+* ^experimental = false
 * http://dicom.nema.org/resources/ontology/DCM#110153 "Source Role ID"
 * http://dicom.nema.org/resources/ontology/DCM#110155 "Source Media"
 * http://terminology.hl7.org/CodeSystem/contractsignertypecodes#PRIMAUTH	"Primary Author"
@@ -56,7 +58,9 @@ Description: "Roles for communication source in AuditEvent"
 * http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST	"Custodian"
 
 ValueSet: DestinationRoles
+Title: "Destination Roles"
 Description: "Roles for communication destination in AuditEvent"
+* ^experimental = false
 * http://dicom.nema.org/resources/ontology/DCM#110152 "Destination Role ID"
 * http://dicom.nema.org/resources/ontology/DCM#110154 "Destination Media"
 * http://terminology.hl7.org/CodeSystem/v3-ParticipationType#IRCP	"Information Recipient"
@@ -72,7 +76,9 @@ Description: "Roles for communication destination in AuditEvent"
 * http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction#AUWA	"Work Area Information Receiver"
 
 ValueSet: SourceOrDestinationRoles
+Title: "Source Or Destination Roles"
 Description: "Roles for human requestors in an AuditEvent"
+* ^experimental = false
 * codes from valueset SourceRoles
 * codes from valueset DestinationRoles
 * http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser

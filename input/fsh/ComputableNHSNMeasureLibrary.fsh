@@ -9,9 +9,9 @@ Description: "This library contains references to the value sets used for the Co
 * name = "ComputableNHSNMeasureLibrary"
 * url = "http://hl7.org/fhir/uv/saner/Library/ComputableNHSNMeasureLibrary"
 * title = "Computable NHSN Patient Impact and Hospital Capacity Measure Library"
-* type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
+* type = LIBTYPE#asset-collection
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext.valueCodeableConcept = http://snomed.info/sct#840539006 "COVID-19"
+* useContext.valueCodeableConcept = SCT#840539006 "COVID-19"
 * author.name = "HL7 Public Health Workgroup"
 * author.telecom.system = #email
 * author.telecom.value = "mailto:pher@lists.hl7.org"

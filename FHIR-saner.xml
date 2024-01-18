@@ -215,8 +215,7 @@
 <artifact id="StructureDefinition/MeasuredItemDescription" key="StructureDefinition-MeasuredItemDescription" name="Saner Measured Item Description"/>
 <artifact id="SearchParameter/SearchParameter-code" key="SearchParameter-SearchParameter-code" name="Search by Code in Definitions and Instances"/>
 <artifact id="SearchParameter/SearchParameter-definition-text" key="SearchParameter-SearchParameter-definition-text" name="Search by Text in Definitions"/>
-<artifact id="SearchParameter/SearchParameter-dischargeDisposition" key="SearchParameter-SearchParameter-dischargeDisposition" name="Search by hospitalization.dischargeDisposition in Encounters"/>
-<artifact deprecated="true" id="SearchParameter/SearchParameter-disposition" key="SearchParameter-SearchParameter-disposition" name="Search by hospitalization.dispositionCode in Encounters"/>
+<artifact id="SearchParameter/SearchParameter-disposition" key="SearchParameter-SearchParameter-disposition" name="Search by hospitalization.dischargeDisposition in Encounters"/>
 <artifact id="OperationDefinition/MeasureReport-search-csv" key="OperationDefinition-MeasureReport-search-csv" name="Search in CSV Format"/>
 <artifact id="ValueSet/SickleCellCOVID19RiskFactors" key="ValueSet-SickleCellCOVID19RiskFactors" name="Sickle Cell COVID-19 Risk Factors"/>
 <artifact id="CodeSystem/MeasurePopulationSystem" key="CodeSystem-MeasurePopulationSystem" name="Situational Awareness Measure Populations"/>

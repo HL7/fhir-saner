@@ -13,6 +13,7 @@ Usage: #example
 * name = "PatientsByRiskFactor"
 * url = "http://hl7.org/fhir/uv/saner/Measure/PatientsByRiskFactorWithSupplementalData"
 * title = "COVID-19 Patients By Risk Factor"  // Official name of measure being represented as given by the author
+* description = "This measure demonstrates automated reporting of patients with COVID-19 stratified by condition, and reporting supplemental data"
 * insert NHSNArtifacts
 * library = Canonical(ComputableNHSNMeasureLibrary)
 

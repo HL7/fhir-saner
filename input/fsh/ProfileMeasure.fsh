@@ -17,7 +17,9 @@ Context: Measure.group
 * valueCode ^comment = "Defines the level of expectation associated with a resource using this definition."
 
 ValueSet: MeasureScoring
+Title: "Measure Scoring"
 Description: "All codes from the Public Health Measure Scoring System"
+* ^experimental = false
 * include codes from system PublicHealthMeasureScoring
 * include codes from valueset http://hl7.org/fhir/ValueSet/measure-scoring
 
@@ -180,6 +182,7 @@ should use application/gzip.
 ValueSet: PublicHealthMeasureAttachmentTypes
 Title: "Public Health Measure Attachment Types"
 Description: "Preferred Mime Types for use with Public Health Measure Definitions"
+* ^experimental = false
 * urn:ietf:bcp:13#application/fhir+xml
 * urn:ietf:bcp:13#application/fhir+json
 * urn:ietf:bcp:13#text/cql

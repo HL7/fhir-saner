@@ -1,14 +1,4 @@
 // This sheet convert output to FHIR Shorthand for generating measures.
-Alias: $Base = http://hl7.org/fhir/uv/saner
-Alias: HSLOC = http://terminology.hl7.org/CodeSystem/hsloc
-Alias: ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
-Alias: SCT = http://snomed.info/sct
-Alias: LOINC = http://loinc.org
-Alias: RXNORM = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias: ROLECODE = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: UCUM = http://unitsofmeasure.com
-Alias: CPT = http://terminology.hl7.org/ValueSet/cpt-all
-
 CodeSystem:   PublicHealthMeasureScoring
 Title: "Public Health Measure Scoring"
 Description: "A code system describing types of measure scoring used for situational awareness measures"
@@ -381,6 +371,7 @@ Description: "Codes confirming a COVID-19 diagnosis"
 * SCT#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 
 ValueSet:    SuspectedCOVID19Diagnoses
+Title: "Suspected COVID19 Diagnoses"
 Description: "This Value Set identifies conditions that may be related to COVID-19"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200410"

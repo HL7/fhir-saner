@@ -58,7 +58,7 @@ Title: "COVID-19 Organism"
 Description: "This Value Set identifies codes describing SARS COV2 Related Substances detected during testing"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200716"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1143"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1143"
 * ^status = #active
 * ^date = "2020-07-16T01:00:25-04:00"
 * ^publisher = "CSTE Steward"
@@ -72,7 +72,7 @@ Description: "This Value Set includes codes describing SARS COV-2 antibodies det
 * ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200430"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1155"
 * ^status = #active
 * ^date = "2020-04-30T01:00:18-04:00"
 * ^publisher = "CSTE Steward"
@@ -83,7 +83,7 @@ Title: "COVID-19 ICD-10"
 Description: "This Value Set includes codes describing COVID-19 illness from ICD-10-CM"
 * ^experimental = true
 * ^version = "20200516"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1123"
 * ^status = #active
 * ^date = "2020-05-16T01:00:22-04:00"
 * ^publisher = "CSTE Steward"
@@ -97,7 +97,7 @@ Title: "COVID-19 SNOMED"
 Description: "This Value Set includes codes describing COVID-19 illness from SNOMED-CT"
 * ^experimental = true
 * ^version = "Draft"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1124"
 * ^status = #draft
 * ^date = "2020-08-12T17:36:54-04:00"
 * ^publisher = "CSTE Steward"
@@ -113,7 +113,7 @@ Description: "This Value Set includes codes describing COVID-19 exposure from SN
 * ^experimental = true
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^version = "20200604"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1203"
 * ^status = #active
 * ^date = "2020-06-04T01:00:20-04:00"
 * ^publisher = "CSTE Steward"
@@ -124,7 +124,7 @@ Title: "Healthcare Service Location"
 Description: "This Value Set includes codes describing Service Locations in a healthcare facility"
 * ^experimental = true
 * ^version = "20200604"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275"
 * ^status = #active
 * ^date = "2019-08-30T01:00:18-04:00"
 * ^publisher = "HL7 Terminology"
@@ -353,7 +353,7 @@ Title: "SARS CoV2 Labs"
 Description: "This Value Set identifies Lab tests related to detection of current or prior COVID-19 infection."
 * ^experimental = true
 * ^version = "20200417"
-* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
+//* ^url = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.109"
 * ^status = #active
 * ^date = "2020-04-17T01:00:20-04:00"
 * ^publisher = "MITRE Steward"

@@ -1,8 +1,9 @@
 Invariant: DateTimePreciseToSecond
 Description: "The dateTime value must contain seconds and a timezone"
-Expression: "replaceMatches('[0-9.T]','').length()=6"
+// Expression: "replaceMatches('[0-9.T]','').length()=6"
+Expression: "value.toString().length()=25"
 Severity: #error
-XPath: "string-length(replace(@value,'01234566789.T',''))=6"
+//XPath: "string-length(replace(@value,'01234566789.T',''))=6"
 /*
 Profile: PreciseDateTime
 Parent: dateTime
@@ -33,9 +34,7 @@ Context: MeasureReport.subject
 * insert SanerStructureDefinitionContent
 
 * extension contains latitude 1..1 and longitude 1..1
-* extension[latitude] ^short = "Like [geolocation:latitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:latitude)"
 * extension[latitude].value[x] only decimal
-* extension[longitude] ^short = "Like [geolocation:longitude](http://hl7.org/fhir/extension-geolocation-definitions.html#geolocation.Extension.extension:longitude)"
 * extension[longitude].value[x] only decimal
 
 
