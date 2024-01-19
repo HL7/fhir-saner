@@ -87,8 +87,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/saner/SearchParameter/SearchParameter-disposition"
 * description = "This SearchParameter enables query of encounters by disposition to support automation of measure computation."
 * name = "disposition"
-* purpose = """
- """
+* purpose = " "
 * code = #disposition
 * base[0] = #Encounter
 * type = #token

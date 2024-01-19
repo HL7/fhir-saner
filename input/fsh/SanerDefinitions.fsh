@@ -15,7 +15,7 @@ RuleSet: SanerDefinitionContent
 // Define a rule set for commonly used rules for definition resources using other Sushi features
 RuleSet: SanerStructureDefinitionContent
 * ^status = #draft      // draft until final published
-* ^experimental = true  // true until ready for pilot, then false
+* ^experimental = false  // true until ready for pilot, then false
 * ^version = "0.1.0"    // Follow IG Versioning rules
 * ^publisher = "HL7 International"
 * ^contact[0].name = "HL7 Public Health Workgroup"

@@ -3,7 +3,7 @@ CodeSystem:   PublicHealthMeasureScoring
 Title: "Public Health Measure Scoring"
 Description: "A code system describing types of measure scoring used for situational awareness measures"
 * ^caseSensitive = false
-* ^experimental = true
+* ^experimental = false
 * #capacity     "Capacity"  "Measures point in time capacity or utilization"
 * #event-growth "Event Growth" "Measures cumulative growth by counting current and cumulative events over time"
 * #queue-length "Queue Length" "Measures the point in time number of activities awaiting completion"
@@ -14,7 +14,7 @@ CodeSystem: MeasurePopulationSystem
 Title: "Situational Awareness Measure Populations"
 Description: "A Code System for Situation Awareness Measure Populations"
 * ^caseSensitive = false
-* ^experimental = true
+* ^experimental = false
 * #numerator-complement "Numerator Complement"  "Like a numerator, but expresses that part of the Denominator not present in the Numerator"
 * #duration             "Duration"              "A Time Duration"
 * #duration-squared     "Duration Squared"      "The square of the time duration, useful for identifying variance"
@@ -24,7 +24,7 @@ CodeSystem: MeasuredValues
 Title: "Measured Values in Sample Measures"
 Description: "A Code System for Populations in Sample Measures"
 * ^caseSensitive = false
-* ^experimental = true
+* ^experimental = false
 
 * #numTotBeds                   "All Hospital Beds" "Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients"
 * #numTotBedsOcc                "Hospital Beds Occupied" "Total number of all Inpatient and outpatient beds that are occupied"
@@ -116,7 +116,7 @@ CodeSystem: MeasureGroupSystem
 Title: "Measure Group System"
 Description: "A Code System for Groups"
 * ^caseSensitive = false
-* ^experimental = true
+* ^experimental = false
 
 * #Beds             "Beds" "This group reports on Bed availability"
 * #Ventilators      "Ventilators" "This group reports on Ventilator availability"
@@ -137,13 +137,13 @@ Description: "A Code System for Groups"
 ValueSet: MeasureGroups
 Title: "Measure Groups"
 Description: "Measure Groups illustrating measures for the FHIR SANER IG"
-* ^experimental = true
+* ^experimental = false
 * codes from system MeasureGroupSystem
 
 ValueSet: MeasurePopulations
 Title: "Measure Populations"
 Description: "Measure Populations illustrating measures for the FHIR SANER IG"
-* ^experimental = true
+* ^experimental = false
 * codes from system MeasuredValues
 * codes from system MeasurePopulationSystem
 * codes from system http://terminology.hl7.org/CodeSystem/special-values
@@ -151,7 +151,7 @@ Description: "Measure Populations illustrating measures for the FHIR SANER IG"
 ValueSet: MeasureStatus
 Title: "Measure Status Values"
 Description: "Allowed Status Values for Saner Measures"
-* ^experimental = true
+* ^experimental = false
 * http://hl7.org/fhir/publication-status#active
 * http://hl7.org/fhir/publication-status#draft
 * http://hl7.org/fhir/publication-status#retired
@@ -160,7 +160,7 @@ CodeSystem: MeasureRateAggregation
 Title: "Measure Rate Aggregation Coding System"
 Description: "This Coding System Identifies methods of rate aggregation"
 * ^caseSensitive = false
-* ^experimental = true
+* ^experimental = false
 * #count "Aggregable" "Rates can be summed over consecutive periods"
 * #point-in-time "Point in Time" "Rates are point in time measures during the reporting period, the most recent measure is retained in an aggregate"
 * #cumulative "Cumulative" "Rates are point in time measures showing cumulative values over all reporting periods, the most recent measure is retained in an aggregate"
@@ -168,13 +168,13 @@ Description: "This Coding System Identifies methods of rate aggregation"
 ValueSet: MeasureRateAggregationValues
 Title: "Measure Rate Aggregation Value Set"
 Description: "This Value Set Identifies methods of rate aggregation"
-* ^experimental = true
+* ^experimental = false
 * codes from system MeasureRateAggregation
 
 ValueSet:    InpatientLocations
 Title:       "Inpatient Locations"
 Description: "Codes used for inpatient locations"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = """Materials developed by CDC: Reference to specific commercial products, manufacturers, companies, or trademarks does not
  constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control
  and Prevention. Source materials are available from the CDC Website at no charge at
@@ -294,7 +294,7 @@ Description: "Codes used for inpatient locations"
 ValueSet:    ICULocations
 Title:       "ICU Locations"
 Description: "Codes used for ICU locations"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = """This value set includes source materials developed by CDC: Reference to specific commercial products, manufacturers,
 companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human
 Services, or Centers for Disease Control and Prevention. Source materials are available from the CDC Website at no charge at
@@ -322,7 +322,7 @@ https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"""
 ValueSet:    VentilatorDevices
 Title:       "Ventilator Devices"
 Description: "Codes used for Ventilator Devices"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#706172005 "Ventilator"
 * SCT#257463002 "Ventilator outlet"
@@ -330,7 +330,7 @@ Description: "Codes used for Ventilator Devices"
 ValueSet:    VentilatorObservations
 Title:       "Ventilator Observations"
 Description: "Codes used to report ventilation activity"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LOINC#19835-8 // Breath rate setting Ventilator synchronized intermittent mandatory
 * LOINC#19994-3 // Oxygen/Inspired gas setting [Volume Fraction] Ventilator
@@ -347,7 +347,7 @@ Description: "Codes used to report ventilation activity"
 ValueSet:    VentilatorProcedures
 Title:       "Ventilator Procedures"
 Description: "Codes used to report a ventilation procedure"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = """Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"""
@@ -358,7 +358,7 @@ This value set includes content from SNOMED CT, which is copyright © 2002+ Inte
 ValueSet:    ConfirmedCOVID19Diagnoses
 Title:       "Confirmed COVID-19 Diagnosis Values"
 Description: "Codes confirming a COVID-19 diagnosis"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 //* codes from valueset COVID19DXSNOMED
 * ICD10CM#B34.2 "Coronavirus infection, unspecified"
@@ -378,7 +378,7 @@ Description: "This Value Set identifies conditions that may be related to COVID-
 * ^status = #draft
 * ^date = "2020-04-10T01:00:18-04:00"
 * ^publisher = "HL7"
-* ^experimental = true
+* ^experimental = false
 //* codes from valueset COVID19Exposures
 * SCT#840546002 "Exposure to severe acute respiratory syndrome coronavirus 2 (event)"
 //*
@@ -402,7 +402,7 @@ Description: "This Value Set identifies conditions that may be related to COVID-
 ValueSet:    SuspectedOrConfirmedCOVID19Diagnoses
 Title:       "Suspected Or Diagnosed COVID-19"
 Description: "Codes identifying suspected or confirmed COVID-19"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 //* codes from ConfirmedCOVID19Diagnoses
 * ICD10CM#B34.2 "Coronavirus infection, unspecified"
@@ -433,13 +433,13 @@ Description: "Codes identifying suspected or confirmed COVID-19"
 ValueSet:    PatientDeaths
 Title:       "Patient Died"
 Description: "Codes used to identify that a patient has died"
-* ^experimental = true
+* ^experimental = false
 * http://terminology.hl7.org/CodeSystem/discharge-disposition#exp "Expired"
 
 ValueSet:    Covid19Labs
 Title:       "COVID-19 Diagnostic Test"
 Description: "Codes for COVID-19 Diagnostic Tests"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 
 * codes from valueset SARSCoV2Labs // Day 2: SARSCoV2GeneticLabs
@@ -464,7 +464,7 @@ Description: "Codes for COVID-19 Diagnostic Tests"
 ValueSet:    PositiveResults
 Title:       "COVID-19 Detected"
 Description: "Codes for a positive COVID-19 Diagnostic Test Result"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#10828004  "Positive"
 * SCT#260373001 "Detected"
@@ -473,7 +473,7 @@ Description: "Codes for a positive COVID-19 Diagnostic Test Result"
 ValueSet:    NegativeResults
 Title:       "COVID-19 Not Detected"
 Description: "Codes for a negative COVID-19 Diagnostic Test Result"
-* ^experimental = true
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * SCT#260385009   "Negative"
 * SCT#260415000   "Not detected"

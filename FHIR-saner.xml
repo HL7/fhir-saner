@@ -39,7 +39,7 @@
 <artifact id="OperationDefinition/Measure-report-csv" key="OperationDefinition-Measure-report-csv" name="Create or update a MeasureReport from CSV Format"/>
 <artifact id="CapabilityStatement/DataSource-ComputeMeasure" key="CapabilityStatement-DataSource-ComputeMeasure" name="Data Source implementing the Compute Measure transaction."/>
 <artifact id="CapabilityStatement/DataSource" key="CapabilityStatement-DataSource" name="Data Source."/>
-<artifact id="ValueSet/DestinationRoles" key="ValueSet-DestinationRoles" name="DestinationRoles"/>
+<artifact id="ValueSet/DestinationRoles" key="ValueSet-DestinationRoles" name="Destination Roles"/>
 <artifact id="ValueSet/DiabetesCOVID19RiskFactors" key="ValueSet-DiabetesCOVID19RiskFactors" name="Diabetes COVID-19 Risk Factors"/>
 <artifact id="StructureDefinition/ReportingPeriod" key="StructureDefinition-ReportingPeriod" name="Enables specification of proposed measure reporting"/>
 <artifact id="OperationDefinition/Measure-evaluate-measure" key="OperationDefinition-Measure-evaluate-measure" name="Evaluate the measure"/>
@@ -176,6 +176,7 @@
 <artifact id="ValueSet/MeasurePopulations" key="ValueSet-MeasurePopulations" name="Measure Populations"/>
 <artifact id="CodeSystem/MeasureRateAggregation" key="CodeSystem-MeasureRateAggregation" name="Measure Rate Aggregation Coding System"/>
 <artifact id="ValueSet/MeasureRateAggregationValues" key="ValueSet-MeasureRateAggregationValues" name="Measure Rate Aggregation Value Set"/>
+<artifact id="ValueSet/MeasureScoring" key="ValueSet-MeasureScoring" name="Measure Scoring"/>
 <artifact id="CapabilityStatement/MeasureSource-Aggregate" key="CapabilityStatement-MeasureSource-Aggregate" name="Measure Source implementing the Aggregate Option."/>
 <artifact id="CapabilityStatement/MeasureSource-CSV-Pull" key="CapabilityStatement-MeasureSource-CSV-Pull" name="Measure Source implementing the CSV Option and the Pull Option."/>
 <artifact id="CapabilityStatement/MeasureSource-CSV-Push" key="CapabilityStatement-MeasureSource-CSV-Push" name="Measure Source implementing the CSV Option and the Push Option."/>
@@ -189,7 +190,6 @@
 <artifact id="CapabilityStatement/MeasureSource-SupplementalData" key="CapabilityStatement-MeasureSource-SupplementalData" name="Measure Source implementing the Supplemental Data Option."/>
 <artifact id="ValueSet/MeasureStatus" key="ValueSet-MeasureStatus" name="Measure Status Values"/>
 <artifact id="StructureDefinition/MeasureCriteria" key="StructureDefinition-MeasureCriteria" name="MeasureCriteria"/>
-<artifact id="ValueSet/MeasureScoring" key="ValueSet-MeasureScoring" name="MeasureScoring"/>
 <artifact id="CodeSystem/MeasuredValues" key="CodeSystem-MeasuredValues" name="Measured Values in Sample Measures"/>
 <artifact id="Organization/MiDOH" key="Organization-MiDOH" name="MiDOH"/>
 <artifact id="Library/NHSNMeasureLibrary" key="Library-NHSNMeasureLibrary" name="NHSN Patient Impact and Hospital Capacity Measure Library"/>
@@ -219,10 +219,10 @@
 <artifact id="OperationDefinition/MeasureReport-search-csv" key="OperationDefinition-MeasureReport-search-csv" name="Search in CSV Format"/>
 <artifact id="ValueSet/SickleCellCOVID19RiskFactors" key="ValueSet-SickleCellCOVID19RiskFactors" name="Sickle Cell COVID-19 Risk Factors"/>
 <artifact id="CodeSystem/MeasurePopulationSystem" key="CodeSystem-MeasurePopulationSystem" name="Situational Awareness Measure Populations"/>
-<artifact id="ValueSet/SourceOrDestinationRoles" key="ValueSet-SourceOrDestinationRoles" name="SourceOrDestinationRoles"/>
-<artifact id="ValueSet/SourceRoles" key="ValueSet-SourceRoles" name="SourceRoles"/>
+<artifact id="ValueSet/SourceOrDestinationRoles" key="ValueSet-SourceOrDestinationRoles" name="Source Or Destination Roles"/>
+<artifact id="ValueSet/SourceRoles" key="ValueSet-SourceRoles" name="Source Roles"/>
+<artifact id="ValueSet/SuspectedCOVID19Diagnoses" key="ValueSet-SuspectedCOVID19Diagnoses" name="Suspected COVID19 Diagnoses"/>
 <artifact id="ValueSet/SuspectedOrConfirmedCOVID19Diagnoses" key="ValueSet-SuspectedOrConfirmedCOVID19Diagnoses" name="Suspected Or Diagnosed COVID-19"/>
-<artifact id="ValueSet/SuspectedCOVID19Diagnoses" key="ValueSet-SuspectedCOVID19Diagnoses" name="SuspectedCOVID19Diagnoses"/>
 <artifact id="ValueSet/TobaccoCOVID19RiskFactors" key="ValueSet-TobaccoCOVID19RiskFactors" name="Tobacco COVID-19 Risk Factors"/>
 <artifact id="ValueSet/VentilatorDevices" key="ValueSet-VentilatorDevices" name="Ventilator Devices"/>
 <artifact id="ValueSet/VentilatorObservations" key="ValueSet-VentilatorObservations" name="Ventilator Observations"/>

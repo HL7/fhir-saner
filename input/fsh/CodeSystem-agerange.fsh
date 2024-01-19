@@ -30,7 +30,7 @@ the [n] and the letters have the meaning:
 * M is the minute designator that follows the value for the number of minutes.
 * S is the second designator that follows the value for the number of seconds.
 """
-* ^experimental = true
+* ^experimental = false
 /* ^url = "http://profiles.ihe.net/fhir/CodeSystem/IHE_ADX_agerange"*/
 * ^status = #active
 * ^publisher = "IHE"

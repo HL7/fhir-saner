@@ -377,7 +377,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * name = "CDCHealthcareSupplyPathway"
 * title = "COVID-19 Healthcare Supply Pathway"
 * status = #draft
-* experimental = true
+* experimental = false
 * date = "2020-04-27T07:08:50-04:00"
 * publisher = "HL7 International"
 * contact.name = "HL7 Public Health Workgroup"
@@ -923,6 +923,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[9].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[9].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[9].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[9].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#106293008 
 * group[9].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Nursing Staff"
 * group[9].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[9].extension[groupAtts].extension[rateAggregation].valueString = "count"
@@ -944,6 +945,8 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[10].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[10].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[10].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[10].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#41672002 
+
 * group[10].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Respiratory Specialists"
 * group[10].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[10].extension[groupAtts].extension[rateAggregation].valueString = "count"
@@ -965,6 +968,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[11].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[11].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[11].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[11].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#734293001 
 * group[11].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Pharmacy Specialists"
 * group[11].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[11].extension[groupAtts].extension[rateAggregation].valueString = "count"
@@ -986,6 +990,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[12].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[12].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[12].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[12].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#405279007  
 * group[12].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Attending Physicians"
 * group[12].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[12].extension[groupAtts].extension[rateAggregation].valueString = "count"
@@ -1007,6 +1012,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[13].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[13].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[13].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[13].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#310175004 
 * group[13].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Intermittent Staff"
 * group[13].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[13].extension[groupAtts].extension[rateAggregation].valueString = "count"
@@ -1028,6 +1034,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[14].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[14].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[14].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[14].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#224608005
 * group[14].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Other Staff"
 * group[14].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[14].extension[groupAtts].extension[rateAggregation].valueString = "count"
@@ -1049,6 +1056,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[15].extension[groupAtts].extension[scoring].valueCodeableConcept = SCORING#continuous-variable
 * group[15].extension[groupAtts].extension[type].valueCodeableConcept = MTYPE#structure
 * group[15].extension[groupAtts].extension[subject].valueCodeableConcept.coding[ResourceType] = RESTYPE#Practitioner
+* group[15].extension[groupAtts].extension[subject].valueCodeableConcept.coding[Snomed] = SCT#224608005
 * group[15].extension[groupAtts].extension[subject].valueCodeableConcept.text = "Advanced Practice Nurse/Physician Assistant"
 * group[15].extension[groupAtts].extension[improvementNotation].valueCodeableConcept = MESIMP#increase
 * group[15].extension[groupAtts].extension[rateAggregation].valueString = "count"

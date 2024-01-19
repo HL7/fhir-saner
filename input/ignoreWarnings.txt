@@ -1,5 +1,5 @@
 == Suppressed Messages ==
-# Draft value sets are fine for this IG 
+# Draft and experimental codes are fine for this IG 
 %Reference to draft CodeSystem%
 %Reference to experimental CodeSystem%
 
@@ -8,7 +8,19 @@
 
 # This isn't a problem for this IG
 %The scoring system in this measure is unknown, so the measureScore values cannot be checked%
+%The code 'composite' is valid but is retired%
+%The code '33738006' is valid but is not active%
 
 # CPT and HSLOC aren't supportable
 %Unable to provide support for code system%
 %Unknown System 'http://terminology.hl7.org/CodeSystem/hsloc' specified%
+%Unknown System 'http://terminology.hl7.org/ValueSet/cpt-all' specified%
+
+# this xpath is not my code
+%value should not start or finish with whitespace%
+
+# publisher bug
+%The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version%
+
+# HavBED isn't a code system, so no source
+%No Source Code System, so the source codes cannot be checked%
