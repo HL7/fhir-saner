@@ -1,4 +1,4 @@
-Extension: ReportingPeriod
+Extension: ReportingPeriod 
 Title: "Enables specification of proposed measure reporting"
 Description: "The timing used for measure reporting"
 Context: Measure
@@ -37,5 +37,5 @@ Description:    "Provides the timing for measure  reporting"
 RuleSet: DailyReporting
 * extension[measureTiming].valueTiming.repeat.frequency = 1
 * extension[measureTiming].valueTiming.repeat.period = 1
-* extension[measureTiming].valueTiming.repeat.periodUnit =  http://unitsofmeasure.org#d "day"
+* extension[measureTiming].valueTiming.repeat.periodUnit =  UCUM#d "day"
 

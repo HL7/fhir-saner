@@ -638,7 +638,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[6].population[0].criteria.description = "Gloves"
 * group[6].population[0].criteria.name = "glovesupply"
 * group[6].population[0].criteria.language = #"text/plain"
-* group[6].population[0].criteria.expression = "Gloves"
+* group[6].population[0.criteria.expression = "Gloves"
 
 * group[6].population[1].code.coding = MEASVALS#glovereuse
 * group[6].population[1].description = "Gloves"
@@ -655,7 +655,7 @@ InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * group[6].population[2].criteria.expression = "Gloves"
 
 
-Instance: CDCHealthcareWorkerStaffingPathway
+Instance: CDCHealthcareWorkerStaffingPathway 
 InstanceOf: http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure
 * insert SanerDefinitionContent
 * insert DailyReporting

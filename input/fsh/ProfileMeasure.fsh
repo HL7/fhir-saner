@@ -27,7 +27,7 @@ Extension: MeasureGroupAttributes
 Title: "Attributes describing a group of measures"
 Description: "Attributes describing the group of measures"
 Context: Measure.group
-* insert SanerStructureDefinitionContent
+* insert SanerStructureDefinitionContent 
 * extension contains
     scoring 0..1 MS and
     compositeScoring 0..1 and
@@ -208,11 +208,11 @@ of measures.  These are developed for this guide to ensure that a measure is wel
 and computation of it can be automated from systems that have the measure data.
 """
 * insert SanerStructureDefinitionContent
+* extension contains ReportingPeriod named measureTiming 1..1 MS
 * insert PublicHealthMeasureMetadata
 
 * subject[x] only CodeableConcept
 * subjectCodeableConcept = http://hl7.org/fhir/resource-types#Location
-* extension contains ReportingPeriod named measureTiming 1..1 MS
 * library ^type.targetProfile = Canonical(PublicHealthMeasureLibrary)
 * library 1..* MS
 

@@ -1,7 +1,6 @@
 == Suppressed Messages ==
-# Draft and experimental codes are fine for this IG 
+# Draft codes are fine for this IG 
 %Reference to draft CodeSystem%
-%Reference to experimental CodeSystem%
 
 # FHIRPath isn't supported, but should be
 %The expression language text/fhirpath is not supported, so can't be validated%
@@ -24,3 +23,6 @@
 
 # HavBED isn't a code system, so no source
 %No Source Code System, so the source codes cannot be checked%
+
+# Those aren't needed to be slice examples
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure%
