@@ -12,3 +12,5 @@ Thumbs.db
 /temp
 /old
 .settings
+_updatePublisher.sh
+_genonce.sh
