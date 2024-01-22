@@ -7,29 +7,21 @@ Usage: #definition
 * description = "This SearchParameter enables definition resources to be discovered from text used in the resource definition."
 * name = "definition-text"
 * code = #definition-text
-* base[0] = #Measure
-* base[1] = #Questionnaire
-* base[2] = #ValueSet
-* base[3] = #CodeSystem
-* base[4] = #ConceptMap
-* base[5] = #SearchParameter
-* base[6] = #OperationDefinition
-* base[7] = #StructureDefinition
-* base[8] = #CapabilityStatement
+* base[+] = #Measure
+* base[+] = #ValueSet
+* base[+] = #CodeSystem
+* base[+] = #ConceptMap
+* base[+] = #CapabilityStatement
 * type = #string
 * expression = """
  Measure.title | Measure.subtitle | Measure.publisher | Measure.description | Measure.purpose | Measure.usage |
  Measure.riskAdjustment | Measure.rateAggregation | Measure.clinicalRecommendationStatement | Measure.definition | Measure.guidance |
- Questionnaire.title | Questionnaire.publisher | Questionnaire.description | Questionnaire.purpose |
  ValueSet.title | ValueSet.publisher | ValueSet.description | ValueSet.purpose |
  CodeSystem.title | CodeSystem.publisher | CodeSystem.description | CodeSystem.purpose |
  ConceptMap.title | ConceptMap.publisher | ConceptMap.description | ConceptMap.purpose |
- SearchParameter.title | SearchParameter.publisher | SearchParameter.description | SearchParameter.purpose |
- OperationDefinition.title | OperationDefinition.publisher | OperationDefinition.description | OperationDefinition.purpose |
- StructureDefinition.title | StructureDefinition.publisher | StructureDefinition.description | StructureDefinition.purpose |
  CapabilityStatement.title | CapabilityStatement.publisher | CapabilityStatement.description | CapabilityStatement.purpose
  """
-* xpath = """
+/* xpath = """
  f:Measure/f:title | f:Measure/f:subtitle | f:Measure/f:publisher | f:Measure/f:description | f:Measure/f:purpose | f:Measure/f:usage |
  f:Measure/f:riskAdjustment | f:Measure/f:rateAggregation | f:Measure/f:clinicalRecommendationStatement | f:Measure/f:definition | f:Measure/f:guidance |
  f:Questionnaire/f:title | f:Questionnaire/f:publisher | f:Questionnaire/f:description | f:Questionnaire/f:purpose |
@@ -42,6 +34,7 @@ Usage: #definition
  f:CapabilityStatement/f:title | f:CapabilityStatement/f:publisher | f:CapabilityStatement/f:description | f:CapabilityStatement/f:purpose
  """
 * xpathUsage = #normal
+*/
 * multipleOr = true
 * multipleAnd = true
 * modifier[0] = #missing
@@ -60,14 +53,13 @@ Usage: #definition
 * base[0] = #Measure
 * base[1] = #MeasureReport
 * type = #token
-* expression = """
- descendants().CodeableConcept | descendants().Coding | descendants().Code | code | descendants().ofType(Coding).not().code
-"""
-
+* expression = "descendants().ofType(Coding)"
+/*
 * xpath = """
  descendant::f:CodeableConcept | descendant::f:Coding | descendant::f:Code | f:code | f:descendant::f:code[ends-with(local-name(..),'oding')]
 """
 * xpathUsage = #normal
+*/
 * multipleOr = true
 * multipleAnd = true
 * modifier[0] = #missing

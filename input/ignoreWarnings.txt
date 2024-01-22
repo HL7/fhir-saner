@@ -26,3 +26,12 @@
 
 # Those aren't needed to be slice examples
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/saner/StructureDefinition/PublicHealthMeasure%
+
+# Published with these names, not changing them for an update
+%Constraint failed: spd-0%
+
+# Expected behaviour
+%HasValueOrDataAbsentReason%
+
+# Apparently more than 14 is an issue
+%The value set expansion is incomplete%
