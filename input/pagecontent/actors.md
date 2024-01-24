@@ -6,369 +6,148 @@ involved in the SANER
 Profile and the relevant transactions between them.
 
 
-<div>
+<figure>
 {% include ActorsAndTransactions.svg%}
-</div>
+<figcaption>Figure 3-1: SANER Actor Diagram</figcaption>
+</figure>
 
-**Figure 3-1: SANER Actor Diagram**
-
-Table 3-1 lists the transactions for each actor directly involved in the SANER Implementation Guide. To claim compliance with this guide, an actor shall
+Table 3-1 lists the transactions for each actor directly involved in the SANER Implementation Guide. To claim compliance with this guide, an actor **shall**
 support all required transactions (labeled "R").
 
-
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
-<caption>
-<b>
-Table 3-1: SANER Implementation Guide - Actors and Transactions
-</b>
-</caption>
+<caption><b>Table 3-1: SANER Implementation Guide - Actors and Transactions</b></caption>
 <thead>
-<tr class="odd" style='background: gray;'>
+<tr>
 <th>Actors</th>
 <th>Transactions</th>
 <th>Optionality</th>
 </tr>
 </thead>
 <tbody>
-
-<tr>
-
-<td rowspan="2">
-<a href="#measure-source">Measure Source</a>
-</td>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<tr><td rowspan="2"><a href="#measure-source">Measure Source</a></td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 2</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a></td>
+<td align='center'>C<sup> 2</sup></td>
 </tr>
 
 <tr>
+<td rowspan="3"><a href="#measure-consumer">Measure Consumer</a></td>
 
-<td rowspan="3">
-<a href="#measure-consumer">Measure Consumer</a>
-</td>
-
-<td>
-<a href='transaction-5.html'>
-                        Communicate Results [REPORT-TX]</a>
-</td>
-<td align='center'>
-                        R
-</td>
+<td><a href='transaction-5.html'>Communicate Results [REPORT-TX]</a></td>
+<td align='center'>R</td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 2</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a></td>
+<td align='center'>C<sup> 2</sup></td>
 </tr>
 
 <tr>
-
-<td rowspan="9">
-<a href="#measure-intermediary">Measure Intermediary</a>
-</td>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a><br/><i>As Measure Source</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td rowspan="9"><a href="#measure-intermediary">Measure Intermediary</a></td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a><br/><i>As Measure Source</i></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 2</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i></td>
+<td align='center'>C<sup> 2</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-5.html'>
-                        Communicate Results [REPORT-TX]</a><br/><i>As Measure Consumer</i>
-</td>
-<td align='center'>
-                        R
-</td>
+<td><a href='transaction-5.html'>Communicate Results [REPORT-TX]</a><br/><i>As Measure Consumer</i></td>
+<td align='center'>R</td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a><br/><i>As Measure Consumer</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a><br/><i>As Measure Consumer</i></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Consumer</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 2</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a><br/><i>As Measure Consumer</i></td>
+<td align='center'>C<sup> 2</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 3</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i></td>
+<td align='center'>C<sup> 3</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a><br/><i>As Measure Intermediary</i></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 3</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a><br/><i>As Measure Intermediary</i></td>
+<td align='center'>C<sup> 3</sup></td>
 </tr>
 
 <tr>
+<td rowspan="1"><a href="#measure-definition-source">Measure Definition Source</a></td>
+<td><a href='transaction-3.html'>Query Measure Definition [PULL-MX]</a></td>
+<td align='center'>R</td>
+</tr>
 
-<td rowspan="1">
-<a href="#measure-definition-source">Measure Definition Source</a>
-</td>
-
-<td>
-<a href='transaction-3.html'>
-                        Query Measure Definition [PULL-MX]</a>
-</td>
-<td align='center'>
-                        R
-</td>
+<tr><td rowspan="1"><a href="#measure-definition-consumer">Measure Definition Consumer</a></td>
+<td><a href='transaction-3.html'>Query Measure Definition [PULL-MX]</a></td>
+<td align='center'>R</td>
 </tr>
 
 <tr>
-
-<td rowspan="1">
-<a href="#measure-definition-consumer">Measure Definition Consumer</a>
-</td>
-
-<td>
-<a href='transaction-3.html'>
-                        Query Measure Definition [PULL-MX]</a>
-</td>
-<td align='center'>
-                        R
-</td>
+<td rowspan="7"><a href="#measure-computer">Measure Computer</a></td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a><br/><i>As Measure Source</i></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td rowspan="7">
-<a href="#measure-computer">Measure Computer</a>
-</td>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a><br/><i>As Measure Source</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i></td>
+<td align='center'>C<sup> 2</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Source</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 2</sup>
-
-</td>
+<td><a href='transaction-3.html'>Query Measure Definition [PULL-MX]</a><br/><i>As Measure Definition Consumer</i></td>
+<td align='center'>R</td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-3.html'>
-                        Query Measure Definition [PULL-MX]</a><br/><i>As Measure Definition Consumer</i>
-</td>
-<td align='center'>
-                        R
-</td>
+<td><a href='transaction-3.html'>Query Measure Definition [PULL-MX]</a><br/><i>As Measure Computer</i></td>
+<td align='center'>R</td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-3.html'>
-                        Query Measure Definition [PULL-MX]</a><br/><i>As Measure Computer</i>
-</td>
-<td align='center'>
-                        R
-</td>
+<td><a href='transaction-4.html'>Compute Measure [COMPUTE-MX]</a><br/><i>As Measure Computer</i></td>
+<td align='center'>R</td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-4.html'>
-                        Compute Measure [COMPUTE-MX]</a><br/><i>As Measure Computer</i>
-</td>
-<td align='center'>
-                        R
-</td>
+<td><a href='transaction-1.html'>Query Measure [PULL-TX]</a><br/><i>As Measure Computer</i></td>
+<td align='center'>C<sup> 1</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-1.html'>
-                        Query Measure [PULL-TX]</a><br/><i>As Measure Computer</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 1</sup>
-
-</td>
+<td><a href='transaction-2.html'>Produce Measure [PUSH-TX]</a><br/><i>As Measure Computer</i></td>
+<td align='center'>C<sup> 3</sup></td>
 </tr>
 
 <tr>
-
-<td>
-<a href='transaction-2.html'>
-                        Produce Measure [PUSH-TX]</a><br/><i>As Measure Computer</i>
-</td>
-<td align='center'>
-                        C
-
-                                <sup> 3</sup>
-
-</td>
-</tr>
-
-<tr>
-
-<td rowspan="1">
-<a href="#data-source">Data Source</a>
-</td>
-
-<td>
-<a href='transaction-4.html'>
-                        Compute Measure [COMPUTE-MX]</a>
-</td>
-<td align='center'>
-                        R
-</td>
+<td rowspan="1"><a href="#data-source">Data Source</a></td>
+<td><a href='transaction-4.html'>Compute Measure [COMPUTE-MX]</a></td>
+<td align='center'>R</td>
 </tr>
 
 </tbody>
@@ -483,9 +262,9 @@ communication with a Measure Consumer implementing the Pull option.
 In this example, the Bridge is simply a FHIR Server. A FHIR Server that supports CRUD operations on MeasureReport and Measure
 effectively implements both the Measure Consumer with the Push Option
 and the Measure Source actor implementing the Pull Option.
-<div>
+<figure>
 {% include FHIRServer.svg %}
-</div>
+</figure>
 
 
 

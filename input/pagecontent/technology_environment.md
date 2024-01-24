@@ -24,9 +24,9 @@ Resource utilization data can be provided from a number of sources:
   + Surgery/Operating Room Scheduling systems
   + Workforce Management/Staff Scheduling systems
   + Inventory Control systems
-<div>
+<figure>
 {%include technology-environment.svg%}
-</div>
+</figure>
 
 ## Systems Having Clinical Data
 Systems in this category have access to some or all of the health records (problems,

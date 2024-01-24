@@ -10,7 +10,7 @@ This transaction enables a MeasureDefinition Consumer actor to access Measure re
 ### Actors Roles
 <figure>
 {% include transaction-3-uc.svg%}
-<figcaption>**Figure 2.3-1: Query Measure Definition Use Case Diagram**</figcaption>
+<figcaption>Figure 2.3-1: Query Measure Definition Use Case Diagram</figcaption>
 </figure>
 
 **Table 2.3-1: Actor Roles**
@@ -35,7 +35,7 @@ Table 3.71.3-1: Referenced Standards
 
 <figure>
 {% include transaction-3-seq.svg%}
-<figcaption>**Figure 2.3-2: Query Measure Definition Interactions**</figcaption>
+<figcaption>Figure 2.3-2: Query Measure Definition Interactions</figcaption>
 </figure>
 
 #### Search Request

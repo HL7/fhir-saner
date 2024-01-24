@@ -13,7 +13,7 @@ diagnostics or error recovery.
 ### Actors Roles
 <figure>
 {% include transaction-4-uc.svg%}
-<figcaption>**Figure 2.4-1: Compute Measure Use Case Diagram**</figcaption>
+<figcaption>Figure 2.4-1: Compute Measure Use Case Diagram</figcaption>
 </figure>
 
 
@@ -38,7 +38,7 @@ diagnostics or error recovery.
 ### Interactions
 <figure>
 {% include transaction-4-seq.svg%}
-<figcaption>**Figure 2.4-2: Compute Measure Interactions**</figcaption>
+<figcaption>Figure 2.4-2: Compute Measure Interactions</figcaption>
 <figure>
 
 

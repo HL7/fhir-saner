@@ -31,7 +31,7 @@ Table 3.71.3-1: Referenced Standards
 
 ### Interactions
 <figure>{% include transaction-2-seq.svg%}
-<figcaption>**Figure 2.2-2: Produce Measure Interactions**</figcaption>
+<figcaption>Figure 2.2-2: Produce Measure Interactions</figcaption>
 </figure>
 
 

@@ -69,7 +69,7 @@ information systems, and forwarded to a public endpoint for reporting.
 
 <figure>
 {% include usecase1-processflow.svg %}
-<figcaption>**Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow**</figcaption>
+<figcaption>Figure 2.3.1.1-1: Collecting Hospital and Ventilator Measures Process Flow</figcaption>
 </figure>
 
 
@@ -159,7 +159,7 @@ In this use case, we see the classic "dashboard" panel, where a public health us
 
 <figure>
 {% include usecase2-processflow.svg %}
-<figcaption>**Figure 2.3.1.2-1: Accessing Measure Reports Process Flow**
+<figcaption>Figure 2.3.1.2-1: Accessing Measure Reports Process Flow</figcaption>
 </figure>
 
 
@@ -241,7 +241,7 @@ Measures created for tracking a public health emergency may be revised periodica
 
 <figure>
 {% include usecase3-processflow.svg %}
-<figcaption>**Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow**</figcaption>
+<figcaption>Figure 2.3.1.3-1: Distributing Measure Definitions Process Flow</figcaption>
 </figure>
 
 
@@ -289,7 +289,7 @@ can be computed using FHIR APIs from supporting information systems provided by 
 
 <figure>
 {% include usecase4-processflow.svg %}
-<figcaption>**Figure 2.3.1.4-1: Automating Measure Computation Process Flow**</figcaption>
+<figcaption>Figure 2.3.1.4-1: Automating Measure Computation Process Flow</figcaption>
 </figure>
 
 
@@ -350,7 +350,7 @@ In the initial stages, this analysis can be used to assess strain, by comparing 
 
 <figure>
 {% include usecase5-processflow.svg %}
-<figcaption>**Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow**</figcaption>
+<figcaption>Figure 2.3.1.5-1: Reporting Supplemental Data Process Flow</figcaption>
 </figure>
 
 

@@ -9,7 +9,7 @@ availability, or other systems to access resource availability data.
 ### Actors Roles
 <figure>
 {% include transaction-5-uc.svg%}
-<figcaption>**Figure 2.5-1: Communicate Results Use Case Diagram**</figcaption>
+<figcaption>Figure 2.5-1: Communicate Results Use Case Diagram</figcaption>
 </figure>
 
 
@@ -29,7 +29,7 @@ availability, or other systems to access resource availability data.
 ### Interactions
 <figure>
 {% include transaction-5-seq.svg%}
-<figcaption>**Figure 2.5-2: Communicate Results Interactions**</figcaption>
+<figcaption>Figure 2.5-2: Communicate Results Interactions</figcaption>
 </figure>
 
 

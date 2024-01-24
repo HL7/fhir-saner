@@ -39,7 +39,7 @@ and the read operations that **shall** be supported.
 ### Interactions
 
 <figure>{% include transaction-1-seq.svg%}
-<figcaption>**Figure 2.1-2: Query Measure Interactions**</figcaption>
+<figcaption>Figure 2.1-2: Query Measure Interactions</figcaption>
 </figure>
 
 
