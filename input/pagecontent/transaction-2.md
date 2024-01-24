@@ -12,51 +12,34 @@ This transaction defines the create and update operations that a MeasureConsumer
 {% include transaction-2-uc.svg%}
 
 **Figure 2.2-1: Produce Measure Use Case Diagram**
-
-<table border='1' borderspacing='0'>
-<caption><b>Table 2.2-1: Actor Roles</b></caption>
-<thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors.html#measure-source">Measure Source</a></td>
-<td>Periodically generates data for a Measure Consumer.</td>
-</tr>
-        <tr><td><a href="actors.html#measure-consumer">Measure Consumer</a></td>
-<td>Collects data for reporting</td>
-</tr>
-        
-</tbody>
-</table>
+|Actor|Role|
+| ------ | ------- |
+|[Measure Source](actors.html#measure-source)|Periodically generates data for a Measure Consumer.|
+|[Measure Consumer](actors.html#measure-consumer)|Collects data for reporting|
+{:.grid}
 
 ### Referenced Standards
 
-<table border='1' borderspacing='0'>
-<caption><b>Table 3.71.3-1: Referenced Standards</b></caption>
-<thead><tr><th>Standard</th><th>Name</th></tr></thead>
-<tbody>
-            <tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-        
-            <tr><td>RFC-7230</td><td><a href='https://ietf.org/rfc/rfc7230.html'>Hypertext Transfer Protocol - HTTP/1.1</a></td></tr>
-        
-            <tr><td>NDJSON</td><td><a href='http://ndjson.org/'>Newline Delimited JSON</a></td></tr>
-        
-</tbody>
-</table>
+
+Table 3.71.3-1: Referenced Standards
+|Standard|Name|
+|---|---|
+|FHIR-R4|[HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)|
+|RFC-7230|[Hypertext Transfer Protocol - HTTP/1.1](https://ietf.org/rfc/rfc7230.html)|
+|NDJSON|[Newline Delimited JSON](http://ndjson.org/)|
+{:.grid }
 
 ### Interactions
-        {% include transaction-2-seq.svg%}
-
-**Figure 2.2-2: Produce Measure Interactions**
+<figure>{% include transaction-2-seq.svg%}
+<figcaption>**Figure 2.2-2: Produce Measure Interactions**</figcaption>
+</figure>
 
 
 #### Push Measure
 
-
-
-
 ##### Trigger Event - Reporting Period Elapsed
 
-The current reporting period has elapsed, or the operation is triggered by automation (e.g. for manual testing,
-diagnostics or error recovery).
-
+The current reporting period has elapsed, or the operation is triggered by automation (e.g. for manual testing, diagnostics or error recovery).
 
 See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension.
 
@@ -65,10 +48,7 @@ See the [Reporting Period](StructureDefinition-ReportingPeriod.html) extension.
 
 A MeasureReport is created or updated by the MeasureSource on the MeasureConsumer.
 
-
-The MeasureReport sends a MeasureReport to the MeasureConsumer using the FHIR
-[create](https://www.hl7.org/fhir/http.html#create) or [update](https://www.hl7.org/fhir/http.html#update) interactions.
-A MeasureSource supporting the CSV option sends the CSV file to the MeasureConsumer using the $report-csv operation.
+The MeasureReport sends a MeasureReport to the MeasureConsumer using the FHIR [create](https://www.hl7.org/fhir/http.html#create) or [update](https://www.hl7.org/fhir/http.html#update) interactions. A MeasureSource supporting the CSV option sends the CSV file to the MeasureConsumer using the $report-csv operation.
 
 
 ##### Expected Actions
@@ -77,9 +57,7 @@ A MeasureSource supporting the CSV option sends the CSV file to the MeasureConsu
 
 The Measure Source creates resources and sends them to a Measure Consumer
 
-
-The Measure Source performs the FHIR create
-operation on the MeasureReport resource at a Measure Consumer.
+The Measure Source performs the FHIR create operation on the MeasureReport resource at a Measure Consumer.
 
 
 ###### Aggregate MeasureReport Resources
@@ -87,9 +65,6 @@ operation on the MeasureReport resource at a Measure Consumer.
 ###### Accept Resource
 
 The Measure Consumer reports success using 200 OK, 201 Created, or 204 No Content to indicate a successful update.
-
-
-
 
 ### Conformance
 See the following CapabilityStatement resources for conformance requirements:
