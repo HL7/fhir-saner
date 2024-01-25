@@ -360,46 +360,36 @@ between options when applicable are specified in notes.
     <tbody>
 
                 <tr>
-
                     <td rowspan='4'>Measure Source</td>
-
                 <td><a href="#csv-option">CSV Option</a></td>
                 </tr>
 
                 <tr>
-
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
 
                 <tr>
-
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
 
                 <tr>
-
                 <td><a href="#supplemental-data-option">Supplemental Data Option</a></td>
                 </tr>
 
                 <tr>
-
                     <td rowspan='4'>Measure Consumer</td>
-
                 <td><a href="#csv-option">CSV Option</a></td>
                 </tr>
 
                 <tr>
-
                 <td><a href="#push-option">Push Option</a></td>
                 </tr>
 
                 <tr>
-
                 <td><a href="#pull-option">Pull Option</a></td>
                 </tr>
 
                 <tr>
-
                 <td><a href="#supplemental-data-option">Supplemental Data Option</a></td>
                 </tr>
 
@@ -469,7 +459,7 @@ transaction.
 ##### Measure Consumer
 
 
-An Measure Consumer implementing the Push Option periodically recieves updates from the
+An Measure Consumer implementing the Push Option periodically receives updates from the
 [Measure Source](actors.html#measure-source)
 using the
 [Produce Measure](transactions.html#produce-measure)
