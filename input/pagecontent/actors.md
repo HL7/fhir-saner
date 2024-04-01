@@ -277,7 +277,13 @@ and the Measure Source actor implementing the Pull Option.
 
 ##### Measure Intermediary Conformance
 
-See the following CapabilityStatement resources for conformance requirements:
+A measure intermediary is an actor that implements capabilities of the Measure Consumer an Measure Source actors depending on 
+which options it implements. It must conform to the Measure Consumer and Measure Source actor requirements for the actors it 
+implements.  See the following sections on this page for more details on requirements and conformance.
+* [Measure Source Requirements](#measure-source-requirements)
+* [Measure Consumer Requirements](#measure-consumer-requirements)
+
+
 #### Measure Definition Source
 
 The Measure Definition Source Actor provides access to Measures defined by public health and emergency response
