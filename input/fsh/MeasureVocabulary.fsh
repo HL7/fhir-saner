@@ -434,7 +434,7 @@ ValueSet:    PatientDeaths
 Title:       "Patient Died"
 Description: "Codes used to identify that a patient has died"
 * ^experimental = false
-* http://terminology.hl7.org/CodeSystem/discharge-disposition#exp "Expired"
+* http://terminology.hl7.org/CodeSystem/discharge-disposition|4.0.1#exp "Expired"
 
 ValueSet:    Covid19Labs
 Title:       "COVID-19 Diagnostic Test"
