@@ -10,10 +10,8 @@
 %The code 'composite' is valid but is retired%
 %The code '33738006' is valid but is not active%
 
-# CPT and HSLOC aren't supportable
+# CPT isn't supportable
 %Unable to provide support for code system%
-%Unknown System 'http://terminology.hl7.org/CodeSystem/hsloc' specified%
-%Unknown System 'http://terminology.hl7.org/ValueSet/cpt-all' specified%
 
 # this xpath is not my code
 %value should not start or finish with whitespace%
@@ -33,5 +31,9 @@
 # Expected behaviour
 %HasValueOrDataAbsentReason%
 
-# Apparently more than 14 is an issue
-%The value set expansion is incomplete%
+# Can't do this right now
+%Most code systems defined in HL7 IGs will need to move to THO later during the process%
+
+# No idea what this means and neither did Grahame
+%is a canonical link and is therefore unsafe with regard to versions%
+%is a canonical reference, and is unsafe because of version handling (points to the current version, not this version)%

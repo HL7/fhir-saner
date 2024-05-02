@@ -20,8 +20,8 @@ description: The Situational Awareness for Novel Epidemic Response Implementatio
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 license: CC0-1.0
 fhirVersion: 4.0.1
-#dependencies: 
-#  hl7.fhir.us.core: 3.1.1
+dependencies: 
+  hl7.fhir.uv.tools: current
 parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true
