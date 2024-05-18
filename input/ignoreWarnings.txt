@@ -35,8 +35,8 @@
 %Most code systems defined in HL7 IGs will need to move to THO later during the process%
 
 # This won't be a problem at publication.
-# %is a canonical link and is therefore unsafe with regard to versions%
-# %is a canonical reference, and is unsafe because of version handling (points to the current version, not this version)%
+%is a canonical link and is therefore unsafe with regard to versions%
+%is a canonical reference, and is unsafe because of version handling%
 
 # Not important
 %The value set expansion is too large, and only a subset has been displayed%
